@@ -59,4 +59,4 @@ tiempo real. Calculamos que el curso les demandará unas diez horas
 semanales de dedicación durante los cuatro meses.
 
 ## Preinscripción
-Si te interesa el curso, podés preinscribirte siguiendo [este link](https://forms.gle/o1rEQMuz6EziRFYq9).
+Si te interesa el curso, podés preinscribirte hasta el viernes 17 de julio siguiendo [este link](https://forms.gle/o1rEQMuz6EziRFYq9).
