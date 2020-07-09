@@ -52,10 +52,11 @@ Este es un curso cuatrimestral que se dictará entre principios de
 agosto y fines de noviembre del 2020. Es un curso de grado y posgrado.
 Las clases teóricas estarán escritas. Habrá guías de ejercicios de 
 entrega semanal obligatoria y encuentros on-line con exposiciones breves 
-por parte de los docentes y espacio para consultas. Habrá también un 
-grupo de whatsapp para consultas y debates entre estudiantes en tiempo 
-real. Calculamos que el curso les demandará unas diez horas semanales 
-de dedicación durante los cuatro meses.
+por parte de los docentes y espacio para consultas. Las clases 
+sincrónicas virtuales serán los miércoles de 14hs a 16hs. Habrá también 
+un grupo de whatsapp para consultas y debates entre estudiantes en 
+tiempo real. Calculamos que el curso les demandará unas diez horas
+semanales de dedicación durante los cuatro meses.
 
 ## Preinscripción
 Si te interesa el curso, podés preinscribirte siguiendo [este link](https://forms.gle/o1rEQMuz6EziRFYq9).
