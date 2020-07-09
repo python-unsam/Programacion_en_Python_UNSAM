@@ -1,7 +1,7 @@
 # Programación en Python
 
 En el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/), 
-la [Escuela de Ciencia y Tecnología]() de la [UNSAM](https://www.unsam.edu.ar/) vuelve a dictar 
+la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) vuelve a dictar 
 el 2do cuatrimestre 2020 el curso de programación en Python.
 
 ![image info](./Python_cloud.jpg)
