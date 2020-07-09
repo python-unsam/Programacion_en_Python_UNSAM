@@ -54,7 +54,7 @@ Las clases teóricas estarán escritas. Habrá guías de ejercicios de
 entrega semanal obligatoria y encuentros on-line con exposiciones breves 
 por parte de los docentes y espacio para consultas. Las clases 
 sincrónicas virtuales serán los miércoles de 14hs a 16hs. Habrá también 
-un grupo de whatsapp para consultas y debates entre estudiantes en 
+un grupo de whatsapp (o de slack) para consultas y debates entre estudiantes en 
 tiempo real. Calculamos que el curso les demandará unas diez horas
 semanales de dedicación durante los cuatro meses.
 
