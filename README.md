@@ -59,5 +59,5 @@ Calculamos que el curso les demandará unas diez horas semanales de
 dedicación durante los cuatro meses.
 
 ## Preinscripción
-Si te interesa el curso, podés preinscribirte siguiendo [este link]()
+Si te interesa el curso, podés preinscribirte siguiendo [este link](https://forms.gle/dwzsib9Wf91AiXKk6)
 
