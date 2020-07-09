@@ -13,8 +13,8 @@ y obligatorio en curso. Tendrá una combinación de clases sincrónicas
 y asincrónicas, con ejercicios para entregar semanalmente.
 
 Es un curso de programación en Python que prepara a les estudiantes
-para poder **programar algoritmos** y comprender los método
-desarrollados por otros. Está orientado a preparar al estudiante para
+para poder **programar algoritmos** y comprender los métodos
+desarrollados por otres. Está orientado a preparar al estudiante para
 profundizar en temas de **análisis y visualización de datos, modelado 
 matemático y desarrollo de scripts**.
 
@@ -50,14 +50,13 @@ aunque sea poca. Este no es un curso de introducción a la informática.
 ## Dedicación y duración
 Este es un curso cuatrimestral que se dictará entre principios de
 agosto y fines de noviembre del 2020. Es un curso de grado y posgrado.
-Tiene diferentes modalidades, algunas sincrónicas y otras
-asincrónicas. Las clases teóricas estarán escritas. Habrá guías de
-ejercicios y encuentros on-line con exposiciones breves por parte de
-los docentes y espacio para consultas. Hay también un grupo de
-whatsapp para consultas y debates entre estudiantes en tiempo real.
-Calculamos que el curso les demandará unas diez horas semanales de
-dedicación durante los cuatro meses.
+Las clases teóricas estarán escritas. Habrá guías de ejercicios de 
+entrega semanal obligatoria y encuentros on-line con exposiciones breves 
+por parte de los docentes y espacio para consultas. Habrá también un 
+grupo de whatsapp para consultas y debates entre estudiantes en tiempo 
+real. Calculamos que el curso les demandará unas diez horas semanales 
+de dedicación durante los cuatro meses.
 
 ## Preinscripción
-Si te interesa el curso, podés preinscribirte siguiendo [este link](https://forms.gle/dwzsib9Wf91AiXKk6)
+Si te interesa el curso, podés preinscribirte siguiendo [este link](https://forms.gle/dwzsib9Wf91AiXKk6).
 
