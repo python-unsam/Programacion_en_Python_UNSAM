@@ -60,9 +60,9 @@ estudiantes en tiempo real. Calculamos que el curso les demandará unas diez
 horas semanales de dedicación, durante los cuatro meses.
 
 ## Docentes
-El curso lo dictan dos investigadores del CONICET que son también profesores 
-de la ECyT-UNSAM. [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, Dr. en Química 
-y trabaja en neurofisiología. [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
+El curso lo dictan dos profesores de la ECyT-UNSAM que son también 
+investigadores del CONICET: [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
+Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
 Dr. en Computación y trabaja en temas ambientales.
 
 ## Preinscripción
