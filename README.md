@@ -59,7 +59,7 @@ Calculamos que el curso les demandará unas diez horas semanales de
 dedicación durante los cuatro meses.
 
 ## Docentes
-[Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, Dr. en Química y trabaja en neurofisiología. [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, y Dr. en Computación y trabaja en temas ambientales. Ambos son investigadores del CONICET y profesores de la Escuela de Ciencia y Tecnología de la UNSAM.
+El curso lo dictan dos investigadores del CONICET que son también profesores de la ECyT-UNSAM. [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, Dr. en Química y trabaja en neurofisiología. [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, y Dr. en Computación y trabaja en temas ambientales.
 
 ## Preinscripción
 Si te interesa el curso, podés preinscribirte hasta el viernes 17 de julio siguiendo [este link](https://forms.gle/o1rEQMuz6EziRFYq9).
