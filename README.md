@@ -43,8 +43,9 @@ Python así como entender y modificar programas escritos por otres.
 
 ## Requerimientos
 Para hacer este curso solo hace falta tener instalado el Python 3.6
-(o uno más nuevo) y tener tiempo para leer las clases y hacer los
-ejercicios. Pedimos tener alguna experiencia previa programando,
+(o uno más nuevo), comprometerse a leer las clases y a hacer los 
+ejercicios de las guias semanales, lo que demandará unas diez horas de
+dedicación semanal. Pedimos tener alguna experiencia previa programando,
 aunque sea poca. Este no es un curso de introducción a la informática.
 
 ## Dedicación y duración
@@ -53,13 +54,16 @@ agosto y fines de noviembre del 2020. Es de grado y posgrado. Las clases
 teóricas estarán escritas. Habrá guías de ejercicios de entrega semanal 
 obligatoria y encuentros on-line con exposiciones breves por parte de los 
 docentes y espacio para consultas. Las clases sincrónicas virtuales serán 
-los miércoles de 14hs a 16hs. Habrá también un grupo de whatsapp (o de 
-slack) para consultas y debates entre estudiantes en tiempo real. 
-Calculamos que el curso les demandará unas diez horas semanales de 
-dedicación durante los cuatro meses.
+de un par de horas semanales, los miércoles entre las 14hs y las 18hs. Habrá
+también un grupo de slack (mensajería on-line) para consultas y debates entre 
+estudiantes en tiempo real. Calculamos que el curso les demandará unas diez 
+horas semanales de dedicación, durante los cuatro meses.
 
 ## Docentes
-El curso lo dictan dos investigadores del CONICET que son también profesores de la ECyT-UNSAM. [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, Dr. en Química y trabaja en neurofisiología. [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, Dr. en Computación y trabaja en temas ambientales.
+El curso lo dictan dos investigadores del CONICET que son también profesores 
+de la ECyT-UNSAM. [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, Dr. en Química 
+y trabaja en neurofisiología. [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
+Dr. en Computación y trabaja en temas ambientales.
 
 ## Preinscripción
 Si te interesa el curso, podés preinscribirte hasta el viernes 17 de julio siguiendo [este link](https://forms.gle/o1rEQMuz6EziRFYq9).
