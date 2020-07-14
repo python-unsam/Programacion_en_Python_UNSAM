@@ -158,11 +158,6 @@ TypeError: 'str' object does not support item assignment
 
 ### Conversión de cadenas
 
-
-** sacar esta referencia Ver [Ejercicio 1.1](../01_Introduccion/01_Python.md#ejercicio-11-python-como-calculadora) y  [Ejercicio 1.2](../01_Introduccion/01_Python.md#ejercicio-12-obtener-ayuda) **
-Ver [Ejercicio 1.1](../01_Introduccion/01_Python.md#ejercicio-11-python-como-calculadora) y  [Ejercicio 1.2](../01_Introduccion/01_Python.md#ejercicio-12-obtener-ayuda) y [Sección 1.1](../01_Introduccion/01_Python.md#dónde-conseguir-python)
-
-
 Usá `str()` para convertir cualquier valor a cadena. El resultado es una cadena con el mismo contenido que hubiera producido el comando `print()` sobre la expresión entre paréntesis.
 
 ```python
@@ -311,6 +306,8 @@ Usá una iteración sobre el string `cadena` para agregar la sílaba 'pa', 'pe',
 Geperipingoposopo
 ```
 Podés probar tu código cambiando la cadena inicial por otra palabra, como 'apa' o 'boligoma'.
+
+Guardá el código en un archivo `geringoso.py`.
 
 ### Ejercicio 1.19: Métodos de cadenas
 

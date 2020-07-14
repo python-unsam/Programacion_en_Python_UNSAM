@@ -142,7 +142,7 @@ Cantidad de billetes 1048576
 Altura final 115.34336
 ```
 
-Usando este primer programa como guía podés aprender unas cuantas cosas fundamentales sobre Python. .
+A continuación vamos a usar este primer programa como ejemplo para aprender algunas cosas fundamentales sobre Python.
 
 ### Comandos
 
@@ -190,7 +190,7 @@ height = 442.0         # Punto flotante
 height = 'Really tall' # Cadena de caracteres
 ```
 
-Decimos que Python tiene tipado dinámico. El tipo percibido por el intérprete puede cambiar a lo largo de la ejecución delendiendo el valor asignado a la variable.
+Decimos que Python tiene tipado dinámico. El tipo percibido por el intérprete puede cambiar a lo largo de la ejecución dependiendo el valor asignado a la variable.
 
 ### Python distingue mayúsculas y minúsculas
 
@@ -439,7 +439,7 @@ Aprender a leer y entender los mensajes de error es una parte fundamental de pro
 * Ejecutá el programa exitosamente.
 
 ### Ejercicio 1.6: Saludos
-Escribí un programa llamado `saludo.py` que pregunte el nombre del usuarie, imprima un saludo (por ejemplo, "Hola, Juana") y termine.
+Escribí un programa llamado `saludo.py` que pregunte el nombre de le usuarie, imprima un saludo (por ejemplo, "Hola, Juana") y termine.
 
 
 

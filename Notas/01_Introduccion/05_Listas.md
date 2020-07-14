@@ -1,6 +1,7 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Cadenas)](04_Strings.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Cadenas)](04_Strings.md) \| [Próximo (6 Cierre de la primer clase)](06_CierreClase.md)
 
 # 1.5 Listas
+
 En esta sección estudiaremos listas que es el tipo de datos primitivo de Python para guardar colecciones ordenadas de valores.
 
 ### Creación de Listas
@@ -402,7 +403,7 @@ Podés acceder a los elementos de las listas anidadas usando múltiples operacio
 
 A pesar de que es técnicamente posible hacer una estructura de listas muy complicada, como regla general, es mejor mantener las cosas simples. Lo más usual es guardar en las listas muchos elementos del mismo tipo. Por ejemplo, una lista sólo de números o una lista de cadenas. Mezclar diferentes tipos de datos en una misma lista puede volverse conceptualmente difuso, así que mejor lo evitamos.
 
-### Ejercicio 1.29: Traductor rústico al inclusivo
+### Ejercicio 1.29: Traductor al lenguaje inclusive
 
 Queremos hacer un traductor que cambie las palabras masculinas de una frase por su versión neutra. Como primera aproximación, completá el siguiente código para reemplazar todas las letras 'o' que figuren en el último o anteúltimo caracter de cada palabra por una 'e'. Por ejemplo 'todos somos programadores' pasaría a ser 'todes somes programdores'.
 
@@ -421,5 +422,5 @@ Queremos hacer un traductor que cambie las palabras masculinas de una frase por 
 Probá tu código con 'Los hermanos sean unidos porque ésa es la ley primera', '¿cómo transmitir a los otros el infinito Aleph?' y 'Todos, tu también'. ¿Qué falla en esta última?
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Cadenas)](04_Strings.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Cadenas)](04_Strings.md) \| [Próximo (6 Cierre de la primer clase)](06_CierreClase.md)
 
