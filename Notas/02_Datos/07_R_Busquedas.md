@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Sequences)](06_204Sequences.md) \| [Próximo (8 Cierre de la primer clase)](08_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Sequences)](06_204Sequences.md) \| [Próximo (8 Cierre de la segunda clase)](08_CierreClase.md)
 
 # 2.7 Algoritmos de búsqueda en listas
 
@@ -12,5 +12,5 @@ otras cosa
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Sequences)](06_204Sequences.md) \| [Próximo (8 Cierre de la primer clase)](08_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Sequences)](06_204Sequences.md) \| [Próximo (8 Cierre de la segunda clase)](08_CierreClase.md)
 

@@ -11,7 +11,7 @@ Para escribir programas útiles, necesitamos aprender a trabajar con datos. En e
 * [2.5 Formatting](05_203Formatting.md)
 * [2.6 Sequences](06_204Sequences.md)
 * [2.7 Algoritmos de búsqueda en listas](07_R_Busquedas.md)
-* [2.8 Cierre de la primer clase](08_CierreClase.md)
+* [2.8 Cierre de la segunda clase](08_CierreClase.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Particularidades de Python)](../03_Mas_Python/00_Resumen.md)
