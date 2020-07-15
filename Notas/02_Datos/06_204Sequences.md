@@ -8,14 +8,14 @@ Python has three *sequence* datatypes.
 
 * String: `'Hello'`. A string is a sequence of characters.
 * List: `[1, 4, 5]`.
-* Tuple: `('GOOG', 100, 490.1)`.
+* Tuple: `('Pera', 100, 490.1)`.
 
 All sequences are ordered, indexed by integers, and have a length.
 
 ```python
 a = 'Hello'               # String
 b = [1, 4, 5]             # List
-c = ('GOOG', 100, 490.1)  # Tuple
+c = ('Pera', 100, 490.1)  # Tuple
 
 # Indexed order
 a[0]                      # 'H'
@@ -82,7 +82,7 @@ a = [0,1,2,3,4,5,6,7,8]
 a[2:4] = [10,11,12]       # [0,1,10,11,12,4,5,6,7,8]
 ```
 
-*Note: The reassigned slice doesn't need to have the same length.*
+*Observación: The reassigned slice doesn't need to have the same length.*
 
 ```python
 # Deletion
@@ -142,7 +142,7 @@ You can use the `break` statement to break out of a loop early.
 
 ```python
 for name in namelist:
-    if name == 'Jake':
+    if name == 'Juana':
         break
     ...
     ...
@@ -199,18 +199,18 @@ for k in range(10,50,2):
 The `enumerate` function adds an extra counter value to iteration.
 
 ```python
-names = ['Elwood', 'Jake', 'Curtis']
+names = ['Edmundo', 'Juana', 'Rosita']
 for i, name in enumerate(names):
-    # Loops with i = 0, name = 'Elwood'
-    # i = 1, name = 'Jake'
-    # i = 2, name = 'Curtis'
+    # Loops with i = 0, name = 'Edmundo'
+    # i = 1, name = 'Juana'
+    # i = 2, name = 'Rosita'
 ```
 
 The general form is `enumerate(sequence [, start = 0])`. `start` is optional.
 A good example of using `enumerate()` is tracking line numbers while reading a file:
 
 ```python
-with open(filename) as f:
+with open(nombre_archivo) as f:
     for lineno, line in enumerate(f, start=1):
         ...
 ```
@@ -249,10 +249,10 @@ The number of variables must match the number of items in each tuple.
 The `zip` function takes multiple sequences and makes an iterator that combines them.
 
 ```python
-columns = ['name', 'shares', 'price']
-values = ['GOOG', 100, 490.1 ]
+columns = ['name', 'cajones', 'precio']
+values = ['Pera', 100, 490.1 ]
 pairs = zip(columns, values)
-# ('name','GOOG'), ('shares',100), ('price',490.1)
+# ('name','Pera'), ('cajones',100), ('precio',490.1)
 ```
 
 To get the result you must iterate. You can use multiple variables to unpack the tuples as shown earlier.
@@ -268,7 +268,7 @@ A common use of `zip` is to create key/value pairs for constructing dictionaries
 d = dict(zip(columns, values))
 ```
 
-## Exercises
+## Ejercicios
 
 ### Ejercicio 2.21: Counting
 
@@ -346,15 +346,15 @@ if you happen to need the index for some reason.
 
 ### Ejercicio 2.23: A practical enumerate() example
 
-Recall that the file `Data/missing.csv` contains data for a stock
-portfolio, but has some rows with missing data.  Using `enumerate()`,
-modify your `pcost.py` program so that it prints a line number with
+Recall that the file `Data/missing.csv` contains data for a cajon
+camion, but has some rows with missing data.  Using `enumerate()`,
+modify your `costo_camion.py` program so that it prints a line number with
 the warning message when it encounters bad input.
 
 ```python
->>> cost = portfolio_cost('Data/missing.csv')
-Row 4: Couldn't convert: ['MSFT', '', '51.23']
-Row 7: Couldn't convert: ['IBM', '', '70.44']
+>>> cost = costo_camion('Data/missing.csv')
+Row 4: Couldn't convert: ['Mandarina', '', '51.23']
+Row 7: Couldn't convert: ['Naranja', '', '70.44']
 >>>
 ```
 
@@ -371,15 +371,15 @@ for rowno, row in enumerate(rows, start=1):
 
 ### Ejercicio 2.24: Using the zip() function
 
-In the file `Data/portfolio.csv`, the first line contains column
+In the file `Data/camion.csv`, the first line contains column
 headers. In all previous code, we’ve been discarding them.
 
 ```python
->>> f = open('Data/portfolio.csv')
+>>> f = open('Data/camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> headers
-['name', 'shares', 'price']
+['name', 'cajones', 'precio']
 >>>
 ```
 
@@ -390,9 +390,9 @@ pair the file headers with a row of data:
 ```python
 >>> row = next(rows)
 >>> row
-['AA', '100', '32.20']
+['Lima', '100', '32.20']
 >>> list(zip(headers, row))
-[ ('name', 'AA'), ('shares', '100'), ('price', '32.20') ]
+[ ('name', 'Lima'), ('cajones', '100'), ('precio', '32.20') ]
 >>>
 ```
 
@@ -407,29 +407,29 @@ dictionary. Now try this:
 ```python
 >>> record = dict(zip(headers, row))
 >>> record
-{'price': '32.20', 'name': 'AA', 'shares': '100'}
+{'precio': '32.20', 'name': 'Lima', 'cajones': '100'}
 >>>
 ```
 
 This transformation is one of the most useful tricks to know about
 when processing a lot of data files.  For example, suppose you wanted
-to make the `pcost.py` program work with various input files, but
-without regard for the actual column number where the name, shares,
-and price appear.
+to make the `costo_camion.py` program work with various input files, but
+without regard for the actual column number where the name, cajones,
+and precio appear.
 
-Modify the `portfolio_cost()` function in `pcost.py` so that it looks like this:
+Modify the `costo_camion()` function in `costo_camion.py` so that it looks like this:
 
 ```python
-# pcost.py
+# costo_camion.py
 
-def portfolio_cost(filename):
+def costo_camion(nombre_archivo):
     ...
         for rowno, row in enumerate(rows, start=1):
             record = dict(zip(headers, row))
             try:
-                nshares = int(record['shares'])
-                price = float(record['price'])
-                total_cost += nshares * price
+                ncajones = int(record['cajones'])
+                precio = float(record['precio'])
+                total_cost += ncajones * precio
             # This catches errors in int() and float() conversions above
             except ValueError:
                 print(f'Row {rowno}: Bad row: {row}')
@@ -437,21 +437,21 @@ def portfolio_cost(filename):
 ```
 
 Now, try your function on a completely different data file
-`Data/portfoliodate.csv` which looks like this:
+`Data/fecha_camion.csv` which looks like this:
 
 ```csv
-name,date,time,shares,price
-"AA","6/11/2007","9:50am",100,32.20
-"IBM","5/13/2007","4:20pm",50,91.10
-"CAT","9/23/2006","1:30pm",150,83.44
-"MSFT","5/17/2007","10:30am",200,51.23
-"GE","2/1/2006","10:45am",95,40.37
-"MSFT","10/31/2006","12:05pm",50,65.10
-"IBM","7/9/2006","3:15pm",100,70.44
+name,date,time,cajones,precio
+"Lima","6/11/2007","9:50am",100,32.20
+"Naranja","5/13/2007","4:20pm",50,91.10
+"Caqui","9/23/2006","1:30pm",150,83.44
+"Mandarina","5/17/2007","10:30am",200,51.23
+"Durazno","2/1/2006","10:45am",95,40.37
+"Mandarina","10/31/2006","12:05pm",50,65.10
+"Naranja","7/9/2006","3:15pm",100,70.44
 ```
 
 ```python
->>> portfolio_cost('Data/portfoliodate.csv')
+>>> costo_camion('Data/fecha_camion.csv')
 44671.15
 >>>
 ```
@@ -461,26 +461,26 @@ though the data file has a completely different column format than
 before. That’s cool!
 
 The change made here is subtle, but significant.  Instead of
-`portfolio_cost()` being hardcoded to read a single fixed file format,
+`costo_camion()` being hardcoded to read a single fixed file format,
 the new version reads any CSV file and picks the values of interest
 out of it.  As long as the file has the required columns, the code will work.
 
-Modify the `report.py` program you wrote in Section 2.3 so that it uses
+Modify the `reporte.py` program you wrote in Section 2.3 so that it uses
 the same technique to pick out column headers.
 
-Try running the `report.py` program on the `Data/portfoliodate.csv`
+Try running the `reporte.py` program on the `Data/fecha_camion.csv`
 file and see that it produces the same answer as before.
 
 ### Ejercicio 2.25: Inverting a dictionary
 
-A dictionary maps keys to values. For example, a dictionary of stock prices.
+A dictionary maps keys to values. For example, a dictionary of cajon precios.
 
 ```python
->>> prices = {
-        'GOOG' : 490.1,
-        'AA' : 23.45,
-        'IBM' : 91.1,
-        'MSFT' : 34.23
+>>> precios = {
+        'Pera' : 490.1,
+        'Lima' : 23.45,
+        'Naranja' : 91.1,
+        'Mandarina' : 34.23
     }
 >>>
 ```
@@ -488,18 +488,18 @@ A dictionary maps keys to values. For example, a dictionary of stock prices.
 If you use the `items()` method, you can get `(key,value)` pairs:
 
 ```python
->>> prices.items()
-dict_items([('GOOG', 490.1), ('AA', 23.45), ('IBM', 91.1), ('MSFT', 34.23)])
+>>> precios.items()
+dict_items([('Pera', 490.1), ('Lima', 23.45), ('Naranja', 91.1), ('Mandarina', 34.23)])
 >>>
 ```
 
 However, what if you wanted to get a list of `(value, key)` pairs instead?
-*Hint: use `zip()`.*
+*Ayuda: use `zip()`.*
 
 ```python
->>> pricelist = list(zip(prices.values(),prices.keys()))
->>> pricelist
-[(490.1, 'GOOG'), (23.45, 'AA'), (91.1, 'IBM'), (34.23, 'MSFT')]
+>>> lista_precios = list(zip(precios.values(),precios.keys()))
+>>> lista_precios
+[(490.1, 'Pera'), (23.45, 'Lima'), (91.1, 'Naranja'), (34.23, 'Mandarina')]
 >>>
 ```
 
@@ -507,12 +507,12 @@ Why would you do this? For one, it allows you to perform certain kinds
 of data processing on the dictionary data.
 
 ```python
->>> min(pricelist)
-(23.45, 'AA')
->>> max(pricelist)
-(490.1, 'GOOG')
->>> sorted(pricelist)
-[(23.45, 'AA'), (34.23, 'MSFT'), (91.1, 'IBM'), (490.1, 'GOOG')]
+>>> min(lista_precios)
+(23.45, 'Lima')
+>>> max(lista_precios)
+(490.1, 'Pera')
+>>> sorted(lista_precios)
+[(23.45, 'Lima'), (34.23, 'Mandarina'), (91.1, 'Naranja'), (490.1, 'Pera')]
 >>>
 ```
 

@@ -100,7 +100,7 @@ obtained using `id()`.
 >>>
 ```
 
-Note: It is almost always better to use `==` for checking objects.  The behavior
+Observación: It is almost always better to use `==` for checking objects.  The behavior
 of `is` is often unexpected:
 
 ```python
@@ -127,7 +127,7 @@ Lists and dicts have methods for copying.
 False
 ```
 
-It's a new list, but the list items are shared.
+It's a new list, but the list items are cajond.
 
 ```python
 >>> a[2].append(102)
@@ -139,7 +139,7 @@ True
 >>>
 ```
 
-For example, the inner list `[100, 101, 102]` is being shared.
+For example, the inner list `[100, 101, 102]` is being cajond.
 This is known as a shallow copy.  Here is a picture.
 
 ![Shallow copy](shallow.png)
@@ -240,19 +240,19 @@ except items[2]:    # ValueError
 
 With great power comes responsibility.  Just because you can do that doesn't mean you should.
 
-## Exercises
+## Ejercicios
 
-In this set of exercises, we look at some of the power that comes from first-class
+In this set of ejercicios, we look at some of the power that comes from first-class
 objects.
 
 ### Ejercicio 3.7: First-class Data
 
-In the file `Data/portfolio.csv`, we read data organized as columns that look like this:
+In the file `Data/camion.csv`, we read data organized as columns that look like this:
 
 ```csv
-name,shares,price
-"AA",100,32.20
-"IBM",50,91.10
+name,cajones,precio
+"Lima",100,32.20
+"Naranja",50,91.10
 ...
 ```
 
@@ -262,8 +262,8 @@ had to perform manual type conversions. For example:
 ```python
 for row in rows:
     name   = row[0]
-    shares = int(row[1])
-    price  = float(row[2])
+    cajones = int(row[1])
+    precio  = float(row[2])
 ```
 
 This kind of conversion can also be performed in a more clever manner
@@ -286,12 +286,12 @@ Now, read a row of data from the above file:
 
 ```python
 >>> import csv
->>> f = open('Data/portfolio.csv')
+>>> f = open('Data/camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> row = next(rows)
 >>> row
-['AA', '100', '32.20']
+['Lima', '100', '32.20']
 >>>
 ```
 
@@ -346,7 +346,7 @@ Zip the column types with the fields and look at the result:
 ```python
 >>> r = list(zip(types, row))
 >>> r
-[(<type 'str'>, 'AA'), (<type 'int'>, '100'), (<type 'float'>,'32.20')]
+[(<type 'str'>, 'Lima'), (<type 'int'>, '100'), (<type 'float'>,'32.20')]
 >>>
 ```
 
@@ -362,7 +362,7 @@ the values, one after the other. Try this:
           converted.append(func(val))
 ...
 >>> converted
-['AA', 100, 32.2]
+['Lima', 100, 32.2]
 >>> converted[1] * converted[2]
 3220.0000000000005
 >>>
@@ -371,7 +371,7 @@ the values, one after the other. Try this:
 Make sure you understand what’s happening in the above code.  In the
 loop, the `func` variable is one of the type conversion functions
 (e.g., `str`, `int`, etc.) and the `val` variable is one of the values
-like `'AA'`, `'100'`.  The expression `func(val)` is converting a
+like `'Lima'`, `'100'`.  The expression `func(val)` is converting a
 value (kind of like a type cast).
 
 The above code can be compressed into a single list comprehension.
@@ -379,7 +379,7 @@ The above code can be compressed into a single list comprehension.
 ```python
 >>> converted = [func(val) for func, val in zip(types, row)]
 >>> converted
-['AA', 100, 32.2]
+['Lima', 100, 32.2]
 >>>
 ```
 
@@ -391,11 +391,11 @@ the column headers:
 
 ```python
 >>> headers
-['name', 'shares', 'price']
+['name', 'cajones', 'precio']
 >>> converted
-['AA', 100, 32.2]
+['Lima', 100, 32.2]
 >>> dict(zip(headers, converted))
-{'price': 32.2, 'name': 'AA', 'shares': 100}
+{'precio': 32.2, 'name': 'Lima', 'cajones': 100}
 >>>
 ```
 
@@ -404,27 +404,27 @@ whole conversion in a single step using a dict-comprehension:
 
 ```python
 >>> { name: func(val) for name, func, val in zip(headers, types, row) }
-{'price': 32.2, 'name': 'AA', 'shares': 100}
+{'precio': 32.2, 'name': 'Lima', 'cajones': 100}
 >>>
 ```
 
 ### Ejercicio 3.9: The Big Picture
 
-Using the techniques in this exercise, you could write statements that
+Using the techniques in this ejercicio, you could write statements that
 easily convert fields from just about any column-oriented datafile
 into a Python dictionary.
 
 Just to illustrate, suppose you read data from a different datafile like this:
 
 ```python
->>> f = open('Data/dowstocks.csv')
+>>> f = open('Data/dowcajones.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> row = next(rows)
 >>> headers
-['name', 'price', 'date', 'time', 'change', 'open', 'high', 'low', 'volume']
+['name', 'precio', 'date', 'time', 'change', 'open', 'high', 'low', 'volume']
 >>> row
-['AA', '39.48', '6/11/2007', '9:36am', '-0.18', '39.67', '39.69', '39.45', '181800']
+['Lima', '39.48', '6/11/2007', '9:36am', '-0.18', '39.67', '39.69', '39.45', '181800']
 >>>
 ```
 
@@ -435,12 +435,12 @@ Let’s convert the fields using a similar trick:
 >>> converted = [func(val) for func, val in zip(types, row)]
 >>> record = dict(zip(headers, converted))
 >>> record
-{'volume': 181800, 'name': 'AA', 'price': 39.48, 'high': 39.69,
+{'volume': 181800, 'name': 'Lima', 'precio': 39.48, 'high': 39.69,
 'low': 39.45, 'time': '9:36am', 'date': '6/11/2007', 'open': 39.67,
 'change': -0.18}
 >>> record['name']
-'AA'
->>> record['price']
+'Lima'
+>>> record['precio']
 39.48
 >>>
 ```
@@ -448,7 +448,7 @@ Let’s convert the fields using a similar trick:
 Bonus: How would you modify this example to additionally parse the
 `date` entry into a tuple such as `(6, 11, 2007)`?
 
-Spend some time to ponder what you’ve done in this exercise. We’ll
+Spend some time to ponder what you’ve done in this ejercicio. We’ll
 revisit these ideas a little later.
 
 

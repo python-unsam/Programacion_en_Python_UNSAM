@@ -10,16 +10,16 @@ This section explores that idea.
 Inheritance is used to specialize existing objects:
 
 ```python
-class Parent:
+class Padre:
     ...
 
-class Child(Parent):
+class Hijo(Padre):
     ...
 ```
 
-The new class `Child` is called a derived class or subclass.  The
-`Parent` class is known as base class or superclass.  `Parent` is
-specified in `()` after the class name, `class Child(Parent):`.
+The new class `Hijo` is called a derived class or subclass.  The
+`Padre` class is known as base class or superclass.  `Padre` is
+specified in `()` after the class name, `class Hijo(Padre):`.
 
 ### Extending
 
@@ -36,17 +36,17 @@ In the end you are **extending existing code**.
 Suppose that this is your starting class:
 
 ```python
-class Stock:
-    def __init__(self, name, shares, price):
+class Cajon:
+    def __init__(self, name, cajones, precio):
         self.name = name
-        self.shares = shares
-        self.price = price
+        self.cajones = cajones
+        self.precio = precio
 
     def cost(self):
-        return self.shares * self.price
+        return self.cajones * self.precio
 
-    def sell(self, nshares):
-        self.shares -= nshares
+    def sell(self, ncajones):
+        self.cajones -= ncajones
 ```
 
 You can change any part of this via inheritance.
@@ -54,20 +54,20 @@ You can change any part of this via inheritance.
 ### Add a new method
 
 ```python
-class MyStock(Stock):
+class MiCajon(Cajon):
     def panic(self):
-        self.sell(self.shares)
+        self.sell(self.cajones)
 ```
 
 Usage example.
 
 ```python
->>> s = MyStock('GOOG', 100, 490.1)
+>>> s = MiCajon('Pera', 100, 490.1)
 >>> s.sell(25)
->>> s.shares
+>>> s.cajones
 75
 >>> s.panic()
->>> s.shares
+>>> s.cajones
 0
 >>>
 ```
@@ -75,15 +75,15 @@ Usage example.
 ### Redefining an existing method
 
 ```python
-class MyStock(Stock):
+class MiCajon(Cajon):
     def cost(self):
-        return 1.25 * self.shares * self.price
+        return 1.25 * self.cajones * self.precio
 ```
 
 Usage example.
 
 ```python
->>> s = MyStock('GOOG', 100, 490.1)
+>>> s = MiCajon('Pera', 100, 490.1)
 >>> s.cost()
 61262.5
 >>>
@@ -97,13 +97,13 @@ Sometimes a class extends an existing method, but it wants to use the
 original implementation inside the redefinition.  For this, use `super()`:
 
 ```python
-class Stock:
+class Cajon:
     ...
     def cost(self):
-        return self.shares * self.price
+        return self.cajones * self.precio
     ...
 
-class MyStock(Stock):
+class MiCajon(Cajon):
     def cost(self):
         # Check the call to `super`
         actual_cost = super().cost()
@@ -115,7 +115,7 @@ Use `super()` to call the previous version.
 *Caution: In Python 2, the syntax was more verbose.*
 
 ```python
-actual_cost = super(MyStock, self).cost()
+actual_cost = super(MiCajon, self).cost()
 ```
 
 ### `__init__` and inheritance
@@ -123,16 +123,16 @@ actual_cost = super(MyStock, self).cost()
 If `__init__` is redefined, it is essential to initialize the parent.
 
 ```python
-class Stock:
-    def __init__(self, name, shares, price):
+class Cajon:
+    def __init__(self, name, cajones, precio):
         self.name = name
-        self.shares = shares
-        self.price = price
+        self.cajones = cajones
+        self.precio = precio
 
-class MyStock(Stock):
-    def __init__(self, name, shares, price, factor):
+class MiCajon(Cajon):
+    def __init__(self, name, cajones, precio, factor):
         # Check the call to `super` and `__init__`
-        super().__init__(name, shares, price)
+        super().__init__(name, cajones, precio)
         self.factor = factor
 
     def cost(self):
@@ -207,7 +207,7 @@ class Shape(object):
 
 `object` is the parent of all objects in Python.
 
-*Note: it's not technically required, but you often see it specified
+*Observación: it's not technically required, but you often see it specified
 as a hold-over from it's required use in Python 2. If omitted, the
 class still implicitly inherits from `object`.
 
@@ -222,28 +222,28 @@ class Mother:
 class Father:
     ...
 
-class Child(Mother, Father):
+class Hijo(Mother, Father):
     ...
 ```
 
-The class `Child` inherits features from both parents.  There are some
+The class `Hijo` inherits features from both parents.  There are some
 rather tricky details. Don't do it unless you know what you are doing.
 Some further information will be given in the next section, but we're not
 going to utilize multiple inheritance further in this course.
 
-## Exercises
+## Ejercicios
 
 A major use of inheritance is in writing code that's meant to be
-extended or customized in various ways--especially in libraries or
+extended or customized in various ways--especially in bibliotecas or
 frameworks. To illustrate, consider the `print_report()` function
-in your `report.py` program.  It should look something like this:
+in your `reporte.py` program.  It should look something like this:
 
 ```python
 def print_report(reportdata):
     '''
-    Print a nicely formated table from a list of (name, shares, price, change) tuples.
+    Print a nicely formated table from a list of (name, cajones, precio, change) tuples.
     '''
-    headers = ('Name','Shares','Price','Change')
+    headers = ('Name','Cajons','Price','Change')
     print('%10s %10s %10s %10s' % headers)
     print(('-'*10 + ' ')*len(headers))
     for row in reportdata:
@@ -254,16 +254,16 @@ When you run your report program, you should be getting output like this:
 
 ```
 >>> import report
->>> report.portfolio_report('Data/portfolio.csv', 'Data/prices.csv')
-      Name     Shares      Price     Change
+>>> report.reporte_camion('Data/camion.csv', 'Data/precios.csv')
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 ```
 
 ### Ejercicio 6.5: An Extensibility Problem
@@ -307,39 +307,39 @@ Modify the `print_report()` function so that it accepts a
 the output.  For example, like this:
 
 ```python
-# report.py
+# reporte.py
 ...
 
 def print_report(reportdata, formatter):
     '''
-    Print a nicely formated table from a list of (name, shares, price, change) tuples.
+    Print a nicely formated table from a list of (name, cajones, precio, change) tuples.
     '''
-    formatter.headings(['Name','Shares','Price','Change'])
-    for name, shares, price, change in reportdata:
-        rowdata = [ name, str(shares), f'{price:0.2f}', f'{change:0.2f}' ]
+    formatter.headings(['Name','Cajons','Price','Change'])
+    for name, cajones, precio, change in reportdata:
+        rowdata = [ name, str(cajones), f'{precio:0.2f}', f'{change:0.2f}' ]
         formatter.row(rowdata)
 ```
 
 Since you added an argument to print_report(), you're going to need to modify the
-`portfolio_report()` function as well.  Change it so that it creates a `TableFormatter`
+`reporte_camion()` function as well.  Change it so that it creates a `TableFormatter`
 like this:
 
 ```python
-# report.py
+# reporte.py
 
 import tableformat
 
 ...
-def portfolio_report(portfoliofile, pricefile):
+def reporte_camion(camionfile, preciofile):
     '''
-    Make a stock report given portfolio and price data files.
+    Make a cajon report given camion and precio data files.
     '''
     # Read data files
-    portfolio = read_portfolio(portfoliofile)
-    prices = read_prices(pricefile)
+    camion = leer_camion(camionfile)
+    precios = read_precios(preciofile)
 
     # Create the report data
-    report = make_report_data(portfolio, prices)
+    report = make_report_data(camion, precios)
 
     # Print it out
     formatter = tableformat.TableFormatter()
@@ -351,7 +351,7 @@ Run this new code:
 ```python
 >>> ================================ RESTART ================================
 >>> import report
->>> report.portfolio_report('Data/portfolio.csv', 'Data/prices.csv')
+>>> report.reporte_camion('Data/camion.csv', 'Data/precios.csv')
 ... crashes ...
 ```
 
@@ -383,21 +383,21 @@ class TextTableFormatter(TableFormatter):
         print()
 ```
 
-Modify the `portfolio_report()` function like this and try it:
+Modify the `reporte_camion()` function like this and try it:
 
 ```python
-# report.py
+# reporte.py
 ...
-def portfolio_report(portfoliofile, pricefile):
+def reporte_camion(camionfile, preciofile):
     '''
-    Make a stock report given portfolio and price data files.
+    Make a cajon report given camion and precio data files.
     '''
     # Read data files
-    portfolio = read_portfolio(portfoliofile)
-    prices = read_prices(pricefile)
+    camion = leer_camion(camionfile)
+    precios = read_precios(preciofile)
 
     # Create the report data
-    report = make_report_data(portfolio, prices)
+    report = make_report_data(camion, precios)
 
     # Print it out
     formatter = tableformat.TextTableFormatter()
@@ -409,16 +409,16 @@ This should produce the same output as before:
 ```python
 >>> ================================ RESTART ================================
 >>> import report
->>> report.portfolio_report('Data/portfolio.csv', 'Data/prices.csv')
-      Name     Shares      Price     Change
+>>> report.reporte_camion('Data/camion.csv', 'Data/precios.csv')
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 >>>
 ```
 
@@ -430,7 +430,7 @@ class `CSVTableFormatter` that produces output in CSV format:
 ...
 class CSVTableFormatter(TableFormatter):
     '''
-    Output portfolio data in CSV format.
+    Output camion data in CSV format.
     '''
     def headings(self, headers):
         print(','.join(headers))
@@ -442,16 +442,16 @@ class CSVTableFormatter(TableFormatter):
 Modify your main program as follows:
 
 ```python
-def portfolio_report(portfoliofile, pricefile):
+def reporte_camion(camionfile, preciofile):
     '''
-    Make a stock report given portfolio and price data files.
+    Make a cajon report given camion and precio data files.
     '''
     # Read data files
-    portfolio = read_portfolio(portfoliofile)
-    prices = read_prices(pricefile)
+    camion = leer_camion(camionfile)
+    precios = read_precios(preciofile)
 
     # Create the report data
-    report = make_report_data(portfolio, prices)
+    report = make_report_data(camion, precios)
 
     # Print it out
     formatter = tableformat.CSVTableFormatter()
@@ -463,29 +463,29 @@ You should now see CSV output like this:
 ```python
 >>> ================================ RESTART ================================
 >>> import report
->>> report.portfolio_report('Data/portfolio.csv', 'Data/prices.csv')
-Name,Shares,Price,Change
-AA,100,9.22,-22.98
-IBM,50,106.28,15.18
-CAT,150,35.46,-47.98
-MSFT,200,20.89,-30.34
-GE,95,13.48,-26.89
-MSFT,50,20.89,-44.21
-IBM,100,106.28,35.84
+>>> report.reporte_camion('Data/camion.csv', 'Data/precios.csv')
+Name,Cajons,Price,Change
+Lima,100,9.22,-22.98
+Naranja,50,106.28,15.18
+Caqui,150,35.46,-47.98
+Mandarina,200,20.89,-30.34
+Durazno,95,13.48,-26.89
+Mandarina,50,20.89,-44.21
+Naranja,100,106.28,35.84
 ```
 
 Using a similar idea, define a class `HTMLTableFormatter`
 that produces a table with the following output:
 
 ```
-<tr><th>Name</th><th>Shares</th><th>Price</th><th>Change</th></tr>
-<tr><td>AA</td><td>100</td><td>9.22</td><td>-22.98</td></tr>
-<tr><td>IBM</td><td>50</td><td>106.28</td><td>15.18</td></tr>
-<tr><td>CAT</td><td>150</td><td>35.46</td><td>-47.98</td></tr>
-<tr><td>MSFT</td><td>200</td><td>20.89</td><td>-30.34</td></tr>
-<tr><td>GE</td><td>95</td><td>13.48</td><td>-26.89</td></tr>
-<tr><td>MSFT</td><td>50</td><td>20.89</td><td>-44.21</td></tr>
-<tr><td>IBM</td><td>100</td><td>106.28</td><td>35.84</td></tr>
+<tr><th>Name</th><th>Cajons</th><th>Price</th><th>Change</th></tr>
+<tr><td>Lima</td><td>100</td><td>9.22</td><td>-22.98</td></tr>
+<tr><td>Naranja</td><td>50</td><td>106.28</td><td>15.18</td></tr>
+<tr><td>Caqui</td><td>150</td><td>35.46</td><td>-47.98</td></tr>
+<tr><td>Mandarina</td><td>200</td><td>20.89</td><td>-30.34</td></tr>
+<tr><td>Durazno</td><td>95</td><td>13.48</td><td>-26.89</td></tr>
+<tr><td>Mandarina</td><td>50</td><td>20.89</td><td>-44.21</td></tr>
+<tr><td>Naranja</td><td>100</td><td>106.28</td><td>35.84</td></tr>
 ```
 
 Test your code by modifying the main program to create a
@@ -508,16 +508,16 @@ simplified approach.  Perhaps you embed an `if-`statement into the
 code like this:
 
 ```python
-def portfolio_report(portfoliofile, pricefile, fmt='txt'):
+def reporte_camion(camionfile, preciofile, fmt='txt'):
     '''
-    Make a stock report given portfolio and price data files.
+    Make a cajon report given camion and precio data files.
     '''
     # Read data files
-    portfolio = read_portfolio(portfoliofile)
-    prices = read_prices(pricefile)
+    camion = leer_camion(camionfile)
+    precios = read_precios(preciofile)
 
     # Create the report data
-    report = make_report_data(portfolio, prices)
+    report = make_report_data(camion, precios)
 
     # Print it out
     if fmt == 'txt':
@@ -533,26 +533,26 @@ def portfolio_report(portfoliofile, pricefile, fmt='txt'):
 
 In this code, the user specifies a simplified name such as `'txt'` or
 `'csv'` to pick a format.  However, is putting a big `if`-statement in
-the `portfolio_report()` function like that the best idea?  It might
+the `reporte_camion()` function like that the best idea?  It might
 be better to move that code to a general purpose function somewhere
 else.
 
 In the `tableformat.py` file, add a function `create_formatter(name)`
 that allows a user to create a formatter given an output name such as
-`'txt'`, `'csv'`, or `'html'`.  Modify `portfolio_report()` so that it
+`'txt'`, `'csv'`, or `'html'`.  Modify `reporte_camion()` so that it
 looks like this:
 
 ```python
-def portfolio_report(portfoliofile, pricefile, fmt='txt'):
+def reporte_camion(camionfile, preciofile, fmt='txt'):
     '''
-    Make a stock report given portfolio and price data files.
+    Make a cajon report given camion and precio data files.
     '''
     # Read data files
-    portfolio = read_portfolio(portfoliofile)
-    prices = read_prices(pricefile)
+    camion = leer_camion(camionfile)
+    precios = read_precios(preciofile)
 
     # Create the report data
-    report = make_report_data(portfolio, prices)
+    report = make_report_data(camion, precios)
 
     # Print it out
     formatter = tableformat.create_formatter(fmt)
@@ -563,51 +563,51 @@ Try calling the function with different formats to make sure it's working.
 
 ### Ejercicio 6.8: Putting it all together
 
-Modify the `report.py` program so that the `portfolio_report()` function takes
+Modify the `reporte.py` program so that the `reporte_camion()` function takes
 an optional argument specifying the output format. For example:
 
 ```python
->>> report.portfolio_report('Data/portfolio.csv', 'Data/prices.csv', 'txt')
-      Name     Shares      Price     Change
+>>> report.reporte_camion('Data/camion.csv', 'Data/precios.csv', 'txt')
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 >>>
 ```
 
 Modify the main program so that a format can be given on the command line:
 
 ```bash
-bash $ python3 report.py Data/portfolio.csv Data/prices.csv csv
-Name,Shares,Price,Change
-AA,100,9.22,-22.98
-IBM,50,106.28,15.18
-CAT,150,35.46,-47.98
-MSFT,200,20.89,-30.34
-GE,95,13.48,-26.89
-MSFT,50,20.89,-44.21
-IBM,100,106.28,35.84
+bash $ python3 reporte.py Data/camion.csv Data/precios.csv csv
+Name,Cajons,Price,Change
+Lima,100,9.22,-22.98
+Naranja,50,106.28,15.18
+Caqui,150,35.46,-47.98
+Mandarina,200,20.89,-30.34
+Durazno,95,13.48,-26.89
+Mandarina,50,20.89,-44.21
+Naranja,100,106.28,35.84
 bash $
 ```
 
 ### Discussion
 
 Writing extensible code is one of the most common uses of inheritance
-in libraries and frameworks.  For example, a framework might instruct
+in bibliotecas and frameworks.  For example, a framework might instruct
 you to define your own object that inherits from a provided base
 class.  You're then told to fill in various methods that implement
 various bits of functionality.
 
 Another somewhat deeper concept is the idea of "owning your
-abstractions."  In the exercises, we defined *our own class* for
+abstractions."  In the ejercicios, we defined *our own class* for
 formatting a table.  You may look at your code and tell yourself "I should
-just use a formatting library or something that someone else already
-made instead!"  No, you should use BOTH your class and a library.
+just use a formatting biblioteca or something that someone else already
+made instead!"  No, you should use BOTH your class and a biblioteca.
 Using your own class promotes loose coupling and is more flexible.
 As long as your application uses the programming interface of your class,
 you can change the internal implementation to work in any way that you
@@ -621,7 +621,7 @@ you might consider inheritance for something like this.
 That said, designing object oriented programs can be extremely
 difficult.  For more information, you should probably look for books
 on the topic of design patterns (although understanding what happened
-in this exercise will take you pretty far in terms of using objects in
+in this ejercicio will take you pretty far in terms of using objects in
 a practically useful way).
 
 

@@ -9,10 +9,10 @@ In this section we reconsider a design decision made earlier.
 Compare these two programs that return the same output.
 
 ```python
-# Provide a filename
-def read_data(filename):
+# Provide a nombre_archivo
+def read_data(nombre_archivo):
     records = []
-    with open(filename) as f:
+    with open(nombre_archivo) as f:
         for line in f:
             ...
             records.append(r)
@@ -74,7 +74,7 @@ lines = sys.stdin
 data = read_data(lines)
 
 # A list of strings
-lines = ['ACME,50,91.1','IBM,75,123.45', ... ]
+lines = ['ACME,50,91.1','Naranja,75,123.45', ... ]
 data = read_data(lines)
 ```
 
@@ -84,41 +84,41 @@ There is considerable flexibility with this design.
 
 ### Library Design Best Practices
 
-Code libraries are often better served by embracing flexibility.
+Code bibliotecas are often better served by embracing flexibility.
 Don't restrict your options.  With great flexibility comes great power.
 
-## Exercise
+## Ejercicio
 
-### Ejercicio 5.6: From filenames to file-like objects
+### Ejercicio 5.6: From nombre_archivos to file-like objects
 
 You've now created a file `fileparse.py` that contained a
 function `parse_csv()`.  The function worked like this:
 
 ```python
 >>> import fileparse
->>> portfolio = fileparse.parse_csv('Data/portfolio.csv', types=[str,int,float])
+>>> camion = fileparse.parse_csv('Data/camion.csv', types=[str,int,float])
 >>>
 ```
 
-Right now, the function expects to be passed a filename.  However, you
+Right now, the function expects to be passed a nombre_archivo.  However, you
 can make the code more flexible.  Modify the function so that it works
 with any file-like/iterable object.  For example:
 
 ```
 >>> import fileparse
 >>> import gzip
->>> with gzip.open('Data/portfolio.csv.gz', 'rt') as file:
+>>> with gzip.open('Data/camion.csv.gz', 'rt') as file:
 ...      port = fileparse.parse_csv(file, types=[str,int,float])
 ...
->>> lines = ['name,shares,price', 'AA,100,34.23', 'IBM,50,91.1', 'HPE,75,45.1']
+>>> lines = ['name,cajones,precio', 'Lima,100,34.23', 'Naranja,50,91.1', 'HPE,75,45.1']
 >>> port = fileparse.parse_csv(lines, types=[str,int,float])
 >>>
 ```
 
-In this new code, what happens if you pass a filename as before?
+In this new code, what happens if you pass a nombre_archivo as before?
 
 ```
->>> port = fileparse.parse_csv('Data/portfolio.csv', types=[str,int,float])
+>>> port = fileparse.parse_csv('Data/camion.csv', types=[str,int,float])
 >>> port
 ... look at output (it should be crazy) ...
 >>>
@@ -128,10 +128,10 @@ Yes, you'll need to be careful.   Could you add a safety check to avoid this?
 
 ### Ejercicio 5.7: Fixing existing functions
 
-Fix the `read_portfolio()` and `read_prices()` functions in the
-`report.py` file so that they work with the modified version of
+Fix the `leer_camion()` and `read_precios()` functions in the
+`reporte.py` file so that they work with the modified version of
 `parse_csv()`.  This should only involve a minor modification.
-Afterwards, your `report.py` and `pcost.py` programs should work
+Afterwards, your `reporte.py` and `costo_camion.py` programs should work
 the same way they always did.
 
 

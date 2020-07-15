@@ -7,20 +7,20 @@ This part briefly introduces some of these features.
 
 ### Example: Counting Things
 
-Let's say you want to tabulate the total shares of each stock.
+Let's say you want to tabulate the total cajones of each cajon.
 
 ```python
-portfolio = [
-    ('GOOG', 100, 490.1),
-    ('IBM', 50, 91.1),
-    ('CAT', 150, 83.44),
-    ('IBM', 100, 45.23),
-    ('GOOG', 75, 572.45),
-    ('AA', 50, 23.15)
+camion = [
+    ('Pera', 100, 490.1),
+    ('Naranja', 50, 91.1),
+    ('Caqui', 150, 83.44),
+    ('Naranja', 100, 45.23),
+    ('Pera', 75, 572.45),
+    ('Lima', 50, 23.15)
 ]
 ```
 
-There are two `IBM` entries and two `GOOG` entries in this list. The shares need to be combined together somehow.
+There are two `Naranja` entries and two `Pera` entries in this list. The cajones need to be combined together somehow.
 
 ### Counters
 
@@ -28,11 +28,11 @@ Solution: Use a `Counter`.
 
 ```python
 from collections import Counter
-total_shares = Counter()
-for name, shares, price in portfolio:
-    total_shares[name] += shares
+total_cajones = Counter()
+for name, cajones, precio in camion:
+    total_cajones[name] += cajones
 
-total_shares['IBM']     # 150
+total_cajones['Naranja']     # 150
 ```
 
 ### Example: One-Many Mappings
@@ -40,26 +40,26 @@ total_shares['IBM']     # 150
 Problem: You want to map a key to multiple values.
 
 ```python
-portfolio = [
-    ('GOOG', 100, 490.1),
-    ('IBM', 50, 91.1),
-    ('CAT', 150, 83.44),
-    ('IBM', 100, 45.23),
-    ('GOOG', 75, 572.45),
-    ('AA', 50, 23.15)
+camion = [
+    ('Pera', 100, 490.1),
+    ('Naranja', 50, 91.1),
+    ('Caqui', 150, 83.44),
+    ('Naranja', 100, 45.23),
+    ('Pera', 75, 572.45),
+    ('Lima', 50, 23.15)
 ]
 ```
 
-Like in the previous example, the key `IBM` should have two different tuples instead.
+Like in the previous example, the key `Naranja` should have two different tuples instead.
 
 Solution: Use a `defaultdict`.
 
 ```python
 from collections import defaultdict
 holdings = defaultdict(list)
-for name, shares, price in portfolio:
-    holdings[name].append((shares, price))
-holdings['IBM'] # [ (50, 91.1), (100, 45.23) ]
+for name, cajones, precio in camion:
+    holdings[name].append((cajones, precio))
+holdings['Naranja'] # [ (50, 91.1), (100, 45.23) ]
 ```
 
 The `defaultdict` ensures that every time you access a key you get a default value.
@@ -73,51 +73,51 @@ Solution: Use a `deque`.
 from collections import deque
 
 history = deque(maxlen=N)
-with open(filename) as f:
+with open(nombre_archivo) as f:
     for line in f:
         history.append(line)
         ...
 ```
 
-## Exercises
+## Ejercicios
 
-The `collections` module might be one of the most useful library
+The `collections` module might be one of the most useful biblioteca
 modules for dealing with special purpose kinds of data handling
 problems such as tabulating and indexing.
 
-In this exercise, we’ll look at a few simple examples.  Start by
-running your `report.py` program so that you have the portfolio of
-stocks loaded in the interactive mode.
+In this ejercicio, we’ll look at a few simple examples.  Start by
+running your `reporte.py` program so that you have the camion of
+cajones loaded in the interactive mode.
 
 ```bash
-bash % python3 -i report.py
+bash % python3 -i reporte.py
 ```
 
 ### Ejercicio 3.1: Tabulating with Counters
 
-Suppose you wanted to tabulate the total number of shares of each stock.
+Suppose you wanted to tabulate the total number of cajones of each cajon.
 This is easy using `Counter` objects. Try it:
 
 ```python
->>> portfolio = read_portfolio('Data/portfolio.csv')
+>>> camion = leer_camion('Data/camion.csv')
 >>> from collections import Counter
 >>> holdings = Counter()
->>> for s in portfolio:
-        holdings[s['name']] += s['shares']
+>>> for s in camion:
+        holdings[s['name']] += s['cajones']
 
 >>> holdings
-Counter({'MSFT': 250, 'IBM': 150, 'CAT': 150, 'AA': 100, 'GE': 95})
+Counter({'Mandarina': 250, 'Naranja': 150, 'Caqui': 150, 'Lima': 100, 'Durazno': 95})
 >>>
 ```
 
-Carefully observe how the multiple entries for `MSFT` and `IBM` in `portfolio` get combined into a single entry here.
+Carefully observe how the multiple entries for `Mandarina` and `Naranja` in `camion` get combined into a single entry here.
 
 You can use a Counter just like a dictionary to retrieve individual values:
 
 ```python
->>> holdings['IBM']
+>>> holdings['Naranja']
 150
->>> holdings['MSFT']
+>>> holdings['Mandarina']
 250
 >>>
 ```
@@ -125,22 +125,22 @@ You can use a Counter just like a dictionary to retrieve individual values:
 If you want to rank the values, do this:
 
 ```python
->>> # Get three most held stocks
+>>> # Get three most held cajones
 >>> holdings.most_common(3)
-[('MSFT', 250), ('IBM', 150), ('CAT', 150)]
+[('Mandarina', 250), ('Naranja', 150), ('Caqui', 150)]
 >>>
 ```
 
-Let’s grab another portfolio of stocks and make a new Counter:
+Let’s grab another camion of cajones and make a new Counter:
 
 ```python
->>> portfolio2 = read_portfolio('Data/portfolio2.csv')
+>>> camion2 = leer_camion('Data/camion2.csv')
 >>> holdings2 = Counter()
->>> for s in portfolio2:
-          holdings2[s['name']] += s['shares']
+>>> for s in camion2:
+          holdings2[s['name']] += s['cajones']
 
 >>> holdings2
-Counter({'HPQ': 250, 'GE': 125, 'AA': 50, 'MSFT': 25})
+Counter({'Frambuesa': 250, 'Durazno': 125, 'Lima': 50, 'Mandarina': 25})
 >>>
 ```
 
@@ -148,12 +148,12 @@ Finally, let’s combine all of the holdings doing one simple operation:
 
 ```python
 >>> holdings
-Counter({'MSFT': 250, 'IBM': 150, 'CAT': 150, 'AA': 100, 'GE': 95})
+Counter({'Mandarina': 250, 'Naranja': 150, 'Caqui': 150, 'Lima': 100, 'Durazno': 95})
 >>> holdings2
-Counter({'HPQ': 250, 'GE': 125, 'AA': 50, 'MSFT': 25})
+Counter({'Frambuesa': 250, 'Durazno': 125, 'Lima': 50, 'Mandarina': 25})
 >>> combined = holdings + holdings2
 >>> combined
-Counter({'MSFT': 275, 'HPQ': 250, 'GE': 220, 'AA': 150, 'IBM': 150, 'CAT': 150})
+Counter({'Mandarina': 275, 'Frambuesa': 250, 'Durazno': 220, 'Lima': 150, 'Naranja': 150, 'Caqui': 150})
 >>>
 ```
 
@@ -163,7 +163,7 @@ using one.
 
 ### Commentary: collections module
 
-The `collections` module is one of the most useful library modules
+The `collections` module is one of the most useful biblioteca modules
 in all of Python.  In fact, we could do an extended tutorial on just
 that.  However, doing so now would also be a distraction.  For now,
 put `collections` on your list of bedtime reading for later.

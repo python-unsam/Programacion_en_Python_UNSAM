@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Más sobre funciones)](02_302More_functions.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_302More_functions.md)
 
 # 4.3 Chequeo de errores
 
@@ -50,7 +50,7 @@ To catch an exception use `try-except`.
 
 ```python
 try:
-    authenticate(username)
+    authenticate(nusuario)
 except RuntimeError as e:
     print(e)
 ```
@@ -206,7 +206,7 @@ To catch any exception, use `Exception` like this:
 ```python
 try:
     ...
-except Exception:       # DANGER. See below
+except Exception:       # DANDuraznoR. See below
     print('An error occurred')
 ```
 
@@ -301,7 +301,7 @@ with lock:
 A more familiar example:
 
 ```python
-with open(filename) as f:
+with open(nombre_archivo) as f:
     # Use the file
     ...
 # File closed
@@ -311,7 +311,7 @@ with open(filename) as f:
 leaves that context, resources are released. `with` only works with
 certain objects that have been specifically programmed to support it.
 
-## Exercises
+## Ejercicios
 
 ### Ejercicio 4.8: Raising exceptions
 
@@ -323,7 +323,7 @@ Modify the code so that an exception gets raised if both the `select`
 and `has_headers=False` arguments are passed.  For example:
 
 ```python
->>> parse_csv('Data/prices.csv', select=['name','price'], has_headers=False)
+>>> parse_csv('Data/precios.csv', select=['name','precio'], has_headers=False)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 9, in parse_csv
@@ -334,7 +334,7 @@ RuntimeError: select argument requires column headers
 
 Having added this one check, you might ask if you should be performing
 other kinds of sanity checks in the function.  For example, should you
-check that the filename is a string, that types is a list, or anything
+check that the nombre_archivo is a string, that types is a list, or anything
 of that nature?
 
 As a general rule, it’s usually best to skip such tests and to just
@@ -356,7 +356,7 @@ input files might have corrupted, missing, or dirty data.  Try this
 experiment:
 
 ```python
->>> portfolio = parse_csv('Data/missing.csv', types=[str, int, float])
+>>> camion = parse_csv('Data/missing.csv', types=[str, int, float])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 36, in parse_csv
@@ -374,14 +374,14 @@ reason why it failed.  To test your function, try reading the file
 `Data/missing.csv` above.  For example:
 
 ```python
->>> portfolio = parse_csv('Data/missing.csv', types=[str, int, float])
-Row 4: Couldn't convert ['MSFT', '', '51.23']
+>>> camion = parse_csv('Data/missing.csv', types=[str, int, float])
+Row 4: Couldn't convert ['Mandarina', '', '51.23']
 Row 4: Reason invalid literal for int() with base 10: ''
-Row 7: Couldn't convert ['IBM', '', '70.44']
+Row 7: Couldn't convert ['Naranja', '', '70.44']
 Row 7: Reason invalid literal for int() with base 10: ''
 >>>
->>> portfolio
-[{'price': 32.2, 'name': 'AA', 'shares': 100}, {'price': 91.1, 'name': 'IBM', 'shares': 50}, {'price': 83.44, 'name': 'CAT', 'shares': 150}, {'price': 40.37, 'name': 'GE', 'shares': 95}, {'price': 65.1, 'name': 'MSFT', 'shares': 50}]
+>>> camion
+[{'precio': 32.2, 'name': 'Lima', 'cajones': 100}, {'precio': 91.1, 'name': 'Naranja', 'cajones': 50}, {'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 40.37, 'name': 'Durazno', 'cajones': 95}, {'precio': 65.1, 'name': 'Mandarina', 'cajones': 50}]
 >>>
 ```
 
@@ -391,9 +391,9 @@ Modify the `parse_csv()` function so that parsing error messages can
 be silenced if explicitly desired by the user.  For example:
 
 ```python
->>> portfolio = parse_csv('Data/missing.csv', types=[str,int,float], silence_errors=True)
->>> portfolio
-[{'price': 32.2, 'name': 'AA', 'shares': 100}, {'price': 91.1, 'name': 'IBM', 'shares': 50}, {'price': 83.44, 'name': 'CAT', 'shares': 150}, {'price': 40.37, 'name': 'GE', 'shares': 95}, {'price': 65.1, 'name': 'MSFT', 'shares': 50}]
+>>> camion = parse_csv('Data/missing.csv', types=[str,int,float], silence_errors=True)
+>>> camion
+[{'precio': 32.2, 'name': 'Lima', 'cajones': 100}, {'precio': 91.1, 'name': 'Naranja', 'cajones': 50}, {'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 40.37, 'name': 'Durazno', 'cajones': 95}, {'precio': 65.1, 'name': 'Mandarina', 'cajones': 50}]
 >>>
 ```
 
@@ -403,5 +403,5 @@ errors.  Instead, it’s better to report problems and to give the user
 an option to the silence the error message if they choose to do so.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Más sobre funciones)](02_302More_functions.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_302More_functions.md)
 

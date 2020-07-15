@@ -61,7 +61,7 @@ ValueError: invalid literal for int() with base 10: 'N/A'
 
 Para poder entender qué pasó (debuguear), el mensaje describe cuál fue el problema, dónde ocurrió y un poco de la historia (traceback) de los llamados que terminaron en este error.
 
-### Atrapando y manejando excepciones
+### Atrapar y manejar excepciones
 
 Las excepciones pueden ser atrapadas y manejadas.
 
@@ -81,7 +81,7 @@ El nombre `ValueError` debe coincidir con el tipo de error que estás tratando d
 
 Suele ser difícil saber exactamente qué tipo de errores pueden ocurrir por adelantado. Para bien o para mal, el manejo de excepciones suele ir agrendándose a medida que un programa va generando errores inesperados (al mejor estilo: "Uh! Me olvidé de que podía pasar esto. Deberíamos preverlo y manejarlo adecuadamente para la próxima").
 
-### Generando excepciones
+### Generar excepciones
 
 Para generar una expceción (también diremos *levantar* una excepción, porque más cercano al término inglés "raise"), usá el comando `raise`.
 
@@ -186,7 +186,7 @@ ValueError: invalid literal for int() with base 10: ''
 >>>
 ```
 
-El programa termina con un error. A esta altura tenés que tomar una decisión. Para que el programa funcione podés editar el archivo CSV de entrada de manera de corregirlo (borrando líneas o adecuando la información) o podés modificar el código de manera de manejar las líneas *incorrectas* de  agluna manera.
+El programa termina con un error. A esta altura tenés que tomar una decisión. Para que el programa funcione podés editar el archivo CSV de entrada de manera de corregirlo (borrando líneas o adecuando la información) o podés modificar el código de manera de manejar las líneas *incorrectas* de  alguna manera.
 
 Modificá el programa `costo_camion.py` para que atrape la excepción, imprima un mensaje de aviso (warning) y continúe procesando el resto del archivo.
 
@@ -224,10 +224,12 @@ Modificá tu programa `costo_camion.py` para que use el módulo `csv` para leer 
 
 ### Ejercicio 2.8: Ejecución desde la línea de comandos con parámetros
 
+
 En el programa `costo_camion.py`, el nombre del archivo de entrada `'Data/camion.csv'` fue escrito en el código. 
 
 ```python
 # costo_camion.py
+import csv
 
 def costo_camion(nombre_archivo):
     ...
@@ -240,10 +242,11 @@ print('Total cost:', cost)
 
 Esto está bien para ejercitar, pero en un programa real probablemente no harías eso ya que querrías una mayor flexibilidad. Una posiblidad es pasarle al programa el nombre del archivo que querés procesar como un parámentro cuando lo llamás desde la línea de comandos. 
 
-Intentá cambiar el código con la sugerencia del siguiente ejemplo:
+Cambiá tu código con la sugerencia del siguiente ejemplo:
 
 ```python
 # costo_camion.py
+import csv
 import sys
 
 def costo_camion(nombre_archivo):

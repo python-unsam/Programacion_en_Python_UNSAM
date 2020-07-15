@@ -137,7 +137,7 @@ Un ejemplo:
 
 ### Claves compuestas
 
-Casi cualquier valor puede usarse como clave en un diccionario de Python. Una clave debe ser de tipo inmutbale.
+Casi cualquier valor puede usarse como clave en un diccionario de Python. Una clave debe ser de tipo inmutable.
 Por ejemplo, tuplas:
 
 ```python
@@ -207,14 +207,14 @@ En estos ejercicios, vas a empezar a construir uno de los programas más grandes
 
 ### Ejercicio 2.12: Lista de tuplas
 
-El archivo `Data/camion.csv` contiene una lista de cajones de un camión.  En el [Ejercicio 2.5](../02_Datos/02_107Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de una sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
+El archivo `Data/camion.csv` contiene una lista de cajones de un camión.  En el [Ejercicio 2.5](../02_Datos/02_107Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
-Tu código debería verse parecido a éste:
+La función debería verse parecido a éste:
 
 ```python
-# pcamion.py
-
+# fragmento de costo_camion.py
 import csv
+...
 
 def costo_camion(nombre_archivo):
     '''Computa el precio total del camion (cajones*precio) de un archivo'''
@@ -228,6 +228,8 @@ def costo_camion(nombre_archivo):
             precio = float(row[2])
             total += ncajones * precio
     return total
+
+...
 ```
 
 Usando este código como guía, creá un nuevo archivo `reporte.py`.  En este archivo, definí una función `leer_camion(nombre_archivo)` que abre un archivo con el contenido de un camión, lo lee y pasa la información a una lista de tuplas. Para hacerlo vas a tener que hacer algunas modificaciones menores al código de arriba.
@@ -248,9 +250,9 @@ for row in rows:
 
 Por último, la función debe devolver la lista `camion`.
 
-Experimentá con tu función interactivamente (acordate de que primero tenés que correr el programa `reportepy` en el intérprete):
+Experimentá con tu función interactivamente (acordate de que primero tenés que correr el programa `reporte.py` en el intérprete):
 
-*Ayuda: Usá `-i` para ejecutar un archivo en la terminal*
+*Ayuda: Usá `-i` para ejecutar un archivo en la terminal y quedar en el intéreprete*
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')
@@ -288,7 +290,7 @@ También podés reescribir el último ciclo for usando un comando como éste:
 
 ### Ejercicio 2.13: Lista de diccionarios
 
-Tomá la función que escribiste en el ejercicio *Lista de tuplas* y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del achivo input.
+Tomá la función que escribiste en el ejercicio anterior (*Lista de tuplas*) y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del achivo de entrada.
 
 Experimentá con esta función nueva igual que en el ejercicio anterior.
 
@@ -313,7 +315,7 @@ Experimentá con esta función nueva igual que en el ejercicio anterior.
 
 Fijate que acá los distintos campos para cada entrada se acceden a través de claves en vez de números de fila y columna. Muchas veces preferimos esto porque el código resulta más fácil de leer en el futuro.
 
-Mirando diccionarios y listas muy grandes puede ser un lío. Para limpiar el output para debugging, considerá la función `pprint`.
+Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el output para debugging, probá la función `pprint` que le da un formato más sencillo de interpretar.
 
 ```python
 >>> from pprint import pprint
@@ -330,7 +332,7 @@ Mirando diccionarios y listas muy grandes puede ser un lío. Para limpiar el out
 
 ### Ejercicio 2.14: Diccionarios como contenedores
 
-Los diccionarios son útiles si querés buscar elementos usando índices que no sean números enteros. En la terminal de Python, juygá con un diccionario:
+Los diccionarios son útiles si querés buscar elementos usando índices que no sean números enteros. En la terminal de Python, jugá con un diccionario:
 
 ```python
 >>> precios = { }
@@ -347,8 +349,7 @@ False
 >>>
 ```
 
-El archivo `Data/precios.csv` contiene una serie de líneas con precios de cajones.
-El archivo se ve así:
+El archivo `Data/precios.csv` contiene una serie de líneas con precios de venta de cajones en el mercado al que va el camión. El archivo se ve así:
 
 ```csv
 "Lima",9.22
@@ -359,7 +360,7 @@ El archivo se ve así:
 ...
 ```
 
-Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como éste arme un diccionario donde las claves sean los nombres de frutas y los valores sean los precios por cajón.
+Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como este arme un diccionario donde las claves sean los nombres de frutas y los valores sean los precios por cajón.
 
 Para hacerlo, empezá con un diccionario vacío y agregale valores igual que hiciste antes, pero ahora leyendo los valores del archivo.
 
@@ -389,7 +390,7 @@ Observá que arriba figura una lista vacía (la última), porque la última lín
 Puede suceder que esto haga que tu programa termine con una excepción. Usá los comandos `try` y `except` comandos para evitar el problema.
 Para pensar: ¿Sería mejor prevenir estos problemas con el comando `if` en vez de `try` y `except`?
 
-Una vezq ue hayas escrito tu función `leer_precios()`, testeala interactivamente para asegurarte de que funciona bien:
+Una vez que hayas escrito tu función `leer_precios()`, testeala interactivamente para asegurarte de que funciona bien:
 
 ```python
 >>> precios = leer_precios('Data/precios.csv')
@@ -400,9 +401,11 @@ Una vezq ue hayas escrito tu función `leer_precios()`, testeala interactivament
 >>>
 ```
 
-### Ejercicio 2.15: Determinando si te podés jubilar
+### Ejercicio 2.15: Balances
 
-Juntá todo este trabajo agregando algunos comandos adicionales a tu programa `reporte.py` que calcula ganancias y pérdidas. Estos comandos deberían tomar la lisa de cajones del ejercicio *Lista de diccionarios* y el diccionario de precios del ejercicio *Diccionarios como contenedores*, y calcular el valor actual del camión y la ganancia o pérdida.
+Supongamos que los precios en `camion.csv` son los precios pagados al productor de frutas mientras que los precios en `precios.csv` son los precios de venta en el lugar de descarga del camión. 
+
+Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `reporte.py`, agregando algunos comandos adicionales donde haga falta, de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_202Containers.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_202Containers.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_201Datatypes.md) \| [Próximo (5 Formatting)](05_203Formatting.md)

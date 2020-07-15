@@ -53,23 +53,23 @@ if __name__ == '__main__':
 
 Statements enclosed inside the `if` statement become the *main* program.
 
-### Main programs vs. library imports
+### Main programs vs. biblioteca imports
 
-Any Python file can either run as main or as a library import:
+Any Python file can either run as main or as a biblioteca import:
 
 ```bash
 bash % python3 prog.py # Running as main
 ```
 
 ```python
-import prog   # Running as library import
+import prog   # Running as biblioteca import
 ```
 
 In both cases, `__name__` is the name of the module.  However, it will only be set to `__main__` if
 running as main.
 
 Usually, you don't want statements that are part of the main program
-to execute on a library import.  So, it's common to have an `if-`check
+to execute on a biblioteca import.  So, it's common to have an `if-`check
 in code that might be used either way.
 
 ```python
@@ -83,7 +83,7 @@ Here is a common program template for writing a Python program:
 
 ```python
 # prog.py
-# Import statements (libraries)
+# Import statements (bibliotecas)
 import modules
 
 # Functions
@@ -106,7 +106,7 @@ if __name__ == '__main__':
 Python is often used for command-line tools
 
 ```bash
-bash % python3 report.py portfolio.csv prices.csv
+bash % python3 reporte.py camion.csv precios.csv
 ```
 
 It means that the scripts are executed from the shell /
@@ -117,14 +117,14 @@ terminal. Common use cases are for automation, background tasks, etc.
 The command line is a list of text strings.
 
 ```bash
-bash % python3 report.py portfolio.csv prices.csv
+bash % python3 reporte.py camion.csv precios.csv
 ```
 
 This list of text strings is found in `sys.argv`.
 
 ```python
 # In the previous bash command
-sys.argv # ['report.py, 'portfolio.csv', 'prices.csv']
+sys.argv # ['reporte.py, 'camion.csv', 'precios.csv']
 ```
 
 Here is a simple example of processing the arguments:
@@ -133,9 +133,9 @@ Here is a simple example of processing the arguments:
 import sys
 
 if len(sys.argv) != 3:
-    raise SystemExit(f'Usage: {sys.argv[0]} ' 'portfile pricefile')
+    raise SystemExit(f'Usage: {sys.argv[0]} ' 'portfile preciofile')
 portfile = sys.argv[1]
-pricefile = sys.argv[2]
+preciofile = sys.argv[2]
 ...
 ```
 
@@ -219,7 +219,7 @@ bash % prog.py
 ... output ...
 ```
 
-*Note: The Python Launcher on Windows also looks for the `#!` line to indicate language version.*
+*Observación: The Python Launcher on Windows also looks for the `#!` line to indicate language version.*
 
 ### Script Template
 
@@ -230,7 +230,7 @@ as command-line scripts:
 #!/usr/bin/env python3
 # prog.py
 
-# Import statements (libraries)
+# Import statements (bibliotecas)
 import modules
 
 # Functions
@@ -250,56 +250,56 @@ if __name__ == '__main__':
     main(sys.argv)
 ```
 
-## Exercises
+## Ejercicios
 
 ### Ejercicio 5.4: `main()` functions
 
-In the file `report.py` add a `main()` function that accepts a list of
+In the file `reporte.py` add a `main()` function that accepts a list of
 command line options and produces the same output as before.  You
 should be able to run it interatively like this:
 
 ```python
 >>> import report
->>> report.main(['report.py', 'Data/portfolio.csv', 'Data/prices.csv'])
-      Name     Shares      Price     Change
+>>> report.main(['reporte.py', 'Data/camion.csv', 'Data/precios.csv'])
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 >>>
 ```
 
-Modify the `pcost.py` file so that it has a similar `main()` function:
+Modify the `costo_camion.py` file so that it has a similar `main()` function:
 
 ```python
 >>> import pcost
->>> pcost.main(['pcost.py', 'Data/portfolio.csv'])
+>>> pcost.main(['costo_camion.py', 'Data/camion.csv'])
 Total cost: 44671.15
 >>>
 ```
 
 ### Ejercicio 5.5: Making Scripts
 
-Modify the `report.py` and `pcost.py` programs so that they can
+Modify the `reporte.py` and `costo_camion.py` programs so that they can
 execute as a script on the command line:
 
 ```bash
-bash $ python3 report.py Data/portfolio.csv Data/prices.csv
-      Name     Shares      Price     Change
+bash $ python3 reporte.py Data/camion.csv Data/precios.csv
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 
-bash $ python3 pcost.py Data/portfolio.csv
+bash $ python3 costo_camion.py Data/camion.csv
 Total cost: 44671.15
 ```
 

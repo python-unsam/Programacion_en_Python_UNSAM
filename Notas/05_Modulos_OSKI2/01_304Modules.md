@@ -149,7 +149,7 @@ names from the module into the local space after it's done.
 ### Module Loading
 
 Each module loads and executes only *once*.
-*Note: Repeated imports just return a reference to the previously loaded module.*
+*Observación: Repeated imports just return a reference to the previously loaded module.*
 
 `sys.modules` is a dict of all loaded modules.
 
@@ -209,9 +209,9 @@ the module search path.  However, it sometimes arises if you're
 trying to import Python code that's in an unusual location or
 not readily accessible from the current working directory.
 
-## Exercises
+## Ejercicios
 
-For this exercise involving modules, it is critically important to
+For this ejercicio involving modules, it is critically important to
 make sure you are running Python in a proper environment.  Modules are
 usually when programmers encounter problems with the current working
 directory or with Python's path settings.  For this course, it is
@@ -268,16 +268,16 @@ Now, try importing your `fileparse` module and getting some help on it.
 Try using the module to read some data:
 
 ```python
->>> portfolio = fileparse.parse_csv('Data/portfolio.csv',select=['name','shares','price'], types=[str,int,float])
->>> portfolio
+>>> camion = fileparse.parse_csv('Data/camion.csv',select=['name','cajones','precio'], types=[str,int,float])
+>>> camion
 ... look at the output ...
->>> pricelist = fileparse.parse_csv('Data/prices.csv',types=[str,float], has_headers=False)
->>> pricelist
+>>> lista_precios = fileparse.parse_csv('Data/precios.csv',types=[str,float], has_headers=False)
+>>> lista_precios
 ... look at the output ...
->>> prices = dict(pricelist)
->>> prices
+>>> precios = dict(lista_precios)
+>>> precios
 ... look at the output ...
->>> prices['IBM']
+>>> precios['Naranja']
 106.11
 >>>
 ```
@@ -286,57 +286,57 @@ Try importing a function so that you don’t need to include the module name:
 
 ```python
 >>> from fileparse import parse_csv
->>> portfolio = parse_csv('Data/portfolio.csv', select=['name','shares','price'], types=[str,int,float])
->>> portfolio
+>>> camion = parse_csv('Data/camion.csv', select=['name','cajones','precio'], types=[str,int,float])
+>>> camion
 ... look at the output ...
 >>>
 ```
 
-### Ejercicio 5.2: Using your library module
+### Ejercicio 5.2: Using your biblioteca module
 
-In section 2, you wrote a program `report.py` that produced a stock report like this:
+In section 2, you wrote a program `reporte.py` that produced a cajon report like this:
 
 ```
-      Name     Shares      Price     Change
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 ```
 
 Take that program and modify it so that all of the input file
 processing is done using functions in your `fileparse` module.  To do
-that, import `fileparse` as a module and change the `read_portfolio()`
-and `read_prices()` functions to use the `parse_csv()` function.
+that, import `fileparse` as a module and change the `leer_camion()`
+and `read_precios()` functions to use the `parse_csv()` function.
 
-Use the interactive example at the start of this exercise as a guide.
+Use the interactive example at the start of this ejercicio as a guide.
 Afterwards, you should get exactly the same output as before.
 
-### Ejercicio 5.3: Using more library imports
+### Ejercicio 5.3: Using more biblioteca imports
 
-In section 1, you wrote a program `pcost.py` that read a portfolio and computed its cost.
+In section 1, you wrote a program `costo_camion.py` that read a camion and computed its cost.
 
 ```python
 >>> import pcost
->>> pcost.portfolio_cost('Data/portfolio.csv')
+>>> pcost.costo_camion('Data/camion.csv')
 44671.15
 >>>
 ```
 
-Modify the `pcost.py` file so that it uses the `report.read_portfolio()` function.
+Modify the `costo_camion.py` file so that it uses the `report.leer_camion()` function.
 
 ### Commentary
 
-When you are done with this exercise, you should have three
+When you are done with this ejercicio, you should have three
 programs. `fileparse.py` which contains a general purpose
-`parse_csv()` function.  `report.py` which produces a nice report, but
-also contains `read_portfolio()` and `read_prices()` functions.  And
-finally, `pcost.py` which computes the portfolio cost, but makes use
-of the `read_portfolio()` function written for the `report.py` program.
+`parse_csv()` function.  `reporte.py` which produces a nice report, but
+also contains `leer_camion()` and `read_precios()` functions.  And
+finally, `costo_camion.py` which computes the camion cost, but makes use
+of the `leer_camion()` function written for the `reporte.py` program.
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 El módulo principal (main))](02_305Main_module.md)

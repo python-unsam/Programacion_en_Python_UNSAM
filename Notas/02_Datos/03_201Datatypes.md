@@ -349,7 +349,6 @@ k = cuenta
 ```
 
 Probá esta variante:
-Try this variant that performs a lookup at the same time:
 
 ```python
 >>> for k in d:

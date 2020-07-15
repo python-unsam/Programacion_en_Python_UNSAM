@@ -21,14 +21,14 @@ each element of a sequence.
 Another example:
 
 ```python
->>> names = ['Elwood', 'Jake']
+>>> names = ['Edmundo', 'Juana']
 >>> a = [name.lower() for name in names]
 >>> a
 ['elwood', 'jake']
 >>>
 ```
 
-The general syntax is: `[ <expression> for <variable_name> in <sequence> ]`.
+The general syntax is: `[ <expression> for <nvariable> in <sequence> ]`.
 
 ### Filtering
 
@@ -48,32 +48,32 @@ List comprehensions are hugely useful.  For example, you can collect values of a
 dictionary fields:
 
 ```python
-stocknames = [s['name'] for s in stocks]
+cajonnames = [s['name'] for s in cajones]
 ```
 
 You can perform database-like queries on sequences.
 
 ```python
-a = [s for s in stocks if s['price'] > 100 and s['shares'] > 50 ]
+a = [s for s in cajones if s['precio'] > 100 and s['cajones'] > 50 ]
 ```
 
 You can also combine a list comprehension with a sequence reduction:
 
 ```python
-cost = sum([s['shares']*s['price'] for s in stocks])
+cost = sum([s['cajones']*s['precio'] for s in cajones])
 ```
 
 ### General Syntax
 
 ```code
-[ <expression> for <variable_name> in <sequence> if <condition>]
+[ <expression> for <nvariable> in <sequence> if <condition>]
 ```
 
 What it means:
 
 ```python
 result = []
-for variable_name in sequence:
+for nvariable in sequence:
     if condition:
         result.append(expression)
 ```
@@ -92,18 +92,18 @@ It is also implemented in several other languages. Most
 coders probably aren't thinking about their math class though. So,
 it's fine to view it as a cool list shortcut.
 
-## Exercises
+## Ejercicios
 
-Start by running your `report.py` program so that you have the
-portfolio of stocks loaded in the interactive mode.
+Start by running your `reporte.py` program so that you have the
+camion of cajones loaded in the interactive mode.
 
 ```bash
-bash % python3 -i report.py
+bash % python3 -i reporte.py
 ```
 
 Now, at the Python interactive prompt, type statements to perform the
 operations described below.  These operations perform various kinds of
-data reductions, transforms, and queries on the portfolio data.
+data reductions, transforms, and queries on the camion data.
 
 ### Ejercicio 3.2: List comprehensions
 
@@ -125,21 +125,21 @@ data suitably transformed or filtered.
 
 ### Ejercicio 3.3: Sequence Reductions
 
-Compute the total cost of the portfolio using a single Python statement.
+Compute the total cost of the camion using a single Python statement.
 
 ```python
->>> portfolio = read_portfolio('Data/portfolio.csv')
->>> cost = sum([ s['shares'] * s['price'] for s in portfolio ])
+>>> camion = leer_camion('Data/camion.csv')
+>>> cost = sum([ s['cajones'] * s['precio'] for s in camion ])
 >>> cost
 44671.15
 >>>
 ```
 
 After you have done that, show how you can compute the current value
-of the portfolio using a single statement.
+of the camion using a single statement.
 
 ```python
->>> value = sum([ s['shares'] * prices[s['name']] for s in portfolio ])
+>>> value = sum([ s['cajones'] * precios[s['name']] for s in camion ])
 >>> value
 28686.1
 >>>
@@ -149,7 +149,7 @@ Both of the above operations are an example of a map-reduction. The
 list comprehension is mapping an operation across the list.
 
 ```python
->>> [ s['shares'] * s['price'] for s in portfolio ]
+>>> [ s['cajones'] * s['precio'] for s in camion ]
 [3220.0000000000005, 4555.0, 12516.0, 10246.0, 3835.1499999999996, 3254.9999999999995, 7044.0]
 >>>
 ```
@@ -168,85 +168,85 @@ With this knowledge, you are now ready to go launch a big-data startup company.
 
 Try the following examples of various data queries.
 
-First, a list of all portfolio holdings with more than 100 shares.
+First, a list of all camion holdings with more than 100 cajones.
 
 ```python
->>> more100 = [ s for s in portfolio if s['shares'] > 100 ]
+>>> more100 = [ s for s in camion if s['cajones'] > 100 ]
 >>> more100
-[{'price': 83.44, 'name': 'CAT', 'shares': 150}, {'price': 51.23, 'name': 'MSFT', 'shares': 200}]
+[{'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'name': 'Mandarina', 'cajones': 200}]
 >>>
 ```
 
-All portfolio holdings for MSFT and IBM stocks.
+All camion holdings for Mandarina and Naranja cajones.
 
 ```python
->>> msftibm = [ s for s in portfolio if s['name'] in {'MSFT','IBM'} ]
+>>> msftibm = [ s for s in camion if s['name'] in {'Mandarina','Naranja'} ]
 >>> msftibm
-[{'price': 91.1, 'name': 'IBM', 'shares': 50}, {'price': 51.23, 'name': 'MSFT', 'shares': 200},
-  {'price': 65.1, 'name': 'MSFT', 'shares': 50}, {'price': 70.44, 'name': 'IBM', 'shares': 100}]
+[{'precio': 91.1, 'name': 'Naranja', 'cajones': 50}, {'precio': 51.23, 'name': 'Mandarina', 'cajones': 200},
+  {'precio': 65.1, 'name': 'Mandarina', 'cajones': 50}, {'precio': 70.44, 'name': 'Naranja', 'cajones': 100}]
 >>>
 ```
 
-A list of all portfolio holdings that cost more than $10000.
+A list of all camion holdings that cost more than $10000.
 
 ```python
->>> cost10k = [ s for s in portfolio if s['shares'] * s['price'] > 10000 ]
+>>> cost10k = [ s for s in camion if s['cajones'] * s['precio'] > 10000 ]
 >>> cost10k
-[{'price': 83.44, 'name': 'CAT', 'shares': 150}, {'price': 51.23, 'name': 'MSFT', 'shares': 200}]
+[{'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'name': 'Mandarina', 'cajones': 200}]
 >>>
 ```
 
 ### Ejercicio 3.5: Data Extraction
 
-Show how you could build a list of tuples `(name, shares)` where `name` and `shares` are taken from `portfolio`.
+Show how you could build a list of tuples `(name, cajones)` where `name` and `cajones` are taken from `camion`.
 
 ```python
->>> name_shares =[ (s['name'], s['shares']) for s in portfolio ]
->>> name_shares
-[('AA', 100), ('IBM', 50), ('CAT', 150), ('MSFT', 200), ('GE', 95), ('MSFT', 50), ('IBM', 100)]
+>>> name_cajones =[ (s['name'], s['cajones']) for s in camion ]
+>>> name_cajones
+[('Lima', 100), ('Naranja', 50), ('Caqui', 150), ('Mandarina', 200), ('Durazno', 95), ('Mandarina', 50), ('Naranja', 100)]
 >>>
 ```
 
 If you change the the square brackets (`[`,`]`) to curly braces (`{`, `}`), you get something known as a set comprehension.
 This gives you unique or distinct values.
 
-For example, this determines the set of unique stock names that appear in `portfolio`:
+For example, this determines the set of unique cajon names that appear in `camion`:
 
 ```python
->>> names = { s['name'] for s in portfolio }
+>>> names = { s['name'] for s in camion }
 >>> names
-{ 'AA', 'GE', 'IBM', 'MSFT', 'CAT'] }
+{ 'Lima', 'Durazno', 'Naranja', 'Mandarina', 'Caqui'] }
 >>>
 ```
 
 If you specify `key:value` pairs, you can build a dictionary.
-For example, make a dictionary that maps the name of a stock to the total number of shares held.
+For example, make a dictionary that maps the name of a cajon to the total number of cajones held.
 
 ```python
 >>> holdings = { name: 0 for name in names }
 >>> holdings
-{'AA': 0, 'GE': 0, 'IBM': 0, 'MSFT': 0, 'CAT': 0}
+{'Lima': 0, 'Durazno': 0, 'Naranja': 0, 'Mandarina': 0, 'Caqui': 0}
 >>>
 ```
 
 This latter feature is known as a **dictionary comprehension**. Let’s tabulate:
 
 ```python
->>> for s in portfolio:
-        holdings[s['name']] += s['shares']
+>>> for s in camion:
+        holdings[s['name']] += s['cajones']
 
 >>> holdings
-{ 'AA': 100, 'GE': 95, 'IBM': 150, 'MSFT':250, 'CAT': 150 }
+{ 'Lima': 100, 'Durazno': 95, 'Naranja': 150, 'Mandarina':250, 'Caqui': 150 }
 >>>
 ```
 
-Try this example that filters the `prices` dictionary down to only
-those names that appear in the portfolio:
+Try this example that filters the `precios` dictionary down to only
+those names that appear in the camion:
 
 ```python
->>> portfolio_prices = { name: prices[name] for name in names }
->>> portfolio_prices
-{'AA': 9.22, 'GE': 13.48, 'IBM': 106.28, 'MSFT': 20.89, 'CAT': 35.46}
+>>> camion_precios = { name: precios[name] for name in names }
+>>> camion_precios
+{'Lima': 9.22, 'Durazno': 13.48, 'Naranja': 106.28, 'Mandarina': 20.89, 'Caqui': 35.46}
 >>>
 ```
 
@@ -261,25 +261,25 @@ First, read a row of header information from a CSV file:
 
 ```python
 >>> import csv
->>> f = open('Data/portfoliodate.csv')
+>>> f = open('Data/fecha_camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> headers
-['name', 'date', 'time', 'shares', 'price']
+['name', 'date', 'time', 'cajones', 'precio']
 >>>
 ```
 
 Next, define a variable that lists the columns that you actually care about:
 
 ```python
->>> select = ['name', 'shares', 'price']
+>>> select = ['name', 'cajones', 'precio']
 >>>
 ```
 
 Now, locate the indices of the above columns in the source CSV file:
 
 ```python
->>> indices = [ headers.index(colname) for colname in select ]
+>>> indices = [ headers.index(ncolumna) for ncolumna in select ]
 >>> indices
 [0, 3, 4]
 >>>
@@ -290,9 +290,9 @@ dictionary comprehension:
 
 ```python
 >>> row = next(rows)
->>> record = { colname: row[index] for colname, index in zip(select, indices) }   # dict-comprehension
+>>> record = { ncolumna: row[index] for ncolumna, index in zip(select, indices) }   # dict-comprehension
 >>> record
-{'price': '32.20', 'name': 'AA', 'shares': '100'}
+{'precio': '32.20', 'name': 'Lima', 'cajones': '100'}
 >>>
 ```
 
@@ -300,15 +300,15 @@ If you’re feeling comfortable with what just happened, read the rest
 of the file:
 
 ```python
->>> portfolio = [ { colname: row[index] for colname, index in zip(select, indices) } for row in rows ]
->>> portfolio
-[{'price': '91.10', 'name': 'IBM', 'shares': '50'}, {'price': '83.44', 'name': 'CAT', 'shares': '150'},
-  {'price': '51.23', 'name': 'MSFT', 'shares': '200'}, {'price': '40.37', 'name': 'GE', 'shares': '95'},
-  {'price': '65.10', 'name': 'MSFT', 'shares': '50'}, {'price': '70.44', 'name': 'IBM', 'shares': '100'}]
+>>> camion = [ { ncolumna: row[index] for ncolumna, index in zip(select, indices) } for row in rows ]
+>>> camion
+[{'precio': '91.10', 'name': 'Naranja', 'cajones': '50'}, {'precio': '83.44', 'name': 'Caqui', 'cajones': '150'},
+  {'precio': '51.23', 'name': 'Mandarina', 'cajones': '200'}, {'precio': '40.37', 'name': 'Durazno', 'cajones': '95'},
+  {'precio': '65.10', 'name': 'Mandarina', 'cajones': '50'}, {'precio': '70.44', 'name': 'Naranja', 'cajones': '100'}]
 >>>
 ```
 
-Oh my, you just reduced much of the `read_portfolio()` function to a single statement.
+Oh my, you just reduced much of the `leer_camion()` function to a single statement.
 
 ### Commentary
 

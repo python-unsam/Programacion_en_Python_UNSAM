@@ -19,7 +19,9 @@ Por favor, usá siempre la misma dirección de mail con la que te inscribiste al
 Observación: Si el enunciado de un ejercicio te pide que lo corras con un input particular, por favor poné la salida que obtuviste como comentario en tu código. El mail que nos mandes tiene que tener tema (subject) con el siguiente formato: 
 > f"Entrega Clase 1 {Apellido}, {Nombre}" 
 
-Por último te recordamos que te quedaron dudas, querés discutir algún tema de interés o pedirnos a los docentes que resolvamos un ejerciocio particular para la próxima clase, podés hacelo en el [grupo de Slack](../Slack.md)
+Por ejemplo: *Entrega Clase 1 Borges, Jorge Luis*
+
+Por último te recordamos que si te quedaron dudas, querés discutir algún tema de interés o pedirnos a los docentes que resolvamos un ejercicio particular para la próxima clase, podés hacelo en el [grupo de Slack](../Slack.md).
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Listas)](05_Listas.md)

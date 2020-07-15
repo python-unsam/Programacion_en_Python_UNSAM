@@ -6,15 +6,15 @@ This section is a slight digression, but when you work with data, you
 often want to produce structured output (tables, etc.). For example:
 
 ```code
-      Name      Shares        Price
+      Name      Cajons        Price
 ----------  ----------  -----------
-        AA         100        32.20
-       IBM          50        91.10
-       CAT         150        83.44
-      MSFT         200        51.23
-        GE          95        40.37
-      MSFT          50        65.10
-       IBM         100        70.44
+        Lima         100        32.20
+       Naranja          50        91.10
+       Caqui         150        83.44
+      Mandarina         200        51.23
+        Durazno          95        40.37
+      Mandarina          50        65.10
+       Naranja         100        70.44
 ```
 
 ### String Formatting
@@ -22,11 +22,11 @@ often want to produce structured output (tables, etc.). For example:
 One way to format string in Python 3.6+ is with `f-strings`.
 
 ```python
->>> name = 'IBM'
->>> shares = 100
->>> price = 91.1
->>> f'{name:>10s} {shares:>10d} {price:>10.2f}'
-'       IBM        100      91.10'
+>>> name = 'Naranja'
+>>> cajones = 100
+>>> precio = 91.1
+>>> f'{name:>10s} {cajones:>10d} {precio:>10.2f}'
+'       Naranja        100      91.10'
 >>>
 ```
 
@@ -35,7 +35,7 @@ The part `{expression:format}` is replaced.
 It is commonly used with `print`.
 
 ```python
-print(f'{name:>10s} {shares:>10d} {price:>10.2f}')
+print(f'{name:>10s} {cajones:>10d} {precio:>10.2f}')
 ```
 
 ### Format codes
@@ -69,12 +69,12 @@ You can use the `format_map()` method to apply string formatting to a dictionary
 
 ```python
 >>> s = {
-    'name': 'IBM',
-    'shares': 100,
-    'price': 91.1
+    'name': 'Naranja',
+    'cajones': 100,
+    'precio': 91.1
 }
->>> '{name:>10s} {shares:10d} {price:10.2f}'.format_map(s)
-'       IBM        100      91.10'
+>>> '{name:>10s} {cajones:10d} {precio:10.2f}'.format_map(s)
+'       Naranja        100      91.10'
 >>>
 ```
 
@@ -87,10 +87,10 @@ There is a method `format()` that can apply formatting to arguments or
 keyword arguments.
 
 ```python
->>> '{name:>10s} {shares:10d} {price:10.2f}'.format(name='IBM', shares=100, price=91.1)
-'       IBM        100      91.10'
->>> '{:10s} {:10d} {:10.2f}'.format('IBM', 100, 91.1)
-'       IBM        100      91.10'
+>>> '{name:>10s} {cajones:10d} {precio:10.2f}'.format(name='Naranja', cajones=100, precio=91.1)
+'       Naranja        100      91.10'
+>>> '{:10s} {:10d} {:10.2f}'.format('Naranja', 100, 91.1)
+'       Naranja        100      91.10'
 >>>
 ```
 
@@ -112,7 +112,7 @@ You can also use the formatting operator `%`.
 This requires a single item or a tuple on the right.  Format codes are
 modeled after the C `printf()` as well.
 
-*Note: This is the only formatting available on byte strings.*
+*Observación: This is the only formatting available on byte strings.*
 
 ```python
 >>> b'%s has %n messages' % (b'Dave', 37)
@@ -120,7 +120,7 @@ b'Dave has 37 messages'
 >>>
 ```
 
-## Exercises
+## Ejercicios
 
 ### Ejercicio 2.16: How to format numbers
 
@@ -144,7 +144,7 @@ examples:
 ```
 
 Full documentation on the formatting codes used f-strings can be found
-[here](https://docs.python.org/3/library/string.html#format-specification-mini-language). Formatting
+[here](https://docs.python.org/3/biblioteca/string.html#format-specification-mini-language). Formatting
 is also sometimes performed using the `%` operator of strings.
 
 ```python
@@ -156,7 +156,7 @@ is also sometimes performed using the `%` operator of strings.
 ```
 
 Documentation on various codes used with `%` can be found
-[here](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting).
+[here](https://docs.python.org/3/biblioteca/stdtypes.html#printf-style-string-formatting).
 
 Although it’s commonly used with `print`, string formatting is not tied to printing.
 If you want to save a formatted string. Just assign it to a variable.
@@ -170,63 +170,63 @@ If you want to save a formatted string. Just assign it to a variable.
 
 ### Ejercicio 2.17: Collecting Data
 
-In Exercise 2.7, you wrote a program called `report.py` that computed the gain/loss of a
-stock portfolio.  In this exercise, you're going to start modifying it to produce a table like this:
+In Ejercicio 2.7, you wrote a program called `reporte.py` that computed the gain/loss of a
+cajon camion.  In this ejercicio, you're going to start modifying it to produce a table like this:
 
 ```
-      Name     Shares      Price     Change
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 ```
 
-In this report, "Price" is the current share price of the stock and
-"Change" is the change in the share price from the initial purchase
-price.
+In this report, "Price" is the current cajon precio of the cajon and
+"Change" is the change in the cajon precio from the initial purchase
+precio.
 
 
 In order to generate the above report, you’ll first want to collect
 all of the data shown in the table.  Write a function `make_report()`
-that takes a list of stocks and dictionary of prices as input and
+that takes a list of cajones and dictionary of precios as input and
 returns a list of tuples containing the rows of the above table.
 
-Add this function to your `report.py` file. Here’s how it should work
+Add this function to your `reporte.py` file. Here’s how it should work
 if you try it interactively:
 
 ```python
->>> portfolio = read_portfolio('Data/portfolio.csv')
->>> prices = read_prices('Data/prices.csv')
->>> report = make_report(portfolio, prices)
+>>> camion = leer_camion('Data/camion.csv')
+>>> precios = read_precios('Data/precios.csv')
+>>> report = make_report(camion, precios)
 >>> for r in report:
         print(r)
 
-('AA', 100, 9.22, -22.980000000000004)
-('IBM', 50, 106.28, 15.180000000000007)
-('CAT', 150, 35.46, -47.98)
-('MSFT', 200, 20.89, -30.339999999999996)
-('GE', 95, 13.48, -26.889999999999997)
+('Lima', 100, 9.22, -22.980000000000004)
+('Naranja', 50, 106.28, 15.180000000000007)
+('Caqui', 150, 35.46, -47.98)
+('Mandarina', 200, 20.89, -30.339999999999996)
+('Durazno', 95, 13.48, -26.889999999999997)
 ...
 >>>
 ```
 
 ### Ejercicio 2.18: Printing a formatted table
 
-Redo the for-loop in Exercise 2.9, but change the print statement to
+Redo the for-loop in Ejercicio 2.9, but change the print statement to
 format the tuples.
 
 ```python
 >>> for r in report:
         print('%10s %10d %10.2f %10.2f' % r)
 
-          AA        100       9.22     -22.98
-         IBM         50     106.28      15.18
-         CAT        150      35.46     -47.98
-        MSFT        200      20.89     -30.34
+          Lima        100       9.22     -22.98
+         Naranja         50     106.28      15.18
+         Caqui        150      35.46     -47.98
+        Mandarina        200      20.89     -30.34
 ...
 >>>
 ```
@@ -234,18 +234,18 @@ format the tuples.
 You can also expand the values and use f-strings. For example:
 
 ```python
->>> for name, shares, price, change in report:
-        print(f'{name:>10s} {shares:>10d} {price:>10.2f} {change:>10.2f}')
+>>> for name, cajones, precio, change in report:
+        print(f'{name:>10s} {cajones:>10d} {precio:>10.2f} {change:>10.2f}')
 
-          AA        100       9.22     -22.98
-         IBM         50     106.28      15.18
-         CAT        150      35.46     -47.98
-        MSFT        200      20.89     -30.34
+          Lima        100       9.22     -22.98
+         Naranja         50     106.28      15.18
+         Caqui        150      35.46     -47.98
+        Mandarina        200      20.89     -30.34
 ...
 >>>
 ```
 
-Take the above statements and add them to your `report.py` program.
+Take the above statements and add them to your `reporte.py` program.
 Have your program take the output of the `make_report()` function and print a nicely formatted table as shown.
 
 ### Ejercicio 2.19: Adding some headers
@@ -253,7 +253,7 @@ Have your program take the output of the `make_report()` function and print a ni
 Suppose you had a tuple of header names like this:
 
 ```python
-headers = ('Name', 'Shares', 'Price', 'Change')
+headers = ('Name', 'Cajons', 'Price', 'Change')
 ```
 
 Add code to your program that takes the above tuple of headers and
@@ -261,7 +261,7 @@ creates a string where each header name is right-aligned in a
 10-character wide field and each field is separated by a single space.
 
 ```python
-'      Name     Shares      Price      Change'
+'      Name     Cajons      Price      Change'
 ```
 
 Write code that takes the headers and creates the separator string between the headers and data to follow.
@@ -271,36 +271,37 @@ This string is just a bunch of "-" characters under each field name. For example
 '---------- ---------- ---------- -----------'
 ```
 
-When you’re done, your program should produce the table shown at the top of this exercise.
+When you’re done, your program should produce the table shown at the top of this ejercicio.
 
 ```
-      Name     Shares      Price     Change
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100       9.22     -22.98
-       IBM         50     106.28      15.18
-       CAT        150      35.46     -47.98
-      MSFT        200      20.89     -30.34
-        GE         95      13.48     -26.89
-      MSFT         50      20.89     -44.21
-       IBM        100     106.28      35.84
+        Lima        100       9.22     -22.98
+       Naranja         50     106.28      15.18
+       Caqui        150      35.46     -47.98
+      Mandarina        200      20.89     -30.34
+        Durazno         95      13.48     -26.89
+      Mandarina         50      20.89     -44.21
+       Naranja        100     106.28      35.84
 ```
 
 ### Ejercicio 2.20: Formatting Challenge
 
-How would you modify your code so that the price includes the currency symbol ($) and the output looks like this:
+How would you modify your code so that the precio includes the currency symbol ($) and the output looks like this:
 
 ```
-      Name     Shares      Price     Change
+      Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        AA        100      $9.22     -22.98
-       IBM         50    $106.28      15.18
-       CAT        150     $35.46     -47.98
-      MSFT        200     $20.89     -30.34
-        GE         95     $13.48     -26.89
-      MSFT         50     $20.89     -44.21
-       IBM        100    $106.28      35.84
+        Lima        100      $9.22     -22.98
+       Naranja         50    $106.28      15.18
+       Caqui        150     $35.46     -47.98
+      Mandarina        200     $20.89     -30.34
+        Durazno         95     $13.48     -26.89
+      Mandarina         50     $20.89     -44.21
+       Naranja        100    $106.28      35.84
 ```
 
+Guardá estos cambios en el archivo `reporte.py` que más adelante los vas a necesitar.
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_202Containers.md) \| [Próximo (6 Sequences)](06_204Sequences.md)
 
