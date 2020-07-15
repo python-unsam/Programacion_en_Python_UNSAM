@@ -6,7 +6,7 @@ En esta segunda clase aprendimos a trabajar con datos. Manejamos archivos CSV y 
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que nos mandes por mail a <python@unsam.edu.ar> los programas de los siguientes ejercicios:
-    1. Ejercicio ***    2. [Ejercicio 1.11](../01_Introduccion/03_Numeros.md#ejercicio-111-bonus) Bonus de Hipoteca
+    1. Ejercicio ?    2. [Ejercicio 1.11](../01_Introduccion/03_Numeros.md#ejercicio-111-bonus) Bonus de Hipoteca
     3. [Ejercicio 1.13](../01_Introduccion/03_Numeros.md#ejercicio-113-el-volúmen-de-una-esfera) Volumen de la esfera
     4. [Ejercicio 1.18](../01_Introduccion/04_Strings.md#ejercicio-118-geringoso-rústico) Geringoso
     5. [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-al-lenguaje-inclusivo) Lenguaje inclusive
