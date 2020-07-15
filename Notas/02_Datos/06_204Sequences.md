@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Formatting)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas (copy).md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Formatting)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
 
 # 2.6 Sequences
 
@@ -549,5 +549,5 @@ Also, be aware that `zip()` stops once the shortest input sequence is exhausted.
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Formatting)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas (copy).md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Formatting)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
 

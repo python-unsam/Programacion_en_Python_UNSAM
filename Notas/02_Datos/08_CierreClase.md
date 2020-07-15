@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Listas)](05_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
 
-# 1.6 Cierre de la primer clase
+# 2.8 Cierre de la primer clase
 
 En esta clase aprendimos a correr el intérprete de Python desde la línea de comandos para usarlo como una calculadora. Aprendimos a editar programas con un editor de texto y a correrlos en la terminal. Vimos diferentes tipos de datos: número enteros, números de punto flotante, cadenas y listas.
 
@@ -22,5 +22,5 @@ Observación: Si el enunciado de un ejercicio te pide que lo corras con un input
 Acordate que si te quedaron dudas, querés discutir algún tema de interés o pedirnos a los docentes que resolvamos un ejerciocio particular para la próxima clase, podés hacelo en el [grupo de Slack](../Slack.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Listas)](05_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
 
