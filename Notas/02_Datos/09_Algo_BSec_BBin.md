@@ -3,7 +3,7 @@
 # 2.9 Algoritmos de búsqueda
 
 
-### Ejercicio 2.30:  Búsqueda secuencial
+### Ejercicio 2.30: Búsqueda secuencial
 
 Búsqueda secuencial `b_sec.py`
 
