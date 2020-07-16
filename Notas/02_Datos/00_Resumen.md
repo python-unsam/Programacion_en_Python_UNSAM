@@ -8,8 +8,8 @@ Para escribir programas útiles, necesitamos aprender a trabajar con datos. En e
 * [2.2 Funciones](02_107Funciones.md)
 * [2.3 Tipos y estructuras de datos](03_201Datatypes.md)
 * [2.4 Contenedores](04_202Containers.md)
-* [2.5 Formatting](05_203Formatting.md)
-* [2.6 Sequences](06_204Sequences.md)
+* [2.5 Impresión con formato](05_203Formatting.md)
+* [2.6 Secuencias](06_204Sequences.md)
 * [2.7 Algoritmos de búsqueda en listas](07_R_Busquedas.md)
 * [2.8 Cierre de la segunda clase](08_CierreClase.md)
 

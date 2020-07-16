@@ -1,90 +1,86 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_202Containers.md) \| [Próximo (6 Sequences)](06_204Sequences.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_202Containers.md) \| [Próximo (6 Secuencias)](06_204Sequences.md)
 
-# 2.5 Formatting
+# 2.5 Impresión con formato
 
-This section is a slight digression, but when you work with data, you
-often want to produce structured output (tables, etc.). For example:
+Esta sección es una pequeña disgresión. Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
 
 ```code
-      Name      Cajons        Price
+  Nombre      Cajones     Precio
 ----------  ----------  -----------
-        Lima         100        32.20
-       Naranja          50        91.10
-       Caqui         150        83.44
-      Mandarina         200        51.23
-        Durazno          95        40.37
-      Mandarina          50        65.10
-       Naranja         100        70.44
+ Lima           100        32.20
+ Naranja         50        91.10
+ Caqui          150        83.44
+ Mandarina      200        51.23
+ Durazno         95        40.37
+ Mandarina       50        65.10
+ Naranja        100        70.44
 ```
 
 ### String Formatting
 
-One way to format string in Python 3.6+ is with `f-strings`.
+Ona excelente manera de darle formato a una cadena en Python (a partir de la versión 3.6) es usando `f-strings`.
 
 ```python
->>> name = 'Naranja'
+>>> nombre = 'Naranja'
 >>> cajones = 100
 >>> precio = 91.1
->>> f'{name:>10s} {cajones:>10d} {precio:>10.2f}'
+>>> f'{nombre:>10s} {cajones:>10d} {precio:>10.2f}'
 '       Naranja        100      91.10'
 >>>
 ```
 
-The part `{expression:format}` is replaced.
+La parte `{expresion:formato}` va a ser reemplazada.
 
-It is commonly used with `print`.
+Usualmente los `f-strings` se usan con `print`.
 
 ```python
-print(f'{name:>10s} {cajones:>10d} {precio:>10.2f}')
+print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f}')
 ```
 
-### Format codes
+### Códigos de formato
 
-Format codes (after the `:` inside the `{}`) are similar to C `printf()`.  Common codes
-include:
+Lo códigos de formato (lo que va luego de `:` dentro de `{}`) son similares s los que se usan en el `printf()` del lenguaje C. Los más comunes son:
 
 ```code
-d       Decimal integer
-b       Binary integer
-x       Hexadecimal integer
-f       Float as [-]m.dddddd
-e       Float as [-]m.dddddde+-xx
-g       Float, but selective use of E notation
-s       String
-c       Character (from integer)
+d       Entero decimal
+b       Entero binario
+x       Entero hexadecimal
+f       Floatante como [-]m.dddddd
+e       Floatante como [-]m.dddddde+-xx
+g       Floatante, pero con uso selectivo de la notaciṕn exponencial E.
+s       Cadenas
+c       Caracter (a partir de un entero, su código)
 ```
 
-Common modifiers adjust the field width and decimal precision.  This is a partial list:
+Los modificadores permiten ajustar el ancho a imprimir o la precisión decimal (cantidad de dígitos luego del punto). Esta es una lista parcial:
 
 ```code
-:>10d   Integer right aligned in 10-character field
-:<10d   Integer left aligned in 10-character field
-:^10d   Integer centered in 10-character field
-:0.2f   Float with 2 digit precision
+:>10d   Entero alineado a la derecha en un campo de 10 caracteres
+:<10d   Entero alineado a la inquierda en un campo de 10 caracteres
+:^10d   Entero centrado  en un campo de 10 caracteres
+:0.2f   Flotante con dos dígitos de precisión
 ```
 
-### Dictionary Formatting
+### Formato a diccionarios
 
-You can use the `format_map()` method to apply string formatting to a dictionary of values:
+Pores usar el métido `format_map()` para aplicarle un formato a los valores de un diccionario:
 
 ```python
 >>> s = {
-    'name': 'Naranja',
+    'nombre': 'Naranja',
     'cajones': 100,
     'precio': 91.1
 }
->>> '{name:>10s} {cajones:10d} {precio:10.2f}'.format_map(s)
+>>> '{nombre:>10s} {cajones:10d} {precio:10.2f}'.format_map(s)
 '       Naranja        100      91.10'
 >>>
 ```
 
-It uses the same codes as `f-strings` but takes the values from the
-supplied dictionary.
+Usa los mismos códigos que los `f-strings` pero toma los valores que provée el diccionario.
 
-### format() method
+### El método format()
 
-There is a method `format()` that can apply formatting to arguments or
-keyword arguments.
+Existe un método  `format()` que permite aplicar formato a argumentos.
 
 ```python
 >>> '{name:>10s} {cajones:10d} {precio:10.2f}'.format(name='Naranja', cajones=100, precio=91.1)
@@ -94,11 +90,11 @@ keyword arguments.
 >>>
 ```
 
-Frankly, `format()` is a bit verbose. I prefer f-strings.
+La verdad es que `format()` nos resulta un poco extenso y preferimos usar `f-strings`.
 
-### C-Style Formatting
+### Formato estilo C
 
-You can also use the formatting operator `%`.
+También podés usar el operador  `%`.
 
 ```python
 >>> 'The value is %d' % 3
@@ -109,24 +105,13 @@ You can also use the formatting operator `%`.
 '3.14'
 ```
 
-This requires a single item or a tuple on the right.  Format codes are
-modeled after the C `printf()` as well.
-
-*Observación: This is the only formatting available on byte strings.*
-
-```python
->>> b'%s has %n messages' % (b'Dave', 37)
-b'Dave has 37 messages'
->>>
-```
+Esto requiere un solo item, o una tupla a la derecha. Los códigos están tambien inspirados en el `printf()` de C. Tiene la dificultad que hay que contar posiciones y todas las variables van juntas al final.
 
 ## Ejercicios
 
-### Ejercicio 2.16: How to format numbers
+### Ejercicio 2.16: Formato de números
 
-A common problem with printing numbers is specifying the number of
-decimal places. One way to fix this is to use f-strings. Try these
-examples:
+Un problema usual cuando queremos imprimir números es especificar el número de dígitos decimales. Los f-strings nos permiten hacerlo. Probá los siguientes ejemplos:
 
 ```python
 >>> value = 42863.1
@@ -143,9 +128,8 @@ examples:
 >>>
 ```
 
-Full documentation on the formatting codes used f-strings can be found
-[here](https://docs.python.org/3/biblioteca/string.html#format-specification-mini-language). Formatting
-is also sometimes performed using the `%` operator of strings.
+
+La documentación completa sobre los códigos de formato usados en f-strings puede consultarse [aquí](https://docs.python.org/3/library/string.html#format-specification-mini-language). El formato puede aplicarse también usando el operador `%` de cadenas.
 
 ```python
 >>> print('%0.4f' % value)
@@ -155,11 +139,10 @@ is also sometimes performed using the `%` operator of strings.
 >>>
 ```
 
-Documentation on various codes used with `%` can be found
-[here](https://docs.python.org/3/biblioteca/stdtypes.html#printf-style-string-formatting).
+La documentación sobre códigos usados con `%` puede encontrarse [ be found
+[aquí](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting).
 
-Although it’s commonly used with `print`, string formatting is not tied to printing.
-If you want to save a formatted string. Just assign it to a variable.
+A pesar de que suelen usarse dentre de un `print`, el formato de cadenas no está necesariamente ligao a la impresión. Por ejemplo, podés simplemente asignarlo a una variable.
 
 ```python
 >>> f = '%0.4f' % value
@@ -168,35 +151,28 @@ If you want to save a formatted string. Just assign it to a variable.
 >>>
 ```
 
-### Ejercicio 2.17: Collecting Data
+### Ejercicio 2.17: Recolectar datos
 
-In Ejercicio 2.7, you wrote a program called `reporte.py` that computed the gain/loss of a
-cajon camion.  In this ejercicio, you're going to start modifying it to produce a table like this:
+En el [Ejercicio 2.15](../02_Datos/04_202Containers.md#ejercicio-215-balances), escribiste un programa llamado `reporte.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y venden en el mercado. En este ejercicio, vas a comenzas a modificarlo para producir una tabla como esta:
 
 ```
-      Name     Cajons      Price     Change
+ Nombre     Cajones     Precio     Cambio
 ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
+ Lima          100        9.22     -22.98
+ Naranja        50      106.28      15.18
+ Caqui         150       35.46     -47.98
+ Mandarina     200       20.89     -30.34
+ Durazno        95       13.48     -26.89
+ Mandarina      50       20.89     -44.21
+ Naranja       100      106.28      35.84
 ```
 
-In this report, "Price" is the current cajon precio of the cajon and
-"Change" is the change in the cajon precio from the initial purchase
-precio.
+En este reporte, el "Precio" es el precio en el mercado y el "Cambio" es la variación respecto al precio cobrado por el productor.
 
+Para generar un reporte como el de arriba, primero tenés que recolectar todos los datos de la tabla. Escribí una función `hacer_reporte()`
+que recibe una lista de cajones y un diccionario con precios como input y devuelve una lista de tuplas conteniendo la información mostrada en la tabla anterior.
 
-In order to generate the above report, you’ll first want to collect
-all of the data shown in the table.  Write a function `make_report()`
-that takes a list of cajones and dictionary of precios as input and
-returns a list of tuples containing the rows of the above table.
-
-Add this function to your `reporte.py` file. Here’s how it should work
-if you try it interactively:
+Agregá esta función a tu archivo `reporte.py`. Debería funcionar como se muestra en el siguiente ejemplo:
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')
@@ -214,10 +190,9 @@ if you try it interactively:
 >>>
 ```
 
-### Ejercicio 2.18: Printing a formatted table
+### Ejercicio 2.18: Imprimir una tabla con formato
 
-Redo the for-loop in Ejercicio 2.9, but change the print statement to
-format the tuples.
+Volvé a hacer el del ciclo `for` del ejercicio anterior pero cambiando la forma de imprimir como sigue:
 
 ```python
 >>> for r in report:
@@ -231,77 +206,73 @@ format the tuples.
 >>>
 ```
 
-You can also expand the values and use f-strings. For example:
+O directamente usando  f-strings. Por ejemplo:
 
 ```python
->>> for name, cajones, precio, change in report:
-        print(f'{name:>10s} {cajones:>10d} {precio:>10.2f} {change:>10.2f}')
+>>> for nombre, cajones, precio, cambio in reporte:
+        print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f} {change:>10.2f}')
 
-          Lima        100       9.22     -22.98
-         Naranja         50     106.28      15.18
-         Caqui        150      35.46     -47.98
-        Mandarina        200      20.89     -30.34
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
 ...
 >>>
 ```
 
-Take the above statements and add them to your `reporte.py` program.
-Have your program take the output of the `make_report()` function and print a nicely formatted table as shown.
+Agregá estos últimos comando a tu programa `reporte.py`. Hacé que el programa tome la salida de la función `hacer_reporte()` e imprima una tabla bien formateada.
 
-### Ejercicio 2.19: Adding some headers
+### Ejercicio 2.19: Agregar encabezados
 
-Suppose you had a tuple of header names like this:
-
-```python
-headers = ('Name', 'Cajons', 'Price', 'Change')
-```
-
-Add code to your program that takes the above tuple of headers and
-creates a string where each header name is right-aligned in a
-10-character wide field and each field is separated by a single space.
+Suponete que tenés una tupla con nombres de encabezado como esta:
 
 ```python
-'      Name     Cajons      Price      Change'
+headers = ('Nombre', 'Cajones', 'Precio', 'Cambio')
 ```
 
-Write code that takes the headers and creates the separator string between the headers and data to follow.
-This string is just a bunch of "-" characters under each field name. For example:
+Agregá el código necesario a tu programa para que tome una tupla de encabezados como la de arriba y crée una cadena donde cada nombre de encabezado esté alineado a la derecha en un campo de 10 caracteres de ancho y separados por un solo espacio.
+
+```python
+'    Nombre    Cajones     Precio     Cambio'
+```
+
+Escribí el código que recibe los encabezados y crea una cadena de separación entre los encabezados y los datos que siguen. Esta cadena es simplemente una tira de caracteres "-" bajo cada nombre de campo. Por ejemplo:
 
 ```python
 '---------- ---------- ---------- -----------'
 ```
 
-When you’re done, your program should produce the table shown at the top of this ejercicio.
+Cuando esté listo, tu programa debería producir una tabla como esta:
+
+```
+    Nombre    Cajones     Precio     Cambio
+---------- ---------- ---------- ----------
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
+   Durazno         95      13.48     -26.89
+ Mandarina         50      20.89     -44.21
+   Naranja        100     106.28      35.84
+```
+
+### Ejercicio 2.20: Desfío de formato
+
+Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 
 ```
       Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
-```
-
-### Ejercicio 2.20: Formatting Challenge
-
-How would you modify your code so that the precio includes the currency symbol ($) and the output looks like this:
-
-```
-      Name     Cajons      Price     Change
----------- ---------- ---------- ----------
-        Lima        100      $9.22     -22.98
-       Naranja         50    $106.28      15.18
-       Caqui        150     $35.46     -47.98
-      Mandarina        200     $20.89     -30.34
-        Durazno         95     $13.48     -26.89
-      Mandarina         50     $20.89     -44.21
-       Naranja        100    $106.28      35.84
+      Lima        100      $9.22     -22.98
+   Naranja         50    $106.28      15.18
+     Caqui        150     $35.46     -47.98
+ Mandarina        200     $20.89     -30.34
+   Durazno         95     $13.48     -26.89
+ Mandarina         50     $20.89     -44.21
+   Naranja        100    $106.28      35.84
 ```
 
 Guardá estos cambios en el archivo `reporte.py` que más adelante los vas a necesitar.
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_202Containers.md) \| [Próximo (6 Sequences)](06_204Sequences.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_202Containers.md) \| [Próximo (6 Secuencias)](06_204Sequences.md)
 

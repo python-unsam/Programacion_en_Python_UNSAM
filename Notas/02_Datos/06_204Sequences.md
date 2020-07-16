@@ -1,34 +1,34 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Formatting)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
 
-# 2.6 Sequences
+# 2.6 Secuencias
 
-### Sequence Datatypes
+### Tipo de secuencias
 
-Python has three *sequence* datatypes.
+Python tiene tres tipos de datos que son *secuencias*.
 
-* String: `'Hello'`. A string is a sequence of characters.
-* List: `[1, 4, 5]`.
-* Tuple: `('Pera', 100, 490.1)`.
+* String: `'Hello'`. Una cadena es una secuencia de caracteres.
+* Lista: `[1, 4, 5]`.
+* Tupla: `('Pera', 100, 490.1)`.
 
-All sequences are ordered, indexed by integers, and have a length.
+Todas las secuencias tiene un orden, indexado por enteros, y tiene una longitud..
 
 ```python
-a = 'Hello'               # String
-b = [1, 4, 5]             # List
-c = ('Pera', 100, 490.1)  # Tuple
+a = 'Hello'               # String o cadena
+b = [1, 4, 5]             # Lista
+c = ('Pera', 100, 490.1)  # Tupla
 
-# Indexed order
+# Oden indexado
 a[0]                      # 'H'
 b[-1]                     # 5
 c[1]                      # 100
 
-# Length of sequence
+# Longitud de secuencias
 len(a)                    # 5
 len(b)                    # 3
 len(c)                    # 3
 ```
 
-Sequences can be replicated: `s * n`.
+Las secuencias pueden ser replicadas: `s * n`.
 
 ```python
 >>> a = 'Hello'
@@ -40,7 +40,7 @@ Sequences can be replicated: `s * n`.
 >>>
 ```
 
-Sequences of the same type can be concatenated: `s + t`.
+Las secuencias del mismo tipo también pueden ser concatenadas: `s + t`.
 
 ```python
 >>> a = (1, 2, 3)
@@ -55,10 +55,10 @@ Traceback (most recent call last):
 TypeError: can only concatenate tuple (not "list") to tuple
 ```
 
-### Slicing
+### Rebanadas (slicing)
 
-Slicing means to take a subsequence from a sequence.
-The syntax is `s[start:end]`. Where `start` and `end` are the indexes of the subsequence you want.
+Sacar una rebanada es tomar una subsecuencia de una secuencia.
+La sintaxis es `s[comienzo:fin]`, donde `comienzo` y `fin` son los índices de la subsecuencia que querés.
 
 ```python
 a = [0,1,2,3,4,5,6,7,8]
@@ -68,13 +68,13 @@ a[-5:]    # [4,5,6,7,8]
 a[:3]     # [0,1,2]
 ```
 
-* Indices `start` and `end` must be integers.
-* Slices do *not* include the end value. It is like a half-open interval from math.
-* If indices are omitted, they default to the beginning or end of the list.
+* Los índices `comienzo` y `fin` deben ser enteros.
+* Las rebanadas *no* incluyen el valor final. Es como los intervalos semi-abiertos en matemática.
+* Si los índices son omitidos toman sus valores por defecto: el principio ó el final de la lista.
 
-### Slice re-assignment
+### Re-asigación de rebanadas
 
-On lists, slices can be reassigned and deleted.
+En listas, una rebanada puede ser reasignada o borrada.
 
 ```python
 # Reassignment
@@ -82,7 +82,7 @@ a = [0,1,2,3,4,5,6,7,8]
 a[2:4] = [10,11,12]       # [0,1,10,11,12,4,5,6,7,8]
 ```
 
-*Observación: The reassigned slice doesn't need to have the same length.*
+*Observación: La rebanada reasignada no tiene que tener necesariamente la misma longitud.*
 
 ```python
 # Deletion
@@ -90,9 +90,9 @@ a = [0,1,2,3,4,5,6,7,8]
 del a[2:4]                # [0,1,4,5,6,7,8]
 ```
 
-### Sequence Reductions
+### Reducciones de secuencias
 
-There are some common functions to reduce a sequence to a single value.
+Hay algunas operaciones usuales que reducen una secuencia a un solo valor.
 
 ```python
 >>> s = [1, 2, 3, 4]
@@ -108,9 +108,9 @@ There are some common functions to reduce a sequence to a single value.
 >>>
 ```
 
-### Iteration over a sequence
+### Iterar sobre una secuencia
 
-The for-loop iterates over the elements in a sequence.
+Los ciclos `for` iteran sobre los elementos de una secuencia..
 
 ```python
 >>> s = [1, 4, 9, 16]
@@ -124,21 +124,18 @@ The for-loop iterates over the elements in a sequence.
 >>>
 ```
 
-On each iteration of the loop, you get a new item to work with.
-This new value is placed into the iteration variable. In this example, the
-iteration variable is `x`:
+En cada iteración del ciclo obtenés un nuevo elemento para trabajar. La variable iteradora va a tomar este nuevo valor. En el siguiente ejemplo la variable iteradora es `x`:
 
 ```python
-for x in s:         # `x` is an iteration variable
+for x in s:         # `x` es una variable iteradora
     ...statements
 ```
 
-On each iteration, the previous value of the iteration variable is overwritten (if any).
-After the loop finishes, the variable retains the last value.
+En cada iteración, los valores previos de la variable (si hubo alguno) es sobreescrito. Luego de que termina el ciclo, la variable retiene su último valor.
 
-### break statement
+### El comando break
 
-You can use the `break` statement to break out of a loop early.
+Podés usar el comando `break` para romper un ciclo antes de tiempo.
 
 ```python
 for name in namelist:
@@ -146,17 +143,14 @@ for name in namelist:
         break
     ...
     ...
-statements
+instrucciones
 ```
 
-When the `break` statement executes, it exits the loop and moves
-on the next `statements`.  The `break` statement only applies to the
-inner-most loop. If this loop is within another loop, it will not
-break the outer loop.
+Cuando el comando  `break` se ejecuta, sale del ciclo y se mueve a las siguientes `instrucciones`.  El comando `break` solo se aplica al ciclo más interno. Si un ciclo está anidado en otro cilco, el comando no va a romper el ciclo externo.
 
-### continue statement
+### El comando continue
 
-To skip one element and move to the next one, use the `continue` statement.
+Para salear un elemento y moverse al siguiente, usá el comando `continue`.
 
 ```python
 for line in lines:
@@ -166,18 +160,18 @@ for line in lines:
     ...
 ```
 
-This is useful when the current item is not of interest or needs to be ignored in the processing.
+Esta es útil cuendo el elemento actrual no es de interés o es necesario ignorarlo en el procesamiento.
 
-### Looping over integers
+### Cilcos sobre enteros
 
-If you need to count, use `range()`.
+Si necesitás contar, usá `range()`.
 
 ```python
 for i in range(100):
     # i = 0,1,...,99
 ```
 
-The syntax is `range([start,] end [,step])`
+La sintaxis es `range([comienzo,] fin [,paso])` (lo que figura entre corchetes es opcional).
 
 ```python
 for i in range(100):
@@ -186,36 +180,36 @@ for j in range(10,20):
     # j = 10,11,..., 19
 for k in range(10,50,2):
     # k = 10,12,...,48
-    # Notice how it counts in steps of 2, not 1.
+    # Observá que cuenta de a dos.
 ```
 
-* The ending value is never included. It mirrors the behavior of slices.
-* `start` is optional. Default `0`.
-* `step` is optional. Default `1`.
-* `range()` computes values as needed. It does not actually store a large range of numbers.
+* El valor final nunca es incluído. Es como con las rebanadas.
+* `comienzo` es opcional. Por defecto es `0`.
+* `paso` es opcional. Por defecto es `1`.
+* `range()` calcula los valores a medida que los necesita. No guarda realmente en memoria el rango completo de números.
 
-### enumerate() function
+### La función enumerate()
 
-The `enumerate` function adds an extra counter value to iteration.
+La función  `enumerate` agrega un contador extra a una iteración.
 
 ```python
-names = ['Edmundo', 'Juana', 'Rosita']
-for i, name in enumerate(names):
+nombres = ['Edmundo', 'Juana', 'Rosita']
+for i, nombre in enumerate(nombres):
     # Loops with i = 0, name = 'Edmundo'
-    # i = 1, name = 'Juana'
-    # i = 2, name = 'Rosita'
+    # i = 1, nombre = 'Juana'
+    # i = 2, nombre = 'Rosita'
 ```
 
-The general form is `enumerate(sequence [, start = 0])`. `start` is optional.
-A good example of using `enumerate()` is tracking line numbers while reading a file:
+La forma general es `enumerate(secuencia [, comienzo = 0])`. `comienzo` es opcional.
+Un buen ejemplo de cuándo usar `enumerate()` es para llevar la cuenta del número de líne mientras esas leyendo un archivo:
 
 ```python
 with open(nombre_archivo) as f:
-    for lineno, line in enumerate(f, start=1):
+    for nlinea, line in enumerate(f, start=1):
         ...
 ```
 
-In the end, `enumerate` is just a nice shortcut for:
+Al final de cuentas, `enumerate` es solo una forma abreviada y simpática de escribir:
 
 ```python
 i = 0
@@ -224,11 +218,11 @@ for x in s:
     i += 1
 ```
 
-Using `enumerate` is less typing and runs slightly faster.
+Al usar `enumerate` tenemos que tipear menos y es el programa funciona un toque más rápido.
 
-### For and tuples
+### For y tuples
 
-You can iterate with multiple iteration variables.
+Podés iterar con múltiples variables de iteración.
 
 ```python
 points = [
@@ -241,58 +235,58 @@ for x, y in points:
     #            ...
 ```
 
-When using multiple variables, each tuple is *unpacked* into a set of iteration variables.
-The number of variables must match the number of items in each tuple.
+Cuando usás múltiples variables, cada tupla es *desempaquetada* en un conjunto de variables de iteración.
+El número de variables de coincidir con la cantidad de elementos de cada tupla.
 
-### zip() function
+### La función zip()
 
-The `zip` function takes multiple sequences and makes an iterator that combines them.
+La función `zip` toma múltiples secuencias y las combina en un iterados.
 
 ```python
-columns = ['name', 'cajones', 'precio']
-values = ['Pera', 100, 490.1 ]
-pairs = zip(columns, values)
-# ('name','Pera'), ('cajones',100), ('precio',490.1)
+columnas = ['nombre', 'cajones', 'precio']
+valores = ['Pera', 100, 490.1 ]
+pares = zip(columnas, valores)
+# ('nombre','Pera'), ('cajones',100), ('precio',490.1)
 ```
 
-To get the result you must iterate. You can use multiple variables to unpack the tuples as shown earlier.
+Para obtener el resultado debés iterar. Podés usar múltiples variables para desempaquetar las tuplas como mostramos antes.
 
 ```python
-for column, value in pairs:
+for columna, valor in pares:
     ...
 ```
 
-A common use of `zip` is to create key/value pairs for constructing dictionaries.
+Un uso frecuente de `zip` es para crear pares clave/valor y construir diccionarios.
 
 ```python
-d = dict(zip(columns, values))
+d = dict(zip(columnas, valores))
 ```
 
 ## Ejercicios
 
-### Ejercicio 2.21: Counting
+### Ejercicio 2.21: Contar
 
-Try some basic counting examples:
+Probá algunos ejemplos elementales de conteo:
 
 ```python
->>> for n in range(10):            # Count 0 ... 9
+>>> for n in range(10):            # Contar 0 ... 9
         print(n, end=' ')
 
 0 1 2 3 4 5 6 7 8 9
->>> for n in range(10,0,-1):       # Count 10 ... 1
+>>> for n in range(10,0,-1):       # Contar 10 ... 1
         print(n, end=' ')
 
 10 9 8 7 6 5 4 3 2 1
->>> for n in range(0,10,2):        # Count 0, 2, ... 8
+>>> for n in range(0,10,2):        # Contar 0, 2, ... 8
         print(n, end=' ')
 
 0 2 4 6 8
 >>>
 ```
 
-### Ejercicio 2.22: More sequence operations
+### Ejercicio 2.22: Mas operaciones de secuencias
 
-Interactively experiment with some of the sequence reduction operations.
+Interactivamente experimetá con algunas operaciones de reducción de secuencias.
 
 ```python
 >>> data = [4, 9, 1, 25, 16, 100, 49]
@@ -305,7 +299,7 @@ Interactively experiment with some of the sequence reduction operations.
 >>>
 ```
 
-Try looping over the data.
+Probá ciclar sobre los datos
 
 ```python
 >>> for x in data:
@@ -324,9 +318,7 @@ Try looping over the data.
 >>>
 ```
 
-Sometimes the `for` statement, `len()`, and `range()` get used by
-novices in some kind of horrible code fragment that looks like it
-emerged from the depths of a rusty C program.
+A veces los comandos `for`, `len()`, y `range()` son usados por novicios de una forma bastate fea que parece salida de las profundidades de un programa de C oxidado.
 
 ```python
 >>> for n in range(len(data)):
@@ -339,108 +331,90 @@ emerged from the depths of a rusty C program.
 >>>
 ```
 
-Don’t do that! Not only does reading it make everyone’s eyes bleed,
-it’s inefficient with memory and it runs a lot slower.  Just use a
-normal `for` loop if you want to iterate over data.  Use `enumerate()`
-if you happen to need the index for some reason.
+Por favor, no lo hagas. No solo la lectura nos hace doler los ojos, ademas es ineficiente en el uso de memoria y corre más lento. Simplemente usa un ciclo `for` normal si querés iterar sobre los elementos de la variable data.  Y usá `enumerate()` si necesitás tener el índice por algún motivo.
 
-### Ejercicio 2.23: A practical enumerate() example
-
-Recall that the file `Data/missing.csv` contains data for a cajon
-camion, but has some rows with missing data.  Using `enumerate()`,
-modify your `costo_camion.py` program so that it prints a line number with
-the warning message when it encounters bad input.
+### Ejercicio 2.23: Un ejemplo práctico de enumerate()
+Recodá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,
+modificá tu programa `costo_camion.py` de forma que imprima un aviso (warning) cada vez que encuentre una fila incorrecta.
 
 ```python
 >>> cost = costo_camion('Data/missing.csv')
-Row 4: Couldn't convert: ['Mandarina', '', '51.23']
-Row 7: Couldn't convert: ['Naranja', '', '70.44']
+Fila 4: No pude interpretar: ['Mandarina', '', '51.23']
+Fila 7: No pude interpretar: ['Naranja', '', '70.44']
 >>>
 ```
 
-To do this, you’ll need to change a few parts of your code.
+Para hacer esto, vas a tener que cambiar algunas partes de tu código.
 
 ```python
 ...
-for rowno, row in enumerate(rows, start=1):
+for n_fila, fila in enumerate(filas, start=1):
     try:
         ...
     except ValueError:
-        print(f'Row {rowno}: Bad row: {row}')
+        print(f'Fila {n_fila}: No pude interpretar: {fila}')
 ```
 
-### Ejercicio 2.24: Using the zip() function
-
-In the file `Data/camion.csv`, the first line contains column
-headers. In all previous code, we’ve been discarding them.
+### Ejercicio 2.24: La función zip()
+En el archivo `Data/camion.csv`, la primera linea tiene los encabezados de las columnas. En los códigos anteriores la descrtamos.
 
 ```python
 >>> f = open('Data/camion.csv')
->>> rows = csv.reader(f)
->>> headers = next(rows)
->>> headers
+>>> filas = csv.reader(f)
+>>> encabezados = next(filas)
+>>> encabezados
 ['name', 'cajones', 'precio']
 >>>
 ```
 
-However, what if you could use the headers for something useful? This
-is where the `zip()` function enters the picture.  First try this to
-pair the file headers with a row of data:
+Pero, ¿no puede ser útil conocer los encabezados? Es acá donde la función `zip()` entra en acción. Primero tratá de aparear los encabezados con una fila de datos:
 
 ```python
->>> row = next(rows)
->>> row
+>>> fila = next(filas)
+>>> fila
 ['Lima', '100', '32.20']
->>> list(zip(headers, row))
-[ ('name', 'Lima'), ('cajones', '100'), ('precio', '32.20') ]
+>>> list(zip(encabezados, fila))
+[ ('nombre', 'Lima'), ('cajones', '100'), ('precio', '32.20') ]
 >>>
 ```
 
-Notice how `zip()` paired the column headers with the column values.
-We’ve used `list()` here to turn the result into a list so that you
-can see it. Normally, `zip()` creates an iterator that must be
-consumed by a for-loop.
+Fijate como `zip()` apareó los encabezados de las columnas con los valores de la columna.
+Usamos `list()` arriba para devolver el resultado en una lista de forma que lo puedas ver. Normalmente, `zip()` crea un iterador que debe ser consumido en un ciclo for.
 
-This pairing is an intermediate step to building a
-dictionary. Now try this:
+Este apareamiento es un paso intermedio apra consuir un diccionario. Probá lo siguiente:
 
 ```python
->>> record = dict(zip(headers, row))
+>>> record = dict(zip(encabezados, fila))
 >>> record
 {'precio': '32.20', 'name': 'Lima', 'cajones': '100'}
 >>>
 ```
 
-This transformation is one of the most useful tricks to know about
-when processing a lot of data files.  For example, suppose you wanted
-to make the `costo_camion.py` program work with various input files, but
-without regard for the actual column number where the name, cajones,
-and precio appear.
+Esta transformación es uun truco sumamente útil cuando tenés que procesa muchos archivos de datos. Por ejemplo, suponé que querés hacer que el programa `costo_camion.py` trabaje con diferentes archivos de entrada, pero que no le importe la posición exacta de la columna que tiene la cantidad de cajones o el precio. Es dicir, que entienda que la columna tiene el precio por su encabezado y no por su posición dentro del archivo.
 
-Modify the `costo_camion()` function in `costo_camion.py` so that it looks like this:
+Modificá la función  `costo_camion()` en el archivo `costo_camion.py` para que se vea así:
 
 ```python
 # costo_camion.py
 
 def costo_camion(nombre_archivo):
     ...
-        for rowno, row in enumerate(rows, start=1):
-            record = dict(zip(headers, row))
+        for n_fila, fila in enumerate(filas, start=1):
+            record = dict(zip(encabezados, fila))
             try:
                 ncajones = int(record['cajones'])
                 precio = float(record['precio'])
-                total_cost += ncajones * precio
-            # This catches errors in int() and float() conversions above
+                costo_total += ncajones * precio
+            # Esto atrapa errors en los int() y float() de arriba.
             except ValueError:
-                print(f'Row {rowno}: Bad row: {row}')
+                print(f'Fila {n_fila}: No pude interpretar: {fila}')
         ...
 ```
 
-Now, try your function on a completely different data file
-`Data/fecha_camion.csv` which looks like this:
+Ahora, probá tu función con un archivo completamente diferente `Data/fecha_camion.csv` que se ve así:
 
 ```csv
-name,date,time,cajones,precio
+nombre,fecha,hora,cajones,precio
 "Lima","6/11/2007","9:50am",100,32.20
 "Naranja","5/13/2007","4:20pm",50,91.10
 "Caqui","9/23/2006","1:30pm",150,83.44
@@ -456,24 +430,18 @@ name,date,time,cajones,precio
 >>>
 ```
 
-If you did it right, you’ll find that your program still works even
-though the data file has a completely different column format than
-before. That’s cool!
+Si lo hiciste bien, vas a decubrir que tu programa aún funciona a pesar de que le pasaste un archivo con un formato de columnas completamente diferente al de antes. ¡Y eso está muy bueno!
 
-The change made here is subtle, but significant.  Instead of
-`costo_camion()` being hardcoded to read a single fixed file format,
-the new version reads any CSV file and picks the values of interest
-out of it.  As long as the file has the required columns, the code will work.
+El cambio que hicimos aquí es sutil, pero importante.En lugar de tener *hardcodeado* un formato fijo, la nueva versión de la función `costo_camion()` puede sacar la información de interés de cualquier archivo CSV. En la medida en que el archivo tenga las columnas requeridas, el código va a funcionar.
 
-Modify the `reporte.py` program you wrote in Section 2.3 so that it uses
-the same technique to pick out column headers.
+Modificá el programa `reporte.py` que escribiste antes (ver [Ejercicio 2.20](../02_Datos/05_203Formatting.md#ejercicio-220-desfío-de-formato)) para que use esta técnica para elegir las columnas a partir de sus encabezados.
 
-Try running the `reporte.py` program on the `Data/fecha_camion.csv`
-file and see that it produces the same answer as before.
+Probá correr el programa `reporte.py` sobre el archivo  `Data/fecha_camion.csv`
+y fijate si dá la misma salida que antes.
 
-### Ejercicio 2.25: Inverting a dictionary
+### Ejercicio 2.25: Invertir un diccionario
 
-A dictionary maps keys to values. For example, a dictionary of cajon precios.
+Un diciconario es una función que mapea claves en valores. Por ejemplo, un diccionario de precios de cajones de frutas.
 
 ```python
 >>> precios = {
@@ -485,7 +453,7 @@ A dictionary maps keys to values. For example, a dictionary of cajon precios.
 >>>
 ```
 
-If you use the `items()` method, you can get `(key,value)` pairs:
+Si usás el método `items()`, obtenés pares `(clave,valor)`:
 
 ```python
 >>> precios.items()
@@ -493,7 +461,7 @@ dict_items([('Pera', 490.1), ('Lima', 23.45), ('Naranja', 91.1), ('Mandarina', 3
 >>>
 ```
 
-However, what if you wanted to get a list of `(value, key)` pairs instead?
+Sin embargo, si lo que querés son pares `(valor, clave)`, ¿cómo hacer?
 *Ayuda: use `zip()`.*
 
 ```python
@@ -503,8 +471,7 @@ However, what if you wanted to get a list of `(value, key)` pairs instead?
 >>>
 ```
 
-Why would you do this? For one, it allows you to perform certain kinds
-of data processing on the dictionary data.
+¿Por qué haría algo así? Por un lado porque te permite realizar cierto tipo de procesamiento de datos sobre la información del diccionario.
 
 ```python
 >>> min(lista_precios)
@@ -516,18 +483,11 @@ of data processing on the dictionary data.
 >>>
 ```
 
-This also illustrates an important feature of tuples. When used in
-comparisons, tuples are compared element-by-element starting with the
-first item. Similar to how strings are compared
-character-by-character.
+Esto también ilustra un atributo importante de las tuplas. Cuando son usadas en una comparación, las tuplas son comparadas elemento-a-elemento comenzando con el primer. Es similar a la lógica subyacente al orden lexicográfico o alfabético en las cadenas.
 
-`zip()` is often used in situations like this where you need to pair
-up data from different places.  For example, pairing up the column
-names with column values in order to make a dictionary of named
-values.
+La función `zip()` se usa frecuentemente en este tiupo de situaciones donde necesitás aparear datos provenientes de diferentes lugares. Por ejemplo, para aparear los nombres de las columnas con los valores para hacer un diccionario de valores con nombres.
 
-Note that `zip()` is not limited to pairs. For example, you can use it
-with any number of input lists:
+Observá que `zip()` no está limitada a pares. Podés usarla con cualquier número de listas de entrada:
 
 ```python
 >>> a = [1, 2, 3, 4]
@@ -538,7 +498,7 @@ with any number of input lists:
 >>>
 ```
 
-Also, be aware that `zip()` stops once the shortest input sequence is exhausted.
+También, tenés cuidad que `zip()` se detiene cuando la más corta de las entradas se agota.
 
 ```python
 >>> a = [1, 2, 3, 4, 5, 6]
@@ -549,5 +509,5 @@ Also, be aware that `zip()` stops once the shortest input sequence is exhausted.
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Formatting)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_203Formatting.md) \| [Próximo (7 Algoritmos de búsqueda en listas)](07_R_Busquedas.md)
 

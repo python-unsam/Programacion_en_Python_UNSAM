@@ -6,11 +6,9 @@ En esta segunda clase aprendimos a trabajar con datos. Manejamos archivos CSV y 
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que nos mandes por mail a <python@unsam.edu.ar> los programas de los siguientes ejercicios:
-    1. [Ejercicio 2.8](../02_Datos/02_107Funciones.md#ejercicio-28-ejecución-desde-la-línea-de-comandos-con-parámetros)  Costo de camion por linea de comandos `costo_camion.py`
-    2. \ref_ef{Ej_Balance_Formato_Lindo} Balance con formato `reporte.py`
-    3. [Ejercicio 2.25](../02_Datos/06_204Sequences.md#ejercicio-225-inverting-a-dictionary) Invertir dict 
-    4. [Ejercicio 1.18](../01_Introduccion/04_Strings.md#ejercicio-118-geringoso-rústico) Geringoso
-    5. [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-al-lenguaje-inclusivo) Lenguaje inclusive
+    1. [Ejercicio 2.23](../02_Datos/06_204Sequences.md#ejercicio-223-un-ejemplo-práctico-de-enumerate)  Costo de camion por linea de comandos `costo_camion.py` con warnings.
+    2. [Ejercicio 2.24](../02_Datos/06_204Sequences.md#ejercicio-224-la-función-zip) Balance con formato `reporte.py` y lectura de encabezados
+    3. Orden?
 * Que completes [este formulario](link) usando como identificación tu dirección de mail.
  
 

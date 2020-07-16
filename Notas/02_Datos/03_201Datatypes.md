@@ -89,7 +89,7 @@ Podés, sin embargo, hacer una nueva tupla basada en el contenido de otra, que n
 s = (s[0], 75, s[2])
 ```
 
-### Empaquetando tuplas
+### Empaquetar tuplas
 
 Las tuplas suelen usarse para empaquetar información relacionada en una sola *entidad*.
 
@@ -99,7 +99,7 @@ s = ('Manzanas', 100, 490.1)
 
 Una tupla puede ser pasada de un lugar a otro de un programa como un solo objeto.
 
-### Desempaquetando tuplas
+### Desempaquetar tuplas
 
 Para usar una tupla en otro lado, debemos desempaquetar su contenido en diferentes variables.
 
@@ -193,7 +193,7 @@ En los últimos ejercicios, escribiste un programa que leía el archivo
 >>>
 ```
 
-A veces, además de leerlo, queremos hacer otras cosas con el archivo *.csv*, como por ejemplo usarlo para cálculos. Lamentablemente una fila de datos en crudo es suficiente para trabajar. 
+A veces, además de leerlo, queremos hacer otras cosas con el archivo CSV, como por ejemplo usar la info que contiene para hacer un cálculo. Lamentablemente una fila de datos en crudo no es suficiente para operar artiméticamente. 
 
 ```python
 >>> fila = ['LIMA', '100', '32.20']
@@ -204,7 +204,7 @@ TypeError: can't multiply sequence by non-int of type 'str'
 >>>
 ```
 
-Para poder hacer más cosas con estos datos, vamos a querer interpretar la fila de datos de alguna manera particular, pasándola a otro tipo de objeto que nos resulte más útil para trabajar. Por ejemplo, tuplas o diccionarios.
+Para poder hacer más cosas con estos datos, vamos a querer interpretar los elementos de la fila de datos de alguna manera particular, convirtiéndolos a otro tipo de datos que resulte más adecuado para trabajar. Es frecuente además de convertir los elementos de las filas, transformar las filas enteras en tuplas o diccionarios.
 
 ### Ejercicio 2.9: Tuplas
 
@@ -375,10 +375,6 @@ Es poco usual utilizar `keys()`, porque devuelve un objeto especial de tipo `dic
 
 Esta asignación va a implicar que `claves` guardará las claves del diccionario `d` aunque éste cambie. Por ejemplo, probá esto:
 
-##################### This is an overlay on the original dictionary that always gives you
-the current keys—even if the dictionary changes. For example, try
-this:
-
 ```python
 >>> del d['cuenta']
 >>> claves
@@ -388,7 +384,7 @@ dict_keys(['nombre', 'cajones', 'precio', 'fecha'])
 
 Fijate que `cuenta` desapareció de `claves` aunque no volviste a llamar al comando `d.keys()`.
 
-Una manera más elegante de trabajar con claves y valores a la vez es usar el método `items()`. Esto te devuelve tuplas de la forma `(clave,valor)`.
+Una manera más elegante de trabajar con claves y valores simultaneamente es usar el método `items()`. Esto te devuelve una lista de tuplas de la forma `(clave,valor)` sobre la que podés iterar.
 
 ```python
 >>> items = d.items()
@@ -404,7 +400,7 @@ fecha = (6, 11, 2007)
 >>>
 ```
 
-Si tenés tuplas como `items` podés crear un diccionario usando la función `dict()`. Probá esto:
+Si tenés tuplas como en `items` podés crear un diccionario usando la función `dict()`. Probá esto:
 
 ```python
 >>> items

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_201Datatypes.md) \| [Próximo (5 Formatting)](05_203Formatting.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_201Datatypes.md) \| [Próximo (5 Impresión con formato)](05_203Formatting.md)
 
 # 2.4 Contenedores
 
@@ -106,7 +106,7 @@ with open('Data/precios.csv', 'rt') as f:
         precios[row[0]] = float(row[1])
 ```
 
-Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Vas a tener que encontrar la manera de modificar el código para resolverlo (ver Ejercicio 2.6).
+Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Usando lo que ya vimos, en el [Ejercicio 2.14](../02_Datos/04_202Containers.md#ejercicio-214-diccionarios-como-contenedores) vas a tener que modificar el código para resolver el problema.
 
 ### Búsquedas en un diccionario
 
@@ -135,9 +135,11 @@ Un ejemplo:
 >>>
 ```
 
+De esta manera (dando un valor por defecto) evitás el `KeyError` que obtendías al buscar una clave inexistente.
+
 ### Claves compuestas
 
-Casi cualquier valor puede usarse como clave en un diccionario de Python. Una clave debe ser de tipo inmutable.
+Casi cualquier valor puede usarse como clave en un diccionario de Python. La principal restricción es que una clave debe ser de tipo inmutable.
 Por ejemplo, tuplas:
 
 ```python
@@ -160,7 +162,7 @@ Luego, podemos acceder al diccionario así:
 
 ### Conjuntos
 
-Un conjunto es una colección desordenada de elementos únicos.
+Un conjunto es una colección desordenada de elementos únicos, sin prepetición.
 
 
 ```python
@@ -203,11 +205,11 @@ s1 - s2                 # Diferencia de conjuntos
 
 ## Ejercicios
 
-En estos ejercicios, vas a empezar a construir uno de los programas más grandes que usaremos en el resto del curso. Trabajá en un archivo `Work/reporte.py`.
+En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `Work/reporte.py`.
 
 ### Ejercicio 2.12: Lista de tuplas
 
-El archivo `Data/camion.csv` contiene una lista de cajones de un camión.  En el [Ejercicio 2.5](../02_Datos/02_107Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
+El archivo `Data/camion.csv` contiene la lista de cajones cargada en un camión.  En el [Ejercicio 2.5](../02_Datos/02_107Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
 La función debería verse parecido a éste:
 
@@ -232,7 +234,7 @@ def costo_camion(nombre_archivo):
 ...
 ```
 
-Usando este código como guía, creá un nuevo archivo `reporte.py`.  En este archivo, definí una función `leer_camion(nombre_archivo)` que abre un archivo con el contenido de un camión, lo lee y pasa la información a una lista de tuplas. Para hacerlo vas a tener que hacer algunas modificaciones menores al código de arriba.
+Usando este código como guía, creá un nuevo archivo `reporte.py`. En este archivo, definí una función `leer_camion(nombre_archivo)` que abre un archivo con el contenido de un camión, lo lee y devuelve la información como una lista de tuplas. Para hacerlo vas a tener que hacer algunas modificaciones menores al código de arriba.
 
 Primero, en vez de definir `total = 0`, tenés que empezar con una variable que empieza siendo una lista vacía Por ejemplo:
 
@@ -274,7 +276,7 @@ Experimentá con tu función interactivamente (acordate de que primero tenés qu
 >>>
 ```
 
-Esta lista de tuplas que creaste es muy similar a un array o matriz 2-D. Por ejemplo, podés acceder a una fila específica y columna específica usando una búsqueda como `camion[fila][columna]` donde `fila` y `columna` son números enteros.
+Esta lista de tuplas que creaste es muy similar a un array o matriz bidimensional. Por ejemplo, podés acceder a una fila específica y columna específica usando una búsqueda como `camion[fila][columna]` donde `fila` y `columna` son números enteros.
 
 También podés reescribir el último ciclo for usando un comando como éste:
 
@@ -288,9 +290,11 @@ También podés reescribir el último ciclo for usando un comando como éste:
 >>>
 ```
 
+*Observación: la instrucción `+=` es una abreviacion. Poner `a += b` es equivalente a poner `a = a + b`*
+
 ### Ejercicio 2.13: Lista de diccionarios
 
-Tomá la función que escribiste en el ejercicio anterior (*Lista de tuplas*) y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del achivo de entrada.
+Tomá la función que escribiste en el ejercicio anterior y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del achivo de entrada.
 
 Experimentá con esta función nueva igual que en el ejercicio anterior.
 
@@ -313,9 +317,9 @@ Experimentá con esta función nueva igual que en el ejercicio anterior.
 >>>
 ```
 
-Fijate que acá los distintos campos para cada entrada se acceden a través de claves en vez de números de fila y columna. Muchas veces preferimos esto porque el código resulta más fácil de leer en el futuro.
+Fijate que acá los distintos campos para cada entrada se acceden a través de claves en vez de números de fila y columna. Muchas veces preferimos esto porque el código resulta más fácil de leer. Tanto para otres como para nosotres en el futuro.
 
-Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el output para debugging, probá la función `pprint` que le da un formato más sencillo de interpretar.
+Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el output para debuguear, probá la función `pprint` que le da un formato más sencillo de interpretar.
 
 ```python
 >>> from pprint import pprint
@@ -362,7 +366,7 @@ El archivo `Data/precios.csv` contiene una serie de líneas con precios de venta
 
 Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como este arme un diccionario donde las claves sean los nombres de frutas y los valores sean los precios por cajón.
 
-Para hacerlo, empezá con un diccionario vacío y agregale valores igual que hiciste antes, pero ahora leyendo los valores del archivo.
+Para hacerlo, empezá con un diccionario vacío y andá agregándole valores igual que como hiciste antes, pero ahora esos valores los vas leyendo del archivo.
 
 Vamos a usar esta estructura de datos para buscar rápidamente los precios de las frutas.
 
@@ -408,5 +412,5 @@ Supongamos que los precios en `camion.csv` son los precios pagados al productor 
 Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `reporte.py`, agregando algunos comandos adicionales donde haga falta, de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_202Containers.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_202Containers.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_201Datatypes.md) \| [Próximo (5 Formatting)](05_203Formatting.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_201Datatypes.md) \| [Próximo (5 Impresión con formato)](05_203Formatting.md)
 
