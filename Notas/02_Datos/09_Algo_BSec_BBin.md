@@ -4,13 +4,11 @@
 
 
 ### Ejercicio 2.30: Búsqueda secuencial
-
 Búsqueda secuencial `b_sec.py`
 
 diremos algo
 
 ### Ejercicio 2.31: Búsqueda binaria
-
 Búsqueda binaria `b_bin.py`
 
 Complejidad: Puedo decir que un elemento no está sin necesidad de comparar contra todos

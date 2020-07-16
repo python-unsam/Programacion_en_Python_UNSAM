@@ -267,7 +267,6 @@ When you run your report program, you should be getting output like this:
 ```
 
 ### Ejercicio 6.5: An Extensibility Problem
-
 Suppose that you wanted to modify the `print_report()` function to
 support a variety of different output formats such as plain-text,
 HTML, CSV, or XML.  To do this, you could try to write one gigantic
@@ -359,7 +358,6 @@ It should immediately crash with a `NotImplementedError` exception.  That's not
 too exciting, but it's exactly what we expected.  Continue to the next part.
 
 ### Ejercicio 6.6: Using Inheritance to Produce Different Output
-
 The `TableFormatter` class you defined in part (a) is meant to be
 extended via inheritance.  In fact, that's the whole idea.  To
 illustrate, define a class `TextTableFormatter` like this:
@@ -493,7 +491,6 @@ Test your code by modifying the main program to create a
 `CSVTableFormatter` object.
 
 ### Ejercicio 6.7: Polymorphism in Action
-
 A major feature of object-oriented programming is that you can
 plug an object into a program and it will work without having to
 change any of the existing code.  For example, if you wrote a program
@@ -562,7 +559,6 @@ def reporte_camion(camionfile, preciofile, fmt='txt'):
 Try calling the function with different formats to make sure it's working.
 
 ### Ejercicio 6.8: Putting it all together
-
 Modify the `reporte.py` program so that the `reporte_camion()` function takes
 an optional argument specifying the output format. For example:
 

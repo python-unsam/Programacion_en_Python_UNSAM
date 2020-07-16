@@ -207,7 +207,6 @@ TypeError: can't multiply sequence by non-int of type 'str'
 Para poder hacer más cosas con estos datos, vamos a querer interpretar los elementos de la fila de datos de alguna manera particular, convirtiéndolos a otro tipo de datos que resulte más adecuado para trabajar. Es frecuente además de convertir los elementos de las filas, transformar las filas enteras en tuplas o diccionarios.
 
 ### Ejercicio 2.9: Tuplas
-
 En el intérprete interactivo, creá la siguiente tupla que representa la fila de antes, pero con las columnas numéricas pasadas a formatos adecuados:
 
 ```python
@@ -282,7 +281,6 @@ Tomá las variables de arriba y empaquetalas en una tupla.
 ```
 
 ### Ejercicio 2.10: Diccionarios como estructuras de datos
-
 Una alternativa a la tupla es un diccionario.
 
 ```python
@@ -325,7 +323,6 @@ A diferencia de las tuplas, los diccionarios se pueden modificar libremente. Agr
 ```
 
 ### Ejercicio 2.11: Más operaciones con diccionarios
-
 Si pasás un diccionario a una lista, obtenés sus claves.
 
 ```python

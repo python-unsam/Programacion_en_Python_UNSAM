@@ -102,7 +102,6 @@ RuntimeError: ¡Qué moco!
 ## Ejercicios
 
 ### Ejercicio 2.4: Definir una función
-
 Probá primero definir una función simple:
 
 ```python
@@ -120,7 +119,6 @@ Hello Paula
 Si la primera instrucción de una función es una cadena, sirve como documentación de la función. Porbalo escribiendo `help(saludar)` para ver cómo la muestra.
 
 ### Ejercicio 2.5: Transformar un script en una función
-
 Transformá el programa `costo_camion.py`  (que escribiste en el [Ejercicio 2.2](../02_Datos/01_106Files.md#ejercicio-22-lectura-de-un-archivo-de-datos) de la sección anterior) y transformalo en una función `costo_camion(nombre_archivo)`.  Esta función recibe un nombre de archivo como entrada, lee la información sobre los cajones que cargó y devuelve el costo de las frutas como una variable de punto flotante.
 
 Para usar tu función, cambiá el programa de forma que se parezca a esto:
@@ -152,7 +150,6 @@ Esto va a ejecutar el código en el programa y dejar abierto el intérprete inte
 Es útil para testear y debuguear poder interactuar interactivamente con tu código.
 
 ### Ejercicio 2.6: Manejo de errores
-
 Probá correr la siguiente función ingresando tu edad real, una edad escrita con letras (como "ocho") y una edad negativa (-3):
 
 ```python
@@ -193,7 +190,6 @@ Modificá el programa `costo_camion.py` para que atrape la excepción, imprima u
 Vamos a profundizar en el manejo de errores en las próximas clases.
 
 ### Ejercicio 2.7: Funciones de la biblioteca
-
 Python viene con una gran biblioteca estándar de funciones útiles. En este caso el módulo `csv` podría venirnos muy bien. Podés usarlo cada vez que tengas que leer archivos CSV. Acá va un ejemplo de cómo funciona.
 
 ```python
@@ -223,7 +219,6 @@ Una cosa buena que tiene el módulo `csv` es que maneja solo una gran variedad d
 Modificá tu programa `costo_camion.py` para que use el módulo `csv` para leer los archivos CSV y probalo en un par de los ejemplos anteriores.
 
 ### Ejercicio 2.8: Ejecución desde la línea de comandos con parámetros
-
 
 En el programa `costo_camion.py`, el nombre del archivo de entrada `'Data/camion.csv'` fue escrito en el código. 
 

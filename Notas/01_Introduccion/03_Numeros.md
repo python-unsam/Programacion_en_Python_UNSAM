@@ -217,7 +217,6 @@ Probalo.
 Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Work`. Buscá el archivo `hipoteca.py` y hacé los ejercicios con un editor de texto en ese archivo. Ejecutalo desde la línea de comandos.
 
 ### Ejercicio 1.7: La hipoteca de David
-
 David solicitó un cŕedito a 30 años y a tasa fija para comprar una vivienda. Pidió $500,000 a la companía y acordó un pago mensual fijo de $2684.11.
 
 El siguiente es un programa que calcula el monto total que pagará David a lo largo de los años:
@@ -240,7 +239,6 @@ print('Total pagado', total_pagado)
 Copiá este código y correlo. Deberías obtener `966279.6` como respuesta.
 
 ### Ejercicio 1.8: Adelantos
-
 Supongamos que David adelanta pagos extra de $1000/mes durante los primeros 12 meses de la hipoteca.
 
 Modificá el programa para incorporar estos pagos extra y que imprima el monto total pagado junto con la cantidad de meses requeridos.
@@ -248,7 +246,6 @@ Modificá el programa para incorporar estos pagos extra y que imprima el monto t
 Cuando lo corras, este nuevo programa debería dar un pago total de  `929965.62` en 342 meses.
 
 ### Ejercicio 1.9: Calculadora de adelantos
-
 Modificá tu programa de forma que la información sobre pagos extras sea incorporada de manera más versatil. Agregá las siguientes variables antes del ciclo:
 
 ```python
@@ -262,7 +259,6 @@ Hacé que el programa tenga en cuenta estas variables para calcular el total a p
 ¿Cuánto pagaría David si agrega $1000 por mes durante cuatro años, comenzando en el sexto año de la hipoteca?
 
 ### Ejercicio 1.10: Tablas
-
 Modicá tu programa para que imprima una tabla mostrando el mes, el total pagado hasta el momento y el saldo restante. La salida debería verse aproximadamente así:
 
 ```bash
@@ -280,13 +276,11 @@ Meses 310
 ```
 
 ### Ejercicio 1.11: Bonus
-
 Ya que estamos, corregí el código anterior de forma que el pago del último mes se ajuste a lo adeudado.
 
 Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `Work`. Vamos a volver a trabar con él.
 
 ### Ejercicio 1.12: Un misterio
-
 Las funciones `int()` y `float()` pueden usarse para convertir números. Por ejemplo,
 
 ```python
@@ -306,7 +300,6 @@ True
 ```
 
 ### Ejercicio 1.13: El volúmen de una esfera
-
 Escribí un programa llamdo `esfera.py` en el dirctorio de trabajo que le pida al usuario que ingrese por teclado el radio *r* de una esfera y calcule e imprima el volumen de la misma. *Sugerencia: recordar que el volúmen de una esfera es 4/3 πr^3*.
 
 Finalmente, ejecutá el programa desde la línea de comandos para responder ¿cuál es el volumen de una esfera de radio 6? Debería darte `904.7786842338603`.

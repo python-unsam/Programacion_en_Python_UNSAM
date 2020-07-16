@@ -208,7 +208,6 @@ s1 - s2                 # Diferencia de conjuntos
 En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `Work/reporte.py`.
 
 ### Ejercicio 2.12: Lista de tuplas
-
 El archivo `Data/camion.csv` contiene la lista de cajones cargada en un camión.  En el [Ejercicio 2.5](../02_Datos/02_107Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
 La función debería verse parecido a éste:
@@ -293,7 +292,6 @@ También podés reescribir el último ciclo for usando un comando como éste:
 *Observación: la instrucción `+=` es una abreviacion. Poner `a += b` es equivalente a poner `a = a + b`*
 
 ### Ejercicio 2.13: Lista de diccionarios
-
 Tomá la función que escribiste en el ejercicio anterior y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del achivo de entrada.
 
 Experimentá con esta función nueva igual que en el ejercicio anterior.
@@ -335,7 +333,6 @@ Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el outpu
 ```
 
 ### Ejercicio 2.14: Diccionarios como contenedores
-
 Los diccionarios son útiles si querés buscar elementos usando índices que no sean números enteros. En la terminal de Python, jugá con un diccionario:
 
 ```python
@@ -406,7 +403,6 @@ Una vez que hayas escrito tu función `leer_precios()`, testeala interactivament
 ```
 
 ### Ejercicio 2.15: Balances
-
 Supongamos que los precios en `camion.csv` son los precios pagados al productor de frutas mientras que los precios en `precios.csv` son los precios de venta en el lugar de descarga del camión. 
 
 Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `reporte.py`, agregando algunos comandos adicionales donde haga falta, de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_202Containers.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_202Containers.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente.

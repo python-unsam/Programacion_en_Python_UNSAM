@@ -149,7 +149,6 @@ have that, please work from the solution code found in the
 `Solutions/3_18` directory.  It's fine to copy it.
 
 ### Ejercicio 6.1: Objects as Data Structures
-
 In section 2 and 3, we worked with data represented as tuples and
 dictionaries.  For example, a holding of cajon could be represented as
 a tuple like this:
@@ -223,7 +222,6 @@ with somewhat different syntax.  For example, instead of writing
 `s['name']` or `s['precio']`, you now write `s.name` and `s.precio`.
 
 ### Ejercicio 6.2: Adding some Methods
-
 With classes, you can attach functions to your objects.  These are
 known as methods and are functions that operate on the data
 stored inside an object.  Add a `cost()` and `sell()` method to your
@@ -245,7 +243,6 @@ stored inside an object.  Add a `cost()` and `sell()` method to your
 ```
 
 ### Ejercicio 6.3: Creating a list of instances
-
 Try these steps to make a list of Cajon instances from a list of
 dictionaries. Then compute the total cost:
 
@@ -265,7 +262,6 @@ dictionaries. Then compute the total cost:
 ```
 
 ### Ejercicio 6.4: Using your class
-
 Modify the `leer_camion()` function in the `reporte.py` program so
 that it reads a camion into a list of `Cajon` instances as just
 shown in Ejercicio 4.3.  Once you have done that, fix all of the code

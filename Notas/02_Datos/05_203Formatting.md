@@ -110,7 +110,6 @@ Esto requiere un solo item, o una tupla a la derecha. Los códigos están tambie
 ## Ejercicios
 
 ### Ejercicio 2.16: Formato de números
-
 Un problema usual cuando queremos imprimir números es especificar el número de dígitos decimales. Los f-strings nos permiten hacerlo. Probá los siguientes ejemplos:
 
 ```python
@@ -152,7 +151,6 @@ A pesar de que suelen usarse dentre de un `print`, el formato de cadenas no est�
 ```
 
 ### Ejercicio 2.17: Recolectar datos
-
 En el [Ejercicio 2.15](../02_Datos/04_202Containers.md#ejercicio-215-balances), escribiste un programa llamado `reporte.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y venden en el mercado. En este ejercicio, vas a comenzas a modificarlo para producir una tabla como esta:
 
 ```
@@ -191,7 +189,6 @@ Agregá esta función a tu archivo `reporte.py`. Debería funcionar como se mues
 ```
 
 ### Ejercicio 2.18: Imprimir una tabla con formato
-
 Volvé a hacer el del ciclo `for` del ejercicio anterior pero cambiando la forma de imprimir como sigue:
 
 ```python
@@ -223,7 +220,6 @@ O directamente usando  f-strings. Por ejemplo:
 Agregá estos últimos comando a tu programa `reporte.py`. Hacé que el programa tome la salida de la función `hacer_reporte()` e imprima una tabla bien formateada.
 
 ### Ejercicio 2.19: Agregar encabezados
-
 Suponete que tenés una tupla con nombres de encabezado como esta:
 
 ```python
@@ -257,7 +253,6 @@ Cuando esté listo, tu programa debería producir una tabla como esta:
 ```
 
 ### Ejercicio 2.20: Deafío de formato
-
 Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 
 ```

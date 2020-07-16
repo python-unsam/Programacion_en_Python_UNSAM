@@ -246,7 +246,6 @@ In this set of ejercicios, we look at some of the power that comes from first-cl
 objects.
 
 ### Ejercicio 3.7: First-class Data
-
 In the file `Data/camion.csv`, we read data organized as columns that look like this:
 
 ```csv
@@ -384,7 +383,6 @@ The above code can be compressed into a single list comprehension.
 ```
 
 ### Ejercicio 3.8: Making dictionaries
-
 Remember how the `dict()` function can easily make a dictionary if you
 have a sequence of key names and values?  Let’s make a dictionary from
 the column headers:
@@ -409,7 +407,6 @@ whole conversion in a single step using a dict-comprehension:
 ```
 
 ### Ejercicio 3.9: The Big Picture
-
 Using the techniques in this ejercicio, you could write statements that
 easily convert fields from just about any column-oriented datafile
 into a Python dictionary.

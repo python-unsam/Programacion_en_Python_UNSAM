@@ -253,7 +253,6 @@ if __name__ == '__main__':
 ## Ejercicios
 
 ### Ejercicio 5.4: `main()` functions
-
 In the file `reporte.py` add a `main()` function that accepts a list of
 command line options and produces the same output as before.  You
 should be able to run it interatively like this:
@@ -283,7 +282,6 @@ Total cost: 44671.15
 ```
 
 ### Ejercicio 5.5: Making Scripts
-
 Modify the `reporte.py` and `costo_camion.py` programs so that they can
 execute as a script on the command line:
 

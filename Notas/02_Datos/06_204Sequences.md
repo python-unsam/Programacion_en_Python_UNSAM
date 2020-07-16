@@ -265,7 +265,6 @@ d = dict(zip(columnas, valores))
 ## Ejercicios
 
 ### Ejercicio 2.21: Contar
-
 Probá algunos ejemplos elementales de conteo:
 
 ```python
@@ -285,7 +284,6 @@ Probá algunos ejemplos elementales de conteo:
 ```
 
 ### Ejercicio 2.22: Mas operaciones de secuencias
-
 Interactivamente experimetá con algunas operaciones de reducción de secuencias.
 
 ```python
@@ -333,8 +331,7 @@ A veces los comandos `for`, `len()`, y `range()` son usados por novicios de una 
 
 Por favor, no lo hagas. No solo la lectura nos hace doler los ojos, ademas es ineficiente en el uso de memoria y corre más lento. Simplemente usa un ciclo `for` normal si querés iterar sobre los elementos de la variable data.  Y usá `enumerate()` si necesitás tener el índice por algún motivo.
 
-### Ejercicio 2.23: Un ejemplo práctico de enumerate()
-Recodá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,
+### Ejercicio 2.23: Un ejemplo práctico de enumerate()Recodá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,
 modificá tu programa `costo_camion.py` de forma que imprima un aviso (warning) cada vez que encuentre una fila incorrecta.
 
 ```python
@@ -355,8 +352,7 @@ for n_fila, fila in enumerate(filas, start=1):
         print(f'Fila {n_fila}: No pude interpretar: {fila}')
 ```
 
-### Ejercicio 2.24: La función zip()
-En el archivo `Data/camion.csv`, la primera linea tiene los encabezados de las columnas. En los códigos anteriores la descrtamos.
+### Ejercicio 2.24: La función zip()En el archivo `Data/camion.csv`, la primera linea tiene los encabezados de las columnas. En los códigos anteriores la descrtamos.
 
 ```python
 >>> f = open('Data/camion.csv')
@@ -440,7 +436,6 @@ Probá correr el programa `reporte.py` sobre el archivo  `Data/fecha_camion.csv`
 y fijate si dá la misma salida que antes.
 
 ### Ejercicio 2.25: Invertir un diccionario
-
 Un diciconario es una función que mapea claves en valores. Por ejemplo, un diccionario de precios de cajones de frutas.
 
 ```python

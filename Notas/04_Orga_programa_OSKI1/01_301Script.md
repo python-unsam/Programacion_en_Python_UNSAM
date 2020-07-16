@@ -242,7 +242,6 @@ for row in report:
 En este ejercicio vamos a tomar este programa y organizarlo mejor usando el concepto de funciones.
 
 ### Ejercicio 4.1: Estructurar un programa como una colección de funciones
-
 Modificá tu programa `reporte.py` de modo que todas las operaciones principales, incluyendo cálculos e impresión, sean llevados a cabo por una colección de funciones. Más específicamente:
 
 * Creá una función `print_report(report)` que imprima el informe.
@@ -250,7 +249,6 @@ Modificá tu programa `reporte.py` de modo que todas las operaciones principales
 
 
 ### Ejercicio 4.2: Crear una función de alto nivel para la ejecución del programa.
-
 [oski]:# ( Take the last part of your program and package it into a single function reporte_camion { camion_nombre_archivo, precios_nombre_archivo }.
 Have the function work so that the following function call creates the report as before: )
 

@@ -36,8 +36,7 @@ Existen diversos entornos fuera de la terminal en los que se puede escribir y ej
 
 ## Ejercicios
 
-### Ejercicio 1.1:  Python como  calculadora
-
+### Ejercicio 1.1: Python como  calculadora
 En tu máquina, arrancá el Python y usal como una calculadora para resolver el siguiente problema.
 
 * ¿Cuántas horas son 105 minutos?
@@ -62,7 +61,6 @@ tip: Usá el guión bajo (underscore, \_) para referirte al resultado del últim
 ```
 
 ### Ejercicio 1.2: Obtener ayuda
-
 ** sacar esta referencia Ver [Ejercicio 1.1](../01_Introduccion/01_Python.md#ejercicio-11-python-como-calculadora) y  [Ejercicio 1.2](../01_Introduccion/01_Python.md#ejercicio-12-obtener-ayuda) **
 Ver [Ejercicio 1.1](../01_Introduccion/01_Python.md#ejercicio-11-python-como-calculadora) y  [Ejercicio 1.2](../01_Introduccion/01_Python.md#ejercicio-12-obtener-ayuda) y [Sección 1.1](../01_Introduccion/01_Python.md#dónde-conseguir-python)
 
@@ -74,7 +72,6 @@ El `help()` no funciona con los comandos básicos de Python como`for`, `if`, `wh
 La documentación oficial en inglés de Python se encuentra en <http://docs.python.org>. Por ejemplo, encontrá ahí la documentación sobre la función `abs()` (ayuda: está dentro de "library reference" y relacionado a las "built-in functions").
 
 ### Ejercicio 1.3: Cut-and-paste
-
 Este curso está estructurado como una serie de páginas web tradicionales en las que los incentivamos a probar interactivamente fragmentos de código en sus intérpretesde Python **escribiéndolos a mano**. Si estás aprendiendo Python por primera vez, este forma "lenta" de hacer las cosas es la que recomendamos, al menos al principio. Vas a entender mejor yendo lento y escribiendo los comandos vos mismo mientras pensás en lo que estás tipeando.
 
 Si en algún momento necesitás hacer "cut and paste" de fragmentos de código, seleccioná el código que viene luego del símbolo `>>>` y hasta la siguiente linea en blanco o el siguiente `>>>` (el que aparezca primero). Seleccioná "copy" en el navegador (Ctrl-C), andá al intérprete de Python y poné "paste" (Ctrl-V o Crtl-shift-V) para pegarlo. Para ejecutar el código es posible que tengas que apretar "Enter" luego de pegarlo.

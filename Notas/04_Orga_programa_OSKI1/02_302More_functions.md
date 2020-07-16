@@ -294,7 +294,6 @@ Start this ejercicio by creating a new file called
 `Work/fileparse.py`. This is where we will be doing our work.
 
 ### Ejercicio 4.3: Reading CSV Files
-
 To start, let’s just focus on the problem of reading a CSV file into a
 list of dictionaries.  In the file `fileparse.py`, define a
 function that looks like this:
@@ -342,7 +341,6 @@ with the data because everything is represented as a string.  We’ll
 fix this shortly, but let’s keep building on it.
 
 ### Ejercicio 4.4: Building a Column Selector
-
 In many cases, you’re only interested in selected columns from a CSV
 file, not all of the data.  Modify the `parse_csv()` function so that
 it optionally allows user-specified columns to be picked out as
@@ -439,7 +437,6 @@ When you read a row of data from the file, the indices are used to filter it:
 ```
 
 ### Ejercicio 4.5: Performing Type Conversion
-
 Modify the `parse_csv()` function so that it optionally allows
 type-conversions to be applied to the returned data.  For example:
 
@@ -465,7 +462,6 @@ if types:
 ```
 
 ### Ejercicio 4.6: Working without Headers
-
 Some CSV files don’t include any header information.
 For example, the file `precios.csv` looks like this:
 
@@ -493,7 +489,6 @@ make sure you don’t create dictionaries as there are no longer any
 column names to use for keys.
 
 ### Ejercicio 4.7: Picking a different column delimitier
-
 Although CSV files are pretty common, it’s also possible that you
 could encounter a file that uses a different column separator such as
 a tab or space.  For example, the file `Data/camion.dat` looks like

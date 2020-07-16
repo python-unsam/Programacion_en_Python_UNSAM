@@ -177,7 +177,6 @@ Armá una lista con los nombres de frutas usando el comando `split()`:
 
 
 ### Ejercicio 1.22: Extracción y reasignación de elementos.
-
 Probá un par de estos comandos para extraer un elemento:
 
 ```python
@@ -233,7 +232,6 @@ Cuando hacés esto, la lista del lado izquierdo (`lista_frutas`) va a cambiar su
 En el ejemplo de arriba los últimos dos elementos de la `lista_frutas` fueron reemplazados por un solo elemento en la lista `compra`.
 
 ### Ejercicio 1.23: Ciclos sobre listas
-
 El ciclo `for` funciona iterando sobre datos en una secuencia. Antes vimos que podíamos iterar sobre los caracteres de una cadena (las cadenas son secuencias). Ahora veremos que podemos iterar sobre listas también.
 Verificá esto tipeando los que sigue y viendo qué pasa:
 
@@ -243,7 +241,6 @@ Verificá esto tipeando los que sigue y viendo qué pasa:
 ```
 
 ### Ejercicio 1.24: Test de pertenencia
-
 Usá los operadores `in` o `not in` para verificar si `'Granada'`,`'Lima'`, y `'Limon'` pertenecen a la lista de frutas.
 
 ```python
@@ -257,7 +254,6 @@ True
 ```
 
 ### Ejercicio 1.25: Adjuntar, insertar y borrar elementos
-
 Usá el método  `append()` para agregar `'Mango'` al final de `lista_frutas`.
 
 ```python
@@ -327,7 +323,6 @@ Borrá la primera aparición de  `'Banana'`.
 Para que sepas, no hay un método que permita encontrar o borrar *todas* las apariciones de un elemento en un a lista. Más adelante veremos una forma elegante de hacerlo.
 
 ### Ejercicio 1.26: Sorting
-
 ¿Querés ordenar una lista? Usá el método `sort()`. Probalo:
 
 ```python
@@ -349,7 +344,6 @@ Para que sepas, no hay un método que permita encontrar o borrar *todas* las apa
 Observación: acordate de que el método `sort()` modifica el contenido de la misma lista *in-place*. Los elementos son reordenados moviéndolos de una posición a otra, pero no se crea una nueva lista.
 
 ### Ejercicio 1.27: Juntar múltiples cadenas
-
 Si querés juntar las cadenas en una lista, usá el método `join()` de los strings como sigue (ojo: parece un poco raro al principio).
 
 ```python
@@ -367,7 +361,6 @@ Si querés juntar las cadenas en una lista, usá el método `join()` de los stri
 ```
 
 ### Ejercicio 1.28: Listas de cualquier cosa
-
 Las listas pueden contener cualquier tipo de objeto, incluyendo otras listas (serían 'listas anidadas').
 
 Porbá esto:
@@ -404,7 +397,6 @@ Podés acceder a los elementos de las listas anidadas usando múltiples operacio
 A pesar de que es técnicamente posible hacer una estructura de listas muy complicada, como regla general, es mejor mantener las cosas simples. Lo más usual es guardar en las listas muchos elementos del mismo tipo. Por ejemplo, una lista sólo de números o una lista de cadenas. Mezclar diferentes tipos de datos en una misma lista puede volverse conceptualmente difuso, así que mejor lo evitamos.
 
 ### Ejercicio 1.29: Traductor al lenguaje inclusivo
-
 Queremos hacer un traductor que cambie las palabras masculinas de una frase por su versión neutra. Como primera aproximación, completá el siguiente código para reemplazar todas las letras 'o' que figuren en el último o anteúltimo caracter de cada palabra por una 'e'. Por ejemplo 'todos somos programadores' pasaría a ser 'todes somes programdores'. Guardá tu código en el archivo `inclusive.py`
 
 ```python

@@ -90,7 +90,6 @@ Don't restrict your options.  With great flexibility comes great power.
 ## Ejercicio
 
 ### Ejercicio 5.6: From nombre_archivos to file-like objects
-
 You've now created a file `fileparse.py` that contained a
 function `parse_csv()`.  The function worked like this:
 
@@ -127,7 +126,6 @@ In this new code, what happens if you pass a nombre_archivo as before?
 Yes, you'll need to be careful.   Could you add a safety check to avoid this?
 
 ### Ejercicio 5.7: Fixing existing functions
-
 Fix the `leer_camion()` and `read_precios()` functions in the
 `reporte.py` file so that they work with the modified version of
 `parse_csv()`.  This should only involve a minor modification.

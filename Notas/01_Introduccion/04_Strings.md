@@ -204,7 +204,6 @@ Comencemos definiendo una cadena que contiene una lista de frutas así::
 ```
 
 ### Ejercicio 1.14: Extraer caracteres individuales y subcadenas
-
 Los strings son vectores de caracteres. Tratá de extraer algunos carateres:
 
 ```python
@@ -232,7 +231,6 @@ TypeError: 'str' object does not support item assignment
 ```
 
 ### Ejercicio 1.15: Concatenación de cadenas
-
 A pesar de ser sólo de lectura, siempre podés reasignar una variable a una cadena nueva. Probá el siguiente comando que concatena la palabra "Pera" al final de `frutas`:
 
 ```python
@@ -263,7 +261,6 @@ Agregá 'Melón'` al principio de la cadena:
 Podría parecer en estos ejemplos que la cadena original está siendo modificada, contradiciendo la regla de que las cadenas son de sólo lectura. No es así. Las operaciones sobre cadenas crean una nueva cadena cada vez. Cuando la variable `frutas` es reasignada, apunta a la cadena recientemente creada. Luego, la cadena vieja es destruída dado que ya no está siendo usada.
 
 ### Ejercicio 1.16: Testeo de pertenencia (test de subcadena)
-
 Experimentá con el operador `in` para buscar subcadenas. En el intérprete interactivo probá estas operaciones:
 
 ```python
@@ -279,7 +276,6 @@ True
 *¿Por qué la verificación de `'nana'` dió `True`?*
 
 ### Ejercicio 1.17: Iteración sobre cadenas
-
 Usá el comando `for` para iterar sobre los caracteres de una cadena.
 
 ```python
@@ -294,7 +290,6 @@ Modificá el código anterior de manera que dentro del ciclo el programa cuente 
 *Sugerencia: usá un contador como con los meses de la hipoteca.*
 
 ### Ejercicio 1.18: Geringoso rústico
-
 Usá una iteración sobre el string `cadena` para agregar la sílaba 'pa', 'pe', 'pi', 'po', o 'pu' según corresponda luego de cada vocal.
 
 ```python
@@ -310,7 +305,6 @@ Podés probar tu código cambiando la cadena inicial por otra palabra, como 'apa
 Guardá el código en un archivo `geringoso.py`.
 
 ### Ejercicio 1.19: Métodos de cadenas
-
 En el intérprete interactivo experimentá con algunos de los métodos de cadenas introducidos antes.
 
 ```python
@@ -346,7 +340,6 @@ Probá algunas más:
 ```
 
 ### Ejercicio 1.20: f-strings
-
 A veces querés crear una cadena que incorpore los valores de otras variables en ella.
 
 Para hacer eso, usá una f-string. Por ejemplo:
@@ -364,7 +357,6 @@ Modificá el programa `hipoteca.py` del [Ejercicio 1.11](../01_Introduccion/03_N
 
 
 ### Ejercicio 1.21: Expresiones regulares
-
 Una limitación de las operaciones básicas de cadenas es que no ofrecen ningún tipo de transformación usando patrones más sofisticados. Para eso vas a tener que usar el módulo `re` de Python y aprender a usar expresiones regulares. El manejo de estas expresiones es un tema en sí mismo. A continuación presentamos un corto ejemplo:
 
 ```python

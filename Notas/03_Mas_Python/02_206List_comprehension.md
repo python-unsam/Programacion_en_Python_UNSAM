@@ -106,7 +106,6 @@ operations described below.  These operations perform various kinds of
 data reductions, transforms, and queries on the camion data.
 
 ### Ejercicio 3.2: List comprehensions
-
 Try a few simple list comprehensions just to become familiar with the syntax.
 
 ```python
@@ -124,7 +123,6 @@ Notice how the list comprehensions are creating a new list with the
 data suitably transformed or filtered.
 
 ### Ejercicio 3.3: Sequence Reductions
-
 Compute the total cost of the camion using a single Python statement.
 
 ```python
@@ -165,7 +163,6 @@ The `sum()` function is then performing a reduction across the result:
 With this knowledge, you are now ready to go launch a big-data startup company.
 
 ### Ejercicio 3.4: Data Queries
-
 Try the following examples of various data queries.
 
 First, a list of all camion holdings with more than 100 cajones.
@@ -197,7 +194,6 @@ A list of all camion holdings that cost more than $10000.
 ```
 
 ### Ejercicio 3.5: Data Extraction
-
 Show how you could build a list of tuples `(name, cajones)` where `name` and `cajones` are taken from `camion`.
 
 ```python
@@ -251,7 +247,6 @@ those names that appear in the camion:
 ```
 
 ### Ejercicio 3.6: Extracting Data From CSV Files
-
 Knowing how to use various combinations of list, set, and dictionary
 comprehensions can be useful in various forms of data processing.
 Here’s an example that shows how to extract selected columns from a

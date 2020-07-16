@@ -221,7 +221,6 @@ when you launch the interpreter.  If not, you need to make sure
 `practical-python/Work` is added to `sys.path`.
 
 ### Ejercicio 5.1: Module imports
-
 In section 3, we created a general purpose function `parse_csv()` for
 parsing the contents of CSV datafiles.
 
@@ -293,7 +292,6 @@ Try importing a function so that you don’t need to include the module name:
 ```
 
 ### Ejercicio 5.2: Using your biblioteca module
-
 In section 2, you wrote a program `reporte.py` that produced a cajon report like this:
 
 ```
@@ -317,7 +315,6 @@ Use the interactive example at the start of this ejercicio as a guide.
 Afterwards, you should get exactly the same output as before.
 
 ### Ejercicio 5.3: Using more biblioteca imports
-
 In section 1, you wrote a program `costo_camion.py` that read a camion and computed its cost.
 
 ```python

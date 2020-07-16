@@ -314,7 +314,6 @@ certain objects that have been specifically programmed to support it.
 ## Ejercicios
 
 ### Ejercicio 4.8: Raising exceptions
-
 The `parse_csv()` function you wrote in the last section allows
 user-specified columns to be selected, but that only works if the
 input data file has column headers.
@@ -349,7 +348,6 @@ This indicates a programming error on the part of the calling code.
 Checking for cases that "aren't supposed to happen" is often a good idea.
 
 ### Ejercicio 4.9: Catching exceptions
-
 The `parse_csv()` function you wrote is used to process the entire
 contents of a file.  However, in the real-world, it’s possible that
 input files might have corrupted, missing, or dirty data.  Try this
@@ -386,7 +384,6 @@ Row 7: Reason invalid literal for int() with base 10: ''
 ```
 
 ### Ejercicio 4.10: Silencing Errors
-
 Modify the `parse_csv()` function so that parsing error messages can
 be silenced if explicitly desired by the user.  For example:
 

@@ -94,7 +94,6 @@ bash % python3 -i reporte.py
 ```
 
 ### Ejercicio 3.1: Tabulating with Counters
-
 Suppose you wanted to tabulate the total number of cajones of each cajon.
 This is easy using `Counter` objects. Try it:
 
