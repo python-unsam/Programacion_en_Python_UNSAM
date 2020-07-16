@@ -16,9 +16,9 @@ Esta sección es una pequeña disgresión. Cuando trabajás con datos es usual q
  Naranja        100        70.44
 ```
 
-### String Formatting
+### Formato de cadenas
 
-Ona excelente manera de darle formato a una cadena en Python (a partir de la versión 3.6) es usando `f-strings`.
+Una excelente manera de darle formato a una cadena en Python (a partir de la versión 3.6) es usando `f-strings`.
 
 ```python
 >>> nombre = 'Naranja'
@@ -256,7 +256,7 @@ Cuando esté listo, tu programa debería producir una tabla como esta:
    Naranja        100     106.28      35.84
 ```
 
-### Ejercicio 2.20: Desfío de formato
+### Ejercicio 2.20: Deafío de formato
 
 Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 

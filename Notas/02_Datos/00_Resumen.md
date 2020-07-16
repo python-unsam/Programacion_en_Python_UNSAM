@@ -10,8 +10,11 @@ Para escribir programas útiles, necesitamos aprender a trabajar con datos. En e
 * [2.4 Contenedores](04_202Containers.md)
 * [2.5 Impresión con formato](05_203Formatting.md)
 * [2.6 Secuencias](06_204Sequences.md)
-* [2.7 Algoritmos de búsqueda en listas](07_R_Busquedas.md)
-* [2.8 Cierre de la segunda clase](08_CierreClase.md)
+* [2.7 Entorno de desarrollo integrado](07_R_IDE.md)
+* [2.8 Práctica: Iteración sobre listas](08_Algo_IteradoresLista.md)
+* [2.9 Algoritmos de búsqueda](09_Algo_BSec_BBin.md)
+* [2.10 Cierre de la segunda clase](10_CierreClase.md)
+* [2.11 Búsqueda de raíces de funciones](11_Opt_Biseccion.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Particularidades de Python)](../03_Mas_Python/00_Resumen.md)

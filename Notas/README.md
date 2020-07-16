@@ -32,13 +32,15 @@ Se inscribió mucha gente en este curso, por lo que no siempre podremos responde
 
 Este curso se basa sobre experiencias previas nuestras y de otros docentes. En particular nos inspiró la filosofía del curso de algoritmos y programación de [Rosita Wachenchauzer y Diego Essaya](https://algoritmos1rw.ddns.net/) en la Facultad de Ingeniería de la UBA así como el enfoque muy práctico de Python que propone David Beazley en su curso en inglés de [Python práctico](https://github.com/dabeaz-course/practical-python). De ambos cursos tomamos fragmentos para construir el nuestro bajo el mismo tipo de [licencia](./LICENSE.md). Ellos generosamente han creado y difundido sus cursos bajo licencias [creative commons](http://www.creativecommons.org.ar/) que permiten gestionar el conocimiento fuera de la lógica del mercado, en sistemas sociales autoorganizados.
 
-## Escritura en desarrollo 
-Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones prelimares, luego en versiones más pulidas. Si se adelantan, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles.
+También tomamos ideas y ejemplos del proyecto [Exactas Programa](http://exactasprograma.exactas.uba.ar/) que desarrollaron docentes de diversas carreras de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires que sus autores han compartido generosamente. 
+
+## Escritura en desarrollo. ¡Bienvenidas las correcciones!
+Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones prelimares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por correo electrónico a <python@unsam.edu.ar>.
 
 ## El curso
 En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md)!
 
 Otros links importantes antes de comenzar a leer las notas:
-* [Las Condiciones de cursada](./Cursada.md)
+* [Condiciones de cursada](./Cursada.md)
 * [Instalación de Python](./Instalacion.md)
 * [Documentación, foros, grupo de consultas](./Slack.md)
