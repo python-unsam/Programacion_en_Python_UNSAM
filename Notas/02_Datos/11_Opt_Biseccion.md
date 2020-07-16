@@ -9,7 +9,7 @@ Uno de los problemas de la búsqueda binaria es que requiere que la lista esté 
 
 Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un elemento y *e*. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
 
-Usá la función `busqueda_binaria(l,e)` del [Ejercicio 2.25](../02_Datos/09_Algo_BSec_BBin.md#búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
+Usá la función `busqueda_binaria(l,e)` del [Ejercicio 2.31](../02_Datos/09_Algo_BSec_BBin.md#ejercicio-231-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
 
 
 ### Búsqueda secuencial de raíces

@@ -4,7 +4,7 @@
 
 En esta sección, funciones, no python: algoritmos de bajo nivel sobre listas.
 
-### Búsqueda del máximo
+### Ejercicio 2.26:  Búsqueda del máximo
 
 Python tiene. Pero si lo queremos hacer...
 
@@ -13,7 +13,7 @@ Python tiene. Pero si lo queremos hacer...
 estructura de una solución 
 
 
-### Invertir una lista
+### Ejercicio 2.27:  Invertir una lista
 
 Escribir una función `invertir_lista(lista)` que dada una lista devuelva otra que tenga los mismos elementos en el orden inverso. Es decir, el que era el primer elemento de la lista de entrada deberá ser el último de la lista de salida y análogamente con los demás elementos.
 
@@ -22,14 +22,14 @@ Probarla con las siguientes listas:
 
 `invlista.py`
 
-### Tablas de multiplicar
+### Ejercicio 2.28:  Tablas de multiplicar
 
 Escriba un programa que imprima de forma elegante las tablas de
 multiplicar del 0 al 9 (sug: imprimir ’\\t’ como separador). Si puede, evite usar la multiplicación, use solo sumas.
 
 `tablamult.py`
 
-### Propagación
+### Ejercicio 2.29:  Propagación
 
 Considere una fila con *n* personas una al lado de la otra. Las personas pueden estar infectadas con un virus, ser inmunes o ser suceptibles de enfermarse.
 Representaremos esta situación con una lista *L* de longitud *n* que en cada posición tiene un 0 (inmune), un 1 (suceptible de enfermarse) o un -1 (tiene el virus). 

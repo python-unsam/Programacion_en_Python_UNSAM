@@ -8,12 +8,12 @@ Para cerrar esta clase te pedimos dos cosas:
 * Que nos mandes por mail a <python@unsam.edu.ar> los programas de los siguientes ejercicios:
     1. [Ejercicio 2.15](../02_Datos/04_202Containers.md#ejercicio-215-balances) Sobre calcular el costo de camion por linea de comandos `costo_camion.py` con warnings. 
     2. [Ejercicio 2.20](../02_Datos/05_203Formatting.md#ejercicio-220-deafío-de-formato) (o [Ejercicio 2.19](../02_Datos/05_203Formatting.md#ejercicio-219-agregar-encabezados)) Balance con formato `reporte.py` y lectura de encabezados.
-    3. [Ejercicio 2.25](../02_Datos/08_Algo_IteradoresLista.md#búsqueda-del-máximo) `maximo.py`
-    4. [Ejercicio 2.25](../02_Datos/08_Algo_IteradoresLista.md#invertir-una-lista) `invlista.py`
-    5. [Ejercicio 2.25](../02_Datos/08_Algo_IteradoresLista.md#tablas-de-multiplicar) `tablamult.py`
-    6. [Ejercicio 2.25](../02_Datos/08_Algo_IteradoresLista.md#propagación) `propaga.py`
-    7. [Ejercicio 2.25](../02_Datos/09_Algo_BSec_BBin.md#búsqueda-secuencial) Búsqueda secuencial `b_sec.py`
-    8. [Ejercicio 2.25](../02_Datos/09_Algo_BSec_BBin.md#búsqueda-binaria) Búsqueda binaria `b_bin.py`
+    3. [Ejercicio 2.26](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-226-búsqueda-del-máximo) `maximo.py`
+    4. [Ejercicio 2.27](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-227-invertir-una-lista) `invlista.py`
+    5. [Ejercicio 2.28](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-228-tablas-de-multiplicar) `tablamult.py`
+    6. [Ejercicio 2.29](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-229-propagación) `propaga.py`
+    7. [Ejercicio 2.30](../02_Datos/09_Algo_BSec_BBin.md#ejercicio-230-búsqueda-secuencial) Búsqueda secuencial `b_sec.py`
+    8. [Ejercicio 2.31](../02_Datos/09_Algo_BSec_BBin.md#ejercicio-231-búsqueda-binaria) Búsqueda binaria `b_bin.py`
 
 * Que completes [este formulario](link) usando como identificación tu dirección de mail.
  
