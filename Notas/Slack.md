@@ -1,4 +1,4 @@
-# Consulta y Grupo de Slack
+# Consultas y Grupo de Slack
 
 La forma de hacer consultas en este curso es por medio del [grupo de mensajería Slack](https://join.slack.com/t/python--unsam/shared_invite/zt-fkzwu21z-HSvy~tajpu6Wy3HHw9iKkQ).
 
@@ -23,8 +23,8 @@ Además del grupo del curso, les dejamos estos recursos muy útiles con document
 
 ## Documentación de referencia y manuales
 
-* Manual de refrencia de Python [en inglés](https://docs.python.org/3/reference/index.html)[en castellano](http://pyspanishdoc.sourceforge.net/ref/ref.html)
-* Biblioteca de referencia de Python [en inglés](https://docs.python.org/3/library/index.html)[en castellano](http://pyspanishdoc.sourceforge.net/lib/lib.html)
+* Manual de refrencia de Python [en inglés](https://docs.python.org/3/reference/index.html) [en castellano](http://pyspanishdoc.sourceforge.net/ref/ref.html)
+* Biblioteca de referencia de Python [en inglés](https://docs.python.org/3/library/index.html) [en castellano](http://pyspanishdoc.sourceforge.net/lib/lib.html)
 * El curso [Practical Python](https://github.com/dabeaz-course/practical-python) de David Beazley (en inglés).
 * El curso [Algoritmos y Programación](https://algoritmos1rw.ddns.net/) de Diego Essaya.
 * El blog [python-para-impacientes](https://python-para-impacientes.blogspot.com/p/indice.html) tiene información en castellano también.
