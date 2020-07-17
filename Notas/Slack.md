@@ -1,22 +1,15 @@
-# Documentación, foros, grupo de Slack y clases de consulta
+# Consulta y Grupo de Slack
 
-Es muy usual tener dudas o trabarse con un detalle cuando estamos aprendiendo un lenguaje de programación. Abajo damos algunos links a documentación de Python y a foros para hacer consultas. Además tendremos un grupo de Slack de consultas espcíficas de la materia.
+La forma de hacer consultas en este curso es por medio del [grupo de mensajería Slack](https://join.slack.com/t/python--unsam/shared_invite/zt-fkzwu21z-HSvy~tajpu6Wy3HHw9iKkQ).
 
-Al grupo de consultas Slack se puede acceder mediante este [link](https://join.slack.com/t/python--unsam/shared_invite/zt-fkzwu21z-HSvy~tajpu6Wy3HHw9iKkQ).
+La idea es mantener las discusiones ordenadas dentro del Slack por *canales*,  un canal por cada clase. Por otro lado, Slack tiene la posiblidad de armar hilos (*threads*) con respuestas  a una pregunta de manera de evitar que se mezclen todos los mensajes sin saber de qué se está hablando (como pasaría por ejemplo en whatsapp). Les pedimos por favor usar los **canales** y **threads** como se muestra en [este video]() para mantener el órden. Obvimente, ¡fíjense si una pregunta ya fue respondida antes de hacerla nuevamente!
 
-La idea es mantener las discusiones ordenadas en *temas* asociados a las diferentes clases de manera de que puedan buscar si sus dudas ya fueron respondidas en el grupo fácilmente.
-
-Las consultas más frecuentes serán respondidas en la clase del miércoles siguiente por los docentes del curso, antes de introducir los temas de la clase siguiente.
+Las consultas más importantes serán respondidas en la clase del miércoles siguiente por los docentes del curso, antes de introducir los temas de la clase siguiente.
 
 ## Uso responsable del slack
 
-El slack en su versión gratuita tiene un límite de 10k mensajes y luego comienza a borrar los más viejos. Es por eso que les pedimos que sean particularmente responsables con lo que envían. Un mensaje con un solo emoji puede borrar un mensaje anterior con una resolución de un ejercicio. Usemos el slack libremente para preguntar y responder sobre el curso pero evitemos los mensajes superfluos o de otros temas.
+El slack en su versión gratuita tiene un límite de 10k mensajes y luego comienza a borrar los más viejos. Es por eso que les pedimos que sean particularmente responsables con lo que envían. Un mensaje con un solo emoji puede borrar un mensaje anterior con una resolución de un ejercicio. Usemos el slack libremente para preguntar y responder sobre el curso pero evitemos los mensajes superfluos o de otros temas. Traten de no escribir muchos mensajes cortos para hacer o responder una consulta, sino un mensaje con todo lo que tengan para decir sobre ese tema.
 
-## Organización interna: Canales por clase
-
-Las discusiones en slack están organizadas en canales. Vamos a generar un canal por clase para discutir, preguntar y responder sobre los contenidos y ejercicios de esa clase. De esta manera los contenidos van a estar ordenados y, ante una duda, esperamos que puedan buscar dentro del canal correspondiente si la pregunta ya fue hecha para evitar preguntar varias veces lo mismo.
-
-Les pedimos que traten de darse apoyo entre ustedes respondiendo las dudas de otres. 
 
 ## Clases de consulta de los miércoles
 
@@ -25,6 +18,8 @@ Todos los miércoles por la tarde daremos una clase breve (de menos de dos horas
 Las clases comenzaran con un cierre del tema anterior y la realización de algún ejercicio que merezca una aclaración. Luego daremos una introducción al tema siguiente y responderemos consultas online.
 
 # Documentación y foros
+
+Además del grupo del curso, les dejamos estos recursos muy útiles con documentación y foros de programación donde encontraran muchas respuestas fácilmente.
 
 ## Documentación de referencia y manuales
 
@@ -40,3 +35,4 @@ Las consultas online son parte de la forma de programar contemporánea. Es usual
 
 Hay foros que suelen ser de mucha ayuda. En particular, [Stackoverflow](https://stackoverflow.com/) es una gran fuente de conocimiento sobre programación en Python y [su versión en español](https://es.stackoverflow.com/), aunque menos concurrida, también puede ser de utilidad.
 
+Si no encuentran aquí la forma de sacarse una duda, recurran al [grupo de consultas Slack del curso](https://join.slack.com/t/python--unsam/shared_invite/zt-fkzwu21z-HSvy~tajpu6Wy3HHw9iKkQ).
