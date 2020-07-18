@@ -40,17 +40,18 @@ Cada miércoles antes de las 14hs les enviaremos un correo con el material y las
 
 
 ## Ejercicios, exámenes y aprobación
-En el repositorio van a encontrar un archivo comprimido [Ejercicios.zip](./Ejercicios.zip). Descárguenlo. Este archivo tiene una carpeta `/Ejercicios` donde esperamos que hagan los ejercicios del curso y ya viene con algunos archivos `.py` de ejemplo. Tiene también un subdirectorio `/Ejercicios/Data` con algunos archivos de datos tipo CSV que usaremos en el curso. Les recomendamos que lo descompriman en sus computadoras y guarden sus ejercicios ahí dentro. Este archivo lo actualizaremos regularmente.
+En el repositorio van a encontrar un archivo comprimido [Ejercicios.zip](./Ejercicios.zip). Les pedimos que lo descarguen, lo descompriman en sus computadoras y tengan a mano esta carpeta a la hora de hacer los ejercicios. Tiene algunos archivos `.py` de ejemplo y tiene un subdirectorio `Ejercicios/Data/` con algunos archivos de datos tipo CSV que usaremos en el curso. 
 
-Algunos de los ejercicios que hagan los deberán subir resueltos antes de la clase siguiente. Además, les pedimos que completen cada semana un breve formulario sobre qué pudieron hacer y qué no, qué fue claro y qué requiere profundizar.
+Cada semana vamos a pedirles que, antes de la clase siguiente, entreguen algunos ejercicios de la guía semanal y que completen un breve formulario sobre qué pudieron hacer y qué no, qué fue claro y qué requiere profundizar.
 
-Por otra parte, habra dos exámenes parciales sobre los contenidos dictados: uno a la mitad y el otro al final del curso. Los estudiantes de posgrado deberán rendir también un exámen final.
+Por otra parte, habrá dos exámenes parciales sobre los contenidos dictados: uno a la mitad y el otro al final del curso. Les estudiantes de posgrado deberán rendir también un exámen final.
+
 
 ## Créditos para posgrado
 Es una pregunta frecuente si la materia da créditos en tal o cuál universidad. La materia es de posgrado y la decisión sobre los créditos no es nuestra sino de las diferentes universidades o comisiones doctorales. En el grupo de Slack pueden encontrar el programa de la materia que especifica su carga horaria, contenidos así como las condiciones de aprobación e información sobre los docentes. Con esta información deberían poder averiguar ustedes mismos sobre la aceptación del curso y el otorgamiento de créditos en sus respectivas unidades acadécmicas.
 
 ## Cronograma
-El curso con exámenes incluídos va del miércoles 5 de agosto al miércoles 25 de noviembre del 2020. El curso puede realizarse completamente de manera asincrónica. 
+El curso con exámenes incluídos de va a desarrollar entre el miércoles 5 de agosto y el miércoles 25 de noviembre del 2020. El curso puede realizarse completamente de manera asincrónica. 
 
 Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md).
 
@@ -90,7 +91,7 @@ El siguiente texto de Tim Peters se conoce como **El zen de Python** y explica e
 > 
 > Ahora es mejor que nunca.
 > 
-> A pesar de que nunca es muchas veces mejor que *ahora* mismo.
+> A pesar de que nunca es muchas veces mejor que *ahora mismo*.
 > 
 > Si la implementación es difícil de explicar, es una mala idea.
 > 

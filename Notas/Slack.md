@@ -17,11 +17,11 @@ El slack en su versión gratuita tiene un límite de 10k mensajes y luego comien
 
 Todos los miércoles por la tarde daremos una clase breve (de menos de dos horas). Cuando una pregunta quede sin respuesta en el slack o nos parezca interesante profundizar en el tema lo tomaremos para desarrolar al comienzo de la clase siguiente. 
 
-Las clases comenzaran con un cierre del tema anterior y la realización de algún ejercicio que merezca una aclaración. Luego daremos una introducción al tema siguiente y responderemos consultas online.
+Las clases comenzarán con un cierre del tema anterior y la realización de algún ejercicio que merezca una aclaración. Luego daremos una introducción al tema siguiente y responderemos consultas online.
 
 # Documentación y foros
 
-Además del grupo del curso, les dejamos estos recursos muy útiles con documentación y foros de programación donde encontraran muchas respuestas fácilmente.
+Además del grupo del curso, les dejamos estos recursos muy útiles con documentación y foros de programación donde encontrarán muchas respuestas fácilmente.
 
 ## Documentación de referencia y manuales
 
