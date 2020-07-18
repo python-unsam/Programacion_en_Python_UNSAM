@@ -149,8 +149,8 @@ abs(x)     Valor absoluto
 Estas son las mismas operaciones que con los enteros. Otra operaciones usuales se encuentran en el módulo `math`.
 
 ```python
-    import math
-    a = math.sqrt(x)
+import math
+a = math.sqrt(x)
 b = math.sin(x)
 c = math.cos(x)
 d = math.tan(x)

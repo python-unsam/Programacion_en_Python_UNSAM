@@ -66,4 +66,4 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales.
 
 ## Preinscripción
-Si te interesa el curso, podés preinscribirte hasta el viernes 17 de julio siguiendo [este link](https://forms.gle/o1rEQMuz6EziRFYq9).
+La preinscripción al curso cerró el viernes 17 de julio. Si querés que te avisemos sobre próximas ediciones del curso, completá [este formulario](https://forms.gle/JXAp9cSvowMCFGyC6).
