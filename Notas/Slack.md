@@ -2,7 +2,7 @@
 
 La forma de hacer consultas en este curso es por medio del [grupo de mensajería Slack](https://join.slack.com/t/python--unsam/shared_invite/zt-fkzwu21z-HSvy~tajpu6Wy3HHw9iKkQ).
 
-La idea es mantener las discusiones ordenadas dentro del Slack por *canales*,  un canal por cada clase. Por otro lado, Slack tiene la posiblidad de armar hilos (*threads*) con respuestas  a una pregunta de manera de evitar que se mezclen todos los mensajes sin saber de qué se está hablando (como pasaría por ejemplo en whatsapp). Les pedimos por favor usar los **canales** y **threads** como se muestra en [este video]() para mantener el órden. Obvimente, ¡fíjense si una pregunta ya fue respondida antes de hacerla nuevamente!
+La idea es mantener las discusiones ordenadas dentro del Slack por *canales*,  un canal por cada clase. Por otro lado, Slack tiene la posiblidad de armar hilos (*threads*) con respuestas  a una pregunta de manera de evitar que se mezclen todos los mensajes sin saber de qué se está hablando (como pasaría por ejemplo en whatsapp). Les pedimos por favor usar los **canales** y **threads** adecuadamente (un canal por clase, un thread por tópico de discusión o pregunta, respondiendo dentro del thread y no como mensaje suelto). Obvimente, ¡fíjense si una pregunta ya fue respondida antes de hacerla nuevamente!
 
 Las consultas más importantes serán respondidas en la clase del miércoles siguiente por los docentes del curso, antes de introducir los temas de la clase siguiente.
 
