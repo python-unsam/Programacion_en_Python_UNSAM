@@ -32,21 +32,24 @@ Las clases tendrán una componente asincrónica y otra sincrónica.
 
 El contenido será principalmente dado de forma asincrónica, sea escrito en los apuntes, sea por medio de la ejercitación de entrega obligatoria o a través de las consultas.
 
-La parte sincrónica durará menos de dos horas y tendrá lugar los miércoles a las 14hs por videoconferencia (google-meet). En estas clases presenciales discutirmos los ejericicos de la semana anterior y presentaremos brevemente los temas de la semana siguiente. 
+La parte sincrónica durará menos de dos horas y tendrá lugar los miércoles a las 14hs por videoconferencia (google-meet). En estas clases presenciales discutiremos los ejericicos de la semana anterior y presentaremos brevemente los temas de la semana siguiente. 
 
 Cada miércoles antes de las 14hs les enviaremos un correo con el material y las tareas de la semana siguiente, así como el link para sumarse al google-meet. Vamos a grabar las clases de forma que si no pueden participar en el momento tengan la opción de verla luego. Habrá también un grupo de discusión y consultas en [Slack](./Slack.md) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios.
 
 
 ## Ejercicios, exámenes y aprobación
 
-Los ejericios que hagan los deberán subir resueltos antes de la clase siguiente. Además, les pedimos que completen cada semana un breve formulario sobre qué pudieron hacer y qué no.
+Los ejercios que hagan los deberán subir resueltos antes de la clase siguiente. Además, les pedimos que completen cada semana un breve formulario sobre qué pudieron hacer y qué no, qué fue claro y qué requiere profundizar.
 
 Por otra parte, habra dos exámenes parciales sobre los contenidos dictados: uno a la mitad y el otro al final del curso. Los estudiantes de posgrado deberán rendir también un exámen final.
+
+## Cŕeditos para posgrado
+Es una pregunta frecuente si la materia da créditos en tal o cuál universidad. La materia es de posgrado y la decisión sobre los créditos no es nuestra sino de las diferentes universidades o comisiones doctorales. En el grupo de Slack pueden encontrar el programa de la materia que especifica su carga horaria, contenidos así como las condiciones de aprobación e información sobre los docentes. Con esta información deberían poder averiguar ustedes mismos sobre la aceptación del curso y el otorgamiento de créditos en sus respectivas unidades acadécmicas.
 
 ## Cronograma
 El curso con exámenes incluídos va del miércoles 5 de agosto al miércoles 25 de noviembre del 2020. El curso puede realizarse completamente de manera asincrónica. 
 
-Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computados como se describe [acá](./Instalacion.md)
+Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md).
 
 
 ## PEP 20 - Simple es mejor que complejo
@@ -54,23 +57,42 @@ Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computado
 El siguiente texto de Tim Peters se conoce como **El zen de Python** y explica en algún sentido su filosofía.
 
 > Bello es mejor que feo.
+> 
 > Explícito es mejor que implícito.
+> 
 > Simple es mejor que complejo.
+> 
 > Complejo es mejor que complicado.
+> 
 > Plano es mejor que anidado.
+> 
 > Espaciado es mejor que denso.
+> 
 > La legibilidad es importante.
-> Los casos especiales no son lo suficientemente especiales como para romper las reglas.
+> 
+> Los casos especiales no son lo suficientemente especiales como para romper 
+> las reglas.
+> 
 > Sin embargo la practicidad le gana a la pureza.
+> 
 > Los errores nunca deberían pasar silenciosamente.
+> 
 > A menos que se silencien explícitamente.
+> 
 > Frente a la ambigüedad, evitar la tentación de adivinar.
+> 
 > Debería haber una, y preferiblemente solo una, manera obvia de hacerlo.
+> 
 > A pesar de que esa manera no sea obvia a menos que seas Holandés.
+> 
 > Ahora es mejor que nunca.
+> 
 > A pesar de que nunca es muchas veces mejor que *ahora* mismo.
+> 
 > Si la implementación es difícil de explicar, es una mala idea.
+> 
 > Si la implementación es fácil de explicar, puede que sea una buena idea.
+> 
 > Los espacios de nombres son una gran idea, ¡tengamos más de esos!
 
 

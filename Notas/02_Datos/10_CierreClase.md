@@ -7,7 +7,7 @@ En esta segunda clase aprendimos a trabajar con datos. Manejamos archivos CSV y 
 Para cerrar esta clase te pedimos dos cosas:
 * Que nos mandes por mail a <python@unsam.edu.ar> los programas de los siguientes ejercicios:
     1. [Ejercicio 2.15](../02_Datos/04_202Containers.md#ejercicio-215-balances) Sobre calcular el costo de camion por linea de comandos `costo_camion.py` con warnings. 
-    2. [Ejercicio 2.20](../02_Datos/05_203Formatting.md#ejercicio-220-deafío-de-formato) (o [Ejercicio 2.19](../02_Datos/05_203Formatting.md#ejercicio-219-agregar-encabezados)) Balance con formato `reporte.py` y lectura de encabezados.
+    2. [Ejercicio 2.20](../02_Datos/05_203Formatting.md#ejercicio-220-un-desafío-de-formato) (o [Ejercicio 2.19](../02_Datos/05_203Formatting.md#ejercicio-219-agregar-encabezados)) Balance con formato `reporte.py` y lectura de encabezados.
     3. [Ejercicio 2.26](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-226-búsqueda-del-máximo) `maximo.py`
     4. [Ejercicio 2.27](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-227-invertir-una-lista) `invlista.py`
     5. [Ejercicio 2.28](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-228-tablas-de-multiplicar) `tablamult.py`

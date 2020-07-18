@@ -252,7 +252,7 @@ Cuando esté listo, tu programa debería producir una tabla como esta:
    Naranja        100     106.28      35.84
 ```
 
-### Ejercicio 2.20: Deafío de formato
+### Ejercicio 2.20: Un desafío de formato
 Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 
 ```

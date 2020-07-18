@@ -19,7 +19,7 @@ En Python hay tres opciones principales para elegir.
 
 ### Listas como contenedores
 
-Usá listas cuando el orden de los datos importe. Acordate que las listas pueden contener cualquier tipo de objeto.
+Usá listas cuando el orden de los datos importe. Acordate de que las listas pueden contener cualquier tipo de objeto.
 Por ejemplo, una lista de tuplas
 
 ```python
@@ -135,7 +135,7 @@ Un ejemplo:
 >>>
 ```
 
-De esta manera (dando un valor por defecto) evitás el `KeyError` que obtendías al buscar una clave inexistente.
+De esta manera (dando un valor por defecto) evitás el `KeyError` que obtendrías al buscar una clave inexistente.
 
 ### Claves compuestas
 
@@ -162,7 +162,7 @@ Luego, podemos acceder al diccionario así:
 
 ### Conjuntos
 
-Un conjunto es una colección desordenada de elementos únicos, sin prepetición.
+Un conjunto es una colección desordenada de elementos únicos, sin repetición.
 
 
 ```python
@@ -210,7 +210,7 @@ En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá 
 ### Ejercicio 2.12: Lista de tuplas
 El archivo `Data/camion.csv` contiene la lista de cajones cargada en un camión.  En el [Ejercicio 2.5](../02_Datos/02_107Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
-La función debería verse parecido a éste:
+La función debería verse parecida a ésta:
 
 ```python
 # fragmento de costo_camion.py
@@ -289,7 +289,7 @@ También podés reescribir el último ciclo for usando un comando como éste:
 >>>
 ```
 
-*Observación: la instrucción `+=` es una abreviacion. Poner `a += b` es equivalente a poner `a = a + b`*
+*Observación: la instrucción `+=` es una abreviación. Poner `a += b` es equivalente a poner `a = a + b`*
 
 ### Ejercicio 2.13: Lista de diccionarios
 Tomá la función que escribiste en el ejercicio anterior y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del achivo de entrada.
@@ -340,11 +340,11 @@ Los diccionarios son útiles si querés buscar elementos usando índices que no 
 >>> precios['Naranja'] = 92.45
 >>> precios['Mandarina'] = 45.12
 >>> precios
-... look at the result ...
+... mirá el resultado ...
 >>> precios['Naranja']
 92.45
 >>> precios['Manzana']
-... look at the result ...
+... mirá el resultado ...
 >>> 'Manzana' in precios
 False
 >>>
@@ -361,7 +361,7 @@ El archivo `Data/precios.csv` contiene una serie de líneas con precios de venta
 ...
 ```
 
-Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como este arme un diccionario donde las claves sean los nombres de frutas y los valores sean los precios por cajón.
+Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como éste arme un diccionario donde las claves sean los nombres de frutas y los valores sean los precios por cajón.
 
 Para hacerlo, empezá con un diccionario vacío y andá agregándole valores igual que como hiciste antes, pero ahora esos valores los vas leyendo del archivo.
 

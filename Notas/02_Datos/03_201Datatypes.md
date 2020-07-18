@@ -57,7 +57,7 @@ A veces, los paréntesis `()` son omitidos en la sintaxis.
 s = 'Manzanas', 100, 490.1
 ```
 
-Salvo para las tuplas de longutid cero y uno, que son casos especiales y tienen una notación particular.
+Salvo para las tuplas de longitud cero y uno, que son casos especiales y tienen una notación particular.
 
 ```python
 t = ()            # Tupla vacía
@@ -76,7 +76,7 @@ cantidad = s[1]                 # 100
 precio= s[2]                    # 490.1
 ```
 
-Eu contenido de las tuplas no puede ser modificado.
+El contenido de las tuplas no puede ser modificado.
 
 ```python
 >>> s[1] = 75
@@ -108,7 +108,7 @@ fruta, cajones, precio = s
 print('Costo:', cajones * precio)
 ```
 
-El numero de variables a la izquierda debe coincidir con la estructura de la tupla.
+El número de variables a la izquierda debe coincidir con la estructura de la tupla.
 
 ```python
 nombre, cajones = s     # ERROR
@@ -119,7 +119,7 @@ ValueError: too many values to unpack
 
 ### Tuplas vs. Listas
 
-Las tuplas parecieran ser listas de solo-lectura. Sin embargo, las tuplas suelen usarse para un solo item que consiste de múltiples partes mientras que las listas suelen usarse para una colección de diferentes elementos, típicamente del mismo tipo.
+Las tuplas parecieran ser listas de solo-lectura. Sin embargo, las tuplas suelen usarse para un solo ítem que consiste de múltiples partes mientras que las listas suelen usarse para una colección de diferentes elementos, típicamente del mismo tipo.
 
 ```python
 record = ('Manzanas', 100, 490.1)                # Una tupla representando un registro dentro de un pedido de frutas
@@ -129,7 +129,7 @@ symbols = [ 'Manzanas', 'Peras', 'Mandarinas' ]  # Una lista representando tres 
 
 ### Diccionarios
 
-Un diccionarios es una función que manda *claves* en *valores*. A veces se loa denomina tabla de hash. Las claves sirven como índices para acceder a los valores.
+Un diccionario es una función que manda *claves* en *valores*. A veces se los denomina tabla de hash. Las claves sirven como índices para acceder a los valores.
 
 ```python
 s = {
@@ -351,7 +351,7 @@ Probá esta variante:
 >>> for k in d:
         print(k, '=', d[k])
 
-nombre = LIMA
+nombre = 'LIMA'
 cajones = 75
 precio = 32.2
 fecha = (6, 11, 2007)
@@ -381,7 +381,7 @@ dict_keys(['nombre', 'cajones', 'precio', 'fecha'])
 
 Fijate que `cuenta` desapareció de `claves` aunque no volviste a llamar al comando `d.keys()`.
 
-Una manera más elegante de trabajar con claves y valores simultaneamente es usar el método `items()`. Esto te devuelve una lista de tuplas de la forma `(clave,valor)` sobre la que podés iterar.
+Una manera más elegante de trabajar con claves y valores simultáneamente es usar el método `items()`. Esto te devuelve una lista de tuplas de la forma `(clave,valor)` sobre la que podés iterar.
 
 ```python
 >>> items = d.items()
