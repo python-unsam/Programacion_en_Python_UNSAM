@@ -2,7 +2,7 @@
 
 Este es un curso de programación en Python que se dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/). El material del curso está basado en experiencias de otros docentes (ver la sección Agradecimientos).
 
-La inscripción se cerró el viernes 17 de julio. Si te interesa que te avisemos cuando se dicte nuevamente, completá [este formulario](https://forms.gle/9mMAxRKyQF5SCLuE6).
+La preinscripción se cerró el viernes 17 de julio. Si te interesa que te avisemos cuando se dicte nuevamente, completá [este formulario](https://forms.gle/9mMAxRKyQF5SCLuE6).
 
 ## ¿De qué es el curso?
 
@@ -35,7 +35,7 @@ Este curso se basa sobre experiencias previas nuestras y de otros docentes. En p
 También tomamos ideas y ejemplos del proyecto [Exactas Programa](http://exactasprograma.exactas.uba.ar/) que desarrollaron docentes de diversas carreras de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires que sus autores han compartido generosamente. 
 
 ## Escritura en desarrollo. ¡Bienvenidas las correcciones!
-Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones prelimares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por correo electrónico a <python@unsam.edu.ar>.
+Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones preliminares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por correo electrónico a <python@unsam.edu.ar>.
 
 ## El curso
 En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md)!

@@ -12,11 +12,11 @@ Algunes pueden querer hacer este curso usando el entorno de las Jupyter Notebook
 
 ## Repositorio 
 
-El curso está alojado en un repositorio github. Lo vamos escribiendo a medida que pasa el tiempo. Por eso no te recomendamos aun clonarlo. Preferimos que lo hagas en todo caso hacia el final del curso, cuando los contenidos estén más estables. Por ese mismo motivo no te recomendamos adelantarte mucho en los contenidos. Por más que subamos clases por adelantado, las estaremos cambiando frecuentemente. 
+El curso está alojado en un repositorio github. Lo vamos escribiendo a medida que pasa el tiempo. Por eso no te recomendamos clonarlo aún. Preferimos que lo hagas en todo caso hacia el final del curso, cuando los contenidos estén más estables. Por ese mismo motivo no te recomendamos adelantarte mucho en los contenidos. Por más que subamos clases por adelantado, las estaremos cambiando frecuentemente. 
 
-Sí te recomendamos bajarte el directorio [`/Work`](https://github.com/python-unsam/UNSAM_2020c2_Python/tree/master/Work) del repositorio que contiene un subdirectorio `/Work/Data` donde hay archivos de datos que tendrás que leer en tus programas. Lo ideal es que te bajes esto a tu máquina y crées tus programas `.py` en la carptea `/Work`.
+Sí te recomendamos bajarte y descomprimir el archivo [Ejercicios.zip](./Ejercicios.zip). Este archivo tiene una carpeta `/Ejercicios` donde esperamos que hagan los ejercicios del curso y un subdirectorio `/Ejercicios/Data` con algunos archivos de datos que usaremos en los ejemplos y ejercicios. Lo ideal es que te bajes esto a tu máquina y crées tus programas `.py` en la carptea `/Ejercicios`.
 
-Además, en el repo hay un directorio `Soluciones/` que tiene soluciones completas a algunos ejercicios seleccionados. Miralos libremente si necesitás una ayuda, pero tenés en cuenta que para sacarle jugo al curso lo ideal es que intentes escribir tu propia solución primero.
+Además, en el repo habrá un directorio `/Soluciones` que tendrá soluciones completas a algunos ejercicios seleccionados. Miralos libremente si necesitás una ayuda, pero tenés en cuenta que para sacarle jugo al curso lo ideal es que intentes escribir tu propia solución primero.
 
 ## La instalación 
 
