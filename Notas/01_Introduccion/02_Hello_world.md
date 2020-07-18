@@ -364,7 +364,7 @@ Este comando no hace nada. Sirve para guardar el lugar para comando que querramo
 
 ## Ejercicios
 
-Este es el primer conjunto de ejercicios en el que vas a tener que crear un archivo de Python y correrlo. A partir de aca, vamos a asumir que tenés clonado el repositorio del curso y estás trabajando en el subdirectorio `Work/`. Para ayudarte a ubicar el lugar correcto hemos creado un par de archivos en ese directorio. Por ejemplo, ahora buscá el archivo `Work/rebotes.py` que vamos a usar en el primer ejercicio.
+Este es el primer conjunto de ejercicios en el que vas a tener que crear un archivo de Python y correrlo. A partir de aca, vamos a asumir que tenés clonado el repositorio del curso y estás trabajando en el subdirectorio `Ejercicios/`. Para ayudarte a ubicar el lugar correcto hemos creado un par de archivos en ese directorio. Por ejemplo, ahora buscá el archivo `Ejercicios/rebotes.py` que vamos a usar en el primer ejercicio.
 
 ### Ejercicio 1.4: La pelota que rebota
 Una pelota de goma es arrojada desde una altura de 100 metros y cada vez que toca el piso salta 3/5 de la altura desde la que cayó. Escribí un programa `rebotes.py` que imprima una tabla mostrando las alturas que alcanza luego de sus primeros diez rebotes.

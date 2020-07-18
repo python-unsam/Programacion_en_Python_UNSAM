@@ -214,7 +214,7 @@ Probalo.
 
 ## Ejercicios
 
-Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Work`. Buscá el archivo `hipoteca.py` y hacé los ejercicios con un editor de texto en ese archivo. Ejecutalo desde la línea de comandos.
+Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Ejercicios`. Buscá el archivo `hipoteca.py` y hacé los ejercicios con un editor de texto en ese archivo. Ejecutalo desde la línea de comandos.
 
 ### Ejercicio 1.7: La hipoteca de David
 David solicitó un cŕedito a 30 años y a tasa fija para comprar una vivienda. Pidió $500,000 a la companía y acordó un pago mensual fijo de $2684.11.
@@ -278,7 +278,7 @@ Meses 310
 ### Ejercicio 1.11: Bonus
 Ya que estamos, corregí el código anterior de forma que el pago del último mes se ajuste a lo adeudado.
 
-Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `Work`. Vamos a volver a trabar con él.
+Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `Ejercicios`. Vamos a volver a trabar con él.
 
 ### Ejercicio 1.12: Un misterio
 Las funciones `int()` y `float()` pueden usarse para convertir números. Por ejemplo,
