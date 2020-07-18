@@ -38,8 +38,9 @@ Cada miércoles antes de las 14hs les enviaremos un correo con el material y las
 
 
 ## Ejercicios, exámenes y aprobación
+En el repositorio van a encontrar un archivo comprimido [Ejercicios.zip](./Ejercicios.zip). Este archivo tiene una carpeta `Ejercicios/` donde esperamos que hagan los ejercicios del curso y ya viene con algunos archivos `.py` de ejemplo. Tiene un subdirectorio `Ejercicios/Data/` con algunos archivos de datos tipo CSV que usaremos en el curso. Les recomendamos que lo descompriman en sus computadoras y guarden sus ejercicios ahí dentro.
 
-Los ejercios que hagan los deberán subir resueltos antes de la clase siguiente. Además, les pedimos que completen cada semana un breve formulario sobre qué pudieron hacer y qué no, qué fue claro y qué requiere profundizar.
+Algunos de los ejercios que hagan los deberán subir resueltos antes de la clase siguiente. Además, les pedimos que completen cada semana un breve formulario sobre qué pudieron hacer y qué no, qué fue claro y qué requiere profundizar.
 
 Por otra parte, habra dos exámenes parciales sobre los contenidos dictados: uno a la mitad y el otro al final del curso. Los estudiantes de posgrado deberán rendir también un exámen final.
 
