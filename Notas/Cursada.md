@@ -12,8 +12,6 @@ Para hacer este curso solo hace falta tener instalado el Python 3.6 o más nuevo
 ## Dedicación y duración
 Este es un curso cuatrimestral que durará desde principios de agosto a fines de noviembre del 2020. Es un curso de grado y posgrado. Tiene diferentes modalidaes, algunas sincrónicas y otras asincrónicas. Las clases las tendrán que leer de los apuntes que se van a encontrar aquí mismo. Hay guías de ejercicios y encuentros on-line de consultas. Hay también un [grupo de para consultas](./Slack.md) y debates entre estudiantes en tiempo real. Calculamos que el curso les demandará unas 10 horas semanales de dedicación durante los cuatro meses.
 
-Este es un curso cuatrimestral que durará de principios a agosto a fin de noviembre del 2020. Es un curso de grado y posgrado. Tiene diferentes modalidaes, algunas sincrónicas y otras asincrónicas. Las clases las tendrán que leer de los apuntes que encuentran aquí mismo. Hay guias de ejercicios y encuentros on-line de consultas. Hay también un [grupo de para consultas](./Slack.md) y debates entre estudiantes en tiempo real. Calculamos que el curso les demandará unas 10 horas semanales de dedicación durante los cuatro meses.
-
 
 ## Contexto
 Este curso lo dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/). Dado el contexto de ASPO (Aislamiento Social Preventivo y Obligatorio) en vigencia, el curso será completamente virtual.

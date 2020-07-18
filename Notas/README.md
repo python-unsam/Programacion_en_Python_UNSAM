@@ -35,7 +35,7 @@ Este curso se basa sobre experiencias previas nuestras y de otros docentes. En p
 También tomamos ideas y ejemplos del proyecto [Exactas Programa](http://exactasprograma.exactas.uba.ar/) que desarrollaron docentes de diversas carreras de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires que sus autores han compartido generosamente. 
 
 ## Escritura en desarrollo. ¡Bienvenidas las correcciones!
-Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones preliminares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por correo electrónico a <python@unsam.edu.ar>.
+Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones preliminares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por el grupo de Slack en el Canal de `errores_y_sugerencias`.
 
 ## El curso
 En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md)!
@@ -43,4 +43,3 @@ En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md)!
 Otros links importantes antes de comenzar a leer las notas:
 * [Condiciones de cursada](./Cursada.md)
 * [Instalación de Python](./Instalacion.md)
-* [Documentación, foros, grupo de consultas](./Slack.md)
