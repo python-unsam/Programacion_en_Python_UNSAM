@@ -64,40 +64,59 @@ Para poder entender qué pasó (debuguear), el mensaje describe cuál fue el pro
 ### Atrapar y manejar excepciones
 
 Las excepciones pueden ser atrapadas y manejadas.
-
-Para atrapar, usá los comandos `try - except`.
+Para atrapar una excepeción, se usan los comandos `try - except`.
 
 ```python
-for line in f:
-    fields = line.split()
+numero_valido=False
+while not numero_valido:
     try:
-        cajones = int(fields[1])
+        a = input('Ingresá un número entero: ')
+        n = int(a)
+        numero_valido = True
     except ValueError:
-        print("No pude interpreta la línea", line)
-    ...
+        print('No es válido. Intentá de nuevo.')
+print(f'Ingresaste {n}.')
 ```
 
-El nombre `ValueError` debe coincidir con el tipo de error que estás tratando de atrapar.
+Si en este ejemplo el usuario ingresa por ejemplo una letra, el comando `n = int(a)` genera una excepción de tipo `ValueError`: el comando `numero_valido = True` no se ejecuta, la excepción es atrapada por el `except ValueError` y el ciclo se repite. Probalo ingresando letras, números con decimales y números enteros. Probá también qué ocurre si querés salir sin ingresar nada generando una excepción presionando las teclas `Ctrl+C`. Leé el mensaje que describe lo ocurrido:  `Ctrl+C` genera una excepción de tipo `KeyboardInterrupt` que no es atrapada.
 
-Suele ser difícil saber exactamente qué tipo de errores pueden ocurrir por adelantado. Para bien o para mal, el manejo de excepciones suele ir agrendándose a medida que un programa va generando errores inesperados (al mejor estilo: "Uh! Me olvidé de que podía pasar esto. Deberíamos preverlo y manejarlo adecuadamente para la próxima").
+Si no especificamos el tipo de excepción que queremos atrapar, vamos a terminar atrapando todas la excepciones. Probá lo mismo que antes pero con este código.
+
+```python
+numero_valido=False
+while not numero_valido:
+    try:
+        a = input('Ingresá un número entero: ')
+        n = int(a)
+        numero_valido = True
+    except:
+        print('No es válido. Intentá de nuevo.')
+print(f'Ingresaste {n}.')
+```
+
+Deberías observar una diferencia: al presionar las teclas `Ctrl+C` la excepción `KeyboardInterrupt` sí es atrapada y no se termina el ciclo hasta no ingresar un número entero.
+
+Suele ser difícil saber exactamente qué tipo de errores pueden ocurrir por adelantado. Para bien o para mal, el manejo de excepciones suele ir creciendo a medida que un programa va generando errores inesperados (al mejor estilo: "Uh! Me olvidé de que podía pasar esto. Deberíamos preverlo y manejarlo adecuadamente para la próxima").
 
 ### Generar excepciones
 
-Para generar una expceción (también diremos *levantar* una excepción, porque más cercano al término inglés "raise"), usá el comando `raise`.
+Para generar una expceción (también diremos *levantar* una excepción, porque más cercano al término inglés "raise"), se usa el comando `raise`.
 
 ```python
 raise RuntimeError('¡Qué moco!')
 ```
 
-Esto va a generar que la ejecución se detenga y permite rastrear la excepción. A menos que sea atrapado por un bloque `try-except`.
+Esto va a generar que la ejecución se detenga y permite rastrear la excepción leyendo el mensaje de error que imprime. 
 
 ```bash
-% python3 foo.py
+bash $ python3 foo.py
 Traceback (most recent call last):
   File "foo.py", line 21, in <módulo>
     raise RuntimeError("¡Qué moco!")
 RuntimeError: ¡Qué moco!
 ```
+
+Alternativamente, esa excepción puede ser atrapada por un bloque `try-except`. 
 
 ## Ejercicios
 
@@ -119,7 +138,7 @@ Hello Paula
 Si la primera instrucción de una función es una cadena, sirve como documentación de la función. Porbalo escribiendo `help(saludar)` para ver cómo la muestra.
 
 ### Ejercicio 2.5: Transformar un script en una función
-Transformá el programa `costo_camion.py`  (que escribiste en el [Ejercicio 2.2](../02_Datos/01_106Files.md#ejercicio-22-lectura-de-un-archivo-de-datos) de la sección anterior) y transformalo en una función `costo_camion(nombre_archivo)`.  Esta función recibe un nombre de archivo como entrada, lee la información sobre los cajones que cargó y devuelve el costo de las frutas como una variable de punto flotante.
+Transformá el programa `costo_camion.py`  (que escribiste en el [Ejercicio 2.2](../02_Datos/01_106Files.md#ejercicio-22-lectura-de-un-archivo-de-datos) de la sección anterior) en una función `costo_camion(nombre_archivo)`.  Esta función recibe un nombre de archivo como entrada, lee la información sobre los cajones que cargó el camión y devuelve el costo de la carga de frutas como una variable de punto flotante.
 
 Para usar tu función, cambiá el programa de forma que se parezca a esto:
 
@@ -261,9 +280,9 @@ print('Costo total:', costo)
 `sys.argv` es una lista que contiene los argumentos que le pasamos al script al momento de llamarlo desde la línea de comandos (si es que le pasamos alguno). Por ejemplo, desde una terminal de Unix (en Windows es similar), para correr nuestro programa y que procese el mismo archivo podríamos escribir:
 
 ```bash
-bash % python3 costo_camion.py Data/camion.csv
+bash $ python3 costo_camion.py Data/camion.csv
 Costo total: 44671.15
-bash %
+bash $
 ```
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_106Files.md) \| [Próximo (3 Tipos y estructuras de datos)](03_201Datatypes.md)

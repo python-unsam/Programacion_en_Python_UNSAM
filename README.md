@@ -14,32 +14,21 @@ y asincrónicas, con ejercicios para entregar semanalmente.
 
 Es un curso de programación en Python que prepara a les estudiantes
 para poder **programar algoritmos** y comprender los métodos
-desarrollados por otres. Está orientado a preparar al estudiante para
-profundizar en temas de **análisis y visualización de datos, modelado 
-matemático y desarrollo de scripts**.
+desarrollados por otres. Está orientado a preparar a le estudiante para
+profundizar en temas de **análisis y visualización de datos, aprendizaje automático, modelado matemático y desarrollo de scripts**.
 
 
 
 ## Audiencia. ¿Para quién está pensado?
 El curso está orientado a estudiantes de grado y posgrado con algunos
-conocimientos previos de programación. La inscripción está abierta
-para estudiantes de posgrado de otras universidades de forma gratuita.
+conocimientos previos de programación. Es un curso gratuito pero el cupo para estudiantes externos ya fue completado. La inscripción está abierta
+solamente para estudiantes de la UNSAM.
 
-Este curso está diseñado para estudiantes que quieran aprender Python
-y utilizarlo para análisis de datos, modelado matemático, o scripting.
-Está orientado a personas con alguna experiencia previa en programación,
-aunque no asumimos ningún conocimiento del lenguaje Python. Es un curso
-intenso y desafiante, que invita a pensar y a desarrollar algoritmos.
+Este curso está orientado a personas con alguna experiencia previa en programación, aunque no asumimos ningún conocimiento del lenguaje Python. Es un curso intenso y desafiante, que invita a pensar y a desarrollar algoritmos.
 
 ## Contenidos
 El objetivo de este curso es enseñar los fundamentos del lenguaje
-Python. El curso está orientado al manejo de datos, a la escritura de
-scripts y a una organización adecuada de los programas. Estudiaremos
-un poco de teoría de algoritmos, incluyendo conceptos básicos de la
-teoría de la complejidad y algunas estructuras de datos no triviales.
-Introduciremos la programación orientada a objetos. Al final de este
-curso les estudiantes deberían poder escribir sus propios programas en
-Python así como entender y modificar programas escritos por otres.
+Python y algunos conceptos del diseño de algoritmos. El curso está orientado al manejo de datos, a la escritura de scripts y a una organización adecuada de los programas. Estudiaremos un poco de teoría de algoritmos, incluyendo conceptos básicos de la teoría de la complejidad y algunas estructuras de datos no triviales. Introduciremos la programación orientada a objetos. Al final de este curso les estudiantes deberían poder escribir sus propios programas en Python así como entender y modificar programas escritos por otres.
 
 ## Requerimientos
 Para hacer este curso solo hace falta tener instalado el Python 3.6
@@ -54,9 +43,9 @@ agosto y fines de noviembre del 2020. Es de grado y posgrado. Las clases
 teóricas estarán escritas. Habrá guías de ejercicios de entrega semanal 
 obligatoria y encuentros on-line con exposiciones breves por parte de los 
 docentes y espacio para consultas. Las clases sincrónicas virtuales serán 
-de un par de horas semanales, los miércoles entre las 14hs y las 18hs. Habrá
-también un grupo de [slack](https://slack.com/intl/es-ar/) (mensajería on-line) para consultas y debates entre 
-estudiantes en tiempo real. Calculamos que el curso les demandará unas diez 
+de un par de horas semanales, los miércoles a las 14hs y las 18hs. Habrá
+también un grupo de [Slack](https://slack.com/intl/es-ar/) (mensajería on-line) para consultas y debates entre 
+estudiantes en tiempo real. Estimamos que el curso les demandará unas diez 
 horas semanales de dedicación, durante los cuatro meses.
 
 ## Docentes
@@ -66,4 +55,6 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales.
 
 ## Preinscripción
-La preinscripción al curso cerró el viernes 17 de julio. Si querés que te avisemos sobre próximas ediciones del curso, completá [este formulario](https://forms.gle/JXAp9cSvowMCFGyC6).
+La preinscripción al curso para externos a la UNSAM cerró el viernes 17 de julio. Si querés que te avisemos sobre próximas ediciones del curso, completá [este formulario](https://forms.gle/JXAp9cSvowMCFGyC6).
+
+Si sos de la cumunidad UNSAM podés preinscribirte hasta el viernes 24 de julio [acá](https://docs.google.com/forms/d/1zc4F6EVF0OKyS5M7fUlUnf3TpThEyk6_RG5blEkwjE8).

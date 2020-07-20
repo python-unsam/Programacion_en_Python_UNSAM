@@ -108,7 +108,7 @@ fruta, cajones, precio = s
 print('Costo:', cajones * precio)
 ```
 
-El número de variables a la izquierda debe coincidir con la estructura de la tupla.
+El número de variables a la izquierda debe ser consistente con la estructura de la tupla.
 
 ```python
 nombre, cajones = s     # ERROR

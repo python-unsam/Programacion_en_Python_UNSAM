@@ -361,11 +361,11 @@ El archivo `Data/precios.csv` contiene una serie de líneas con precios de venta
 ...
 ```
 
-Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como éste arme un diccionario donde las claves sean los nombres de frutas y los valores sean los precios por cajón.
+Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como éste arme un diccionario donde las claves sean los nombres de frutas y verduras, y los valores sean los precios por cajón.
 
 Para hacerlo, empezá con un diccionario vacío y andá agregándole valores igual que como hiciste antes, pero ahora esos valores los vas leyendo del archivo.
 
-Vamos a usar esta estructura de datos para buscar rápidamente los precios de las frutas.
+Vamos a usar esta estructura de datos para buscar rápidamente los precios de las frutas y verduras.
 
 Un par de consejos:
 Usá el módulo `csv` igual que antes.
