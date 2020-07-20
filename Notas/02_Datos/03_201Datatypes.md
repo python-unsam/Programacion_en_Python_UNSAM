@@ -61,7 +61,7 @@ Salvo para las tuplas de longitud cero y uno, que son casos especiales y tienen 
 
 ```python
 t = ()            # Tupla vacía
-w = ('PERA', )    # Tupla de un elemento
+w = ('Pera', )    # Tupla de un elemento
 ```
 
 Las tuplas suelen usarse para representar registros o estructuras *simples*.
@@ -189,14 +189,14 @@ En los últimos ejercicios, escribiste un programa que leía el archivo
 ['nombre', 'cajones', 'precio']
 >>> fila = next(filas)
 >>> fila
-['LIMA', '100', '32.20']
+['Lima', '100', '32.20']
 >>>
 ```
 
 A veces, además de leerlo, queremos hacer otras cosas con el archivo CSV, como por ejemplo usar la info que contiene para hacer un cálculo. Lamentablemente una fila de datos en crudo no es suficiente para operar artiméticamente. 
 
 ```python
->>> fila = ['LIMA', '100', '32.20']
+>>> fila = ['Lima', '100', '32.20']
 >>> cost = fila[1] * fila[2]
 Traceback (most recent call last):
     File "<stdin>", line 1, in <module>
@@ -212,7 +212,7 @@ En el intérprete interactivo, creá la siguiente tupla que representa la fila d
 ```python
 >>> t = (fila[0], int(fila[1]), float(fila[2]))
 >>> t
-('LIMA', 100, 32.2)
+('Lima', 100, 32.2)
 >>>
 ```
 
@@ -252,7 +252,7 @@ Aunque no podés cambiar al tupla, sí podés reemplazar la tupla por una nueva.
 ```python
 >>> t = (t[0], 75, t[2])
 >>> t
-('LIMA', 75, 32.2)
+('Lima', 75, 32.2)
 >>>
 ```
 
@@ -263,7 +263,7 @@ Las tuplas muchas veces se usan para empaquetar y despempaquetar valores dentro 
 ```python
 >>> nombre, cajones, precio = t
 >>> nombre
-'LIMA'
+'Lima'
 >>> cajones
 75
 >>> precio
@@ -276,7 +276,7 @@ Tomá las variables de arriba y empaquetalas en una tupla.
 ```python
 >>> t = (nombre, 2*cajones, precio)
 >>> t
-('LIMA', 150, 32.2)
+('Lima', 150, 32.2)
 >>>
 ```
 
@@ -290,7 +290,7 @@ Una alternativa a la tupla es un diccionario.
         'precio'  : float(fila[2])
     }
 >>> d
-{'nombre': 'LIMA', 'cajones': 100, 'precio': 32.2 }
+{'nombre': 'Lima', 'cajones': 100, 'precio': 32.2 }
 >>>
 ```
 
@@ -308,7 +308,7 @@ Compará este ejemplo con el mismo cálculo hecho con tuplas más arriba. Cambi�
 ```python
 >>> d['cajones'] = 75
 >>> d
-{'nombre': 'LIMA', 'cajones': 75, 'precio': 32.2 }
+{'nombre': 'Lima', 'cajones': 75, 'precio': 32.2 }
 >>>
 ```
 
@@ -318,7 +318,7 @@ A diferencia de las tuplas, los diccionarios se pueden modificar libremente. Agr
 >>> d['fecha'] = (6, 11, 2007)
 >>> d['cuenta'] = 12345
 >>> d
-{'nombre': 'LIMA', 'cajones': 75, 'precio':32.2, 'fecha': (6, 11, 2007), 'cuenta': 12345}
+{'nombre': 'Lima', 'cajones': 75, 'precio':32.2, 'fecha': (6, 11, 2007), 'cuenta': 12345}
 >>>
 ```
 
@@ -351,7 +351,7 @@ Probá esta variante:
 >>> for k in d:
         print(k, '=', d[k])
 
-nombre = 'LIMA'
+nombre = 'Lima'
 cajones = 75
 precio = 32.2
 fecha = (6, 11, 2007)
@@ -386,11 +386,11 @@ Una manera más elegante de trabajar con claves y valores simultáneamente es us
 ```python
 >>> items = d.items()
 >>> items
-dict_items([('nombre', 'LIMA'), ('cajones', 75), ('precio', 32.2), ('fecha', (6, 11, 2007))])
+dict_items([('nombre', 'Lima'), ('cajones', 75), ('precio', 32.2), ('fecha', (6, 11, 2007))])
 >>> for k, v in d.items():
         print(k, '=', v)
 
-nombre = LIMA
+nombre = Lima
 cajones = 75
 precio = 32.2
 fecha = (6, 11, 2007)
@@ -401,10 +401,10 @@ Si tenés tuplas como en `items` podés crear un diccionario usando la función 
 
 ```python
 >>> items
-dict_items([('nombre', 'LIMA'), ('cajones', 75), ('precio', 32.2), ('fecha', (6, 11, 2007))])
+dict_items([('nombre', 'Lima'), ('cajones', 75), ('precio', 32.2), ('fecha', (6, 11, 2007))])
 >>> d = dict(items)
 >>> d
-{'nombre': 'LIMA', 'cajones': 75, 'precio':32.2, 'fecha': (6, 11, 2007)}
+{'nombre': 'Lima', 'cajones': 75, 'precio':32.2, 'fecha': (6, 11, 2007)}
 >>>
 ```
 
