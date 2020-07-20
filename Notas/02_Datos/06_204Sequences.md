@@ -436,7 +436,7 @@ Probá correr el programa `reporte.py` sobre el archivo  `Data/fecha_camion.csv`
 y fijate si dá la misma salida que antes.
 
 ### Ejercicio 2.25: Invertir un diccionario
-Un diciconario es una función que mapea claves en valores. Por ejemplo, un diccionario de precios de cajones de frutas.
+Un diccionario es una función que mapea claves en valores. Por ejemplo, un diccionario de precios de cajones de frutas.
 
 ```python
 >>> precios = {

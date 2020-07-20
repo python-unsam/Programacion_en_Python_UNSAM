@@ -364,42 +364,7 @@ Este comando no hace nada. Sirve para guardar el lugar para comando que querramo
 
 ## Ejercicios
 
-Este es el primer conjunto de ejercicios en el que vas a tener que crear un archivo de Python y correrlo. A partir de aca, vamos a asumir que tenés clonado el repositorio del curso y estás trabajando en el subdirectorio `Ejercicios/`. Para ayudarte a ubicar el lugar correcto hemos creado un par de archivos en ese directorio. Por ejemplo, ahora buscá el archivo `Ejercicios/rebotes.py` que vamos a usar en el primer ejercicio.
-
-### Ejercicio 1.4: La pelota que rebota
-Una pelota de goma es arrojada desde una altura de 100 metros y cada vez que toca el piso salta 3/5 de la altura desde la que cayó. Escribí un programa `rebotes.py` que imprima una tabla mostrando las alturas que alcanza luego de sus primeros diez rebotes.
-
-Tu programa debería hacer una tabla que se parezca a esta:
-
-```code
-1 60.0
-2 36.0
-3 21.599999999999998
-4 12.959999999999999
-5 7.775999999999999
-6 4.6655999999999995
-7 2.7993599999999996
-8 1.6796159999999998
-9 1.0077695999999998
-10 0.6046617599999998
-```
-
-*Nota: Podés limpiar un toque la salida si usás la función round() de la que miraste el help hace un rato. Tratá de usarla para redondear a cuatro dígitos.*
-
-```code
-1 60.0
-2 36.0
-3 21.6
-4 12.96
-5 7.776
-6 4.6656
-7 2.7994
-8 1.6796
-9 1.0078
-10 0.6047
-```
-
-### Ejercicio 1.5: Debuguear
+### Ejercicio 1.4: Debuguear
 El siguiente fragmento de código está relacionado con el problema del obelisco. Tiene un bug, es decir, un error.
 
 ```python
@@ -436,7 +401,44 @@ Aprender a leer y entender los mensajes de error es una parte fundamental de pro
 * Repará el error.
 * Ejecutá el programa exitosamente.
 
-### Ejercicio 1.6: SaludosEscribí un programa llamado `saludo.py` que pregunte el nombre de le usuarie, imprima un saludo (por ejemplo, "Hola, Juana") y termine.
+
+### Ejercicio 1.5: La pelota que rebota
+Este es el primer conjunto de ejercicios en el que vas a tener que crear un archivo de Python y correrlo. A partir de aca, vamos a asumir que estás trabajando en el subdirectorio `Ejercicios/`. Para ayudarte a ubicar el lugar correcto ya creamos un par de archivos en ese directorio. Por ejemplo, ahora buscá el archivo `Ejercicios/rebotes.py` que vamos a usar en este ejercicio.
+
+Una pelota de goma es arrojada desde una altura de 100 metros y cada vez que toca el piso salta 3/5 de la altura desde la que cayó. Escribí un programa `rebotes.py` que imprima una tabla mostrando las alturas que alcanza luego de sus primeros diez rebotes.
+
+Tu programa debería hacer una tabla que se parezca a esta:
+
+```code
+1 60.0
+2 36.0
+3 21.599999999999998
+4 12.959999999999999
+5 7.775999999999999
+6 4.6655999999999995
+7 2.7993599999999996
+8 1.6796159999999998
+9 1.0077695999999998
+10 0.6046617599999998
+```
+
+*Nota: Podés limpiar un toque la salida si usás la función round() de la que miraste el help hace un rato. Tratá de usarla para redondear a cuatro dígitos.*
+
+```code
+1 60.0
+2 36.0
+3 21.6
+4 12.96
+5 7.776
+6 4.6656
+7 2.7994
+8 1.6796
+9 1.0078
+10 0.6047
+```
+
+### Ejercicio 1.6: Saludos
+Escribí un programa llamado `saludo.py` que pregunte el nombre de le usuarie, imprima un saludo (por ejemplo, "Hola, Juana") y termine.
 
 
 

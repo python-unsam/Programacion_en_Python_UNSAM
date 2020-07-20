@@ -6,7 +6,7 @@ En esta clase aprendimos a correr el intérprete de Python desde la línea de co
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que nos mandes por mail a <python@unsam.edu.ar> los programas de los siguientes ejercicios:
-    1. [Ejercicio 1.4](../01_Introduccion/02_Hello_world.md#ejercicio-14-la-pelota-que-rebota) Pelota (`rebotes.py`)
+    1. [Ejercicio 1.5](../01_Introduccion/02_Hello_world.md#ejercicio-15-la-pelota-que-rebota) Pelota (`rebotes.py`)
     2. [Ejercicio 1.11](../01_Introduccion/03_Numeros.md#ejercicio-111-bonus) Bonus de Hipoteca (`hipoteca.py`)
     3. [Ejercicio 1.13](../01_Introduccion/03_Numeros.md#ejercicio-113-el-volúmen-de-una-esfera) Volumen de la esfera (`esfera.py`)
     4. [Ejercicio 1.18](../01_Introduccion/04_Strings.md#ejercicio-118-geringoso-rústico) Geringoso (`geringoso.py`)
