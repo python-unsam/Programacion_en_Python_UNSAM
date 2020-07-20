@@ -71,12 +71,14 @@ El `help()` no funciona con los comandos básicos de Python como`for`, `if`, `wh
 
 La documentación oficial en inglés de Python se encuentra en <http://docs.python.org>. Por ejemplo, encontrá ahí la documentación sobre la función `abs()` (ayuda: está dentro de "library reference" y relacionado a las "built-in functions").
 
-### Ejercicio 1.3: Cut-and-paste
-Este curso está estructurado como una serie de páginas web tradicionales en las que los incentivamos a probar interactivamente fragmentos de código en sus intérpretesde Python **escribiéndolos a mano**. Si estás aprendiendo Python por primera vez, este forma "lenta" de hacer las cosas es la que recomendamos, al menos al principio. Vas a entender mejor yendo lento y escribiendo los comandos vos mismo mientras pensás en lo que estás tipeando.
+### Ejercicio 1.3: Copy-paste
+Este curso está estructurado como una serie de páginas web tradicionales en las que los incentivamos a probar interactivamente fragmentos de código en sus intérpretesde Python **escribiéndolos a mano**. Si estás aprendiendo Python por primera vez, este forma "lenta" de hacer las cosas es la que recomendamos. Vas a entender mejor yendo lento y escribiendo los comandos vos mismo mientras pensás en lo que estás tipeando.
 
-Si en algún momento necesitás hacer "cut and paste" de fragmentos de código, seleccioná el código que viene luego del símbolo `>>>` y hasta la siguiente linea en blanco o el siguiente `>>>` (el que aparezca primero). Seleccioná "copy" en el navegador (Ctrl-C), andá al intérprete de Python y poné "paste" (Ctrl-V o Crtl-shift-V) para pegarlo. Para ejecutar el código es posible que tengas que apretar "Enter" luego de pegarlo.
+Es importante que tipées los comandos a mano. Para usar copy-paste quizás mejor ni hacerlos. Parte del objetivo de los ejercicios es entrenar tus manos, tus ojos y tu cabeza en leer, escribir y mirar código tal como dice [Zed Shaw en su libro](https://learntocodetogether.com/learn-python-the-hard-way-free-ebook-download/). Usar copy-paste excesivamente es como hacerte trampa a vos misme. Es como tratar de aprender a tocar la guitarra escuchando discos: es probable que no aprendas nunca.
 
-Usá cut-and-paste para ejecutar los siguientes comandos:
+Si en algún momento necesitás hacer copy-aste" de fragmentos de código, seleccioná el código que viene luego del símbolo `>>>` y hasta la siguiente linea en blanco o el siguiente `>>>` (el que aparezca primero). Seleccioná "copy" en el navegador (Ctrl-C), andá al intérprete de Python y poné "paste" (Ctrl-V o Crtl-shift-V) para pegarlo. Para ejecutar el código es posible que tengas que apretar "Enter" luego de pegarlo.
+
+Usá copy-paste para ejecutar los siguientes comandos:
 
 ```python
 >>> 12 + 20
