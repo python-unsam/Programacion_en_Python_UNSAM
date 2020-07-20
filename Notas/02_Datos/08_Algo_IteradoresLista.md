@@ -2,37 +2,46 @@
 
 # 2.8 Práctica: Iteración sobre listas
 
-En esta sección, funciones, no python: algoritmos de bajo nivel sobre listas.
+En esta sección seguiremos usando Python, pero nos concentraremos en la parte algorítmica. Vas a escribir funciones sencillas (y no tanto) que realicen operaciones sobre listas.
 
 ### Ejercicio 2.26: Búsqueda del máximo
-Python tiene. Pero si lo queremos hacer...
+En este primer ejercicio tenés que escribir una función que busque el elemento máximo de una lista. Python tiene el comando `max` que ya hace esto, pero como práctica te propomenos que completes el siguiente código y lo guardes en un arcvhivo `maximo.py`:
 
-`maximo.py`
-
-estructura de una solución 
-
+```python
+def maximo(lista):
+    m=lista[0] # En principio podemos decir que el máximo es el primer elemento de la lista.
+    for e in lista: # Recorro la lista y voy guardando el mayor
+        ...
+    return m
+```
 
 ### Ejercicio 2.27: Invertir una lista
-Escribir una función `invertir_lista(lista)` que dada una lista devuelva otra que tenga los mismos elementos en el orden inverso. Es decir, el que era el primer elemento de la lista de entrada deberá ser el último de la lista de salida y análogamente con los demás elementos.
-
-Probarla con las siguientes listas:
+Escribí una función `invertir_lista(lista)` que dada una lista devuelva otra que tenga los mismos elementos en el orden inverso. Es decir, el que era el primer elemento de la lista de entrada deberá ser el último de la lista de salida y análogamente con los demás elementos.
 
 
-`invlista.py`
+```python
+def invertir_lista(lista):
+    invertida = []
+    for e in lista: # Recorro la lista
+        ... #agrego el elemento e al principio de la lista invertida
+    return m
+```
+
+Guardá la función en el archivo `invlista.py` y probarla con las siguientes listas:
+`[1,2,3,4,5]`
+`['Bogotá', 'Rosario', 'Santiago', San Fernando', 'San Miguel']`
 
 ### Ejercicio 2.28: Tablas de multiplicar
-Escriba un programa que imprima de forma elegante las tablas de
-multiplicar del 0 al 9 (sug: imprimir ’\\t’ como separador). Si puede, evite usar la multiplicación, use solo sumas.
+Escribí un programa `tablamult.py` que imprima de forma prolija las tablas de
+multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicación, usando sólo sumas alcanza.
 
-`tablamult.py`
 
 ### Ejercicio 2.29: Propagación
-Considere una fila con *n* personas una al lado de la otra. Las personas pueden estar infectadas con un virus, ser inmunes o ser suceptibles de enfermarse.
-Representaremos esta situación con una lista *L* de longitud *n* que en cada posición tiene un 0 (inmune), un 1 (suceptible de enfermarse) o un -1 (tiene el virus). 
-Este virus se propaga inmediatamente a toda persona suceptible de enfermarse que tenga a alguien enfermo a su lado. Las personas inmunes, no se enferman.
+Imaginate una fila con *n* fósforos uno al lado del otro. Los fósforos pueden  estar nuevos, ya gastados o prendidos fuego.
+Representaremos esta situación con una lista *L* de longitud *n* que en cada posición tiene un 0 (carbonizado), un 1 (nuevo) o un -1 (encendido). 
+El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósoforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
 
-
-Escriba una función llamada `propagar` que reciba un vector con ceros, unos y menos unos y devuelva un vector en el que los menos unos se propagaron a sus vecion con uno. Guárdela en un archivo `propaga.py`.
+Escribí una función llamada `propagar` que reciba un vector con ceros, unos y menos unos y devuelva un vector en el que los -1 se propagaron a sus vecinos con uno. Guardalo en un archivo `propaga.py`.
 
 Por ejemplo:
 ```python
