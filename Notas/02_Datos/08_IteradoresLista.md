@@ -8,7 +8,9 @@ Este es un curso de Python y de algoritmos. Python es un lenguaje de alto nivel.
 
 Sin embargo, entre las cosas que trae resueltas Python hay algunos algoritmos que nos interesa que vuelvas a escribir vos, por motivos didácticos. En lo que sigue te vamos a pedir en algunas ocasiones que no uses toda la potencia y simpleza de Python sino que te arremangues y escribas algunas funciones desde los primeros rudimentos.
 
-Estamos convencidos que es fundamental que veas en ejemplos concretos cómo un mismo problema puede resolverse de diferentes maneras y con eficiencias muy diferentes para que luego puedas elegir la forma que mejor encaje con tus necesidades. Seleccionamos un par de problemas fundamentales: búsqueda y ordenamiento, para profundizar en estos conceptos.
+Queremos mostrarte en ejemplos concretos cómo distintas maneras de resolver  un mismo problema pueden dar lugar a algoritmos con eficiencias muy diferentes. A veces una es mejor para un uso y la otra para otro uso. En concreto, vamos a profundizar en el problema de la búsqueda y en el problema del ordenamiento, que son dos problemas elementales que ilustran conceptos centrales del desarrollo de algoritmos. 
+
+El uso adecuado de estos conceptos puede hacer la diferencia entre un algoritmo que termina el procesamiento en unos pocos minutos o uno que hay que dejar corriendo dos dias (y rezar para que no corte la electricidad mientras corre).
 
 
 ## Búsqueda lineal
@@ -29,9 +31,12 @@ Probá esa solución:
 >>> [1, 3, 5, 7].index(5)
 2
 >>> [1, 3, 5, 7].index(20)
-(^Traceback (most recent call last):
-  File '<stdin>', line 1, in <module>
-ValueError: list.index(x): x not in list^)
+Traceback (most recent call last):
+
+  File "<ipython-input-177-1bcce50c5c91>", line 1, in <module>
+    [1, 3, 5, 7].index(20)
+
+ValueError: 20 is not in list
 ```
 
 Vemos que usar la función `index()` resuelve nuestro problema si el
@@ -49,11 +54,10 @@ True
 False
 ```
 
-O sea que si llamamos a la función `index()` sólo cuando el
+Si llamamos a la función `index()` sólo cuando el
 resultado de `in` es verdadero, y devolvemos -1 cuando el
 resultado de `in` es falso, estaremos resolviendo el problema
-planteado usando sólo funciones provistas por Python. La solución se plantea a
-continuación:
+planteado usando sólo funciones provistas por Python:
 
 ```python
 def busqueda_con_index(lista, e):
@@ -69,7 +73,7 @@ def busqueda_con_index(lista, e):
     return pos
 ```
 
-Probamos la función `busqueda_con_index()`:
+Probemos la función `busqueda_con_index()`:
 
 ```python
 >>> busqueda_con_index([1, 4, 54, 3, 0, -1], 1)
@@ -94,22 +98,19 @@ por ahora pero daremos un método para averiguarlo más adelante.
 
 ###  Búsqueda lineal
 
-Nos interesa ver qué sucede si programamos la búsqueda usando operaciones más
-elementales, y no las primitivas `in` e `index()` de nuestro lenguaje de alto nivel. Esto nos permite estudiar una solución que vale también en otros lenguajes de programación.
+Nos interesa estudiar formas alternativas de programar la búsqueda usando operaciones más elementales, y no las primitivas `in` e `index()` de nuestro lenguaje de alto nivel. Aceptemos entonces que no vamos a usar ni `in` ni `index()`. En cambio, podemos usar ciclos y comparaciones.
 
-Aceptemos entonces que no vamos a usar ni `in` ni `index()`. 
-En cambio, podemos acceder a cada uno de los elementos
-de la lista a través de un ciclo `for`, y también, por
-supuesto, podemos acceder a un elemento de la lista mediante un índice.
+iterar sobre los índices y elementos de una lista, y hacer comparaciones elementales.
 
-Diseñamos la siguiente solución: podemos comparar uno a uno los elementos de la
-lista con el valor de `e`, y retornar el valor de la posición
-donde lo encontramos en caso de encontrarlo.
+Consideremos la siguiente solución: iterar sobre los índices y elementos de una lista de manera de comparar el elemento `e` buscado con cada uno de los elementos de la lista y devolver la posición
+donde lo encontremos, en caso de encontrarlo.
 Si llegamos al final de la lista sin haber salido antes de la función es
 porque el valor de `e` no está en la lista, y en ese caso
-retornamos -1.
+devolvemos -1.
 
-En esta solución lo ideal es usar `enumerate` (ver la [Sección 2.6](../02_Datos/06_Secuencias.md#la-función-enumerate)). Primero hagámoslo sin usarlo y luego lo agregamos para entender su ventaja. En ambos casos necesitamos una variable `i` que cuente en cada momento en qué posición de la lista estamos parados.  Si no usamos `enumerate`, debemos inicializar `i` en 0 antes de entrar en el ciclo e incrementarla en 1 en cada paso.
+En esta solución lo ideal es usar `enumerate` (ver la [Sección 2.6](../02_Datos/06_Secuencias.md#la-función-enumerate)) ya que dentro de la iteración necesitamos tener acceso tanto al valor del elemento (para ver si es igual al buscado) como a su índice (es el valor que tenemos que devolver).
+
+Primero hagámoslo sin usarlo y luego lo agregamos para entender su ventaja. En ambos casos necesitamos una variable `i` que cuente en cada momento en qué posición de la lista estamos parados.  Si no usamos `enumerate`, debemos inicializar `i` en 0 antes de entrar en el ciclo e incrementarla en 1 en cada paso.
 
 El programa nos queda entonces como se muestra a continuación:
 
@@ -200,7 +201,7 @@ Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()
 
 
 ### Ejercicio 2.27: Búsqueda del máximo
-Agergale a tu archivo una función `maximo()` que busque el elemento máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te propomenos que completes el siguiente código y lo guardes en un archivo `busqueda_en_listas.py`:
+Agergale a tu archivo una función `maximo()` que busque el elemento máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te propomenos que completes el siguiente código:
 
 ```python
 def maximo(lista):
@@ -227,7 +228,7 @@ Probalo con estos ejemplos:
 ```
 
 ¿Por qué falla en el último caso? ¿Por qué anda en el caso anterior? 
-¿Cómo se puede inicializar m para que la función ande también con números negativos?
+¿Cómo se puede inicializar m para que la función ande también con números negativos? Corregilo y guarda la version mejorada en el archivo `busqueda_en_listas.py`.
 
 ## Ejercitación con iteradores y listas
 
@@ -256,18 +257,18 @@ multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicaci�
 
 
 ### Ejercicio 2.31: Propagación
-Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, ya gastados (carbonizado) o prendidos fuego.
-Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 1 (nuevo), un 0 (carbonizado) o un -1 (encendido). 
+Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizado).
+Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 0 (nuevo), un 1 (encendido) o un -1 (carbonizado). 
 El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósoforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
 
-Escribí una función llamada `propagar` que reciba un vector con 0, 1 y -1 y devuelva un vector en el que los -1 se propagaron a sus vecinos con 1. Guardalo en un archivo `propaga.py`.
+Escribí una función llamada `propagar` que reciba un vector con 0, 1 y -1 y devuelva un vector en el que los 1 se propagaron a sus vecinos con 0. Guardalo en un archivo `propaga.py`.
 
 Por ejemplo:
 ```python
->>> propagar([ 1, 1, 1, 0,-1, 1, 1, 1, 0, 1,-1, 1, 1])
-[ 1, 1, 1, 0,-1,-1,-1,-1, 0,-1,-1,-1,-1]
->>> propagar([ 1, 1, 1,-1, 1, 1])
-[-1,-1,-1,-1,-1,-1]
+>>> propagar([ 0, 0, 0,-1, 1, 0, 0, 0,-1, 0, 1, 0, 0])
+[ 0, 0, 0,-1, 1, 1, 1, 1,-1, 1, 1, 1, 1]
+>>> propagar([ 0, 0, 0, 1, 0, 0])
+[ 1, 1, 1, 1, 1, 1]
 ```
 
 ![Propagación](./fosforos.jpg) Propagación análoga a la del Ejercicio

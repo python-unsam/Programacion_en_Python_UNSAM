@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa_OSKI1/00_Resumen.md)
 
-# 3. Particularidades de Python
+# 3. Más sobre Python, Búsquedas eficientes y Numpy
 En esta clase introducimos las colecciones de Python y profundizamos un poco en el concepto de objeto que subyace toda la estructura del lenguaje Python.
 
 
@@ -14,7 +14,7 @@ En esta clase introducimos las colecciones de Python y profundizamos un poco en 
 * [3.7 Complejidad de algoritmos](06_Complejidad.md)
 * [3.8 Figuritas](07_NumPy_Arrays.md)
 * [3.9 Cierre](08_Cierre.md)
-* [3.10 Figuritas](09_Figuritas.md)
+* [3.10 El album de Figuritas](09_Figuritas.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa_OSKI1/00_Resumen.md)
