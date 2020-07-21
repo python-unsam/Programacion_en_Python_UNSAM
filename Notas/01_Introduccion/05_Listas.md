@@ -66,6 +66,7 @@ Y podés insertar elementos en una posición. Acordate que los índices comienza
 
 ```python
 nombres.insert(2, 'Iratxe') # Lo inserta en la posición 2. 
+nombres.insert(0, 'Iratxe') # Lo inserta como primer elemento. 
 ```
 
 

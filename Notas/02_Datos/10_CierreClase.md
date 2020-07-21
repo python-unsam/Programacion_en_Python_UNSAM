@@ -1,19 +1,19 @@
-[Contenidos](../Contenidos.md) \| [Anterior (9 Algoritmos de búsqueda)](09_Algo_BSec_BBin.md) \| [Próximo (11 Búsqueda de raíces de funciones)](11_Opt_Biseccion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Listas y búsqueda lineal)](08_IteradoresLista.md)
 
-# 2.10 Cierre de la segunda clase
+# 2.9 Cierre de la segunda clase
 
 En esta segunda clase aprendimos a trabajar con datos. Manejamos archivos CSV y estructuras un poco más complejas como tuplas, conjuntos y diccionarios y profundizamos un poco más en las listas.
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que nos mandes por mail a <python@unsam.edu.ar> los programas de los siguientes ejercicios:
-    1. [Ejercicio 2.15](../02_Datos/04_202Containers.md#ejercicio-215-balances) Sobre calcular el costo de camion por linea de comandos `costo_camion.py` con warnings. 
-    2. [Ejercicio 2.20](../02_Datos/05_203Formatting.md#ejercicio-220-un-desafío-de-formato) (o [Ejercicio 2.19](../02_Datos/05_203Formatting.md#ejercicio-219-agregar-encabezados)) Balance con formato `reporte.py` y lectura de encabezados.
-    3. [Ejercicio 2.26](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-226-búsqueda-del-máximo) `maximo.py`
-    4. [Ejercicio 2.27](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-227-invertir-una-lista) `invlista.py`
-    5. [Ejercicio 2.28](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-228-tablas-de-multiplicar) `tablamult.py`
-    6. [Ejercicio 2.29](../02_Datos/08_Algo_IteradoresLista.md#ejercicio-229-propagación) `propaga.py`
-    7. [Ejercicio 2.30](../02_Datos/09_Algo_BSec_BBin.md#ejercicio-230-búsqueda-secuencial) Búsqueda secuencial `b_sec.py`
-    8. [Ejercicio 2.31](../02_Datos/09_Algo_BSec_BBin.md#ejercicio-231-búsqueda-binaria) Búsqueda binaria `b_bin.py`
+    1. [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances) Sobre calcular el costo de camion por linea de comandos `costo_camion.py` con warnings. 
+    2. [Ejercicio 2.20](../02_Datos/05_Formato.md#ejercicio-220-un-desafío-de-formato) (o [Ejercicio 2.19](../02_Datos/05_Formato.md#ejercicio-219-agregar-encabezados)) Balance con formato `reporte.py` y lectura de encabezados.
+    3. [Ejercicio 2.27](../02_Datos/08_IteradoresLista.md#ejercicio-227-búsqueda-del-máximo) `maximo.py`
+    4. [Ejercicio 2.29](../02_Datos/08_IteradoresLista.md#ejercicio-229-invertir-una-lista-in-place) `invlista.py`
+    5. [Ejercicio 2.30](../02_Datos/08_IteradoresLista.md#ejercicio-230-tablas-de-multiplicar) `tablamult.py`
+    6. [Ejercicio 2.31](../02_Datos/08_IteradoresLista.md#ejercicio-231-propagación) `propaga.py`
+    7. [Ejercicio 3.11](../03_Mas_Python/055_BSec_BBin_Viejo.md#ejercicio-311-búsqueda-secuencial) Búsqueda secuencial `b_sec.py`
+    8. [Ejercicio 3.12](../03_Mas_Python/055_BSec_BBin_Viejo.md#ejercicio-312-búsqueda-binaria) Búsqueda binaria `b_bin.py`
 
 * Que completes [este formulario](link) usando como identificación tu dirección de mail.
  
@@ -33,5 +33,5 @@ En este caso se trata de dos métodos numéricos para buscar raíces reales de f
 
 El otro es el método de Newton-Raphson que se basa en usar la recta tangente a la función para determinar una aproximación cada vez mejor a la raíz de la función *f*.
 
-[Contenidos](../Contenidos.md) \| [Anterior (9 Algoritmos de búsqueda)](09_Algo_BSec_BBin.md) \| [Próximo (11 Búsqueda de raíces de funciones)](11_Opt_Biseccion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Listas y búsqueda lineal)](08_IteradoresLista.md)
 

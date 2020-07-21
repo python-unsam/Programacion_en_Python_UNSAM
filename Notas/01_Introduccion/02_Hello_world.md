@@ -49,7 +49,7 @@ Veamos en mayor detalle cómo funciona este REPL:
 - `>>>` es el símbolo del intérprete para comenzar un nuevo comando.
 - `...` es el símbolo del intérprete para continuar con un comando comenzado antes. Dejá una línea en blanco para terminar lo que ya ingresaste.
 
-El símbolo `...` puede mostrarse o no dependiendo de tu entorno. En este curso lo mostraremos como líneas en blanco para facilitar el cut-and-paste. de fragmentos de código.
+El símbolo `...` puede mostrarse o no dependiendo de tu entorno. En este curso lo mostraremos como líneas en blanco para facilitar el copy-paste. de fragmentos de código.
 
 Antes vimos que el guión bajo `_` guarda el último resultado.
 

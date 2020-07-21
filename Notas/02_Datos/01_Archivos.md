@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_107Funciones.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_Funciones.md)
 
 # 2.1 Manejo de archivos
 
@@ -210,5 +210,5 @@ Probalo:
 Es frecuente que les estudiantes que conocen un poco más de Python rápidamente señalen que hay módulos como [Pandas](https://pandas.pydata.org) que tienen, entre muchas otras funcionalidades, la posiblidad de leer archivos CSV en una sola instrucción. Es verdad, y funcionan muy bien. Sin embargo, este no es un curso sobre Pandas. Si bien más adelante veremos algo de esta biblioteca, lo que nos interesa en este momento es aprender a manejar archivos directamente. Estamos trabajando con archivos CSV porque es un formato sencillo que es muy útil conocer, pero es principalmente una excusa para mostrar cómo Python maneja archivos de texto. En resumen, cuando tengas que trabajar con datos, definitivamente usá Pandas. Pero para aprender a manejar archivos vamos a seguir usando las funciones básicas de Python.
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_107Funciones.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_Funciones.md)
 

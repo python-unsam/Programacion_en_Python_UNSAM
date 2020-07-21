@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_107Funciones.md) \| [Próximo (4 Contenedores)](04_202Containers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Contenedores)](04_Contenedores.md)
 
 # 2.3 Tipos y estructuras de datos
 
@@ -409,5 +409,5 @@ dict_items([('nombre', 'Lima'), ('cajones', 75), ('precio', 32.2), ('fecha', (6,
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_107Funciones.md) \| [Próximo (4 Contenedores)](04_202Containers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Contenedores)](04_Contenedores.md)
 

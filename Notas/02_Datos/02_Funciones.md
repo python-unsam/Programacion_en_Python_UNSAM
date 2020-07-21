@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_106Files.md) \| [Próximo (3 Tipos y estructuras de datos)](03_201Datatypes.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_Archivos.md) \| [Próximo (3 Tipos y estructuras de datos)](03_TiposDatos.md)
 
 # 2.2 Funciones
 
@@ -138,7 +138,7 @@ Hello Paula
 Si la primera instrucción de una función es una cadena, sirve como documentación de la función. Porbalo escribiendo `help(saludar)` para ver cómo la muestra.
 
 ### Ejercicio 2.5: Transformar un script en una función
-Transformá el programa `costo_camion.py`  (que escribiste en el [Ejercicio 2.2](../02_Datos/01_106Files.md#ejercicio-22-lectura-de-un-archivo-de-datos) de la sección anterior) en una función `costo_camion(nombre_archivo)`.  Esta función recibe un nombre de archivo como entrada, lee la información sobre los cajones que cargó el camión y devuelve el costo de la carga de frutas como una variable de punto flotante.
+Transformá el programa `costo_camion.py`  (que escribiste en el [Ejercicio 2.2](../02_Datos/01_Archivos.md#ejercicio-22-lectura-de-un-archivo-de-datos) de la sección anterior) en una función `costo_camion(nombre_archivo)`.  Esta función recibe un nombre de archivo como entrada, lee la información sobre los cajones que cargó el camión y devuelve el costo de la carga de frutas como una variable de punto flotante.
 
 Para usar tu función, cambiá el programa de forma que se parezca a esto:
 
@@ -285,5 +285,5 @@ Costo total: 44671.15
 bash $
 ```
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_106Files.md) \| [Próximo (3 Tipos y estructuras de datos)](03_201Datatypes.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_Archivos.md) \| [Próximo (3 Tipos y estructuras de datos)](03_TiposDatos.md)
 

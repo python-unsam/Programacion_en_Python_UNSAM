@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_202Containers.md) \| [Próximo (6 Secuencias)](06_204Sequences.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_Contenedores.md) \| [Próximo (6 Secuencias)](06_Secuencias.md)
 
 # 2.5 Impresión con formato
 
@@ -151,7 +151,7 @@ A pesar de que suelen usarse dentre de un `print`, el formato de cadenas no est�
 ```
 
 ### Ejercicio 2.17: Recolectar datos
-En el [Ejercicio 2.15](../02_Datos/04_202Containers.md#ejercicio-215-balances), escribiste un programa llamado `reporte.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y venden en el mercado. En este ejercicio, vas a comenzas a modificarlo para producir una tabla como esta:
+En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `reporte.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y venden en el mercado. En este ejercicio, vas a comenzas a modificarlo para producir una tabla como esta:
 
 ```
  Nombre     Cajones     Precio     Cambio
@@ -269,5 +269,5 @@ Por último, modificá tu código para que el precio mostrado incluya un símbol
 
 Guardá estos cambios en el archivo `reporte.py` que más adelante los vas a necesitar.
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_202Containers.md) \| [Próximo (6 Secuencias)](06_204Sequences.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_Contenedores.md) \| [Próximo (6 Secuencias)](06_Secuencias.md)
 
