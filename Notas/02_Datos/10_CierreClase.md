@@ -9,11 +9,11 @@ Para cerrar esta clase te pedimos dos cosas:
     1. [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances) Sobre calcular el costo de camion por linea de comandos `costo_camion.py` con warnings. 
     2. [Ejercicio 2.20](../02_Datos/05_Formato.md#ejercicio-220-un-desafío-de-formato) (o [Ejercicio 2.19](../02_Datos/05_Formato.md#ejercicio-219-agregar-encabezados)) Balance con formato `reporte.py` y lectura de encabezados.
     3. [Ejercicio 2.27](../02_Datos/08_IteradoresLista.md#ejercicio-227-búsqueda-del-máximo) `maximo.py`
-    4. [Ejercicio 2.29](../02_Datos/08_IteradoresLista.md#ejercicio-229-invertir-una-lista-in-place) `invlista.py`
+    4. [Ejercicio 2.28](../02_Datos/08_IteradoresLista.md#ejercicio-228-invertir-una-lista) `invlista.py`
     5. [Ejercicio 2.30](../02_Datos/08_IteradoresLista.md#ejercicio-230-tablas-de-multiplicar) `tablamult.py`
     6. [Ejercicio 2.31](../02_Datos/08_IteradoresLista.md#ejercicio-231-propagación) `propaga.py`
-    7. [Ejercicio 3.11](../03_Mas_Python/055_BSec_BBin_Viejo.md#ejercicio-311-búsqueda-secuencial) Búsqueda secuencial `b_sec.py`
-    8. [Ejercicio 3.12](../03_Mas_Python/055_BSec_BBin_Viejo.md#ejercicio-312-búsqueda-binaria) Búsqueda binaria `b_bin.py`
+    7. [Ejercicio 3.12](../03_Mas_Python/06_5_BSec_BBin_Viejo.md#ejercicio-312-búsqueda-secuencial) Búsqueda secuencial `b_sec.py`
+    8. [Ejercicio 3.13](../03_Mas_Python/06_5_BSec_BBin_Viejo.md#ejercicio-313-búsqueda-binaria) Búsqueda binaria `b_bin.py`
 
 * Que completes [este formulario](link) usando como identificación tu dirección de mail.
  
