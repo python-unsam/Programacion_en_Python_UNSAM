@@ -8,6 +8,8 @@ Esta actividad la diseñaron nuetres colegas de Exactas-Programa y amablemente n
 
 El objetivo de esta actividad es hacer un programa en Python que responda la pregunta: **¿Cuántas figuritas hay que comprar para completar el álbum del Mundial?**
 
+![Album de Figuritas](./completo.jpg)
+
 
 Esta pregunta es noticia en cada mundial:
 - [Mundial de Brasil 2014](https://www.pagina12.com.ar/diario/contratapa/13-250187-2014-07-06.html)
