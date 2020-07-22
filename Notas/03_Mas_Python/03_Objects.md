@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Compresión de listas)](02_List_comprehension.md) \| [Próximo (4 Numpy)](04_Numpy.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Numpy)](04_Numpy.md)
 
 # 3.3 Objects
 
@@ -452,5 +452,5 @@ Spend some time to ponder what you’ve done in this ejercicio. We’ll
 revisit these ideas a little later.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Compresión de listas)](02_List_comprehension.md) \| [Próximo (4 Numpy)](04_Numpy.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Numpy)](04_Numpy.md)
 

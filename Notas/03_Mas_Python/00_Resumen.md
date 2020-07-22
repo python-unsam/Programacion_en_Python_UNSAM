@@ -9,7 +9,7 @@ De postre refritamos un ejercicio lindísimo del curso [Exactas Programa]() que 
 
 
 * [3.1 El módulo collections](01_Collections.md)
-* [3.2 Compresión de listas](02_List_comprehension.md)
+* [3.2 Comprensión de listas](02_List_comprehension.md)
 * [3.3 Objects](03_Objects.md)
 * [3.4 Numpy](04_Numpy.md)
 * [3.5 Búsqueda binaria](05_BusqBinaria.md)

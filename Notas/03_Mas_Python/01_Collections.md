@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Compresión de listas)](02_List_comprehension.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Comprensión de listas)](02_List_comprehension.md)
 
 # 3.1 El módulo collections
 
@@ -109,5 +109,5 @@ Counter({'Mandarina': 275, 'Frambuesa': 250, 'Durazno': 220, 'Lima': 150, 'Naran
 
 Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El módulo  `collections` es muy poderoso pero meterse a ver sus detalles sería una distracición ahora. Sigamos con nuestro curso...
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Compresión de listas)](02_List_comprehension.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Comprensión de listas)](02_List_comprehension.md)
 

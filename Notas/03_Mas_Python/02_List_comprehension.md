@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (1 El módulo collections)](01_Collections.md) \| [Próximo (3 Objects)](03_Objects.md)
 
-# 3.2 Compresión de listas
+# 3.2 Comprensión de listas
 
 Una tarea que realizamos una y otra vez es procesar los elementos de una lista. En esta sección introducimos la definición de listas por compresión que es una herramienta potente para hacer exactamente eso.
 
@@ -178,10 +178,13 @@ O una con la info de las frutas que costaron más de $10000.
 >>>
 ```
 
-Observá que esta forma de escribir resulta análoga a las consultas a una base de datos SQL.
+Esta forma de escribir resulta análoga a las consultas a una base de datos con 
+SQL.
 
 ### Ejercicio 3.5: Extracción de datos
-Show how you could build a list of tuples `(name, cajones)` where `name` and `cajones` are taken from `camion`.
+usando un comprensión de listas
+
+**/mostrá qShow how you could build a list of tuples `(name, cajones)` where `name` and `cajones` are taken from `camion`.
 
 ```python
 >>> name_cajones =[ (s['name'], s['cajones']) for s in camion ]
