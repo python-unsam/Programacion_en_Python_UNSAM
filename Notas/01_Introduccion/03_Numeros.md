@@ -268,11 +268,11 @@ Modicá tu programa para que imprima una tabla mostrando el mes, el total pagado
 4 10736.44 497581.83
 5 13420.55 496970.98
 ...
-308 874705.88 3984.12
-309 877389.99 1316.61
-310 880074.1 -1362.02
-Total pagado 880074.1
-Meses 310
+308 874705.88 3478.83
+309 877389.99 809.21
+310 880074.1 -1871.53
+Total pagado:  880074.1
+Meses:  310
 ```
 
 ### Ejercicio 1.11: Bonus

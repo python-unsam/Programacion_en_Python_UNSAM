@@ -47,8 +47,8 @@ En tu máquina, arrancá el Python y usal como una calculadora para resolver el 
 ```python
 >>> 105/60
 1.75
->>> 20 * 0.6214
-12.428
+>>> 20 / 0.6214
+32.1853878339234
 ```
 
 tip: Usá el guión bajo (underscore, \_) para referirte al resultado del último cálculo.
@@ -57,7 +57,7 @@ tip: Usá el guión bajo (underscore, \_) para referirte al resultado del últim
 
 ```python
 >>> _/1.75
-7.101714285714285
+18.391650190813372
 ```
 
 ### Ejercicio 1.2: Obtener ayuda

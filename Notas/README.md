@@ -26,7 +26,7 @@ Este curso no es un curso introductorio de programación. Asumimos que ya tenés
 
 ## Consultas grupales
 
-Se inscribió mucha gente en este curso, por lo que no siempre podremos responder las consultas individualmente. Armamos un grupo de slack para poder plantear y responder dudas y problemas de una forma organizada. Te invitamos a sumarte siguiendo [este link](./Slack.md). El objetivo del grupo no es solo que los docentes podamos responder dudas sino también favorecer el intercambio entre les entudiantes.
+Se inscribió mucha gente en este curso, por lo que no siempre podremos responder las consultas individualmente. Armamos un grupo de slack para poder plantear y responder dudas y problemas de una forma organizada. Te invitamos a sumarte siguiendo [este link](./Slack.md). El objetivo del grupo no es solo que los docentes podamos responder dudas sino también favorecer el intercambio entre les estudiantes.
 
 ## Agradecimientos, antecedentes y licencias
 

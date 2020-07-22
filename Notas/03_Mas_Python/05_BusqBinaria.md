@@ -116,7 +116,7 @@ A continuación varias ejecuciones de prueba:
 ```
 
 **Pregunta**: En la línea `medio = (izq + der) // 2` efectuamos la división usando el operador `//` en lugar de `/`. ¿Qué pasa su usáramos `/`?
-
+    
 ### ¿Cuántas comparaciones hace este programa?
 
 Para responder esto pensemos en el peor caso, es decir, que se descartaron
@@ -159,6 +159,13 @@ comparaciones, o sea ¡no más que 20 comparaciones!.
 algoritmo de búsqueda binaria, cuyo comportamiento es proporcional al
 *logaritmo* de la cantidad de elementos de la lista, y por lo tanto
 muchísimo más eficiente que la búsqueda lineal, espcialmente si la lista es larga.
+
+### Ejercicio 3.11: Búsqueda secuencial
+Búsqueda secuencial `b_sec.py`
+
+### Ejercicio 3.12: Búsqueda binaria
+Búsqueda binaria `b_bin.py`
+
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Numpy)](04_Numpy.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)

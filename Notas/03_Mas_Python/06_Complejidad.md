@@ -72,7 +72,7 @@ Uno de los problemas de la búsqueda binaria es que requiere que la lista esté 
 
 Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un elemento y *e*. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
 
-Usá la función `busqueda_binaria(l,e)` del Ejercicio ? para determinar si $e$ se encuentra en $l$.
+Usá la función `busqueda_binaria(l,e)` del [Ejercicio 3.12](../03_Mas_Python/05_BusqBinaria.md#ejercicio-312-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Búsqueda binaria)](05_BusqBinaria.md) \| [Próximo (7 Numpy básico)](07_NumPy_Arrays.md)
 
