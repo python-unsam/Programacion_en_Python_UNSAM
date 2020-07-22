@@ -24,13 +24,7 @@ Observación: Si el enunciado de un ejercicio te pide que lo corras con un input
 
 Por último te recordamos que si te quedaron dudas, querés discutir algún tema de interés o pedirnos a los docentes que resolvamos un ejercicio particular para la próxima clase, podés hacelo en el [grupo de Slack](../Slack.md).
 
-### Los Ejercicios Opcionales
 
-Para profundizar en algunos conceptos y explorar intereses y aplicaciones particular incluímos en este curso una serie de ejercicios opcionales al final de cada clase.
-
-En este caso se trata de dos métodos numéricos para buscar raíces reales de funciones. Uno es el método de bisección que para encontrar una raíz de una función *f* de la que se sabe que *f(a)<0* y que *f(b)>0*. El método evalúa la función en el medio del intervalo *c=(a+b)/2* y, salvo que haya encontrado la raíz (*f(c)=0*), se queda con la mitad del intervalo en el que la función cambia de signo. Iterando este proceso se va formando un *encaje de intervalos*que siempre contiene un cero de la función (por ser contínua) y cuyo tamaño se reduce tanto como uno quiera (iterando suficientes veces) hasta tener una expresion decimal de la raíz buscada con tanta precisión como se quiera.
-
-El otro es el método de Newton-Raphson que se basa en usar la recta tangente a la función para determinar una aproximación cada vez mejor a la raíz de la función *f*.
 
 [Contenidos](../Contenidos.md) \| [Anterior (8 Listas y búsqueda lineal)](08_IteradoresLista.md)
 

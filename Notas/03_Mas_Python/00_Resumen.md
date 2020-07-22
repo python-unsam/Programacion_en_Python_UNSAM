@@ -1,7 +1,10 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa_OSKI1/00_Resumen.md)
 
-# 3. Más sobre Python, Búsquedas eficientes y Numpy
+# 3. Más sobre Python, Numpy y búsquedas eficientes.
 En esta clase introducimos las colecciones de Python y profundizamos un poco en el concepto de objeto que subyace toda la estructura del lenguaje Python.
+Luego mostramos el módulo `numpy` y su tipo de datos `array` . Finalmente retomamos nuestra discusión sobre algoritmos de búsqueda e introducimos la búsqueda binaria.
+
+De postre refritamos un ejercicio lindísimo del curso [Exactas Programa]() que te guia para que resuelvas la pregunta ¿cuántos paquetes de figuritas tengo que comprar para llenar un álbum? con un enfoque estadístico usando el [método de Montecarlo](https://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo).
 
 
 

@@ -66,35 +66,52 @@ A continuación varias ejecuciones de prueba:
 
 ```python
 >>> busqueda_binaria([1, 3, 5], 0)
-[DEBUG] izq: 0 der: 2 medio: 1
-[DEBUG] izq: 0 der: 0 medio: 0
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  2 |  1
+[DEBUG]   0 |  0 |  0
 -1
 >>> busqueda_binaria([1, 3, 5], 1)
-[DEBUG] izq: 0 der: 2 medio: 1
-[DEBUG] izq: 0 der: 0 medio: 0
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  2 |  1
+[DEBUG]   0 |  0 |  0
 0
 >>> busqueda_binaria([1, 3, 5], 2)
-[DEBUG] izq: 0 der: 2 medio: 1
-[DEBUG] izq: 0 der: 0 medio: 0
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  2 |  1
+[DEBUG]   0 |  0 |  0
 -1
 >>> busqueda_binaria([1, 3, 5], 3)
-[DEBUG] izq: 0 der: 2 medio: 1
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  2 |  1
+[DEBUG]   2 |  2 |  2
 1
 >>> busqueda_binaria([1, 3, 5], 5)
-[DEBUG] izq: 0 der: 2 medio: 1
-[DEBUG] izq: 2 der: 2 medio: 2
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  2 |  1
+[DEBUG]   2 |  2 |  2
 2
 >>> busqueda_binaria([1, 3, 5], 6)
-[DEBUG] izq: 0 der: 2 medio: 1
-[DEBUG] izq: 2 der: 2 medio: 2
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  2 |  1
+[DEBUG]   2 |  2 |  2
 -1
 >>> busqueda_binaria([], 0)
+[DEBUG] izq |der |medio
 -1
 >>> busqueda_binaria([1], 1)
-[DEBUG] izq: 0 der: 0 medio: 0
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  0 |  0
 0
 >>> busqueda_binaria([1], 3)
-[DEBUG] izq: 0 der: 0 medio: 0
+[DEBUG] izq |der |medio
+[DEBUG]   0 |  0 |  0
+-1
+>>> busqueda_binaria([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23],18)
+[DEBUG] izq |der |medio
+[DEBUG]   0 | 11 |  5
+[DEBUG]   6 | 11 |  8
+[DEBUG]   9 | 11 | 10
+[DEBUG]   9 |  9 |  9
 -1
 ```
 
@@ -112,17 +129,16 @@ tanto, la cantidad de comparaciones que hacen con el valor buscado es
 aproximadamente igual a la cantidad de pasos necesarios para llegar a un
 segmento de tamaño 1.
 Veamos el caso más sencillo para razonar, y supongamos que la longitud de la
-lista es una potencia de 2, es decir `len(lista)`*= 2^k*:
+lista es una potencia de 2, digamos `len(lista)`*= 2^k*:
 
-1. Luego del primer paso, el segmento a tratar es de tamaño *2^k*.
-2. Luego del segundo paso, el segmento a tratar es de tamaño *2^(k-1)*.
-3. Luego del tercer paso, el segmento a tratar es de tamaño *2^(k-2)*.
+1. Antes del primer paso, el segmento a tratar es de tamaño *2^k*.
+2. Antes del segundo paso, el segmento a tratar es de tamaño *2^(k-1)*.
+3. Antes del tercer paso, el segmento a tratar es de tamaño *2^(k-2)*.
 ...
-4. Luego del paso *k*, el segmento a tratar es de tamaño *2^(k-k)=1*.
+4. Antes del paso *k*, el segmento a tratar es de tamaño *2^(k-k)=2^0=1*.
 
 
-Por lo tanto este programa hace aproximadamente *k* comparaciones con el valor
-buscado cuando `len(lista)`*= 2^k*.
+Por lo tanto este programa hace a lo sumo (en el peor caso) *k* comparaciones con el valor buscado cuando `len(lista)`*= 2^k*.
 Pero si despejamos *k* de la ecuación anterior, podemos ver que este programa
 realiza aproximadamente `log2(len(lista)` comparaciones.
 
