@@ -13,11 +13,10 @@ De postre refritamos un ejercicio lindísimo del curso [Exactas Programa]() que 
 * [3.3 Objects](03_Objects.md)
 * [3.4 Numpy](04_Numpy.md)
 * [3.5 Búsqueda binaria](05_BusqBinaria.md)
-* [3.6 Algoritmos de búsqueda](06_5_BSec_BBin_Viejo.md)
-* [3.7 Complejidad de algoritmos](06_Complejidad.md)
-* [3.8 Figuritas](07_NumPy_Arrays.md)
-* [3.9 Cierre](08_Cierre.md)
-* [3.10 El album de Figuritas](09_Figuritas.md)
+* [3.6 Complejidad de algoritmos](06_Complejidad.md)
+* [3.7 Numpy básico](07_NumPy_Arrays.md)
+* [3.8 Cierre](08_Cierre.md)
+* [3.9 El album de Figuritas](09_Figuritas.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa_OSKI1/00_Resumen.md)

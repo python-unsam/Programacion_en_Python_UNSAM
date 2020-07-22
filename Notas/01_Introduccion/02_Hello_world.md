@@ -308,7 +308,7 @@ Si le pasás más de un valor al `print` los separa con espacios.
 
 ```python
 name = 'Juana'
-print('Mi nmbre es', name) # Imprime el texto 'Mi nombre es Juana'
+print('Mi nombre es', name) # Imprime el texto 'Mi nombre es Juana'
 ```
 
 `print()` siempre termina la línea impresa pasando a la sugiente.
@@ -335,7 +335,7 @@ print('Mi nombre es', 'Juana')
 Este código va a imprimir:
 
 ```code
-Hola Mi nombre es Jake
+Hola Mi nombre es Juana
 ```
 
 ### Ingreso de valores por teclado
@@ -349,7 +349,7 @@ print('Tu nombre es', name)
 
 `input` imprime el texto que le pases como parámetro y espera una respuesta. Es útil para programas pequeños, ejercitarse o para debuguear un código. Casi no se lo usa en programas reales.
 
-### El comando pass 
+### El comando pass
 
 A veces es conveniente especificar un bloque de código que no haga nada. El comando `pass` se usa para eso.
 

@@ -1,10 +1,10 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Figuritas)](07_NumPy_Arrays.md) \| [Próximo (10 El album de Figuritas)](09_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Numpy básico)](07_NumPy_Arrays.md) \| [Próximo (9 El album de Figuritas)](09_Figuritas.md)
 
-# 3.9 Cierre
+# 3.8 Cierre
 
 Cierre clase
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Figuritas)](07_NumPy_Arrays.md) \| [Próximo (10 El album de Figuritas)](09_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Numpy básico)](07_NumPy_Arrays.md) \| [Próximo (9 El album de Figuritas)](09_Figuritas.md)
 

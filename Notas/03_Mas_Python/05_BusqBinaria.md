@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Numpy)](04_Numpy.md) \| [Próximo (6 Algoritmos de búsqueda)](06_5_BSec_BBin_Viejo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Numpy)](04_Numpy.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
 
 # 3.5 Búsqueda binaria
 
@@ -161,5 +161,5 @@ algoritmo de búsqueda binaria, cuyo comportamiento es proporcional al
 muchísimo más eficiente que la búsqueda lineal, espcialmente si la lista es larga.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Numpy)](04_Numpy.md) \| [Próximo (6 Algoritmos de búsqueda)](06_5_BSec_BBin_Viejo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Numpy)](04_Numpy.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
 

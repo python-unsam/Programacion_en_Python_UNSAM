@@ -169,13 +169,13 @@ x < y      Menor que
 x <= y     Menor o igual que
 x > y      Mayor que
 x >= y     Mayor o igual que
-x == y     Igual a 
-x != y     No igual a 
+x == y     Igual a
+x != y     No igual a
 ```
 
-Observá que el `==` se usa para comparar dos elementos mientras que el `=` se usa para asignar un valor a una variable. Son símbolos distintos que cumplen funciones diferentes. 
+Observá que el `==` se usa para comparar dos elementos mientras que el `=` se usa para asignar un valor a una variable. Son símbolos distintos que cumplen funciones diferentes.
 
-Podés formar expresiones booleanas más complejas usando 
+Podés formar expresiones booleanas más complejas usando
 
 `and`, `or`, `not`
 
@@ -233,7 +233,7 @@ while saldo > 0:
     saldo = saldo * (1+tasa/12) - pago_mensual
     total_pagado = total_pagado + pago_mensual
 
-print('Total pagado', total_pagado)
+print('Total pagado', round(total_pagado, 2))
 ```
 
 Copiá este código y correlo. Deberías obtener `966279.6` como respuesta.
@@ -278,7 +278,7 @@ Meses 310
 ### Ejercicio 1.11: Bonus
 Ya que estamos, corregí el código anterior de forma que el pago del último mes se ajuste a lo adeudado.
 
-Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `Ejercicios`. Vamos a volver a trabar con él.
+Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `Ejercicios`. Vamos a volver a trabajar con él.
 
 ### Ejercicio 1.12: Un misterio
 Las funciones `int()` y `float()` pueden usarse para convertir números. Por ejemplo,
