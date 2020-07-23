@@ -35,7 +35,7 @@ f.close()
 g.close()
 ```
 
-Es importante cerrar adecuadamente los archivos y es bastante fácil olvidarse. Por eso, preferimos abrir los archivos con el comando `with` de la siguiente forma.
+Es importante cerrar adecuadamente los archivos y es bastante fácil olvidarse (puede que el programa termine y no se termine de guardar bien). Por eso, preferimos abrir los archivos con el comando `with` de la siguiente forma.
 
 ```python
 with open(nombre_archivo, 'rt') as file:

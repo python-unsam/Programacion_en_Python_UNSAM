@@ -19,8 +19,8 @@ La comprensión de listas crea un una nueva lista aplicando una operación a cad
 Otro ejemplo:
 
 ```python
->>> names = ['Edmundo', 'Juana']
->>> a = [name.lower() for name in names]
+>>> nombres = ['Edmundo', 'Juana']
+>>> a = [nombre.lower() for nombre in nombres]
 >>> a
 ['edmundo', 'juana']
 >>>
@@ -123,7 +123,7 @@ Calculá el costo total de la carga del camión en un solo comando.
 Luego, usando la variable `precios` calculá también el valor en el mercado de la carga del camión usando una sola línea de código.
 
 ```python
->>> value = sum([ s['cajones'] * precios[s['name']] for s in camion ])
+>>> value = sum([ s['cajones'] * precios[s['nombre']] for s in camion ])
 >>> value
 28686.1
 >>>
@@ -155,17 +155,17 @@ Primero, generá una lista con la info de todas las frutas que tienen más de 10
 ```python
 >>> mas100 = [ s for s in camion if s['cajones'] > 100 ]
 >>> mas100
-[{'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'name': 'Mandarina', 'cajones': 200}]
+[{'precio': 83.44, 'nombre': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'nombre': 'Mandarina', 'cajones': 200}]
 >>>
 ```
 
 Ahora, una con la info sobre cajones de Mandarina y Naranja.
 
 ```python
->>> myn = [ s for s in camion if s['name'] in {'Mandarina','Naranja'} ]
+>>> myn = [ s for s in camion if s['nombre'] in {'Mandarina','Naranja'} ]
 >>> myn
-[{'precio': 91.1, 'name': 'Naranja', 'cajones': 50}, {'precio': 51.23, 'name': 'Mandarina', 'cajones': 200},
-  {'precio': 65.1, 'name': 'Mandarina', 'cajones': 50}, {'precio': 70.44, 'name': 'Naranja', 'cajones': 100}]
+[{'precio': 91.1, 'nombre': 'Naranja', 'cajones': 50}, {'precio': 51.23, 'nombre': 'Mandarina', 'cajones': 200},
+  {'precio': 65.1, 'nombre': 'Mandarina', 'cajones': 50}, {'precio': 70.44, 'nombre': 'Naranja', 'cajones': 100}]
 >>>
 ```
 
@@ -174,7 +174,7 @@ O una con la info de las frutas que costaron más de $10000.
 ```python
 >>> cost10k = [ s for s in camion if s['cajones'] * s['precio'] > 10000 ]
 >>> cost10k
-[{'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'name': 'Mandarina', 'cajones': 200}]
+[{'precio': 83.44, 'nombre': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'nombre': 'Mandarina', 'cajones': 200}]
 >>>
 ```
 
@@ -182,67 +182,59 @@ Esta forma de escribir resulta análoga a las consultas a una base de datos con
 SQL.
 
 ### Ejercicio 3.5: Extracción de datos
-usando un comprensión de listas
-
-**/mostrá qShow how you could build a list of tuples `(name, cajones)` where `name` and `cajones` are taken from `camion`.
+Usando un comprensión de listas, construí una lista de tuplas `(nombre, cajones)` que indiquen la cantidad de cajones de cada fruta tomando los datos de `camion`.
 
 ```python
->>> name_cajones =[ (s['name'], s['cajones']) for s in camion ]
->>> name_cajones
+>>> nombre_cajones =[ (s['nombre'], s['cajones']) for s in camion ]
+>>> nombre_cajones
 [('Lima', 100), ('Naranja', 50), ('Caqui', 150), ('Mandarina', 200), ('Durazno', 95), ('Mandarina', 50), ('Naranja', 100)]
 >>>
 ```
 
-If you change the the square brackets (`[`,`]`) to curly braces (`{`, `}`), you get something known as a set comprehension.
-This gives you unique or distinct values.
+Si cambiás los corchetes  (`[`,`]`) por llaves (`{`, `}`), obtenés algo que se conoce como comprensión de conjuntos. Vas a obtener valores únicos.
 
-For example, this determines the set of unique cajon names that appear in `camion`:
+Por ejemplo, si quisieras un listado de las frutas en el camión pordías usar:
 
 ```python
->>> names = { s['name'] for s in camion }
->>> names
+>>> nombres = { s['nombre'] for s in camion }
+>>> nombres
 { 'Lima', 'Durazno', 'Naranja', 'Mandarina', 'Caqui'] }
 >>>
 ```
 
-If you specify `key:value` pairs, you can build a dictionary.
-For example, make a dictionary that maps the name of a cajon to the total number of cajones held.
+Si especificas pares `clave:valor`, podés construir un diccionario. Por ejemplo, si queremos un diccionario con el total de cada fruta en el camión podemos comenzar con
 
 ```python
->>> holdings = { name: 0 for name in names }
+>>> holdings = { nombre: 0 for nombre in nombres }
 >>> holdings
 {'Lima': 0, 'Durazno': 0, 'Naranja': 0, 'Mandarina': 0, 'Caqui': 0}
 >>>
 ```
-
-This latter feature is known as a **dictionary comprehension**. Let’s tabulate:
+que es una comprensión de diccionario. Y seguir sumando los cajones:
 
 ```python
 >>> for s in camion:
-        holdings[s['name']] += s['cajones']
+        holdings[s['nombre']] += s['cajones']
 
 >>> holdings
 { 'Lima': 100, 'Durazno': 95, 'Naranja': 150, 'Mandarina':250, 'Caqui': 150 }
 >>>
 ```
 
-Try this example that filters the `precios` dictionary down to only
-those names that appear in the camion:
+Otro ejemplo útil podría ser generar un diccionario de precios de venta de aquellos productos que están efectivamente cargados en el camión:
 
 ```python
->>> camion_precios = { name: precios[name] for name in names }
+>>> camion_precios = { nombre: precios[nombre] for nombre in nombres }
 >>> camion_precios
 {'Lima': 9.22, 'Durazno': 13.48, 'Naranja': 106.28, 'Mandarina': 20.89, 'Caqui': 35.46}
 >>>
 ```
 
-### Ejercicio 3.6: Extracting Data From CSV Files
-Knowing how to use various combinations of list, set, and dictionary
-comprehensions can be useful in various forms of data processing.
-Here’s an example that shows how to extract selected columns from a
-CSV file.
+### Ejercicio 3.6: Estraer datos de una arhcivo CSVFiles
+Saber usar combinaciones de comprensión de listas diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. 
+Aquí te mostramos una ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
 
-First, read a row of header information from a CSV file:
+Primero, leamos el encabezado (header) del archivo CSV:
 
 ```python
 >>> import csv
@@ -250,18 +242,18 @@ First, read a row of header information from a CSV file:
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> headers
-['name', 'date', 'time', 'cajones', 'precio']
+['nombre', 'fecha', 'hora', 'cajones', 'precio']
 >>>
 ```
 
-Next, define a variable that lists the columns that you actually care about:
+Luego, definamos una lista que tenga las columnas que nos importan:
 
 ```python
->>> select = ['name', 'cajones', 'precio']
+>>> select = ['nombre', 'cajones', 'precio']
 >>>
 ```
 
-Now, locate the indices of the above columns in the source CSV file:
+Ubiquemos los índices de esas columnas en el CSV:
 
 ```python
 >>> indices = [ headers.index(ncolumna) for ncolumna in select ]
@@ -270,47 +262,34 @@ Now, locate the indices of the above columns in the source CSV file:
 >>>
 ```
 
-Finally, read a row of data and turn it into a dictionary using a
-dictionary comprehension:
+Y finalmente leamos los datos y armemos un diccionario usando comprensión de diccionarios:
 
 ```python
 >>> row = next(rows)
 >>> record = { ncolumna: row[index] for ncolumna, index in zip(select, indices) }   # dict-comprehension
 >>> record
-{'precio': '32.20', 'name': 'Lima', 'cajones': '100'}
+{'precio': '32.20', 'nombre': 'Lima', 'cajones': '100'}
 >>>
 ```
 
-If you’re feeling comfortable with what just happened, read the rest
-of the file:
+No es trivial este comando. El comando es sintáctricamente muy compacto, pero se conceptualmente (un poco) complejo. Cuando te sientas cómode con esta lectura de una linea del archivo (si no pasa, tranca, podemos seguir sin esto), leé el resto:
 
 ```python
 >>> camion = [ { ncolumna: row[index] for ncolumna, index in zip(select, indices) } for row in rows ]
 >>> camion
-[{'precio': '91.10', 'name': 'Naranja', 'cajones': '50'}, {'precio': '83.44', 'name': 'Caqui', 'cajones': '150'},
-  {'precio': '51.23', 'name': 'Mandarina', 'cajones': '200'}, {'precio': '40.37', 'name': 'Durazno', 'cajones': '95'},
-  {'precio': '65.10', 'name': 'Mandarina', 'cajones': '50'}, {'precio': '70.44', 'name': 'Naranja', 'cajones': '100'}]
+[{'precio': '91.10', 'nombre': 'Naranja', 'cajones': '50'}, {'precio': '83.44', 'nombre': 'Caqui', 'cajones': '150'},
+  {'precio': '51.23', 'nombre': 'Mandarina', 'cajones': '200'}, {'precio': '40.37', 'nombre': 'Durazno', 'cajones': '95'},
+  {'precio': '65.10', 'nombre': 'Mandarina', 'cajones': '50'}, {'precio': '70.44', 'nombre': 'Naranja', 'cajones': '100'}]
 >>>
 ```
 
-Oh my, you just reduced much of the `leer_camion()` function to a single statement.
+¡Por las barbas de mi abuelo! Acabamos de reducir casi toda la función `leer_camion()` a un solo comando.
 
-### Commentary
+### Comentario
 
-List comprehensions are commonly used in Python as an efficient means
-for transforming, filtering, or collecting data.  Due to the syntax,
-you don’t want to go overboard—try to keep each list comprehension as
-simple as possible.  It’s okay to break things into multiple
-steps. For example, it’s not clear that you would want to spring that
-last example on your unsuspecting co-workers.
+La comprensión de listas es comunmente usuada en Python como una forma eficiente de transformar, filtrar o recolectar datos. Debido a su sintaxis poderosa, tratá de no pasarte con su uso: mantené cada comando tan simple como sea posible. Está perfecto descomponer algo complejo en múltiples pasos. Por ejemplo, no es claro que quieras compartir el último ejemplo con otras personas desprevenidas.  
 
-That said, knowing how to quickly manipulate data is a skill that’s
-incredibly useful.  There are numerous situations where you might have
-to solve some kind of ecepcional problem involving data imports, exports,
-extraction, and so forth.  Becoming a guru master of list
-comprehensions can substantially reduce the time spent devising a
-solution.  Also, don't forget about the `collections` module.
-
+Dicho esto, saber manipular datos rápidamente es una habilidad increíblemente útil. Hay numerosas situaciones donde puede que tengas que resolver algún tipo de problema excepcional para importar, extraer o exportar datos. La comprensión de listas te puede ahorrar muchísimo tiempo en esas tareas. Y no te olvides del módulo `collections` que también puede serte útil en este contexto.
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 El módulo collections)](01_Collections.md) \| [Próximo (3 Objects)](03_Objects.md)
 

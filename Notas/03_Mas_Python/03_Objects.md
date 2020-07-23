@@ -2,29 +2,26 @@
 
 # 3.3 Objects
 
-[oski]: # (Hay una referencia a esta seccion en Pasaje de Argumentos de la clase 4 ... )
 
+En esta sección introducimos algunos conceptos sobre el modelo de objeto interno de Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y chequeo de tipos.
 
-This section introduces more details about Python's internal object model and
-discusses some matters related to memory management, copying, and type checking.
+### Asignaciones
 
-### Assignment
-
-Many operations in Python are related to *assigning* or *storing* values.
+Muchas operaciones en Python están relacionas a *asignar* o *guardar* valores.
 
 ```python
-a = value         # Assignment to a variable
-s[n] = value      # Assignment to a list
-s.append(value)   # Appending to a list
-d['key'] = value  # Adding to a dictionary
+a = valor         # Asignación a una variable
+s[n] = valor      # Asignación a una lista
+s.append(valor)   # Agregar a una list
+d['key'] = valor  # Agregar a una diccionario
 ```
 
-*A caution: assignment operations **never make a copy** of the value being assigned.*
-All assignments are merely reference copies (or pointer copies if you prefer).
+*Ojo: las operaciones de asignación **nunca hacen una copia** del valor asignado.*
+Las asignaciones son simplemente copias de la referencias (o copias del puntero, si preferís).
 
-### Assignment example
+### Ejemplo de asignación
 
-Consider this code fragment.
+Considerá este fragemnto de código.
 
 ```python
 a = [1,2,3]
@@ -32,13 +29,11 @@ b = a
 c = [a,b]
 ```
 
-A picture of the underlying memory operations. In this example, there
-is only one list object `[1,2,3]`, but there are four different
-references to it.
+Un gráfico de las operaciones de memoria suyacentes. En este ejemplo, hay solo un objeto lista `[1,2,3]`, pero hay cuatro referencias a él.
 
-![References](references.png)
+![Referencias](referencias.png)
 
-This means that modifying a value affects *all* references.
+Esto significa que al modificar un valor modificamos *todas* las referencias.
 
 ```python
 >>> a.append(999)
@@ -51,13 +46,11 @@ This means that modifying a value affects *all* references.
 >>>
 ```
 
-Notice how a change in the original list shows up everywhere else
-(yikes!).  This is because no copies were ever made. Everything is
-pointing to the same thing.
+Observá cómo un cambio en la lista original desencadena cambios en todas las demás variables (ouch!). Esto es porque no se hizo ninguna copia. Todos son punteros a la misma cosa.
 
-### Reassigning values
+### Reasignar valores
 
-Reassigning a value *never* overwrites the memory used by the previous value.
+La reasignación de valores *nunca* sobreescribe la memoria ocupada por un valor anterior.
 
 ```python
 a = [1,2,3]
@@ -65,24 +58,20 @@ b = a
 a = [4,5,6]
 
 print(a)      # [4, 5, 6]
-print(b)      # [1, 2, 3]    Holds the original value
+print(b)      # [1, 2, 3]    Mantiene el valor original
 ```
 
-Remember: **Variables are names, not memory locations.**
+Acordate: **Las variables son nombre, no ubicaciones en la memoria.**
 
-### Some Dangers
+### Peligros
 
-If you don't know about this sharing, you will shoot yourself in the
-foot at some point.  Typical scenario. You modify some data thinking
-that it's your own private copy and it accidentally corrupts some data
-in some other part of the program.
+Si no te explican esto, tarde o temprano te trae problemas. Un típico ejemplo es cuando cambiás un dato pensando que es una copia privada y, sin querer, esto corrompe los datos en otra parte del programa.
 
-*Comment: This is one of the reasons why the primitive datatypes (int,
- float, string) are immutable (read-only).*
+*Comentario: Esta es una de las razones por las que los tipos de datos primitivos (int,  float, string) son immutable (de sólo lectura).*
 
-### Identity and References
+### Identidad y referencias
 
-Use the `is` operator to check if two values are exactly the same object.
+Podés usar el operador `is` (es) para verificar si dos valores corresponden al mismo objeto.
 
 ```python
 >>> a = [1,2,3]
@@ -92,8 +81,7 @@ True
 >>>
 ```
 
-`is` compares the object identity (an integer).  The identity can be
-obtained using `id()`.
+`is` compara la identidad del objeto (un entero).  esta identidad tambien la podés obtener usando `id()`.
 
 ```python
 >>> id(a)
@@ -103,8 +91,7 @@ obtained using `id()`.
 >>>
 ```
 
-Observación: It is almost always better to use `==` for checking objects.  The behavior
-of `is` is often unexpected:
+Observación: Para ver si dos valores son iguales, es mejor usar el `==`. El comportamiento de `is` puede dar resultados inesperados:
 
 ```python
 >>> a = [1,2,3]
@@ -119,18 +106,28 @@ True
 >>>
 ```
 
-### Shallow copies
+### Copias playas
 
-Lists and dicts have methods for copying.
+Las listas y diccionarios tienen metodos para hacer copias (no meras referencias, copias, duplicados):
 
 ```python
 >>> a = [2,3,[100,101],4]
->>> b = list(a) # Make a copy
+>>> b = list(a) # Hacer una copia
 >>> a is b
 False
 ```
 
-It's a new list, but the list items are cajond.
+Ahora `b` es una nueva lista. 
+
+```python
+>>> a.append(5)
+>>> a
+[2, 3, [100, 101], 4, 5]
+>>> b
+[2, 3, [100, 101], 4]
+```
+
+A pesar de esto, los elementos de `a` y de `b` siguen siendo compartidos.
 
 ```python
 >>> a[2].append(102)
@@ -142,15 +139,16 @@ True
 >>>
 ```
 
-For example, the inner list `[100, 101, 102]` is being cajond.
-This is known as a shallow copy.  Here is a picture.
+En este ejemplo, la lista interna `[100, 101, 102]` es compartida por ambas variables. La copia que hicimos con el comando `b = list(a)` es un *copia playa* (shallow copy, playa significa *poco profunda*).
+Mirá este gráfico.
 
 ![Shallow copy](shallow.png)
 
+La lista interna está siendo compartida aún.
+
 ### Deep copies
 
-Sometimes you need to make a copy of an object and all the objects contained within it.
-You can use the `copy` module for this:
+A veces vas a necesitar hacer una copia de un objeto así como de todos los objetos que contenga. Llamamaos a esto una *copia pofunda* (deep copy) Podés usar el módulo `copy` para esto:
 
 ```python
 >>> a = [2,3,[100,101],4]
@@ -164,10 +162,9 @@ False
 >>>
 ```
 
-### Names, Values, Types
+### Nombre, vlaores y tipos
 
-Variable names do not have a *type*. It's only a name.
-However, values *do* have an underlying type.
+Los nombres de variables no tienen un tipo asociado. Solo son nombres. Pero los valores sí tiene un tipo subyacente.
 
 ```python
 >>> a = 42
@@ -178,39 +175,31 @@ However, values *do* have an underlying type.
 <type 'str'>
 ```
 
-`type()` will tell you what it is. The type name is usually used as a function
-that creates or converts a value to that type.
+`type()` te dice el tipo del valor. Se usa como una función que transofrma un valor en un tipo.
 
-### Type Checking
+### Chequeo de tipos
 
-How to tell if an object is a specific type.
+Podés verificar si un objeto es una instancia de cierto tipo.
 
 ```python
 if isinstance(a, list):
     print('a is a list')
 ```
 
-Checking for one of many possible types.
+O incluso si su tipo está entre varios tipos.
 
 ```python
 if isinstance(a, (list,tuple)):
     print('a is a list or tuple')
 ```
 
-*Caution: Don't go overboard with type checking. It can lead to
-excessive code complexity.  Usually you'd only do it if doing
-so would prevent common mistakes made by others using your code.
-*
+*Cuidado: Demasiado chequeo de tipos puede resultar en un código excesivamente complejo. Típicamente lo usás para evitar errores comunes cometidos por otros usuarios de tu código.*
 
-### Everything is an object
+### Todo es un objeto
 
-Numbers, strings, lists, functions, exceptions, classes, instances,
-etc. are all objects.  It means that all objects that can be named can
-be passed around as data, placed in containers, etc., without any
-restrictions.  There are no *special* kinds of objects.  Sometimes it
-is said that all objects are "first-class".
+Números, cadenas, listas, funciones, excepciones, clases, instancias, etc. son todes objetos. Esto significa que todos los objetos que pueden ser nombrados pueden ser pasados como datos, ubicados en contenedors, etc. sin restricciones. No hay objetos especiales en Python. Todos los objetos viajan en primera clase.
 
-A simple example:
+Un ejemplo simple:
 
 ```python
 >>> import math
@@ -231,9 +220,8 @@ Failed!
 >>>
 ```
 
-Here, `items` is a list containing a function, a module and an
-exception.  You can directly use the items in the list in place of the
-original names:
+Acá, `items` es una lista que tiene una función, un módulo y una
+excepción. Si, es un ejemplo raro. Pero es un ejemplo al fin. Podés usar los elementos de la lista en lugar de los nombres originales:
 
 ```python
 items[0](-45)       # abs
@@ -241,7 +229,7 @@ items[1].sqrt(2)    # math
 except items[2]:    # ValueError
 ```
 
-With great power comes responsibility.  Just because you can do that doesn't mean you should.
+Con un gran poder viene siempre una gran responsabilidad. Que puedas no significa que debas hacer este tipo de cosas.
 
 ## Ejercicios
 

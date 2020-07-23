@@ -69,11 +69,11 @@ f = a[3:8]    # 'lo wo'
 g = a[-5:]    # 'world'
 ```
 
-El caracter que corresponde al último índice no se incluye. Si un extremo no se especifica, significa que es *desde el comeinzo* o *hasta el final*, respectivamente.
+El caracter que corresponde al último índice no se incluye. Si un extremo no se especifica, significa que es *desde el comienzo* o *hasta el final*, respectivamente.
 
 ### Operaciones con cadenas
 
-Concatenación, longitud, pertenecia y replicación.
+Concatenación, longitud, pertenencia y replicación.
 
 ```python
 # Concatenación (+)
@@ -184,7 +184,7 @@ Las f-Strings son cadenas en las que ciertas expresiones son formateadas
 >>>
 ```
 
-**Nota: Esto requiere Python 3.6 o uno más nuevo.**  
+**Nota: Esto requiere Python 3.6 o uno más nuevo.**
 El significado de los códigos lo veremos más adelante.
 
 ## Ejercicios

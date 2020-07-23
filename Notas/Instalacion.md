@@ -14,7 +14,7 @@ Algunes pueden querer hacer este curso usando el entorno de las Jupyter Notebook
 
 El curso está alojado en un repositorio github. Lo vamos escribiendo a medida que pasa el tiempo. Por eso no te recomendamos clonarlo aún. Preferimos que lo hagas en todo caso hacia el final del curso, cuando los contenidos estén más estables. Por ese mismo motivo no te recomendamos adelantarte mucho en los contenidos. Por más que subamos clases por adelantado, las estaremos cambiando frecuentemente. 
 
-Sí te recomendamos bajarte y descomprimir el archivo [Ejercicios.zip](./Ejercicios.zip). Este archivo tiene una carpeta `/Ejercicios` donde esperamos que hagan los ejercicios del curso y un subdirectorio `/Ejercicios/Data` con algunos archivos de datos que usaremos en los ejemplos y ejercicios. Lo ideal es que te bajes esto a tu máquina y crees tus programas `.py` en la carptea `/Ejercicios`.
+Sí te recomendamos bajarte y descomprimir el archivo [Ejercicios.zip](./Ejercicios.zip). Este archivo tiene una carpeta `/Ejercicios` donde esperamos que hagan los ejercicios del curso y un subdirectorio `/Ejercicios/Data` con algunos archivos de datos que usaremos en los ejemplos y ejercicios. Lo ideal es que te bajes esto a tu máquina y crees tus programas `.py` en la carpeta `/Ejercicios`.
 
 Además, en el repo habrá un directorio `/Soluciones` que tendrá soluciones completas a algunos ejercicios seleccionados. Miralos libremente si necesitás una ayuda, pero tené en cuenta que para sacarle jugo al curso lo ideal es que intentes escribir tu propia solución primero.
 
@@ -22,7 +22,7 @@ Además, en el repo habrá un directorio `/Soluciones` que tendrá soluciones co
 
 El intérprete de Python puede descargarse de [Python.org](https://www.python.org/). La idea es comenzar usando esta instalación básica las primeras clases. 
 
-Luego les propondremos usar el [Spyder](https://www.spyder-ide.org/) como entorno de desarrollo.  Spyder es un entorno de desarrollo de Python diseñado para científiquess, ingenieres y analistas de datos (para les que usen R, el Spyder es al Python como el R-Studio al R).
+Luego les propondremos usar el [Spyder](https://www.spyder-ide.org/) como entorno de desarrollo.  Spyder es un entorno de desarrollo de Python diseñado para científiques, ingenieres y analistas de datos (para les que usen R, el Spyder es al Python como el R-Studio al R).
 
 Una posiblidad es descargarse el [Anaconda](https://www.anaconda.com/products/individual) que es un distribución libre y abierta​ de los lenguajes Python y R, utilizada en ciencia de datos, y aprendizaje automático. La ventaja de esta descarga es que ya trae el Python, el Spyder y una serie de módulos preinstalados para trabajar con datos y aprendizaje automático.
 
