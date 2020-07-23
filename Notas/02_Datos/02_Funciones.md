@@ -197,7 +197,7 @@ Vamos a usar estas ideas aplicadas al procesamiento de un archivo CSV. ¿Qué pa
 Traceback (most recent call last):
     File "<stdin>", line 1, in <módulo>
     File "costo_camion.py", line 11, in costo_camion
-    ncajones    = int(fields[1])
+    ncajones = int(fields[1])
 ValueError: invalid literal for int() with base 10: ''
 >>>
 ```

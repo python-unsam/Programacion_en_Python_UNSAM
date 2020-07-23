@@ -75,7 +75,7 @@ for variable in secuencia:
         resultado.append(expresión)
 ```
 
-### Disgresión histórica
+### Digresión histórica
 
 La comprensión de listas viene de la matemática (definición de conjuntos por comprensión).
 

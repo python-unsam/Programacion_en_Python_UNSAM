@@ -109,10 +109,10 @@ Acá va una solución:
 
 ```python
 # obelisco.py
-grosor_billete  = 0.11 * 0.001 # 0.11 mm escrito en metros
+grosor_billete = 0.11 * 0.001 # 0.11 mm escrito en metros
 altura_obelisco = 67.5         # altura en metros
-num_billetes    = 1
-dia             = 1
+num_billetes = 1
+dia = 1
 
 while num_billetes * grosor_billete < altura_obelisco:
     print(dia, num_billetes, num_billetes * grosor_billete)
@@ -370,10 +370,10 @@ El siguiente fragmento de código está relacionado con el problema del obelisco
 ```python
 # obelisco.py
 
-grosor_billete  = 0.11 * 0.001 # 0.11 mm en metros
+grosor_billete = 0.11 * 0.001 # 0.11 mm en metros
 altura_obelisco = 67.5         # altura en metros
-num_billetes    = 1
-dia             = 1
+num_billetes = 1
+dia = 1
 
 while num_billetes * grosor_billete < altura_obelisco:
     print(dia, num_billetes, num_billetes * grosor_billete)

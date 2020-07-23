@@ -172,9 +172,9 @@ Usá `str()` para convertir cualquier valor a cadena. El resultado es una cadena
 Las f-Strings son cadenas en las que ciertas expresiones son formateadas
 
 ```python
->>> nombre  = 'Naranja'
+>>> nombre = 'Naranja'
 >>> cajones = 100
->>> precio  = 91.1
+>>> precio = 91.1
 >>> a = f'{nombre:>10s} {cajones:10d} {precio:10.2f}'
 >>> a
 '   Naranja        100      91.10'

@@ -139,14 +139,14 @@ True
 >>>
 ```
 
-En este ejemplo, la lista interna `[100, 101, 102]` es compartida por ambas variables. La copia que hicimos con el comando `b = list(a)` es un *copia playa* (shallow copy, playa significa *poco profunda*).
+En este ejemplo, la lista interna `[100, 101, 102]` es compartida por ambas variables. La copia que hicimos con el comando `b = list(a)` es un *copia playa* (playa en el sentido de *poco profunda*, en inglés se dice *shallow copy*).
 Mirá este gráfico.
 
-![Shallow copy](shallow.png)
+![Copias playas](shallow.png)
 
-La lista interna está siendo compartida aún.
+La lista interna sigue siendo compartida.
 
-### Deep copies
+### Copias profundas
 
 A veces vas a necesitar hacer una copia de un objeto así como de todos los objetos que contenga. Llamamaos a esto una *copia pofunda* (deep copy) Podés usar el módulo `copy` para esto:
 
@@ -221,7 +221,7 @@ Failed!
 ```
 
 Acá, `items` es una lista que tiene una función, un módulo y una
-excepción. Si, es un ejemplo raro. Pero es un ejemplo al fin. Podés usar los elementos de la lista en lugar de los nombres originales:
+excepción. Sé, este es un ejemplo raro. Pero es un ejemplo al fin. Podés usar los elementos de la lista en lugar de los nombres originales:
 
 ```python
 items[0](-45)       # abs
@@ -233,46 +233,39 @@ Con un gran poder viene siempre una gran responsabilidad. Que puedas no signific
 
 ## Ejercicios
 
-In this set of ejercicios, we look at some of the power that comes from first-class
-objects.
+En estos ejercicios mostramos algo de la potencia que tinene que todos los objetos sean de la misma jerarquía.
 
-### Ejercicio 3.7: First-class Data
-In the file `Data/camion.csv`, we read data organized as columns that look like this:
+### Ejercicio 3.7: Datos de primera clase
+En el archivo `Data/camion.csv`, leímos datos organizado en columnas que se ven así:
 
 ```csv
-name,cajones,precio
+nombre,cajones,precio
 "Lima",100,32.20
 "Naranja",50,91.10
 ...
 ```
 
-In previous code, we used the `csv` module to read the file, but still
-had to perform manual type conversions. For example:
+En las clases anteriores, usamo el módulo `csv` para leer el archivo, pero tuvimos igual que hacer converiones de tipo. Por ejemplo:
 
 ```python
 for row in rows:
-    name   = row[0]
+    nombre = row[0]
     cajones = int(row[1])
-    precio  = float(row[2])
+    precio = float(row[2])
 ```
 
-This kind of conversion can also be performed in a more clever manner
-using some list basic operations.
+Este tipo de conversiones puede hacerse de una manera más inteligente usando algunas operaciones de listas.
 
-Make a Python list that contains the names of the conversion functions
-you would use to convert each column into the appropriate type:
+Hagamos una lista de Python con los nombres de las funciones de conversión que necesitamso para convertir cada columna al tipo apropiado:
 
 ```python
 >>> types = [str, int, float]
 >>>
 ```
 
-The reason you can even create this list is that everything in Python
-is *first-class*.  So, if you want to have a list of functions, that’s
-fine.  The items in the list you created are functions for converting
-a value `x` into a given type (e.g., `str(x)`, `int(x)`, `float(x)`).
+Podés crear esta lista porque en Python todos los objetos son de la misma clase (de primera clase, deigamos). Por lo tanto, si querés tener funciones en una lista, no pasa nada. Los elementos de la lista que creaste son funciones que convierten un valor `x` en un tipo dado (`str(x)`, `int(x)`, `float(x)`).
 
-Now, read a row of data from the above file:
+Ahora, leé una fila de datos del archivo anterior:
 
 ```python
 >>> import csv
@@ -285,8 +278,7 @@ Now, read a row of data from the above file:
 >>>
 ```
 
-As noted, this row isn’t enough to do calculations because the types
-are wrong. For example:
+Como ya dijimos, con esta fila no podemos hacer operaciones oprque los tipos son incorrectos. Por ejemplo:
 
 ```python
 >>> row[1] * row[2]
@@ -296,8 +288,7 @@ TypeError: can't multiply sequence by non-int of type 'str'
 >>>
 ```
 
-However, maybe the data can be paired up with the types you specified
-in `types`. For example:
+Sin embargo, los datos pueden aparearse con los tipos especificados en `types`. Por ejemplo:
 
 ```python
 >>> types[1]
@@ -307,7 +298,7 @@ in `types`. For example:
 >>>
 ```
 
-Try converting one of the values:
+Probá converir uno de los valores:
 
 ```python
 >>> types[1](row[1])     # Same as int(row[1])
@@ -315,7 +306,7 @@ Try converting one of the values:
 >>>
 ```
 
-Try converting a different value:
+Porbá con otro:
 
 ```python
 >>> types[2](row[2])     # Same as float(row[2])
@@ -323,7 +314,7 @@ Try converting a different value:
 >>>
 ```
 
-Try the calculation with converted values:
+Porbá calcular usando los tipos convertidos:
 
 ```python
 >>> types[1](row[1])*types[2](row[2])
@@ -331,7 +322,7 @@ Try the calculation with converted values:
 >>>
 ```
 
-Zip the column types with the fields and look at the result:
+Hagamos un Zip de la lista de tipos con la de datos y veamos el resultado:
 
 ```python
 >>> r = list(zip(types, row))
@@ -340,11 +331,9 @@ Zip the column types with the fields and look at the result:
 >>>
 ```
 
-You will notice that this has paired a type conversion with a
-value. For example, `int` is paired with the value `'100'`.
+Se puede ver que esto aparea una función de conversión de tipos con un valo0r. Por ejemplo, `int` está en un par con el valor `'100'`.
 
-The zipped list is useful if you want to perform conversions on all of
-the values, one after the other. Try this:
+Esta lista zipeada es útil si querés realizar conversiones de todos los valores. Por ejemplo:
 
 ```python
 >>> converted = []
@@ -358,13 +347,9 @@ the values, one after the other. Try this:
 >>>
 ```
 
-Make sure you understand what’s happening in the above code.  In the
-loop, the `func` variable is one of the type conversion functions
-(e.g., `str`, `int`, etc.) and the `val` variable is one of the values
-like `'Lima'`, `'100'`.  The expression `func(val)` is converting a
-value (kind of like a type cast).
+Asegurate de entender lo que está pasando en el código de arriba. En el ciclo la variable `func` va tomando los valores del las funciones de conversión de tipos (`str`, `int`, `float`) y la variable `val` va tomando los valores de los datos en la fila: `'Lima'`, `'100'`, `'32.2'`.  La expresión `func(val)` convierte los tipos de cada dato..
 
-The above code can be compressed into a single list comprehension.
+El código de arriba puede comprimirse en una sola instrucción usando comprensión de listas.
 
 ```python
 >>> converted = [func(val) for func, val in zip(types, row)]
@@ -373,23 +358,20 @@ The above code can be compressed into a single list comprehension.
 >>>
 ```
 
-### Ejercicio 3.8: Making dictionaries
-Remember how the `dict()` function can easily make a dictionary if you
-have a sequence of key names and values?  Let’s make a dictionary from
-the column headers:
+### Ejercicio 3.8: Diccionarios
+¿Te acordás que la función `dict()` te permite hacer fácilmente un diccionario si tenés una secuencia de claves y valores? Hagamos un diccionario usando el encabezado de las columnas:
 
 ```python
 >>> headers
-['name', 'cajones', 'precio']
+['nombre', 'cajones', 'precio']
 >>> converted
 ['Lima', 100, 32.2]
 >>> dict(zip(headers, converted))
-{'precio': 32.2, 'name': 'Lima', 'cajones': 100}
+{'precio': 32.2, 'nombre': 'Lima', 'cajones': 100}
 >>>
 ```
 
-Of course, if you’re up on your list-comprehension fu, you can do the
-whole conversion in a single step using a dict-comprehension:
+si estás en sintonía con la comprensión de listas podés escribir una sola línea usando comprensión de diccionarios:
 
 ```python
 >>> { name: func(val) for name, func, val in zip(headers, types, row) }
@@ -397,48 +379,43 @@ whole conversion in a single step using a dict-comprehension:
 >>>
 ```
 
-### Ejercicio 3.9: The Big Picture
-Using the techniques in this ejercicio, you could write statements that
-easily convert fields from just about any column-oriented datafile
-into a Python dictionary.
+### Ejercicio 3.9: Fijando ideas
+Usando las técnicas de este ejercicio, vas a poder escribir instrucciones que conviertan fácilmente campos como los de nuestro archivo en un diccionario de Python.
 
-Just to illustrate, suppose you read data from a different datafile like this:
+Para ilustrar esto, supongamos que leés un archivo de datos de la siguiente forma:
 
 ```python
->>> f = open('Data/dowcajones.csv')
+>>> f = open('Data/dowstocks.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> row = next(rows)
 >>> headers
-['name', 'precio', 'date', 'time', 'change', 'open', 'high', 'low', 'volume']
+['name', 'price', 'date', 'time', 'change', 'open', 'high', 'low', 'volume']
 >>> row
-['Lima', '39.48', '6/11/2007', '9:36am', '-0.18', '39.67', '39.69', '39.45', '181800']
+['AA', '39.48', '6/11/2007', '9:36am', '-0.18', '39.67', '39.69', '39.45', '181800']
 >>>
 ```
 
-Let’s convert the fields using a similar trick:
+Convirtamos estos datos usando un truco similar:
 
 ```python
 >>> types = [str, float, str, str, float, float, float, float, int]
 >>> converted = [func(val) for func, val in zip(types, row)]
 >>> record = dict(zip(headers, converted))
 >>> record
-{'volume': 181800, 'name': 'Lima', 'precio': 39.48, 'high': 39.69,
+{'volume': 181800, 'name': 'AA', 'price': 39.48, 'high': 39.69,
 'low': 39.45, 'time': '9:36am', 'date': '6/11/2007', 'open': 39.67,
 'change': -0.18}
 >>> record['name']
-'Lima'
->>> record['precio']
+'AA'
+>>> record['price']
 39.48
 >>>
 ```
 
-Bonus: How would you modify this example to additionally parse the
-`date` entry into a tuple such as `(6, 11, 2007)`?
+Bonus: ¿Cómo modificarías este ejemplo para parsear la fecha (`date`) en una tupla como `(6, 11, 2007)`?
 
-Spend some time to ponder what you’ve done in this ejercicio. We’ll
-revisit these ideas a little later.
-
+Es importante que entiedas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Numpy)](04_Numpy.md)
 

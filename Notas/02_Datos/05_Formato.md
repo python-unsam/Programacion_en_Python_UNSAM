@@ -2,7 +2,7 @@
 
 # 2.5 Impresión con formato
 
-Esta sección es una pequeña disgresión. Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
+Esta sección es una pequeña digresión. Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
 
 ```code
   Nombre      Cajones     Precio
