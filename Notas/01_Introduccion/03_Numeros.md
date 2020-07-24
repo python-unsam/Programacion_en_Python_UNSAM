@@ -98,7 +98,7 @@ Al desplazar los bits de un número a la derecha un lugar, el último bit "se ca
 >>> 1 >> 1 # 1 -> 0
 0
 >>> 6 >> 1 # 110 -> 11
-0
+3
 ```
 
 

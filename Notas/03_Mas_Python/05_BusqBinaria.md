@@ -3,22 +3,17 @@
 # 3.5 Búsqueda binaria
 
 La clase pasada vimos la búsqueda secuencial de un elemento en una lista.
+Si la lista está previamente ordenada,
+¿podemos encontrar una manera más eficiente de buscar elementos sobre ella?
 
 
 ## Búsqueda sobre listas ordenadas
 
-Si podemos suponer que la lista está previamente ordenada,
-¿podemos encontrar una manera más eficiente de buscar elementos sobre ella?
-
-En principio hay una modificación muy simple que podemos hacer sobre el
-algoritmo de búsqueda lineal: si estamos buscando el elemento *e* en una
-lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento
-mayor a *e* podemos estar seguros de que *e* no está en la lista, por lo que no
-es necesario continuar recorriendo el resto.
+Si la lista está previamente ordenada,  hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento *e* en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a *e* podemos estar seguros de que *e* no está en la lista, por lo que no es necesario continuar recorriendo el resto.
 
 ### Ejercicio 3.10: Búsqueda lineal sobre listas ordenadas.Modificar la búsqueda lineal para el caso de listas ordenadas.
 En el peor caso, ¿cuál es nuestra nueva hipótesis sobre comportamiento del
-algoritmo? ¿Es realmente más eficiente?}
+algoritmo? ¿Es realmente más eficiente?
 
 ### Búsqueda binaria
 
@@ -59,8 +54,37 @@ el valor 18 en la lista `[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23]`.
 Ejemplo de una búsqueda usando el algoritmo de búsqueda binaria.
 Como no se encontró al valor buscado, devuelve -1.
 
-En el archivo `bbin.py` mostramos una posible implementación de
+
+
+En el archivo `bbin.py` mostramos la siguiente implementación de
 este algoritmo, incluyendo una instrucción de depuración (debug) con `print` para verificar su funcionamiento.
+
+```python
+def busqueda_binaria(lista, x):
+    '''Búsqueda binaria
+    Precondición: la lista está ordenada
+    Devuelve -1 si x no está en lista;
+    Devuelve p tal que lista[p] == x, si x está en lista
+    '''
+    verbose = True # False #para que imprima info [DEBUG]
+    if verbose:
+        print(f'[DEBUG] izq |der |medio')
+    pos = -1 # Inicializo respuesta, el valor no fue encontrado
+    izq = 0
+    der = len(lista) - 1
+    while izq <= der:
+        medio = (izq + der) // 2
+        if verbose:
+            print(f'[DEBUG] {izq:3d} |{der:>3d} |{medio:3d}')
+        if lista[medio] == x:
+            pos = medio     # elemento encontrado!
+        if lista[medio] > x:
+            der = medio - 1 # descarto mitad derecha
+        else:               # if lista[medio] < x:
+            izq = medio + 1 # descarto mitad izquierda
+    return pos
+```
+
 
 A continuación varias ejecuciones de prueba:
 

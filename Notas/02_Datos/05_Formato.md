@@ -52,12 +52,12 @@ s       Cadenas
 c       Caracter (a partir de un entero, su código)
 ```
 
-Los modificadores permiten ajustar el ancho a imprimir o la precisión decimal (cantidad de dígitos luego del punto). Esta es una lista parcial:
+Los modificadores permiten ajustar el ancho a imprimir o la precisión decimal (cantidad de dígitos luego del punto). Ésta es una lista parcial:
 
 ```code
 :>10d   Entero alineado a la derecha en un campo de 10 caracteres
-:<10d   Entero alineado a la inquierda en un campo de 10 caracteres
-:^10d   Entero centrado  en un campo de 10 caracteres
+:<10d   Entero alineado a la izquierda en un campo de 10 caracteres
+:^10d   Entero centrado en un campo de 10 caracteres
 :0.2f   Flotante con dos dígitos de precisión
 ```
 
