@@ -49,7 +49,7 @@ Veamos en mayor detalle cómo funciona este REPL:
 - `>>>` es el símbolo del intérprete para comenzar un nuevo comando.
 - `...` es el símbolo del intérprete para continuar con un comando comenzado antes. Dejá una línea en blanco para terminar lo que ya ingresaste.
 
-El símbolo `...` puede mostrarse o no dependiendo de tu entorno. En este curso lo mostraremos como líneas en blanco para facilitar el copy-paste. de fragmentos de código.
+El símbolo `...` puede mostrarse o no dependiendo de tu entorno. En este curso lo mostraremos como líneas en blanco para facilitar el copy-paste de fragmentos de código.
 
 Antes vimos que el guión bajo `_` guarda el último resultado.
 
@@ -114,7 +114,7 @@ altura_obelisco = 67.5         # altura en metros
 num_billetes = 1
 dia = 1
 
-while num_billetes * grosor_billete < altura_obelisco:
+while num_billetes * grosor_billete <= altura_obelisco:
     print(dia, num_billetes, num_billetes * grosor_billete)
     dia = dia + 1
     num_billetes = num_billetes * 2
@@ -190,7 +190,7 @@ height = 442.0         # Punto flotante
 height = 'Really tall' # Cadena de caracteres
 ```
 
-Decimos que Python tiene tipado dinámico. El tipo percibido por el intérprete puede cambiar a lo largo de la ejecución dependiendo el valor asignado a la variable.
+Decimos que Python tiene tipado dinámico. El tipo percibido por el intérprete puede cambiar a lo largo de la ejecución dependiendo del valor asignado a la variable.
 
 ### Python distingue mayúsculas y minúsculas
 
@@ -311,7 +311,7 @@ name = 'Juana'
 print('Mi nombre es', name) # Imprime el texto 'Mi nombre es Juana'
 ```
 
-`print()` siempre termina la línea impresa pasando a la sugiente.
+`print()` siempre termina la línea impresa pasando a la siguiente.
 
 ```python
 print('Hola')
