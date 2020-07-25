@@ -12,7 +12,7 @@ Para escribir programas útiles, necesitamos aprender a trabajar con datos. En e
 * [2.6 Secuencias](06_Secuencias.md)
 * [2.7 Entorno de desarrollo integrado](07_IDE.md)
 * [2.8 Listas y búsqueda lineal](08_IteradoresLista.md)
-* [2.9 Cierre de la segunda clase](10_CierreClase.md)
+* [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Más sobre Python, Numpy y búsquedas eficientes.)](../03_Mas_Python/00_Resumen.md)

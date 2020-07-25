@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Entorno de desarrollo integrado)](07_IDE.md) \| [Próximo (9 Cierre de la segunda clase)](10_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Entorno de desarrollo integrado)](07_IDE.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
 # 2.8 Listas y búsqueda lineal
 
@@ -274,5 +274,5 @@ Por ejemplo:
 ![Propagación](./fosforos.jpg) Propagación análoga a la del Ejercicio
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 Entorno de desarrollo integrado)](07_IDE.md) \| [Próximo (9 Cierre de la segunda clase)](10_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Entorno de desarrollo integrado)](07_IDE.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
