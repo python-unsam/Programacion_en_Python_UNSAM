@@ -49,7 +49,7 @@ Por otra parte, habrá dos exámenes parciales sobre los contenidos dictados: un
 Es una pregunta frecuente si la materia da créditos en tal o cuál universidad. La materia es de posgrado y la decisión sobre los créditos no es nuestra sino de las diferentes universidades o comisiones doctorales. En el grupo de Slack pueden encontrar el programa de la materia que especifica su carga horaria, contenidos así como las condiciones de aprobación e información sobre los docentes. Con esta información deberían poder averiguar ustedes mismos sobre la aceptación del curso y el otorgamiento de créditos en sus respectivas unidades académicas.
 
 ## Cronograma
-El curso con exámenes incluídos se va a desarrollar entre el miércoles 5 de agosto y el miércoles 25 de noviembre del 2020. El curso puede realizarse completamente de manera asincrónica. 
+El curso con exámenes incluidos se va a desarrollar entre el miércoles 5 de agosto y el miércoles 25 de noviembre del 2020. El curso puede realizarse completamente de manera asincrónica. 
 
 Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md).
 
