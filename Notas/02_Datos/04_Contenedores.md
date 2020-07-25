@@ -110,7 +110,7 @@ Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que 
 
 ### Búsquedas en un diccionario
 
-Podés chequear si una clave existe:
+Podés verificar si una clave existe:
 
 ```python
 if key in d:

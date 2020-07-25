@@ -3,7 +3,7 @@
 # 3.3 Objects
 
 
-En esta sección introducimos algunos conceptos sobre el modelo de objeto interno de Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y chequeo de tipos.
+En esta sección introducimos algunos conceptos sobre el modelo de objeto interno de Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y verificación de tipos.
 
 ### Asignaciones
 
@@ -177,7 +177,7 @@ Los nombres de variables no tienen un tipo asociado. Solo son nombres. Pero los 
 
 `type()` te dice el tipo del valor. Se usa como una función que transofrma un valor en un tipo.
 
-### Chequeo de tipos
+### Verificación de tipos
 
 Podés verificar si un objeto es una instancia de cierto tipo.
 
@@ -193,7 +193,7 @@ if isinstance(a, (list,tuple)):
     print('a is a list or tuple')
 ```
 
-*Cuidado: Demasiado chequeo de tipos puede resultar en un código excesivamente complejo. Típicamente lo usás para evitar errores comunes cometidos por otros usuarios de tu código.*
+*Cuidado: Demasiadas verificaciones de de tipos puede resultar en un código excesivamente complejo. Típicamente lo usás para evitar errores comunes cometidos por otros usuarios de tu código.*
 
 ### Todo es un objeto
 

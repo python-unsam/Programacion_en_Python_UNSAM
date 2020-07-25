@@ -2,7 +2,7 @@
 
 # 2.2 Funciones
 
-A medida que tus programas se vuelven más largos y complejos, vas a necesitar organizarte. En esta sección vamos a introducir brevemente funciones y módulos de la biblioteca así como también el manejo de errores y excepciones.
+A medida que tus programas se vuelven más largos y complejos, vas a necesitar organizarte. En esta sección vamos a introducir brevemente funciones y módulos de la biblioteca así como también la administración de errores y excepciones.
 
 ### Funciones a medida
 
@@ -47,7 +47,7 @@ Vamos a estudiar bibliotecas y módulos en detalle más adelante.
 
 ### Errores y excepciones
 
-Las funciones reportan los errores como excepeciones. Dado que una excepción cancela la ejecución de una función, la misma puede generar que todo el programa se detenga si no es manejada adecuadamente.
+Las funciones informan los errores como excepeciones. Dado que una excepción interrumpe la ejecución de una función, la misma puede generar que todo el programa se detenga si no es administrada adecuadamente.
 
 Probá por ejemplo lo siguiente en tu intérprete:
 
@@ -61,9 +61,9 @@ ValueError: invalid literal for int() with base 10: 'N/A'
 
 Para poder entender qué pasó (debuguear), el mensaje describe cuál fue el problema, dónde ocurrió y un poco de la historia (traceback) de los llamados que terminaron en este error.
 
-### Atrapar y manejar excepciones
+### Atrapar y administrar excepciones
 
-Las excepciones pueden ser atrapadas y manejadas.
+Las excepciones pueden ser atrapadas y administradas.
 Para atrapar una excepeción, se usan los comandos `try - except`.
 
 ```python
@@ -96,7 +96,7 @@ print(f'Ingresaste {n}.')
 
 Deberías observar una diferencia: al presionar las teclas `Ctrl+C` la excepción `KeyboardInterrupt` sí es atrapada y no se termina el ciclo hasta no ingresar un número entero.
 
-Suele ser difícil saber exactamente qué tipo de errores pueden ocurrir por adelantado. Para bien o para mal, el manejo de excepciones suele ir creciendo a medida que un programa va generando errores inesperados (al mejor estilo: "Uh! Me olvidé de que podía pasar esto. Deberíamos preverlo y manejarlo adecuadamente para la próxima").
+Suele ser difícil saber exactamente qué tipo de errores pueden ocurrir por adelantado. Para bien o para mal, la administración de excepciones suele ir creciendo a medida que un programa va generando errores inesperados (al mejor estilo: "Uh! Me olvidé de que podía pasar esto. Deberíamos preverlo y administrarlo adecuadamente para la próxima").
 
 ### Generar excepciones
 
@@ -168,7 +168,7 @@ Esto va a ejecutar el código en el programa y dejar abierto el intérprete inte
 
 Es útil para testear y debuguear poder interactuar interactivamente con tu código.
 
-### Ejercicio 2.6: Manejo de errores
+### Ejercicio 2.6: Administración de errores
 Probá correr la siguiente función ingresando tu edad real, una edad escrita con letras (como "ocho") y una edad negativa (-3):
 
 ```python
@@ -202,11 +202,11 @@ ValueError: invalid literal for int() with base 10: ''
 >>>
 ```
 
-El programa termina con un error. A esta altura tenés que tomar una decisión. Para que el programa funcione podés editar el archivo CSV de entrada de manera de corregirlo (borrando líneas o adecuando la información) o podés modificar el código de manera de manejar las líneas *incorrectas* de  alguna manera.
+El programa termina con un error. A esta altura tenés que tomar una decisión. Para que el programa funcione podés editar el archivo CSV de entrada de manera de corregirlo (borrando líneas o adecuando la información) o podés modificar el código para que maneje las líneas *incorrectas* de  alguna manera.
 
 Modificá el programa `costo_camion.py` para que atrape la excepción, imprima un mensaje de aviso (warning) y continúe procesando el resto del archivo.
 
-Vamos a profundizar en el manejo de errores en las próximas clases.
+Vamos a profundizar en la administración  de errores en las próximas clases.
 
 ### Ejercicio 2.7: Funciones de la biblioteca
 Python viene con una gran biblioteca estándar de funciones útiles. En este caso el módulo `csv` podría venirnos muy bien. Podés usarlo cada vez que tengas que leer archivos CSV. Acá va un ejemplo de cómo funciona.
