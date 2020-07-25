@@ -217,7 +217,7 @@ Probalo.
 Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Ejercicios`. Buscá el archivo `hipoteca.py` y hacé los ejercicios con un editor de texto en ese archivo. Ejecutalo desde la línea de comandos.
 
 ### Ejercicio 1.7: La hipoteca de David
-David solicitó un cŕedito a 30 años y a tasa fija para comprar una vivienda. Pidió $500,000 a la companía y acordó un pago mensual fijo de $2684.11.
+David solicitó un cŕedito a 30 años y a tasa fija (tasa nominal anual del 5%) para comprar una vivienda. Pidió $500,000 a la compañía y acordó un pago mensual fijo de $2684.11.
 
 El siguiente es un programa que calcula el monto total que pagará David a lo largo de los años:
 
@@ -256,7 +256,7 @@ pago_extra = 1000
 
 Hacé que el programa tenga en cuenta estas variables para calcular el total a pagar apropiadamente.
 
-¿Cuánto pagaría David si agrega $1000 por mes durante cuatro años, comenzando en el sexto año de la hipoteca?
+¿Cuánto pagaría David si agrega $1000 por mes durante cuatro años, comenzando en el sexto año de la hipoteca (es decir, luego de 5 años)?
 
 ### Ejercicio 1.10: Tablas
 Modicá tu programa para que imprima una tabla mostrando el mes, el total pagado hasta el momento y el saldo restante. La salida debería verse aproximadamente así:
