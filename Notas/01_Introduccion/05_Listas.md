@@ -13,7 +13,7 @@ nombres = [ 'Rosita', 'Manuel', 'Luciana' ]
 nums = [ 39, 38, 42, 65, 111]
 ```
 
-A veces las listas son creadas con otros métodos. Por ejmplo, los elementos de una cadena pueden ser separados en una lista usando el método `split()`:
+A veces las listas son creadas con otros métodos. Por ejemplo, los elementos de una cadena pueden ser separados en una lista usando el método `split()`:
 
 ```python
 >>> line = 'Pera,100,490.10'
@@ -62,7 +62,7 @@ nombres[1] = 'Juan Manuel'
 nombres                     # [ 'Rosita', 'Juan Manuel', 'Luciana' ]
 ```
 
-Y podés insertar elementos en una posición. Acordate que los índices comienzan acontar desde el 0.
+Y podés insertar elementos en una posición. Acordate que los índices comienzan a contar desde el 0.
 
 ```python
 nombres.insert(2, 'Iratxe') # Lo inserta en la posición 2. 
@@ -234,7 +234,7 @@ En el ejemplo de arriba los últimos dos elementos de la `lista_frutas` fueron r
 
 ### Ejercicio 1.23: Ciclos sobre listas
 El ciclo `for` funciona iterando sobre datos en una secuencia. Antes vimos que podíamos iterar sobre los caracteres de una cadena (las cadenas son secuencias). Ahora veremos que podemos iterar sobre listas también.
-Verificá esto tipeando los que sigue y viendo qué pasa:
+Verificá esto tipeando lo que sigue y viendo qué pasa:
 
 ```python
 >>> for s in lista_frutas:
@@ -364,7 +364,7 @@ Si querés juntar las cadenas en una lista, usá el método `join()` de los stri
 ### Ejercicio 1.28: Listas de cualquier cosa
 Las listas pueden contener cualquier tipo de objeto, incluyendo otras listas (serían 'listas anidadas').
 
-Porbá esto:
+Probá esto:
 
 ```python
 >>> nums = [101, 102, 103]
