@@ -248,7 +248,9 @@ Cuando lo corras, este nuevo programa debería dar un pago total de  `929965.62`
 Aclaración: aunque puede parece sencillo, este ejercicio requiere que agregues una variable *mes* y que prestes bastantes atención a cuándo la incrementás, con qué valor entra al ciclo y con qué valor sale del ciclo. Una posiblidad es inicializar *mes* en 0 y otra es inicializarla en 1. En el primer caso es problable que la variable salga del ciclo contando la cantidad de pagos que se hicieron, en el segundo, ¡es probable que salga contando la cantidad de pagos más uno!
 
 ### Ejercicio 1.9: Calculadora de adelantos
-Modificá tu programa de forma que la información sobre pagos extras sea incorporada de manera más versatil. Agregá las siguientes variables antes del ciclo:
+¿Cuánto pagaría David si agrega $1000 por mes durante cuatro años, comenzando en el sexto año de la hipoteca (es decir, luego de 5 años)?
+
+Modificá tu programa de forma que la información sobre pagos extras sea incorporada de manera versatil. Agregá las siguientes variables antes del ciclo, para definir el comienzo, fin y monto de los pagos extras:
 
 ```python
 pago_extra_mes_comienzo = 61
@@ -257,8 +259,6 @@ pago_extra = 1000
 ```
 
 Hacé que el programa tenga en cuenta estas variables para calcular el total a pagar apropiadamente.
-
-¿Cuánto pagaría David si agrega $1000 por mes durante cuatro años, comenzando en el sexto año de la hipoteca (es decir, luego de 5 años)?
 
 ### Ejercicio 1.10: Tablas
 Modicá tu programa para que imprima una tabla mostrando el mes, el total pagado hasta el momento y el saldo restante. La salida debería verse aproximadamente así:
