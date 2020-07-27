@@ -397,7 +397,7 @@ Podés acceder a los elementos de las listas anidadas usando múltiples operacio
 
 A pesar de que es técnicamente posible hacer una estructura de listas muy complicada, como regla general, es mejor mantener las cosas simples. Lo más usual es guardar en las listas muchos elementos del mismo tipo. Por ejemplo, una lista sólo de números o una lista de cadenas. Mezclar diferentes tipos de datos en una misma lista puede volverse conceptualmente difuso, así que mejor lo evitamos.
 
-### Ejercicio 1.29: Traductor al lenguaje inclusivo
+### Ejercicio 1.29: Traductor (rústico) al lenguaje inclusivo
 Queremos hacer un traductor que cambie las palabras masculinas de una frase por su versión neutra. Como primera aproximación, completá el siguiente código para reemplazar todas las letras 'o' que figuren en el último o anteúltimo caracter de cada palabra por una 'e'. Por ejemplo 'todos somos programadores' pasaría a ser 'todes somes programdores'. Guardá tu código en el archivo `inclusive.py`
 
 ```python
@@ -412,7 +412,7 @@ Queremos hacer un traductor que cambie las palabras masculinas de una frase por 
 >>>
 ```
 
-Probá tu código con 'Los hermanos sean unidos porque ésa es la ley primera', '¿cómo transmitir a los otros el infinito Aleph?' y 'Todos, tu también'. ¿Qué falla en esta última?
+Probá tu código con 'Los hermanos sean unidos porque ésa es la ley primera', '¿cómo transmitir a los otros el infinito Aleph?' y 'Todos, tu también'. ¿Qué falla en esta última? (¡no hace falta que lo resuelvas!)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Cadenas)](04_Strings.md) \| [Próximo (6 Cierre de la primer clase)](06_CierreClase.md)

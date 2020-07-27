@@ -10,7 +10,7 @@ Para cerrar esta clase te pedimos dos cosas:
     2. [Ejercicio 1.11](../01_Introduccion/03_Numeros.md#ejercicio-111-bonus) Bonus de Hipoteca (`hipoteca.py`)
     3. [Ejercicio 1.13](../01_Introduccion/03_Numeros.md#ejercicio-113-el-volúmen-de-una-esfera) Volumen de la esfera (`esfera.py`)
     4. [Ejercicio 1.18](../01_Introduccion/04_Strings.md#ejercicio-118-geringoso-rústico) Geringoso (`geringoso.py`)
-    5. [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-al-lenguaje-inclusivo) Lenguaje inclusivo (`inclusive.py`)
+    5. [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-rústico-al-lenguaje-inclusivo) Lenguaje inclusivo (`inclusive.py`)
 * Que completes [este formulario](https://docs.google.com/forms/d/1GGijTsgAvaRtZR8MPDq3_rGC5U0K52lHhxQ-ixYDCVc/edit?usp=sharing) usando como identificación tu dirección de mail.
  
 
