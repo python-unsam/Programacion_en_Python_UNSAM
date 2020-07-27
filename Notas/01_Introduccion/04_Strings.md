@@ -400,7 +400,7 @@ Si al presionar tab no pasa nada, podés volver al viejo uso de la función `dir
 >>>
 ```
 
-`dir()` produce una lista con todas las operaciones que pueden aparecer luego del parámetro que le pasaste, en este caso `s`. También podés usar el comando `help()` para obtener más información sobre una operación espcífica:
+`dir()` produce una lista con todas las operaciones que pueden aparecer luego del parámetro que le pasaste, en este caso `s`. También podés usar el comando `help()` para obtener más información sobre una operación específica:
 
 ```python
 >>> help(s.upper)
