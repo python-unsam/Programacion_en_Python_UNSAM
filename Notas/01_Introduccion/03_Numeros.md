@@ -217,7 +217,7 @@ Probalo.
 Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Ejercicios`. Buscá el archivo `hipoteca.py` y hacé los ejercicios con un editor de texto en ese archivo. Ejecutalo desde la línea de comandos.
 
 ### Ejercicio 1.7: La hipoteca de David
-David solicitó un cŕedito a 30 años y a tasa fija (tasa nominal anual del 5%) para comprar una vivienda. Pidió $500,000 a la compañía y acordó un pago mensual fijo de $2684.11.
+David solicitó un crédito a 30 años para comprar una vivienda, con una tasa fija nominal anual del 5%. Pidió $500,000 al banco y acordó un pago mensual fijo de $2684.11.
 
 El siguiente es un programa que calcula el monto total que pagará David a lo largo de los años:
 
@@ -244,6 +244,8 @@ Supongamos que David adelanta pagos extra de $1000/mes durante los primeros 12 m
 Modificá el programa para incorporar estos pagos extra y que imprima el monto total pagado junto con la cantidad de meses requeridos.
 
 Cuando lo corras, este nuevo programa debería dar un pago total de  `929965.62` en 342 meses.
+
+Aclaración: aunque puede parece sencillo, este ejercicio requiere que agregues una variable *mes* y que prestes bastantes atención a cuándo la incrementás, con qué valor entra al ciclo y con qué valor sale del ciclo. Una posiblidad es inicializar *mes* en 0 y otra es inicializarla en 1. En el primer caso es problable que la variable salga del ciclo contando la cantidad de pagos que se hicieron, en el segundo, ¡es probable que salga contando la cantidad de pagos más uno!
 
 ### Ejercicio 1.9: Calculadora de adelantos
 Modificá tu programa de forma que la información sobre pagos extras sea incorporada de manera más versatil. Agregá las siguientes variables antes del ciclo:
