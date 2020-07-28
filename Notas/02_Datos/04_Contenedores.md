@@ -205,7 +205,7 @@ s1 - s2                 # Diferencia de conjuntos
 
 ## Ejercicios
 
-En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `Ejercicios/reporte.py`.
+En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `Ejercicios/informe.py`.
 
 ### Ejercicio 2.12: Lista de tuplas
 El archivo `Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.5](../02_Datos/02_Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
@@ -233,7 +233,7 @@ def costo_camion(nombre_archivo):
 ...
 ```
 
-Usando este código como guía, creá un nuevo archivo `reporte.py`. En este archivo, definí una función `leer_camion(nombre_archivo)` que abre un archivo con el contenido de un camión, lo lee y devuelve la información como una lista de tuplas. Para hacerlo vas a tener que hacer algunas modificaciones menores al código de arriba.
+Usando este código como guía, creá un nuevo archivo `informe.py`. En este archivo, definí una función `leer_camion(nombre_archivo)` que abre un archivo con el contenido de un camión, lo lee y devuelve la información como una lista de tuplas. Para hacerlo vas a tener que hacer algunas modificaciones menores al código de arriba.
 
 Primero, en vez de definir `total = 0`, tenés que empezar con una variable que empieza siendo una lista vacía Por ejemplo:
 
@@ -251,7 +251,7 @@ for row in rows:
 
 Por último, la función debe devolver la lista `camion`.
 
-Experimentá con tu función interactivamente (acordate de que primero tenés que correr el programa `reporte.py` en el intérprete):
+Experimentá con tu función interactivamente (acordate de que primero tenés que correr el programa `informe.py` en el intérprete):
 
 *Ayuda: Usá `-i` para ejecutar un archivo en la terminal y quedar en el intéreprete*
 
@@ -405,7 +405,7 @@ Una vez que hayas escrito tu función `leer_precios()`, testeala interactivament
 ### Ejercicio 2.15: Balances
 Supongamos que los precios en `camion.csv` son los precios pagados al productor de frutas mientras que los precios en `precios.csv` son los precios de venta en el lugar de descarga del camión.
 
-Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `reporte.py` (usando las funciones `leer_camion()` y `leer_precios()`) y agregá algunos comandos adicionales donde haga falta de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente. Para ser más espcíficos: tu programa tiene que imprimir un balance indicando el total pagado al productor, el valor en el mercado de la carga que trajo el camión, así como un balance indicando ganacias o pérdidas.
+Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y agregá algunos comandos adicionales donde haga falta de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente. Para ser más espcíficos: tu programa tiene que imprimir un balance indicando el total pagado al productor, el valor en el mercado de la carga que trajo el camión, así como un balance indicando ganacias o pérdidas.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Impresión con formato)](05_Formato.md)

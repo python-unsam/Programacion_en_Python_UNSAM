@@ -405,7 +405,7 @@ Aprender a leer y entender los mensajes de error es una parte fundamental de pro
 ### Ejercicio 1.5: La pelota que rebota
 Este es el primer conjunto de ejercicios en el que vas a tener que crear un archivo de Python y correrlo. A partir de aca, vamos a asumir que estás trabajando en el subdirectorio `Ejercicios/`. Para ayudarte a ubicar el lugar correcto ya creamos un par de archivos en ese directorio. Por ejemplo, ahora buscá el archivo `Ejercicios/rebotes.py` que vamos a usar en este ejercicio.
 
-Una pelota de goma es arrojada desde una altura de 100 metros y cada vez que toca el piso salta 3/5 de la altura desde la que cayó. Escribí un programa `rebotes.py` que imprima una tabla mostrando las alturas que alcanza luego de sus primeros diez rebotes.
+Una pelota de goma es arrojada desde una altura de 100 metros y cada vez que toca el piso salta 3/5 de la altura desde la que cayó. Escribí un programa `rebotes.py` que imprima una tabla mostrando las alturas que alcanza en cada uno de sus primeros diez rebotes.
 
 Tu programa debería hacer una tabla que se parezca a esta:
 

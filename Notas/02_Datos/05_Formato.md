@@ -151,7 +151,7 @@ A pesar de que suelen usarse dentre de un `print`, el formato de cadenas no est�
 ```
 
 ### Ejercicio 2.17: Recolectar datos
-En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `reporte.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y venden en el mercado. En este ejercicio, vas a comenzas a modificarlo para producir una tabla como esta:
+En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y venden en el mercado. En este ejercicio, vas a comenzas a modificarlo para producir una tabla como esta:
 
 ```
  Nombre     Cajones     Precio     Cambio
@@ -165,18 +165,18 @@ En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), e
  Naranja       100      106.28      35.84
 ```
 
-En este reporte, el "Precio" es el precio en el mercado y el "Cambio" es la variación respecto al precio cobrado por el productor.
+En este informe, el "Precio" es el precio en el mercado y el "Cambio" es la variación respecto al precio cobrado por el productor.
 
-Para generar un reporte como el de arriba, primero tenés que recolectar todos los datos de la tabla. Escribí una función `hacer_reporte()`
+Para generar un informe como el de arriba, primero tenés que recolectar todos los datos de la tabla. Escribí una función `hacer_informe()`
 que recibe una lista de cajones y un diccionario con precios como input y devuelve una lista de tuplas conteniendo la información mostrada en la tabla anterior.
 
-Agregá esta función a tu archivo `reporte.py`. Debería funcionar como se muestra en el siguiente ejemplo:
+Agregá esta función a tu archivo `informe.py`. Debería funcionar como se muestra en el siguiente ejemplo:
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')
 >>> precios = read_precios('Data/precios.csv')
->>> report = make_report(camion, precios)
->>> for r in report:
+>>> informe = make_informe(camion, precios)
+>>> for r in informe:
         print(r)
 
 ('Lima', 100, 9.22, -22.980000000000004)
@@ -192,7 +192,7 @@ Agregá esta función a tu archivo `reporte.py`. Debería funcionar como se mues
 Volvé a hacer el del ciclo `for` del ejercicio anterior pero cambiando la forma de imprimir como sigue:
 
 ```python
->>> for r in report:
+>>> for r in informe:
         print('%10s %10d %10.2f %10.2f' % r)
 
           Lima        100       9.22     -22.98
@@ -206,7 +206,7 @@ Volvé a hacer el del ciclo `for` del ejercicio anterior pero cambiando la forma
 O directamente usando  f-strings. Por ejemplo:
 
 ```python
->>> for nombre, cajones, precio, cambio in reporte:
+>>> for nombre, cajones, precio, cambio in informe:
         print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f} {change:>10.2f}')
 
       Lima        100       9.22     -22.98
@@ -217,7 +217,7 @@ O directamente usando  f-strings. Por ejemplo:
 >>>
 ```
 
-Agregá estos últimos comando a tu programa `reporte.py`. Hacé que el programa tome la salida de la función `hacer_reporte()` e imprima una tabla bien formateada.
+Agregá estos últimos comando a tu programa `informe.py`. Hacé que el programa tome la salida de la función `hacer_informe()` e imprima una tabla bien formateada.
 
 ### Ejercicio 2.19: Agregar encabezados
 Suponete que tenés una tupla con nombres de encabezado como esta:
@@ -267,7 +267,7 @@ Por último, modificá tu código para que el precio mostrado incluya un símbol
    Naranja        100    $106.28      35.84
 ```
 
-Guardá estos cambios en el archivo `reporte.py` que más adelante los vas a necesitar.
+Guardá estos cambios en el archivo `informe.py` que más adelante los vas a necesitar.
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_Contenedores.md) \| [Próximo (6 Secuencias)](06_Secuencias.md)
 

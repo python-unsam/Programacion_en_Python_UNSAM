@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Numpy)](04_Numpy.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random)](04_Numpy.md)
 
 # 3.3 Objects
 
@@ -162,7 +162,7 @@ False
 >>>
 ```
 
-### Nombre, vlaores y tipos
+### Nombre, valores y tipos
 
 Los nombres de variables no tienen un tipo asociado. Solo son nombres. Pero los valores sí tiene un tipo subyacente.
 
@@ -417,5 +417,5 @@ Bonus: ¿Cómo modificarías este ejemplo para parsear la fecha (`date`) en una 
 
 Es importante que entiedas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Numpy)](04_Numpy.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random)](04_Numpy.md)
 

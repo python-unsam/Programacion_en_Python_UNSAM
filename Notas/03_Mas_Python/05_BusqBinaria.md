@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Numpy)](04_Numpy.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Random)](04_Random.md) \| [Próximo (7 Complejidad de algoritmos)](06_Complejidad.md)
 
-# 3.5 Búsqueda binaria
+# 3.6 Búsqueda binaria
 
 La clase pasada vimos la búsqueda secuencial de un elemento en una lista.
 Si la lista está previamente ordenada,
@@ -11,7 +11,7 @@ Si la lista está previamente ordenada,
 
 Si la lista está previamente ordenada,  hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento *e* en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a *e* podemos estar seguros de que *e* no está en la lista, por lo que no es necesario continuar recorriendo el resto.
 
-### Ejercicio 3.10: Búsqueda lineal sobre listas ordenadas.Modificar la búsqueda lineal para el caso de listas ordenadas.
+### Ejercicio 3.11: Búsqueda lineal sobre listas ordenadas.Modificar la búsqueda lineal para el caso de listas ordenadas.
 En el peor caso, ¿cuál es nuestra nueva hipótesis sobre comportamiento del
 algoritmo? ¿Es realmente más eficiente?
 
@@ -184,13 +184,13 @@ algoritmo de búsqueda binaria, cuyo comportamiento es proporcional al
 *logaritmo* de la cantidad de elementos de la lista, y por lo tanto
 muchísimo más eficiente que la búsqueda lineal, espcialmente si la lista es larga.
 
-### Ejercicio 3.11: Búsqueda secuencial
+### Ejercicio 3.12: Búsqueda secuencial
 Búsqueda secuencial `b_sec.py`
 
-### Ejercicio 3.12: Búsqueda binaria
+### Ejercicio 3.13: Búsqueda binaria
 Búsqueda binaria `b_bin.py`
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Numpy)](04_Numpy.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Random)](04_Random.md) \| [Próximo (7 Complejidad de algoritmos)](06_Complejidad.md)
 

@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Cierre)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (9 Cierre)](08_Cierre.md)
 
-# 3.9 El album de Figuritas
+# 3.10 El album de Figuritas
 
 ## Las figuritas del mundial
 
@@ -68,29 +68,29 @@ En este caso, **la dinámica** del llenado es la siguiente:
 
 Vamos ahora a implementar computacionalmente este modelo. 
 
-### Ejercicio 3.13: 
+### Ejercicio 3.14: 
 Implementá la función `crear_album(figus_total)` que devuelve un álbum *vacío* con `figus_total` espacios para pegar figuritas.
 
 
-### Ejercicio 3.14: 
+### Ejercicio 3.15: 
 ¿Cuál sería el comando de Python que nos dice si hay al menos un cero en la lista que representa el álbum? ¿Qué significa que haya al menos un cero en nuestro modelo?
 
 Implemente la función `album_incompleto(l)` que recibe una lista y devuelve `True` si la lista contiene el elemento `0`. En el caso en que no haya ceros debe devolver `False`. 
 
-### Ejercicio 3.15:  
+### Ejercicio 3.16:  
 Alguna de las funciones que probamos antes sirve para devolver un número aleatorio dentro de un rango (¿cuál era?).
 Implemente la función `comprar_una_figu(figus_total)` que recibe el número total de figuritas que tiene el álbum (dado por el parámetro `figus_total`) y devuelve un número entero aleatorio que representa la figurita que nos tocó.
 
-### Ejercicio 3.16:  
+### Ejercicio 3.17:  
 Implementá la función `cuantas_figus(figus_total)` que, dado el tamaño del álbum (`figus_total`), simule su llenado y devuelva la cantidad de figuritas que se debieron adquirir para completarlo.
 
-### Ejercicio 3.17:  
+### Ejercicio 3.18:  
 Calculá `n_repeticiones=1000` veces la función anterior utilizando `figusTotal=6` y guarde en una lista los resultados obtenidos en cada repetición.
 Con los resultados obtenidos estime cuántas figuritas hay que comprar, en promedio, para completar el álbum (de seis figuritas).
 
 *Ayuda: El comando `np.mean(a)` devuelve el promedio de la lista `a`.*
 
-### Ejercicio 3.18:  
+### Ejercicio 3.19:  
 Calculá `n_repeticiones=100` veces la función `cuantas_figus(figus_total=670)` y guardá los resultados obtenidos en cada repetición en una lista.
 Con los resultados obtenidos estimá cuántas figuritas hay que comprar, en promedio, para completar el álbum (de 670 figuritas).
 
@@ -104,29 +104,29 @@ Estos ejercicios te recomendamos que los pienses y discutas con un compañero o 
 
 ## Ejercicios con paquetes
 
-### Ejercicio 3.19:  
+### Ejercicio 3.20:  
 Simulá la generación de un paquete con cinco figuritas, sabiendo que el álbum es de 670. Notemos que, como en la vida real, pueden haber figuritas repetidas en un paquete.
 
-### Ejercicio 3.20:  
+### Ejercicio 3.21:  
 Implementá una función `generar_paquete(figus_total, figus_paquete)` que, dado el tamaño del álbum (`figus_total`) y la cantidad de figuritas por paquete (`figus_paquete`), genere un paquete de figuritas al azar.
 
-### Ejercicio 3.21:  
+### Ejercicio 3.22:  
 Implementá una función `cuantos_paquetes(figus_total, figus_paquete)` que dado el tamaño del álbum simule el llenado del álbum y devuelva cuántos paquetes se debieron adquirir para completarlo.
 
-### Ejercicio 3.22:  
+### Ejercicio 3.23:  
 Calculá `n_repeticiones=100` veces la función `cuantos_paquetes`, utilizando `figus_total=670`, `figus_paquete=5` y guarde los resultados obtenidos en una lista y calcule su promedio.
 
 ## Ejercicios un toque más estadísticos:
 
-### Ejercicio 3.23:  
+### Ejercicio 3.24:  
 Utilizando lo implementado en el ítem anterior, estimá la probabilidad de completar el álbum con $850$ paquetes o menos.
 
-### Ejercicio 3.24:  
+### Ejercicio 3.25:  
 Utilizando lo implementado, estimá cuántos paquetes habría que comprar para tener una chance del $90\%$ de completar el álbum.
 
-### Ejercicio 3.25:  
+### Ejercicio 3.26:  
 Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambian las probabilidades?
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Cierre)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (9 Cierre)](08_Cierre.md)
 

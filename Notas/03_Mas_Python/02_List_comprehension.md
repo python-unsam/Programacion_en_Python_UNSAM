@@ -89,7 +89,7 @@ La mayoría de los programadores no suelen pensar en el costado matemático de e
 
 ## Ejercicios
 
-Corré  tu programa `reporte.py` de forma de tener los datos sobre cajones cargados en tu intérprete en modo interactivo. 
+Corré  tu programa `informe.py` de forma de tener los datos sobre cajones cargados en tu intérprete en modo interactivo. 
 
 Luego, tratá de escribir los comandos adecuados para realizar las operaciones descriptas abajo. Estas operaciones son reducciones, transformaciones y consultas sobre la carga del camión.
 

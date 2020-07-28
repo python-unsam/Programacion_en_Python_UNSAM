@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (8 Cierre)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (9 Cierre)](08_Cierre.md)
 
-# 3.7 Numpy básico
+# 3.8 Numpy básico
 
 ## 1.4.1. The NumPy array object
 Section contents
@@ -1244,5 +1244,5 @@ Toolbox: np.random.rand, .dot(), np.linalg.eig, reductions, abs(), argmin, compa
 
 Solution: Python source file
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (8 Cierre)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (9 Cierre)](08_Cierre.md)
 

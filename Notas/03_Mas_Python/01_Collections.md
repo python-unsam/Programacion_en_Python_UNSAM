@@ -36,11 +36,11 @@ total_cajones['Naranja']     # 150
 
 ## Ejercicios
 
-En este ejercicio vas a probar contadores en un par de ejemplos simple. Cargá tu programa `reporte.py` y ejecutalo en el intperprete de forma de tener los datos del camión con cajones cargado en modo interactivo.
+En este ejercicio vas a probar contadores en un par de ejemplos simple. Cargá tu programa `informe.py` y ejecutalo en el intperprete de forma de tener los datos del camión con cajones cargado en modo interactivo.
 
 Podés usar el interprete desde la línea de comandos ejecutando:
 ```bash
-bash % python3 -i reporte.py
+bash % python3 -i informe.py
 ```
 O podés cargarlo en el Spyder y correrlo.
 
