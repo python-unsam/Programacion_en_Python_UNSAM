@@ -29,9 +29,7 @@ Una excelente manera de darle formato a una cadena en Python (a partir de la ver
 >>>
 ```
 
-La parte `{expresion:formato}` va a ser reemplazada.
-
-Usualmente los `f-strings` se usan con `print`.
+La parte `{expresion:formato}` va a ser reemplazada. Usualmente los `f-strings` se usan con `print`.
 
 ```python
 print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f}')
@@ -39,7 +37,7 @@ print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f}')
 
 ### Códigos de formato
 
-Lo códigos de formato (lo que va luego de `:` dentro de `{}`) son similares s los que se usan en el `printf()` del lenguaje C. Los más comunes son:
+Lo códigos de formato (lo que va luego de `:` dentro de `{}`) son similares a los que se usan en el `printf()` del lenguaje C. Los más comunes son:
 
 ```code
 d       Entero decimal
@@ -76,14 +74,14 @@ Pores usar el métido `format_map()` para aplicarle un formato a los valores de 
 >>>
 ```
 
-Usa los mismos códigos que los `f-strings` pero toma los valores que provée el diccionario.
+Usa los mismos códigos que los `f-strings` pero toma los valores que provee el diccionario.
 
 ### El método format()
 
 Existe un método  `format()` que permite aplicar formato a argumentos.
 
 ```python
->>> '{name:>10s} {cajones:10d} {precio:10.2f}'.format(name='Naranja', cajones=100, precio=91.1)
+>>> '{nombre:>10s} {cajones:10d} {precio:10.2f}'.format(nombre='Naranja', cajones=100, precio=91.1)
 '       Naranja        100      91.10'
 >>> '{:10s} {:10d} {:10.2f}'.format('Naranja', 100, 91.1)
 '       Naranja        100      91.10'
@@ -105,7 +103,7 @@ También podés usar el operador  `%`.
 '3.14'
 ```
 
-Esto requiere un solo item, o una tupla a la derecha. Los códigos están tambien inspirados en el `printf()` de C. Tiene la dificultad que hay que contar posiciones y todas las variables van juntas al final.
+Esto requiere un solo ítem, o una tupla a la derecha. Los códigos están tambien inspirados en el `printf()` de C. Tiene la dificultad de que hay que contar posiciones y todas las variables van juntas al final.
 
 ## Ejercicios
 
@@ -256,7 +254,7 @@ Cuando esté listo, tu programa debería producir una tabla como esta:
 Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 
 ```
-      Name     Cajons      Price     Change
+   Nombre     Cajones      Pecio     Cambio
 ---------- ---------- ---------- ----------
       Lima        100      $9.22     -22.98
    Naranja         50    $106.28      15.18
