@@ -34,6 +34,8 @@ Este curso se basa sobre experiencias previas nuestras y de otros docentes. En p
 
 También tomamos ideas y ejemplos del proyecto [Exactas Programa](http://exactasprograma.exactas.uba.ar/) que desarrollaron docentes de diversas carreras de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires que sus autores han compartido generosamente. 
 
+Para el análisis de datos con los módulos [NumPy](https://numpy.org/doc/), [Matplotlib](https://matplotlib.org/contents.html), [Pandas](https://pandas.pydata.org/pandas-docs/stable/), [Seaborn](http://seaborn.pydata.org/), [Statsmodels](https://www.statsmodels.org/stable/user-guide.html), etc. nos hemos basado en la documentación oficial de estos paquetes así como en las [clases y tutoriales](https://scipy-lectures.org/index.html) de [SciPy](https://www.scipy.org/).
+
 ## Escritura en desarrollo. ¡Bienvenidas las correcciones!
 Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones preliminares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por el grupo de Slack en el Canal de `errores_y_sugerencias`.
 

@@ -9,7 +9,7 @@ Esta sección es una pequeña digresión. Cuando trabajás con datos es usual qu
 ----------  ----------  -----------
  Lima           100        32.20
  Naranja         50        91.10
- Caqui          150        83.44
+ Caqui          150       103.44
  Mandarina      200        51.23
  Durazno         95        40.37
  Mandarina       50        65.10
@@ -126,7 +126,7 @@ Un problema usual cuando queremos imprimir números es especificar el número de
 ```
 
 
-La documentación completa sobre los códigos de formato usados en f-strings puede consultarse [aquí](https://docs.python.org/3/library/string.html#format-specification-mini-language). El formato puede aplicarse también usando el operador `%` de cadenas.
+La documentación completa sobre los códigos de formato usados en f-strings puede consultarse [acá](https://docs.python.org/3/library/string.html#format-specification-mini-language). El formato puede aplicarse también usando el operador `%` de cadenas.
 
 ```python
 >>> print('%0.4f' % value)
@@ -136,10 +136,9 @@ La documentación completa sobre los códigos de formato usados en f-strings pue
 >>>
 ```
 
-La documentación sobre códigos usados con `%` puede encontrarse [ be found
-[aquí](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting).
+La documentación sobre códigos usados con `%` puede encontrarse [acá](https://docs.python.org/3/library/stdtypes.html#printf-style-string-formatting).
 
-A pesar de que suelen usarse dentre de un `print`, el formato de cadenas no está necesariamente ligao a la impresión. Por ejemplo, podés simplemente asignarlo a una variable.
+A pesar de que suelen usarse dentro de un `print`, el formato de cadenas no está necesariamente ligado a la impresión. Por ejemplo, podés simplemente asignarlo a una variable.
 
 ```python
 >>> f = '%0.4f' % value
@@ -149,18 +148,18 @@ A pesar de que suelen usarse dentre de un `print`, el formato de cadenas no est�
 ```
 
 ### Ejercicio 2.17: Recolectar datos
-En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y venden en el mercado. En este ejercicio, vas a comenzas a modificarlo para producir una tabla como esta:
+En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. En este ejercicio, vas a comenzar a modificarlo para producir una tabla como ésta:
 
 ```
  Nombre     Cajones     Precio     Cambio
 ---------- ---------- ---------- ----------
- Lima          100        9.22     -22.98
- Naranja        50      106.28      15.18
- Caqui         150       35.46     -47.98
- Mandarina     200       20.89     -30.34
- Durazno        95       13.48     -26.89
- Mandarina      50       20.89     -44.21
- Naranja       100      106.28      35.84
+ Lima          100        32.2       8.02
+ Naranja        50        91.1      15.18
+ Caqui         150      103.44       2.02
+ Mandarina     200       51.23      29.66
+ Durazno        95       40.37      33.11
+ Mandarina      50        65.1      15.79
+ Naranja       100       70.44      35.84
 ```
 
 En este informe, el "Precio" es el precio en el mercado y el "Cambio" es la variación respecto al precio cobrado por el productor.
@@ -172,31 +171,36 @@ Agregá esta función a tu archivo `informe.py`. Debería funcionar como se mues
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')
->>> precios = read_precios('Data/precios.csv')
->>> informe = make_informe(camion, precios)
+>>> precios = leer_precios('Data/precios.csv')
+>>> informe = hacer_informe(camion, precios)
 >>> for r in informe:
         print(r)
 
-('Lima', 100, 9.22, -22.980000000000004)
-('Naranja', 50, 106.28, 15.180000000000007)
-('Caqui', 150, 35.46, -47.98)
-('Mandarina', 200, 20.89, -30.339999999999996)
-('Durazno', 95, 13.48, -26.889999999999997)
+('Lima', 100, 32.2, 8.019999999999996)
+('Naranja', 50, 91.1, 15.180000000000007)
+('Caqui', 150, 103.44, 2.019999999999996)
+('Mandarina', 200, 51.23, 29.660000000000004)
+('Durazno', 95, 40.37, 33.11000000000001)
+('Mandarina', 50, 65.1, 15.790000000000006)
+('Naranja', 100, 70.44, 35.84)
 ...
 >>>
 ```
 
 ### Ejercicio 2.18: Imprimir una tabla con formato
-Volvé a hacer el del ciclo `for` del ejercicio anterior pero cambiando la forma de imprimir como sigue:
+Volvé a hacer el ciclo `for` del ejercicio anterior pero cambiando la forma de imprimir como sigue:
 
 ```python
 >>> for r in informe:
         print('%10s %10d %10.2f %10.2f' % r)
 
-          Lima        100       9.22     -22.98
-         Naranja         50     106.28      15.18
-         Caqui        150      35.46     -47.98
-        Mandarina        200      20.89     -30.34
+      Lima        100      32.20       8.02
+   Naranja         50      91.10      15.18
+     Caqui        150     103.44       2.02
+ Mandarina        200      51.23      29.66
+   Durazno         95      40.37      33.11
+ Mandarina         50      65.10      15.79
+   Naranja        100      70.44      35.84
 ...
 >>>
 ```
@@ -205,26 +209,29 @@ O directamente usando  f-strings. Por ejemplo:
 
 ```python
 >>> for nombre, cajones, precio, cambio in informe:
-        print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f} {change:>10.2f}')
+        print(f'{nombre:>10s} {cajones:>10d} {precio:>10.2f} {cambio:>10.2f}')
 
-      Lima        100       9.22     -22.98
-   Naranja         50     106.28      15.18
-     Caqui        150      35.46     -47.98
- Mandarina        200      20.89     -30.34
+      Lima        100      32.20       8.02
+   Naranja         50      91.10      15.18
+     Caqui        150     103.44       2.02
+ Mandarina        200      51.23      29.66
+   Durazno         95      40.37      33.11
+ Mandarina         50      65.10      15.79
+   Naranja        100      70.44      35.84
 ...
 >>>
 ```
 
-Agregá estos últimos comando a tu programa `informe.py`. Hacé que el programa tome la salida de la función `hacer_informe()` e imprima una tabla bien formateada.
+Agregá estos últimos comandos a tu programa `informe.py`. Hacé que el programa tome la salida de la función `hacer_informe()` e imprima una tabla bien formateada.
 
 ### Ejercicio 2.19: Agregar encabezados
-Suponete que tenés una tupla con nombres de encabezado como esta:
+Suponete que tenés una tupla con nombres de encabezado como ésta:
 
 ```python
 headers = ('Nombre', 'Cajones', 'Precio', 'Cambio')
 ```
 
-Agregá el código necesario a tu programa para que tome una tupla de encabezados como la de arriba y crée una cadena donde cada nombre de encabezado esté alineado a la derecha en un campo de 10 caracteres de ancho y separados por un solo espacio.
+Agregá el código necesario a tu programa para que tome una tupla de encabezados como la de arriba y cree una cadena donde cada nombre de encabezado esté alineado a la derecha en un campo de 10 caracteres de ancho y separados por un solo espacio.
 
 ```python
 '    Nombre    Cajones     Precio     Cambio'
@@ -233,7 +240,7 @@ Agregá el código necesario a tu programa para que tome una tupla de encabezado
 Escribí el código que recibe los encabezados y crea una cadena de separación entre los encabezados y los datos que siguen. Esta cadena es simplemente una tira de caracteres "-" bajo cada nombre de campo. Por ejemplo:
 
 ```python
-'---------- ---------- ---------- -----------'
+'---------- ---------- ---------- ----------'
 ```
 
 Cuando esté listo, tu programa debería producir una tabla como esta:
@@ -241,28 +248,28 @@ Cuando esté listo, tu programa debería producir una tabla como esta:
 ```
     Nombre    Cajones     Precio     Cambio
 ---------- ---------- ---------- ----------
-      Lima        100       9.22     -22.98
-   Naranja         50     106.28      15.18
-     Caqui        150      35.46     -47.98
- Mandarina        200      20.89     -30.34
-   Durazno         95      13.48     -26.89
- Mandarina         50      20.89     -44.21
-   Naranja        100     106.28      35.84
+      Lima        100      32.20       8.02
+   Naranja         50      91.10      15.18
+     Caqui        150     103.44       2.02
+ Mandarina        200      51.23      29.66
+   Durazno         95      40.37      33.11
+ Mandarina         50      65.10      15.79
+   Naranja        100      70.44      35.84
 ```
 
 ### Ejercicio 2.20: Un desafío de formato
 Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 
 ```
-   Nombre     Cajones      Pecio     Cambio
+    Nombre    Cajones     Precio     Cambio
 ---------- ---------- ---------- ----------
-      Lima        100      $9.22     -22.98
-   Naranja         50    $106.28      15.18
-     Caqui        150     $35.46     -47.98
- Mandarina        200     $20.89     -30.34
-   Durazno         95     $13.48     -26.89
- Mandarina         50     $20.89     -44.21
-   Naranja        100    $106.28      35.84
+      Lima        100      $32.2       8.02
+   Naranja         50      $91.1      15.18
+     Caqui        150    $103.44       2.02
+ Mandarina        200     $51.23      29.66
+   Durazno         95     $40.37      33.11
+ Mandarina         50      $65.1      15.79
+   Naranja        100     $70.44      35.84
 ```
 
 Guardá estos cambios en el archivo `informe.py` que más adelante los vas a necesitar.

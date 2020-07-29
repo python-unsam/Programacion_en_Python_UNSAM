@@ -1,8 +1,9 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Más sobre Python, Numpy y búsquedas eficientes.)](../03_Mas_Python/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Comprensión de listas, el módulo Numpy y albumes de figuritas.)](../03_Mas_Python/00_Resumen.md)
 
 # 2. Trabajando con datos
 Para escribir programas útiles, necesitamos aprender a trabajar con datos. En esta clase vas a escribir un programa que lee un archivo de datos en formato csv y realiza un cálculo simple. Vas a aprender a estructurar tu código creando funciones. También introducimos las estructuras de datos elementales de Python que nos faltan: tuplas, conjuntos y diccionarios y profundizamos un poco más en las listas y sus usos.
 
+Discutimos el problema de la búsqueda de un elemento en un vector e introducimos la búsqueda lineal.
 
 * [2.1 Manejo de archivos](01_Archivos.md)
 * [2.2 Funciones](02_Funciones.md)
@@ -15,4 +16,4 @@ Para escribir programas útiles, necesitamos aprender a trabajar con datos. En e
 * [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Más sobre Python, Numpy y búsquedas eficientes.)](../03_Mas_Python/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Comprensión de listas, el módulo Numpy y albumes de figuritas.)](../03_Mas_Python/00_Resumen.md)

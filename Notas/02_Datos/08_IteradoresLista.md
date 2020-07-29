@@ -4,13 +4,13 @@
 
 En esta sección seguiremos usando Python, pero nos concentraremos en la parte algorítmica. Vas a escribir funciones sencillas (y no tanto) que realicen operaciones de bajo nivel sobre listas.
 
-Este es un curso de Python y de algoritmos. Python es un lenguaje de alto nivel. Esto significa que con pocas instrucciones permite realizar operaciones muy complejas. Los lenguajes de bajo nivel están más cerca del lenguaje del procesador y programar en ellos por ejemplo, un análisis de datos, es mucho más tedioso.
+Éste es un curso de Python y de algoritmos. Python es un lenguaje de alto nivel. Esto significa que con pocas instrucciones permite realizar operaciones muy complejas. Los lenguajes de bajo nivel están más cerca del lenguaje del procesador y programar en ellos por ejemplo, un análisis de datos, es mucho más tedioso.
 
 Sin embargo, entre las cosas que trae resueltas Python hay algunos algoritmos que nos interesa que vuelvas a escribir vos, por motivos didácticos. En lo que sigue te vamos a pedir en algunas ocasiones que no uses toda la potencia y simpleza de Python sino que te arremangues y escribas algunas funciones desde los primeros rudimentos.
 
 Queremos mostrarte en ejemplos concretos cómo distintas maneras de resolver  un mismo problema pueden dar lugar a algoritmos con eficiencias muy diferentes. A veces una es mejor para un uso y la otra para otro uso. En concreto, vamos a profundizar en el problema de la búsqueda y en el problema del ordenamiento, que son dos problemas elementales que ilustran conceptos centrales del desarrollo de algoritmos. 
 
-El uso adecuado de estos conceptos puede hacer la diferencia entre un algoritmo que termina el procesamiento en unos pocos minutos o uno que hay que dejar corriendo dos dias (y rezar para que no corte la electricidad mientras corre).
+El uso adecuado de estos conceptos puede hacer la diferencia entre un algoritmo que termina el procesamiento en unos pocos minutos o uno que hay que dejar corriendo dos días (y rezar para que no se corte la electricidad mientras corre).
 
 
 ## Búsqueda lineal
@@ -20,12 +20,11 @@ El uso adecuado de estos conceptos puede hacer la diferencia entre un algoritmo 
 Presentamos ahora uno de los problemas más clásicos de la computación, el
 problema de la búsqueda, que se puede enunciar de la siguiente manera:
 
-**Problema:** Dada una lista `lista` y un valor `e` devolver el índice de `e`
-en `lista` si `e` está en `lista`, y -1 si `e` no está en `lista`.
+**Problema:** Dada una lista `lista` y un elemento `e` devolver el índice de `e` en `lista` si `e` está en `lista`, y devolver -1 si `e` no está en `lista`.
 
 Este problema tiene una solución muy sencilla en Python: se puede usar el método `index()` de las listas.
 
-Probá esa solución:
+Probá esta solución:
 
 ```python
 >>> [1, 3, 5, 7].index(5)
@@ -98,21 +97,16 @@ por ahora pero daremos un método para averiguarlo más adelante.
 
 ###  Búsqueda lineal
 
-Nos interesa estudiar formas alternativas de programar la búsqueda usando operaciones más elementales, y no las primitivas `in` e `index()` de nuestro lenguaje de alto nivel. Aceptemos entonces que no vamos a usar ni `in` ni `index()`. En cambio, podemos usar ciclos y comparaciones.
+Nos interesa estudiar formas alternativas de programar la búsqueda usando operaciones más elementales, y no las primitivas `in` e `index()` de nuestro lenguaje de alto nivel. Aceptemos entonces que no vamos a usar ni `in` ni `index()`. En cambio, podemos iterar sobre los índices y elementos de una lista, y hacer comparaciones elementales.
 
-iterar sobre los índices y elementos de una lista, y hacer comparaciones elementales.
-
-Consideremos la siguiente solución: iterar sobre los índices y elementos de una lista de manera de comparar el elemento `e` buscado con cada uno de los elementos de la lista y devolver la posición
-donde lo encontremos, en caso de encontrarlo.
-Si llegamos al final de la lista sin haber salido antes de la función es
-porque el valor de `e` no está en la lista, y en ese caso
+Consideremos la siguiente solución: iterar sobre los índices y elementos de una lista de manera de comparar el elemento `e` buscado con cada uno de los elementos de la lista y devolver la posición donde lo encontremos, en caso de encontrarlo. Si llegamos al final de la lista sin haber salido antes de la función es porque el valor de `e` no está en la lista, y en ese caso
 devolvemos -1.
 
 En esta solución lo ideal es usar `enumerate` (ver la [Sección 2.6](../02_Datos/06_Secuencias.md#la-función-enumerate)) ya que dentro de la iteración necesitamos tener acceso tanto al valor del elemento (para ver si es igual al buscado) como a su índice (es el valor que tenemos que devolver).
 
-Primero hagámoslo sin usarlo y luego lo agregamos para entender su ventaja. En ambos casos necesitamos una variable `i` que cuente en cada momento en qué posición de la lista estamos parados.  Si no usamos `enumerate`, debemos inicializar `i` en 0 antes de entrar en el ciclo e incrementarla en 1 en cada paso.
+Primero hagámoslo sin usarlo y luego lo agregamos para entender su ventaja. En ambos casos necesitamos una variable `i` que cuente en cada momento en qué posición de la lista estamos. Si no usamos `enumerate`, debemos inicializar `i` en 0 antes de entrar en el ciclo e incrementarla en 1 en cada paso.
 
-El programa nos queda entonces como se muestra a continuación:
+El programa nos queda así:
 
 ```python
 def busqueda_lineal(lista, e):
@@ -170,9 +164,7 @@ O sea que si el valor está en la posición *p* de la lista se hacen *p*
 comparaciones. En el *peor caso*, si el valor no está, se hacen
 tantas comparaciones como elementos tenga la lista.
 
-En resúmen: Si la lista crece, la cantidad de comparaciones
-para encontrar un valor arbitrario crecerá en forma proporcional al tamaño de
-la lista. Por lo tanto diremos que:
+En resumen: Si la lista crece, la cantidad de comparaciones para encontrar un valor arbitrario crecerá en forma proporcional al tamaño de la lista. Es decir que:
 
 **El algoritmo de búsqueda lineal tiene un comportamiento *proporcional a la longitud de la lista involucrada*, o que es un algoritmo *lineal*.**
 
@@ -182,9 +174,10 @@ la lista. Por lo tanto diremos que:
 ### Ejercicio 2.26: Búsquedas de un elemento
 Creá el archivo `busqueda_en_listas.py` para guardar tu código de este ejercicio y el siguiente.
 
-En este primer ejercicio tenés que escribir una función `buscar_u_elemento()` que reciba una lista y un elemento y devuelva la posición de la última aprición de ese elemento en la lista (o -1 si el elemento no pertenece a la lista).
+En este primer ejercicio tenés que escribir una función `buscar_u_elemento()` que reciba una lista y un elemento y devuelva la posición de la última aparición de ese elemento en la lista (o -1 si el elemento no pertenece a la lista).
 
-Por ejemplo:
+Probá tu función con algunos ejemplos:
+
 ```pyton 
 >>> buscar_u_elemento([1,2,3,2,3,4],1)
 0
@@ -197,15 +190,14 @@ Por ejemplo:
 
 ```
 
-Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()` que reciba una lista desordenada y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista.
-
+Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()` que reciba una lista y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista. Probá también esta función con algunos ejemplos.
 
 ### Ejercicio 2.27: Búsqueda del máximo
-Agergale a tu archivo una función `maximo()` que busque el elemento máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te propomenos que completes el siguiente código:
+Agergale a tu archivo `busqueda_en_listas.py` una función `maximo()` que busque el elemento máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te propomenos que completes el siguiente código:
 
 ```python
 def maximo(lista):
-    '''devuelve el máximo de una lista 
+    '''Devuelve el máximo de una lista, 
     la lista debe ser no vacía y de números positivos.
     '''
     # m guarda el máximo de los elementos a medida que recorro la lista. 
@@ -215,7 +207,7 @@ def maximo(lista):
     return m
 ```
 
-Probalo con estos ejemplos:
+Probá tu función con estos ejemplos:
 ```pyton 
 >>> maximo([1,2,7,2,3,4])
 7
@@ -228,13 +220,12 @@ Probalo con estos ejemplos:
 ```
 
 ¿Por qué falla en el último caso? ¿Por qué anda en el caso anterior? 
-¿Cómo se puede inicializar m para que la función ande también con números negativos? Corregilo y guarda la version mejorada en el archivo `busqueda_en_listas.py`.
+¿Cómo se puede inicializar m para que la función ande también con números negativos? Corregilo y guarda la versión mejorada en el archivo `busqueda_en_listas.py`.
 
 ## Ejercitación con iteradores y listas
 
 ### Ejercicio 2.28: Invertir una lista
-Escribí una función `invertir_lista(lista)` que dada una lista devuelva otra que tenga los mismos elementos en el orden inverso. Es decir, el que era el primer elemento de la lista de entrada deberá ser el último de la lista de salida y análogamente con los demás elementos.
-
+Escribí una función `invertir_lista(lista)` que dada una lista devuelva otra que tenga los mismos elementos pero en el orden inverso. Es decir, el que era el primer elemento de la lista de entrada deberá ser el último de la lista de salida y análogamente con los demás elementos.
 
 ```python
 def invertir_lista(lista):
@@ -244,24 +235,44 @@ def invertir_lista(lista):
     return invertida
 ```
 
-Guardá la función en el archivo `invlista.py` y probarla con las siguientes listas:
+Guardá la función en el archivo `invlista.py` y probala con las siguientes listas:
 `[1,2,3,4,5]`
-`['Bogotá', 'Rosario', 'Santiago', San Fernando', 'San Miguel']`
+`['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
 ### Ejercicio 2.29: Invertir una lista *in place*
-En el ejercicio anterior creaste una nueva lista conteniendo los elementos de una lista dada en orden inverso. En este ejercicio te pedimos que inviertas los elementos de una lista pero sin crear una nueva lista ni listas auxiliares. Es decir, te pedimos que escribas una función `invertir_lista_inplace(lista)` que, dada una lista, invierta la misma lista *en el lugar* (en inglés, *in place*), sin usar listas nuevas.)
+En el ejercicio anterior creaste una nueva lista conteniendo los elementos de una lista dada en orden inverso. En este ejercicio te pedimos que inviertas los elementos de una lista pero sin crear una nueva lista ni listas auxiliares. Es decir, te pedimos que escribas una función `invertir_lista_inplace(lista)` que, dada una lista, invierta la misma lista *en el lugar* (en inglés, *in place*), sin usar listas nuevas.
+
+Probá tu función con las siguientes lista:
+`lista_probando_1 = [1,2,3,4,5]`
+`lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
+
 
 ### Ejercicio 2.30: Tablas de multiplicar
 Escribí un programa `tablamult.py` que imprima de forma prolija las tablas de
 multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicación, usando sólo sumas alcanza.
 
+```python
+       0   1   2   3   4   5   6   7   8   9
+---------------------------------------------
+ 0:    0   0   0   0   0   0   0   0   0   0
+ 1:    0   1   2   3   4   5   6   7   8   9
+ 2:    0   2   4   6   8  10  12  14  16  18
+ 3:    0   3   6   9  12  15  18  21  24  27
+ 4:    0   4   8  12  16  20  24  28  32  36
+ 5:    0   5  10  15  20  25  30  35  40  45
+ 6:    0   6  12  18  24  30  36  42  48  54
+ 7:    0   7  14  21  28  35  42  49  56  63
+ 8:    0   8  16  24  32  40  48  56  64  72
+ 9:    0   9  18  27  36  45  54  63  72  81
+```
+
 
 ### Ejercicio 2.31: Propagación
-Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizado).
+Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).
 Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 0 (nuevo), un 1 (encendido) o un -1 (carbonizado). 
 El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósoforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
 
-Escribí una función llamada `propagar` que reciba un vector con 0, 1 y -1 y devuelva un vector en el que los 1 se propagaron a sus vecinos con 0. Guardalo en un archivo `propaga.py`.
+Escribí una función llamada `propagar` que reciba un vector con 0's, 1's y -1's y devuelva un vector en el que los 1's se propagaron a sus vecinos con 0. Guardalo en un archivo `propaga.py`.
 
 Por ejemplo:
 ```python
