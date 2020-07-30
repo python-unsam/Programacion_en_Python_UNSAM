@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Objects)](03_Objects.md) \| [Próximo (5 Errores+)](05_Errores3.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Objects)](03_Objects.md) \| [Próximo (5 Errores)](05_Errores3.md)
 
 # 3.4 Random+
 
@@ -115,9 +115,9 @@ print(f'Repartí el {n1[0]} de {n1[1]}, el {n2[0]} de {n2[1]} y el {n3[0]} de {n
 
 ## Valores contínuos
 
-Además de generar valores (pseudo)aleatorios discretos, también es posible generar valores contínuos. La funcion `random.random()` geenra un número de punto flotante entre 0 y 1.
+Además de generar valores (pseudo)aleatorios discretos, también es posible generar valores contínuos. La funcion `random.random()` genera un número de punto flotante entre 0 y 1.
 
-### Ejercicio 3.13: Cálculando pi
+### Ejercicio 3.13: Calcular pi
 Es interesante ver cómo los algoritmos estocásticos (basados en elecciones aleatorias) también sirven para resolver problemas que no tienen nada de estocásticos. En este ejercicio vas a usar el generador `random()` para aproximar `pi`.
 
 Por definición `pi` es el area del círculo de radio uno. Si generamos puntos (x,y) con:
@@ -129,19 +129,19 @@ def generar_punto():
     return x,y
 ```
 
-tendremos puntos dentro del cuadrado [0, 1]x[0, 1]. Algunos de estos puntos caerán dentro del círculo unitario (x^2 + y ^2 < 1) y otros puntos caerán afuera. Las proporciones de puntos dentro y fuera del cuarto de círculo guardarán una relación con el area del cuadrado unitario que ocupa el cuarto de círculo en comparación al area total del cuadrado.
+tendremos puntos dentro del cuadrado [0, 1]x[0, 1]. Algunos de estos puntos caerán dentro del círculo unitario (los que cumplan que x^2 + y ^2 < 1) y otros puntos caerán afuera. La proporción de puntos que caigan dentro del cuarto de círculo guardará relación con el área del cuadrado unitario que ocupa el cuarto de círculo en comparación al area total del cuadrado. Obviamente hay una componente aleatoria, pero a medida que la cantidad de puntos crece, la proporción se acercará a la relación entre estas dos áreas.
 
 ![Puntos al azar dentro y fuera del circulo](cuadrante_circ.png)
 
-Si el área del círculo completo es pi, el aŕea de nuestro cuarto de círculo será pi/4. Por otro lado el área del cuadrado unitario es 1. Por lo tanto, si generamos N puntos con una distribución uniforme en el cuadrado unitario, esperamos que una propoción pi/4 caigan dentro del cuarto del círculo y el resto afuera. Si llamamos M al númerode puntos que caen dentro del círculo, esperamos que (pi/4 * N) puntos caigan dentro del círculo. Es decir M ~(pi/4 * N).
+Si el área del círculo completo es pi, el aŕea de nuestro cuarto de círculo será pi/4. Por otro lado el área del cuadrado unitario es 1. Por lo tanto, si generamos N puntos con una distribución uniforme en el cuadrado unitario, esperamos que pi/4 de estos N puntos caigan dentro del cuarto del círculo y el resto afuera. Si llamamos M al número de puntos que caen dentro del círculo, esperamos que (pi/4 * N) puntos caigan dentro del círculo. Es decir M ~(pi/4 * N).
 
-Despejando pi de esa ecuación, obtenemos que pi ~ 4*M/N. Esto nos permite estimar pi mirando cuántos puntos caen dentro del círculo del total de puntos. 
+Despejando pi de esta estimación, obtenemos que pi ~ 4*M/N. Esto nos permite estimar pi mirando cuántos puntos caen realmente dentro del círculo del total de puntos. 
 
-Escribí un programa `estimar_pi.py` que genere cien mil puntos aleatorios con la `generar_punto()`, calcule la proporción de estos puntos que caen en el círculo unitario (usando ¿x**2 + y**2 < 1?) y use este resultado para dar una aproximación de pi.
+Escribí un programa `estimar_pi.py` que genere cien mil puntos aleatorios con la función `generar_punto()`, calcule la proporción de estos puntos que caen en el círculo unitario (usando ¿x^2 + y^2 < 1?) y use este resultado para dar una aproximación de pi.
 
 
 ### Ejercicio 3.14: Gaussiana
 `random.gauss()`
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Objects)](03_Objects.md) \| [Próximo (5 Errores+)](05_Errores3.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Objects)](03_Objects.md) \| [Próximo (5 Errores)](05_Errores3.md)
 

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Numpy básico**)](07_NumPy_Arrays.md) \| [Próximo (8 Cierre*)](09_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 NumPy: the absolute basics for beginners)](07_NumPy_Arrays.md) \| [Próximo (8 Cierre*)](09_Cierre.md)
 
 # 3.7 El album de Figuritas+
 
@@ -128,5 +128,5 @@ Utilizando lo implementado, estimá cuántos paquetes habría que comprar para t
 Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambian las probabilidades?
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Numpy básico**)](07_NumPy_Arrays.md) \| [Próximo (8 Cierre*)](09_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 NumPy: the absolute basics for beginners)](07_NumPy_Arrays.md) \| [Próximo (8 Cierre*)](09_Cierre.md)
 
