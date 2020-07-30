@@ -11,7 +11,7 @@ Al final, presentamos un ejercicio lindísimo del curso [Exactas Programa]() que
 * [3.1 El módulo collections](01_Collections.md)
 * [3.2 Comprensión de listas](02_List_comprehension.md)
 * [3.3 Objects](03_Objects.md)
-* [3.4 Random***](04_Random.md)
+* [3.4 Random+](04_Random.md)
 * [3.5 Errores+](05_Errores3.md)
 * [3.6 Numpy básico**](07_NumPy_Arrays.md)
 * [3.7 El album de Figuritas+](08_Figuritas.md)
