@@ -10,6 +10,7 @@
 * [6. Creación de módulos, SO y Pandas](06_Modulos_Pandas_SO/00_Resumen.md)
 * [7. Clases y Objetos](07_OOP_Seaborn/00_Resumen.md)
 * [8. Optativos](08_Optativos/00_Resumen.md)
+* [9. El módulo collections](09_VersionesViejas/01_Collections.md)
 
 
 Este es un curso que se estará dictando en la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto [IAI](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/) durante el segundo cuatrimestre del 2020.

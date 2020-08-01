@@ -8,15 +8,13 @@ Al final, presentamos un ejercicio lindísimo del curso [Exactas Programa]() que
 
 
 
-* [3.1 El módulo collections](01_Collections.md)
-* [3.2 Comprensión de listas](02_List_comprehension.md)
-* [3.3 Objects](03_Objects.md)
-* [3.4 Random+](04_Random.md)
-* [3.5 Errores](05_Errores3.md)
-* [3.6 NumPy](07_NumPy_Arrays.md)
-* [3.7 NumPy](07_NumPy_Arrays_ORIG.md)
-* [3.8 El album de Figuritas+](08_Figuritas.md)
-* [3.9 Cierre*](09_Cierre.md)
+* [3.1 Comprensión de listas](02_List_comprehension.md)
+* [3.2 Objects](03_Objects.md)
+* [3.3 Random+](04_Random.md)
+* [3.4 Errores](05_Errores3.md)
+* [3.5 NumPy](07_NumPy_Arrays.md)
+* [3.6 El album de Figuritas+](08_Figuritas.md)
+* [3.7 Cierre*](09_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa_OSKI1/00_Resumen.md)
