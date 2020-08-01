@@ -43,7 +43,7 @@ agosto y fines de noviembre del 2020. Es de grado y posgrado. Las clases
 teóricas estarán escritas. Habrá guías de ejercicios de entrega semanal 
 obligatoria y encuentros on-line con exposiciones breves por parte de los 
 docentes y espacio para consultas. Las clases sincrónicas virtuales serán 
-de un par de horas semanales, los miércoles a las 14hs y las 18hs. Habrá
+de un par de horas semanales, los miércoles a las 14hs. Habrá
 también un grupo de [Slack](https://slack.com/intl/es-ar/) (mensajería on-line) para consultas y debates entre 
 estudiantes en tiempo real. Estimamos que el curso les demandará unas diez 
 horas semanales de dedicación, durante los cuatro meses.
