@@ -32,9 +32,9 @@ Las clases tendrán una componente asincrónica y otra sincrónica.
 
 El contenido será dictado principalmente de forma asincrónica, por medio de apuntes, guías de ejercicios de entrega semanal y a través de una plataforma de consultas.
 
-La parte sincrónica durará menos de dos horas semanales y tendrá lugar los miércoles a las 14hs por videoconferencia (google-meet). En estas clases presenciales discutiremos los ejericicos de la semana anterior y presentaremos brevemente los temas de la semana siguiente.
+La parte sincrónica durará menos de dos horas semanales y tendrá lugar los miércoles a las 14hs por videoconferencia o streaming. En estas clases presenciales discutiremos los ejericicos de la semana anterior y presentaremos brevemente los temas de la semana siguiente.
 
-Cada miércoles antes de las 14hs les enviaremos un correo con el material y las tareas de la semana siguiente, así como el link para sumarse al google-meet. Vamos a grabar las clases de forma que si no pueden participar en el momento tengan la opción de verla luego. Habrá también un grupo de discusión y consultas en [Slack](./Slack.md) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios.
+Cada miércoles antes de las 14hs les enviaremos el link al material y las tareas de la semana siguiente, así como el link para sumarse a la videoconferencia o streaming de la clase. Intentaremos grabar las clases de forma que si no pueden participar en el momento tengan la opción de verla luego. Habrá también un grupo de discusión y consultas en [Slack](./Slack.md) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios.
 
 
 ## Ejercicios, exámenes y aprobación

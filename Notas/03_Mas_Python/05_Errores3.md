@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Random+)](04_Random.md) \| [Próximo (6 NumPy: the absolute basics for beginners)](07_NumPy_Arrays.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Random+)](04_Random.md) \| [Próximo (6 NumPy)](07_NumPy_Arrays.md)
 
 # 3.5 Errores
 
@@ -50,5 +50,5 @@ tiene_uno(1984)
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Random+)](04_Random.md) \| [Próximo (6 NumPy: the absolute basics for beginners)](07_NumPy_Arrays.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Random+)](04_Random.md) \| [Próximo (6 NumPy)](07_NumPy_Arrays.md)
 

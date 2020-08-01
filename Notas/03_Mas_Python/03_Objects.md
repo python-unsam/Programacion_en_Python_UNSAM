@@ -220,8 +220,7 @@ Failed!
 >>>
 ```
 
-Acá, `items` es una lista que tiene una función, un módulo y una
-excepción. Sé, este es un ejemplo raro. Pero es un ejemplo al fin. Podés usar los elementos de la lista en lugar de los nombres originales:
+Acá, `items` es una lista que tiene una función, un módulo y una excepción. Sé, este es un ejemplo raro. Pero es un ejemplo al fin. Podés usar los elementos de la lista en lugar de los nombres originales:
 
 ```python
 items[0](-45)       # abs
@@ -236,7 +235,7 @@ Con un gran poder viene siempre una gran responsabilidad. Que puedas no signific
 En estos ejercicios mostramos algo de la potencia que tinene que todos los objetos sean de la misma jerarquía.
 
 ### Ejercicio 3.7: Datos de primera clase
-En el archivo `Data/camion.csv`, leímos datos organizado en columnas que se ven así:
+En el archivo `Data/camion.csv`, leímos datos organizados en columnas que se ven así:
 
 ```csv
 nombre,cajones,precio

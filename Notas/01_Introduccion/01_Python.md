@@ -14,7 +14,7 @@ Te recomendamos instalar Python 3.6 o más nuevo. En la documentación previa  h
 
 ### ¿Para qué fue creado Python?
 
-El objetivo original de su autor fue crear un lenguaje de programación con el que pudiera realizar las tareas de administración de un sistema fácilmente. En algún sentido los scripts de la terminal no eran suficientemente poderosos y programar esas tareas en C resultaba demasiado tedioso. El Python fue creado para llenar ese hueco en el medio.
+El objetivo original de su autor fue crear un lenguaje de programación con el que pudiera realizar las tareas de administración de un sistema fácilmente. En algún sentido los scripts de la terminal no eran suficientemente poderosos y programar esas tareas en C resultaba demasiado tedioso. Python fue creado para llenar ese hueco en el medio.
 
 ### ¿Cómo ejecuto Python en mi máquina?
 

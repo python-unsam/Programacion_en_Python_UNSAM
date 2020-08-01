@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Errores)](05_Errores3.md) \| [Próximo (7 NumPy)](07_NumPy_Arrays_ORIG.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 NumPy)](07_NumPy_Arrays.md) \| [Próximo (8 El album de Figuritas+)](08_Figuritas.md)
 
-# 3.6 NumPy
+# 3.7 NumPy
 
 Esta es una introducción al módulo NumPy.
 
@@ -451,7 +451,76 @@ You can create a new array from a section of your array any time by specifying w
 array([4, 5, 6, 7, 8])
 ```
 
-Also, stack and split.
+
+Here, you grabbed a section of your array from index position 3 through index position 8.
+
+You can also stack two existing arrays, both vertically and horizontally. Let’s say you have two arrays, `a1` and `a2`:
+
+```python
+>>> a1 = np.array([[1, 1],
+...                [2, 2]])
+```
+
+
+```python
+>>> a2 = np.array([[3, 3],
+...                [4, 4]])
+```
+
+
+You can stack them vertically with `vstack`:
+
+```python
+>>> np.vstack((a1, a2))
+array([[1, 1],
+ [2, 2],
+ [3, 3],
+ [4, 4]])
+```
+
+
+Or stack them horizontally with `hstack`:
+
+```python
+>>> np.hstack((a1, a2))
+array([[1, 1, 3, 3],
+ [2, 2, 4, 4]])
+```
+
+
+You can split an array into several smaller arrays using `hsplit`. You can specify either the number of equally shaped arrays to return or the columns _after_ which the division should occur.
+
+Let’s say you have this array:
+
+```python
+>>> x = np.arange(1, 25).reshape(2, 12)
+>>> x
+array([[ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12],
+ [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]])
+```
+
+
+If you wanted to split this array into three equally shaped arrays, you would run:
+
+```python
+>>> np.hsplit(x, 3)
+[array([[1,  2,  3,  4],
+ [13, 14, 15, 16]]), array([[ 5,  6,  7,  8],
+ [17, 18, 19, 20]]), array([[ 9, 10, 11, 12],
+ [21, 22, 23, 24]])]
+```
+
+
+If you wanted to split your array after the third and fourth column, you’d run:
+
+```python
+>>> np.hsplit(x, (3, 4))
+[array([[1, 2, 3],
+ [13, 14, 15]]), array([[ 4],
+ [16]]), array([[ 5, 6, 7, 8, 9, 10, 11, 12],
+ [17, 18, 19, 20, 21, 22, 23, 24]])]
+```
+
 
 
 You can use the `view` method to create a new array object that looks at the same data as the original array (a _shallow copy_).
@@ -770,6 +839,300 @@ array([[0.01652764, 0.81327024],
 ![./np_ones_zeros_matrix.png](./np_ones_zeros_matrix.png)
 
 
+## Generating random numbers
+
+The use of random number generation is an important part of the configuration and evaluation of many numerical and machine learning algorithms. Whether you need to randomly initialize weights in an artificial neural network, split data into random sets, or randomly shuffle your dataset, being able to generate random numbers (actually, repeatable pseudo-random numbers) is essential.
+
+With `Generator.integers`, you can generate random integers from low (remember that this is inclusive with NumPy) to high (exclusive). You can set `endpoint=True` to make the high number inclusive.
+
+You can generate a 2 x 4 array of random integers between 0 and 4 with:
+
+```python
+>>> rng.integers(5, size=(2, 4))
+array([[2, 1, 1, 0],
+ [0, 0, 0, 4]])  # may vary
+```
+
+
+
+## How to get unique items and counts
+
+
+You can find the unique elements in an array easily with `np.unique`.
+
+For example, if you start with this array:
+
+```python
+>>> a = np.array([11, 11, 12, 13, 14, 15, 16, 17, 12, 13, 11, 14, 18, 19, 20])
+```
+
+
+you can use `np.unique` to print the unique values in your array:
+
+```python
+>>> unique_values = np.unique(a)
+>>> print(unique_values)
+[11 12 13 14 15 16 17 18 19 20]
+```
+
+
+To get the indices of unique values in a NumPy array (an array of first index positions of unique values in the array), just pass the `return_index` argument in `np.unique()` as well as your array.
+
+```python
+>>> unique_values, indices_list = np.unique(a, return_index=True)
+>>> print(indices_list)
+[ 0  2  3  4  5  6  7 12 13 14]
+```
+
+
+You can pass the `return_counts` argument in `np.unique()` along with your array to get the frequency count of unique values in a NumPy array.
+
+```python
+>>> unique_values, occurrence_count = np.unique(a, return_counts=True)
+>>> print(occurrence_count)
+[3 2 2 2 1 1 1 1 1 1]
+```
+
+
+This also works with 2D arrays! If you start with this array:
+
+```python
+>>> a_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12], [1, 2, 3, 4]])
+```
+
+
+You can find unique values with:
+
+```python
+>>> unique_values = np.unique(a_2d)
+>>> print(unique_values)
+[ 1  2  3  4  5  6  7  8  9 10 11 12]
+```
+
+
+If the axis argument isn’t passed, your 2D array will be flattened.
+
+If you want to get the unique rows or columns, make sure to pass the `axis` argument. To find the unique rows, specify `axis=0` and for columns, specify `axis=1`.
+
+```python
+>>> unique_rows = np.unique(a_2d, axis=0)
+>>> print(unique_rows)
+[[ 1  2  3  4]
+ [ 5  6  7  8]
+ [ 9 10 11 12]]
+```
+
+
+To get the unique rows, index position, and occurrence count, you can use:
+
+```python
+>>> unique_rows, indices, occurrence_count = np.unique(
+...      a_2d, axis=0, return_counts=True, return_index=True)
+>>> print(unique_rows)
+[[ 1  2  3  4]
+ [ 5  6  7  8]
+ [ 9 10 11 12]]
+>>> print(indices)
+[0 1 2]
+>>> print(occurrence_count)
+[2 1 1]
+```
+
+
+
+## Transposing and reshaping a matrix
+
+
+It’s common to need to transpose your matrices. NumPy arrays have the property `T` that allows you to transpose a matrix.
+
+![./np_transposing_reshaping.png](./np_transposing_reshaping.png)
+
+You may also need to switch the dimensions of a matrix. This can happen when, for example, you have a model that expects a certain input shape that is different from your dataset. This is where the `reshape` method can be useful. You simply need to pass in the new dimensions that you want for the matrix.
+
+```python
+>>> data.reshape(2, 3)
+array([[1, 2, 3],
+ [4, 5, 6]])
+>>> data.reshape(3, 2)
+array([[1, 2],
+ [3, 4],
+ [5, 6]])
+```
+
+
+![./np_reshape.png](./np_reshape.png)
+
+You can also use `.transpose` to reverse or change the axes of an array according to the values you specify.
+
+If you start with this array:
+
+```python
+>>> arr = np.arange(6).reshape((2, 3))
+>>> arr
+array([[0, 1, 2],
+ [3, 4, 5]])
+```
+
+
+You can transpose your array with `arr.transpose()`.
+
+```python
+>>> arr.transpose()
+array([[0, 3],
+ [1, 4],
+ [2, 5]])
+```
+
+
+
+## How to reverse an array
+
+
+NumPy’s `np.flip()` function allows you to flip, or reverse, the contents of an array along an axis. When using `np.flip`, specify the array you would like to reverse and the axis. If you don’t specify the axis, NumPy will reverse the contents along all of the axes of your input array.
+
+**Reversing a 1D array**
+
+If you begin with a 1D array like this one:
+
+```python
+>>> arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+```
+
+
+You can reverse it with:
+
+```python
+>>> reversed_arr = np.flip(arr)
+```
+
+
+If you want to print your reversed array, you can run:
+
+```python
+>>> print('Reversed Array: ', reversed_arr)
+Reversed Array:  [8 7 6 5 4 3 2 1]
+```
+
+
+**Reversing a 2D array**
+
+A 2D array works much the same way.
+
+If you start with this array:
+
+```python
+>>> arr_2d = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+```
+
+
+You can reverse the content in all of the rows and all of the columns with:
+
+```python
+>>> reversed_arr = np.flip(arr_2d)
+>>> print(reversed_arr)
+[[12 11 10  9]
+ [ 8  7  6  5]
+ [ 4  3  2  1]]
+```
+
+
+You can easily reverse only the _rows_ with:
+
+```python
+>>> reversed_arr_rows = np.flip(arr_2d, axis=0)
+>>> print(reversed_arr_rows)
+[[ 9 10 11 12]
+ [ 5  6  7  8]
+ [ 1  2  3  4]]
+```
+
+
+Or reverse only the _columns_ with:
+
+```python
+>>> reversed_arr_columns = np.flip(arr_2d, axis=1)
+>>> print(reversed_arr_columns)
+[[ 4  3  2  1]
+ [ 8  7  6  5]
+ [12 11 10  9]]
+```
+
+
+You can also reverse the contents of only one column or row. For example, you can reverse the contents of the row at index position 1 (the second row):
+
+```python
+>>> arr_2d[1] = np.flip(arr_2d[1])
+>>> print(arr_2d)
+[[ 1  2  3  4]
+ [ 8  7  6  5]
+ [ 9 10 11 12]]
+```
+
+
+You can also reverse the column at index position 1 (the second column):
+
+```python
+>>> arr_2d[:,1] = np.flip(arr_2d[:,1])
+>>> print(arr_2d)
+[[ 1 10  3  4]
+ [ 8  7  6  5]
+ [ 9  2 11 12]]
+```
+
+
+
+## Reshaping and flattening multidimensional arrays
+
+
+There are two popular ways to flatten an array: `.flatten()` and `.ravel()`. The primary difference between the two is that the new array created using `ravel()` is actually a reference to the parent array (i.e., a “view”). This means that any changes to the new array will affect the parent array as well. Since `ravel` does not create a copy, it’s memory efficient.
+
+If you start with this array:
+
+```python
+>>> x = np.array([[1 , 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+```
+
+
+You can use `flatten` to flatten your array into a 1D array.
+
+```python
+>>> x.flatten()
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])
+```
+
+
+When you use `flatten`, changes to your new array won’t change the parent array.
+
+For example:
+
+```python
+>>> a1 = x.flatten()
+>>> a1[0] = 99
+>>> print(x)  # Original array
+[[ 1  2  3  4]
+ [ 5  6  7  8]
+ [ 9 10 11 12]]
+>>> print(a1)  # New array
+[99  2  3  4  5  6  7  8  9 10 11 12]
+```
+
+
+But when you use `ravel`, the changes you make to the new array will affect the parent array.
+
+For example:
+
+```python
+>>> a2 = x.ravel()
+>>> a2[0] = 98
+>>> print(x)  # Original array
+[[98  2  3  4]
+ [ 5  6  7  8]
+ [ 9 10 11 12]]
+>>> print(a2)  # New array
+[98  2  3  4  5  6  7  8  9 10 11 12]
+```
+
+
 
 
 ## Working with mathematical formulas
@@ -862,5 +1225,5 @@ With `savetxt`, you can specify headers, footers, comments, and more.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Errores)](05_Errores3.md) \| [Próximo (7 NumPy)](07_NumPy_Arrays_ORIG.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 NumPy)](07_NumPy_Arrays.md) \| [Próximo (8 El album de Figuritas+)](08_Figuritas.md)
 

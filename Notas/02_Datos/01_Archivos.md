@@ -183,7 +183,7 @@ Las columnas en `camion.csv` corresponden a un nombre de fruta, una cantidad de 
 Tu programa debería imprimir una salida como la siguiente:
 
 ```bash
-Costo total 44671.15
+Costo total 47671.15
 ```
 
 Acordate de guardar tu archivo. Vamos a volver a trabajar sobre él.

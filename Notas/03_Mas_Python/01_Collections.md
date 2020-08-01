@@ -19,7 +19,7 @@ camion = [
 ]
 ```
 
-Hay dos entradas de `Naranja` y dos de  `Pera` en esta lista. Estos cajones deben ser combinados juntos de alguna forma.
+Hay dos entradas de `Naranja` y dos de `Pera` en esta lista. Estos cajones deben ser combinados juntos de alguna forma.
 
 ### Contadores
 
@@ -36,7 +36,7 @@ total_cajones['Naranja']     # 150
 
 ## Ejercicios
 
-En este ejercicio vas a probar contadores en un par de ejemplos simple. Cargá tu programa `informe.py` y ejecutalo en el intperprete de forma de tener los datos del camión con cajones cargado en modo interactivo.
+En este ejercicio vas a probar contadores en un par de ejemplos simples. Cargá tu programa `informe.py` y ejecutalo en el intperprete de forma de tener los datos del camión con cajones cargado en modo interactivo.
 
 Podés usar el interprete desde la línea de comandos ejecutando:
 ```bash
@@ -46,7 +46,7 @@ O podés cargarlo en el Spyder y correrlo.
 
 
 ### Ejercicio 3.1: Contadores
-Vamos a suar un contador (objeto `Counter`) para contar cajones de frutas. Probalo:
+Vamos a usar un contador (objeto `Counter`) para contar cajones de frutas. Probalo:
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')
@@ -56,7 +56,7 @@ Vamos a suar un contador (objeto `Counter`) para contar cajones de frutas. Proba
         tenencias[s['nombre']] += s['cajones']
 
 >>> tenencias
-Counter({'Mandarina': 250, 'Naranja': 150, 'Caqui': 150, 'Lima': 100, 'Durazno': 95})
+Counter({'Caqui': 150, 'Durazno': 95, 'Lima': 100, 'Mandarina': 250, 'Naranja': 150})
 >>>
 ```
 
@@ -72,10 +72,10 @@ Podés usar el contador como un diccionario para recuperar valores individuales:
 >>>
 ```
 
-Podés listar las tres frutas con mayores tenenciasa:
+Podés listar las tres frutas con mayores tenencias:
 
 ```python
->>> # Get three most held cajones
+>>> # Las 3 frutas con más cajones
 >>> tenencias.most_common(3)
 [('Mandarina', 250), ('Naranja', 150), ('Caqui', 150)]
 >>>
@@ -90,7 +90,7 @@ Carguemos los datos de otro camión con cajones de fruta en un nuevo contador:
           tenencias2[s['nombre']] += s['cajones']
 
 >>> tenencias2
-Counter({'Frambuesa': 250, 'Durazno': 125, 'Lima': 50, 'Mandarina': 25})
+Counter({'Durazno': 125, 'Frambuesa': 250, 'Lima': 50, 'Mandarina': 25})
 >>>
 ```
 
@@ -98,12 +98,12 @@ Y finalmente combinemos las tenencias de ambos camiones con una operación simpl
 
 ```python
 >>> tenencias
-Counter({'Mandarina': 250, 'Naranja': 150, 'Caqui': 150, 'Lima': 100, 'Durazno': 95})
+Counter({'Caqui': 150, 'Durazno': 95, 'Lima': 100, 'Mandarina': 250, 'Naranja': 150})
 >>> tenencias2
 Counter({'Frambuesa': 250, 'Durazno': 125, 'Lima': 50, 'Mandarina': 25})
 >>> combinada = tenencias + tenencias2
 >>> combinada
-Counter({'Mandarina': 275, 'Frambuesa': 250, 'Durazno': 220, 'Lima': 150, 'Naranja': 150, 'Caqui': 150})
+Counter({'Caqui': 150, 'Durazno': 220, 'Frambuesa': 250, 'Lima': 150, 'Mandarina': 275, 'Naranja': 150})
 >>>
 ```
 
