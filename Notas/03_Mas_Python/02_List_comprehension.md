@@ -10,7 +10,7 @@ La comprensión de listas crea un una nueva lista aplicando una operación a cad
 
 ```python
 >>> a = [1, 2, 3, 4, 5]
->>> b = [2*x for x in a ]
+>>> b = [2*x for x in a]
 >>> b
 [2, 4, 6, 8, 10]
 >>>
@@ -26,7 +26,7 @@ Otro ejemplo:
 >>>
 ```
 
-La sintaxis general es : `[ <expresión> for <variable> in <secuencia> ]`.
+La sintaxis general es : `[<expresión> for <variable> in <secuencia>]`.
 
 ### Filtros
 
@@ -34,7 +34,7 @@ La comprensión de listas se puede usar para filtrar.
 
 ```python
 >>> a = [1, -5, 4, 2, -2, 10]
->>> b = [2*x for x in a if x > 0 ]
+>>> b = [2*x for x in a if x > 0]
 >>> b
 [2, 8, 4, 20]
 >>>
@@ -45,25 +45,25 @@ La comprensión de listas se puede usar para filtrar.
 La comprensión de listas es enormemente útil. Por ejemplo, podés recolectar los valores de un campo específico de un diccionario:
 
 ```python
-frutas = [s['nombre'] for s in cajones]
+frutas = [s['nombre'] for s in camion]
 ```
 
-O podés hacer consultas (queries) como si las secuencias fueran bases de datos.
+O podés hacer consultas (*queries*) como si las secuencias fueran bases de datos.
 
 ```python
-a = [s for s in cajones if s['precio'] > 100 and s['cajones'] > 50 ]
+a = [s for s in camion if s['precio'] > 100 and s['cajones'] > 50 ]
 ```
 
 También podés combinar la comprensión de listas con reducciones de secuencias:
 
 ```python
-costo = sum([s['cajones']*s['precio'] for s in cajones])
+costo = sum([s['cajones']*s['precio'] for s in camion])
 ```
 
 ### Sintaxis general
 
 ```code
-[ <expresión> for <variable> in <secuencia> if <condición>]
+[<expresión> for <variable> in <secuencia> if <condición>]
 ```
 
 Lo que significa
@@ -82,14 +82,14 @@ La comprensión de listas viene de la matemática (definición de conjuntos por 
 ```code
 a = [ x * x for x in s if x > 0 ] # Python
 
-a = { x^2 | x ∈ s, x > 0 }         # Math
+a = { x^2 | x ∈ s, x > 0 }        # Matemática
 ```
 
 La mayoría de los programadores no suelen pensar en el costado matemático de esta herramienta. Podemos verla simplemente como una abreviación copada para definir listas.
 
 ## Ejercicios
 
-Corré  tu programa `informe.py` de forma de tener los datos sobre cajones cargados en tu intérprete en modo interactivo. 
+Corré tu programa `informe.py` de forma de tener los datos sobre cajones cargados en tu intérprete en modo interactivo. 
 
 Luego, tratá de escribir los comandos adecuados para realizar las operaciones descriptas abajo. Estas operaciones son reducciones, transformaciones y consultas sobre la carga del camión.
 
@@ -114,18 +114,18 @@ Calculá el costo total de la carga del camión en un solo comando.
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')
->>> cost = sum([ s['cajones'] * s['precio'] for s in camion ])
->>> cost
-44671.15
+>>> costo = sum([ s['cajones'] * s['precio'] for s in camion ])
+>>> costo
+47671.15
 >>>
 ```
 
 Luego, usando la variable `precios` calculá también el valor en el mercado de la carga del camión usando una sola línea de código.
 
 ```python
->>> value = sum([ s['cajones'] * precios[s['nombre']] for s in camion ])
->>> value
-28686.1
+>>> valor = sum([ s['cajones'] * precios[s['nombre']] for s in camion ])
+>>> valor
+62986.1
 >>>
 ```
 
@@ -133,15 +133,14 @@ Ambos son ejemplos de aplicación-reducción. La comprensión de listas está ap
 
 ```python
 >>> [ s['cajones'] * s['precio'] for s in camion ]
-[3220.0000000000005, 4555.0, 12516.0, 10246.0, 3835.1499999999996, 3254.9999999999995, 7044.0]
+[3220.0000000000005, 4555.0, 15516.0, 10246.0, 3835.1499999999996, 3254.9999999999995, 7044.0]
 >>>
 ```
-
 La función `sum()` luego realiza una reducción del resultaqdo
 
 ```python
 >>> sum(_)
-44671.15
+47671.15
 >>>
 ```
 
@@ -155,7 +154,8 @@ Primero, generá una lista con la info de todas las frutas que tienen más de 10
 ```python
 >>> mas100 = [ s for s in camion if s['cajones'] > 100 ]
 >>> mas100
-[{'precio': 83.44, 'nombre': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'nombre': 'Mandarina', 'cajones': 200}]
+[{'cajones': 150, 'nombre': 'Caqui', 'precio': 103.44},
+ {'cajones': 200, 'nombre': 'Mandarina', 'precio': 51.23}]
 >>>
 ```
 
@@ -164,18 +164,21 @@ Ahora, una con la info sobre cajones de Mandarina y Naranja.
 ```python
 >>> myn = [ s for s in camion if s['nombre'] in {'Mandarina','Naranja'} ]
 >>> myn
-[{'precio': 91.1, 'nombre': 'Naranja', 'cajones': 50}, {'precio': 51.23, 'nombre': 'Mandarina', 'cajones': 200},
-  {'precio': 65.1, 'nombre': 'Mandarina', 'cajones': 50}, {'precio': 70.44, 'nombre': 'Naranja', 'cajones': 100}]
+[{'cajones': 50, 'nombre': 'Naranja', 'precio': 91.1},
+ {'cajones': 200, 'nombre': 'Mandarina', 'precio': 51.23},
+ {'cajones': 50, 'nombre': 'Mandarina', 'precio': 65.1},
+ {'cajones': 100, 'nombre': 'Naranja', 'precio': 70.44}]
 >>>
 ```
 
 O una con la info de las frutas que costaron más de $10000.
 
 ```python
->>> cost10k = [ s for s in camion if s['cajones'] * s['precio'] > 10000 ]
->>> cost10k
-[{'precio': 83.44, 'nombre': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'nombre': 'Mandarina', 'cajones': 200}]
->>>
+>>> costo10k = [ s for s in camion if s['cajones'] * s['precio'] > 10000 ]
+>>> costo10k
+[{'cajones': 150, 'nombre': 'Caqui', 'precio': 103.44},
+ {'cajones': 200, 'nombre': 'Mandarina', 'precio': 51.23}]
+ >>>
 ```
 
 Esta forma de escribir resulta análoga a las consultas a una base de datos con 
@@ -198,26 +201,26 @@ Por ejemplo, si quisieras un listado de las frutas en el camión pordías usar:
 ```python
 >>> nombres = { s['nombre'] for s in camion }
 >>> nombres
-{ 'Lima', 'Durazno', 'Naranja', 'Mandarina', 'Caqui'] }
+{'Caqui', 'Durazno', 'Lima', 'Mandarina', 'Naranja'}
 >>>
 ```
 
-Si especificas pares `clave:valor`, podés construir un diccionario. Por ejemplo, si queremos un diccionario con el total de cada fruta en el camión podemos comenzar con
+Si especificás pares `clave:valor`, podés construir un diccionario. Por ejemplo, si queremos un diccionario con el total de cada fruta en el camión podemos comenzar con
 
 ```python
->>> holdings = { nombre: 0 for nombre in nombres }
->>> holdings
-{'Lima': 0, 'Durazno': 0, 'Naranja': 0, 'Mandarina': 0, 'Caqui': 0}
+>>> stock = { nombre: 0 for nombre in nombres }
+>>> stock
+{'Caqui': 0, 'Durazno': 0, 'Lima': 0, 'Mandarina': 0, 'Naranja': 0}
 >>>
 ```
 que es una comprensión de diccionario. Y seguir sumando los cajones:
 
 ```python
 >>> for s in camion:
-        holdings[s['nombre']] += s['cajones']
+        stock[s['nombre']] += s['cajones']
 
->>> holdings
-{ 'Lima': 100, 'Durazno': 95, 'Naranja': 150, 'Mandarina':250, 'Caqui': 150 }
+>>> stock
+{'Caqui': 150, 'Durazno': 95, 'Lima': 100, 'Mandarina': 250, 'Naranja': 150}
 >>>
 ```
 
@@ -226,13 +229,13 @@ Otro ejemplo útil podría ser generar un diccionario de precios de venta de aqu
 ```python
 >>> camion_precios = { nombre: precios[nombre] for nombre in nombres }
 >>> camion_precios
-{'Lima': 9.22, 'Durazno': 13.48, 'Naranja': 106.28, 'Mandarina': 20.89, 'Caqui': 35.46}
->>>
+{'Caqui': 105.46, 'Durazno': 73.48, 'Lima': 40.22, 'Mandarina': 80.89, 'Naranja': 106.28}
+ >>>
 ```
 
-### Ejercicio 3.6: Estraer datos de una arhcivo CSVFiles
-Saber usar combinaciones de comprensión de listas diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. 
-Aquí te mostramos una ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
+
+### Ejercicio 3.6: Estraer datos de una arhcivo CSV
+Saber usar combinaciones de comprensión de listas, diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. Acá te mostramos un ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
 
 Primero, leamos el encabezado (header) del archivo CSV:
 
@@ -266,7 +269,7 @@ Y finalmente leamos los datos y armemos un diccionario usando comprensión de di
 
 ```python
 >>> row = next(rows)
->>> record = { ncolumna: row[index] for ncolumna, index in zip(select, indices) }   # dict-comprehension
+>>> record = { ncolumna: row[index] for ncolumna, index in zip(select, indices) }   # comprensión de diccionario
 >>> record
 {'precio': '32.20', 'nombre': 'Lima', 'cajones': '100'}
 >>>
