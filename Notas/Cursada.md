@@ -17,9 +17,10 @@ Este es un curso cuatrimestral que durará desde principios de agosto a fines de
 Este curso lo dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/). Dado el contexto de ASPO (Aislamiento Social Preventivo y Obligatorio) en vigencia, el curso será completamente virtual.
 
 ## Docentes
-El curso lo dictan dos profesores de la ECyT-UNSAM que son también
+El curso está a cargo de dos profesores de la ECyT-UNSAM que son también
 investigadores del CONICET: [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, Dr. en Computación y trabaja en temas ambientales.
 
+También colaboran muy generosamente con la preparación del curso otres docentes: Matias López (DC, FCEN, UBA), José Crespo (EGE, FCEN, UBA) y Manuela Cerdeiro (DM, FCEN, UBA). Además, Pablo La Spina, que es licenciado en Biotecnología de la UNSAM y está actualmente cursando un doctorado en Ciencias Biológicas participa como adscirpto a la cátedra.
 
 ## Contenidos, enfoque y organización de los temas
 El curso involucra contenidos prácticos específicos del lenguaje Python así como también un poco más teóricos sobre algoritmos, organización de programas y estructuras de datos. Además de los contenidos mínimos del curso, cada clase tendrá una guía optativa para profundizar en algún tema específico.
