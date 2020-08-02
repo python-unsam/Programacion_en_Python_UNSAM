@@ -214,7 +214,7 @@ WHILE x < 0:   # ERROR
 El comando `while` ejecuta un ciclo o *loop*.
 
 ```python
-while num_billetes * grosor_billete < altura_obelisco:
+while num_billetes * grosor_billete <= altura_obelisco:
     print(dia, num_billetes, num_billetes * grosor_billete)
     dia = dia + 1
     num_billetes = num_billetes * 2
@@ -230,7 +230,7 @@ La indentación se usa para marcar grupos de comandos que van juntos.
 Considerá el ejemplo anterior:
 
 ```python
-while num_billetes * grosor_billete < altura_obelisco:
+while num_billetes * grosor_billete <= altura_obelisco:
     print(dia, num_billetes, num_billetes * grosor_billete)
     dia = dia + 1
     num_billetes = num_billetes * 2
@@ -259,7 +259,7 @@ Algunas recomendaciones sobre cómo indentar:
 El único requisito del intérprete de Python es que la indentación dentro de un mismo bloque sea consistente. Por ejemplo, esto es un error:
 
 ```python
-while num_billetes * grosor_billete < altura_obelisco:
+while num_billetes * grosor_billete <= altura_obelisco:
     print(dia, num_billetes, num_billetes * grosor_billete)
         dia = dia + 1 # ERROR
     num_billetes = num_billetes * 2
@@ -375,7 +375,7 @@ altura_obelisco = 67.5         # altura en metros
 num_billetes = 1
 dia = 1
 
-while num_billetes * grosor_billete < altura_obelisco:
+while num_billetes * grosor_billete <= altura_obelisco:
     print(dia, num_billetes, num_billetes * grosor_billete)
     dia = dias + 1
     num_billetes = num_billetes * 2

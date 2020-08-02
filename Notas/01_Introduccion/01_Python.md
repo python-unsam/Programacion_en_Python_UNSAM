@@ -6,7 +6,7 @@
 
 Python es un lenguaje interpretado de alto nivel. Frecuentemente se lo clasifica como lenguaje de ["scripting"](https://es.wikipedia.org/wiki/Script). La sintaxis del Python tiene elementos de lenguaje C de programación.
 
-Python fue creado por Guido van Rossum a principios de la década del '90 y lo nombrío así en honor de  Monty Python.
+Python fue creado por Guido van Rossum a principios de la década del '90 y lo nombró así en honor de  Monty Python.
 
 ### ¿Dónde conseguir Python?
 
@@ -32,12 +32,12 @@ hello world
 
 Si es la primera vez que ves una consola o terminal, sería conveniente que pares aquí, leas [un tutorial corto](https://tutorial.djangogirls.org/es/intro_to_command_line/) sobre cómo usar la consola de tu sistema operativo y luego vuelvas para seguir leyendo.
 
-Existen diversos entornos fuera de la terminal en los que se puede escribir y ejecutar código Python. Es importante saber usarlo desde la terminal: si lo sabés usar bien desde la terminal (que es su entorno natural) lo podrás usar en cualquier otro entorno. Ya en la próxima clase te prondremos usar Python dentro de un entorno de desarrollo. Por ahora, te recomendamos usarlo desde la terminal como acabamos de explicar.
+Existen diversos entornos fuera de la terminal en los que se puede escribir y ejecutar código Python. Es importante saber usarlo desde la terminal: si lo sabés usar bien desde la terminal (que es su entorno natural) lo podrás usar en cualquier otro entorno. Ya en la próxima clase usarás Python dentro de un entorno de desarrollo. Por ahora, te recomendamos usarlo desde la terminal como acabamos de explicar.
 
 ## Ejercicios
 
 ### Ejercicio 1.1: Python como  calculadora
-En tu máquina, arrancá el Python y usal como una calculadora para resolver el siguiente problema.
+En tu máquina, iniciá Python y usalo como calculadora para resolver el siguiente problema:
 
 * ¿Cuántas horas son 105 minutos?
 * ¿Cuántos kilómetros son 20 millas? (un kilómetro corresponde a 0,6214 millas)
@@ -61,22 +61,21 @@ tip: Usá el guión bajo (underscore, \_) para referirte al resultado del últim
 ```
 
 ### Ejercicio 1.2: Obtener ayuda
-** sacar esta referencia Ver [Ejercicio 1.1](../01_Introduccion/01_Python.md#ejercicio-11-python-como-calculadora) y  [Ejercicio 1.2](../01_Introduccion/01_Python.md#ejercicio-12-obtener-ayuda) **
 Ver [Ejercicio 1.1](../01_Introduccion/01_Python.md#ejercicio-11-python-como-calculadora) y  [Ejercicio 1.2](../01_Introduccion/01_Python.md#ejercicio-12-obtener-ayuda) y [Sección 1.1](../01_Introduccion/01_Python.md#dónde-conseguir-python)
 
 
-Usá el comando `help()` para obtener ayuda sobre la función  `abs()`. Luego, uśá el `help()` para obtener la ayuda sobre la función `round()`. Tipeá `help()` sólo para entrar en la ayuda en modo  interactivo.
+Usá el comando `help()` para obtener ayuda sobre la función  `abs()`. Luego, usá el `help()` para obtener la ayuda sobre la función `round()`. Tipeá `help()` sólo para entrar en la ayuda en modo  interactivo.
 
 El `help()` no funciona con los comandos básicos de Python como`for`, `if`, `while`, etc. Si tipeás `help(for)` vas a obtener un error. Podés probar usando comillas como en  `help("for")`, en algunos entornos funciona bien. Si no, siempre podés hacer una búsqueda en internet. 
 
 La documentación oficial en inglés de Python se encuentra en <http://docs.python.org>. Por ejemplo, encontrá ahí la documentación sobre la función `abs()` (ayuda: está dentro de "library reference" y relacionado a las "built-in functions").
 
 ### Ejercicio 1.3: Copy-paste
-Este curso está estructurado como una serie de páginas web tradicionales en las que los incentivamos a probar interactivamente fragmentos de código en sus intérpretesde Python **escribiéndolos a mano**. Si estás aprendiendo Python por primera vez, este forma "lenta" de hacer las cosas es la que recomendamos. Vas a entender mejor yendo lento y escribiendo los comandos vos mismo mientras pensás en lo que estás tipeando.
+Este curso está estructurado como una serie de páginas web tradicionales en las que los incentivamos a probar interactivamente fragmentos de código en sus intérpretes de Python **escribiéndolos a mano**. Si estás aprendiendo Python por primera vez, esta forma "lenta" de hacer las cosas es la que recomendamos. Vas a entender mejor yendo lento y escribiendo los comandos vos mismo mientras pensás en lo que estás tipeando.
 
 Es importante que tipées los comandos a mano. Para usar copy-paste quizás mejor ni hacerlos. Parte del objetivo de los ejercicios es entrenar tus manos, tus ojos y tu cabeza en leer, escribir y mirar código tal como dice [Zed Shaw en su libro](https://learntocodetogether.com/learn-python-the-hard-way-free-ebook-download/). Usar copy-paste excesivamente es como hacerte trampa a vos misme. Es como tratar de aprender a tocar la guitarra escuchando discos: es probable que no aprendas nunca.
 
-Si en algún momento necesitás hacer copy-aste" de fragmentos de código, seleccioná el código que viene luego del símbolo `>>>` y hasta la siguiente linea en blanco o el siguiente `>>>` (el que aparezca primero). Seleccioná "copy" en el navegador (Ctrl-C), andá al intérprete de Python y poné "paste" (Ctrl-V o Crtl-shift-V) para pegarlo. Para ejecutar el código es posible que tengas que apretar "Enter" luego de pegarlo.
+Si en algún momento necesitás hacer "copy-paste" de fragmentos de código, seleccioná el código que viene luego del símbolo `>>>` y hasta la siguiente linea en blanco o el siguiente `>>>` (el que aparezca primero). Seleccioná "copy" en el navegador (Ctrl-C), andá al intérprete de Python y poné "paste" (Ctrl-V o Crtl-shift-V) para pegarlo. Para ejecutar el código es posible que tengas que apretar "Enter" luego de pegarlo.
 
 Usá copy-paste para ejecutar los siguientes comandos:
 

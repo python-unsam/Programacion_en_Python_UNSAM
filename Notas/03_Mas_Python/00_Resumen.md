@@ -15,7 +15,6 @@ Al final, presentamos un ejercicio lindísimo del curso [Exactas Programa]() que
 * [3.5 NumPy](05_NumPy_Arrays.md)
 * [3.6 El album de Figuritas+](06_Figuritas.md)
 * [3.7 Cierre*](07_Cierre.md)
-* [3.8 NumPy](07_NumPy_Arrays.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa_OSKI1/00_Resumen.md)

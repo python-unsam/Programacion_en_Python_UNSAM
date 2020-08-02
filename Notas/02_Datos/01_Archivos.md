@@ -117,7 +117,7 @@ nombre,cajones,precio
 
 En el ejemplo de arriba podrás observar que Python tiene dos modos de salida. En el primero escribiste `data` en el intérprete y Python mostró la representaciópn *cruda* de la cadena, incluyendo comillas y códigos de escape. Cuando escribiste `print(data)`, en cambio, obtuviste la salida formateada de la cadena.
 
-A pesar de que leer un archivo entero de una parece simple, suele no ser la mejor opción. Especialmente si estás trabajando con archivos muy enormes o si querés procesar las líneas de tu archivo una a una.
+Leer un archivo entero y cargarlo en memoria todo de una vez parece simple, pero sólo tiene ventajas si el archivo es pequeño. Si estás trabajando con archivos enormes es mejor procesar las líneas de tu archivo una a una.
 
 Para leer una archivo línea por línea, usá un ciclo for como éste:
 
@@ -154,7 +154,7 @@ En ciertas ocasiones, puede pasar que quieras leer una sola línea de texto (por
 
 El comando `next()` devuelve la siguiente línea de texto en el archivo. Sin embargo, sólo para que sepas, los cilcos `for` usan el método `next()` para obtener sus datos. Por lo tanto, típicamente no forzás un llamado extra a `next()` salvo que explícitamente quieras saltear o leer una línea particular como en nuestro caso de acá abajo.
 
-Una vez que estés leyendo un archivo línea a línea, podés hacer otras operaciones, como seprar los datos dentro de una línea con el método `split()`. Por ejemplo, probá esto:
+Una vez que estés leyendo un archivo línea a línea, podés hacer otras operaciones, como separar los datos dentro de una línea con el método `split()`. Por ejemplo, probá esto:
 
 ```python
 >>> f = open('Data/camion.csv', 'rt')
@@ -174,11 +174,11 @@ Una vez que estés leyendo un archivo línea a línea, podés hacer otras operac
 *Observación: En estos ejemplos tuvimos que llamar  a `f.close()` explícitamente porque no estamos trabajando con el comando `with`.*
 
 ### Ejercicio 2.2: Lectura de un archivo de datos
-Ahora que sabés leer un archivo, escribamos un programa que haga un cáluclo simple con los datos leídos.
+Ahora que sabés leer un archivo, escribamos un programa que haga un cálculo simple con los datos leídos.
 
 Las columnas en `camion.csv` corresponden a un nombre de fruta, una cantidad de cajones cargados en el camión, y un precio de compra por cada cajón de ese grupo. Escribí un programa llamado `costo_camion.py`  que abra el achivo, lea las líneas, y calcule el precio pagado por los cajones cargados en el camión.
 
-*Ayuda: para converit un string `s` en un entero, usá `int(s)`. Para convertirlo en punto flotante, usá `float(s)`.*
+*Ayuda: para interpretar un string `s` como un número entero, usá `int(s)`. Para leerlo como punto flotante, usá `float(s)`.*
 
 Tu programa debería imprimir una salida como la siguiente:
 
@@ -189,7 +189,7 @@ Costo total 47671.15
 Acordate de guardar tu archivo. Vamos a volver a trabajar sobre él.
 
 ### Ejercicio 2.3: Archivos comprimidos
-¿Que pasaría si quisiéramos leer un archivo comrimido con gzip, por ejemplo? La función primitiva de Python  `open()` no hace esa tarea. Pero hay un módulo de la biblioteca de Python llamado `gzip` que lee archivos comprimidos.
+¿Que pasaría si quisiéramos leer un archivo comprimido con gzip, por ejemplo? La función primitiva de Python  `open()` no hace esa tarea. Pero hay un módulo de la biblioteca de Python llamado `gzip` que lee archivos comprimidos.
 
 Probalo:
 
