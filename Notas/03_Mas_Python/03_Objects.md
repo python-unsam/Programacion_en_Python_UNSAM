@@ -412,9 +412,9 @@ Convirtamos estos datos usando un truco similar:
 >>>
 ```
 
-Bonus: ¿Cómo modificarías este ejemplo para parsear la fecha (`date`) en una tupla como `(6, 11, 2007)`?
+Bonus: ¿Cómo modificarías este ejemplo para transformar la fecha (`date`) en una tupla como `(6, 11, 2007)`?
 
-Es importante que entiedas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
+Es importante que entiendas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random)](04_Random.md)
 

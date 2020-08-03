@@ -285,7 +285,7 @@ También podés reescribir el último ciclo for usando un comando como éste:
             total += cajones*precio
 
 >>> print(total)
-44671.15
+47671.15
 >>>
 ```
 
@@ -311,7 +311,7 @@ Experimentá con esta función nueva igual que en el ejercicio anterior.
         total += s['cajones']*s['precio']
 
 >>> print(total)
-44671.15
+47671.15
 >>>
 ```
 
@@ -388,7 +388,7 @@ Usá el módulo `csv` igual que antes.
 El archivo `Data/precios.csv` puede tener líneas en blanco, esto te puede traer complicaciones.
 Observá que arriba figura una lista vacía (la última), porque la última línea del archivo no tenía datos.
 
-Puede suceder que esto haga que tu programa termine con una excepción. Usá los comandos `try` y `except` comandos para evitar el problema.
+Puede suceder que esto haga que tu programa termine con una excepción. Usá los comandos `try` y `except` para evitar el problema.
 Para pensar: ¿Sería mejor prevenir estos problemas con el comando `if` en vez de `try` y `except`?
 
 Una vez que hayas escrito tu función `leer_precios()`, testeala interactivamente para asegurarte de que funciona bien:
@@ -398,14 +398,14 @@ Una vez que hayas escrito tu función `leer_precios()`, testeala interactivament
 >>> precios['Naranja']
 106.28
 >>> precios['Mandarina']
-20.89
+80.89
 >>>
 ```
 
 ### Ejercicio 2.15: Balances
 Supongamos que los precios en `camion.csv` son los precios pagados al productor de frutas mientras que los precios en `precios.csv` son los precios de venta en el lugar de descarga del camión.
 
-Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y agregá algunos comandos adicionales donde haga falta de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente. Para ser más espcíficos: tu programa tiene que imprimir un balance indicando el total pagado al productor, el valor en el mercado de la carga que trajo el camión, así como un balance indicando ganacias o pérdidas.
+Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y agregá algunos comandos adicionales donde haga falta de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente. Para ser más específicos: tu programa tiene que imprimir un balance indicando el total pagado al productor, el valor en el mercado de la carga que trajo el camión, así como un balance indicando ganancias o pérdidas.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Impresión con formato)](05_Formato.md)
