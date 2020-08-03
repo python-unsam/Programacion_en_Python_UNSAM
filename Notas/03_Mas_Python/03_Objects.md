@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random+)](04_Random.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random)](04_Random.md)
 
 # 3.3 Objetos
 
@@ -175,7 +175,7 @@ Los nombres de variables no tienen un tipo asociado. Sólo son nombres. Pero los
 <type 'str'>
 ```
 
-`type()` te dice el tipo del valor. Se usa como una función que transforma un valor en un tipo.
+`type()` te dice el tipo del valor.
 
 ### Verificación de tipos
 
@@ -255,14 +255,14 @@ for row in rows:
 
 Este tipo de conversiones puede hacerse de una manera más inteligente usando algunas operaciones de listas.
 
-Hagamos una lista de Python con los nombres de las funciones de conversión que necesitamso para convertir cada columna al tipo apropiado:
+Hagamos una lista de Python con los nombres de las funciones de conversión que necesitamos para convertir cada columna al tipo apropiado:
 
 ```python
 >>> types = [str, int, float]
 >>>
 ```
 
-Podés crear esta lista porque en Python todos los objetos son de la misma clase (de primera clase, deigamos). Por lo tanto, si querés tener funciones en una lista, no pasa nada. Los elementos de la lista que creaste son funciones que convierten un valor `x` en un tipo dado (`str(x)`, `int(x)`, `float(x)`).
+Podés crear esta lista porque en Python todos los objetos son de la misma clase (de primera clase, digamos). Por lo tanto, si querés tener funciones en una lista, no pasa nada. Los elementos de la lista que creaste son funciones que convierten un valor `x` a un tipo dado (`str(x)`, `int(x)`, `float(x)`).
 
 Ahora, leé una fila de datos del archivo anterior:
 
@@ -277,7 +277,7 @@ Ahora, leé una fila de datos del archivo anterior:
 >>>
 ```
 
-Como ya dijimos, con esta fila no podemos hacer operaciones oprque los tipos son incorrectos. Por ejemplo:
+Como ya dijimos, con esta fila no podemos hacer operaciones porque los tipos son incorrectos. Por ejemplo:
 
 ```python
 >>> row[1] * row[2]
@@ -300,7 +300,7 @@ Sin embargo, los datos pueden aparearse con los tipos especificados en `types`. 
 Probá converir uno de los valores:
 
 ```python
->>> types[1](row[1])     # Same as int(row[1])
+>>> types[1](row[1])     # Es equivalente a int(row[1])
 100
 >>>
 ```
@@ -308,7 +308,7 @@ Probá converir uno de los valores:
 Probá con otro:
 
 ```python
->>> types[2](row[2])     # Same as float(row[2])
+>>> types[2](row[2])     # Equivalente a float(row[2])
 32.2
 >>>
 ```
@@ -346,7 +346,7 @@ Esta lista zipeada es útil si querés realizar conversiones de todos los valore
 >>>
 ```
 
-Asegurate de entender lo que está pasando en el código de arriba. En el ciclo la variable `func` va tomando los valores del las funciones de conversión de tipos (`str`, `int`, `float`) y la variable `val` va tomando los valores de los datos en la fila: `'Lima'`, `'100'`, `'32.2'`.  La expresión `func(val)` convierte los tipos de cada dato..
+Asegurate de entender lo que está pasando en el código de arriba. En el ciclo la variable `func` va tomando los valores del las funciones de conversión de tipos (`str`, `int`, `float`) y la variable `val` va tomando los valores de los datos en la fila: `'Lima'`, `'100'`, `'32.2'`.  La expresión `func(val)` convierte los tipos de cada dato.
 
 El código de arriba puede comprimirse en una sola instrucción usando comprensión de listas.
 
@@ -358,7 +358,7 @@ El código de arriba puede comprimirse en una sola instrucción usando comprensi
 ```
 
 ### Ejercicio 3.7: Diccionarios
-¿Te acordás que la función `dict()` te permite hacer fácilmente un diccionario si tenés una secuencia de claves y valores? Hagamos un diccionario usando el encabezado de las columnas:
+¿Te acordás que la función `dict()` te permite hacer fácilmente un diccionario si tenés una secuencia de tuplas con claves y valores? Hagamos un diccionario usando el encabezado de las columnas:
 
 ```python
 >>> headers
@@ -370,7 +370,7 @@ El código de arriba puede comprimirse en una sola instrucción usando comprensi
 >>>
 ```
 
-si estás en sintonía con la comprensión de listas podés escribir una sola línea usando comprensión de diccionarios:
+Si estás en sintonía con la comprensión de listas podés escribir una sola línea usando comprensión de diccionarios:
 
 ```python
 >>> { name: func(val) for name, func, val in zip(headers, types, row) }
@@ -416,5 +416,5 @@ Bonus: ¿Cómo modificarías este ejemplo para parsear la fecha (`date`) en una 
 
 Es importante que entiedas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random+)](04_Random.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random)](04_Random.md)
 

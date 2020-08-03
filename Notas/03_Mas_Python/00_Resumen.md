@@ -11,7 +11,7 @@ Al final, presentamos un ejercicio lindísimo del curso [Exactas Programa]() que
 * [3.1 Errores](01_Errores3.md)
 * [3.2 Comprensión de listas](02_List_comprehension.md)
 * [3.3 Objetos](03_Objects.md)
-* [3.4 Random+](04_Random.md)
+* [3.4 Random](04_Random.md)
 * [3.5 NumPy](05_NumPy_Arrays.md)
 * [3.6 El album de Figuritas+](06_Figuritas.md)
 * [3.7 Cierre*](07_Cierre.md)

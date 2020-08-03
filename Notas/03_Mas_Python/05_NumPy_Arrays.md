@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Random+)](04_Random.md) \| [Próximo (6 El album de Figuritas+)](06_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Random)](04_Random.md) \| [Próximo (6 El album de Figuritas+)](06_Figuritas.md)
 
 # 3.5 NumPy
 
@@ -846,7 +846,7 @@ Las funciones `savetxt()` y `loadtxt()` aceptan parámentros adicionales para es
 
 ### Ejercicio 3.15: Guardar temperaturasEjercicio ?
 
-Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.28](../03_Mas_Python/07_Cierre.md#37-cierre) para que guarde el vector con las temperaturas simuladas en el directorio `Ejercicios/Data/`, en un archivo llamado `Temperaturas.npy`
+Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.29](../03_Mas_Python/07_Cierre.md#37-cierre) para que guarde el vector con las temperaturas simuladas en el directorio `Ejercicios/Data/`, en un archivo llamado `Temperaturas.npy`
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Random+)](04_Random.md) \| [Próximo (6 El album de Figuritas+)](06_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Random)](04_Random.md) \| [Próximo (6 El album de Figuritas+)](06_Figuritas.md)
 

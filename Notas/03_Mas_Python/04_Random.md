@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (3 Objetos)](03_Objects.md) \| [Próximo (5 NumPy)](05_NumPy_Arrays.md)
 
-# 3.4 Random+
+# 3.4 Random
 
 En esta sección veremos algunas de las funciones del módulo `random`. Este módulo de usa para generar valores pseudo-aleatorios. Desde el punto de vista práctico, usaremos estos valores como perfectamente aleatorios aunque al ser la computadora una máquina determinística sabemos que esto no es completamente cierto. De hecho, en lo que sigue, por simplicidad, omitiremos el prefijo pseudo y hablaremos de números aleatorios aunque no lo sean exactamente.
 

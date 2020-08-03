@@ -32,7 +32,7 @@ hello world
 
 Si es la primera vez que ves una consola o terminal, sería conveniente que pares aquí, leas [un tutorial corto](https://tutorial.djangogirls.org/es/intro_to_command_line/) sobre cómo usar la consola de tu sistema operativo y luego vuelvas para seguir leyendo.
 
-Existen diversos entornos fuera de la terminal en los que se puede escribir y ejecutar código Python. Es importante saber usarlo desde la terminal: si lo sabés usar bien desde la terminal (que es su entorno natural) lo podrás usar en cualquier otro entorno. Ya en la próxima clase usarás Python dentro de un entorno de desarrollo. Por ahora, te recomendamos usarlo desde la terminal como acabamos de explicar.
+Existen diversos entornos fuera de la terminal en los que se puede escribir y ejecutar código Python. Pero para nosotros es importante que primero aprendas a usarlo desde la terminal: si lo sabés usar bien desde la terminal (que es su entorno natural) lo podrás usar en cualquier otro entorno. Ya en la próxima clase usarás Python dentro de un entorno de desarrollo. Por ahora, te recomendamos usarlo de esta manera que  acabamos de explicar.
 
 ## Ejercicios
 

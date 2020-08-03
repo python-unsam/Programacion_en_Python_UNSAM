@@ -97,7 +97,11 @@ hello world
 ```
 
 Obervación: En Windows puede ser necesario especificar el camino (path) completo al intérprete de Python como en `c:\python36\python`.
-Sin embargo, si Python está instalado del modo usual, podría alcanzar con que tipees el nombre del programa como en `hello.py`.
+Sin embargo, si Python está instalado del modo usual, podría alcanzar con que tipées el nombre del programa como en `hello.py`.
+
+Tené en cuenta que con estos comandos estás corriendo el código de Python desde la línea de comandos de tu sistema operativo. El código se ejecuta, Python termina y el control vuelve a la terminal, saliendo de Python. Si neceistás ejecutarlo y seguir dentro del intérprete de Python podés usar `python -i hello.py`.
+
+Si estás dentro del intérprete de Python y querés salir y volver a la línea de comandos, podés hacerlo mediante el comando `exit()`.
 
 ### Un ejemplo de programa
 
@@ -403,7 +407,7 @@ Aprender a leer y entender los mensajes de error es una parte fundamental de pro
 
 
 ### Ejercicio 1.5: La pelota que rebota
-Este es el primer conjunto de ejercicios en el que vas a tener que crear un archivo de Python y correrlo. A partir de aca, vamos a asumir que estás trabajando en el subdirectorio `Ejercicios/`. Para ayudarte a ubicar el lugar correcto ya creamos un par de archivos en ese directorio. Por ejemplo, ahora buscá el archivo `Ejercicios/rebotes.py` que vamos a usar en este ejercicio.
+Este es el primer conjunto de ejercicios en el que vas a tener que crear un archivo de Python y correrlo. A partir de aca, vamos a asumir que estás trabajando en el subdirectorio `Ejercicios/`. Para ayudarte a ubicar el lugar correcto ya creamos un par de archivos en ese directorio. Buscá en tu terminal el archivo `Ejercicios/rebotes.py` (cambiando de directorio como vimos recién). Lo vamos a usar en este ejercicio. 
 
 Una pelota de goma es arrojada desde una altura de 100 metros y cada vez que toca el piso salta 3/5 de la altura desde la que cayó. Escribí un programa `rebotes.py` que imprima una tabla mostrando las alturas que alcanza en cada uno de sus primeros diez rebotes.
 
