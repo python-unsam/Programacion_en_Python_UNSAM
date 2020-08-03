@@ -20,7 +20,7 @@ En Python hay tres opciones principales para elegir.
 ### Listas como contenedores
 
 Usá listas cuando el orden de los datos importe. Acordate de que las listas pueden contener cualquier tipo de objeto.
-Por ejemplo, una lista de tuplas
+Por ejemplo, una lista de tuplas.
 
 ```python
 camion = [
@@ -253,7 +253,7 @@ Por último, la función debe devolver la lista `camion`.
 
 Experimentá con tu función interactivamente (acordate de que primero tenés que correr el programa `informe.py` en el intérprete):
 
-*Ayuda: Usá `-i` para ejecutar un archivo en la terminal y quedar en el intéreprete*
+*Ayuda: Usá `-i` para ejecutar un archivo en la terminal y quedar en el intérprete*
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')

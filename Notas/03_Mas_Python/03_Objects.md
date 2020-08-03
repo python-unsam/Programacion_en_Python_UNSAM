@@ -12,7 +12,7 @@ Muchas operaciones en Python están relacionas a *asignar* o *guardar* valores.
 ```python
 a = valor         # Asignación a una variable
 s[n] = valor      # Asignación a una lista
-s.append(valor)   # Agregar a una list
+s.append(valor)   # Agregar a una lista
 d['key'] = valor  # Agregar a una diccionario
 ```
 
@@ -21,7 +21,7 @@ Las asignaciones son simplemente copias de la referencias (o copias del puntero,
 
 ### Ejemplo de asignación
 
-Considerá este fragemnto de código.
+Considerá este fragmento de código.
 
 ```python
 a = [1,2,3]
@@ -61,13 +61,13 @@ print(a)      # [4, 5, 6]
 print(b)      # [1, 2, 3]    Mantiene el valor original
 ```
 
-Acordate: **Las variables son nombre, no ubicaciones en la memoria.**
+Acordate: **Las variables son nombres, no ubicaciones en la memoria.**
 
 ### Peligros
 
 Si no te explican esto, tarde o temprano te trae problemas. Un típico ejemplo es cuando cambiás un dato pensando que es una copia privada y, sin querer, esto corrompe los datos en otra parte del programa.
 
-*Comentario: Esta es una de las razones por las que los tipos de datos primitivos (int,  float, string) son immutable (de sólo lectura).*
+*Comentario: Esta es una de las razones por las que los tipos de datos primitivos (int,  float, string) son immutables (de sólo lectura).*
 
 ### Identidad y referencias
 
@@ -81,7 +81,7 @@ True
 >>>
 ```
 
-`is` compara la identidad del objeto (un entero).  esta identidad tambien la podés obtener usando `id()`.
+`is` compara la identidad del objeto (que está representada por un número entero). Esta identidad también la podés obtener usando `id()`.
 
 ```python
 >>> id(a)
@@ -106,9 +106,9 @@ True
 >>>
 ```
 
-### Copias playas
+### Copias superficiales
 
-Las listas y diccionarios tienen metodos para hacer copias (no meras referencias, copias, duplicados):
+Las listas y diccionarios tienen métodos para hacer copias (no meras referencias, sino duplicados):
 
 ```python
 >>> a = [2,3,[100,101],4]
@@ -139,16 +139,16 @@ True
 >>>
 ```
 
-En este ejemplo, la lista interna `[100, 101, 102]` es compartida por ambas variables. La copia que hicimos con el comando `b = list(a)` es un *copia playa* (playa en el sentido de *poco profunda*, en inglés se dice *shallow copy*).
+En este ejemplo, la lista interna `[100, 101, 102]` es compartida por ambas variables. La copia que hicimos con el comando `b = list(a)` es un *copia superficial* (superficial en el sentido de *poco profunda*, en inglés se dice *shallow copy*).
 Mirá este gráfico.
 
-![Copias playas](shallow.png)
+![Copias superficiales](shallow.png)
 
 La lista interna sigue siendo compartida.
 
 ### Copias profundas
 
-A veces vas a necesitar hacer una copia de un objeto así como de todos los objetos que contenga. Llamamaos a esto una *copia pofunda* (deep copy) Podés usar el módulo `copy` para esto:
+A veces vas a necesitar hacer una copia de un objeto así como de todos los objetos que contenga. Llamamos a esto una *copia pofunda* (*deep copy*) Podés usar el módulo `copy` para esto:
 
 ```python
 >>> a = [2,3,[100,101],4]
@@ -164,7 +164,7 @@ False
 
 ### Nombre, valores y tipos
 
-Los nombres de variables no tienen un tipo asociado. Solo son nombres. Pero los valores sí tiene un tipo subyacente.
+Los nombres de variables no tienen un tipo asociado. Sólo son nombres. Pero los valores sí tienen un tipo subyacente.
 
 ```python
 >>> a = 42
@@ -175,7 +175,7 @@ Los nombres de variables no tienen un tipo asociado. Solo son nombres. Pero los 
 <type 'str'>
 ```
 
-`type()` te dice el tipo del valor. Se usa como una función que transofrma un valor en un tipo.
+`type()` te dice el tipo del valor. Se usa como una función que transforma un valor en un tipo.
 
 ### Verificación de tipos
 
@@ -183,21 +183,21 @@ Podés verificar si un objeto es una instancia de cierto tipo.
 
 ```python
 if isinstance(a, list):
-    print('a is a list')
+    print('a es una lista')
 ```
 
 O incluso si su tipo está entre varios tipos.
 
 ```python
 if isinstance(a, (list,tuple)):
-    print('a is a list or tuple')
+    print('a una lista o una tupla')
 ```
 
-*Cuidado: Demasiadas verificaciones de de tipos puede resultar en un código excesivamente complejo. Típicamente lo usás para evitar errores comunes cometidos por otros usuarios de tu código.*
+*Cuidado: Demasiadas verificaciones de tipos pueden resultar en un código excesivamente complejo. Típicamente lo usás para evitar errores comunes cometidos por otres usuaries de tu código.*
 
 ### Todo es un objeto
 
-Números, cadenas, listas, funciones, excepciones, clases, instancias, etc. son todes objetos. Esto significa que todos los objetos que pueden ser nombrados pueden ser pasados como datos, ubicados en contenedors, etc. sin restricciones. No hay objetos especiales en Python. Todos los objetos viajan en primera clase.
+Números, cadenas, listas, funciones, excepciones, clases, instancias, etc. son todos objetos. Esto significa que pueden ser nombrados pueden ser pasados como datos, ubicados en contenedors, etc. sin restricciones. No hay objetos especiales en Python. Todos los objetos viajan en primera clase.
 
 Un ejemplo simple:
 
@@ -220,7 +220,7 @@ Failed!
 >>>
 ```
 
-Acá, `items` es una lista que tiene una función, un módulo y una excepción. Sé, este es un ejemplo raro. Pero es un ejemplo al fin. Podés usar los elementos de la lista en lugar de los nombres originales:
+Acá, `items` es una lista que tiene una función, un módulo y una excepción. Sí, éste es un ejemplo raro. Pero es un ejemplo al fin. Podés usar los elementos de la lista en lugar de los nombres originales:
 
 ```python
 items[0](-45)       # abs
@@ -232,7 +232,7 @@ Con un gran poder viene siempre una gran responsabilidad. Que puedas no signific
 
 ## Ejercicios
 
-En estos ejercicios mostramos algo de la potencia que tinene que todos los objetos sean de la misma jerarquía.
+En estos ejercicios mostramos algo de la potencia que tiene el hecho de que todos los objetos sean de la misma jerarquía.
 
 ### Ejercicio 3.6: Datos de primera clase
 En el archivo `Data/camion.csv`, leímos datos organizados en columnas que se ven así:
@@ -244,7 +244,7 @@ nombre,cajones,precio
 ...
 ```
 
-En las clases anteriores, usamo el módulo `csv` para leer el archivo, pero tuvimos igual que hacer converiones de tipo. Por ejemplo:
+En las clases anteriores, usamos el módulo `csv` para leer el archivo, pero tuvimos que hacer conversiones de tipo. Por ejemplo:
 
 ```python
 for row in rows:

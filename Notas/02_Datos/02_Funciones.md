@@ -47,7 +47,7 @@ Vamos a estudiar bibliotecas y módulos en detalle más adelante.
 
 ### Errores y excepciones
 
-Las funciones informan los errores como excepeciones. Dado que una excepción interrumpe la ejecución de una función, la misma puede generar que todo el programa se detenga si no es administrada adecuadamente.
+Las funciones informan los errores como excepciones. Dado que una excepción interrumpe la ejecución de una función, la misma puede generar que todo el programa se detenga si no es administrada adecuadamente.
 
 Probá por ejemplo lo siguiente en tu intérprete:
 
@@ -162,7 +162,7 @@ Esto va a ejecutar el código en el programa y dejar abierto el intérprete inte
 
 ```python
 >>> costo_camion('Data/camion.csv')
-44671.15
+47671.15
 >>>
 ```
 
@@ -281,7 +281,7 @@ print('Costo total:', costo)
 
 ```bash
 bash $ python3 costo_camion.py Data/camion.csv
-Costo total: 44671.15
+Costo total: 47671.15
 bash $
 ```
 

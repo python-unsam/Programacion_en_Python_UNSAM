@@ -245,7 +245,7 @@ Modificá el programa para incorporar estos pagos extra y que imprima el monto t
 
 Cuando lo corras, este nuevo programa debería dar un pago total de  `929965.62` en 342 meses.
 
-Aclaración: aunque puede parece sencillo, este ejercicio requiere que agregues una variable *mes* y que prestes bastantes atención a cuándo la incrementás, con qué valor entra al ciclo y con qué valor sale del ciclo. Una posiblidad es inicializar *mes* en 0 y otra es inicializarla en 1. En el primer caso es problable que la variable salga del ciclo contando la cantidad de pagos que se hicieron, en el segundo, ¡es probable que salga contando la cantidad de pagos más uno!
+Aclaración: aunque puede parecer sencillo, este ejercicio requiere que agregues una variable *mes* y que prestes bastante atención a cuándo la incrementás, con qué valor entra al ciclo y con qué valor sale del ciclo. Una posiblidad es inicializar *mes* en 0 y otra es inicializarla en 1. En el primer caso es problable que la variable salga del ciclo contando la cantidad de pagos que se hicieron, en el segundo, ¡es probable que salga contando la cantidad de pagos más uno!
 
 ### Ejercicio 1.9: Calculadora de adelantos
 ¿Cuánto pagaría David si agrega $1000 por mes durante cuatro años, comenzando en el sexto año de la hipoteca (es decir, luego de 5 años)?

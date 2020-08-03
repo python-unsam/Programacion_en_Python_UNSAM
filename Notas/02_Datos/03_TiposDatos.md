@@ -168,7 +168,7 @@ para borrar un valor, usamos el comando `del`.
 
 ### ¿Por qué diccionarios?
 
-Lo diccionarios son útiles cuando hay *muchos* valores diferentes y esos valores pueden ser modificados o manipulados. Los diccionarios muchas veces cumplen una tarea fudamental: hacen que el código sea más legible.
+Lo diccionarios son útiles cuando hay *muchos* valores diferentes y esos valores pueden ser modificados o manipulados. Los diccionarios muchas veces cumplen una tarea fundamental: hacen que el código sea más legible.
 
 ```python
 s['precio']
