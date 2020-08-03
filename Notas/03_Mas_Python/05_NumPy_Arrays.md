@@ -2,48 +2,44 @@
 
 # 3.5 NumPy
 
-Esta es una introducción al módulo NumPy.
+Esta es una introducción a la biblioteca NumPy (**Numerical Python**) de Python. Se trata de una colección de módulos de código abierto que tiene aplicaciones en casi todos los campos de las ciencias y de la ingeniería.  Es el estándar para trabajar con datos numéricos en Python. Muchas otras bibliotecas y módulos de Python como Pandas, SciPy, Matplotlib, scikit-learn, scikit-image usan NumPy.
 
-NumPy (**Numerical Python**) es una biblioteca de Python (una colección de módulos) de código abierto que tiene aplicaciones en casi todos los campos de las ciencias y de la ingeniería.  Es el estándar para trabajar con datos numéricos en Python. Muchos módulos como Pandas, SciPy, Matplotlib, scikit-learn, scikit-image usan NumPy.
+Esta biblioteca permite trabajar cómodamente con matrices multidimensionales por medio del tipo  **ndarray**, un objeto n-dimensional homogéneo (es decir, con todas sus entradas del mismo tipo), y con métodos para operar eficientemente sobre él. NumPy puede usarse para una amplia variedad de operaciones matemáticas sombre matrices. Le agrega a Python estructuras de datos muy potentes sobre las que puedés hacer cálculo y operar matemáticamente con eficiencia y a un alto nivel.
 
-Esta biblioteca permite trabajar cómodamente con matrices multidimensionales por medio del tipo  **ndarray**, un objeto n-dimensional homogéneo (con entradas del mismo tipo), y con métodos para operar eficientemente sobre él. NumPy puede usarse para una amplia variedad de operaciones matemáticas sombre matrices. Le agrega a Python estructuras de datos muy potentes osbre las que se puede calcular y operar matemáticamente con eficiencia y a un alto nivel.
+##  Instalar e importar NumPy
 
-## Instalar NumPy
+Cuando quieras usar NumPy en Python, primero tenés que importarlo:
 
-Si no lo tenés instalado (primero probá imoprtarlo, es muy probable que ya lo tengas) podés instalarlo escribiendo :
+```python
+import NumPy as np
+```
+
+Acortamos `NumPy` a `np` para ahorrar tiempo y mantener el código estandarizado. Todes escriben `np`.
+
+Si no lo tenés instalado (te dará un error al importarlo) podés instalarlo escribiendo :
 
 ```bash
-conda install numpy
+conda install NumPy
 ```
 
 o
 
 ```bash
-pip install numpy
+pip install NumPy
 ```
-
-## Importar  NumPy
-
-Cuando quieras usar NumPy en Python, primero tenés que importarlo:
-
-```python
-import numpy as np
-```
-
-Acortamos `numpy` a `np` para ahorrar tiempo y mantener el código estandarizado. Todes escriben `np`.
 
 
 ## ¿Cuál es la diferencia entre listas y arreglos?
 
-NumPy ofrece varias formas muy eficientes de crear vectores y manipular datos numericos en su interior. Mientras que una lista de Python puede contener diferentes tipos de datos en su interior, los elementos de un vector numpy serán todos del mismo tipo. De esta forma numpy puede asegurar una alta perforance en las operaicones matemáticas.
+NumPy ofrece varias formas muy eficientes de crear vectores y manipular datos numéricos. Mientras que una lista de Python puede contener diferentes tipos de datos en su interior, los elementos de un vector NumPy serán todos del mismo tipo. De esta forma NumPy garantiza una muy alta perforance en las operaicones matemáticas.
 
 Además, los arreglos están pensados para tener un tamaño fijo, mientras que las listas están diseñadas para agregar y sacar elementos. Son estructuras de datos similares desde un punto de vista superficial, pero muy diferentes en cuanto a las posibilidades y perfomances que brindan. 
 
-Las operaciones matemáticas sobre vectores de numpy son más rápidas que sobre listas. Además los vectores ocupan menos memoria que las listas análogas. Pero cambiar el tamaño de una lista es algo muy sencilo mientras que el de un vector es costoso. O mezclar diferentes tipos de datos es posible en las listas pero imposible en los vectores de NumPy.
+Las operaciones matemáticas sobre vectores de NumPy son más rápidas que sobre listas. Además los vectores ocupan menos memoria que las listas análogas. En cambio, modificar el tamaño de una lista es algo muy sencillo mientras que el de un vector es costoso. Y combinar diferentes tipos de datos es sencillo en las listas pero imposible en los vectores de NumPy.
 
 ## Arreglos n-dimensionales
 
-Los vectores (unidimensionales) y matrices (bidimensiones) se generalizan a arreglos n-dimensionales. Esta estructura de datos es la central de la biblioteca NumPy. Un arreglo (`ndarray`) es una grilla de valores que contiene información sobre los datos crudos, cómo ubicarlos y cómo interpretarlos. Tiene una grilla de elementos que pueden ser indexados de diversas maneras. Los elementos de un arreglo son todos del mismo tipo, frecuentemente abreviado como `dtype`.
+Los vectores (unidimensionales) y matrices (bidimensiones) se generalizan a arreglos n-dimensionales. Esta estructura de datos es la central de la biblioteca NumPy. Un arreglo (`ndarray`) tiene una grilla de valores (datos crudos) junto con información sobre cómo ubicarlos y cómo interpretarlos. Los elemnentos de esta grilla pueden ser indexados de diversas maneras y, como ya dijimos, son todos del mismo tipo. Este tipo es frecuentemente abreviado como `dtype` (por data type).
 
 Un arreglo puede ser indexado por tuplas de enteros no negativos, por variables booleanas, por otro arreglo o por enteros. El rango (`rank`) de un arreglo es su número de dimensiones. Su forma (`shape`) es una tupla de enteros que dice su tamaño en cada dimensión.
 
@@ -82,16 +78,16 @@ Ocasionalmente vas a ver que alguien se refiere a un arreglo como un  “ndarray
 
 **¿Qué atributos tiene un arreglo?**
 
-Un arreglo es usualmente un contenedor de tamaño fijo de elementos del mismo tipo. Su forma (shape) es una tupla de enteros no negativos que especifica el tamaño del arreglo en cada dimensión. Tiene tantas dimensiones como coordenadas en la tupla.
+Un arreglo es usualmente un contenedor de tamaño fijo de elementos del mismo tipo. Su forma (shape) es una tupla de enteros no negativos que especifica el tamaño del arreglo en cada dimensión. Un arreglo tiene tantas dimensiones como coordenadas en la tupla.
 
-En NumPy, las dimensiones se llaman **axes** (ejes). Esto dignifica que si tenés una arrglo bidimensional que se ve así:
+En NumPy, las dimensiones se llaman **axes** (ejes). Esto dignifica que si tenés una arreglo bidimensional que se ve así:
 
 ```
 [[0., 0., 0.],
  [1., 1., 1.]]
 ```
 
-el arreglo tendrá dos ejes. El primer eje tiene tamaño dos, el segundo tamaño tres (si, se cuentan primero filas, luego columnas).
+el arreglo tendrá dos ejes. El primer eje tiene tamaño dos, el segundo tamaño tres (sí, se cuentan primero filas, luego columnas).
 
 De la misma forma que los otros objetos contenedores de Python, los elementos de un arreglo pueden ser accedidos y modificados usando índices y rebanadas.
 
@@ -101,7 +97,7 @@ Para crear un arreglo de NumPy podés usar la función `np.array()`.
 Lo único que necesitás es pasarle una lista. Si querés, podés especificar el tipo de datos que querés que tenga. 
 
 ```python
->>> import numpy as np
+>>> import NumPy as np
 >>> a = np.array([1, 2, 3])
 ```
 
@@ -155,10 +151,13 @@ También podés usar `np.linspace()` para crear un vector especificando el **pri
 array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 ```
 
+### Ejercicio 3.14: arange() y linspace()
+Poner algun ejercicio aca! ***
+
 
 **Especificar el tipo de datos**
 
-Si no lo especificá, el tipo de datos (por omisión) de los arreglos es el punto flotante (`np.float64`). Sin embargo, podés explicitar otro tipo de datos usando la palabra clave `dtype`.
+Si no lo especificás, el tipo de datos (por omisión) de los arreglos es el punto flotante (`np.float64`). Sin embargo, podés explicitar otro tipo de datos usando la palabra clave `dtype`.
 
 ```python
 >>> x = np.ones(2, dtype=np.int64)
@@ -166,7 +165,7 @@ Si no lo especificá, el tipo de datos (por omisión) de los arreglos es el punt
 array([1, 1])
 ```
 
-En estos dos casos el 64 de los tipos de datos se refiere a la cantidad de bits, 64 bits. 
+En estos dos casos el 64 de los tipos de datos se refiere a la cantidad de bits: 64 bits. 
 
 ## Agregar, borrar y ordenar elementos
 
@@ -791,73 +790,63 @@ En este ejemplo, tanto las predicciones como las etiquetas tienen tres valores. 
 
 ![./np_mse_viz2.png](./np_mse_viz2.png) ![./np_MSE_explanation2.png](./np_MSE_explanation2.png)
 
-## How to save and load NumPy objects
+## Guardar y cargar objetos de NumPy
 
-You will, at some point, want to save your arrays to disk and load them back without having to re-run the code. Fortunately, there are several ways to save and load objects with NumPy. The ndarray objects can be saved to and loaded from the disk files with `loadtxt` and `savetxt` functions that handle normal text files, `load` and `save` functions that handle NumPy binary files with a **.npy** file extension, and a `savez` function that handles NumPy files with a **.npz** file extension.
 
-The **.npy** and **.npz** files store data, shape, dtype, and other information required to reconstruct the ndarray in a way that allows the array to be correctly retrieved, even when the file is on another machine with different architecture.
+Si seguís usando Python después de este curso, es muy probable que en cierto punto quuieras guardar tus matrices (o arreglos n-dimensionales) para cargarlas en otro momento sin tener que volver a correr el código que las genera. Hay un par de formas de guardar objetos de NumPy. Los objetos ndarray pueden guardarse y leerse de disco con las funciones `loadtxt` y `savetxt` usand archivos de texto (tienen a ventaja de qque los podés ver con un editor de textos como el [sublime](https://www.sublimetext.com/) o [geany](https://www.geany.org/)), y las funciones `load` y `save` que guardan archivos binarios con extensión **.npy**. 
+Los archivos  **.npy** guardan los datos, la forma, el tipo del arreglo y otra información necesaria que permiten reconstruirlos correctamente, incluso en otra máquina con otra arquitectura.
 
-If you want to store a single ndarray object, store it as a .npy file using `np.save`. If you want to store more than one ndarray object in a single file, save it as a .npz file using `np.savez`. You can also save several arrays into a single file in compressed npz format with `savez_compressed`.
-
-It’s easy to save and load and array with `np.save()`. Just make sure to specify the array you want to save and a file name. For example, if you create this array:
+Es sencillo guardar un arreglo con `np.save()`. Solo asegurate de especificar el arreglo que querés guardar y el nombre del archivo. Por ejemplo, si creás este vector:
 
 ```python
 >>> a = np.array([1, 2, 3, 4, 5, 6])
 ```
 
-
-You can save it as “filename.npy” with:
+Lo podés guardar en “filename.npy” con:
 
 ```python
 >>> np.save('filename', a)
 ```
 
-
-You can use `np.load()` to reconstruct your array.
+Y lo podés cargar con  `np.load()` para reconstruir tu vector.
 
 ```python
 >>> b = np.load('filename.npy')
 ```
 
-
-If you want to check your array, you can run::
+Para verificarlo, usá:
 
 ```python
 >>> print(b)
 [1 2 3 4 5 6]
 ```
 
+En formato de texto plano, lo podés guardar como **.csv** o **.txt** con `np.savetxt`.
 
-You can save a NumPy array as a plain text file like a **.csv** or **.txt** file with `np.savetxt`.
-
-For example, if you create this array:
+Por ejemplo, si tenñes este vector:
 
 ```python
 >>> csv_arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
 ```
 
-
-You can easily save it as a .csv file with the name “new_file.csv” like this:
+lo podés guardar en un archivo .csv con nombre “new_file.csv” así:
 
 ```python
 >>> np.savetxt('new_file.csv', csv_arr)
 ```
 
-
-You can quickly and easily load your saved text file using `loadtxt()`:
+Y lo podés cargar fácilmente usando `loadtxt()`:
 
 ```python
 >>> np.loadtxt('new_file.csv')
 array([1., 2., 3., 4., 5., 6., 7., 8.])
 ```
 
+Las funciones `savetxt()` y `loadtxt()` aceptan parámentros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
 
-The `savetxt()` and `loadtxt()` functions accept additional optional parameters such as header, footer, and delimiter. While text files can be easier for sharing, .npy and .npz files are smaller and faster to read. If you need more sophisticated handling of your text file (for example, if you need to work with lines that contain missing values), you will want to use the `genfromtxt` function.
+### Ejercicio 3.15: Guardar temperaturasEjercicio ?
 
-With `savetxt`, you can specify headers, footers, comments, and more.
-
-
-
+Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.28](../03_Mas_Python/07_Cierre.md#37-cierre) para que guarde el vector con las temperaturas simuladas en el directorio `Ejercicios/Data/`, en un archivo llamado `Temperaturas.npy`
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Random+)](04_Random.md) \| [Próximo (6 El album de Figuritas+)](06_Figuritas.md)
 

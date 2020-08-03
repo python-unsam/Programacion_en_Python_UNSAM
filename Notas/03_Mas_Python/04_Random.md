@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Objects)](03_Objects.md) \| [Próximo (5 NumPy)](05_NumPy_Arrays.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Objetos)](03_Objects.md) \| [Próximo (5 NumPy)](05_NumPy_Arrays.md)
 
 # 3.4 Random+
 
@@ -141,14 +141,14 @@ Escribí un programa `estimar_pi.py` que genere cien mil puntos aleatorios con l
 
 
 ### Ejercicio 3.13: Gaussiana
-Con `random.random()` generamos valores aleatorios entre 0 y 1 con una distribución _uniforme_. En esa distribución, todos los valores posibles tienen la misma probabilidad de ser seleccionados. También es posible generar valores aleatorios con una disstribución no uniforme. Una de las distribuciones más importantes es la **distribución normal** o [Gaussiana](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal).
+Con `random.random()` generamos valores aleatorios entre 0 y 1 con una distribución _uniforme_. En esa distribución, todos los valores posibles tienen la misma probabilidad de ser seleccionados. También es posible generar valores aleatorios con otras distribuciones. Una de las distribuciones más importantes es la **distribución normal** o [Gaussiana](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal).
 
 
 La distribución normal tiene dos parámetros, denominados media y desvío estándar y denotados usualmente con las letras griegas _mu_ y _sigma_, respectivamente.
 
 ![Distribución normal](normal.png)
 
-La función `random.normalvariate(mu,sigma)` genera número aleatorios según esta distribución de probabilidades. Por ejemplo, usando mu=0 y sigma=1 pdemos generar 6 valores aleatorios así:
+La función `random.normalvariate(mu,sigma)` genera número aleatorios según esta distribución de probabilidades. Por ejemplo, usando `mu = 0` y `sigma = 1` podemos generar 6 valores aleatorios así:
 
 ```python
 >>> for i in range(6):
@@ -162,9 +162,9 @@ Hagamos algún ejercicio sencillo antes de terminar. Supongamos que una persona 
 
 Imprimí los valores obtenidos en las mediciones de tempratura simuladas y luego, como resúmen, cuatro líneas indicando el valor máximo, el mínimo, el promedio y la mediana de estas `n` mediciones. 
 
-_Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles]?_
+_Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de Python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles]?_
 
 Guardá tu programa en el archivo `termometro.py`.
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Objects)](03_Objects.md) \| [Próximo (5 NumPy)](05_NumPy_Arrays.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Objetos)](03_Objects.md) \| [Próximo (5 NumPy)](05_NumPy_Arrays.md)
 
