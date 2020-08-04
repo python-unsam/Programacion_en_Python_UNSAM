@@ -43,9 +43,9 @@ Lo códigos de formato (lo que va luego de `:` dentro de `{}`) son similares a l
 d       Entero decimal
 b       Entero binario
 x       Entero hexadecimal
-f       Floatante como [-]m.dddddd
-e       Floatante como [-]m.dddddde+-xx
-g       Floatante, pero con uso selectivo de la notaciṕn exponencial E.
+f       Flotante como [-]m.dddddd
+e       Flotante como [-]m.dddddde+-xx
+g       Flotante, pero con uso selectivo de la notación exponencial E.
 s       Cadenas
 c       Caracter (a partir de un entero, su código)
 ```
@@ -61,7 +61,7 @@ Los modificadores permiten ajustar el ancho a imprimir o la precisión decimal (
 
 ### Formato a diccionarios
 
-Pores usar el métido `format_map()` para aplicarle un formato a los valores de un diccionario:
+Pores usar el método `format_map()` para aplicarle un formato a los valores de un diccionario:
 
 ```python
 >>> s = {
