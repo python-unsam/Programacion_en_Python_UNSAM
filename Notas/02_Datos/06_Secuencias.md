@@ -131,7 +131,7 @@ for x in s:         # `x` es una variable iteradora
     ...instrucciones
 ```
 
-En cada iteración, el valor previo de la variable (si hubo alguno) es sobreescrito. Luego de que termina el ciclo, la variable retiene su último valor.
+En cada iteración, el valor previo de la variable (si hubo alguno) es sobreescrito. Luego de terminar el ciclo, la variable retiene su último valor.
 
 ### El comando break
 
@@ -146,7 +146,7 @@ for name in namelist:
 instrucciones
 ```
 
-Cuando el comando  `break` se ejecuta, sale del ciclo y se mueve a las siguientes `instrucciones`.  El comando `break` sólo se aplica al ciclo más interno. Si un ciclo está anidado en otro cilco, el comando no va a romper el ciclo externo.
+Cuando el comando  `break` se ejecuta, sale del ciclo y se mueve a las siguientes `instrucciones`.  El comando `break` sólo se aplica al ciclo más interno. Si un ciclo está anidado en otro ciclo, el comando no va a romper el ciclo externo.
 
 ### El comando continue
 
@@ -162,7 +162,7 @@ for line in lines:
 
 Ésta es útil cuando el elemento actual no es de interés o es necesario ignorarlo en el procesamiento.
 
-### Cilcos sobre enteros
+### Ciclos sobre enteros
 
 Para iterar sobre un rango de números enteros, usá `range()`.
 
@@ -283,7 +283,7 @@ Probá algunos ejemplos elementales de conteo:
 ```
 
 ### Ejercicio 2.22: Más operaciones con secuencias
-Interactivamente experimetá con algunas operaciones de reducción de secuencias.
+Interactivamente experimentá con algunas operaciones de reducción de secuencias.
 
 ```python
 >>> data = [4, 9, 1, 25, 16, 100, 49]
@@ -315,7 +315,7 @@ Probá iterar sobre los datos.
 >>>
 ```
 
-A veces los comandos `for`, `len()`, y `range()` son usados por principiantes de una forma bastate fea que parece salida de las profundidades de un programa de C oxidado.
+A veces los comandos `for`, `len()`, y `range()` son usados por principiantes de una forma bastante fea que parece salida de las profundidades de un programa de C oxidado.
 
 ```python
 >>> for n in range(len(data)):
@@ -385,7 +385,7 @@ Este apareamiento es un paso intermedio para construir un diccionario. Probá lo
 >>>
 ```
 
-Esta transformación es uun truco sumamente útil cuando tenés que procesar muchos archivos de datos. Por ejemplo, suponé que querés hacer que el programa `costo_camion.py` trabaje con diferentes archivos de entrada, pero que no le importe la posición exacta de la columna que tiene la cantidad de cajones o el precio. Es decir, que entienda que la columna tiene el precio por su encabezado y no por su posición dentro del archivo.
+Esta transformación es un truco sumamente útil cuando tenés que procesar muchos archivos de datos. Por ejemplo, suponé que querés hacer que el programa `costo_camion.py` trabaje con diferentes archivos de entrada, pero que no le importe la posición exacta de la columna que tiene la cantidad de cajones o el precio. Es decir, que entienda que la columna tiene el precio por su encabezado y no por su posición dentro del archivo.
 
 Modificá la función  `costo_camion()` en el archivo `costo_camion.py` para que se vea así:
 
@@ -421,7 +421,7 @@ nombre,fecha,hora,cajones,precio
 
 ```python
 >>> costo_camion('Data/fecha_camion.csv')
-44671.15
+47671.15
 >>>
 ```
 

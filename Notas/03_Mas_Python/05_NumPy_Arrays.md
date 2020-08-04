@@ -844,9 +844,8 @@ array([1., 2., 3., 4., 5., 6., 7., 8.])
 
 Las funciones `savetxt()` y `loadtxt()` aceptan parámentros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
 
-### Ejercicio 3.15: Guardar temperaturasEjercicio ?
-
-Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.29](../03_Mas_Python/07_Cierre.md#37-cierre) para que guarde el vector con las temperaturas simuladas en el directorio `Ejercicios/Data/`, en un archivo llamado `Temperaturas.npy`
+### Ejercicio 3.15: Guardar temperaturas
+Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.13](../03_Mas_Python/04_Random.md#ejercicio-313-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Ejercicios/Data/`, en un archivo llamado `Temperaturas.npy`
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Random)](04_Random.md) \| [Próximo (6 El album de Figuritas+)](06_Figuritas.md)
 
