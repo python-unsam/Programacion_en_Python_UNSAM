@@ -18,7 +18,7 @@ Esta pregunta es noticia cada cuatro años:
 
 
 ### Datos:
-1. Álbum con $670$ figuritas.
+1. Álbum con 670 figuritas.
 2. Cada figurita se imprime en cantidades iguales y se distribuye aleatoriamente.
 3. Cada paquete trae cinco figuritas.
 
@@ -36,7 +36,7 @@ En particular, en esta actividad vamos a usar dos módulos:
 ### El modelo del álbum de figuritas
 
 Vamos a representar un álbum de n figuritas utilizando un vector de NumPy con posiciones numeradas de 0 a n-1.
-Cada posición representa el estado de una figurita con dos valores: 0 para indicar que aún no la conseguimos y 1 para indicar que sí (o, si prefería, podés usar un número positivo para representar cuántas de esas figus tenés).
+Cada posición representa el estado de una figurita con dos valores: 0 para indicar que aún no la conseguimos y 1 para indicar que sí (o, si preferís, podés usar un número positivo para representar cuántas de esas figus tenés, contando repes).
 
 Por ejemplo, si tuviéramos un álbum de seis figuritas vacío lo vamos a representar como `[0, 0, 0, 0, 0, 0]`.
 Cuando consigamos la figurita 3 tendremos que indicarlo poniendo un 1 en el tercer lugar de la lista, es decir `album[2]=1` y el álbum nos va a quedar  `[0, 0, 1, 0, 0, 0]`.
