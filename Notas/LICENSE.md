@@ -1,4 +1,4 @@
-## creative commons
+## Creative Commons
 
 # Attribution-ShareAlike 4.0 International
 
@@ -173,3 +173,4 @@ Creative Commons is not a party to its public licenses. Notwithstanding, Creativ
 
 Creative Commons may be contacted at creativecommons.org
 ```
+

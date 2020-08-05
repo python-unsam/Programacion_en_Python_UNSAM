@@ -55,6 +55,4 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales.
 
 ## Preinscripción
-La preinscripción al curso para externos a la UNSAM cerró el viernes 17 de julio. Si querés que te avisemos sobre próximas ediciones del curso, completá [este formulario](https://forms.gle/JXAp9cSvowMCFGyC6).
-
-Si sos de la cumunidad UNSAM podés preinscribirte hasta el viernes 24 de julio [acá](https://docs.google.com/forms/d/1zc4F6EVF0OKyS5M7fUlUnf3TpThEyk6_RG5blEkwjE8).
+Este cuatrimestre ya comenzó el curso. Si querés que te avisemos sobre próximas ediciones del curso, completá [este formulario](https://forms.gle/JXAp9cSvowMCFGyC6).
