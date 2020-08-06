@@ -125,8 +125,8 @@ Los strings (cadenas) ofrecen una amplia variedad de métodos para testear y man
 
 ```python
 s.endswith(suffix)     # Verifica si termina con el sufijo
-s.find(t)              # Primera aparición de t en s
-s.index(t)             # Última  aparición de t en s
+s.find(t)              # Primera aparición de t en s (o -1 si no está)
+s.index(t)             # Primera aparición de t en s (error si no está)
 s.isalpha()            # Verifica si los caracteres son alfabéticos
 s.isdigit()            # Verifica si los caracteres son numéricos
 s.islower()            # Verifica si los caracteres son minúsculas
