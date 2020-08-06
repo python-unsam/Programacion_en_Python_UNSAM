@@ -12,7 +12,7 @@ El tercer tipo de error es el más difícil de encontrar y de entender. Son los 
 
 ###  Ejercicio: tres tipos de errores
 
-Determiná los errores de los siguientes códigos y corregilos. ¿Qué tipo de errores tiene cada uno?
+Determiná los errores de los siguientes códigos y corregilos en un archivo `tres_errores.py`. ¿Qué tipo de errores tiene cada uno?
 
 ```python
 def tiene_a(expresion):

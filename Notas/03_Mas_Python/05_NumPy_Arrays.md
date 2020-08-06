@@ -834,7 +834,21 @@ array([1., 2., 3., 4., 5., 6., 7., 8.])
 Las funciones `savetxt()` y `loadtxt()` aceptan parámentros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
 
 ### Ejercicio 3.15: Guardar temperaturas
-Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.13](../03_Mas_Python/04_Random.md#ejercicio-313-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`
+Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.13](../03_Mas_Python/04_Random.md#ejercicio-313-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99.
+
+
+### Ejercicio 3.16: Empezando a plotear
+La clase que viene vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
+
+Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, plotée un histograma de las temperaturas simuladas:
+
+```python
+import matplotlib.pyplot as plt
+plt.hist(tempraturas,bins=25)
+```
+
+Ajustá la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Random)](04_Random.md) \| [Próximo (6 El album de Figuritas+)](06_Figuritas.md)
 

@@ -93,6 +93,27 @@ Corré tu programa `informe.py` de forma de tener los datos sobre cajones cargad
 
 Luego, tratá de escribir los comandos adecuados para realizar las operaciones descriptas abajo. Estas operaciones son reducciones, transformaciones y consultas sobre la carga del camión.
 
+Guardá los resultados de los primero tres ejercicios en un archivo 
+`comprension.py`, separando los ejercicios con una línea que contenga solamente los símbolos `#%%` seguido de una línea comentada indicando el ejercicio. Al terminar, debería verse así tu archivo:
+
+```python
+#comprensión.py
+#Ejercicios de comprensión de listas
+#Ejercicio 3.1
+...
+...
+
+#%%
+#Ejercicio 3.2
+...
+...
+
+#%%
+#Ejercicio 3.3
+...
+...
+
+```
 ### Ejercicio 3.1: Comprensión de listas
 Probá un par de comprensión de listas para familiarizarte con la sintaxis.
 
@@ -136,7 +157,7 @@ Ambos son ejemplos de aplicación-reducción. La comprensión de listas está ap
 [3220.0000000000005, 4555.0, 15516.0, 10246.0, 3835.1499999999996, 3254.9999999999995, 7044.0]
 >>>
 ```
-La función `sum()` luego realiza una reducción del resultaqdo
+La función `sum()` luego realiza una reducción del resultado
 
 ```python
 >>> sum(_)
