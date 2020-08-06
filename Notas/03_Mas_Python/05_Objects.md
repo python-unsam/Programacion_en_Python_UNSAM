@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random)](04_Random.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_List_comprehension.md) \| [Próximo (6 Cierre de la tercera clase)](06_Cierre.md)
 
-# 3.3 Objetos
+# 3.5 Objetos
 
 
 En esta sección introducimos algunos conceptos sobre el modelo de objeto interno de Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y verificación de tipos.
@@ -234,7 +234,7 @@ Con un gran poder viene siempre una gran responsabilidad. Que puedas no signific
 
 En estos ejercicios mostramos algo de la potencia que tiene el hecho de que todos los objetos sean de la misma jerarquía.
 
-### Ejercicio 3.7: Datos de primera clase
+### Ejercicio 3.13: Datos de primera clase
 En el archivo `Data/camion.csv`, leímos datos organizados en columnas que se ven así:
 
 ```csv
@@ -357,7 +357,7 @@ El código de arriba puede comprimirse en una sola instrucción usando comprensi
 >>>
 ```
 
-### Ejercicio 3.8: Diccionarios
+### Ejercicio 3.14: Diccionarios
 ¿Te acordás que la función `dict()` te permite hacer fácilmente un diccionario si tenés una secuencia de tuplas con claves y valores? Hagamos un diccionario usando el encabezado de las columnas:
 
 ```python
@@ -378,7 +378,7 @@ Si estás en sintonía con la comprensión de listas podés escribir una sola l�
 >>>
 ```
 
-### Ejercicio 3.9: Fijando ideas
+### Ejercicio 3.15: Fijando ideas
 Usando las técnicas de este ejercicio, vas a poder escribir instrucciones que conviertan fácilmente campos como los de nuestro archivo en un diccionario de Python.
 
 Para ilustrar esto, supongamos que leés un archivo de datos de la siguiente forma:
@@ -416,5 +416,5 @@ Bonus: ¿Cómo modificarías este ejemplo para transformar la fecha (`date`) en 
 
 Es importante que entiendas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Comprensión de listas)](02_List_comprehension.md) \| [Próximo (4 Random)](04_Random.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_List_comprehension.md) \| [Próximo (6 Cierre de la tercera clase)](06_Cierre.md)
 

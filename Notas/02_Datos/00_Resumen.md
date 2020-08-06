@@ -11,9 +11,7 @@ Discutimos el problema de la búsqueda de un elemento en un vector e introducimo
 * [2.4 Contenedores](04_Contenedores.md)
 * [2.5 Impresión con formato](05_Formato.md)
 * [2.6 Secuencias](06_Secuencias.md)
-* [2.7 Entorno de desarrollo integrado](07_IDE.md)
-* [2.8 Listas y búsqueda lineal](08_IteradoresLista.md)
-* [2.9 Cierre de la segunda clase](09_CierreClase.md)
+* [2.7 Cierre de la segunda clase](07_CierreClase.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Comprensión, NumPy y figuritas.)](../03_Mas_Python/00_Resumen.md)

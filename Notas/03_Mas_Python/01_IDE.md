@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Listas y búsqueda lineal)](08_IteradoresLista.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Errores)](02_Errores3.md)
 
-# 2.7 Entorno de desarrollo integrado
+# 3.1 Entorno de desarrollo integrado
 
 A partir de aquí te vamos a proponer trabajar principalmente dentro de un entorno de desarrollo integrado (IDE, por sus siglas en inglés).
 
@@ -15,5 +15,5 @@ En la captura se puede ver que por defecto el Spyder viene estructurado con tres
 
 Les recomendamos que le dediquen un tiempo a probar sus últimos ejercicios en este entorno. Verán que es muy cómodo. Pueden mirar un [breve tutorial](https://www.youtube.com/watch?v=0fxURPC1YFs) donde no sólo les enseñan el uso de la tecla `F5`, sino también una introducción al uso del debugger (le dice depurador) que veremos en la próxima clase.
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Listas y búsqueda lineal)](08_IteradoresLista.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Errores)](02_Errores3.md)
 

@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](01_Errores3.md) \| [Próximo (3 Objetos)](03_Objects.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Listas y búsqueda lineal)](03_IteradoresLista.md) \| [Próximo (5 Objetos)](05_Objects.md)
 
-# 3.2 Comprensión de listas
+# 3.4 Comprensión de listas
 
 Una tarea que realizamos una y otra vez es procesar los elementos de una lista. En esta sección introducimos la definición de listas por compresión que es una herramienta potente para hacer exactamente eso.
 
@@ -114,7 +114,7 @@ Guardá los resultados de los primero tres ejercicios en un archivo
 ...
 
 ```
-### Ejercicio 3.2: Comprensión de listas
+### Ejercicio 3.8: Comprensión de listas
 Probá un par de comprensión de listas para familiarizarte con la sintaxis.
 
 ```python
@@ -130,7 +130,7 @@ Probá un par de comprensión de listas para familiarizarte con la sintaxis.
 
 Observá que estás creando nuevas listas con los datos adecuadamente transformados o filtrados.
 
-### Ejercicio 3.3: Reducción de secuencias
+### Ejercicio 3.9: Reducción de secuencias
 Calculá el costo total de la carga del camión en un solo comando.
 
 ```python
@@ -167,7 +167,7 @@ La función `sum()` luego realiza una reducción del resultado
 
 Con este conocimiento algunos ya empiezan su startup de big-data.
 
-### Ejercicio 3.4: Consultas de datos
+### Ejercicio 3.10: Consultas de datos
 Probá los siguientes ejemplos de consultas (queries) de datos.
 
 Primero, generá una lista con la info de todas las frutas que tienen más de 100 cajones en el camión.
@@ -205,7 +205,7 @@ O una con la info de las frutas que costaron más de $10000.
 Esta forma de escribir resulta análoga a las consultas a una base de datos con 
 SQL.
 
-### Ejercicio 3.5: Extracción de datos
+### Ejercicio 3.11: Extracción de datos
 Usando un comprensión de listas, construí una lista de tuplas `(nombre, cajones)` que indiquen la cantidad de cajones de cada fruta tomando los datos de `camion`.
 
 ```python
@@ -255,7 +255,7 @@ Otro ejemplo útil podría ser generar un diccionario de precios de venta de aqu
 ```
 
 
-### Ejercicio 3.6: Estraer datos de una arhcivo CSV
+### Ejercicio 3.12: Estraer datos de una arhcivo CSV
 Saber usar combinaciones de comprensión de listas, diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. Acá te mostramos un ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
 
 Primero, leamos el encabezado (header) del archivo CSV:
@@ -318,5 +318,5 @@ La comprensión de listas se usa frecuentemente Python. Es una forma eficiente d
 
 Dicho esto, saber manipular datos rápidamente es una habilidad increíblemente útil. Hay numerosas situaciones donde puede que tengas que resolver algún tipo de problema excepcional (en el sentido de raro o único) para importar, extraer o exportar datos. La comprensión de listas te puede ahorrar muchísimo tiempo en esas tareas.
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](01_Errores3.md) \| [Próximo (3 Objetos)](03_Objects.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Listas y búsqueda lineal)](03_IteradoresLista.md) \| [Próximo (5 Objetos)](05_Objects.md)
 

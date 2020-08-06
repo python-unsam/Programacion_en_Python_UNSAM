@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Comprensión, NumPy y figuritas.)](../04_Aleatoriedad/00_Resumen.md)
 
 # 3. Comprensión, NumPy y figuritas.
 En esta clase introducimos las colecciones de Python y profundizamos un poco en el concepto de objeto que subyace toda la estructura del lenguaje Python.
@@ -8,13 +8,12 @@ Al final, presentamos un ejercicio lindísimo del curso [Exactas Programa]() que
 
 
 
-* [3.1 Errores](01_Errores3.md)
-* [3.2 Comprensión de listas](02_List_comprehension.md)
-* [3.3 Objetos](03_Objects.md)
-* [3.4 Random](04_Random.md)
-* [3.5 NumPy](05_NumPy_Arrays.md)
-* [3.6 El album de Figuritas+](06_Figuritas.md)
-* [3.7 Cierre de la tercera clase](07_Cierre.md)
+* [3.1 Entorno de desarrollo integrado](01_IDE.md)
+* [3.2 Errores](02_Errores3.md)
+* [3.3 Listas y búsqueda lineal](03_IteradoresLista.md)
+* [3.4 Comprensión de listas](04_List_comprehension.md)
+* [3.5 Objetos](05_Objects.md)
+* [3.6 Cierre de la tercera clase](06_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Organzación de programas)](../04_Orga_programa/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Comprensión, NumPy y figuritas.)](../04_Aleatoriedad/00_Resumen.md)

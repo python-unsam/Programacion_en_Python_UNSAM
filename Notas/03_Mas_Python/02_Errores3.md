@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Comprensión de listas)](02_List_comprehension.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Entorno de desarrollo integrado)](01_IDE.md) \| [Próximo (3 Listas y búsqueda lineal)](03_IteradoresLista.md)
 
-# 3.1 Errores
+# 3.2 Errores
 
 Programando nos podemos encontrar con tres tipos de errores.
 
@@ -61,5 +61,5 @@ tiene_uno(1984)
 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Comprensión de listas)](02_List_comprehension.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Entorno de desarrollo integrado)](01_IDE.md) \| [Próximo (3 Listas y búsqueda lineal)](03_IteradoresLista.md)
 

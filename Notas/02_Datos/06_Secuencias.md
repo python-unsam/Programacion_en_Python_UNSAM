@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Entorno de desarrollo integrado)](07_IDE.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la segunda clase)](07_CierreClase.md)
 
 # 2.6 Secuencias
 
@@ -503,5 +503,5 @@ También, tené en cuenta que `zip()` se detiene cuando la más corta de las ent
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Entorno de desarrollo integrado)](07_IDE.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la segunda clase)](07_CierreClase.md)
 

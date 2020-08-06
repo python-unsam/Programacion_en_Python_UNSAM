@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Entorno de desarrollo integrado)](07_IDE.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Errores3.md) \| [Próximo (4 Comprensión de listas)](04_List_comprehension.md)
 
-# 2.8 Listas y búsqueda lineal
+# 3.3 Listas y búsqueda lineal
 
 En esta sección seguiremos usando Python, pero nos concentraremos en la parte algorítmica. Vas a escribir funciones sencillas (y no tanto) que realicen operaciones de bajo nivel sobre listas.
 
@@ -171,7 +171,7 @@ En resumen: Si la lista crece, la cantidad de comparaciones para encontrar un va
 ## Ejercicios
 
 
-### Ejercicio 2.26: Búsquedas de un elemento
+### Ejercicio 3.2: Búsquedas de un elemento
 Creá el archivo `busqueda_en_listas.py` para guardar tu código de este ejercicio y el siguiente.
 
 En este primer ejercicio tenés que escribir una función `buscar_u_elemento()` que reciba una lista y un elemento y devuelva la posición de la última aparición de ese elemento en la lista (o -1 si el elemento no pertenece a la lista).
@@ -192,7 +192,7 @@ Probá tu función con algunos ejemplos:
 
 Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()` que reciba una lista y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista. Probá también esta función con algunos ejemplos.
 
-### Ejercicio 2.27: Búsqueda de máximo y mínimo
+### Ejercicio 3.3: Búsqueda de máximo y mínimo
 Agergale a tu archivo `busqueda_en_listas.py` una función `maximo()` que busque el valor máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te propomenos que completes el siguiente código:
 
 ```python
@@ -224,7 +224,7 @@ Probá tu función con estos ejemplos:
 
 ## Ejercitación con iteradores y listas
 
-### Ejercicio 2.28: Invertir una lista
+### Ejercicio 3.4: Invertir una lista
 Escribí una función `invertir_lista(lista)` que dada una lista devuelva otra que tenga los mismos elementos pero en el orden inverso. Es decir, el que era el primer elemento de la lista de entrada deberá ser el último de la lista de salida y análogamente con los demás elementos.
 
 ```python
@@ -239,7 +239,7 @@ Guardá la función en el archivo `invlista.py` y probala con las siguientes lis
 `[1,2,3,4,5]`
 `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
-### Ejercicio 2.29: Invertir una lista *in place*
+### Ejercicio 3.5: Invertir una lista *in place*
 En el ejercicio anterior creaste una nueva lista conteniendo los elementos de una lista dada en orden inverso. En este ejercicio te pedimos que inviertas los elementos de una lista pero sin crear una nueva lista ni listas auxiliares. Es decir, te pedimos que escribas una función `invertir_lista_inplace(lista)` que, dada una lista, invierta la misma lista *en el lugar* (en inglés, *in place*), sin usar listas nuevas.
 
 Probá tu función con las siguientes lista:
@@ -247,7 +247,7 @@ Probá tu función con las siguientes lista:
 `lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
 
-### Ejercicio 2.30: Tablas de multiplicar
+### Ejercicio 3.6: Tablas de multiplicar
 Escribí un programa `tablamult.py` que imprima de forma prolija las tablas de
 multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicación, usando sólo sumas alcanza.
 
@@ -267,7 +267,7 @@ multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicaci�
 ```
 
 
-### Ejercicio 2.31: Propagación
+### Ejercicio 3.7: Propagación
 Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).
 Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 0 (nuevo), un 1 (encendido) o un -1 (carbonizado). 
 El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósoforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
@@ -285,5 +285,5 @@ Por ejemplo:
 ![Propagación](./fosforos.jpg) Propagación análoga a la del Ejercicio
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 Entorno de desarrollo integrado)](07_IDE.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Errores3.md) \| [Próximo (4 Comprensión de listas)](04_List_comprehension.md)
 
