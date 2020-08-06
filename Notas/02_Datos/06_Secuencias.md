@@ -263,7 +263,7 @@ d = dict(zip(columnas, valores))
 
 ## Ejercicios
 
-### Ejercicio 2.21: Contar
+### Ejercicio 2.22: Contar
 Probá algunos ejemplos elementales de conteo:
 
 ```python
@@ -282,7 +282,7 @@ Probá algunos ejemplos elementales de conteo:
 >>>
 ```
 
-### Ejercicio 2.22: Más operaciones con secuencias
+### Ejercicio 2.23: Más operaciones con secuencias
 Interactivamente experimentá con algunas operaciones de reducción de secuencias.
 
 ```python
@@ -330,7 +330,7 @@ A veces los comandos `for`, `len()`, y `range()` son usados por principiantes de
 
 Por favor, no lo hagas. No sólo la lectura nos hace doler los ojos, además es ineficiente en el uso de memoria y corre más lento. Simplemente usa un ciclo `for` normal si querés iterar sobre los elementos de la variable data.  Y usá `enumerate()` si necesitás tener el índice por algún motivo.
 
-### Ejercicio 2.23: Un ejemplo práctico de enumerate()
+### Ejercicio 2.24: Un ejemplo práctico de enumerate()
 Recordá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,
 modificá tu programa `costo_camion.py` de forma que imprima un aviso (warning) cada vez que encuentre una fila incorrecta.
 
@@ -352,7 +352,7 @@ for n_fila, fila in enumerate(filas, start=1):
         print(f'Fila {n_fila}: No pude interpretar: {fila}')
 ```
 
-### Ejercicio 2.24: La función zip()
+### Ejercicio 2.25: La función zip()
 En el archivo `Data/camion.csv`, la primera línea tiene los encabezados de las columnas. En los códigos anteriores la descartamos.
 
 ```python
@@ -436,7 +436,7 @@ Modificá el programa `informe.py` que escribiste antes (ver [Ejercicio 2.20](..
 Probá correr el programa `informe.py` sobre el archivo  `Data/fecha_camion.csv`
 y fijate si da la misma salida que antes.
 
-### Ejercicio 2.25: Invertir un diccionario
+### Ejercicio 2.26: Invertir un diccionario
 Un diccionario es una función que mapea claves en valores. Por ejemplo, un diccionario de precios de cajones de frutas.
 
 ```python
