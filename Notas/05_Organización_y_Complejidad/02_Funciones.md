@@ -411,7 +411,7 @@ follows:
 >>>
 ```
 
-Vimos un ejemplo de un selector de columnas en el [Ejercicio 3.12](../03_Mas_Python/04_List_comprehension.md#ejercicio-312-estraer-datos-de-una-arhcivo-csv)
+Vimos un ejemplo de un selector de columnas en el [Ejercicio 3.11](../03_Mas_Python/04_List_comprehension.md#ejercicio-311-estraer-datos-de-una-arhcivo-csv)
 
 [oski]:# (no se donde quedó el que se llamaba "Exercise 2.23: Extracting Data From CSV Files" en el original en ingles)
 

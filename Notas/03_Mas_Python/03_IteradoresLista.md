@@ -247,27 +247,7 @@ Probá tu función con las siguientes lista:
 `lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
 
-### Ejercicio 3.6: Tablas de multiplicar
-Escribí un programa `tablamult.py` que imprima de forma prolija las tablas de
-multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicación, usando sólo sumas alcanza.
-
-```python
-       0   1   2   3   4   5   6   7   8   9
----------------------------------------------
- 0:    0   0   0   0   0   0   0   0   0   0
- 1:    0   1   2   3   4   5   6   7   8   9
- 2:    0   2   4   6   8  10  12  14  16  18
- 3:    0   3   6   9  12  15  18  21  24  27
- 4:    0   4   8  12  16  20  24  28  32  36
- 5:    0   5  10  15  20  25  30  35  40  45
- 6:    0   6  12  18  24  30  36  42  48  54
- 7:    0   7  14  21  28  35  42  49  56  63
- 8:    0   8  16  24  32  40  48  56  64  72
- 9:    0   9  18  27  36  45  54  63  72  81
-```
-
-
-### Ejercicio 3.7: Propagación
+### Ejercicio 3.6: Propagación
 Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).
 Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 0 (nuevo), un 1 (encendido) o un -1 (carbonizado). 
 El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósoforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
