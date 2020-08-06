@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas+)](03_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas)](03_Figuritas.md)
 
 # 4.4 Cierre de la tercera clase
 
@@ -13,5 +13,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 ¡Gracias! Nos vemos en la próxima clase.
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas+)](03_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas)](03_Figuritas.md)
 

@@ -1,11 +1,7 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Comprensión, NumPy y figuritas.)](../04_Aleatoriedad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Aleatoriedad/00_Resumen.md)
 
-# 3. Comprensión, NumPy y figuritas.
-En esta clase introducimos las colecciones de Python y profundizamos un poco en el concepto de objeto que subyace toda la estructura del lenguaje Python.
-Introducimos los números pseudoaleatorios, así como el módulo `numpy` y sus métodos más sencillos.
-
-Al final, presentamos un ejercicio lindísimo del curso [Exactas Programa]() que te guía para que resuelvas la pregunta ¿cuántos paquetes de figuritas tengo que comprar para llenar un álbum? con un enfoque estadístico usando el [método de Montecarlo](https://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo).
-
+# 3. Errores, algoritmos sobre listas y comprensión de listas
+En esta clase discutimos los tipos de errores que pueden aparecer en un programa y les proponemos una serie de ejercicios donde tienen que escribir algoritmos que operen sobre listas. Luegointroducimos la _comprensión de listas_, un concepto muy hermoso y pythonesco. Cerramos la clase con una discusión sobre el cncepto de objeto que subyace al lenguaje.
 
 
 * [3.1 Entorno de desarrollo integrado](01_IDE.md)
@@ -16,4 +12,4 @@ Al final, presentamos un ejercicio lindísimo del curso [Exactas Programa]() que
 * [3.6 Cierre de la tercera clase](06_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Comprensión, NumPy y figuritas.)](../04_Aleatoriedad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Aleatoriedad/00_Resumen.md)

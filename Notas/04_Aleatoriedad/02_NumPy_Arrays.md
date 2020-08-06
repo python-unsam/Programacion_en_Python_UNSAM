@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Random)](01_Random.md) \| [Próximo (3 El album de Figuritas+)](03_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Random)](01_Random.md) \| [Próximo (3 El album de Figuritas)](03_Figuritas.md)
 
 # 4.2 NumPy
 
@@ -850,5 +850,5 @@ plt.hist(tempraturas,bins=25)
 Ajustá la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Random)](01_Random.md) \| [Próximo (3 El album de Figuritas+)](03_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Random)](01_Random.md) \| [Próximo (3 El album de Figuritas)](03_Figuritas.md)
 

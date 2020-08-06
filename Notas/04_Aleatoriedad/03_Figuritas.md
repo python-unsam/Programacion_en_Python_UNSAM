@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 NumPy)](02_NumPy_Arrays.md) \| [Próximo (4 Cierre de la tercera clase)](04_Cierre.md)
 
-# 4.3 El album de Figuritas+
+# 4.3 El album de Figuritas
 
 ## Las figuritas del mundial
 

@@ -4,8 +4,8 @@
 
 * [1. Introducción a Python](01_Introduccion/00_Resumen.md)
 * [2. Trabajando con datos](02_Datos/00_Resumen.md)
-* [3. Comprensión, NumPy y figuritas.](03_Mas_Python/00_Resumen.md)
-* [4. Comprensión, NumPy y figuritas.](04_Aleatoriedad/00_Resumen.md)
+* [3. Errores, algoritmos sobre listas y comprensión de listas](03_Mas_Python/00_Resumen.md)
+* [4. Aleatoridad](04_Aleatoriedad/00_Resumen.md)
 * [5. Organzación de programas](05_Organización_y_Complejidad/00_Resumen.md)
 * [6. Errores y bugs, especificación y documentación](06_Especificacion_y_Documentacion/00_Resumen.md)
 * [7. Creación de módulos, SO y Pandas](07_Modulos_Pandas_SO/00_Resumen.md)
