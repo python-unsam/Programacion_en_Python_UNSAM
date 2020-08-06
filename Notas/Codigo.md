@@ -13,3 +13,7 @@ Plagiar es copiar ideas, palabra o fragmentos de código sin dar el crédito ade
 - Las respuestas a los ejercicios del curso los debés haber tipeado vos. Podés consultar con tus compañeres, mirar sus códigos, pero tú solución tiene que haber sido tipeada por vos. Y si está basada en las ideas de otre, debe incluir los créditos adecuados.
 - Durante los exámenes parciales no podés interactuar con tus compañeres. Podés usar material online pero no está permitido consultar a otras personas ni postear tus soluciones antes de que termine el exámen.
 
+### Uso de sus ejercicios con fines didácticos
+
+La idea es que todo el material que nos entreguen como ejercicios resueltos lo podamos usar dentro del proceso pedagógico de la enseñanza de Python. Al enviarnos tu código entendemos que estás aceptando esto. Si por algún motivo preferís que no usemos tu codigo, por favor mandanos un correo a python@unsam.edu.ar indicando `[NO COMPARTIR]` como tema e indicando en el cuerpo que no querés que usemos tus ejercicios en este sentido.
+
