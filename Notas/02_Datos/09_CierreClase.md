@@ -6,7 +6,7 @@ En esta segunda clase aprendimos a trabajar con datos. Manejamos archivos CSV y 
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
-    1. [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances) `costo_camion.py` sobre calcular el costo de camiÓn por linea de comandos, con warnings. 
+    1. [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances) `costo_camion.py` sobre calcular el costo de camión por linea de comandos, con warnings. 
     2. [Ejercicio 2.20](../02_Datos/05_Formato.md#ejercicio-220-un-desafío-de-formato) `informe.py` (o [Ejercicio 2.19](../02_Datos/05_Formato.md#ejercicio-219-agregar-encabezados)) Balance con formato  y lectura de encabezados.
     3. [Ejercicio 2.26](../02_Datos/08_IteradoresLista.md#ejercicio-226-búsquedas-de-un-elemento) `busqueda_en_listas.py`
     4. [Ejercicio 2.27](../02_Datos/08_IteradoresLista.md#ejercicio-227-búsqueda-de-máximo-y-mínimo) en el mismo archivo `busqueda_en_listas.py`

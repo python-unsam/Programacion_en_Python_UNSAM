@@ -39,7 +39,7 @@ Vamos a representar un álbum de n figuritas utilizando un vector de NumPy con p
 Cada posición representa el estado de una figurita con dos valores: 0 para indicar que aún no la conseguimos y 1 para indicar que sí (o, si preferís, podés usar un número positivo para representar cuántas de esas figus tenés, contando repes).
 
 Por ejemplo, si tuviéramos un álbum de seis figuritas vacío lo vamos a representar como `[0, 0, 0, 0, 0, 0]`.
-Cuando consigamos la figurita 3 tendremos que indicarlo poniendo un 1 en el tercer lugar de la lista, es decir `album[2]=1` y el álbum nos va a quedar  `[0, 0, 1, 0, 0, 0]`.
+Cuando consigamos la figurita 3 tendremos que indicarlo poniendo un 1 en el tercer lugar del vector, es decir `album[2]=1` y el álbum nos va a quedar  `[0, 0, 1, 0, 0, 0]`.
 
 
 
@@ -50,21 +50,23 @@ En este caso, **la dinámica** del llenado es la siguiente:
 
 
 - Iniciamos con un álbum vacío y sin haber comprado ninguna figurita
-- Compramos figuritas (de a una) hasta llenar el álbum; es decir, se repite la acción (*el paso*) de comprar figuritas *mientras* (while) el álbum este incompleto.
+- Compramos figuritas (de a una) hasta llenar el álbum; es decir, se repite la acción (*el paso*) de comprar y pegar figuritas *mientras* (while) el álbum este incompleto.
 - Al terminar nos interesa saber cuántas figuritas tuvimos que comprar para llenar el álbum.
 
 ## Ejercicios con figus sueltas
 
-Vamos ahora a implementar computacionalmente este modelo. 
+Vamos ahora a implementar computacionalmente este modelo. Queremos definir las funciones 
 
 ### Ejercicio 3.16: Crear
 Implementá la función `crear_album(figus_total)` que devuelve un álbum *vacío* con `figus_total` espacios para pegar figuritas.
 
 
 ### Ejercicio 3.17: Incompleto
-¿Cuál sería el comando de Python que nos dice si hay al menos un cero en la lista que representa el álbum? ¿Qué significa que haya al menos un cero en nuestro vector?
+¿Cuál sería el comando de Python que nos dice si hay al menos un cero en el vector que representa el álbum? ¿Qué significa que haya al menos un cero en nuestro vector?
 
-Implemente la función `album_incompleto(A)` que recibe un vector y devuelve `True` si la lista contiene el elemento `0`. En el caso en que no haya ceros debe devolver `False`. 
+Implemente la función `album_incompleto(A)` que recibe un vector y devuelve `True` si el vector contiene el elemento `0`. En el caso en que no haya ceros debe devolver `False`. 
+
+Estas funciones son tan sencillas --cada una tiene un return de un comando-- que podría ponerse ese comando cada vez que queremos llamar a la función. Sin embargo, el código q
 
 
 ### Ejercicio 3.18: Comprar 
@@ -79,6 +81,8 @@ Ejecutá `n_repeticiones=1000` veces la función anterior utilizando `figusTotal
 Con los resultados obtenidos estimá cuántas figuritas hay que comprar, en promedio, para completar el álbum (de seis figuritas).
 
 *Ayuda: El comando `np.mean(l)` devuelve el promedio de la lista `l`.*
+
+¿Podés definir esta lista por comprensión de listas?
 
 ### Ejercicio 3.21:  
 Calculá `n_repeticiones=100` veces la función `cuantas_figus(figus_total=670)` y guardá los resultados obtenidos en cada repetición en una lista.
