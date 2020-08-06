@@ -159,11 +159,11 @@ La distribución normal tiene muchos usos. Uno de ellos es modelar errores exper
 
 Hagamos algún ejercicio sencillo antes de terminar. Supongamos que una persona se compra un termómetro que mide la temperatura con un error aleatorio normal con media 0 y desvío estándar de 0.2 grados (error gaussiano). Si la temperatura real de la persona es de 37.5 grados, simulá usando `normalvariate()` (con `mu` y `sigma` adecuados) `n = 99` valores medidos por el termómetro.
 
-Imprimí los valores obtenidos en las mediciones de tempratura simuladas y luego, como resumen, cuatro líneas indicando el valor máximo, el mínimo, el promedio y la mediana de estas `n` mediciones. 
+Imprimí los valores obtenidos en las mediciones de tempratura simuladas y luego, como resumen, cuatro líneas indicando el valor máximo, el mínimo, el promedio y la mediana de estas `n` mediciones. Guardá tu programa en el archivo `termometro.py`.
 
 _Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de Python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles]?_
 
-Guardá tu programa en el archivo `termometro.py`.
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Objetos)](03_Objects.md) \| [Próximo (5 NumPy)](05_NumPy_Arrays.md)
 

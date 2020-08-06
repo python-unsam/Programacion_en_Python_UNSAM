@@ -10,8 +10,8 @@ Para cerrar esta clase te pedimos dos cosas:
  2. El archivo `comprension.py` del [Ejercicio 3.2](../03_Mas_Python/02_List_comprehension.md#ejercicio-32-comprensión-de-listas) y siguientes.
  3. El archivo `termometro.py` del [Ejercicio 3.14](../03_Mas_Python/04_Random.md#ejercicio-314-gaussiana) y el [Ejercicio 3.16](../03_Mas_Python/05_NumPy_Arrays.md#ejercicio-316-guardar-temperaturas).
  4. El archivo `plotear_temperaturas.py` del [Ejercicio 3.17](../03_Mas_Python/05_NumPy_Arrays.md#ejercicio-317-empezando-a-plotear).
- 5. El archivo `histrograma_paquetes.py` del [Ejercicio 3.29](../03_Mas_Python/06_Figuritas.md#ejercicio-329-plotear-el-histograma).
-* Que completes [este formulario](https://docs.google.com/forms/d/1t_rhPa-VFILPWzXLBttyfN-a4fZSiAwa_k8pU0FVEF4) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios.
+ 5. El archivo `histrograma_paquetes.py` abarcando lo hecho con figuritas hasta el [Ejercicio 3.29](../03_Mas_Python/06_Figuritas.md#ejercicio-329-plotear-el-histograma).
+* Que completes [este formulario](https://docs.google.com/forms/d/LINK) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! Nos vemos en la próxima clase.
 

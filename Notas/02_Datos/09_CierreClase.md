@@ -14,7 +14,7 @@ Para cerrar esta clase te pedimos dos cosas:
     6. [Ejercicio 2.30](../02_Datos/08_IteradoresLista.md#ejercicio-230-tablas-de-multiplicar) `tablamult.py`
     7. [Ejercicio 2.31](../02_Datos/08_IteradoresLista.md#ejercicio-231-propagación) `propaga.py`
 
-* Que completes [este formulario](https://docs.google.com/forms/d/1t_rhPa-VFILPWzXLBttyfN-a4fZSiAwa_k8pU0FVEF4) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios.
+* Que completes [este formulario](https://docs.google.com/forms/d/1t_rhPa-VFILPWzXLBttyfN-a4fZSiAwa_k8pU0FVEF4) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
  
 
 Acordate, usá siempre la misma dirección de mail con la que te inscribiste al curso así podemos llevar registro de tus entregas.

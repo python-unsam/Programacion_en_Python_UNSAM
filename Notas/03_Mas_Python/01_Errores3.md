@@ -11,7 +11,7 @@ Un segundo tipo de error lo forman los errores *en tiempo de ejecución*, que se
 El tercer tipo de error es el más difícil de encontrar y de entender. Son los *errores semánticos*, que se dan cuando el programa no hace lo que está diseñado para hacer. Tienen que ver con el sentido de las instrucciones. En estos casos el programa se ejecuta pero da un resultado incorrecto o inesperado. En general, la mejor forma de encontrar estos errores es correr paso a paso el código que genera un resultado inesperado, tratando de entender dónde está la falla.
 
 ### Ejercicio 3.1: tres tipos de errores
-Determiná los errores de los siguientes códigos y corregilos en un archivo `tres_errores.py`. ¿Qué tipo de errores tiene cada uno?
+Determiná los errores de los siguientes códigos y corregilos en un archivo `tres_errores.py`, separando cada código con una línea con los símbolos `#%%` y comentando brevemente los errores. ¿Qué tipo de errores tiene cada uno?
 
 ```python
 def tiene_a(expresion):
