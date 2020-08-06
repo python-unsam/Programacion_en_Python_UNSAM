@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_Funciones.md) \| [Próximo (4 Gráficos con matplotlib**)](04_matplotlib_basico.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_Funciones.md) \| [Próximo (4 Complejidad de algoritmos+)](05_Complejidad.md)
 
 # 5.3 Búsqueda binaria*
 
@@ -192,5 +192,5 @@ Búsqueda binaria `b_bin.py`
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_Funciones.md) \| [Próximo (4 Gráficos con matplotlib**)](04_matplotlib_basico.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_Funciones.md) \| [Próximo (4 Complejidad de algoritmos+)](05_Complejidad.md)
 

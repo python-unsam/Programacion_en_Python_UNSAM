@@ -838,7 +838,7 @@ Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 4.5](../04
 
 
 ### Ejercicio 4.8: Empezando a plotear
-La clase que viene vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
+En un rato vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
 
 Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, plotée un histograma de las temperaturas simuladas:
 

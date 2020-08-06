@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la segunda clase)](07_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Integración)](07_Integrador.md)
 
 # 2.6 Secuencias
 
@@ -330,7 +330,8 @@ A veces los comandos `for`, `len()`, y `range()` son usados por principiantes de
 
 Por favor, no lo hagas. No sólo la lectura nos hace doler los ojos, además es ineficiente en el uso de memoria y corre más lento. Simplemente usa un ciclo `for` normal si querés iterar sobre los elementos de la variable data.  Y usá `enumerate()` si necesitás tener el índice por algún motivo.
 
-### Ejercicio 2.23: Un ejemplo práctico de enumerate()Recordá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,
+### Ejercicio 2.23: Un ejemplo práctico de enumerate()
+Recordá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,
 modificá tu programa `costo_camion.py` de forma que imprima un aviso (warning) cada vez que encuentre una fila incorrecta.
 
 ```python
@@ -351,7 +352,8 @@ for n_fila, fila in enumerate(filas, start=1):
         print(f'Fila {n_fila}: No pude interpretar: {fila}')
 ```
 
-### Ejercicio 2.24: La función zip()En el archivo `Data/camion.csv`, la primera línea tiene los encabezados de las columnas. En los códigos anteriores la descartamos.
+### Ejercicio 2.24: La función zip()
+En el archivo `Data/camion.csv`, la primera línea tiene los encabezados de las columnas. En los códigos anteriores la descartamos.
 
 ```python
 >>> f = open('Data/camion.csv')
@@ -503,5 +505,5 @@ También, tené en cuenta que `zip()` se detiene cuando la más corta de las ent
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la segunda clase)](07_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Integración)](07_Integrador.md)
 

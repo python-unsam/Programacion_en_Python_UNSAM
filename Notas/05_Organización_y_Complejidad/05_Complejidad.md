@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Gráficos con matplotlib**)](04_matplotlib_basico.md) \| [Próximo (6 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Búsqueda binaria*)](03_BusqBinaria.md) \| [Próximo (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
 
-# 5.5 Complejidad de algoritmos+
+# 5.4 Complejidad de algoritmos+
 
 ### Resumen de algoritmos de Búsqueda
 
@@ -74,5 +74,5 @@ Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un ele
 
 Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.10](../05_Organización_y_Complejidad/03_BusqBinaria.md#ejercicio-510-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Gráficos con matplotlib**)](04_matplotlib_basico.md) \| [Próximo (6 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Búsqueda binaria*)](03_BusqBinaria.md) \| [Próximo (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
 

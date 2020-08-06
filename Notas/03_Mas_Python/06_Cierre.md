@@ -2,9 +2,7 @@
 
 # 3.6 Cierre de la tercera clase
 
-En esta tercera clase vimos algo más sobre errores, la creación de listas por comprensión, el concepto de objeto subyacente a todo el lenguaje Python, la generación de números (pseudo)aleatorios, el uso de la biblioteca NumPy y algunos ejemplos de aplicación de estos conceptos.
-
-Para cerrar esta clase te pedimos dos cosas:
+En esta tercera clase vimos algo más sobre errores, el manejo de lista y la creación de listas por comprensión Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
  1. El archivo `tres_errores.py` del [Ejercicio 3.1](../03_Mas_Python/02_Errores3.md#ejercicio-31-tres-tipos-de-errores).
  2. El archivo `busqueda_en_listas.py` del [Ejercicio 3.2](../03_Mas_Python/03_IteradoresLista.md#ejercicio-32-búsquedas-de-un-elemento) y el [Ejercicio 3.3](../03_Mas_Python/03_IteradoresLista.md#ejercicio-33-búsqueda-de-máximo-y-mínimo).

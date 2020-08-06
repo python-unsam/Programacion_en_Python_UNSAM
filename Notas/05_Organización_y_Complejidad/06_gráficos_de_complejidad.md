@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos+)](05_Complejidad.md) \| [Próximo (7 Gráficos de Figuritas y Dados***)](07_gráficos_de_figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Complejidad de algoritmos+)](05_Complejidad.md) \| [Próximo (6 Cierre*)](08_Cierre.md)
 
-# 5.6 Gráficos de complejidad**
+# 5.5 Gráficos de complejidad**
 
 ## ideas:
 
@@ -12,5 +12,5 @@
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos+)](05_Complejidad.md) \| [Próximo (7 Gráficos de Figuritas y Dados***)](07_gráficos_de_figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Complejidad de algoritmos+)](05_Complejidad.md) \| [Próximo (6 Cierre*)](08_Cierre.md)
 
