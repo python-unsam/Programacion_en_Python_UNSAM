@@ -144,7 +144,7 @@ También podés usar `np.linspace()` para crear un vector especificando el **pri
 array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 ```
 
-### Ejercicio 3.14: arange() y linspace()
+### Ejercicio 3.15: arange() y linspace()
 Generá un vector que tenga los número impares entre el 1 y el 19 inclusive usando `arange()`. Repetí ele ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
 
 **Especificar el tipo de datos**
@@ -833,11 +833,11 @@ array([1., 2., 3., 4., 5., 6., 7., 8.])
 
 Las funciones `savetxt()` y `loadtxt()` aceptan parámentros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
 
-### Ejercicio 3.15: Guardar temperaturas
-Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.13](../03_Mas_Python/04_Random.md#ejercicio-313-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99.
+### Ejercicio 3.16: Guardar temperaturas
+Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 3.14](../03_Mas_Python/04_Random.md#ejercicio-314-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99.
 
 
-### Ejercicio 3.16: Empezando a plotear
+### Ejercicio 3.17: Empezando a plotear
 La clase que viene vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
 
 Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, plotée un histograma de las temperaturas simuladas:

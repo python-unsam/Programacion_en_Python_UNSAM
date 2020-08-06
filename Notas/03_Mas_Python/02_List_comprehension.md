@@ -114,7 +114,7 @@ Guardá los resultados de los primero tres ejercicios en un archivo
 ...
 
 ```
-### Ejercicio 3.1: Comprensión de listas
+### Ejercicio 3.2: Comprensión de listas
 Probá un par de comprensión de listas para familiarizarte con la sintaxis.
 
 ```python
@@ -130,7 +130,7 @@ Probá un par de comprensión de listas para familiarizarte con la sintaxis.
 
 Observá que estás creando nuevas listas con los datos adecuadamente transformados o filtrados.
 
-### Ejercicio 3.2: Reducción de secuencias
+### Ejercicio 3.3: Reducción de secuencias
 Calculá el costo total de la carga del camión en un solo comando.
 
 ```python
@@ -167,7 +167,7 @@ La función `sum()` luego realiza una reducción del resultado
 
 Con este conocimiento algunos ya empiezan su startup de big-data.
 
-### Ejercicio 3.3: Consultas de datos
+### Ejercicio 3.4: Consultas de datos
 Probá los siguientes ejemplos de consultas (queries) de datos.
 
 Primero, generá una lista con la info de todas las frutas que tienen más de 100 cajones en el camión.
@@ -205,7 +205,7 @@ O una con la info de las frutas que costaron más de $10000.
 Esta forma de escribir resulta análoga a las consultas a una base de datos con 
 SQL.
 
-### Ejercicio 3.4: Extracción de datos
+### Ejercicio 3.5: Extracción de datos
 Usando un comprensión de listas, construí una lista de tuplas `(nombre, cajones)` que indiquen la cantidad de cajones de cada fruta tomando los datos de `camion`.
 
 ```python
@@ -255,7 +255,7 @@ Otro ejemplo útil podría ser generar un diccionario de precios de venta de aqu
 ```
 
 
-### Ejercicio 3.5: Estraer datos de una arhcivo CSV
+### Ejercicio 3.6: Estraer datos de una arhcivo CSV
 Saber usar combinaciones de comprensión de listas, diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. Acá te mostramos un ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
 
 Primero, leamos el encabezado (header) del archivo CSV:

@@ -55,11 +55,11 @@ Suponé por ahora que las figuritas se compran **individualmente** (de a una, no
 
 Vamos ahora a implementar computacionalmente este modelo. Queremos definir las funciones 
 
-### Ejercicio 3.17: Crear
+### Ejercicio 3.18: Crear
 Implementá la función `crear_album(figus_total)` que devuelve un álbum (vector) *vacío* con `figus_total` espacios para pegar figuritas.
 
 
-### Ejercicio 3.18: Incompleto
+### Ejercicio 3.19: Incompleto
 ¿Cuál sería el comando de Python que nos dice si hay al menos un cero en el vector que representa el álbum? ¿Qué significa que haya al menos un cero en nuestro vector?
 
 Implemente la función `album_incompleto(A)` que recibe un vector y devuelve `True` si el vector contiene el elemento `0`. En el caso en que no haya ceros debe devolver `False`. 
@@ -67,14 +67,14 @@ Implemente la función `album_incompleto(A)` que recibe un vector y devuelve `Tr
 Estas funciones son tan sencillas --cada una puede escribirse en una sola línea-- que podría ponerse directamente esa línea cada vez que queremos llamar a la función. Sin embargo, en esta etapa nos parece conveniente que organices el código en funciones, por más que sean sencillas.
 
 
-### Ejercicio 3.19: Comprar 
+### Ejercicio 3.20: Comprar 
 Alguna de las funciones que introdujimos en la [Sección 3.4](../03_Mas_Python/04_Random.md#valores-discretos) sirve para devolver un número entero aleatorio dentro de un rango (¿cuál era?).
 Implementá una función `comprar_figu(figus_total)` que reciba el número total de figuritas que tiene el álbum (dado por el parámetro `figus_total`) y devuelva un número entero aleatorio que representa la figurita que nos tocó.
 
-### Ejercicio 3.20: Cantidad de compras 
+### Ejercicio 3.21: Cantidad de compras 
 Implementá la función `cuantas_figus(figus_total)` que, dado el tamaño del álbum (`figus_total`), genere un álbum nuevo, simule su llenado y devuelva la cantidad de figuritas que se debieron comprar para completarlo.
 
-### Ejercicio 3.21:  
+### Ejercicio 3.22:  
 Ejecutá `n_repeticiones = 1000` veces la función anterior utilizando `figus_total = 6` y guardá en una lista los resultados obtenidos en cada repetición. Con los resultados obtenidos estimá cuántas figuritas hay que comprar, en promedio, para completar el álbum de seis figuritas.
 
 *Ayuda: El comando `np.mean(l)` devuelve el promedio de la lista `l`.*
@@ -82,7 +82,7 @@ Ejecutá `n_repeticiones = 1000` veces la función anterior utilizando `figus_to
 ¿Podés crear esta lista usando una comprensión de listas?
 
 
-### Ejercicio 3.22:  
+### Ejercicio 3.23:  
 Calculá `n_repeticiones=100` veces la función `cuantas_figus(figus_total=670)` y guardá los resultados obtenidos en cada repetición en una lista.
 Con los resultados obtenidos estimá cuántas figuritas hay que comprar, en promedio, para completar el álbum (de 670 figuritas).
 
@@ -96,21 +96,21 @@ Estos ejercicios te recomendamos que los pienses y discutas con un compañere o 
 
 ## Ejercicios con paquetes
 
-### Ejercicio 3.23:  
+### Ejercicio 3.24:  
 Simulá la generación de un paquete con cinco figuritas, sabiendo que el álbum es de 670. Tené en cuenta que, como en la vida real, puede haber figuritas repetidas en un paquete.
 
-### Ejercicio 3.24:  
+### Ejercicio 3.25:  
 Implementá una función `comprar_paquete(figus_total, figus_paquete)` que, dado el tamaño del álbum (`figus_total`) y la cantidad de figuritas por paquete (`figus_paquete`), genere un paquete (vector) de figuritas al azar.
 
-### Ejercicio 3.25:  
+### Ejercicio 3.26:  
 Implementá una función `cuantos_paquetes(figus_total, figus_paquete)` que dado el tamaño del álbum y la cantidad de figus por paquete, genere un álbum nuevo, simule su llenado y devuelva cuántos paquetes se debieron comprar para completarlo.
 
-### Ejercicio 3.26: Calculá `n_repeticiones = 100` veces la función `cuantos_paquetes`, utilizando `figus_total = 670`, `figus_paquete = 5`. Guarda los resultados obtenidos en una lista y calculá su promedio. Si te da la compu, hacelo con 1000 repeticiones.
+### Ejercicio 3.27: Calculá `n_repeticiones = 100` veces la función `cuantos_paquetes`, utilizando `figus_total = 670`, `figus_paquete = 5`. Guarda los resultados obtenidos en una lista y calculá su promedio. Si te da la compu, hacelo con 1000 repeticiones.
 
 ## Ejercicios un toque más estadísticos:
 
 
-### Ejercicio 3.27: Utilizando lo implementado en el ítem anterior, **estimá** la probabilidad de completar el álbum con $850$ paquetes o menos.
+### Ejercicio 3.28: Utilizando lo implementado en el ítem anterior, **estimá** la probabilidad de completar el álbum con $850$ paquetes o menos.
 
 _Sugerencia:_ No leas esto antes de hacer el ejercicio. Hacelo primeto y luego miralo. En este ejercicios resulta más compacto usar `n_paquetes_hasta_llenar=np.array(lista)` para convertir a vector la lista conteniendo cuántos paquetes compraste en cada experimento hasta llenar el álbum. Trabajar con vectores tiene ventajas. Por ejemplo probá la siguiente instrucción:
 
@@ -118,19 +118,19 @@ _Sugerencia:_ No leas esto antes de hacer el ejercicio. Hacelo primeto y luego m
 (n_paquetes_hasta_llenar <= 850).sum()
 ```
 
-### Ejercicio 3.28: Plotear el histograma
-Usá un código similar al del [Ejercicio 3.16](../03_Mas_Python/05_NumPy_Arrays.md#ejercicio-316-empezando-a-plotear) para hacer un histograma de la cantidad de paquetes que se compraron en cada experimeto, ajustando la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
+### Ejercicio 3.29: Plotear el histograma
+Usá un código similar al del [Ejercicio 3.17](../03_Mas_Python/05_NumPy_Arrays.md#ejercicio-317-empezando-a-plotear) para hacer un histograma de la cantidad de paquetes que se compraron en cada experimeto, ajustando la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
 
 Guardá todo lo que hiciste hasta aquí sobre figuritas en un archivo `histrograma_paquetes.py`.
 
 
-### Ejercicio 3.29:  
+### Ejercicio 3.30:  
 Utilizando lo implementado, **estimá** cuántos paquetes habría que comprar para tener una chance del $90\%$ de completar el álbum.
 
-### Ejercicio 3.30:  
+### Ejercicio 3.31:  
 Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambian las probabilidades?
 
-### Ejercicio 3.31: 
+### Ejercicio 3.32: 
 Por último, suponé que cinco amigues se juntan y deciden compartir la compra de figuritas y el llenado de sus cinco álbumes solidariamente. Calculá cuántos paquetes deberían comprar si deben completar todos. Hacé 100 repeticiones y compará el resultado con la compra individual que calculaste antes.
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 NumPy)](05_NumPy_Arrays.md) \| [Próximo (7 Cierre de la tercera clase)](07_Cierre.md)
