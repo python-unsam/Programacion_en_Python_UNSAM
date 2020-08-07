@@ -150,7 +150,7 @@ A pesar de que suelen usarse dentro de un `print`, el formato de cadenas no est�
 ```
 
 ### Ejercicio 2.29: Recolectar datos
-En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. En este ejercicio, vas a comenzar a modificarlo para producir una tabla como ésta:
+En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. Dejá ese archivo para entregar al final de la clase y copiá su contenido en un archivo `tabla_informe.py`. En este ejercicio, vas a comenzar a modificarlo para producir una tabla como ésta:
 
 ```
  Nombre     Cajones     Precio     Cambio
@@ -169,7 +169,7 @@ En este informe, el "Precio" es el precio en el mercado y el "Cambio" es la vari
 Para generar un informe como el de arriba, primero tenés que recolectar todos los datos de la tabla. Escribí una función `hacer_informe()`
 que recibe una lista de cajones y un diccionario con precios como input y devuelve una lista de tuplas conteniendo la información mostrada en la tabla anterior.
 
-Agregá esta función a tu archivo `informe.py`. Debería funcionar como se muestra en el siguiente ejemplo:
+Agregá esta función a tu archivo `tabla_informe.py`. Debería funcionar como se muestra en el siguiente ejemplo:
 
 ```python
 >>> camion = leer_camion('Data/camion.csv')
@@ -224,7 +224,7 @@ O directamente usando  f-strings. Por ejemplo:
 >>>
 ```
 
-Agregá estos últimos comandos a tu programa `informe.py`. Hacé que el programa tome la salida de la función `hacer_informe()` e imprima una tabla bien formateada.
+Agregá estos últimos comandos a tu programa `tabla_informe.py`. Hacé que el programa tome la salida de la función `hacer_informe()` e imprima una tabla bien formateada.
 
 ### Ejercicio 2.31: Agregar encabezados
 Suponete que tenés una tupla con nombres de encabezado como ésta:
@@ -274,7 +274,7 @@ Por último, modificá tu código para que el precio mostrado incluya un símbol
    Naranja        100     $70.44      35.84
 ```
 
-Guardá estos cambios en el archivo `informe.py` que más adelante los vas a necesitar.
+Guardá estos cambios en el archivo `tabla_informe.py` que más adelante los vas a necesitar.
 
 ### Ejercicio 2.33: Tablas de multiplicar
 Escribí un programa `tablamult.py` que imprima de forma prolija las tablas de

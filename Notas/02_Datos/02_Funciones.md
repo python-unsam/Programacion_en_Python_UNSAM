@@ -256,10 +256,10 @@ print('Total cost:', cost)
 
 Esto está bien para ejercitar, pero en un programa real probablemente no harías eso ya que querrías una mayor flexibilidad. Una posiblidad es pasarle al programa el nombre del archivo que querés procesar como un parámentro cuando lo llamás desde la línea de comandos. 
 
-Cambiá tu código con la sugerencia del siguiente ejemplo:
+Copía el contenido de `costo_camion.py` a un nuevo archivo llamado `costo_camion_commandline.py` que incorpore la lectura de parámetros por línea de comando según la sugerencia del siguiente ejemplo:
 
 ```python
-# costo_camion.py
+# costo_camion_commandline.py
 import csv
 import sys
 
@@ -280,10 +280,12 @@ print('Costo total:', costo)
 `sys.argv` es una lista que contiene los argumentos que le pasamos al script al momento de llamarlo desde la línea de comandos (si es que le pasamos alguno). Por ejemplo, desde una terminal de Unix (en Windows es similar), para correr nuestro programa y que procese el mismo archivo podríamos escribir:
 
 ```bash
-bash $ python3 costo_camion.py Data/camion.csv
+bash $ python3 costo_camion_commandline.py Data/camion.csv
 Costo total: 47671.15
 bash $
 ```
+
+Guardá el archivo `costo_camion_commandline.py` para entregar al final de la clase.
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_Archivos.md) \| [Próximo (3 Tipos y estructuras de datos)](03_TiposDatos.md)
 
