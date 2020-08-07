@@ -33,6 +33,18 @@ Luego, combiná esta función con `leer_parque()` y con el método `most_common(
 - 'ANDES, LOS'
 - 'CENTENARIO'
 
+General Paz | Los Andes | Centenario
+-------------------------|-----------|--------------
+Casuarina: 97 |Jacarandá: 117|Plátano: 137
+Tipa blanca: 54|Tipa blanca: 28|Jacarandá: 45
+Eucalipto: 49|Ciprés: 21|Tipa blanca: 42
+Palo borracho rosado: 44 ||Palo borracho rosado: 18|Palo borracho rosado: 41
+Fenix: 40|Lapacho: 12|Fresno americano: 38
+
+
+
+
+
 ### Ejercicio 2.25: Alturas de una especie en una lista
 Escribí una función `obtener_alturas(lista, especie)` que, dada una lista de árboles como la anterior y una especie de árbol (nuevamente, la columna `'nombre_com'` del archivo), devuelva una lista con las alturas (columna `'altura_tot'`) de los ejemplares de esa especie en la lista. 
 
