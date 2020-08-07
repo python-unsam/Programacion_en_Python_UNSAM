@@ -33,7 +33,7 @@ Luego, combiná esta función con `leer_parque()` y con el método `most_common(
 - 'ANDES, LOS'
 - 'CENTENARIO'
 
-Resultados de cantidad por especie en tres parques:
+**Resultados** de cantidad por especie en tres parques:
 
 General Paz | Los Andes | Centenario
 -------------------------|-----------|--------------
@@ -51,7 +51,7 @@ _Observación: Acá sí, fijate de devolver las alturas como números (de punto 
 
 Usala para calcular la altura promedio y altura máxima de los 'Jacarandá' en los tres parques mencionados.
 
-Resultado de alturasde Jacaranáes en tres parques:
+**Resultados** de alturas de Jacaranáes en tres parques:
 
 Medida | General Paz | Los Andes | Centenario
 -------|------------------|-----------|--------------
@@ -67,10 +67,10 @@ Combinando la función `especies()` con `obtener_inclinaciones()` escribí una f
 
 Correlo para los tres parques mencionados anteriormente.
 
-Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados y que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
+**Resultados.** Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados y que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
 
 
-Preguntas extras: ¿Qué habría que cambiar para obtener la especie con un ejemplar más inclinado de toda la ciudad y no solo de un parque? ¿Podrías dar la latitud y longitud de ese ejemplar? ¿Y dónde se encuentra (lat,lon) el ejemplar más alto? ¿De qué especie es?
+**Preguntas extras:** ¿Qué habría que cambiar para obtener la especie con un ejemplar más inclinado de toda la ciudad y no solo de un parque? ¿Podrías dar la latitud y longitud de ese ejemplar? ¿Y dónde se encuentra (lat,lon) el ejemplar más alto? ¿De qué especie es?
 
 
 
