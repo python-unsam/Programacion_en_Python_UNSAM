@@ -12,7 +12,7 @@ Discutimos el problema de la búsqueda de un elemento en un vector e introducimo
 * [2.5 Secuencias](05_Secuencias.md)
 * [2.6 Contadores del módulo _collections_](06_Contadores.md)
 * [2.7 Arbolado porteño (integrador)](07_Integrador.md)
-* [2.8 Impresión con formato](08_Formato.md)
+* [2.8 Impresión con formato*](08_Formato.md)
 * [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
 

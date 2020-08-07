@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (7 Arbolado porteño (integrador))](07_Integrador.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
-# 2.8 Impresión con formato
+# 2.8 Impresión con formato*
 
 Esta sección es una pequeña digresión. Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
 
