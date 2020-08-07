@@ -7,7 +7,7 @@ En esta segunda clase aprendimos a trabajar con datos. Manejamos archivos CSV y 
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
     1. El archivo `costo_camion.py` del [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances) sobre calcular el costo de camión por linea de comandos, con warnings. 
-    2. El archivo `arboles.py` del la sección anterior, incluyendo todos los ejercicios que hayas hecho (esperamos al menos el [Ejercicio 2.27](../02_Datos/07_Integrador.md#ejercicio-227-especies-con-ejemplares-más-inclinados) y uno más).
+    2. El archivo `arboles.py` sobre arbolado porteño incluyendo todos los ejercicios que hayas hecho (esperamos al menos el [Ejercicio 2.27](../02_Datos/07_Integrador.md#ejercicio-227-especies-con-ejemplares-más-inclinados) y uno más).
     3. El archivo `informe.py` del [Ejercicio 2.32](../02_Datos/08_Formato.md#ejercicio-232-un-desafío-de-formato) (o del [Ejercicio 2.31](../02_Datos/08_Formato.md#ejercicio-231-agregar-encabezados) si no salió).
     4. El archivo `tablamult.py` del [Ejercicio 2.33](../02_Datos/08_Formato.md#ejercicio-233-tablas-de-multiplicar).
     
