@@ -222,6 +222,8 @@ Probá tu función con estos ejemplos:
 ¿Por qué falla en el último caso? ¿Por qué anda en el caso anterior? 
 ¿Cómo se puede inicializar m para que la función ande también con números negativos? Corregilo y guarda la versión mejorada en el archivo `busqueda_en_listas.py`.
 
+Si te dan ganas, agregá una función `minimo()` al archivo.
+
 ## Ejercitación con iteradores y listas
 
 ### Ejercicio 3.4: Invertir una lista
@@ -239,12 +241,12 @@ Guardá la función en el archivo `invlista.py` y probala con las siguientes lis
 `[1,2,3,4,5]`
 `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
-### Ejercicio 3.5: Invertir una lista *in place*
+### Ejercicio 3.5: # (### Ejercicio
 En el ejercicio anterior creaste una nueva lista conteniendo los elementos de una lista dada en orden inverso. En este ejercicio te pedimos que inviertas los elementos de una lista pero sin crear una nueva lista ni listas auxiliares. Es decir, te pedimos que escribas una función `invertir_lista_inplace(lista)` que, dada una lista, invierta la misma lista *en el lugar* (en inglés, *in place*), sin usar listas nuevas.
 
 Probá tu función con las siguientes lista:
 `lista_probando_1 = [1,2,3,4,5]`
-`lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
+`lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`)
 
 
 ### Ejercicio 3.6: Propagación

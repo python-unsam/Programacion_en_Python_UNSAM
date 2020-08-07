@@ -25,6 +25,7 @@ def tiene_a(expresion):
         i += 1
 
 tiene_a('UNSAM 2020')
+tiene_a('abracadabra')
 tiene_a('La novela 1984 de George Orwell')
 ```
 
