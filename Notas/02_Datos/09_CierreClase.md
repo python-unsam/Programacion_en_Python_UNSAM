@@ -9,7 +9,7 @@ Para cerrar esta clase te pedimos dos cosas:
     1. El archivo `costo_camion.py` del [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances) sobre calcular el costo de camión por linea de comandos, con warnings. 
     2. El archivo `informe.py` del [Ejercicio 2.20](../02_Datos/05_Formato.md#ejercicio-220-un-desafío-de-formato) (o del [Ejercicio 2.19](../02_Datos/05_Formato.md#ejercicio-219-agregar-encabezados) si no salió).
     3. El archivo `tablamult.py` del [Ejercicio 2.21](../02_Datos/05_Formato.md#ejercicio-221-tablas-de-multiplicar).
-    4. El archivo `integrador.py` del Ejercicio ?. AGREGAR ESTE EJERCICIO!
+    4. El archivo `arboles.py` del la sección anterior, incluyendo todos los ejercicios que hayas hecho.
 
 * Que completes [este formulario](https://docs.google.com/forms/d/1t_rhPa-VFILPWzXLBttyfN-a4fZSiAwa_k8pU0FVEF4) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
  

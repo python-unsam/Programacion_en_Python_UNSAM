@@ -2,11 +2,11 @@
 
 # 2.8 Integración - Arbolado porteño
 
-En esta sección haremos algunos ejercicios integradores manejando archivos, diccionarios, listas, contadores y el comando `zip`, entre otras cosas.
+En esta sección haremos algunos ejercicios integradores manejando archivos, diccionarios, listas, contadores y el comando `zip`, entre otras cosas. Entregá lo que puedas hacer. No es obligatorio hacerlo completo...
 
 ## Ejercicios
 
-Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una base de datos sobre árboles en parques de la Ciudad de Buenos Aires. Para empezar, descargá el archivo csv de [Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes) de la Ciudad a tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejericios de esta sección en un archivo `arboles.py`.
+Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una base de datos sobre árboles en parques de la Ciudad de Buenos Aires. Para empezar, descargá el archivo CSV de [Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes) de la Ciudad a tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejericios de esta sección en un archivo `arboles.py`.
 
 ![Arbolado porteño](arboles.jpg)
 
