@@ -11,7 +11,7 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 ![Arbolado porteño](arboles.jpg)
 
 ### Ejercicio 2.22: Lectura de los árboles de un parque
-Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo incidicado y devuelva una **lista de diccionarios** con la información sobre los árboles del parque especificado. La función debe devolver una lista que, por cada árbol (cada fila) del archivo, contenga un diccionario con toda la información sobre el árbol. 
+Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información sobre los árboles del parque especificado. La función debe devolver una lista que, por cada árbol (cada fila) del archivo, contenga un diccionario con toda la información sobre el árbol. 
 
 _Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 2.19](../02_Datos/05_Secuencias.md#ejercicio-219-la-función-zip) _para combinar el encabezado del archivo con los datos de cada fila. Por ahora te preocupes por los tipos de datos de cada columna._
 
@@ -46,9 +46,9 @@ Escribí una función `obtener_inclinaciones(especie,lista)` que, dada una espec
 ### Ejercicio 2.27: Especies con ejemplares más inclinados
 Combinando la función `especies()` con `obtener_inclinaciones()` escribí una función `especies_inclinadas(lista)` que, dada una lista de árboles devuelva la especie que tiene el ejemplar más inclinado así como la especie que tiene mayor promedio de inclinación entre las que figuran en la lista.
 
-Correlo para loa tres parques mencionados anteriormente.
+Correlo para los tres parques mencionados anteriormente.
 
-
+¿Qué habría que cambiar para obtener la especie con promedio más inclinado de toda la ciudad y no solo de un parque?
 
 
 
