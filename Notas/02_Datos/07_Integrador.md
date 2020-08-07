@@ -70,7 +70,7 @@ Correlo para los tres parques mencionados anteriormente.
 Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados y que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
 
 
-¿Qué habría que cambiar para obtener la especie con promedio más inclinado de toda la ciudad y no solo de un parque?
+Preguntas extras: ¿Qué habría que cambiar para obtener la especie con un ejemplar más inclinado de toda la ciudad y no solo de un parque? ¿Podrías dar la latitud y longitud de ese ejemplar? ¿Y dónde se encuentra (lat,lon) el ejemplar más alto? ¿De qué especie es?
 
 
 
