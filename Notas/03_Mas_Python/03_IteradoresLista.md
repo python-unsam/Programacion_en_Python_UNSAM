@@ -241,12 +241,12 @@ Guardá la función en el archivo `invlista.py` y probala con las siguientes lis
 `[1,2,3,4,5]`
 `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
-### Ejercicio 3.5: # (### Ejercicio
+### Ejercicio 3.5: Invertir una lista *in place*
 En el ejercicio anterior creaste una nueva lista conteniendo los elementos de una lista dada en orden inverso. En este ejercicio te pedimos que inviertas los elementos de una lista pero sin crear una nueva lista ni listas auxiliares. Es decir, te pedimos que escribas una función `invertir_lista_inplace(lista)` que, dada una lista, invierta la misma lista *en el lugar* (en inglés, *in place*), sin usar listas nuevas.
 
 Probá tu función con las siguientes lista:
 `lista_probando_1 = [1,2,3,4,5]`
-`lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`)
+`lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`)--->
 
 
 ### Ejercicio 3.6: Propagación
