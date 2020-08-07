@@ -2,7 +2,9 @@
 
 # 2.8 Impresión con formato*
 
-Esta sección es una pequeña digresión. Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
+En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. No es indispensable para el curso. Si te alcanza el tiempo está semana leela, sino no te preocupes podés volver a mirar acá en el futurom, cuando lo necesites.
+
+Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
 
 ```code
   Nombre      Cajones     Precio
