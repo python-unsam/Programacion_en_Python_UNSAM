@@ -44,6 +44,7 @@ Usala para calcular la altura promedio y altura máxima de los 'Jacarandá' en l
 Escribí una función `obtener_inclinaciones(especie,lista)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie. 
 
 ### Ejercicio 2.27: Especies con ejemplares más inclinados
+
 Combinando la función `especies()` con `obtener_inclinaciones()` escribí una función `especies_inclinadas(lista)` que, dada una lista de árboles devuelva la especie que tiene el ejemplar más inclinado así como la especie que tiene mayor promedio de inclinación entre las que figuran en la lista.
 
 Correlo para los tres parques mencionados anteriormente.
