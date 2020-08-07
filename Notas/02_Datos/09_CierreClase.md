@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Integración)](08_Integrador.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Integración - Arbolado porteño)](08_Integrador.md)
 
 # 2.9 Cierre de la segunda clase
 
@@ -22,5 +22,5 @@ Por último te recordamos que si te quedaron dudas, querés discutir algún tema
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Integración)](08_Integrador.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Integración - Arbolado porteño)](08_Integrador.md)
 

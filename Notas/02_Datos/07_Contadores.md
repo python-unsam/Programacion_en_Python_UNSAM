@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Integración)](08_Integrador.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Integración - Arbolado porteño)](08_Integrador.md)
 
 # 2.7 Contadores del módulo _collections_
 
-El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección introducimos brevemente los contadores, que son solo una de las clases incluída en este módulo.
+El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección introducimos brevemente los contadores, que son solo una de las clases incluídas en este módulo.
 
 ### Ejemplo: Contar cosas
 
@@ -114,5 +114,5 @@ Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El m�
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Integración)](08_Integrador.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Integración - Arbolado porteño)](08_Integrador.md)
 
