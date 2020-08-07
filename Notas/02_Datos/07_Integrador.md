@@ -22,7 +22,7 @@ Probá con el parque "GENERAL PAZ" para tener un ejemplo de trabajo.
 ### Ejercicio 2.23: Determinar las especies en un parque
 Escribí una función `especies(lista)` que tome una lista de árboles como la generada en el ejercicio anterior y devuelva el conjunto de especies (la columna `'nombre_com'` del archivo) que figuran en la lista.
 
-_Ṣugerencia: Usá el comando `set` como en la [Sección 2.4](../02_Datos/04_Contenedores.md#conjuntos))._
+_Ṣugerencia: Usá el comando `set` como en la [Sección 2.4](../02_Datos/04_Contenedores.md#conjuntos)._
 
 ### Ejercicio 2.24: Contar ejemplares por especie
 Usando contadores como en el [Ejercicio 2.21](../02_Datos/06_Contadores.md#ejercicio-221-contadores), escribí una función `contar_ejemplares(lista_arboles)` que, dada una lista como la que generada con `leer_parque()`, devuelva un diccionario en el que las especies (recordá, es la columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
@@ -59,13 +59,16 @@ max  |16.0 |25.0  | 18.0
 prom |10.2 |10.54 | 8.96
 
 ### Ejercicio 2.26: Inclinación promedio por especie de una lista
-Escribí una función `obtener_inclinaciones(especie,lista)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie. 
+Escribí una función `obtener_inclinaciones(lista, especie)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie. 
 
 ### Ejercicio 2.27: Especies con ejemplares más inclinados
 
 Combinando la función `especies()` con `obtener_inclinaciones()` escribí una función `especies_inclinadas(lista)` que, dada una lista de árboles devuelva la especie que tiene el ejemplar más inclinado así como la especie que tiene mayor promedio de inclinación entre las que figuran en la lista.
 
 Correlo para los tres parques mencionados anteriormente.
+
+Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados y que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
+
 
 ¿Qué habría que cambiar para obtener la especie con promedio más inclinado de toda la ciudad y no solo de un parque?
 
