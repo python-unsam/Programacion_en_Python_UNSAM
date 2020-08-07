@@ -32,11 +32,11 @@ Luego, combiná esta función con `leer_parque()` y con el método `most_common(
 - 'CENTENARIO'
 
 ### Ejercicio 2.31: Alturas de una especie en una lista
-Escribí una función `obtener_alturas(especie,larboles)` que, dada una especie de árbol (columna `'nombre_com'` del archivo) y una lista de árboles como la anterior, devuelva una lista con las alturas (columna `'altura_tot'`) de los ejemplares de esa especie. 
+Escribí una función `obtener_alturas(lista, especie)` que, dada una lista de árboles como la anterior y una especie de árbol (nuevamente, la columna `'nombre_com'` del archivo), devuelva una lista con las alturas (columna `'altura_tot'`) de los ejemplares de esa especie en la lista. 
 
 _Observación: Acá sí, fijate de devolver las alturas como números (de punto flotante) y no como cadenas de caracteres_.
 
-Calculá la altura promedio y altura máxima de los 'Jacarandá'en los tres parques mencionados.
+Usala para calcular la altura promedio y altura máxima de los 'Jacarandá' en los tres parques mencionados.
 
 ### Ejercicio 2.32: Inclinación promedio por especie de una lista
 Escribí una función `obtener_inclinaciones(especie,lista)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie. 
@@ -45,8 +45,6 @@ Escribí una función `obtener_inclinaciones(especie,lista)` que, dada una espec
 Combinando la función `especies()` con `obtener_inclinaciones()` escribí una función `especies_inclinadas(lista)` que, dada una lista de árboles devuelva la especie que tiene el ejemplar más inclinado así como la especie que tiene mayor promedio de inclinación entre las que figuran en la lista.
 
 Correlo para loa tres parques mencionados anteriormente.
-
-[](OTRA: lista de lat lon de una especie en una lista)
 
 
 
