@@ -33,16 +33,15 @@ Luego, combiná esta función con `leer_parque()` y con el método `most_common(
 - 'ANDES, LOS'
 - 'CENTENARIO'
 
+Resultados:
+
 General Paz | Los Andes | Centenario
 -------------------------|-----------|--------------
 Casuarina: 97 |Jacarandá: 117|Plátano: 137
 Tipa blanca: 54|Tipa blanca: 28|Jacarandá: 45
 Eucalipto: 49|Ciprés: 21|Tipa blanca: 42
-Palo borracho rosado: 44 ||Palo borracho rosado: 18|Palo borracho rosado: 41
+Palo borracho rosado: 44 |Palo borracho rosado: 18|Palo borracho rosado: 41
 Fenix: 40|Lapacho: 12|Fresno americano: 38
-
-
-
 
 
 ### Ejercicio 2.25: Alturas de una especie en una lista
@@ -51,6 +50,13 @@ Escribí una función `obtener_alturas(lista, especie)` que, dada una lista de �
 _Observación: Acá sí, fijate de devolver las alturas como números (de punto flotante) y no como cadenas de caracteres_.
 
 Usala para calcular la altura promedio y altura máxima de los 'Jacarandá' en los tres parques mencionados.
+
+Resultados:
+
+Medida | General Paz | Los Andes | Centenario
+-------|------------------|-----------|--------------
+max  |16.0 |25.0  | 18.0
+prom |10.2 |10.54 | 8.96
 
 ### Ejercicio 2.26: Inclinación promedio por especie de una lista
 Escribí una función `obtener_inclinaciones(especie,lista)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie. 
