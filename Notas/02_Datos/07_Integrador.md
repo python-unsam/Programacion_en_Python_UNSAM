@@ -6,7 +6,7 @@ En esta sección haremos algunos ejercicios integradores manejando archivos, dic
 
 ## Ejercicios
 
-Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una base de datos sobre árboles en parques de la Ciudad de Buenos Aires. Para empezar, descargá el archivo CSV de [Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes) de la Ciudad a tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejericios de esta sección en un archivo `arboles.py`.
+Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una base de datos sobre árboles en parques de la Ciudad de Buenos Aires. Para empezar, descargá el archivo CSV de "[Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes)" en tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejericios de esta sección en un archivo `arboles.py`.
 
 ![Arbolado porteño](arboles.jpg)
 
@@ -19,10 +19,10 @@ _Observación: La columna que indica el nombre del parque en el que se encuentra
 
 Probá con el parque "GENERAL PAZ" para tener un ejemplo de trabajo.
 
-### Ejercicio 2.23: Contar ejemplares por especie
+### Ejercicio 2.23: Determinar las especies en un parque
 Escribí una función `especies(lista)` que tome una lista de árboles como la generada en el ejercicio anterior y devuelva el conjunto de especies (la columna `'nombre_com'` del archivo) que figuran en la lista.
 
-_Ṣugerencia: Usá el comando `set` como en la Sección ?)._
+_Ṣugerencia: Usá el comando `set` como en la [Sección 2.4](../02_Datos/04_Contenedores.md#conjuntos))._
 
 ### Ejercicio 2.24: Contar ejemplares por especie
 Usando contadores como en el [Ejercicio 2.21](../02_Datos/06_Contadores.md#ejercicio-221-contadores), escribí una función `contar_ejemplares(lista_arboles,especie)` que dada una lista como la que generada con `leer_parque()` devuelva un diccionario en el que las especies (recordá, es la columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
