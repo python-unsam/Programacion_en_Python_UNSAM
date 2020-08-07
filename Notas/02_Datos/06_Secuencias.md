@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 El módulo collections)](07_Contadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Contadores del módulo _collections_)](07_Contadores.md)
 
 # 2.6 Secuencias
 
@@ -505,5 +505,5 @@ También, tené en cuenta que `zip()` se detiene cuando la más corta de las ent
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 El módulo collections)](07_Contadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Contadores del módulo _collections_)](07_Contadores.md)
 

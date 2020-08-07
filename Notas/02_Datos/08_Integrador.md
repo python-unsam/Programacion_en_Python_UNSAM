@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 El módulo collections)](07_Contadores.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Contadores del módulo _collections_)](07_Contadores.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
 # 2.8 Integración
 
@@ -23,7 +23,7 @@ Escribí una función `especies(lista)` que tome una lista de árboles como la g
 _Ṣegurencia: Usá el comando `set` como en la \ref{secc_conjuntos})._
 
 ### Ejercicio 2.30: Contar ejemplares por especie
-Usando contadores como en el Ejercicio ?, escribí una función `contar_ejemplares(lista_arboles,especie)` que dada una lista como la que generada con `leer_parque()` devuelva un diccionario en el que las especies (columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
+Usando contadores como en el [Ejercicio 2.27](../02_Datos/07_Contadores.md#ejercicio-227-contadores), escribí una función `contar_ejemplares(lista_arboles,especie)` que dada una lista como la que generada con `leer_parque()` devuelva un diccionario en el que las especies (columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
 
 Luego, combiná estas dos funciones con el método `most_common()` para informar las cinco especies más frecuentes en cada uno de los siguientes parques:
 
@@ -56,5 +56,5 @@ Correlo para loa tres parques mencionados anteriormente.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 El módulo collections)](07_Contadores.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Contadores del módulo _collections_)](07_Contadores.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 

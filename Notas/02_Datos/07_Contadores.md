@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Integración)](08_Integrador.md)
 
-# 2.7 El módulo collections
+# 2.7 Contadores del módulo _collections_
 
 El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección introducimos brevemente los contadores, que son solo una de las clases incluída en este módulo.
 

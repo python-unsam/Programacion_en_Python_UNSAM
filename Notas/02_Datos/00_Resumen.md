@@ -11,7 +11,7 @@ Discutimos el problema de la búsqueda de un elemento en un vector e introducimo
 * [2.4 Contenedores](04_Contenedores.md)
 * [2.5 Impresión con formato](05_Formato.md)
 * [2.6 Secuencias](06_Secuencias.md)
-* [2.7 El módulo collections](07_Contadores.md)
+* [2.7 Contadores del módulo _collections_](07_Contadores.md)
 * [2.8 Integración](08_Integrador.md)
 * [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
