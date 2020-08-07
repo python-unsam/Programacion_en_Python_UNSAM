@@ -9,10 +9,10 @@ Discutimos el problema de la búsqueda de un elemento en un vector e introducimo
 * [2.2 Funciones](02_Funciones.md)
 * [2.3 Tipos y estructuras de datos](03_TiposDatos.md)
 * [2.4 Contenedores](04_Contenedores.md)
-* [2.5 Impresión con formato](05_Formato.md)
-* [2.6 Secuencias](06_Secuencias.md)
-* [2.7 Contadores del módulo _collections_](07_Contadores.md)
-* [2.8 Arbolado porteño (integrador)](08_Integrador.md)
+* [2.5 Secuencias](05_Secuencias.md)
+* [2.6 Contadores del módulo _collections_](06_Contadores.md)
+* [2.7 Arbolado porteño (integrador)](07_Integrador.md)
+* [2.8 Impresión con formato](08_Formato.md)
 * [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
 

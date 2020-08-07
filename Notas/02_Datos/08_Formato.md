@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_Contenedores.md) \| [Próximo (6 Secuencias)](06_Secuencias.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Arbolado porteño (integrador))](07_Integrador.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
-# 2.5 Impresión con formato
+# 2.8 Impresión con formato
 
 Esta sección es una pequeña digresión. Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
 
@@ -107,7 +107,7 @@ Esto requiere un solo ítem, o una tupla a la derecha. Los códigos están tambi
 
 ## Ejercicios
 
-### Ejercicio 2.16: Formato de números
+### Ejercicio 2.28: Formato de números
 Un problema usual cuando queremos imprimir números es especificar el número de dígitos decimales. Los f-strings nos permiten hacerlo. Probá los siguientes ejemplos:
 
 ```python
@@ -147,7 +147,7 @@ A pesar de que suelen usarse dentro de un `print`, el formato de cadenas no est�
 >>>
 ```
 
-### Ejercicio 2.17: Recolectar datos
+### Ejercicio 2.29: Recolectar datos
 En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. En este ejercicio, vas a comenzar a modificarlo para producir una tabla como ésta:
 
 ```
@@ -187,7 +187,7 @@ Agregá esta función a tu archivo `informe.py`. Debería funcionar como se mues
 >>>
 ```
 
-### Ejercicio 2.18: Imprimir una tabla con formato
+### Ejercicio 2.30: Imprimir una tabla con formato
 Volvé a hacer el ciclo `for` del ejercicio anterior pero cambiando la forma de imprimir como sigue:
 
 ```python
@@ -224,7 +224,7 @@ O directamente usando  f-strings. Por ejemplo:
 
 Agregá estos últimos comandos a tu programa `informe.py`. Hacé que el programa tome la salida de la función `hacer_informe()` e imprima una tabla bien formateada.
 
-### Ejercicio 2.19: Agregar encabezados
+### Ejercicio 2.31: Agregar encabezados
 Suponete que tenés una tupla con nombres de encabezado como ésta:
 
 ```python
@@ -257,7 +257,7 @@ Cuando esté listo, tu programa debería producir una tabla como esta:
    Naranja        100      70.44      35.84
 ```
 
-### Ejercicio 2.20: Un desafío de formato
+### Ejercicio 2.32: Un desafío de formato
 Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 
 ```
@@ -274,7 +274,7 @@ Por último, modificá tu código para que el precio mostrado incluya un símbol
 
 Guardá estos cambios en el archivo `informe.py` que más adelante los vas a necesitar.
 
-### Ejercicio 2.21: Tablas de multiplicar
+### Ejercicio 2.33: Tablas de multiplicar
 Escribí un programa `tablamult.py` que imprima de forma prolija las tablas de
 multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicación, usando sólo sumas alcanza.
 
@@ -294,5 +294,5 @@ multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicaci�
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_Contenedores.md) \| [Próximo (6 Secuencias)](06_Secuencias.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Arbolado porteño (integrador))](07_Integrador.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
