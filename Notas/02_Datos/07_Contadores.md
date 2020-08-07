@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Integración - Arbolado porteño)](08_Integrador.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Arbolado porteño (integrador))](08_Integrador.md)
 
 # 2.7 Contadores del módulo _collections_
 
@@ -114,5 +114,5 @@ Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El m�
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Integración - Arbolado porteño)](08_Integrador.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Secuencias)](06_Secuencias.md) \| [Próximo (8 Arbolado porteño (integrador))](08_Integrador.md)
 

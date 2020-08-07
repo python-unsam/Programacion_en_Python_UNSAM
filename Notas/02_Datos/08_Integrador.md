@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (7 Contadores del módulo _collections_)](07_Contadores.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
-# 2.8 Integración - Arbolado porteño
+# 2.8 Arbolado porteño (integrador)
 
 En esta sección haremos algunos ejercicios integradores manejando archivos, diccionarios, listas, contadores y el comando `zip`, entre otras cosas. Entregá lo que puedas hacer. No es obligatorio hacerlo completo...
 
