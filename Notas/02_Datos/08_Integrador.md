@@ -8,6 +8,8 @@ En esta sección haremos algunos ejercicios integradores manejando archivos, dic
 
 Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una base de datos sobre árboles en parques de la Ciudad de Buenos Aires. Para empezar, descargá el archivo csv de [Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes) de la Ciudad a tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejericios de esta sección en un archivo `arboles.py`.
 
+![Arbolado porteño](arboles.jpg)
+
 ### Ejercicio 2.28: Lectura de los árboles de un parque
 Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo incidicado y devuelva una **lista de diccionarios** con la información sobre los árboles del parque especificado. La función debe devolver una lista que, por cada árbol (cada fila) del archivo, contenga un diccionario con toda la información sobre el árbol. 
 
