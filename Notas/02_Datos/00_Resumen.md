@@ -11,8 +11,9 @@ Discutimos el problema de la búsqueda de un elemento en un vector e introducimo
 * [2.4 Contenedores](04_Contenedores.md)
 * [2.5 Impresión con formato](05_Formato.md)
 * [2.6 Secuencias](06_Secuencias.md)
-* [2.7 Integración](07_Integrador.md)
-* [2.8 Cierre de la segunda clase](08_CierreClase.md)
+* [2.7 El módulo collections](07_Contadores.md)
+* [2.8 Integración](08_Integrador.md)
+* [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md)
