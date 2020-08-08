@@ -241,21 +241,6 @@ Guardá la función en el archivo `invlista.py` y probala con las siguientes lis
 `[1,2,3,4,5]`
 `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
-[comment]: <> (Ejercicio: Invertir una lista *in place*)
-[comment]: <> (En el ejercicio anterior creaste una nueva lista conteniendo)
-[comment]: <> (los elementos de una lista dada en orden inverso. En este)
-[comment]: <> ( ejercicio te pedimos que inviertas los elementos de una )
-[comment]: <> (lista pero sin crear una nueva lista ni listas auxiliares. )
-[comment]: <> (Es decir, te pedimos que escribas una función)
-[comment]: <> (`invertir_lista_inplace(lista)` que, dada una lista, )
-[comment]: <> (invierta la misma lista *en el lugar* (en inglés, *in place*),)
-[comment]: <> (sin usar listas nuevas.)
-[comment]: <> (Probá tu función con las siguientes lista:)
-[comment]: <> (`lista_probando_1 = [1,2,3,4,5]`)
-[comment]: <> (`lista_probando_2 = ['Bogotá', 'Rosario', 'Santiago', )
-[comment]: <> ('San Fernando', 'San Miguel']`)
-
-
 ### Ejercicio 3.5: Propagación
 Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).
 Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 0 (nuevo), un 1 (encendido) o un -1 (carbonizado). 

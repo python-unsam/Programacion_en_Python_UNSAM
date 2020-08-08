@@ -14,7 +14,7 @@ Python tiene pocos tipos primitivos de datos.
 
 Algo ya sabemos sobre estos tipos de datos por el capítulo anterior.
 
-### Tipo None 
+### Tipo None
 
 ```python
 email_address = None
@@ -35,7 +35,7 @@ Los programas reales tienen datos más complejos que los que podemos almacenar e
 100 cajones de Manzanas a $490.10 cada uno
 ```
 
-Este es un "objeto" con tres partes:
+Podemos ver esto como un "objeto" con tres partes:
 
 * Nombre del símbolo ("Manzanas", una cadena)
 * Número o cantidad (100, un entero)
@@ -51,23 +51,10 @@ Ejemplo:
 s = ('Manzanas', 100, 490.1)
 ```
 
-A veces, los paréntesis `()` son omitidos en la sintaxis.
-
-```python
-s = 'Manzanas', 100, 490.1
-```
-
-Salvo para las tuplas de longitud cero y uno, que son casos especiales y tienen una notación particular.
-
-```python
-t = ()            # Tupla vacía
-w = ('Pera', )    # Tupla de un elemento
-```
-
 Las tuplas suelen usarse para representar registros o estructuras *simples*.
 Típicamente, una tupla representa un solo *objeto* con múltiples partes. Una analogía posible es la siguiente: *Una tupla es como una fila de una base de datos*.
 
-Los contenidos de una tupla están ordenados (como en un vector).
+Los contenidos de una tupla están ordenados (como en una lista).
 
 ```python
 s = ('Manzana', 100, 490.1)
@@ -89,7 +76,7 @@ Podés, sin embargo, hacer una nueva tupla basada en el contenido de otra, que n
 s = (s[0], 75, s[2])
 ```
 
-### Empaquetar tuplas
+#### Empaquetar tuplas
 
 Las tuplas suelen usarse para empaquetar información relacionada en una sola *entidad*.
 
@@ -99,7 +86,7 @@ s = ('Manzanas', 100, 490.1)
 
 Una tupla puede ser pasada de un lugar a otro de un programa como un solo objeto.
 
-### Desempaquetar tuplas
+#### Desempaquetar tuplas
 
 Para usar una tupla en otro lado, debemos desempaquetar su contenido en diferentes variables.
 
@@ -129,7 +116,7 @@ symbols = [ 'Manzanas', 'Peras', 'Mandarinas' ]  # Una lista representando tres 
 
 ### Diccionarios
 
-Un diccionario es una función que manda *claves* en *valores*. A veces se los denomina tabla de hash. Las claves sirven como índices para acceder a los valores.
+Un diccionario es una función que manda *claves* en *valores*. Las claves sirven como índices para acceder a los valores.
 
 ```python
 s = {
@@ -139,7 +126,7 @@ s = {
 }
 ```
 
-### Operaciones usuales
+#### Operaciones usuales
 
 Para obtener el valor almacenado en un diccionario usamos las claves.
 
@@ -166,20 +153,20 @@ para borrar un valor, usamos el comando `del`.
 >>>
 ```
 
-### ¿Por qué diccionarios?
+#### ¿Por qué diccionarios?
 
-Lo diccionarios son útiles cuando hay *muchos* valores diferentes y esos valores pueden ser modificados o manipulados. Los diccionarios muchas veces cumplen una tarea fundamental: hacen que el código sea más legible.
+Los diccionarios son útiles cuando hay *muchos* valores diferentes y esos valores pueden ser modificados o manipulados. Dado que el acceso a los elementos se hace por *clave*, no es necesario recordar una posición para cierto dato, lo que muchas veces cumple un objetivo fundamental: hacer que el código sea más legible (y con esto menos propenso a errores).
 
 ```python
-s['precio']
+s['precio'] # diccionario
 # vs
-s[2]
+s[2] # lista
 ```
 
 ## Ejercicios
 
-En los últimos ejercicios, escribiste un programa que leía el archivo
-`Data/camion.csv`. Usando el módulo `csv`, es fácil leer el archivo fila por fila.
+Anteriormente escribiste un programa que leía el archivo
+`Data/camion.csv` usando el módulo `csv` para leer el archivo fila por fila.
 
 ```python
 >>> import csv
@@ -193,18 +180,7 @@ En los últimos ejercicios, escribiste un programa que leía el archivo
 >>>
 ```
 
-A veces, además de leerlo, queremos hacer otras cosas con el archivo CSV, como por ejemplo usar la info que contiene para hacer un cálculo. Lamentablemente una fila de datos en crudo no es suficiente para operar artiméticamente. 
-
-```python
->>> fila = ['Lima', '100', '32.20']
->>> cost = fila[1] * fila[2]
-Traceback (most recent call last):
-    File "<stdin>", line 1, in <module>
-TypeError: can't multiply sequence by non-int of type 'str'
->>>
-```
-
-Para poder hacer más cosas con estos datos, vamos a querer interpretar los elementos de la fila de datos de alguna manera particular, convirtiéndolos a otro tipo de datos que resulte más adecuado para trabajar. Es frecuente además de convertir los elementos de las filas, transformar las filas enteras en tuplas o diccionarios.
+A veces, además de leerlo, queremos hacer otras cosas con el archivo CSV, como por ejemplo usar los datos que contiene para hacer un cálculo. Lamentablemente una fila de datos en crudo no es suficiente para operar aritméticamente. Vamos a querer interpretar los elementos de la fila de datos de alguna manera particular, convirtiéndolos a otro tipo de datos que resulte más adecuado para trabajar. Es frecuente además de convertir los elementos de las filas, transformar las filas enteras en tuplas o diccionarios.
 
 ### Ejercicio 2.9: Tuplas
 En el intérprete interactivo, creá la siguiente tupla que representa la fila de antes, pero con las columnas numéricas pasadas a formatos adecuados:
@@ -227,7 +203,7 @@ A partir de esta tupla, ahora podés calcular el costo total multiplicando cajon
 
 ¿Qué pasó? ¿Qué hace ese 5 al final?
 
-Este error no es un problema de Python, sino de la forma en la que la máquina representa los números de punto flotante. Así como en base 10 no podemos escribir un tercio de manera exacta, en base 2 escribir un quinto requiere infinitos dígitos. Al usar una representación finita (una cantidad acotada de dígitos) la máquina redondea los números. La aritmética de punto flotante no es exacta. 
+Este error no es un problema de Python, sino de la forma en la que la máquina representa los números de punto flotante. Así como en base 10 no podemos escribir un tercio de manera exacta, en base 2 escribir un quinto requiere infinitos dígitos. Al usar una representación finita (una cantidad acotada de dígitos) la máquina redondea los números. La aritmética de punto flotante no es exacta.
 
 Esto pasa en todos los lenguajes de programación que usan punto flotante, pero en muchos casos estos pequeños errores quedan ocultos al imprimir. Por ejemplo:
 
@@ -258,7 +234,7 @@ Aunque no podés cambiar al tupla, sí podés reemplazar la tupla por una nueva.
 
 Siempre que reasignes una variable como recién lo hiciste con `t`, el valor anterior de la variable se pierde. Aunque la asignación de arriba pueda parecer como que estás modificando la tupla, en realidad estás creando una nueva tupla y tirando la vieja.
 
-Las tuplas muchas veces se usan para empaquetar y despempaquetar valores dentro de variables. Probá esto:
+Las tuplas muchas veces se usan para empaquetar y desempaquetar valores dentro de variables. Probá esto:
 
 ```python
 >>> nombre, cajones, precio = t
@@ -315,23 +291,15 @@ Compará este ejemplo con el mismo cálculo hecho con tuplas más arriba. Cambi�
 A diferencia de las tuplas, los diccionarios se pueden modificar libremente. Agregá algunos atributos:
 
 ```python
->>> d['fecha'] = (6, 11, 2007)
+>>> d['fecha'] = (14, 8, 2020)
 >>> d['cuenta'] = 12345
 >>> d
-{'nombre': 'Lima', 'cajones': 75, 'precio':32.2, 'fecha': (6, 11, 2007), 'cuenta': 12345}
+{'nombre': 'Lima', 'cajones': 75, 'precio':32.2, 'fecha': (14, 8, 2020), 'cuenta': 12345}
 >>>
 ```
 
 ### Ejercicio 2.11: Más operaciones con diccionarios
-Si pasás un diccionario a una lista, obtenés sus claves.
-
-```python
->>> list(d)
-['nombre', 'cajones', 'precio', 'fecha', 'cuenta']
->>>
-```
-
-Análogamente, si usás el comando `for` para iterar sobre el diccionario, obtenes las claves:
+Si usás el comando `for` para iterar sobre el diccionario, obtenés las claves:
 
 ```python
 >>> for k in d:
@@ -354,8 +322,32 @@ Probá esta variante:
 nombre = 'Lima'
 cajones = 75
 precio = 32.2
-fecha = (6, 11, 2007)
+fecha = (14, 8, 2020)
 cuenta = 12345
+>>>
+```
+
+Una manera más elegante de trabajar con claves y valores simultáneamente es usar el método `items()`. Esto te devuelve una lista de tuplas de la forma `(clave,valor)` sobre la que podés iterar.
+
+```python
+>>> items = d.items()
+>>> items
+dict_items([('nombre', 'Lima'), ('cajones', 75), ('precio', 32.2), ('fecha', (14, 8, 2020))])
+>>> for k, v in d.items():
+        print(k, '=', v)
+
+nombre = Lima
+cajones = 75
+precio = 32.2
+fecha = (14, 8, 2020)
+>>>
+```
+
+Si pasás un diccionario a una lista, obtenés sus claves.
+
+```python
+>>> list(d)
+['nombre', 'cajones', 'precio', 'fecha', 'cuenta']
 >>>
 ```
 
@@ -368,44 +360,15 @@ dict_keys(['nombre', 'cajones', 'precio', 'fecha', 'cuenta'])
 >>>
 ```
 
-Es poco usual utilizar `keys()`, porque devuelve un objeto especial de tipo `dict_keys`.
-
-Esta asignación va a implicar que `claves` guardará las claves del diccionario `d` aunque éste cambie. Por ejemplo, probá esto:
-
-```python
->>> del d['cuenta']
->>> claves
-dict_keys(['nombre', 'cajones', 'precio', 'fecha'])
->>>
-```
-
-Fijate que `cuenta` desapareció de `claves` aunque no volviste a llamar al comando `d.keys()`.
-
-Una manera más elegante de trabajar con claves y valores simultáneamente es usar el método `items()`. Esto te devuelve una lista de tuplas de la forma `(clave,valor)` sobre la que podés iterar.
-
-```python
->>> items = d.items()
->>> items
-dict_items([('nombre', 'Lima'), ('cajones', 75), ('precio', 32.2), ('fecha', (6, 11, 2007))])
->>> for k, v in d.items():
-        print(k, '=', v)
-
-nombre = Lima
-cajones = 75
-precio = 32.2
-fecha = (6, 11, 2007)
->>>
-```
-
 Si tenés tuplas como en `items` podés crear un diccionario usando la función `dict()`. Probá esto:
 
 ```python
->>> items
-dict_items([('nombre', 'Lima'), ('cajones', 75), ('precio', 32.2), ('fecha', (6, 11, 2007))])
->>> d = dict(items)
+>>> nuevos_items = [('nombre', 'Manzanas'), ('cajones', 100), ('precio', 490.1), ('fecha', (13, 8, 2020))]
+>>> nuevos_items
+[('nombre', 'Manzanas'), ('cajones', 100), ('precio', 490.1), ('fecha', (13, 8, 2020))]
+>>> d = dict(nuevos_items)
 >>> d
-{'nombre': 'Lima', 'cajones': 75, 'precio':32.2, 'fecha': (6, 11, 2007)}
->>>
+{'nombre': 'Manzanas', 'cajones': 100, 'precio': 490.1, 'fecha': (13, 8, 2020)}
 ```
 
 

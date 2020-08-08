@@ -158,7 +158,7 @@ TypeError: 'str' object does not support item assignment
 
 ### Conversión de cadenas
 
-Usá `str()` para convertir cualquier valor a cadena. El resultado es una cadena con el mismo contenido que hubiera producido el comando `print()` sobre la expresión entre paréntesis.
+Usá `str()` para convertir cualquier valor a cadena. El resultado es una cadena con el mismo contenido que hubiera mostrado el comando `print()` sobre la expresión entre paréntesis.
 
 ```python
 >>> x = 42

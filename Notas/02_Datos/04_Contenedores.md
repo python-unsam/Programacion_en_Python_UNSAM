@@ -15,7 +15,7 @@ En Python hay tres opciones principales para elegir.
 
 * Listas. Datos ordenados.
 * Diccionarios. Datos desordenados.
-* Conjuntos. Colección desordenada de elemenos únicos.
+* Conjuntos. Colección desordenada de elementos únicos.
 
 ### Listas como contenedores
 
@@ -33,7 +33,7 @@ camion[0]            # ('Pera', 100, 490.1)
 camion[2]            # ('Limon', 150, 83.44)
 ```
 
-### Construcción de una lista
+#### Construcción de una lista
 
 Cómo armar una lista desde cero.
 
@@ -119,24 +119,6 @@ else:
     # NO
 ```
 
-Podés buscar un valor que quizás no figure en el diccionario, y dar un valor predeterminado para estos casos.
-
-```python
-nombre = d.get(key, default)
-```
-
-Un ejemplo:
-
-```python
->>> precios.get('Naranja', 0.0)
-93.37
->>> precios.get('Guayaba', 0.0)
-0.0
->>>
-```
-
-De esta manera (dando un valor por defecto) evitás el `KeyError` que obtendrías al buscar una clave inexistente.
-
 ### Claves compuestas
 
 Casi cualquier valor puede usarse como clave en un diccionario de Python. La principal restricción es que una clave debe ser de tipo inmutable.
@@ -145,15 +127,15 @@ Por ejemplo, tuplas:
 ```python
 feriados = {
   (1, 1) : 'Año nuevo',
-  (5, 1) : 'Día del trabajador',
-  (9, 13) : "Día del programador",
+  (1, 5) : 'Día del trabajador',
+  (13, 9) : "Día del programador",
 }
 ```
 
 Luego, podemos acceder al diccionario así:
 
 ```python
->>> feriados[5, 1]
+>>> feriados[(1, 5)]
 'Día del trabajador'
 >>>
 ```
@@ -162,12 +144,12 @@ Luego, podemos acceder al diccionario así:
 
 ### Conjuntos
 
-Un conjunto es una colección desordenada de elementos únicos, sin repetición.
+Un conjunto es una colección de elementos únicos sin orden y sin repetición.
 
 
 ```python
 citricos = { 'Naranja','Limon','Mandarina' }
-# Alternativamente podemos escribirlo así
+# Alternativamente podemos escribirlo así:
 citricos = set(['Naranja', 'Limon', 'Mandarina'])
 ```
 
@@ -188,17 +170,17 @@ Los conjuntos también son útiles para eliminar duplicados.
 ```python
 nombres = ['Naranja', 'Manzana', 'Pera', 'Naranja', 'Pera', 'Banana']
 
-unique = set(nombres)
-# unique = set(['Naranja', 'Manzana','Pera','Banana'])
+unicos = set(nombres)
+# unicos = set(['Naranja', 'Manzana', 'Pera', 'Naranja', 'Pera', 'Banana'])
 ```
 
 Más operaciones en conjuntos:
 
 ```python
-nombres.add('Limon')        # Agregar un elemento
-nombres.remove('Banana')    # Eliminar un elemento
+citricos.add('Banana')        # Agregar un elemento
+citricos.remove('Limon')    # Eliminar un elemento
 
-s1 | s2                 # Unión de conjuntos
+s1 | s2                 # Unión de conjuntos s1 y s2
 s1 & s2                 # Intersección de conjuntos
 s1 - s2                 # Diferencia de conjuntos
 ```
@@ -271,7 +253,7 @@ Experimentá con tu función interactivamente (acordate de que primero tenés qu
         total += s[1] * s[2]
 
 >>> print(total)
-44671.15
+47671.15
 >>>
 ```
 
@@ -292,7 +274,7 @@ También podés reescribir el último ciclo for usando un comando como éste:
 *Observación: la instrucción `+=` es una abreviación. Poner `a += b` es equivalente a poner `a = a + b`*
 
 ### Ejercicio 2.13: Lista de diccionarios
-Tomá la función que escribiste en el ejercicio anterior y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del achivo de entrada.
+Tomá la función que escribiste en el ejercicio anterior y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del archivo de entrada.
 
 Experimentá con esta función nueva igual que en el ejercicio anterior.
 
@@ -315,9 +297,9 @@ Experimentá con esta función nueva igual que en el ejercicio anterior.
 >>>
 ```
 
-Fijate que acá los distintos campos para cada entrada se acceden a través de claves en vez de números de fila y columna. Muchas veces preferimos esto porque el código resulta más fácil de leer. Tanto para otres como para nosotres en el futuro.
+Fijate que acá los distintos campos para cada entrada se acceden a través de claves en vez de la posición en la lista. Muchas veces preferimos esto porque el código resulta más fácil de leer. Tanto para otres como para nosotres en el futuro.
 
-Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el output para debuguear, probá la función `pprint` que le da un formato más sencillo de interpretar.
+Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el output para debuguear, probá la función `pprint` (Pretty-print) que le da un formato más sencillo de interpretar.
 
 ```python
 >>> from pprint import pprint
@@ -336,7 +318,7 @@ Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el outpu
 Los diccionarios son útiles si querés buscar elementos usando índices que no sean números enteros. En la terminal de Python, jugá con un diccionario:
 
 ```python
->>> precios = { }
+>>> precios = {}
 >>> precios['Naranja'] = 92.45
 >>> precios['Mandarina'] = 45.12
 >>> precios
@@ -405,7 +387,7 @@ Una vez que hayas escrito tu función `leer_precios()`, testeala interactivament
 ### Ejercicio 2.15: Balances
 Supongamos que los precios en `camion.csv` son los precios pagados al productor de frutas mientras que los precios en `precios.csv` son los precios de venta en el lugar de descarga del camión.
 
-Ahora vamos calcular ganancias y pérdidas: Juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y agregá algunos comandos adicionales donde haga falta de forma que el programa tome la lista de cajones del [Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios) y el diccionario de precios del [Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) y calcule el valor actual de la carga del camión y la ganancia o pérdida correspondiente. Para ser más específicos: tu programa tiene que imprimir un balance indicando el total pagado al productor, el valor en el mercado de la carga que trajo el camión, así como un balance indicando ganancias o pérdidas.
+Ahora vamos calcular el balance del negocio: juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y completa el programa para que con los precios del camión ([Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios)) y los de venta en el negocio ([Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores)) calcule lo que costó el camión, lo que se recaudo con la venta, y la diferencia. ¿Hubo ganancia o pérdida? El programa debe imprimir por pantalla un balance con estos datos.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Secuencias)](05_Secuencias.md)

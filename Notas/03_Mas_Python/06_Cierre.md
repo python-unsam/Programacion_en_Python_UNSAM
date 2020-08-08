@@ -10,7 +10,7 @@ En esta tercera clase vimos algo más sobre errores, el manejo de lista y la cre
  5. El archivo `propaga.py` del [Ejercicio 3.5](../03_Mas_Python/03_IteradoresLista.md#ejercicio-35-propagación).
  6. El archivo `comprension.py` del [Ejercicio 3.6](../03_Mas_Python/04_List_comprehension.md#ejercicio-36-comprensión-de-listas) y siguientes.
 
-* Que completes [este formulario](https://docs.google.com/forms/d/LINK) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/1I3B43uVprrHh7ZOFk3d5tO29GOW_lsRM1AMXS2CbNSY) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! Nos vemos en la próxima clase.
 

@@ -2,7 +2,7 @@
 
 # 2.6 Contadores del módulo _collections_
 
-El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección introducimos brevemente los contadores, que son solo una de las clases incluídas en este módulo.
+El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección introducimos brevemente los contadores, que son solo una de las clases incluidas en este módulo.
 
 ### Ejemplo: Contar cosas
 
@@ -36,7 +36,7 @@ total_cajones['Naranja']     # 150
 
 ## Ejercicios
 
-En este ejercicio vas a probar contadores en un par de ejemplos simples. Cargá tu programa `informe.py` y ejecutalo en el intperprete de forma de tener los datos del camión con cajones cargado en modo interactivo.
+En este ejercicio vas a probar contadores en un par de ejemplos simples. Cargá tu programa `informe.py` y ejecutalo en el interprete de forma de tener los datos del camión con cajones cargado en modo interactivo.
 
 Podés usar el interprete desde la línea de comandos ejecutando:
 ```bash
@@ -107,7 +107,7 @@ Counter({'Caqui': 150, 'Durazno': 220, 'Frambuesa': 250, 'Lima': 150, 'Mandarina
 >>>
 ```
 
-Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El módulo  `collections` es muy poderoso pero meterse a ver sus detalles sería una distracición ahora. Sigamos con nuestro curso...
+Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El módulo  `collections` es muy poderoso pero meterse a ver sus detalles sería una distracción ahora. Sigamos con nuestro curso...
 
 
 

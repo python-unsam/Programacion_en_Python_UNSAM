@@ -176,14 +176,17 @@ La sintaxis es `range([comienzo,] fin [,paso])` (lo que figura entre corchetes e
 ```python
 for i in range(100):
     # i = 0,1,...,99
+    ...codigo
 for j in range(10,20):
     # j = 10,11,..., 19
+    ...codigo
 for k in range(10,50,2):
     # k = 10,12,...,48
     # Observá que va de a dos.
+    ...codigo
 ```
 
-* El valor final nunca es incluído. Es como con las rebanadas.
+* El valor final nunca es incluido. Es como con las rebanadas.
 * `comienzo` es opcional. Por defecto es `0`.
 * `paso` es opcional. Por defecto es `1`.
 * `range()` calcula los valores a medida que los necesita. No guarda realmente en memoria el rango completo de números.
@@ -315,7 +318,7 @@ Probá iterar sobre los datos.
 >>>
 ```
 
-A veces los comandos `for`, `len()`, y `range()` son usados por principiantes de una forma bastante fea que parece salida de las profundidades de un programa de C oxidado.
+A veces los comandos for, len(), y range() son combinados para recorrer listas:
 
 ```python
 >>> for n in range(len(data)):
@@ -328,7 +331,7 @@ A veces los comandos `for`, `len()`, y `range()` son usados por principiantes de
 >>>
 ```
 
-Por favor, no lo hagas. No sólo la lectura nos hace doler los ojos, además es ineficiente en el uso de memoria y corre más lento. Simplemente usa un ciclo `for` normal si querés iterar sobre los elementos de la variable data.  Y usá `enumerate()` si necesitás tener el índice por algún motivo.
+Sin embargo, Python tiene mejores alternativas para esto. Te recomendamos familiarizarte con ellas y usarlas: por su simpleza producen código más legible y reducen la posibilidad de un bug en el código. Simplemente usa un ciclo `for` normal si querés iterar sobre los elementos de la variable `data`.  Y usá `enumerate()` si necesitás tener el índice por algún motivo.
 
 ### Ejercicio 2.18: Un ejemplo práctico de enumerate()
 Recordá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,

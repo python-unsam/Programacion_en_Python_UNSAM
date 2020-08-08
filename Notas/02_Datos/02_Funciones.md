@@ -64,7 +64,7 @@ Para poder entender qué pasó (debuguear), el mensaje describe cuál fue el pro
 ### Atrapar y administrar excepciones
 
 Las excepciones pueden ser atrapadas y administradas.
-Para atrapar una excepeción, se usan los comandos `try - except`.
+Para atrapar una excepción, se usan los comandos `try - except`.
 
 ```python
 numero_valido=False
@@ -100,13 +100,13 @@ Suele ser difícil saber exactamente qué tipo de errores pueden ocurrir por ade
 
 ### Generar excepciones
 
-Para generar una expceción (también diremos *levantar* una excepción, porque más cercano al término inglés "raise"), se usa el comando `raise`.
+Para generar una excepción (también diremos *levantar* una excepción, porque más cercano al término inglés "raise"), se usa el comando `raise`. Por ejemplo, si tenemos el siguiente código en el archivo `foo.py`:
 
 ```python
 raise RuntimeError('¡Qué moco!')
 ```
 
-Esto va a generar que la ejecución se detenga y permite rastrear la excepción leyendo el mensaje de error que imprime. 
+Al correrlo va a detener la ejecución y permite rastrear la excepción leyendo el mensaje de error que imprime.
 
 ```bash
 bash $ python3 foo.py
@@ -116,7 +116,7 @@ Traceback (most recent call last):
 RuntimeError: ¡Qué moco!
 ```
 
-Alternativamente, esa excepción puede ser atrapada por un bloque `try-except`. 
+Alternativamente, esa excepción puede ser atrapada por un bloque `try-except`, pudiendo de esta forma evitar que el programa termine.
 
 ## Ejercicios
 
@@ -126,16 +126,16 @@ Probá primero definir una función simple:
 ```python
 >>> def saludar(nombre):
         'Saluda a alguien'
-        print('Hello', nombre)
+        print('Hola', nombre)
 
 >>> saludar('Guido')
-Hello Guido
+Hola Guido
 >>> saludar('Paula')
-Hello Paula
+Hola Paula
 >>>
 ```
 
-Si la primera instrucción de una función es una cadena, sirve como documentación de la función. Porbalo escribiendo `help(saludar)` para ver cómo la muestra.
+Si la primera instrucción de una función es una cadena, sirve como documentación de la función. Probalo escribiendo `help(saludar)` para ver cómo la muestra.
 
 ### Ejercicio 2.5: Transformar un script en una función
 Transformá el programa `costo_camion.py`  (que escribiste en el [Ejercicio 2.2](../02_Datos/01_Archivos.md#ejercicio-22-lectura-de-un-archivo-de-datos) de la sección anterior) en una función `costo_camion(nombre_archivo)`.  Esta función recibe un nombre de archivo como entrada, lee la información sobre los cajones que cargó el camión y devuelve el costo de la carga de frutas como una variable de punto flotante.
@@ -152,7 +152,7 @@ costo = costo_camion('Data/camion.csv')
 print('Costo total:', costo)
 ```
 
-Cuando ejecutás tu programa, deberías ver la misma salida impresa que antes. Una vez que lo hayas corrido, podés llamar interactivamente a la función esciribiendo esto:
+Cuando ejecutás tu programa, deberías ver la misma salida impresa que antes. Una vez que lo hayas corrido, podés llamar interactivamente a la función escribiendo esto:
 
 ```bash
 bash $ python3 -i costo_camion.py
@@ -239,7 +239,7 @@ Modificá tu programa `costo_camion.py` para que use el módulo `csv` para leer 
 
 ### Ejercicio 2.8: Ejecución desde la línea de comandos con parámetros
 
-En el programa `costo_camion.py`, el nombre del archivo de entrada `'Data/camion.csv'` fue escrito en el código. 
+En el programa `costo_camion.py`, el nombre del archivo de entrada `'Data/camion.csv'` fue escrito en el código.
 
 ```python
 # costo_camion.py
@@ -254,12 +254,12 @@ cost = costo_camion('Data/camion.csv')
 print('Total cost:', cost)
 ```
 
-Esto está bien para ejercitar, pero en un programa real probablemente no harías eso ya que querrías una mayor flexibilidad. Una posiblidad es pasarle al programa el nombre del archivo que querés procesar como un parámentro cuando lo llamás desde la línea de comandos. 
+Esto está bien para ejercitar, pero en un programa real probablemente no harías eso ya que querrías una mayor flexibilidad. Una posibilidad es pasarle al programa el nombre del archivo que querés procesar como un parámetro cuando lo llamás desde la línea de comandos.
 
-Copía el contenido de `costo_camion.py` a un nuevo archivo llamado `costo_camion_commandline.py` que incorpore la lectura de parámetros por línea de comando según la sugerencia del siguiente ejemplo:
+Copiá el contenido de `costo_camion.py` a un nuevo archivo llamado `camion_commandline.py` que incorpore la lectura de parámetros por línea de comando según la sugerencia del siguiente ejemplo:
 
 ```python
-# costo_camion_commandline.py
+# camion_commandline.py
 import csv
 import sys
 
@@ -280,12 +280,21 @@ print('Costo total:', costo)
 `sys.argv` es una lista que contiene los argumentos que le pasamos al script al momento de llamarlo desde la línea de comandos (si es que le pasamos alguno). Por ejemplo, desde una terminal de Unix (en Windows es similar), para correr nuestro programa y que procese el mismo archivo podríamos escribir:
 
 ```bash
-bash $ python3 costo_camion_commandline.py Data/camion.csv
+bash $ python3 camion_commandline.py Data/camion.csv
 Costo total: 47671.15
 bash $
 ```
 
-Guardá el archivo `costo_camion_commandline.py` para entregar al final de la clase.
+O con el archivo `missing.csv`:
+```bash
+bash $ python3 camion_commandline.py Data/missing.csv
+...
+Costo total: 30381.15
+bash $
+```
+Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` porque lo indicamos con la línea `nombre_archivo = 'Data/camion.csv'`.
+
+Guardá el archivo `camion_commandline.py` para entregar al final de la clase.
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_Archivos.md) \| [Próximo (3 Tipos y estructuras de datos)](03_TiposDatos.md)
 

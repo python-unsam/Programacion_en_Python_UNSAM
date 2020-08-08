@@ -6,7 +6,7 @@ La mayoría de los programas usa alguna fuente de datos. En esta sección discut
 
 ### Archivos de entrada y salida
 
-Con estos comandos podés abrir dos archivios, una para lectura y otro para escritura:
+Con estos comandos podés abrir dos archivos, una para lectura y otro para escritura:
 
 ```python
 f = open('foo.txt', 'rt')     # Abrir para lectura ('r'' de read, 't' de text)
@@ -40,9 +40,9 @@ Es importante cerrar adecuadamente los archivos y es bastante fácil olvidarse (
 ```python
 with open(nombre_archivo, 'rt') as file:
     # Usá el archivo `file`
-    ...
+    ...comandos que usan el archivo
     # No hace falta cerrarlo explícitamente
-...comandos
+...comandos que no usan el archivo
 ```
 
 Esto cierra automáticamente el archivo cuando se termina de ejecutar el bloque indentado.
@@ -115,7 +115,7 @@ nombre,cajones,precio
 >>>
 ```
 
-En el ejemplo de arriba podrás observar que Python tiene dos modos de salida. En el primero escribiste `data` en el intérprete y Python mostró la representaciópn *cruda* de la cadena, incluyendo comillas y códigos de escape. Cuando escribiste `print(data)`, en cambio, obtuviste la salida formateada de la cadena.
+En el ejemplo de arriba podrás observar que Python tiene dos modos de salida. En el primero escribiste `data` en el intérprete y Python mostró la representación *cruda* de la cadena, incluyendo comillas y códigos de escape. Cuando escribiste `print(data)`, en cambio, obtuviste la salida formateada de la cadena.
 
 Leer un archivo entero y cargarlo en memoria todo de una vez parece simple, pero sólo tiene ventajas si el archivo es pequeño. Si estás trabajando con archivos enormes es mejor procesar las líneas de tu archivo una a una.
 
@@ -152,7 +152,7 @@ En ciertas ocasiones, puede pasar que quieras leer una sola línea de texto (por
 >>>
 ```
 
-El comando `next()` devuelve la siguiente línea de texto en el archivo. Sin embargo, sólo para que sepas, los cilcos `for` usan el método `next()` para obtener sus datos. Por lo tanto, típicamente no forzás un llamado extra a `next()` salvo que explícitamente quieras saltear o leer una línea particular como en nuestro caso de acá abajo.
+El comando `next()` devuelve la siguiente línea de texto en el archivo. Sin embargo, sólo para que sepas, los ciclos `for` usan el método `next()` para obtener sus datos. Por lo tanto, típicamente no forzás un llamado extra a `next()` salvo que explícitamente quieras saltear o leer una línea particular como en nuestro caso de acá abajo.
 
 Una vez que estés leyendo un archivo línea a línea, podés hacer otras operaciones, como separar los datos dentro de una línea con el método `split()`. Por ejemplo, probá esto:
 
@@ -176,7 +176,7 @@ Una vez que estés leyendo un archivo línea a línea, podés hacer otras operac
 ### Ejercicio 2.2: Lectura de un archivo de datos
 Ahora que sabés leer un archivo, escribamos un programa que haga un cálculo simple con los datos leídos.
 
-Las columnas en `camion.csv` corresponden a un nombre de fruta, una cantidad de cajones cargados en el camión, y un precio de compra por cada cajón de ese grupo. Escribí un programa llamado `costo_camion.py`  que abra el achivo, lea las líneas, y calcule el precio pagado por los cajones cargados en el camión.
+Las columnas en `camion.csv` corresponden a un nombre de fruta, una cantidad de cajones cargados en el camión, y un precio de compra por cada cajón de ese grupo. Escribí un programa llamado `costo_camion.py`  que abra el archivo, lea las líneas, y calcule el precio pagado por los cajones cargados en el camión.
 
 *Ayuda: para interpretar un string `s` como un número entero, usá `int(s)`. Para leerlo como punto flotante, usá `float(s)`.*
 
@@ -207,7 +207,7 @@ Probalo:
 
 ### Comentario: ¿No deberíamos estar usando Pandas para esto?
 
-Es frecuente que les estudiantes que conocen un poco más de Python rápidamente señalen que hay módulos como [Pandas](https://pandas.pydata.org) que tienen, entre muchas otras funcionalidades, la posiblidad de leer archivos CSV en una sola instrucción. Es verdad, y funcionan muy bien. Sin embargo, este no es un curso sobre Pandas. Si bien más adelante veremos algo de esta biblioteca, lo que nos interesa en este momento es aprender a manejar archivos directamente. Estamos trabajando con archivos CSV porque es un formato sencillo que es muy útil conocer, pero es principalmente una excusa para mostrar cómo Python maneja archivos de texto. En resumen, cuando tengas que trabajar con datos, definitivamente usá Pandas. Pero para aprender a manejar archivos vamos a seguir usando las funciones básicas de Python.
+Es frecuente que les estudiantes que conocen un poco más de Python rápidamente señalen que hay módulos como [Pandas](https://pandas.pydata.org) que tienen, entre muchas otras funcionalidades, la posibilidad de leer archivos CSV en una sola instrucción. Es verdad, y funcionan muy bien. Sin embargo, este no es un curso sobre Pandas. Si bien más adelante veremos algo de esta biblioteca, lo que nos interesa en este momento es aprender a manejar archivos directamente. Estamos trabajando con archivos CSV porque es un formato sencillo que es muy útil conocer, pero es principalmente una excusa para mostrar cómo Python maneja archivos de texto. En resumen, cuando tengas que trabajar con datos, definitivamente usá Pandas. Pero para aprender a manejar archivos vamos a seguir usando las funciones básicas de Python.
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_Funciones.md)
