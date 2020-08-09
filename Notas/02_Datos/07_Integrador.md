@@ -6,23 +6,50 @@ En esta sección haremos algunos ejercicios integradores manejando archivos, dic
 
 ## Ejercicios
 
-Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una base de datos sobre árboles en parques de la Ciudad de Buenos Aires. Para empezar, descargá el archivo CSV de "[Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes)" en tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejericios de esta sección en un archivo `arboles.py`.
+Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una base de datos sobre árboles en parques de la Ciudad de Buenos Aires. Para empezar, descargá el archivo CSV de "[Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes)" en tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejercicios de esta sección en un archivo `arboles.py`.
 
 ![Arbolado porteño](arboles.jpg)
 
-### Ejercicio 2.22: Lectura de los árboles de un parque
-Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información sobre los árboles del parque especificado. La función debe devolver una lista que, por cada árbol (cada fila) del archivo, contenga un diccionario con toda la información sobre el árbol. 
+#### Descripción de la base
 
-_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 2.19](../02_Datos/05_Secuencias.md#ejercicio-219-la-función-zip) _para combinar el encabezado del archivo con los datos de cada fila. Por ahora te preocupes por los tipos de datos de cada columna._
+|Título de la columna|Tipo de dato|Descripción|
+|:-------------:|:-------------:| ----- |
+|longitud            | Número entero (integer) |Coordenadas para geolocalización |
+|latitud             | Número entero (integer) |Coordenadas para geolocalización |
+|tipo_sitio          | Texto (string) |Tipo de evento relevado |
+|id_arbol            | Número entero (integer) |Identificador único del árbol |
+|altura_tot          | Número entero (integer) |Altura relevada del árbol |
+|diametro            | Número entero (integer) |Diámetro relevado del árbol |
+|inclinacio          | Número entero (integer) |Inclinación relevada del árbol |
+|id_especie          | Número entero (integer) |Identificador de la especie |
+|nombre_fam          | Texto (string) |Nombre de la familia del árbol |
+|nombre_gen          | Texto (string) |Nombre del género del árbol |
+|nombre_cie          | Texto (string) |Nombre científico del árbol |
+|nombre_com          | Texto (string) |Nombre común del árbol |
+|tipo_folla          | Texto (string) |Tipo de follaje del árbol |
+|origen              | Texto (string) |Origen del árbol |
+|codigo_man          | Texto (string) |Código de la Manzana en la que está ubicado el árbol |
+|barrio              | Texto (string) |Barrio en el que está ubicado el árbol |
+|comuna              | Texto (string) |Comuna en la que esta ubicado el árbol |
+|calle               | Texto (string) |Calle relevada en donde se encuentra el árbol |
+|chapa1              | Número entero (integer) |Número de la chapa del frente en donde se encuentra el árbol |
+|chapa2              | Número entero (integer) |Número de la chapa alternativo del frente en donde se encuentra el árbol |
+|long_calle          | Número entero (integer) |Longitud de la calle donde se encuentra el árbol |
+
+
+### Ejercicio 2.22: Lectura de los árboles de un parque
+Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información del parque especificado. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
+
+_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 2.19](../02_Datos/05_Secuencias.md#ejercicio-219-la-función-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modifica esta función para que ese dato sea del tipo adecuado para operar._
 
 _Observación: La columna que indica el nombre del parque en el que se encuentra el árbol se llama `'espacio_ve'` en el archivo CSV._
 
 Probá con el parque "GENERAL PAZ" para tener un ejemplo de trabajo.
 
 ### Ejercicio 2.23: Determinar las especies en un parque
-Escribí una función `especies(lista)` que tome una lista de árboles como la generada en el ejercicio anterior y devuelva el conjunto de especies (la columna `'nombre_com'` del archivo) que figuran en la lista.
+Escribí una función `especies(lista_arboles)` que tome una lista de árboles como la generada en el ejercicio anterior y devuelva el conjunto de especies (la columna `'nombre_com'` del archivo) que figuran en la lista.
 
-_Ṣugerencia: Usá el comando `set` como en la [Sección 2.4](../02_Datos/04_Contenedores.md#conjuntos)._
+_Sugerencia: Usá el comando `set` como en la [Sección 2.4](../02_Datos/04_Contenedores.md#conjuntos)._
 
 ### Ejercicio 2.24: Contar ejemplares por especie
 Usando contadores como en el [Ejercicio 2.21](../02_Datos/06_Contadores.md#ejercicio-221-contadores), escribí una función `contar_ejemplares(lista_arboles)` que, dada una lista como la que generada con `leer_parque()`, devuelva un diccionario en el que las especies (recordá, es la columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
@@ -45,13 +72,13 @@ Fenix: 40|Lapacho: 12|Fresno americano: 38
 
 
 ### Ejercicio 2.25: Alturas de una especie en una lista
-Escribí una función `obtener_alturas(lista, especie)` que, dada una lista de árboles como la anterior y una especie de árbol (nuevamente, la columna `'nombre_com'` del archivo), devuelva una lista con las alturas (columna `'altura_tot'`) de los ejemplares de esa especie en la lista. 
+Escribí una función `obtener_alturas(lista_arboles, especie)` que, dada una lista de árboles como la anterior y una especie de árbol (un valor de la columna `'nombre_com'` del archivo), devuelva una lista con las alturas (columna `'altura_tot'`) de los ejemplares de esa especie en la lista.
 
-_Observación: Acá sí, fijate de devolver las alturas como números (de punto flotante) y no como cadenas de caracteres_.
+_Observación: Acá sí, fijate de devolver las alturas como números (de punto flotante) y no como cadenas de caracteres. Podés hacer esto modificando `leer_parque`_.
 
 Usala para calcular la altura promedio y altura máxima de los 'Jacarandá' en los tres parques mencionados.
 
-**Resultados** de alturas de Jacaranáes en tres parques:
+**Resultados** de alturas de Jacarandás en tres parques:
 
 Medida | General Paz | Los Andes | Centenario
 -------|------------------|-----------|--------------
@@ -59,15 +86,20 @@ max  |16.0 |25.0  | 18.0
 prom |10.2 |10.54 | 8.96
 
 ### Ejercicio 2.26: Inclinación promedio por especie de una lista
-Escribí una función `obtener_inclinaciones(lista, especie)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie. 
+Escribí una función `obtener_inclinaciones(lista_arboles, especie)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie.
 
-### Ejercicio 2.27: Especies con ejemplares más inclinados
-
-Combinando la función `especies()` con `obtener_inclinaciones()` escribí una función `especies_inclinadas(lista)` que, dada una lista de árboles devuelva la especie que tiene el ejemplar más inclinado así como la especie que tiene mayor promedio de inclinación entre las que figuran en la lista.
+### Ejercicio 2.27: Especie con el ejemplar más inclinado
+Combinando la función `especies()` con `obtener_inclinaciones()` escribí una función `especimen_mas_inclinado(lista_arboles)` que, dada una lista de árboles devuelva la especie que tiene el ejemplar más inclinado y su inclinación.
 
 Correlo para los tres parques mencionados anteriormente.
 
-**Resultados.** Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados y que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
+**Resultados.** Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados.
+
+
+### Ejercicio 2.28: Especie con más inclinada en promedio
+Volvé a combinar las funciones anteriores para escribir la función `especie_promedio_mas_inclinada(lista_arboles)` que, dada una lista de árboles devuelva la especie que en promedio tiene la mayor inclinación y el promedio calculado..
+
+**Resultados.** Deberías obtener, por ejemplo, que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
 
 
 **Preguntas extras:** ¿Qué habría que cambiar para obtener la especie con un ejemplar más inclinado de toda la ciudad y no solo de un parque? ¿Podrías dar la latitud y longitud de ese ejemplar? ¿Y dónde se encuentra (lat,lon) el ejemplar más alto? ¿De qué especie es?
