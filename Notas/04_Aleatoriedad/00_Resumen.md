@@ -1,6 +1,9 @@
 [Contenidos](../Contenidos.md) \| [Anterior (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md) \| [Próximo (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
 
 # 4. Aleatoridad
+### **Este material está en revisión**
+### Estará su versión definitiva desde el 26/8/2020
+
 En esta clase introducimos conceptos y técnicas relacionadas al azar. La aleatoriedad puede ser un gran aliado para realizar cálculos de fenómenos estocásticos pero también de fenómenos deterministas.
 Introducimos los números pseudoaleatorios, así como el módulo `numpy` y sus métodos más sencillos.
 
