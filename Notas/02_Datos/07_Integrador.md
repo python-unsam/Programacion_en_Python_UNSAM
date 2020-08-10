@@ -12,29 +12,27 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 
 #### Descripción de la base
 
+
+
 |Título de la columna|Tipo de dato|Descripción|
 |:-------------:|:-------------:| ----- |
-|longitud            | Número entero (integer) |Coordenadas para geolocalización |
-|latitud             | Número entero (integer) |Coordenadas para geolocalización |
-|tipo_sitio          | Texto (string) |Tipo de evento relevado |
+|long            | Número flotante (float) |Coordenadas para geolocalización |
+|lat             | Número flotante (float) |Coordenadas para geolocalización |
 |id_arbol            | Número entero (integer) |Identificador único del árbol |
 |altura_tot          | Número entero (integer) |Altura relevada del árbol |
 |diametro            | Número entero (integer) |Diámetro relevado del árbol |
 |inclinacio          | Número entero (integer) |Inclinación relevada del árbol |
 |id_especie          | Número entero (integer) |Identificador de la especie |
+|nombre_com          | Texto (string) |Nombre común del árbol |
+|nombre_cie          | Texto (string) |Nombre científico del árbol |
+|tipo_folla          | Texto (string) |Tipo de follaje del árbol |
+|espacio_ve          | Texto (string) |Nombre del espacio verde |
+|ubicacion           | Texto (string) |Dirección del espacio verde |
 |nombre_fam          | Texto (string) |Nombre de la familia del árbol |
 |nombre_gen          | Texto (string) |Nombre del género del árbol |
-|nombre_cie          | Texto (string) |Nombre científico del árbol |
-|nombre_com          | Texto (string) |Nombre común del árbol |
-|tipo_folla          | Texto (string) |Tipo de follaje del árbol |
 |origen              | Texto (string) |Origen del árbol |
-|codigo_man          | Texto (string) |Código de la Manzana en la que está ubicado el árbol |
-|barrio              | Texto (string) |Barrio en el que está ubicado el árbol |
-|comuna              | Texto (string) |Comuna en la que esta ubicado el árbol |
-|calle               | Texto (string) |Calle relevada en donde se encuentra el árbol |
-|chapa1              | Número entero (integer) |Número de la chapa del frente en donde se encuentra el árbol |
-|chapa2              | Número entero (integer) |Número de la chapa alternativo del frente en donde se encuentra el árbol |
-|long_calle          | Número entero (integer) |Longitud de la calle donde se encuentra el árbol |
+|coord_x             | Número flotante (float) |Coordenadas para localización |
+|coord_y             | Número flotante (float) |Coordenadas para localización |
 
 
 ### Ejercicio 2.22: Lectura de los árboles de un parque

@@ -97,7 +97,7 @@ por ahora pero daremos un método para averiguarlo más adelante.
 
 ###  Búsqueda lineal
 
-Nos interesa estudiar formas alternativas de programar la búsqueda usando operaciones más elementales, y no las primitivas `in` e `index()` de nuestro lenguaje de alto nivel. Aceptemos entonces que no vamos a usar ni `in` ni `index()`. En cambio, podemos iterar sobre los índices y elementos de una lista, y hacer comparaciones elementales.
+Nos interesa estudiar formas alternativas de programar la búsqueda usando operaciones más elementales, y no las primitivas `in` e `index()` de nuestro lenguaje de alto nivel. Aceptemos entonces que no vamos a usar ni `in` ni `index()`. En cambio, podemos iterar sobre los índices y elementos de una lista para hacer comparaciones elementales.
 
 Consideremos la siguiente solución: iterar sobre los índices y elementos de una lista de manera de comparar el elemento `e` buscado con cada uno de los elementos de la lista y devolver la posición donde lo encontremos, en caso de encontrarlo. Si llegamos al final de la lista sin haber salido antes de la función es porque el valor de `e` no está en la lista, y en ese caso
 devolvemos -1.
@@ -152,7 +152,7 @@ Y ahora lo probamos:
 
 ###  ¿Cuántas comparaciones hace este programa?
 
-Volvemos a preguntarnos lo mismo que en la sección anterior, pero con el nuevo
+Volvemos a preguntarnos lo mismo que en la sección anterior pero con el nuevo
 programa: ¿cuánto esfuerzo computacional requiere este programa?, ¿cuántas
 veces compara el valor que buscamos con los datos de la lista? Ahora podemos
 analizar el código de `busqueda_lineal`:
