@@ -248,6 +248,21 @@ When you work with the GUI you can close a figure by clicking on the x in the up
 plt.close(1)     # Closes figure 1
 ```
 
+### 1.5.3.2. Subplots
+ With subplot you can arrange plots in a regular grid. You need to specify the number of rows and columns and the number of the plot. Note that the gridspec command is a more powerful alternative.
+![COPETE](./sphx_glr_plot_subplot-horizontal_001.png)
+![COPETE](./sphx_glr_plot_subplot-vertical_001.png)
+![COPETE](./sphx_glr_plot_subplot-grid_001.png)
+![COPETE](./sphx_glr_plot_gridspec_001.png)
+
+
+### 1.5.3.3. Axes
+Axes are very similar to subplots but allow placement of plots at any location in the figure. So if we want to put a smaller plot inside a bigger one we do so with axes.
+
+![COPETE](./sphx_glr_plot_axes_001.png)
+![COPETE](./sphx_glr_plot_axes-2_001.png)
+
+
 
 ### 1.5.4.2. Scatter Plots
 ![COPETE](./sphx_glr_plot_scatter_001.png)
