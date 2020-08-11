@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Gráficos con matplotlib**)](04_matplotlib_basico.md) \| [Próximo (6 Gráficos del Arbolado porteño)](06_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Matplotlib básico)](04_matplotlib_basico.md) \| [Próximo (6 Gráficos del Arbolado porteño)](06_gráficos_de_arboles.md)
 
 # 4.5 Gráficos de Figuritas y Dados***
 
@@ -12,5 +12,5 @@
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Gráficos con matplotlib**)](04_matplotlib_basico.md) \| [Próximo (6 Gráficos del Arbolado porteño)](06_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Matplotlib básico)](04_matplotlib_basico.md) \| [Próximo (6 Gráficos del Arbolado porteño)](06_gráficos_de_arboles.md)
 

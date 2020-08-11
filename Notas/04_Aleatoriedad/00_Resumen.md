@@ -14,7 +14,7 @@ Para cerrar, presentamos una versión propia de un ejercicio lindísimo del curs
 * [4.1 Random](01_Random.md)
 * [4.2 NumPy](02_NumPy_Arrays.md)
 * [4.3 El album de Figuritas](03_Figuritas.md)
-* [4.4 Gráficos con matplotlib**](04_matplotlib_basico.md)
+* [4.4 Matplotlib básico](04_matplotlib_basico.md)
 * [4.5 Gráficos de Figuritas y Dados***](05_gráficos_de_figuritas.md)
 * [4.6 Gráficos del Arbolado porteño](06_gráficos_de_arboles.md)
 * [4.7 Cierre de la cuarta clase](07_Cierre.md)

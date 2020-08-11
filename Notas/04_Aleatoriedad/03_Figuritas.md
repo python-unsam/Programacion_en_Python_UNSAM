@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 NumPy)](02_NumPy_Arrays.md) \| [Próximo (4 Gráficos con matplotlib**)](04_matplotlib_basico.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 NumPy)](02_NumPy_Arrays.md) \| [Próximo (4 Matplotlib básico)](04_matplotlib_basico.md)
 
 # 4.3 El album de Figuritas
 
@@ -133,5 +133,5 @@ Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambi
 ### Ejercicio 4.23: 
 Por último, suponé que cinco amigues se juntan y deciden compartir la compra de figuritas y el llenado de sus cinco álbumes solidariamente. Calculá cuántos paquetes deberían comprar si deben completar todos. Hacé 100 repeticiones y compará el resultado con la compra individual que calculaste antes.
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 NumPy)](02_NumPy_Arrays.md) \| [Próximo (4 Gráficos con matplotlib**)](04_matplotlib_basico.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 NumPy)](02_NumPy_Arrays.md) \| [Próximo (4 Matplotlib básico)](04_matplotlib_basico.md)
 
