@@ -7,7 +7,7 @@ En esta sección introducimos algunos conceptos sobre el modelo de objeto intern
 
 ### Asignaciones
 
-Muchas operaciones en Python están relacionas a *asignar* o *guardar* valores.
+Muchas operaciones en Python están relacionadas con *asignar* o *guardar* valores.
 
 ```python
 a = valor         # Asignación a una variable
@@ -17,7 +17,7 @@ d['key'] = valor  # Agregar a una diccionario
 ```
 
 *Ojo: las operaciones de asignación **nunca hacen una copia** del valor asignado.*
-Las asignaciones son simplemente copias de la referencias (o copias del puntero, si preferís).
+Las asignaciones son simplemente copias de las referencias (o copias del puntero, si preferís).
 
 ### Ejemplo de asignación
 
@@ -330,7 +330,7 @@ Hagamos un Zip de la lista de tipos con la de datos y veamos el resultado:
 >>>
 ```
 
-Se puede ver que esto aparea una función de conversión de tipos con un valo0r. Por ejemplo, `int` está en un par con el valor `'100'`.
+Se puede ver que esto aparea una función de conversión de tipos con un valor. Por ejemplo, `int` está en un par con el valor `'100'`.
 
 Esta lista zipeada es útil si querés realizar conversiones de todos los valores. Por ejemplo:
 

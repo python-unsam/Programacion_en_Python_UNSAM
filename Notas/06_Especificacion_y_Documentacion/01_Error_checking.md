@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Debuguear programas***)](02_debugger.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 [Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_303Error_checking.md) \| [Próximo (3 Especificación, Documentación y contratos+)](04_Especificación.md))](02_debugger-oski.md)
 
 # 6.1 Control de errores
 
@@ -407,5 +407,5 @@ an option to the silence the error message if they choose to do so.
 Lograr un buen manejo o administración de errores es una de las partes mas difíciles en la mayoría de los programas. Estás intentando preveer imprevistos. Como regla general, no ignores los errores. Es mejor informar los problemas y ofrecer al usuario la opción de no informarlos más. Un buen diálogo entre el código y el usuario  facilita el debugging y el buen uso del programa. 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Debuguear programas***)](02_debugger.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 [Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_303Error_checking.md) \| [Próximo (3 Especificación, Documentación y contratos+)](04_Especificación.md))](02_debugger-oski.md)
 

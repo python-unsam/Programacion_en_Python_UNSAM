@@ -93,7 +93,7 @@ Corré tu programa `informe.py` de forma de tener los datos sobre cajones cargad
 
 Luego, tratá de escribir los comandos adecuados para realizar las operaciones descriptas abajo. Estas operaciones son reducciones, transformaciones y consultas sobre la carga del camión.
 
-Guardá los resultados de los primero tres ejercicios en un archivo 
+Guardá los resultados de los primeros tres ejercicios en un archivo 
 `comprension.py`, separando los ejercicios con una línea que contenga solamente los símbolos `#%%` seguido de una línea comentada indicando el ejercicio. Al terminar, debería verse así tu archivo:
 
 ```python
@@ -255,7 +255,7 @@ Otro ejemplo útil podría ser generar un diccionario de precios de venta de aqu
 ```
 
 
-### Ejercicio 3.10: Estraer datos de una arhcivo CSV
+### Ejercicio 3.10: Extraer datos de una arhcivo CSV
 Saber usar combinaciones de comprensión de listas, diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. Acá te mostramos un ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
 
 Primero, leamos el encabezado (header) del archivo CSV:
