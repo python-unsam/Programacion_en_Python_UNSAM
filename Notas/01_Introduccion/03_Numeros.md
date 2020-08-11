@@ -204,7 +204,7 @@ Probalo.
 >>> a = 3.14159
 >>> int(a)
 3
->>> b = '3.14159' # También funciona con cadenas que represetan números.
+>>> b = '3.14159' # También funciona con cadenas que representan números.
 >>> float(b)
 3.14159
 >>>
