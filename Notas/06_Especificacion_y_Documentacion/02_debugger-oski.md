@@ -1,8 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Debuguear programas***)](02_debugger.md)
 
-# 6.2 [Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_303Error_checking.md) \| [Próximo (3 Especificación, Documentación y contratos+)](04_Especificación.md)
-
-# Debuguear programas***
+# 6.2 Debuguear programas+
 
 En Python es muy fácil probar porciones de código. Especialmente si usás Spyder. Este fragmento de código puede parecer - a primera vista - que hace lo que "debe". Pero si lo miramos con detalle, o lo ejecutamos, veremos que no es tan fácil:
 
@@ -282,7 +280,6 @@ Ahora usá el debugger para ver cada uno de los errores, y devolver el código c
 
 Vas a encontrar: problemas con el índice `i`  , y problemas con la manipulación de la lista `lista`, que debería quedar intacta.
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_303Error_checking.md) \| [Próximo (3 Especificación, Documentación y contratos+)](04_Especificación.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Debuguear programas***)](02_debugger.md)

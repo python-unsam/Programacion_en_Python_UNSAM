@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos de Figuritas y Dados***)](05_gráficos_de_figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos del Arbolado porteño)](06_gráficos_de_arboles.md)
 
-# 4.6 Cierre de la cuarta clase
+# 4.7 Cierre de la cuarta clase
 
 En esta cuarta clase trabajamos con la generación de números (pseudo)aleatorios, el uso de la biblioteca NumPy y algunos ejemplos de aplicación de estos conceptos. También aprendimos a hacer algunos gráficos elementales en Python.
 
@@ -14,5 +14,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 ¡Gracias! Nos vemos en la próxima clase.
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos de Figuritas y Dados***)](05_gráficos_de_figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos del Arbolado porteño)](06_gráficos_de_arboles.md)
 

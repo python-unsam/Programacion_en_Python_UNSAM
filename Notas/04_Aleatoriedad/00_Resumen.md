@@ -16,7 +16,8 @@ Para cerrar, presentamos una versión propia de un ejercicio lindísimo del curs
 * [4.3 El album de Figuritas](03_Figuritas.md)
 * [4.4 Gráficos con matplotlib**](04_matplotlib_basico.md)
 * [4.5 Gráficos de Figuritas y Dados***](05_gráficos_de_figuritas.md)
-* [4.6 Cierre de la cuarta clase](06_Cierre.md)
+* [4.6 Gráficos del Arbolado porteño](06_gráficos_de_arboles.md)
+* [4.7 Cierre de la cuarta clase](07_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md) \| [Próximo (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
