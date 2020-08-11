@@ -11,7 +11,7 @@ Un segundo tipo de error lo forman los errores *en tiempo de ejecución*, que se
 El tercer tipo de error es el más difícil de encontrar y de entender. Son los *errores semánticos*, que se dan cuando el programa no hace lo que está diseñado para hacer. Tienen que ver con el sentido de las instrucciones. En estos casos el programa se ejecuta pero da un resultado incorrecto o inesperado. En general, la mejor forma de encontrar estos errores es correr paso a paso el código que genera un resultado inesperado, tratando de entender dónde está la falla.
 
 ### Ejercicio 3.1: tres tipos de errores
-Determiná los errores de los siguientes códigos y corregilos en un archivo `tres_errores.py`, separando cada código con una línea con los símbolos `#%%` y comentando brevemente los errores. ¿Qué tipo de errores tiene cada uno?
+Determiná los errores de los siguientes códigos y corregilos en un archivo `tres_errores.py` comentando brevemente los errores. ¿Qué tipo de errores tiene cada uno?
 
 ```python
 def tiene_a(expresion):
@@ -60,7 +60,32 @@ tiene_uno('La novela 1984 de George Orwell')
 tiene_uno(1984)
 ```
 
+En el archivo `tres_errores.py` separá los ejercicios con una línea que contenga solamente los símbolos `#%%` seguido de una línea comentada indicando el ejercicio. Al terminar, debería verse así tu archivo:
 
+```python
+#tres_errores.py
+#Ejercicios de errores en el código
+#%%
+#Función tiene_a(), primera versión
+#Comentario: El error era de TAL tipo y estaba ubicado en TAL lugar.
+#    Lo corregí cambiando esto por aquello.
+#    A continuación va el código corregido
+...
+...
+
+#%%
+#Función tiene_a(), segunda versión
+#Comentario: El error era de TAL tipo y estaba ubicado en TAL lugar.
+...
+...
+
+#%%
+#Función tiene_uno()
+#Comentario: El error era de TAL tipo y estaba ubicado en TAL lugar.
+...
+...
+
+```
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Entorno de desarrollo integrado)](01_IDE.md) \| [Próximo (3 Listas y búsqueda lineal)](03_IteradoresLista.md)
 

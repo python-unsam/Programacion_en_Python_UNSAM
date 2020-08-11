@@ -11,9 +11,11 @@ En esta clase discutimos los tipos de errores que pueden aparecer en un programa
 * [3.1 Entorno de desarrollo integrado](01_IDE.md)
 * [3.2 Errores](02_Errores3.md)
 * [3.3 Listas y búsqueda lineal](03_IteradoresLista.md)
-* [3.4 Comprensión de listas](04_List_comprehension.md)
-* [3.5 Objetos](05_Objects.md)
-* [3.6 Cierre de la tercera clase](06_Cierre.md)
+* [3.4 Arbolado porteño](04_Arboles1.md)
+* [3.5 Comprensión de listas](05_Comprension_Listas.md)
+* [3.6 Objetos](06_Objetos.md)
+* [3.7 Arbolado porteño y comprensión](07_Arboles2.md)
+* [3.8 Cierre de la tercera clase](08_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Aleatoriedad/00_Resumen.md)

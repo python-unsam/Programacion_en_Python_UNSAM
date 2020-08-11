@@ -16,9 +16,8 @@ Esta clase es más larga que la anterior y tiene muchos ejercicios hacia el fina
 * [2.4 Contenedores](04_Contenedores.md)
 * [2.5 Secuencias](05_Secuencias.md)
 * [2.6 Contadores del módulo _collections_](06_Contadores.md)
-* [2.7 Arbolado porteño (integrador)](07_Integrador.md)
-* [2.8 Impresión con formato*](08_Formato.md)
-* [2.9 Cierre de la segunda clase](09_CierreClase.md)
+* [2.7 Impresión con formato*](07_Formato.md)
+* [2.8 Cierre de la segunda clase](08_CierreClase.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md)

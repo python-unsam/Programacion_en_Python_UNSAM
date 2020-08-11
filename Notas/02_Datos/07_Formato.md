@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Arbolado porteño (integrador))](07_Integrador.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Contadores del módulo _collections_)](06_Contadores.md) \| [Próximo (8 Cierre de la segunda clase)](08_CierreClase.md)
 
-# 2.8 Impresión con formato*
+# 2.7 Impresión con formato*
 
 En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. No es indispensable para el curso. Si te alcanza el tiempo está semana leela, sino no te preocupes podés volver a mirar acá en el futuro, cuando lo necesites.
 
@@ -109,7 +109,7 @@ Esto requiere un solo ítem, o una tupla a la derecha. Los códigos están tambi
 
 ## Ejercicios
 
-### Ejercicio 2.29: Formato de números
+### Ejercicio 2.22: Formato de números
 Un problema usual cuando queremos imprimir números es especificar el número de dígitos decimales. Los f-strings nos permiten hacerlo. Probá los siguientes ejemplos:
 
 ```python
@@ -149,7 +149,7 @@ A pesar de que suelen usarse dentro de un `print`, el formato de cadenas no est�
 >>>
 ```
 
-### Ejercicio 2.30: Recolectar datos
+### Ejercicio 2.23: Recolectar datos
 En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. Dejá ese archivo para entregar al final de la clase y copiá su contenido en un archivo `tabla_informe.py`. En este ejercicio, vas a comenzar a modificarlo para producir una tabla como ésta:
 
 ```
@@ -189,7 +189,7 @@ Agregá esta función a tu archivo `tabla_informe.py`. Debería funcionar como s
 >>>
 ```
 
-### Ejercicio 2.31: Imprimir una tabla con formato
+### Ejercicio 2.24: Imprimir una tabla con formato
 Volvé a hacer el ciclo `for` del ejercicio anterior pero cambiando la forma de imprimir como sigue:
 
 ```python
@@ -226,7 +226,7 @@ O directamente usando  f-strings. Por ejemplo:
 
 Agregá estos últimos comandos a tu programa `tabla_informe.py`. Hacé que el programa tome la salida de la función `hacer_informe()` e imprima una tabla bien formateada.
 
-### Ejercicio 2.32: Agregar encabezados
+### Ejercicio 2.25: Agregar encabezados
 Suponete que tenés una tupla con nombres de encabezado como ésta:
 
 ```python
@@ -259,7 +259,7 @@ Cuando esté listo, tu programa debería producir una tabla como esta:
    Naranja        100      70.44      35.84
 ```
 
-### Ejercicio 2.33: Un desafío de formato
+### Ejercicio 2.26: Un desafío de formato
 Por último, modificá tu código para que el precio mostrado incluya un símbolo de pesos ($) y la salida se vea como esta tabla:
 
 ```
@@ -276,7 +276,7 @@ Por último, modificá tu código para que el precio mostrado incluya un símbol
 
 Guardá estos cambios en el archivo `tabla_informe.py` que más adelante los vas a necesitar.
 
-### Ejercicio 2.34: Tablas de multiplicar
+### Ejercicio 2.27: Tablas de multiplicar
 Escribí un programa `tablamult.py` que imprima de forma prolija las tablas de
 multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicación, usando sólo sumas alcanza.
 
@@ -296,5 +296,5 @@ multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicaci�
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 Arbolado porteño (integrador))](07_Integrador.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Contadores del módulo _collections_)](06_Contadores.md) \| [Próximo (8 Cierre de la segunda clase)](08_CierreClase.md)
 
