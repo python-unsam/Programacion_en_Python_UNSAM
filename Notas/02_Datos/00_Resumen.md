@@ -5,7 +5,7 @@
 Para escribir programas útiles, necesitamos aprender a trabajar con datos. En esta clase vas a escribir un programa que lee un archivo de datos en formato csv y realiza un cálculo simple. Vas a aprender a estructurar tu código creando funciones. También introducimos las estructuras de datos elementales de Python que nos faltan: tuplas, conjuntos y diccionarios y profundizamos un poco más en las listas y sus usos.
 
 
-Ojo, esta clase tiene la mayoría de los ejercicios para entregar hen las útlimas secciones. ¡Administrá tu tiempo para llegar a hacerlos adecuadamente!
+Ojo, esta clase tiene la mayoría de los ejercicios para entregar en las útlimas secciones. ¡Administrá tu tiempo para llegar a hacerlos adecuadamente!
 
 * [2.1 Manejo de archivos](01_Archivos.md)
 * [2.2 Funciones](02_Funciones.md)
