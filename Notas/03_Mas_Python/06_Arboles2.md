@@ -10,8 +10,8 @@ Seguimos aquí con el arbolado porteño. Vamos a plantear algunos ejercicios par
 Seguimos trabajando con el archivo CSV de "[Arbolado en espacios verdes](https://data.buenosaires.gob.ar/dataset/arbolado-espacios-verdes)" que ya está en tu carpeta `Data`. Vamos a estudiar esta base de datos y responder algunas preguntas. Guardá los ejercicios de esta sección en un archivo `arboles2.py`.
 
 
-### Ejercicio 3.19: Lectura de los árboles de un parque
-Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 3.19](../03_Mas_Python/06_Arboles2.md#ejercicio-319-lectura-de-los-árboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
+### Ejercicio 3.19: Lectura de todos los árboles
+Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 2.22](../02_Datos/07_Arboles1.md#ejercicio-222-lectura-de-los-árboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
 
 Vamos a llamar `arboleda` a esta lista.
 
