@@ -9,7 +9,7 @@ Aunque ya les contanmos antes sobre funciones, les dimos pocos detalles sobre su
 
 ### Llamando a una función
 
-Imagine la siguiente función:
+Imaginá la siguiente función:
 
 ```python
 def leer_precios(nombre_archivo, debug):
@@ -242,7 +242,7 @@ Dicho ésto, hay que decir también que ésta se considera una mala práctica. T
 
 ### Pasaje de argumentos
 
-Cuando llamás a una función, las variables argumento (o simplemente los "argumentos") son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales. (ver sección [Sección 3.5](../03_Mas_Python/05_Objetos.md#35-objetos) ) Si le pasás tipos mutables, como listas ó diccionarios, la función *si* los puede modificar.
+Cuando llamás a una función, las variables argumento (o simplemente los "argumentos") son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales. (ver sección [Sección 3.6](../03_Mas_Python/05_Objetos.md#36-objetos) ) Si le pasás tipos mutables, como listas ó diccionarios, la función *si* los puede modificar.
 
 ```python
 def foo(items):
@@ -411,7 +411,7 @@ follows:
 >>>
 ```
 
-Vimos un ejemplo de un selector de columnas en el [Ejercicio 3.10](../03_Mas_Python/04_Comprension_Listas.md#ejercicio-310-extraer-datos-de-una-arhcivo-csv)
+Vimos un ejemplo de un selector de columnas en el [Ejercicio 3.15](../03_Mas_Python/05_Comprension_Listas.md#ejercicio-315-extraer-datos-de-una-arhcivo-csv)
 
 [oski]:# (no se donde quedó el que se llamaba "Exercise 2.23: Extracting Data From CSV Files" en el original en ingles)
 

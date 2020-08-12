@@ -8,7 +8,7 @@ Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
     1. El archivo `camion_commandline.py` del [Ejercicio 2.8](../02_Datos/02_Funciones.md#ejercicio-28-ejecución-desde-la-línea-de-comandos-con-parámetros).
     2. El archivo `informe.py` del [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances).
-    3. El archivo `arboles.py` sobre arbolado porteño incluyendo todos los ejercicios que hayas hecho (esperamos al menos el [Ejercicio 3.14](../03_Mas_Python/06_Arboles2.md#ejercicio-314-lectura-de-los-árboles-de-un-parque) y uno más).
+    3. El archivo `arboles.py` sobre arbolado porteño incluyendo todos los ejercicios que hayas hecho (esperamos al menos el [Ejercicio 3.19](../03_Mas_Python/06_Arboles2.md#ejercicio-319-lectura-de-los-árboles-de-un-parque) y uno más).
     4. El archivo `tabla_informe.py` del [Ejercicio 2.33](../02_Datos/08_Formato.md#ejercicio-233-un-desafío-de-formato) (o del [Ejercicio 2.32](../02_Datos/08_Formato.md#ejercicio-232-agregar-encabezados) si no salió lo del signo $).
     5. El archivo `tablamult.py` del [Ejercicio 2.34](../02_Datos/08_Formato.md#ejercicio-234-tablas-de-multiplicar).
     
