@@ -7,6 +7,8 @@ Para escribir programas útiles, necesitamos aprender a trabajar con datos. En e
 
 Ojo, esta clase tiene la mayoría de los ejercicios para entregar en las útlimas secciones. ¡Administrá tu tiempo para llegar a hacerlos adecuadamente!
 
+Recordá que, aunque no termines todos, completar el formulario del final de cada clase y entregar los ejercicios es parte de las condiciones de aprobación de la materia (todes nos podemos atrasar alguna vez, pero en general esperamos que entregues). Esto debe hacerse ANTES de las 14hs del día miércoles 19/8 para esta clase. 
+
 * [2.1 Manejo de archivos](01_Archivos.md)
 * [2.2 Funciones](02_Funciones.md)
 * [2.3 Tipos y estructuras de datos](03_TiposDatos.md)
