@@ -5,7 +5,7 @@
 ## Ploteando datos reales
 
 ### Ejercicio 4.24: Scatterplot
-Usando lo generado en [Ejercicio 3.21](../03_Mas_Python/06_Arboles2.md#ejercicio-321-lista-de-altos-y-diámetros-de-jacarandá), pasarlo a un `np.array` y plotear con `plt.scatterplot()`
+Usando lo generado en [Ejercicio 3.16](../03_Mas_Python/06_Arboles2.md#ejercicio-316-lista-de-altos-y-diámetros-de-jacarandá), pasarlo a un `np.array` y plotear con `plt.scatterplot()`
 
 
 ### Ejercicio 4.25: Hacer histogramas de altos especie

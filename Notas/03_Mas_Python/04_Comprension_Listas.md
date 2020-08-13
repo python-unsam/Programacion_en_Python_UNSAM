@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Listas y búsqueda lineal)](03_IteradoresLista.md) \| [Próximo (5 Comprensión de listas)](05_Comprension_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Listas y búsqueda lineal)](03_IteradoresLista.md) \| [Próximo (5 Objetos)](05_Objetos.md)
 
 # 3.4 Comprensión de listas
 
@@ -298,5 +298,5 @@ La comprensión de listas se usa frecuentemente Python. Es una forma eficiente d
 
 Dicho esto, saber manipular datos rápidamente es una habilidad increíblemente útil. Hay numerosas situaciones donde puede que tengas que resolver algún tipo de problema excepcional (en el sentido de raro o único) para importar, extraer o exportar datos. La comprensión de listas te puede ahorrar muchísimo tiempo en esas tareas.
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Listas y búsqueda lineal)](03_IteradoresLista.md) \| [Próximo (5 Comprensión de listas)](05_Comprension_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Listas y búsqueda lineal)](03_IteradoresLista.md) \| [Próximo (5 Objetos)](05_Objetos.md)
 
