@@ -11,7 +11,7 @@ Seguimos trabajando con el archivo CSV de "[Arbolado en espacios verdes](https:/
 
 
 ### Ejercicio 3.14: Lectura de todos los árboles
-Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 2.22](../02_Datos/07_Arboles1.md#ejercicio-222-lectura-de-los-árboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
+Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 2.22](../02_Datos/07_Arboles1.md#ejercicio-222-lectura-de-los-árboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles en el archivo. La función debe devolver una lista conteniendo un diccionario por cada árbol con todos los datos.
 
 Vamos a llamar `arboleda` a esta lista.
 
@@ -41,7 +41,7 @@ Esperamos que obtengas una lista similar a esta:
  (17.0, 40.0)]
 ```
 
-### EXTENDER!
+### Ejercicio 3.17: Aca nos gustaría poner algún ejercicio más, pero aún no lo hicimos.
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Objetos)](05_Objetos.md) \| [Próximo (7 Cierre de la tercera clase)](07_Cierre.md)
 
