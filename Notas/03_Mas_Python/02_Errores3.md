@@ -13,6 +13,7 @@ El tercer tipo de error es el más difícil de encontrar y de entender. Son los 
 ### Ejercicio 3.1: tres tipos de errores
 Determiná los errores de los siguientes códigos y corregilos en un archivo `tres_errores.py` comentando brevemente los errores. ¿Qué tipo de errores tiene cada uno?
 
+¿Anda bien en todos los casos de testeo?
 ```python
 def tiene_a(expresion):
     n = len(expresion)
@@ -29,6 +30,7 @@ tiene_a('abracadabra')
 tiene_a('La novela 1984 de George Orwell')
 ```
 
+¿Anda bien en todos los casos de testeo?
 ```python
 def tiene_a(expresion)
     n = len(expresion)
@@ -43,6 +45,7 @@ tiene_a('UNSAM 2020')
 tiene_a('La novela 1984 de George Orwell')
 ```
 
+¿Anda bien en todos los casos de testeo?
 ```python
 def tiene_uno(expresion):
     n = len(expresion)
@@ -59,6 +62,42 @@ tiene_uno('UNSAM 2020')
 tiene_uno('La novela 1984 de George Orwell')
 tiene_uno(1984)
 ```
+
+La siguiente suma no da lo que debería:
+```python
+def suma(a,b):
+    c = a + b
+    
+c = 0
+a = 2
+b = 3
+suma(a,b)
+print(f"La suma da {a} + {b} = {c}")
+```
+
+El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como correponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?:
+```python
+import csv
+from pprint import pprint
+
+def leer_camion(nombre_archivo):
+    camion=[]
+    registro={}
+    with open(nombre_archivo,"rt") as f:
+        filas = csv.reader(f)
+        encabezado = next(filas)
+        for fila in filas:
+            registro[encabezado[0]] = fila[0]
+            registro[encabezado[1]] = int(fila[1])
+            registro[encabezado[2]] = float(fila[2])
+            camion.append(registro)
+    return camion
+
+camion = leer_camion("Data/camion.csv")
+pprint(camion)
+```
+
+
 
 En el archivo `tres_errores.py` separá los ejercicios con una línea que contenga solamente los símbolos `#%%` seguido de una línea comentada indicando el ejercicio. Al terminar, debería verse así tu archivo:
 
