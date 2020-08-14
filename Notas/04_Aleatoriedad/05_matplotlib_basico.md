@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas)](03_Figuritas.md) \| [Próximo (5 Gráficos de Figuritas y Dados***)](05_gráficos_de_figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Gráficos de Figuritas y Dados***)](06_gráficos_de_figuritas.md)
 
-# 4.4 Matplotlib básico
+# 4.5 Matplotlib básico
 
 plots de lineas, una intro completa a traducir:
 [esto](https://scipy-lectures.org/intro/matplotlib/index.html)
@@ -341,5 +341,5 @@ Click on figure for solution.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas)](03_Figuritas.md) \| [Próximo (5 Gráficos de Figuritas y Dados***)](05_gráficos_de_figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Gráficos de Figuritas y Dados***)](06_gráficos_de_figuritas.md)
 

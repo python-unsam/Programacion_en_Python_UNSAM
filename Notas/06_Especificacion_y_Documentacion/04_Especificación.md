@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Debuguear programas***)](03_quesera.md) \| [Próximo (6 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Debuguear programas***)](03_quesera.md) \| [Próximo (4 Documentación y estilo**)](05_Documentar.md)
 
-# 6.5 Especificación, Documentación y contratos+
+# 6.3 Especificación, Documentación y contratos+
 
 En esta unidad se le dará cierta formalización a algunos temas que habían sido
 presentados informalmente, como por ejemplo la documentación de las funciones.
@@ -293,7 +293,7 @@ def sumatoria(inicial, final, f):
     '''
 ```
 
-### Ejercicio 6.5: 
+### Ejercicio 6.4: 
 Realizar la implementación correspondiente a la función `sumatoria`.
 
 En definitiva, la estipulación de pre y postcondiciones dentro de la
@@ -446,7 +446,7 @@ deberá a un error en el diseño o utilización del código.
 
 ## Ejercicios
 
-### Ejercicio 6.6: Analizar cada una de las siguientes funciones.
+### Ejercicio 6.5: Analizar cada una de las siguientes funciones.
 ¿Cuál es el contrato de la función? ¿Cómo sería su documentación?
 ¿Es necesario agregar comentarios?
 ¿Se puede simplificar el código y/o mejorar su legibilidad?
@@ -484,5 +484,5 @@ def emails2(diccionario):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Debuguear programas***)](03_quesera.md) \| [Próximo (6 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Debuguear programas***)](03_quesera.md) \| [Próximo (4 Documentación y estilo**)](05_Documentar.md)
 

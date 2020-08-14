@@ -15,13 +15,11 @@ Luego presentamos informalmente la idea de la especificación (formal) de una fu
 
 
 * [6.1 Control de errores](01_Error_checking.md)
-* [6.2 Debuguear programas+](02_debugger-oski.md)
-* [6.3 Debuguear programas***](02_debugger.md)
-* [6.4 Debuguear programas***](03_quesera.md)
-* [6.5 Especificación, Documentación y contratos+](04_Especificación.md)
-* [6.6 Documentación y estilo**](05_Documentar.md)
-* [6.7 Ejercitacion de la clase cinco***](06_Ejercicios.md)
-* [6.8 Cierre*](07_Cierre.md)
+* [6.2 Debuguear programas***](03_quesera.md)
+* [6.3 Especificación, Documentación y contratos+](04_Especificación.md)
+* [6.4 Documentación y estilo**](05_Documentar.md)
+* [6.5 Ejercitacion de la clase cinco***](06_Ejercicios.md)
+* [6.6 Cierre*](07_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)

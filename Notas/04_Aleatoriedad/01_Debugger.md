@@ -1,51 +1,50 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Debuguear programas***)](02_debugger.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Random)](02_Random.md)
 
-# 6.2 Debuguear programas+
+# 4.1 Debuguear programas+
 
-En Python es muy fácil probar porciones de código. Especialmente si usás Spyder. Este fragmento de código puede parecer - a primera vista - que hace lo que "debe". Pero si lo miramos con detalle, o lo ejecutamos, veremos que no es tan fácil:
+Python tiene un debiugger que te permite probar porciones de código. Esto es sencillo, especialmente en IDEs como Spyder. 
+
+El siguiente fragmento de código puede parecer -a primera vista- que hace lo esperado. Pero si lo ejecutás vas a ver que no funciona:
 
 ```python
 def invertir_lista(lista):
-	'''Recibe una lista L, develve otra lista invertida(L).'''
+    '''Recibe una lista L y la develve invertida.'''
     invertida = []
-    i=len(lista)
+    i = len(lista)
     while i > 0:    # tomo el último elemento 
-        invertida.append (lista.pop(i))  #
-        i=i-1
+        invertida.append(lista.pop(i))  #
+        i = i-1
     return invertida
 ```
 
-`invertir_lista` hace varias cosas mal, pero básicamente: no hace lo que debe, y hace lo que no debe.
+`invertir_lista` hace un par de cosas mal. Básicamente no hace lo que debe, y hace lo que no debe.
 
-Se dice que hay un "bug" (un error) cuando un programa no se comporta como el programador espera.
-
-También se dice que un programa tiene un bug cuando un programa se comporta de un modo en que el programador no espera.
+Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Usualmente se trata de errores semánticos, según la terminología de la [Sección 3.2](../03_Mas_Python/02_Errores3.md#tres-tipos-de-errores).
 
 Un programa debe 
-[1] hacer lo que debería hacer,
-[2] no hacer lo que no debería hacer.
+1. hacer lo que debería hacer,
+2. no hacer lo que no debería hacer.
 
-En general, todos los programas escritos tienen bugs de diversa índole. Después de escribir un fragmento de código por primera vez, uno suele "limpiarlo"  para casos que pueden poner en evidencia esos bugs.
+Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente _limpiarlo_ usando tests que permitan poner en evidencia esos bugs.
 
-Llega un momento en los programas son tan complejos que no es fácil "limpiarlos" o ver los casos especiales que pueden causar errores,
+Diseñar un conjunto de _tests_ adecuado no es una tarea sencilla y es frecuente que queden casos especiales que causen errores inesperados.
 
 ## Testear es genial, debuggear es un horrible.
 
-Python es un lenguaje interpretado, con tipos de datos dinámicos. No existe un compilador que te alerte sobre errores de tipo de datos antes de ejecutar el programa. La forma de encontrar errores semánticos en tu programa es entonces ... ejecutar el programa !
+Python es un lenguaje interpretado, con tipos de datos dinámicos (una misma variable puede cambiar de tipo, de `int` a `float`, por ejemplo). No existe un compilador que te alerte sobre inconsistencias de tipos antes de ejecutar el programa. Es bueno tener buenas prácticas que minimicen estos potenciales errores pero es posible que algunos errores se filtren.
 
-Testear consiste en ejecutar un programa o porción de código en condiciones controladas, con entradas conocidas y salidas predichas.
+Testear consiste en ejecutar un programa o porción de código en condiciones controladas, con entradas conocidas y salidas predichas de forma de poder verificar si lo que da el algoritmos e slo que esperabas.
 
-Es importante hacer que el programa recorra todas las ramas de ejecución posibles y que los datos de prueba incluyan los casos "especiales", casos como listas vacías, índices apuntando al primer o al último elemento, diccionarios vacíos, claves ausentes, etccomprobando en cada caso que el programa se comporte exactamente según lo esperado.  
+La ejecución de un algoritmo puede pensarse como un árbol (el árbol de ejecución del algoritmo, cada condicion da una ramificación del árbol). Según la entrada que le des, el programa va a ir por una rama o por otra. Lo ideal es testear todas las ramas posibles de ejecución y que los casos de prueba (_test cases_) incluyan todos los casos _especiales_ (casos como listas vacías, índices apuntando al primer o al último elemento, claves ausentes, etc.) comprobando en cada caso que el programa se comporte según lo esperado.  
 
 ![Partes del Spyder, un IDE para Python que facilita el debugging](./spyder-partes.png)
 
-La posibilidad de hacer scripts hace este testeo muy simple, sobre todo si la combinamos con un IDE como el Spyder, que permite interpretar scripts y mantener un archivo con código simultáneamente.
 
-Aún con herramientas como el Spyder, hacer debugging es lento y tedioso. Antes de entrar en detalles de Debugging, veremos métodos que minimizan la necesidad de hacerlo.   
+Los entornos de desarrollo integrado (como el Spyder) dan la posiblidad de combinar el uso de un intérprete de Python con un editor de código y suelen permitir también el uso de un debugger. Aún con herramientas como el Spyder, hacer debugging es lento y tedioso. Antes de entrar en los detalles de cómo hacerlo, veremos métodos que tratan de reducir su necesidad.   
 
-## Verificaciones (assert)
+### Verificaciones (assert)
 
-El comando `assert` es un control interno del programa. Si la expresión que queremos verificar es `False` , se alza una excepción de tipo `AssertionError`. La sintaxis de `assert` es la siguiente.
+El comando `assert` se usa para un control interno del programa. Si la expresión que queremos verificar es `False`, se levanta una excepción de tipo `AssertionError`. La sintaxis de `assert` es la siguiente.
 
 ```python
 assert <expresion> [, 'Mensaje']
@@ -57,7 +56,7 @@ Por ejemplo
 assert isinstance(10, int), 'Necesito un entero (int)'
 ```
 
-La idea *no es* usarlo para comprobar la validez de lo ingresado por el usuario. El propósito de usar `assert` es verificar que ciertas verdades , sobre rangos y tipos de valores, se cumplan. En general se lo usa mientras el programa está en desarrollo, y luego se los quita o desactiva cuando el programa funciona.  
+La idea *no es* usarlo para comprobar la validez de lo ingresado por el usuario. El propósito de usar `assert` es verificar que ciertas condiciones se cumplan. En general se lo usa mientras el programa está en desarrollo, y luego se los quita o desactiva cuando el programa funciona.  
 
 ### Programación por contratos
 
@@ -86,29 +85,13 @@ AssertionError: Necesito un entero (int)
 >>>
 ```
 
-### Inline Tests
+## Debuguear 
 
-También podés usar verificaciones para pruebas simples que indican que un módulo del programa o una parte del hardware no están completamente rotos, y al menos responden.
+Los errores en tiempo de ejecución son difíciles de rastrear. Especialmente errores que sólo aparecen bajo cierta combinación particular de condiciones que resulta en que el programa no pueda continuar o de un resultado inesperado. Si tu programa corre, pero no da el resultado que esperás, o _se cuelga_ y no entendés porqué, tenés algunas herramientas concretas. A continuación veremos algunas metodologías específicas que permiten rastrear el orígen del problema.
 
-```python
-def sumar(x, y):
-    return x + y
+### **¿Que dice un traceback?**
 
-assert sumar(2,2) == 4
-```
-
-De este modo, el código y su verificación están en un mismo lugar. Como `assert` levanta una excepción si falla, *vas a ver la excepción al importar el módulo*, sin perder tiempo o recursos en procesarlos.
-
-No les recomendamos esto como método estandard para testear errores. Esto es para comprobar que *no sale humo* al correr una porción de código. Además, es para errores "esporádicos" ó de baja probabilidad, difíciles de ver con sólo examinar el código. No está todo roto ? Ah, bueno, entonces sigamos.
-
-
-# 8.3 Debugging
-
-### Debugging 
-
-Los errores en tiempo de ejecución (runtime) son los más difíciles de encontrar. Especialmente errores que sólo aparecen bajo cierta combinación particular de condiciones que resulta en que el programa no pueda continuar.
-
-Si tu programa corre, pero no te dá el resultado que esperás, o "se cuelga" y no entendés porqué, tenés algunas herramientas. Lo primero que podés hacer es intentar entender la causa del error usando como punto de partida el "traceback":
+Si te da un error, lo primero que podés hacer es intentar entender la causa del error usando como punto de partida el "traceback":
 
 ```bash
 python3 blah.py
@@ -123,21 +106,19 @@ Traceback (most recent call last):
     line x.append(3)
 AttributeError: 'int' object has no attribute 'append'
 ```
-Lo que puede entenderse como "el objeto `int` no tiene un atributo `append` "- lo cual es obvio, pero como llegamos ahí. ?
-
-###  ¿Que dice un traceback?
+La última línea dice algo como que "el objeto `int` no tiene un atributo `append` "- lo cual es obvio, pero ¿cómo llegamos ahí?
 
 La última línea es el motivo concreto del error.
 
-Las líneas anteriores te dicen el camino que siguió el programa hasta llegar al error. En este caso: El error ocurrió en `x.append(3)` en la línea 4 , dentro de la función `spam` del módulo `"blah.py"`, que fué llamado por la función `bar` en la línea 7 del mismo archivo, que fué llamada por .... y así siguiendo. 
+Las líneas anteriores te dicen el camino que siguió el programa hasta llegar al error. En este caso: El error ocurrió en `x.append(3)` en la línea 4, dentro de la función `spam` del módulo `"blah.py"`, que fue llamado por la función `bar` en la línea 7 del mismo archivo, que fué llamada por .... y así siguiendo. 
 
 Sin embargo a veces esto no proporciona suficiente información (por ejemplo, no sabemos el valor de cada parámetro usado en las llamadas.)
 
-*CONSEJO: contále todo el traceback a Google.* Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y sepa qué lo causa, o cómo evitarlo. 
+*Sugerencia: copiá el traceback en Google.* Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y sepa qué lo causa, o cómo evitarlo. 
 
-### Usá el modo [REPL](https://es.wikipedia.org/wiki/REPL) de Python 
+**Usá el modo [REPL](https://es.wikipedia.org/wiki/REPL) de Python**
 
-Si al ejecutar Python le pasas un `-i` como parámetro antes del script a ejecutar, entonces cuando el script termine Python (en lugar de salir inmediatamente) se va a quedar esperando y respondiendo tus preguntas. Podés averiguar en qué estado quedó el sistema. 
+Si usás Python desde la línea de comandos, podés usarlo pasándoles un `-i` como parámetro antes del script a ejecutar. Cuando el intérprete de Python termine de ejecutar el script se va a quedar en modo interactivo (en lugar de volver al sistema opertaivo. Podés averiguar en qué estado quedó el sistema. 
 
 ```bash
 python3 -i blah.py
@@ -154,13 +135,13 @@ AttributeError: 'int' object has no attribute 'append'
 >>>     print( repr(x) )
 ```
 
-Este *switch* preserva el estado del intérprete al finalizar el script y te permite interrogarlo sobre el estado de las variables y obtener información que de otro modo perderías. En el ejemplo de recién interesa saber que es `x` y como llegó a ese estado. 
+Este *parámetro* (el `-i`, que ya usamos antes) preserva el estado del intérprete al finalizar el script y te permite interrogarlo sobre el estado de las variables y obtener información que de otro modo perderías. En el ejemplo de recién interesa saber que es `x` y como llegó a ese estado. Si estás usando un IDE esta posiblidad de interacción suele ocurrir naturalmente.
 
 ### Debugging con `print`
 
-`print()` es una forma rápida y común de permitir que el programa ejecute (casi) normalmente mientas te dá información del estado de las variables. Si elegís bien las variables que mostrás, vas a decir "Ajá !!"
+`print()` es una forma rápida y sencilla de permitir que el programa se ejecute (casi) normalmente mientas te da información del estado de las variables. Si elegís bien las variables que mostrár, es probable que digas "¡¡Ajá!!".
 
-*Consejo: asegurate de usar `repr()`*
+*Sugerencia: es conveniente usar `repr()` para imprimir las variables*
 
 ```python
 def spam(x):
@@ -182,10 +163,11 @@ Decimal('3.4')
 >>>
 ```
 
-### Papel y lápiz
-Muchas veces uno *asume* que el intérprete está haciendo algo. Si tomás un lápiz y un papel y "hacés de computadora" anotando el estado de cada variable y siguiendo las instrucciones del programa para modificarlas te das cuenta de que las cosas no son como creías.
+**Papel y lápiz**
 
-Si no encontras el problema con `assert` ni con prints, ni con papel y lápiz, sólo te queda una alternativa. 
+Muchas veces uno *asume* que el intérprete está haciendo algo. Si agarrás un lápiz y un papel y _hacés de intérprete_ anotando el estado de cada variable y siguiendo las instrucciones del programa paso a paso, es posible que entiendas que las cosas no son como creías.
+
+Estas alternativas son útiles pero un poco primitivas. La mejor forma de debuguear un programa en Python es usar el degugger.
 
 ### El debugger de Python
 
@@ -263,7 +245,7 @@ El programa terminó. Las flechas indican el STOP apagado y el prompt normal. Te
 ### Comentario
 Recorrer la ejecución de un programa como un simple expectador no te va a ayudar e encontrar el error. Es la incongruencia entre lo predicho y lo que realmente sucede lo que nos abre los ojos. Es una tarea que exije mucha atención, pero bien hecha delata el error en una sóla pasada.
 
-### Ejercicio 6.4: Debugger
+### Ejercicio 4.1: Debugger
 Ingresá el siguiente código en el IDE, tal como está. Es el mismo del principio de esta sección. 
 
 ```python
@@ -278,9 +260,9 @@ def invertir_lista(lista):
 ```
 Ahora usá el debugger para ver cada uno de los errores, y devolver el código corregido. Acordate: Que haga lo que debe y no haga lo que no debe.
 
-Vas a encontrar: problemas con el índice `i`  , y problemas con la manipulación de la lista `lista`, que debería quedar intacta.
+Vas a encontrar: problemas con el índice `i` , y problemas con la manipulación de la lista `lista`, que debería quedar intacta.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Debuguear programas***)](02_debugger.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Random)](02_Random.md)
 

@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Documentación y estilo**)](05_Documentar.md) \| [Próximo (8 Cierre*)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Documentación y estilo**)](05_Documentar.md) \| [Próximo (6 Cierre*)](07_Cierre.md)
 
-# 6.7 Ejercitacion de la clase cinco***
+# 6.5 Ejercitacion de la clase cinco***
 
 Temas:
 -Especificar
@@ -8,5 +8,5 @@ Temas:
 -Pandas
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Documentación y estilo**)](05_Documentar.md) \| [Próximo (8 Cierre*)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Documentación y estilo**)](05_Documentar.md) \| [Próximo (6 Cierre*)](07_Cierre.md)
 

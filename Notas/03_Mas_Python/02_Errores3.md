@@ -2,6 +2,8 @@
 
 # 3.2 Errores
 
+## Tres tipos de errores:
+
 Programando nos podemos encontrar con tres tipos de errores.
 
 Los *errores sintácticos* son los que se dan cuando escribimos incorrectamente. Por ejemplo si queremos escribir `x = (a + b) * c` pero en vez de eso escribimos `x = (a + b] * c`, el programa no va a correr.
@@ -75,7 +77,7 @@ suma(a,b)
 print(f"La suma da {a} + {b} = {c}")
 ```
 
-El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como correponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
+El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como corresponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
 ```python
 import csv
 from pprint import pprint
@@ -97,11 +99,11 @@ camion = leer_camion("Data/camion.csv")
 pprint(camion)
 ```
 
-_Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy dificil, podés mirar un poco de la teoría relacionada con esto [un par de secciones más adelante](https://github.com/python-unsam/UNSAM_2020c2_Python/blob/master/Notas/03_Mas_Python/05_Objetos.md#ejemplo-de-asignaci%C3%B3n)._
+_Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy difícil, podés mirar un poco de la teoría relacionada con esto [un par de secciones más adelante](https://github.com/python-unsam/UNSAM_2020c2_Python/blob/master/Notas/03_Mas_Python/05_Objetos.md#ejemplo-de-asignaci%C3%B3n)._
 
 
 
-En el archivo `tres_errores.py` separá los ejercicios con una línea que contenga solamente los símbolos `#%%` seguido de una línea comentada indicando el ejercicio. Al terminar, debería verse así tu archivo:
+En el archivo `tres_errores.py` separá las correcciones de los distintos códigos con una línea que contenga solamente los símbolos `#%%` seguido de una o varias líneas comentadas indicando el ejercicio y el problema que tenía. Al terminar, debería verse así tu archivo:
 
 ```python
 #tres_errores.py
@@ -125,7 +127,7 @@ En el archivo `tres_errores.py` separá los ejercicios con una línea que conten
 #Comentario: El error era de TAL tipo y estaba ubicado en TAL lugar.
 ...
 ...
-
+...
 ```
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Entorno de desarrollo integrado)](01_IDE.md) \| [Próximo (3 Listas y búsqueda lineal)](03_IteradoresLista.md)
