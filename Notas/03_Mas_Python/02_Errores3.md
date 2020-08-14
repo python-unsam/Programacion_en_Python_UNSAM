@@ -97,6 +97,8 @@ camion = leer_camion("Data/camion.csv")
 pprint(camion)
 ```
 
+_Ayuda: Si este último se te hace muy dificil, podés mirar un poco de la teoría relacionada con esto [un par de secciones más adelante](https://github.com/python-unsam/UNSAM_2020c2_Python/blob/master/Notas/03_Mas_Python/05_Objetos.md#ejemplo-de-asignaci%C3%B3n)_
+
 
 
 En el archivo `tres_errores.py` separá los ejercicios con una línea que contenga solamente los símbolos `#%%` seguido de una línea comentada indicando el ejercicio. Al terminar, debería verse así tu archivo:
