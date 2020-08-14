@@ -75,7 +75,7 @@ suma(a,b)
 print(f"La suma da {a} + {b} = {c}")
 ```
 
-El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como correponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?:
+El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como correponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
 ```python
 import csv
 from pprint import pprint
@@ -97,7 +97,7 @@ camion = leer_camion("Data/camion.csv")
 pprint(camion)
 ```
 
-_Ayuda: Si este último se te hace muy dificil, podés mirar un poco de la teoría relacionada con esto [un par de secciones más adelante](https://github.com/python-unsam/UNSAM_2020c2_Python/blob/master/Notas/03_Mas_Python/05_Objetos.md#ejemplo-de-asignaci%C3%B3n)._
+_Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy dificil, podés mirar un poco de la teoría relacionada con esto [un par de secciones más adelante](https://github.com/python-unsam/UNSAM_2020c2_Python/blob/master/Notas/03_Mas_Python/05_Objetos.md#ejemplo-de-asignaci%C3%B3n)._
 
 
 
