@@ -15,7 +15,7 @@ Para cerrar, presentamos una versión propia de un ejercicio lindísimo del curs
 * [4.2 Random](02_Random.md)
 * [4.3 NumPy](03_NumPy_Arrays.md)
 * [4.4 El album de Figuritas](04_Figuritas.md)
-* [4.5 Gráficos del Arbolado porteño](07_gráficos_de_arboles.md)
+* [4.5 Gráficos del Arbolado porteño](07_Arboles3_plt.md)
 * [4.6 Cierre de la cuarta clase](08_Cierre.md)
 
 

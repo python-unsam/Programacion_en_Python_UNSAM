@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Debuguear programas***)](03_quesera.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Gráficos del azar***)](03_gráficos_del_azar.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
 
 # 6.4 Especificación, Documentación y contratos+
 
@@ -484,5 +484,5 @@ def emails2(diccionario):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Debuguear programas***)](03_quesera.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Gráficos del azar***)](03_gráficos_del_azar.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
 

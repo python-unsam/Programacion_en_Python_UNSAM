@@ -67,14 +67,44 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 
 ## Ejercicios:
 
-### Ejercicio 5.11: Insertar un elemento en una listaUno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
+### Ejercicio 5.9: Insertar un elemento en una listaUno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
 Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un elemento y *e*. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
 
-Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.10](../05_Organización_y_Complejidad/03_BusqBinaria.md#ejercicio-510-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
+Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.8](../05_Organización_y_Complejidad/03_BusqBinaria.md#ejercicio-58-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
 
-### Ejercicio 5.12: Cálcular la complejidad de dos algoritmos
-En este ejercicio retomamos el \ref_ej
+### Ejercicio 5.10: Cálcular la complejidad de dos resoluciones de `propagar`
+En este ejercicio retomamos el [Ejercicio 3.5](../03_Mas_Python/03_IteradoresLista.md#ejercicio-35-propagación) de propagación del fuego en una hilera de fósforos. Queremos que calcules la complejidad en el peor caso de estas dos soluciones:
+
+```python
+# Versión 1
+def propagar1(lista):
+    n = len(lista)
+    for i in range(n):
+        for j in range(n-1):
+            if (lista[j]==0) and (lista[j+1]==1):
+                lista[j]=1
+            elif (lista[j]==1) and (lista[j+1]==0):
+                lista[j+1]=1
+    return lista
+```
+
+
+```python
+# Versión 2
+def propagar2(lista):
+    n = len(lista)
+    for j in range(n-1):
+        if (lista[j]==1) and (lista[j+1]==0):
+            lista[j+1]=1
+    for j in range(10-1,0,-1):
+        if (lista[j]==1) and (lista[j-1]==0):
+            lista[j-1]=1
+    return lista
+
+```
+
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Búsqueda binaria*)](03_BusqBinaria.md) \| [Próximo (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
 

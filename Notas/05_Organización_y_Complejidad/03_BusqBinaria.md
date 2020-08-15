@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_Funciones.md) \| [Próximo (4 Complejidad de algoritmos+)](05_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Complejidad de algoritmos+)](05_Complejidad.md)
 
 # 5.3 Búsqueda binaria*
 
@@ -9,9 +9,9 @@ Si la lista está previamente ordenada,
 
 ## Búsqueda sobre listas ordenadas
 
-Si la lista está previamente ordenada,  hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento `e` en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a *e* podemos estar seguros de que *e* no está en la lista, por lo que no es necesario continuar recorriendo el resto.
+Si la lista está previamente ordenada,  hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento `e` en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a `e` podemos estar seguros de que `e` no está en la lista, por lo que no es necesario continuar recorriendo el resto.
 
-### Ejercicio 5.8: Búsqueda lineal sobre listas ordenadas.Modificar la búsqueda lineal para el caso de listas ordenadas.
+### Ejercicio 5.6: Búsqueda lineal sobre listas ordenadas.Modificar la búsqueda lineal para el caso de listas ordenadas.
 En el peor caso, ¿cuál es nuestra nueva hipótesis sobre comportamiento del
 algoritmo? ¿Es realmente más eficiente?
 
@@ -184,13 +184,13 @@ algoritmo de búsqueda binaria, cuyo comportamiento es proporcional al
 *logaritmo* de la cantidad de elementos de la lista, y por lo tanto
 muchísimo más eficiente que la búsqueda lineal, espcialmente si la lista es larga.
 
-### Ejercicio 5.9: Búsqueda secuencial
+### Ejercicio 5.7: Búsqueda secuencial
 Búsqueda secuencial `b_sec.py`
 
-### Ejercicio 5.10: Búsqueda binaria
+### Ejercicio 5.8: Búsqueda binaria
 Búsqueda binaria `b_bin.py`
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Sobre Funciones)](02_Funciones.md) \| [Próximo (4 Complejidad de algoritmos+)](05_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Complejidad de algoritmos+)](05_Complejidad.md)
 

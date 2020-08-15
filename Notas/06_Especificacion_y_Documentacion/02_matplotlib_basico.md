@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md) \| [Próximo (7 Gráficos del azar***)](08_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Gráficos del azar***)](03_gráficos_del_azar.md)
 
-# 5.6 Matplotlib básico
+# 6.2 Matplotlib básico
 
 plots de lineas, una intro completa a traducir:
 [esto](https://scipy-lectures.org/intro/matplotlib/index.html)
@@ -341,5 +341,5 @@ Click on figure for solution.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md) \| [Próximo (7 Gráficos del azar***)](08_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Gráficos del azar***)](03_gráficos_del_azar.md)
 

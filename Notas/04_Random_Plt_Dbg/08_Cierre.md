@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
 
 # 4.6 Cierre de la cuarta clase
 
@@ -14,5 +14,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 ¡Gracias! Nos vemos en la próxima clase.
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
 

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
 
 # 4.4 El album de Figuritas
 
@@ -133,5 +133,5 @@ Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambi
 ### Ejercicio 4.25: 
 Por último, suponé que cinco amigues se juntan y deciden compartir la compra de figuritas y el llenado de sus cinco álbumes solidariamente. Calculá cuántos paquetes deberían comprar si deben completar todos. Hacé 100 repeticiones y compará el resultado con la compra individual que calculaste antes.
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
 

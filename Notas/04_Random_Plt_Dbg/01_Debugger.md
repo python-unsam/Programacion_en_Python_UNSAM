@@ -130,7 +130,7 @@ def spam(x):
     ...
 ```
 
-`repr()` te muestra una representación técnicamente mas precisa del valor de una variable, y no la representación *bonita* que solemos ver.  
+`repr()` te muestra una representación técnicamente más precisa del valor de una variable, y no la representación *bonita* que solemos ver.  
 
 ```python
 >>> from decimal import Decimal

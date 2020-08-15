@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Debuguear programas***)](02_quesera.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Matplotlib básico)](02_matplotlib_basico.md)
 
 # 6.1 Control de errores
 
@@ -126,7 +126,7 @@ bar()
 
 ### Excepciones integradas
 
-Hay mas de una veintena de tipos de excepciones ya integradas en Python. Normalmente, el nombre de la excepción indica qué anduvo mal (por ejemplo, se levanta un  `ValueError` si el valor suministrado no es adecuado). La siguiente no es una lista completa. Vas a encontrar más en la [documentación del lenguaje](https://docs.python.org/3/library/exceptions.html#bltin-exceptions).
+Hay más de una veintena de tipos de excepciones ya integradas en Python. Normalmente, el nombre de la excepción indica qué anduvo mal (por ejemplo, se levanta un  `ValueError` si el valor suministrado no es adecuado). La siguiente no es una lista completa. Vas a encontrar más en la [documentación del lenguaje](https://docs.python.org/3/library/exceptions.html#bltin-exceptions).
 
 ```python
 ArithmeticError
@@ -228,7 +228,7 @@ Esto atrapa todos los errores posibles, y puede complicar mucho el debugging cua
 
 ### Así es un poco mejor.
 
-Si va a atrapar todas las excepciones, aquí hay un modo algo mas decente:
+Si va a atrapar todas las excepciones, aquí hay un modo algo más decente:
 
 ```python
 try:
@@ -254,7 +254,7 @@ except Exception as e:
     raise
 ```
 
-Esto te permite, por ejemplo, llevar un registro de las excepciones (*log*) sin administrarla, y re-lanzarla para administrarla adecuadamente mas tarde.
+Esto te permite, por ejemplo, llevar un registro de las excepciones (*log*) sin administrarla, y re-lanzarla para administrarla adecuadamente más tarde.
 
 ### Buenas prácticas al administrar excepciones
 
@@ -342,5 +342,5 @@ Modificá `parse_csv()` de modo que el usuario pueda silenciar los informes de e
 Lograr un buen manejo o administración de errores es una de las partes más difíciles en la mayoría de los programas. Estás intentando preveer imprevistos. Como regla general, no silencies los errores. Es mejor informar los problemas y darle al usuario la opción de silenciarlos explícitamente. Un buen diálogo entre el código y el usuario facilita el debugging y el buen uso del programa. 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Debuguear programas***)](02_quesera.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Matplotlib básico)](02_matplotlib_basico.md)
 

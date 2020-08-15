@@ -371,7 +371,7 @@ Una limitación de las operaciones básicas de cadenas es que no ofrecen ningún
 >>>
 ```
 
-Para mas información sobre el módulo `re`, mirá la [documentación oficial en inglés](https://docs.python.org/3/library/re.html) o algún [tutorial en castellano](https://rico-schmidt.name/pymotw-3/re/index.html).
+Para más información sobre el módulo `re`, mirá la [documentación oficial en inglés](https://docs.python.org/3/library/re.html) o algún [tutorial en castellano](https://rico-schmidt.name/pymotw-3/re/index.html).
 
 
 ### Commentario

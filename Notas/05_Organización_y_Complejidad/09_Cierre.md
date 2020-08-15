@@ -1,10 +1,10 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Gráficos del azar***)](08_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
 
-# 5.8 Cierre*
+# 5.6 Cierre*
 
 Cierre clase
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 Gráficos del azar***)](08_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
 
