@@ -171,7 +171,7 @@ Nos resulta más cómodo usar un IDE como Spyder para hacer debugging y ése es 
 
 Fijate los nombres de cada ícono: 
 
-Ícono | Acción
+Nombre | Acción
 ---|---
 Debug | inicia el modo debug
 Step | da un paso en el programa
@@ -198,15 +198,15 @@ rta = tiene_a ('palabra')
 print(rta)
 ```
 
-Una vez que tengas el código copiado en el Spyder, vamos a ejecutarlo en modo Debug:
+Una vez que tengas el código copiado en el Spyder, vamos a ejecutarlo en modo _debug_:
 
-Primero entramos al modo DEBUG:  (Ctrl+F5) El programa queda pausado antes de comenzar. Notá los cambios en la ventana interactiva.
+Primero entramos al modo _debug_:  (Ctrl+F5) El programa queda pausado antes de comenzar. Notá los cambios en la ventana interactiva.
 
 Si damos un paso en el programa: ¿qué va a ocurrir? Debemos tratar de responder esta pregunta antes de avanzar cada paso. *Es nuestra predicción, contrastada con lo que realmente sucede, lo que delata el error*.
 
 ![Menu Debug, en Spyder](./debug2.jpg)
 
-Queremos ver la evolución de las variables en la solapa _Variable Explorer_ (solapa del centro en el panel superior de la derecha). El programa está en ejecución pero pausado. Sabemos que estamos en modo DEBUG por el prompt “ipdb” abajo.
+Queremos ver la evolución de las variables en la solapa _Variable Explorer_ (solapa del centro en el panel superior de la derecha). El programa está en ejecución pero pausado. Sabemos que estamos en modo _debug_ por el prompt “ipdb” abajo.
 
 Damos algunos pasos (con `Step`, Ctrl + F10) hasta llegar a la llamada a la función `tiene_a()` que queremos analizar. 
 
@@ -221,11 +221,11 @@ Como `i = 0` sabemos que es la primera iteración. Corroboramos que `n=7` (“pa
 
 La expresión resulta `False` ya que la primera letra de 'palabra' es la 'p' y no una 'a'. Pero entonces, la siguiente instrucción será el `return False` con lo que saldremos de la función habiendo sólo evaluado la primera letra de la palabra pasada como parámetro. ¿Esto es lo que queríamos?
 
-Acabamos de volver de la función. Las variables internas a la función ya no están visibles (salimos de su alcance o _scope_). El programa sigue en ejecución, en modo DEBUG.
+Acabamos de volver de la función. Las variables internas a la función ya no están visibles (salimos de su alcance o _scope_). El programa sigue en ejecución, en modo _debug_.
 
 ![Menu Debug, en Spyder](./debug5.jpg)
 
-Si seguimos dando pasos con `Step` (Ctrl + F10) vamos a pasar por el `print()` y terminar la ejecución del programa, saliendo del modo DEBUG.
+Si seguimos dando pasos con `Step` (Ctrl + F10) vamos a pasar por el `print()` y terminar la ejecución del programa, saliendo del modo _debug_.
 
 Si, en cambio, al llegar a la línea del `print()` en lugar de `Step` (Ctrl + F10) hubiéramos avanzado con un `Step Into` (Ctrl + F11), habríamos entrado en los detalles de la definición de esta función y la cosa se hubiera puesto muy técnica. Cuando esto ocurre es útil usar el `Step Return` (Ctrl + Shift + F11) para salir de tanto nivel de detalle.
 
