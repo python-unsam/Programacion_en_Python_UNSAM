@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md) \| [Próximo (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md) \| [Próximo (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
 
 # 4. Aleatoridad
 ### **Este material está en revisión**
@@ -19,4 +19,4 @@ Para cerrar, presentamos una versión propia de un ejercicio lindísimo del curs
 * [4.6 Cierre de la cuarta clase](08_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md) \| [Próximo (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md) \| [Próximo (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)

@@ -209,7 +209,7 @@ Dicho ésto, hay que decir también que usar variables globales se considera una
 
 ### Pasaje de argumentos
 
-Cuando llamás a una función, los argumentos son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales (ver [Sección 3.5](../03_Mas_Python/05_Objetos.md#35-objetos)). Si le pasás tipos mutables, como listas ó diccionarios, la función *sí* los puede modificar.
+Cuando llamás a una función, los argumentos son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales (ver [Sección 3.5](../03_Listas_y_Listas/05_Objetos.md#35-objetos)). Si le pasás tipos mutables, como listas ó diccionarios, la función *sí* los puede modificar.
 
 ```python
 def foo(items):
@@ -322,7 +322,7 @@ Modifiquemos la función `parse_csv` de modo que permita al usuario elegir (opci
 >>>
 ```
 
-Vimos un ejemplo de un selector de columnas en el [Ejercicio 3.10](../03_Mas_Python/04_Comprension_Listas.md#ejercicio-310-extraer-datos-de-una-arhcivo-csv).
+Vimos un ejemplo de un selector de columnas en el [Ejercicio 3.10](../03_Listas_y_Listas/04_Comprension_Listas.md#ejercicio-310-extraer-datos-de-una-arhcivo-csv).
 De todos modos, esta es otra forma de resolverlo:
 
 ```python
@@ -413,7 +413,7 @@ Modificá la función `parse_csv()` de modo que permita, opcionalmente,  convert
 >>>
 ```
 
-Ya vimos esto en el [Ejercicio 3.11](../03_Mas_Python/05_Objetos.md#ejercicio-311-datos-de-primera-clase). Vas a necesitar insertar la siguiente porción de código en tu implementación:
+Ya vimos esto en el [Ejercicio 3.11](../03_Listas_y_Listas/05_Objetos.md#ejercicio-311-datos-de-primera-clase). Vas a necesitar insertar la siguiente porción de código en tu implementación:
 
 ```python
 ...

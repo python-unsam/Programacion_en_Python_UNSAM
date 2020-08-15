@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md)
 
 # 2. Trabajando con datos
 
@@ -20,4 +20,4 @@ Recordá que, aunque no termines todos, completar el formulario del final de cad
 * [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Mas_Python/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Errores, algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md)

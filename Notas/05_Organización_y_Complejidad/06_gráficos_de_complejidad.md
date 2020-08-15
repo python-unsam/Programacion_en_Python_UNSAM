@@ -4,7 +4,7 @@
 
 ## ideas:
 
-- Matplotlib básico para comparar algoritmos
+- Introducir gráficos de lineas con Matplotlib básico para comparar algoritmos
 - Contar comparaciones
 - Ver 2do parcial 2020C1
 

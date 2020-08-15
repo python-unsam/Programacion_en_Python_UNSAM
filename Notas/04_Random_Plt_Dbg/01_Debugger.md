@@ -4,7 +4,7 @@
 
 Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
 
-Vimos en la  [Sección 3.2](../03_Mas_Python/02_Errores3.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos sin una guía. En esta sección vamos a tratar de sistematizar las herramientas que tenés para resolver este tipo de problemas.
+Vimos en la  [Sección 3.2](../03_Listas_y_Listas/02_Errores3.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos sin una guía. En esta sección vamos a tratar de sistematizar las herramientas que tenés para resolver este tipo de problemas.
 
 Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente correrlo algunas veces usando tests que permitan poner en evidencia esos bugs.
 
@@ -180,7 +180,7 @@ Step Return | ejecuta hasta salir de la función
 Continue | retoma la ejecución normal
 Stop | detiene el programa
 
-Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Mas_Python/02_Errores3.md#ejercicio-31-tres-tipos-de-errores) para que veas la utilidad del debugger:
+Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-tres-tipos-de-errores) para que veas la utilidad del debugger:
 
 
 ```python
@@ -259,7 +259,7 @@ print(f'Entrada {l}, Salida: {m}')
 Deberías observar que la función modifica el valor de la lista de entrada. Eso no debería ocurrir: una función nunca debería modificar los parámetros salvo que sea lo esperado.  Usá el debugger y el explorador de variables para determinar cuál es el primer **paso clave** en el que se modifica el valor de esta variable.
 
 ### Ejercicio 4.2: Más debugger
-Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Mas_Python/02_Errores3.md#ejercicio-31-tres-tipos-de-errores), usá el debugger para analizar el siguiente código:
+Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-tres-tipos-de-errores), usá el debugger para analizar el siguiente código:
 
 ```python
 import csv

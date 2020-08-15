@@ -4,10 +4,10 @@
 
 * [1. Introducción a Python](01_Introduccion/00_Resumen.md)
 * [2. Trabajando con datos](02_Datos/00_Resumen.md)
-* [3. Errores, algoritmos sobre listas y comprensión de listas](03_Mas_Python/00_Resumen.md)
+* [3. Errores, algoritmos sobre listas y comprensión de listas](03_Listas_y_Listas/00_Resumen.md)
 * [4. Aleatoridad](04_Random_Plt_Dbg/00_Resumen.md)
 * [5. Organzación de programas](05_Organización_y_Complejidad/00_Resumen.md)
-* [6. Errores y bugs, especificación y documentación](06_Especificacion_y_Documentacion/00_Resumen.md)
+* [6. Errores y bugs, especificación y documentación](06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 * [7. Creación de módulos, SO y Pandas](07_Modulos_Pandas_SO/00_Resumen.md)
 * [8. Clases y Objetos](08_OOP_Seaborn/00_Resumen.md)
 * [9. Optativos](09_Optativos/00_Resumen.md)
