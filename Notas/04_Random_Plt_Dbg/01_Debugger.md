@@ -165,9 +165,13 @@ def mi_funcion():
 
 Podés a encontrar [instrucciones detalladas](https://docs.python.org/3/library/pdb.html) sobre como usarlo. 
 
-Nos resulta más cómodo usar un IDE como Spyder para hacer debugging y ése es el método que describiremos aquí. Fijate los nombres de cada ícono: 
+Nos resulta más cómodo usar un IDE como Spyder para hacer debugging y ése es el método que describiremos aquí. Este es el menú desplegable del debugger:
 
-Ícono | acción
+![Menu Debug, en Spyder](./debug1.jpg)
+
+Fijate los nombres de cada ícono: 
+
+Ícono | Acción
 ---|---
 Debug | inicia el modo debug
 Step | da un paso en el programa
@@ -176,9 +180,7 @@ Step Return | ejecuta hasta salir de la función
 Continue | retoma la ejecución normal
 Stop | detiene el programa
 
-![Menu Debug, en Spyder](./debug1.png)
-
-Vamos a usar el siguiente código que ya analizaste en el [Ejercicio 3.1](../03_Mas_Python/02_Errores3.md#ejercicio-31-tres-tipos-de-errores) para que veas la utilidad del debugger:
+Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Mas_Python/02_Errores3.md#ejercicio-31-tres-tipos-de-errores) para que veas la utilidad del debugger:
 
 
 ```python
@@ -192,42 +194,42 @@ def tiene_a(expresion):
             return False
         i += 1
 
-print (tiene_a ('palabra'))
+rta = tiene_a ('palabra')
+print(rta)
 ```
 
-Una vez que tengas el código, vamos a ejecutarlo en modo Debug:
+Una vez que tengas el código copiado en el Spyder, vamos a ejecutarlo en modo Debug:
 
-* Primero entramos al modo DEBUG:  (Ctrl+F5) El programa queda pausado antes de comenzar. Notá los cambios en la ventana interactiva.
+Primero entramos al modo DEBUG:  (Ctrl+F5) El programa queda pausado antes de comenzar. Notá los cambios en la ventana interactiva.
 
-Si damos un paso en el programa: ¿qué va a ocurrir? Esta pregunta siembre debe preceder a avanzar. *Es nuestra predicción, contrastada con lo que realmente sucede, lo que delata el error*.
+Si damos un paso en el programa: ¿qué va a ocurrir? Debemos tratar de responder esta pregunta antes de avanzar cada paso. *Es nuestra predicción, contrastada con lo que realmente sucede, lo que delata el error*.
 
-![Menu Debug, en Spyder](./debug2.png)
+![Menu Debug, en Spyder](./debug2.jpg)
 
-Queremos ver la solapa Variable Explorer (centro, derecha). Sabemos que el programa está en ejecución pero pausado por el “Stop” rojo de la derecha. Sabemos que estamos en modo DEBUG por el prompt “ipdb” abajo.
+Queremos ver la evolución de las variables en la solapa _Variable Explorer_ (solapa del centro en el panel superior de la derecha). El programa está en ejecución pero pausado. Sabemos que estamos en modo DEBUG por el prompt “ipdb” abajo.
 
-![Menu Debug, en Spyder](./debug3.png)
+Damos algunos pasos (con `Step`, Ctrl + F10) hasta llegar a la llamada a la función `tiene_a()` que queremos analizar. 
 
-Pedimos algunos Step Into (Ctrl + F11) hasta llegar a la línea 9. Vemos que todas las variable internas de la función están definidas y con sus valores asignados (arriba, derecha).
+![Menu Debug, en Spyder](./debug3.jpg)
 
-Como i=0 sabemos que es la primera iteración. Corroboramos que n=7 (“palabra” tiene 7 letras). En este punto se evalúa `if palabra[i] == 'a':`, y saltaremos a alguna de las dos ramas de ejecución según la evaluación resulte True o False.
+A esta altura, no queremos simplemente dar un paso (eso ejecutaría la función de una) sino entrar en los detalles de esta función. Para eso usamos `Step Into` (Ctrl + F11) de forma de entrar en la ejecución de la función `tiene_a()`. Una vez dentro, seguimos dando pasos (con `Step`, Ctrl + F10), siempre pensando qué esperamos que haga la función y observando la evolución de las variables en el explorador de variables. Sigamos así hasta llegar al condicional `if`. Vemos en el _Variable Explorer_ que todas las variables internas de la función están definidas y con sus valores asignados.
 
-![Menu Debug, en Spyder](./debug4.png)
+![Menu Debug, en Spyder](./debug4.jpg)
 
-La expresión resulta `False`, lo que concuerda con lo esperado porque palabra[0] es “p” lo cual es distinto de 'a'.
+Como `i = 0` sabemos que es la primera iteración. Corroboramos que `n=7` (“palabra” tiene 7 letras). En este punto se evalúa `if palabra[i] == 'a':`, y saltaremos a alguna de las dos ramas de ejecución según la evaluación resulte `True` o `False`.
 
-La próxima instrucción será RETURN !!! conlo que saldremos de la function y aún no evaluamos mas que la primera posición. Esto es lo que deseamos ?
 
-Para no entrar dentro del `return` que es complicada pedimos un Step (Ctrl + F10 ó F12)
+La expresión resulta `False` ya que la primera letra de 'palabra' es la 'p' y no una 'a'. Pero entonces, la siguiente instrucción será el `return False` con lo que saldremos de la función habiendo sólo evaluado la primera letra de la palabra pasada como parámetro. ¿Esto es lo que queríamos?
 
-![Menu Debug, en Spyder](./debug5.png)
+Acabamos de volver de la función. Las variables internas a la función ya no están visibles (salimos de su alcance o _scope_). El programa sigue en ejecución, en modo DEBUG.
 
-Acabamos de volver de la function. Las variables internas a la función ya no están visibles (salimos de su "scope"). El programa sigue en ejecución, (flechas).
+![Menu Debug, en Spyder](./debug5.jpg)
 
-Salir de la función después de haber analizado solo la primera letra no era lo deseado. Que pasó ? A pensar !
+Si seguimos dando pasos con `Step` (Ctrl + F10) vamos a pasar por el `print()` y terminar la ejecución del programa, saliendo del modo DEBUG.
 
-![Menu Debug, en Spyder](./debug6.png)
+Si, en cambio, al llegar a la línea del `print()` en lugar de `Step` (Ctrl + F10) hubiéramos avanzado con un `Step Into` (Ctrl + F11), habríamos entrado en los detalles de la definición de esta función y la cosa se hubiera puesto muy técnica. Cuando esto ocurre es útil usar el `Step Return` (Ctrl + Shift + F11) para salir de tanto nivel de detalle.
 
-El programa terminó. Las flechas indican el STOP apagado y el prompt normal. Tenemos control del IDE y la tarea ahora es pensar porqué la función terminó antes de lo deseado.
+En todo caso, lo que observamos en esta ejecición es que salimos de la función después de haber analizado sólo la primera letra de la palabra. ¿Es correcto esto? ¿Donde está el error? ¿Cómo lo podemos resolver?
 
 **Comentario.** Recorrer la ejecución de un programa como un simple expectador no nos muestra claramente un error en el código. Es la incongruencia entre lo esperado y lo que realmente sucede lo que lo marca. Esto exige mucha atención para, antes de ejecutar cada paso, preguntarse: ¿qué espero que pase? Luego, al avanzar un paso en la ejecución, puede ocurrir que lo que esperamos que pase no sea lo que realmente pasa. Entonces estamos en un _paso clave_ de la  ejecución, que nos marca que estamos ó frente a un error ó frente a la oportunidad de mejorar nuestra comprensión del código.
 
