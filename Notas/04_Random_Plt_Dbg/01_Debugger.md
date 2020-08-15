@@ -198,21 +198,24 @@ rta = tiene_a ('palabra')
 print(rta)
 ```
 
-Una vez que tengas el código copiado en el Spyder, vamos a ejecutarlo en modo _debug_:
+Una vez que tengas el código copiado en el Spyder, vamos a ejecutarlo en _modo debug_:
 
-Primero entramos al modo _debug_:  (Ctrl+F5) El programa queda pausado antes de comenzar. Notá los cambios en la ventana interactiva.
+Primero entramos al _modo debug_ (Ctrl+F5): El programa queda pausado antes de comenzar. Notá los cambios en la ventana interactiva.
 
-Si damos un paso en el programa: ¿qué va a ocurrir? Debemos tratar de responder esta pregunta antes de avanzar cada paso. *Es nuestra predicción, contrastada con lo que realmente sucede, lo que delata el error*.
 
 ![Menu Debug, en Spyder](./debug2.jpg)
 
-Queremos ver la evolución de las variables en la solapa _Variable Explorer_ (solapa del centro en el panel superior de la derecha). El programa está en ejecución pero pausado. Sabemos que estamos en modo _debug_ por el prompt “ipdb” abajo.
+Si damos un paso en el programa: ¿qué va a ocurrir? Debemos tratar de responder esta pregunta antes de avanzar cada paso. *Es nuestra predicción, contrastada con lo que realmente sucede, lo que delata el error*.
+
+Queremos ver la evolución de las variables en la solapa _Variable Explorer_ (solapa del centro en el panel superior de la derecha). El programa está en ejecución pero pausado. Sabemos que estamos en _modo debug_ por el prompt `ipdb>` abajo.
 
 Damos algunos pasos (con `Step`, Ctrl + F10) hasta llegar a la llamada a la función `tiene_a()` que queremos analizar. 
 
 ![Menu Debug, en Spyder](./debug3.jpg)
 
-A esta altura, no queremos simplemente dar un paso (eso ejecutaría la función de una) sino entrar en los detalles de esta función. Para eso usamos `Step Into` (Ctrl + F11) de forma de entrar en la ejecución de la función `tiene_a()`. Una vez dentro, seguimos dando pasos (con `Step`, Ctrl + F10), siempre pensando qué esperamos que haga la función y observando la evolución de las variables en el explorador de variables. Sigamos así hasta llegar al condicional `if`. Vemos en el _Variable Explorer_ que todas las variables internas de la función están definidas y con sus valores asignados.
+Fijate que el debugger pasó por la línea de definición de la función (y ahora sabe dónde ir a buscarla) pero nunca entró al cuerpo de la función aún. Eso va a ocurrir recién al llamarla.
+
+A esta altura, no queremos simplemente dar un paso (eso ejecutaría la función entera, de una) sino entrar en los detalles de esta función. Para eso usamos `Step Into` (Ctrl + F11) de forma de entrar en la ejecución de la función `tiene_a()`. Una vez dentro, seguimos dando pasos (con `Step`, Ctrl + F10), siempre pensando qué esperamos que haga la función y observando la evolución de las variables en el explorador de variables. Sigamos así hasta llegar al condicional `if`. Vemos en el _Variable Explorer_ que todas las variables internas de la función están definidas y con sus valores asignados.
 
 ![Menu Debug, en Spyder](./debug4.jpg)
 
@@ -221,40 +224,63 @@ Como `i = 0` sabemos que es la primera iteración. Corroboramos que `n=7` (“pa
 
 La expresión resulta `False` ya que la primera letra de 'palabra' es la 'p' y no una 'a'. Pero entonces, la siguiente instrucción será el `return False` con lo que saldremos de la función habiendo sólo evaluado la primera letra de la palabra pasada como parámetro. ¿Esto es lo que queríamos?
 
-Acabamos de volver de la función. Las variables internas a la función ya no están visibles (salimos de su alcance o _scope_). El programa sigue en ejecución, en modo _debug_.
-
 ![Menu Debug, en Spyder](./debug5.jpg)
 
-Si seguimos dando pasos con `Step` (Ctrl + F10) vamos a pasar por el `print()` y terminar la ejecución del programa, saliendo del modo _debug_.
+Acabamos de volver de la función. Las variables internas a la función ya no están visibles (salimos de su alcance o _scope_). El programa sigue en ejecución, en _modo debug_.
 
-Si, en cambio, al llegar a la línea del `print()` en lugar de `Step` (Ctrl + F10) hubiéramos avanzado con un `Step Into` (Ctrl + F11), habríamos entrado en los detalles de la definición de esta función y la cosa se hubiera puesto muy técnica. Cuando esto ocurre es útil usar el `Step Return` (Ctrl + Shift + F11) para salir de tanto nivel de detalle.
+Si seguimos dando pasos con `Step` (Ctrl + F10) vamos a pasar por el `print()` y terminar la ejecución del programa, saliendo del _modo debug_.
 
-En todo caso, lo que observamos en esta ejecición es que salimos de la función después de haber analizado sólo la primera letra de la palabra. ¿Es correcto esto? ¿Donde está el error? ¿Cómo lo podemos resolver?
+Si, en cambio, al llegar a la línea del `print()` en lugar de `Step` (Ctrl + F10) avanzáramos con un `Step Into` (Ctrl + F11), entraríamos en los detalles de la definición de esta función y la cosa se pondría un toque técnica. Cuando esto ocurre es útil usar el `Step Return` (Ctrl + Shift + F11) para salir de tanto nivel de detalle.
 
-**Comentario.** Recorrer la ejecución de un programa como un simple expectador no nos muestra claramente un error en el código. Es la incongruencia entre lo esperado y lo que realmente sucede lo que lo marca. Esto exige mucha atención para, antes de ejecutar cada paso, preguntarse: ¿qué espero que pase? Luego, al avanzar un paso en la ejecución, puede ocurrir que lo que esperamos que pase no sea lo que realmente pasa. Entonces estamos en un _paso clave_ de la  ejecución, que nos marca que estamos ó frente a un error ó frente a la oportunidad de mejorar nuestra comprensión del código.
+En todo caso, lo que observamos en esta ejecución de `tiene_a()` es que salimos de la función después de haber analizado sólo la primera letra de la palabra. ¿Es correcto esto? ¿Donde está el error? ¿Cómo lo podemos resolver?
+
+**Comentario.** Recorrer la ejecución de un programa como un simple expectador no nos muestra claramente un error en el código. Es la incongruencia entre lo esperado y lo que realmente sucede lo que lo marca. Esto exige mucha atención para, antes de ejecutar cada paso, preguntarse: ¿qué espero que ocurra? Luego, al avanzar un paso en la ejecución, puede ocurrir que lo que esperamos que pase no sea lo que realmente pasa. Entonces estamos en un **paso clave** de la  ejecución, que nos marca que estamos frente a una de dos: ó frente a un error en el código ó frente a la oportunidad de mejorar nuestra comprensión del mismo.
 
 ### Ejercicio 4.1: Debugger
-
-
-Ingresá el siguiente código en el IDE, tal como está. 
+Ingresá y corré el siguiente código en tu IDE:
 
 ```python
 def invertir_lista(lista):
-    '''Recibe una lista L, develve otra lista invertida(L).'''
+    '''Recibe una lista L y la develve invertida.'''
     invertida = []
     i=len(lista)
     while i > 0:    # tomo el último elemento 
-        invertida.append (lista.pop(i))  #
         i=i-1
+        invertida.append (lista.pop(i))  #
     return invertida
 
 l = [1, 2, 3, 4, 5]    
 m = invertir_lista(l)
 print(f'Entrada {l}, Salida: {m}')
 ```
-Ahora usá el debugger para ver cada uno de los errores, y devolver el código corregido. Acordate: Que haga lo que debe y no haga lo que no debe.
 
-Vas a encontrar: problemas con el índice `i` , y problemas con la manipulación de la lista `lista`, que debería quedar intacta.
+Deberías observar que la función modifica el valor de la lista de entrada. Eso no debería ocurrir: una función nunca debería modificar los parámetros salvo que sea lo esperado.  Usá el debugger y el explorador de variables para determinar cuál es el primer **paso clave** en el que se modifica el valor de esta variable.
+
+### Ejercicio 4.2: Más debugger
+Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Mas_Python/02_Errores3.md#ejercicio-31-tres-tipos-de-errores), usá el debugger para analizar el siguiente código:
+
+```python
+import csv
+from pprint import pprint
+
+def leer_camion(nombre_archivo):
+    camion=[]
+    registro={}
+    with open(nombre_archivo,"rt") as f:
+        filas = csv.reader(f)
+        encabezado = next(filas)
+        for fila in filas:
+            registro[encabezado[0]] = fila[0]
+            registro[encabezado[1]] = int(fila[1])
+            registro[encabezado[2]] = float(fila[2])
+            camion.append(registro)
+    return camion
+
+camion = leer_camion("Data/camion.csv")
+pprint(camion)
+```
+
+Observá en particular lo que ocurre al leer la segunda fila de datos del archivo y guardarlos en la variable `registro` con los datos ya guardados en la lista `camion`.
 
 
 
