@@ -236,6 +236,8 @@ En todo caso, lo que observamos en esta ejecución de `tiene_a()` es que salimos
 
 **Comentario.** Recorrer la ejecución de un programa como un simple expectador no nos muestra claramente un error en el código. Es la incongruencia entre lo esperado y lo que realmente sucede lo que lo marca. Esto exige mucha atención para, antes de ejecutar cada paso, preguntarse: ¿qué espero que ocurra? Luego, al avanzar un paso en la ejecución, puede ocurrir que lo que esperamos que pase no sea lo que realmente pasa. Entonces estamos en un **paso clave** de la  ejecución, que nos marca que estamos frente a una de dos: ó frente a un error en el código ó frente a la oportunidad de mejorar nuestra comprensión del mismo.
 
+## Ejercicios
+
 ### Ejercicio 4.1: Debugger
 Ingresá y corré el siguiente código en tu IDE:
 
