@@ -145,7 +145,7 @@ Con `random.random()` generamos valores aleatorios entre 0 y 1 con una distribuc
 
 La distribución normal tiene dos parámetros, denominados media y desvío estándar y denotados usualmente con las letras griegas _mu_ y _sigma_, respectivamente.
 
-![Distribución normal](normal.png)
+![Distribución normal](normal.jpg)
 
 La función `random.normalvariate(mu,sigma)` genera número aleatorios según esta distribución de probabilidades. Por ejemplo, usando `mu = 0` y `sigma = 1` podemos generar 6 valores aleatorios así:
 
