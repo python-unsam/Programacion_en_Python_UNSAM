@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Matplotlib básico)](05_matplotlib_basico.md) \| [Próximo (7 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](05_matplotlib_basico.md) \| [Próximo (8 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
 
-# 4.6 Gráficos de Figuritas y Dados***
+# 4.7 Gráficos de Figuritas y Dados***
 
 ## Ploteando el azar
 
@@ -12,5 +12,5 @@
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Matplotlib básico)](05_matplotlib_basico.md) \| [Próximo (7 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](05_matplotlib_basico.md) \| [Próximo (8 Gráficos del Arbolado porteño)](07_gráficos_de_arboles.md)
 

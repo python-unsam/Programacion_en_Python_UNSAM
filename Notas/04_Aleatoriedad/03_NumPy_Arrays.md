@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Random)](02_Random.md) \| [Próximo (4 El album de Figuritas)](04_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Random)](02_Random.md) \| [Próximo (5 El album de Figuritas)](04_Figuritas.md)
 
-# 4.3 NumPy
+# 4.4 NumPy
 
 Esta es una introducción a la biblioteca NumPy (**Numerical Python**) de Python. Se trata de una colección de módulos de código abierto que tiene aplicaciones en casi todos los campos de las ciencias y de la ingeniería. Es el estándar para trabajar con datos numéricos en Python. Muchas otras bibliotecas y módulos de Python como Pandas, SciPy, Matplotlib, scikit-learn, scikit-image usan NumPy.
 
@@ -144,7 +144,7 @@ También podés usar `np.linspace()` para crear un vector especificando el **pri
 array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 ```
 
-### Ejercicio 4.7: arange() y linspace()
+### Ejercicio 4.8: arange() y linspace()
 Generá un vector que tenga los número impares entre el 1 y el 19 inclusive usando `arange()`. Repetí ele ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
 
 **Especificar el tipo de datos**
@@ -833,11 +833,11 @@ array([1., 2., 3., 4., 5., 6., 7., 8.])
 
 Las funciones `savetxt()` y `loadtxt()` aceptan parámentros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
 
-### Ejercicio 4.8: Guardar temperaturas
-Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 4.6](../04_Aleatoriedad/02_Random.md#ejercicio-46-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99.
+### Ejercicio 4.9: Guardar temperaturas
+Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 4.7](../04_Aleatoriedad/02_Random.md#ejercicio-47-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99.
 
 
-### Ejercicio 4.9: Empezando a plotear
+### Ejercicio 4.10: Empezando a plotear
 En un rato vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
 
 Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, plotée un histograma de las temperaturas simuladas:
@@ -850,5 +850,5 @@ plt.hist(tempraturas,bins=25)
 Ajustá la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Random)](02_Random.md) \| [Próximo (4 El album de Figuritas)](04_Figuritas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Random)](02_Random.md) \| [Próximo (5 El album de Figuritas)](04_Figuritas.md)
 

@@ -42,7 +42,7 @@ _Sugerencia: basate en la función `leer_camion()` y usá también el comando `z
 
 _Observación: La columna que indica el nombre del parque en el que se encuentra el árbol se llama `'espacio_ve'` en el archivo CSV._
 
-Probá con el parque "GENERAL PAZ" para tener un ejemplo de trabajo.
+Probá con el parque "GENERAL PAZ" para tener un ejemplo de trabajo, debería darte una lista con 690 árboles.
 
 ### Ejercicio 2.23: Determinar las especies en un parque
 Escribí una función `especies(lista_arboles)` que tome una lista de árboles como la generada en el ejercicio anterior y devuelva el conjunto de especies (la columna `'nombre_com'` del archivo) que figuran en la lista.

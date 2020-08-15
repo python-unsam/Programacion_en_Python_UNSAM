@@ -1,12 +1,31 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Debuguear programas+)](01_debugger.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas+)](01_Debugger.md) \| [Próximo (3 Random)](02_Random.md)
 
-# 4.1 Debuggear programas+
+# 4.2 Debuguear programas+
 
-Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
+Python tiene un debiugger que te permite probar porciones de código. Esto es sencillo, especialmente en IDEs como Spyder. 
 
-Vimos en la  [Sección 3.2](../03_Mas_Python/02_Errores3.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos sin una guía. En esta sección vamos a tratar de sistematizar las herramientas que tenés para resolver este tipo de problemas.
+El siguiente fragmento de código puede parecer -a primera vista- que hace lo esperado. Pero si lo ejecutás vas a ver que no funciona:
 
-Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente correlo algunas veces usando tests que permitan poner en evidencia esos bugs.
+```python
+def invertir_lista(lista):
+    '''Recibe una lista L y la develve invertida.'''
+    invertida = []
+    i = len(lista)
+    while i > 0:    # tomo el último elemento 
+        invertida.append(lista.pop(i))  #
+        i = i-1
+    return invertida
+```
+
+`invertir_lista` hace un par de cosas mal. Básicamente no hace lo que debe, y hace lo que no debe.
+
+Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Usualmente se trata de errores semánticos, según la terminología de la [Sección 3.2](../03_Mas_Python/02_Errores3.md#tres-tipos-de-errores).
+
+Un programa debe 
+1. hacer lo que debería hacer,
+2. no hacer lo que no debería hacer.
+
+Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente _limpiarlo_ usando tests que permitan poner en evidencia esos bugs.
 
 Diseñar un conjunto de _tests_ adecuado no es una tarea sencilla y es frecuente que queden casos especiales que causen errores inesperados.
 
@@ -66,11 +85,11 @@ AssertionError: Necesito un entero (int)
 >>>
 ```
 
-## Debuggear a mano
+## Debuguear 
 
 Los errores en tiempo de ejecución son difíciles de rastrear. Especialmente errores que sólo aparecen bajo cierta combinación particular de condiciones que resulta en que el programa no pueda continuar o de un resultado inesperado. Si tu programa corre, pero no da el resultado que esperás, o _se cuelga_ y no entendés porqué, tenés algunas herramientas concretas. A continuación veremos algunas metodologías específicas que permiten rastrear el orígen del problema.
 
-### ¿Que dice un traceback?
+### **¿Que dice un traceback?**
 
 Si te da un error, lo primero que podés hacer es intentar entender la causa del error usando como punto de partida el "traceback":
 
@@ -97,7 +116,7 @@ Sin embargo a veces esto no proporciona suficiente información (por ejemplo, no
 
 *Sugerencia: copiá el traceback en Google.* Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y sepa qué lo causa, o cómo evitarlo. 
 
-### Usá el modo [REPL](https://es.wikipedia.org/wiki/REPL) de Python
+**Usá el modo [REPL](https://es.wikipedia.org/wiki/REPL) de Python**
 
 Si usás Python desde la línea de comandos, podés usarlo pasándoles un `-i` como parámetro antes del script a ejecutar. Cuando el intérprete de Python termine de ejecutar el script se va a quedar en modo interactivo (en lugar de volver al sistema opertaivo. Podés averiguar en qué estado quedó el sistema. 
 
@@ -118,7 +137,7 @@ AttributeError: 'int' object has no attribute 'append'
 
 Este *parámetro* (el `-i`, que ya usamos antes) preserva el estado del intérprete al finalizar el script y te permite interrogarlo sobre el estado de las variables y obtener información que de otro modo perderías. En el ejemplo de recién interesa saber que es `x` y como llegó a ese estado. Si estás usando un IDE esta posiblidad de interacción suele ocurrir naturalmente.
 
-### Debuggear con `print`
+### Debugging con `print`
 
 `print()` es una forma rápida y sencilla de permitir que el programa se ejecute (casi) normalmente mientas te da información del estado de las variables. Si elegís bien las variables que mostrár, es probable que digas "¡¡Ajá!!".
 
@@ -144,18 +163,15 @@ Decimal('3.4')
 >>>
 ```
 
-### Debuggear con lápiz y papel 
+**Papel y lápiz**
 
 Muchas veces uno *asume* que el intérprete está haciendo algo. Si agarrás un lápiz y un papel y _hacés de intérprete_ anotando el estado de cada variable y siguiendo las instrucciones del programa paso a paso, es posible que entiendas que las cosas no son como creías.
 
-Estas alternativas son útiles pero un poco primitivas. La mejor forma de debuggear un programa en Python es usar el degugger.
+Estas alternativas son útiles pero un poco primitivas. La mejor forma de debuguear un programa en Python es usar el degugger.
 
+### El debugger de Python
 
-
-## El debugger de Python (pdb)
-
-Es posible usar el debugger de Python directamente en el intérprete (sin interfaz gráfica) para seguir el funcionamiento de un programa. No vamos a entrar en esos detalles aca.
-
+Podés iniciar a mano el debugger dentro de un programa en Python, no nos vamos a explayar aquí, pero es posible usarlo manualmente, sin interfaz gráfica, para seguir el funcionamiento de un programa. 
 
 ```python
 def mi_funcion():
@@ -164,16 +180,15 @@ def mi_funcion():
     ...
 ```
 
-La función `breakpoint ()` inicia el debugger. Podés a encontrar [instrucciones detalladas](https://docs.python.org/3/library/pdb.html) sobre como usarlo. 
+La función `breakpoint ()` inicia el debugger. Vas a encontrar [instrucciones detalladas](https://docs.python.org/3/library/pdb.html) sobre como usarlo. 
 
-Nos resulta más agradable usar un IDE como Spyder para hacer debugging y ése es el método que describiremos aquí. Fijate los nombres de cada ícono: 
- 
- Debug | inicia el modo debug.
- Step | da un paso en el programa
- Step Into | entra en la función referida
- Step Return | ejecuta hasta salir de la función
- Continue | retoma la ejecución normal
- Stop | detiene el programa.  
+Aunque esto funciona es mucho mas agradable usar un IDE como Spyder para hacer debugging y ése es el método que describiremos aquí. Fijate los nombres de cada ícono: 
+	Debug: 			inicia el modo debug.
+	Step:  			da un paso en el programa
+	Step Into: 		entra en la función referida
+	Step Return: 	ejecuta hasta salir de la función
+	Continue: 		retoma la ejecución normal
+	Stop: 			detiene el programa.  
 
 ![Menu Debug, en Spyder](./debug1.png)
 
@@ -181,14 +196,14 @@ Vamos a usar el siguiente código para que veas la utilidad del debugger:
 
 ```python
 def tiene_a(palabra):
- n = len(palabra)
- i = 0
- while i < n:
-  if palabra[i] == 'a':
-   return True
-  else:
-   return False
-  i += 1
+	n = len(palabra)
+	i = 0
+	while i < n:
+		if palabra[i] == 'a':
+			return True
+		else:
+			return False
+		i += 1
 
 print (tiene_a ('palabra'))
 ```
@@ -230,12 +245,12 @@ El programa terminó. Las flechas indican el STOP apagado y el prompt normal. Te
 ### Comentario
 Recorrer la ejecución de un programa como un simple expectador no te va a ayudar e encontrar el error. Es la incongruencia entre lo predicho y lo que realmente sucede lo que nos abre los ojos. Es una tarea que exije mucha atención, pero bien hecha delata el error en una sóla pasada.
 
-### Ejercicio 4.1: Debugger
-Ingresá el siguiente código en el IDE, tal como está. 
+### Ejercicio 4.2: Debugger
+Ingresá el siguiente código en el IDE, tal como está. Es el mismo del principio de esta sección. 
 
 ```python
 def invertir_lista(lista):
- '''Recibe una lista L, develve otra lista invertida(L).'''
+	'''Recibe una lista L, develve otra lista invertida(L).'''
     invertida = []
     i=len(lista)
     while i > 0:    # tomo el último elemento 
@@ -249,5 +264,5 @@ Vas a encontrar: problemas con el índice `i` , y problemas con la manipulación
 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Debuguear programas+)](01_debugger.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas+)](01_Debugger.md) \| [Próximo (3 Random)](02_Random.md)
 
