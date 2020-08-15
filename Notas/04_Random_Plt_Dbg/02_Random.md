@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas+)](01_Debugger.md) \| [Próximo (3 NumPy)](03_NumPy_Arrays.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas)](01_Debugger.md) \| [Próximo (3 NumPy)](03_NumPy_Arrays.md)
 
 # 4.2 Random
 
@@ -165,5 +165,5 @@ _Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqu
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas+)](01_Debugger.md) \| [Próximo (3 NumPy)](03_NumPy_Arrays.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas)](01_Debugger.md) \| [Próximo (3 NumPy)](03_NumPy_Arrays.md)
 

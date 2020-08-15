@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Próximo (2 Random)](02_Random.md)
 
-# 4.1 Debuggear programas+
+# 4.1 Debuggear programas
 
 Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
 
@@ -167,6 +167,8 @@ Podés a encontrar [instrucciones detalladas](https://docs.python.org/3/library/
 
 Nos resulta más cómodo usar un IDE como Spyder para hacer debugging y ése es el método que describiremos aquí. Fijate los nombres de cada ícono: 
 
+Ícono | acción
+---|---
 Debug | inicia el modo debug
 Step | da un paso en el programa
 Step Into | entra en la función referida

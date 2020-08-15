@@ -11,7 +11,7 @@ Para cerrar, presentamos una versión propia de un ejercicio lindísimo del curs
 
 
 
-* [4.1 Debuggear programas+](01_Debugger.md)
+* [4.1 Debuggear programas](01_Debugger.md)
 * [4.2 Random](02_Random.md)
 * [4.3 NumPy](03_NumPy_Arrays.md)
 * [4.4 El album de Figuritas](04_Figuritas.md)
