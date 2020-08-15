@@ -6,7 +6,7 @@ Python tiene un debugger poderoso que te permite probar porciones de código. Es
 
 Vimos en la  [Sección 3.2](../03_Mas_Python/02_Errores3.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos sin una guía. En esta sección vamos a tratar de sistematizar las herramientas que tenés para resolver este tipo de problemas.
 
-Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente correlo algunas veces usando tests que permitan poner en evidencia esos bugs.
+Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente correrlo algunas veces usando tests que permitan poner en evidencia esos bugs.
 
 Diseñar un conjunto de _tests_ adecuado no es una tarea sencilla y es frecuente que queden casos especiales que causen errores inesperados.
 
@@ -14,7 +14,7 @@ Diseñar un conjunto de _tests_ adecuado no es una tarea sencilla y es frecuente
 
 Python es un lenguaje interpretado, con tipos de datos dinámicos (una misma variable puede cambiar de tipo, de `int` a `float`, por ejemplo). No existe un compilador que te alerte sobre inconsistencias de tipos antes de ejecutar el programa. Es bueno tener buenas prácticas que minimicen estos potenciales errores pero es posible que algunos errores se filtren.
 
-Testear consiste en ejecutar un programa o porción de código en condiciones controladas, con entradas conocidas y salidas predichas de forma de poder verificar si lo que da el algoritmos e slo que esperabas.
+Testear consiste en ejecutar un programa o porción de código en condiciones controladas, con entradas conocidas y salidas predichas de forma de poder verificar si lo que da el algoritmos es lo que esperabas.
 
 La ejecución de un algoritmo puede pensarse como un árbol (el árbol de ejecución del algoritmo, cada condicion da una ramificación del árbol). Según la entrada que le des, el programa va a ir por una rama o por otra. Lo ideal es testear todas las ramas posibles de ejecución y que los casos de prueba (_test cases_) incluyan todos los casos _especiales_ (casos como listas vacías, índices apuntando al primer o al último elemento, claves ausentes, etc.) comprobando en cada caso que el programa se comporte según lo esperado.  
 
