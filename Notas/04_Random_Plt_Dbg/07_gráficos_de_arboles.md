@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos de Figuritas y Dados***)](06_gráficos_de_figuritas.md) \| [Próximo (8 Cierre de la cuarta clase)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Cierre de la cuarta clase)](08_Cierre.md)
 
-# 4.7 Gráficos del Arbolado porteño
+# 4.5 Gráficos del Arbolado porteño
 
 ## Ploteando datos reales
 
@@ -10,6 +10,9 @@ Usando lo generado en [Ejercicio 3.16](../03_Mas_Python/06_Arboles2.md#ejercicio
 
 ### Ejercicio 4.27: Hacer histogramas de altos especie
 
+### Ejercicio 4.28: Hacer boxplots comparando altos de especies
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos de Figuritas y Dados***)](06_gráficos_de_figuritas.md) \| [Próximo (8 Cierre de la cuarta clase)](08_Cierre.md)
+
+
+[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Cierre de la cuarta clase)](08_Cierre.md)
 

@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Debuguear programas***)](03_quesera.md) \| [Próximo (4 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Debuguear programas***)](03_quesera.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
 
-# 6.3 Especificación, Documentación y contratos+
+# 6.4 Especificación, Documentación y contratos+
 
 En esta unidad se le dará cierta formalización a algunos temas que habían sido
 presentados informalmente, como por ejemplo la documentación de las funciones.
@@ -484,5 +484,5 @@ def emails2(diccionario):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Debuguear programas***)](03_quesera.md) \| [Próximo (4 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Debuguear programas***)](03_quesera.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
 

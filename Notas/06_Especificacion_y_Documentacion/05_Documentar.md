@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Especificación, Documentación y contratos+)](04_Especificación.md) \| [Próximo (5 Ejercitacion de la clase cinco***)](06_Ejercicios.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Especificación, Documentación y contratos+)](04_Especificación.md) \| [Próximo (6 Ejercitacion de la clase cinco***)](06_Ejercicios.md)
 
-# 6.4 Documentación y estilo**
+# 6.5 Documentación y estilo**
 
 ## Docstrings
 
@@ -11,5 +11,5 @@
 
 ## recordar el help()
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Especificación, Documentación y contratos+)](04_Especificación.md) \| [Próximo (5 Ejercitacion de la clase cinco***)](06_Ejercicios.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Especificación, Documentación y contratos+)](04_Especificación.md) \| [Próximo (6 Ejercitacion de la clase cinco***)](06_Ejercicios.md)
 

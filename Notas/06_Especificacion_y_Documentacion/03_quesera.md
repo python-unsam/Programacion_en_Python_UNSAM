@@ -1,9 +1,9 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Especificación, Documentación y contratos+)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Debuguear programas***)](02_quesera.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
 
-# 6.2 Debuguear programas***
+# 6.3 Debuguear programas***
 
 Cómo debugguear
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Error_checking.md) \| [Próximo (3 Especificación, Documentación y contratos+)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Debuguear programas***)](02_quesera.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
 

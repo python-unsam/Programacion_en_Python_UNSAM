@@ -67,12 +67,14 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 
 ## Ejercicios:
 
-### Insertar un elemento en una lista
-Uno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
+### Ejercicio 5.11: Insertar un elemento en una listaUno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
 Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un elemento y *e*. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
 
 Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.10](../05_Organización_y_Complejidad/03_BusqBinaria.md#ejercicio-510-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
+
+### Ejercicio 5.12: Cálcular la complejidad de dos algoritmos
+En este ejercicio retomamos el \ref_ej
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Búsqueda binaria*)](03_BusqBinaria.md) \| [Próximo (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
 

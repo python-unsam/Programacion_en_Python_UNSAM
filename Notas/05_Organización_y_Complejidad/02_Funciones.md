@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Script.md) \| [Próximo (3 Búsqueda binaria*)](03_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Scripts.md) \| [Próximo (3 Búsqueda binaria*)](03_BusqBinaria.md)
 
 # 5.2 Sobre Funciones
 
@@ -595,5 +595,5 @@ Llegaste lejos. Hasta este punto creaste una biblioteca de funciones que es genu
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Script.md) \| [Próximo (3 Búsqueda binaria*)](03_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Scripts.md) \| [Próximo (3 Búsqueda binaria*)](03_BusqBinaria.md)
 
