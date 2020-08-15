@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Aleatoriedad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md)
 
 # 3. Errores, algoritmos sobre listas y comprensión de listas
 ### **Este material está en revisión**
@@ -18,4 +18,4 @@ En esta clase discutimos los tipos de errores que pueden aparecer en un programa
 * [3.7 Cierre de la tercera clase](07_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Aleatoriedad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md)
