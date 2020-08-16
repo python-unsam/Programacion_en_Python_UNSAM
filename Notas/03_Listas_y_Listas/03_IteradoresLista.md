@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Errores3.md) \| [Próximo (4 Comprensión de listas)](04_Comprension_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Bugs.md) \| [Próximo (4 Comprensión de listas)](04_Comprension_Listas.md)
 
 # 3.3 Listas y búsqueda lineal
 
@@ -259,5 +259,5 @@ Por ejemplo:
 ![Propagación](./fosforos.jpg) Propagación análoga a la del Ejercicio
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Errores3.md) \| [Próximo (4 Comprensión de listas)](04_Comprension_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Bugs.md) \| [Próximo (4 Comprensión de listas)](04_Comprension_Listas.md)
 

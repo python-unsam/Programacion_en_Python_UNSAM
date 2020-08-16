@@ -4,7 +4,7 @@
 
 Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
 
-Vimos en la  [Sección 3.2](../03_Listas_y_Listas/02_Errores3.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
+Vimos en la  [Sección 3.2](../03_Listas_y_Listas/02_Bugs.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
 
 
 ## Testear es genial, debuggear es un horrible.
@@ -21,7 +21,7 @@ La ejecución de un algoritmo puede pensarse como un árbol (el árbol de ejecuc
 
 ![Partes del Spyder, un IDE para Python que facilita el debugging](./spyder-partes.png)
 
-Los entornos de desarrollo integrado (como el Spyder) dan la posiblidad de combinar el uso de un intérprete de Python con un editor de código y suelen permitir también el uso de un debugger. Aún con herramientas como el Spyder, hacer debugging es lento y tedioso. Antes de entrar en los detalles de cómo hacerlo, veremos métodos que tratan de reducir su necesidad.   
+Los entornos de desarrollo integrado (como el Spyder) dan la posiblidad de combinar el uso de un intérprete de Python con un editor de código y suelen integrar también el uso del debugger. Aún con herramientas como el Spyder, hacer debugging es lento y tedioso. Antes de entrar en los detalles de cómo hacerlo, veremos métodos que tratan de reducir su necesidad.   
 
 ### Verificaciones (assert)
 
@@ -95,7 +95,7 @@ Step Return | ejecuta hasta salir de la función
 Continue | retoma la ejecución normal
 Stop | detiene el programa
 
-Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-semántica) para que veas la utilidad del debugger:
+Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Listas_y_Listas/02_Bugs.md#ejercicio-31-semántica) para que veas la utilidad del debugger:
 
 
 ```python
@@ -174,7 +174,7 @@ print(f'Entrada {l}, Salida: {m}')
 Deberías observar que la función modifica el valor de la lista de entrada. Eso no debería ocurrir: una función nunca debería modificar los parámetros salvo que sea lo esperado.  Usá el debugger y el explorador de variables para determinar cuál es el primer **paso clave** en el que se modifica el valor de esta variable.
 
 ### Ejercicio 4.2: Más debugger
-Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-semántica), usá el debugger para analizar el siguiente código:
+Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Listas_y_Listas/02_Bugs.md#ejercicio-31-semántica), usá el debugger para analizar el siguiente código:
 
 ```python
 import csv

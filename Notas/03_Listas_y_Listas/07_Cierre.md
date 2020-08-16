@@ -4,7 +4,7 @@
 
 En esta tercera clase vimos algo más sobre errores, el manejo de lista y la creación de listas por comprensión. Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
- 1. El archivo `solucion_de_errores.py` del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-semántica).
+ 1. El archivo `solucion_de_errores.py` del [Ejercicio 3.1](../03_Listas_y_Listas/02_Bugs.md#ejercicio-31-semántica) y siguientes.
  2. El archivo `busqueda_en_listas.py` del [Ejercicio 3.6](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-36-búsquedas-de-un-elemento) y el [Ejercicio 3.7](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-37-búsqueda-de-máximo-y-mínimo).
  4. El archivo `invlista.py` del [Ejercicio 3.8](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-38-invertir-una-lista).
  5. El archivo `propaga.py` del [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación).

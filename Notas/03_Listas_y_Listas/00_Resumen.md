@@ -10,7 +10,7 @@ En esta clase discutimos los tipos de errores que pueden aparecer en un programa
 **Recordá:** aunque no termines todos los ejercicios, completá el formulario del final de la clase y subí lo que hayas podidos hacer **ANTES** del día miércoles 26/8 a las 14hs. Esto es parte de las condiciones de aprobación de la materia: todes podemos tener una semana complicada, pero en general esperamos que entregues la mayoría de los ejercicios. 
 
 * [3.1 Entorno de desarrollo integrado](01_IDE.md)
-* [3.2 Errores](02_Errores3.md)
+* [3.2 Errores](02_Bugs.md)
 * [3.3 Listas y búsqueda lineal](03_IteradoresLista.md)
 * [3.4 Comprensión de listas](04_Comprension_Listas.md)
 * [3.5 Objetos](05_Objetos.md)
