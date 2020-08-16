@@ -29,7 +29,7 @@ b = a
 c = [a,b]
 ```
 
-Un gráfico de las operaciones de memoria suyacentes. En este ejemplo, hay solo un objeto lista `[1,2,3]`, pero hay cuatro referencias a él.
+A continucación te mostramos en un gráfico las operaciones de memoria suyacentes. En este ejemplo, hay solo un objeto lista `[1,2,3]`, pero hay cuatro referencias a él.
 
 ![Referencias](referencias.png)
 
@@ -47,6 +47,9 @@ Esto significa que al modificar un valor modificamos *todas* las referencias.
 ```
 
 Observá cómo un cambio en la lista original desencadena cambios en todas las demás variables (ouch!). Esto es porque no se hizo ninguna copia. Todos son punteros a la misma cosa.
+
+Esto es lo mismo que pasaba en el [Ejercicio 3.5](../03_Listas_y_Listas/02_Bugs.md#ejercicio-35-pisando-memoria).
+
 
 ### Reasignar valores
 

@@ -196,7 +196,7 @@ suma(a,b)
 print(f"La suma da {a} + {b} = {c}")
 ```
 
-### Ejercicio 3.5: Llueve sobre mojado
+### Ejercicio 3.5: Pisando memoria
 El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como corresponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
 ```python
 import csv
