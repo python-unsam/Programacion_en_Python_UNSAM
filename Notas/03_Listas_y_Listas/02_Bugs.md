@@ -41,7 +41,7 @@ Las líneas anteriores te dicen el camino que siguió el programa hasta llegar a
 
 Sin embargo a veces esto no proporciona suficiente información (por ejemplo, no sabemos el valor de cada parámetro usado en las llamadas.)
 
-*Sugerencia: copiá el traceback en Google.* Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y sepa qué lo causa, o cómo evitarlo. 
+Una posiblidad que a veces da resultado es copiar el traceback en Google. Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y alguien más le haya explicado qué lo causa, o cómo evitarlo. 
 
 ### Usá el modo [REPL](https://es.wikipedia.org/wiki/REPL) de Python
 

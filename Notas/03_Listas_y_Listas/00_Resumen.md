@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md)
 
-# 3. Errores, algoritmos sobre listas y comprensión de listas
+# 3. Algoritmos sobre listas y comprensión de listas
 ### **Este material está en revisión**
 ### Estará su versión definitiva desde el 19/8/2020
 
