@@ -130,7 +130,7 @@ En el archivo `solucion_de_errores.py` separá las correcciones de los distintos
 ```
 
 
-### Ejercicio 3.1: `tiene_a()`
+### Ejercicio 3.1: Semántica
 ¿Anda bien en todos los casos de testeo?
 ```python
 def tiene_a(expresion):
@@ -148,7 +148,8 @@ tiene_a('abracadabra')
 tiene_a('La novela 1984 de George Orwell')
 ```
 
-### Ejercicio 3.2: `tiene_a()`, nuevamente¿Anda bien en todos los casos de testeo?
+### Ejercicio 3.2: Sintaxis
+¿Anda bien en todos los casos de testeo?
 ```python
 def tiene_a(expresion)
     n = len(expresion)
@@ -163,7 +164,8 @@ tiene_a('UNSAM 2020')
 tiene_a('La novela 1984 de George Orwell')
 ```
 
-### Ejercicio 3.3: `tiene_uno()`¿Anda bien en todos los casos de testeo?
+### Ejercicio 3.3: Tipos
+¿Anda bien en todos los casos de testeo?
 ```python
 def tiene_uno(expresion):
     n = len(expresion)
@@ -181,7 +183,8 @@ tiene_uno('La novela 1984 de George Orwell')
 tiene_uno(1984)
 ```
 
-### Ejercicio 3.4: `suma()`La siguiente suma no da lo que debería:
+### Ejercicio 3.4: Alcances
+La siguiente suma no da lo que debería:
 ```python
 def suma(a,b):
     c = a + b
@@ -193,7 +196,8 @@ suma(a,b)
 print(f"La suma da {a} + {b} = {c}")
 ```
 
-### Ejercicio 3.5: Llueve sobre mojadoEl siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como corresponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
+### Ejercicio 3.5: Llueve sobre mojado
+El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como corresponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
 ```python
 import csv
 from pprint import pprint
