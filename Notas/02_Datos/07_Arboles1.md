@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Contadores del módulo _collections_)](06_Contadores.md) \| [Próximo (8 Impresión con formato*)](08_Formato.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Contadores del módulo _collections_)](06_Contadores.md) \| [Próximo (8 Impresión con formato)](08_Formato.md)
 
 # 2.7 Arbolado porteño
 
@@ -104,5 +104,5 @@ Volvé a combinar las funciones anteriores para escribir la función `especie_pr
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Contadores del módulo _collections_)](06_Contadores.md) \| [Próximo (8 Impresión con formato*)](08_Formato.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Contadores del módulo _collections_)](06_Contadores.md) \| [Próximo (8 Impresión con formato)](08_Formato.md)
 

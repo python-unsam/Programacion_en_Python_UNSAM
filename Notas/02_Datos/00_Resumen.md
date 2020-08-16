@@ -16,7 +16,7 @@ Recordá que, aunque no termines todos, completar el formulario del final de cad
 * [2.5 Secuencias](05_Secuencias.md)
 * [2.6 Contadores del módulo _collections_](06_Contadores.md)
 * [2.7 Arbolado porteño](07_Arboles1.md)
-* [2.8 Impresión con formato*](08_Formato.md)
+* [2.8 Impresión con formato](08_Formato.md)
 * [2.9 Cierre de la segunda clase](09_CierreClase.md)
 
 

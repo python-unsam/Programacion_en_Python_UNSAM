@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Impresión con formato*)](08_Formato.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Impresión con formato)](08_Formato.md)
 
 # 2.9 Cierre de la segunda clase
 
@@ -28,5 +28,5 @@ Por último te recordamos que si te quedaron dudas, querés discutir algún tema
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Impresión con formato*)](08_Formato.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Impresión con formato)](08_Formato.md)
 

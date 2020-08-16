@@ -120,7 +120,7 @@ Este *parámetro* (el `-i`, que ya usamos antes) preserva el estado del intérpr
 
 ### Debuggear con `print`
 
-`print()` es una forma rápida y sencilla de permitir que el programa se ejecute (casi) normalmente mientas te da información del estado de las variables. Si elegís bien las variables que mostrár, es probable que digas "¡¡Ajá!!".
+`print()` es una forma rápida y sencilla de permitir que el programa se ejecute (casi) normalmente mientras te da información del estado de las variables. Si elegís bien las variables que mostrar, es probable que digas "¡¡Ajá!!".
 
 *Sugerencia: es conveniente usar `repr()` para imprimir las variables*
 
@@ -163,7 +163,7 @@ def mi_funcion():
     ...
 ```
 
-Podés a encontrar [instrucciones detalladas](https://docs.python.org/3/library/pdb.html) sobre como usarlo. 
+Podés encontrar instrucciones detalladas [acá](https://docs.python.org/3/library/pdb.html) sobre como usarlo. 
 
 Nos resulta más cómodo usar un IDE como Spyder para hacer debugging y ése es el método que describiremos aquí. Este es el menú desplegable del debugger:
 

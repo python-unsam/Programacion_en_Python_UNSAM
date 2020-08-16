@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (7 Arbolado porteño)](07_Arboles1.md) \| [Próximo (9 Cierre de la segunda clase)](09_CierreClase.md)
 
-# 2.8 Impresión con formato*
+# 2.8 Impresión con formato
 
 En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. No es indispensable para el curso. Si te alcanza el tiempo está semana leela, sino no te preocupes podés volver a mirar acá en el futuro, cuando lo necesites.
 

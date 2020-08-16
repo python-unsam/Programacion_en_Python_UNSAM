@@ -10,7 +10,7 @@
 * [6. Errores y bugs, especificación y documentación](06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 * [7. Creación de módulos, SO y Pandas](07_Modulos_Pandas_SO/00_Resumen.md)
 * [8. Clases, Objetos y Seaborn](08_OOP_Seaborn/00_Resumen.md)
-* [9. Gneradores y Series tempoales](09_Generadores_y_Series/00_Resumen.md)
+* [9. Generadores y Series temporales](09_Generadores_y_Series/00_Resumen.md)
 * [10. Matrices, Imágenes y Simulaciones](10_Matrices_e_Imagenes/00_Resumen.md)
 * [11. Recursión](11_Recursion/00_Resumen.md)
 * [12. Ordenamiento](12_Ordenamiento/00_Resumen.md)
