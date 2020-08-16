@@ -219,7 +219,7 @@ camion = leer_camion("Data/camion.csv")
 pprint(camion)
 ```
 
-_Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy difícil, podés mirar un poco de la teoría relacionada con esto [un par de secciones más adelante](https://github.com/python-unsam/UNSAM_2020c2_Python/blob/master/Notas/03_Mas_Python/05_Objetos.md#ejemplo-de-asignaci%C3%B3n)._
+_Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy difícil, podés mirar un poco de la teoría relacionada con esto un par de secciones más adelante ([Sección 3.5](../03_Listas_y_Listas/05_Objetos.md#ejemplo-de-asignación))._
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Entorno de desarrollo integrado)](01_IDE.md) \| [Próximo (3 Listas y búsqueda lineal)](03_IteradoresLista.md)
