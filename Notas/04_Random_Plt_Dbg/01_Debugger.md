@@ -21,7 +21,7 @@ La ejecución de un algoritmo puede pensarse como un árbol (el árbol de ejecuc
 
 ![Partes del Spyder, un IDE para Python que facilita el debugging](./spyder-partes.png)
 
-Los entornos de desarrollo integrado (como el Spyder) dan la posiblidad de combinar el uso de un intérprete de Python con un editor de código y suelen integrar también el uso del debugger. Aún con herramientas como el Spyder, hacer debugging es lento y tedioso. Antes de entrar en los detalles de cómo hacerlo, veremos métodos que tratan de reducir su necesidad.   
+Los entornos de desarrollo integrado (como el Spyder) dan la posiblidad de combinar el uso de un intérprete de Python con un editor de código y suelen integrar también el uso del debugger. Aún con herramientas como el Spyder, hacer debugging es lento y tedioso. Antes de entrar en los detalles de cómo hacerlo, comentaremos algunos métodos que tratan de reducir su necesidad. Profundizaremos sobre estos métodos más adelante.  
 
 ### Verificaciones (assert)
 
