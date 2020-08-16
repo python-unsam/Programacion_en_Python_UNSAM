@@ -78,7 +78,7 @@ En este ejercicio retomamos el [Ejercicio 3.5](../03_Listas_y_Listas/03_Iterador
 
 ```python
 # Versión 1
-def propagar1(lista):
+def propagarQ(lista):
     n = len(lista)
     for i in range(n):
         for j in range(n-1):
@@ -92,7 +92,7 @@ def propagar1(lista):
 
 ```python
 # Versión 2
-def propagar2(lista):
+def propagarL(lista):
     n = len(lista)
     for j in range(n-1):
         if (lista[j]==1) and (lista[j+1]==0):
