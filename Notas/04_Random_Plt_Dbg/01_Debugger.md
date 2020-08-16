@@ -4,22 +4,22 @@
 
 Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
 
-Vimos en la  [Sección 3.2](../03_Listas_y_Listas/02_Errores3.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos sin una guía. En esta sección vamos a tratar de sistematizar las herramientas que tenés para resolver este tipo de problemas.
+Vimos en la  [Sección 3.2](../03_Listas_y_Listas/02_Errores3.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
+
+
+## Testear es genial, debuggear es un horrible.
 
 Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente correrlo algunas veces usando tests que permitan poner en evidencia esos bugs.
 
 Diseñar un conjunto de _tests_ adecuado no es una tarea sencilla y es frecuente que queden casos especiales que causen errores inesperados.
 
-## Testear es genial, debuggear es un horrible.
-
-Python es un lenguaje interpretado, con tipos de datos dinámicos (una misma variable puede cambiar de tipo, de `int` a `float`, por ejemplo). No existe un compilador que te alerte sobre inconsistencias de tipos antes de ejecutar el programa. Es bueno tener buenas prácticas que minimicen estos potenciales errores pero es posible que algunos errores se filtren.
+Python es un lenguaje interpretado, con tipos de datos dinámicos (una misma variable puede cambiar de tipo, de `int` a `float`, por ejemplo). No tiene un compilador que te alerte sobre inconsistencias de tipos antes de ejecutar el programa. Es bueno usar _buenas prácticas_ que minimicen estos potenciales errores pero igual es posible que algunos errores se filtren.
 
 Testear consiste en ejecutar un programa o porción de código en condiciones controladas, con entradas conocidas y salidas predichas de forma de poder verificar si lo que da el algoritmos es lo que esperabas.
 
-La ejecución de un algoritmo puede pensarse como un árbol (el árbol de ejecución del algoritmo, cada condicion da una ramificación del árbol). Según la entrada que le des, el programa va a ir por una rama o por otra. Lo ideal es testear todas las ramas posibles de ejecución y que los casos de prueba (_test cases_) incluyan todos los casos _especiales_ (casos como listas vacías, índices apuntando al primer o al último elemento, claves ausentes, etc.) comprobando en cada caso que el programa se comporte según lo esperado.  
+La ejecución de un algoritmo puede pensarse como un árbol (el árbol de ejecución del algoritmo, cada condición booleana da lugar a una ramificación del árbol). Según la entrada que le des, el programa se va a ejecutar siguiendo una rama u otra. Lo ideal es testear todas las ramas posibles de ejecución y que los casos de prueba (_test cases_) incluyan todos los casos _especiales_ (casos como listas vacías, índices apuntando al primer o al último elemento, claves ausentes, etc.) comprobando en cada caso que el programa se comporte según lo esperado.  
 
 ![Partes del Spyder, un IDE para Python que facilita el debugging](./spyder-partes.png)
-
 
 Los entornos de desarrollo integrado (como el Spyder) dan la posiblidad de combinar el uso de un intérprete de Python con un editor de código y suelen permitir también el uso de un debugger. Aún con herramientas como el Spyder, hacer debugging es lento y tedioso. Antes de entrar en los detalles de cómo hacerlo, veremos métodos que tratan de reducir su necesidad.   
 
@@ -66,91 +66,6 @@ AssertionError: Necesito un entero (int)
 >>>
 ```
 
-## Debuggear a mano
-
-Los errores en tiempo de ejecución son difíciles de rastrear. Especialmente errores que sólo aparecen bajo cierta combinación particular de condiciones que resulta en que el programa no pueda continuar o de un resultado inesperado. Si tu programa corre, pero no da el resultado que esperás, o _se cuelga_ y no entendés porqué, tenés algunas herramientas concretas. A continuación veremos algunas metodologías específicas que permiten rastrear el orígen del problema.
-
-### ¿Que dice un traceback?
-
-Si te da un error, lo primero que podés hacer es intentar entender la causa del error usando como punto de partida el "traceback":
-
-```bash
-python3 blah.py
-Traceback (most recent call last):
-  File "blah.py", line 13, in ?
-    foo()
-  File "blah.py", line 10, in foo
-    bar()
-  File "blah.py", line 7, in bar
-    spam()
-  File "blah.py", line 4, in spam
-    line x.append(3)
-AttributeError: 'int' object has no attribute 'append'
-```
-La última línea dice algo como que "el objeto `int` no tiene un atributo `append` "- lo cual es obvio, pero ¿cómo llegamos ahí?
-
-La última línea es el motivo concreto del error.
-
-Las líneas anteriores te dicen el camino que siguió el programa hasta llegar al error. En este caso: El error ocurrió en `x.append(3)` en la línea 4, dentro de la función `spam` del módulo `"blah.py"`, que fue llamado por la función `bar` en la línea 7 del mismo archivo, que fué llamada por .... y así siguiendo. 
-
-Sin embargo a veces esto no proporciona suficiente información (por ejemplo, no sabemos el valor de cada parámetro usado en las llamadas.)
-
-*Sugerencia: copiá el traceback en Google.* Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y sepa qué lo causa, o cómo evitarlo. 
-
-### Usá el modo [REPL](https://es.wikipedia.org/wiki/REPL) de Python
-
-Si usás Python desde la línea de comandos, podés usarlo pasándoles un `-i` como parámetro antes del script a ejecutar. Cuando el intérprete de Python termine de ejecutar el script se va a quedar en modo interactivo (en lugar de volver al sistema opertaivo. Podés averiguar en qué estado quedó el sistema. 
-
-```bash
-python3 -i blah.py
-Traceback (most recent call last):
-  File "blah.py", line 13, in ?
-    foo()
-  File "blah.py", line 10, in foo
-    bar()
-  File "blah.py", line 7, in bar
-    spam()
-  File "blah.py", 4, in spam
-    line x.append(3)
-AttributeError: 'int' object has no attribute 'append'
->>>     print( repr(x) )
-```
-
-Este *parámetro* (el `-i`, que ya usamos antes) preserva el estado del intérprete al finalizar el script y te permite interrogarlo sobre el estado de las variables y obtener información que de otro modo perderías. En el ejemplo de recién interesa saber que es `x` y como llegó a ese estado. Si estás usando un IDE esta posiblidad de interacción suele ocurrir naturalmente.
-
-### Debuggear con `print`
-
-`print()` es una forma rápida y sencilla de permitir que el programa se ejecute (casi) normalmente mientras te da información del estado de las variables. Si elegís bien las variables que mostrar, es probable que digas "¡¡Ajá!!".
-
-*Sugerencia: es conveniente usar `repr()` para imprimir las variables*
-
-```python
-def spam(x):
-    print('DEBUG:', repr(x))
-    ...
-```
-
-`repr()` te muestra una representación técnicamente más precisa del valor de una variable, y no la representación *bonita* que solemos ver.  
-
-```python
->>> from decimal import Decimal
->>> x = Decimal('3.4')
-# SIN `repr`
->>> print(x)
-3.4
-# CON `repr`
->>> print(repr(x))
-Decimal('3.4')
->>>
-```
-
-### Debuggear con lápiz y papel 
-
-Muchas veces uno *asume* que el intérprete está haciendo algo. Si agarrás un lápiz y un papel y _hacés de intérprete_ anotando el estado de cada variable y siguiendo las instrucciones del programa paso a paso, es posible que entiendas que las cosas no son como creías.
-
-Estas alternativas son útiles pero un poco primitivas. La mejor forma de debuggear un programa en Python es usar el degugger.
-
-
 
 ## El debugger de Python (pdb)
 
@@ -180,7 +95,7 @@ Step Return | ejecuta hasta salir de la función
 Continue | retoma la ejecución normal
 Stop | detiene el programa
 
-Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-tres-tipos-de-errores) para que veas la utilidad del debugger:
+Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-tienea) para que veas la utilidad del debugger:
 
 
 ```python
@@ -259,7 +174,7 @@ print(f'Entrada {l}, Salida: {m}')
 Deberías observar que la función modifica el valor de la lista de entrada. Eso no debería ocurrir: una función nunca debería modificar los parámetros salvo que sea lo esperado.  Usá el debugger y el explorador de variables para determinar cuál es el primer **paso clave** en el que se modifica el valor de esta variable.
 
 ### Ejercicio 4.2: Más debugger
-Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-tres-tipos-de-errores), usá el debugger para analizar el siguiente código:
+Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Listas_y_Listas/02_Errores3.md#ejercicio-31-tienea), usá el debugger para analizar el siguiente código:
 
 ```python
 import csv

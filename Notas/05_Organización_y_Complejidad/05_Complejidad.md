@@ -74,7 +74,7 @@ Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un ele
 Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.8](../05_Organización_y_Complejidad/03_BusqBinaria.md#ejercicio-58-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
 
 ### Ejercicio 5.10: Cálcular la complejidad de dos resoluciones de `propagar`
-En este ejercicio retomamos el [Ejercicio 3.5](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-35-propagación) de propagación del fuego en una hilera de fósforos. Queremos que calcules la complejidad en el peor caso de estas dos soluciones:
+En este ejercicio retomamos el [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación) de propagación del fuego en una hilera de fósforos. Queremos que calcules la complejidad en el peor caso de estas dos soluciones:
 
 ```python
 # Versión 1
