@@ -43,5 +43,6 @@ Esperamos que obtengas una lista similar a esta:
 
 ### Ejercicio 3.17: Aca nos gustaría poner algún ejercicio más, pero aún no lo hicimos.
 
+
 [Contenidos](../Contenidos.md) \| [Anterior (5 Objetos)](05_Objetos.md) \| [Próximo (7 Cierre de la tercera clase)](07_Cierre.md)
 

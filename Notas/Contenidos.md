@@ -9,8 +9,12 @@
 * [5. Organzación de programas](05_Organización_y_Complejidad/00_Resumen.md)
 * [6. Errores y bugs, especificación y documentación](06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 * [7. Creación de módulos, SO y Pandas](07_Modulos_Pandas_SO/00_Resumen.md)
-* [8. Clases y Objetos](08_OOP_Seaborn/00_Resumen.md)
-* [9. Optativos](09_Optativos/00_Resumen.md)
+* [8. Clases, Objetos y Seaborn](08_OOP_Seaborn/00_Resumen.md)
+* [9. Gneradores y Series tempoales](09_Generadores_y_Series/00_Resumen.md)
+* [10. Matrices, Imágenes y Simulaciones](10_Matrices_e_Imagenes/00_Resumen.md)
+* [11. Recursión](11_Recursion/00_Resumen.md)
+* [12. Ordenamiento](12_Ordenamiento/00_Resumen.md)
+* [13. Optativos](13_Optativos/00_Resumen.md)
 
 
 Este es un curso que se estará dictando en la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto [IAI](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/) durante el segundo cuatrimestre del 2020.

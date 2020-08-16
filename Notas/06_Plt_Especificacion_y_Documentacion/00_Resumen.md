@@ -15,11 +15,11 @@ Luego presentamos informalmente la idea de la especificación (formal) de una fu
 
 
 * [6.1 Control de errores](01_Excepciones.md)
-* [6.2 Matplotlib básico](02_matplotlib_basico.md)
-* [6.3 Gráficos del azar***](03_gráficos_del_azar.md)
-* [6.4 Especificación, Documentación y contratos+](04_Especificación.md)
-* [6.5 Documentación y estilo**](05_Documentar.md)
-* [6.6 Ejercitacion de la clase cinco***](06_Ejercicios.md)
+* [6.2 Especificación, Documentación y contratos+](02_Especificación.md)
+* [6.3 Documentación y estilo**](03_Documentar_y_Estilo.md)
+* [6.4 Matplotlib básico](04_matplotlib_basico.md)
+* [6.5 Gráficos del azar***](05_gráficos_del_azar.md)
+* [6.6 Gráficos del azar***](06_regresion.md)
 * [6.7 Cierre*](07_Cierre.md)
 
 

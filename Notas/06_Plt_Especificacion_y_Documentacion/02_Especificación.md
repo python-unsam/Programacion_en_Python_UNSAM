@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Gráficos del azar***)](03_gráficos_del_azar.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Documentación y estilo**)](03_Documentar_y_Estilo.md)
 
-# 6.4 Especificación, Documentación y contratos+
+# 6.2 Especificación, Documentación y contratos+
 
 En esta unidad se le dará cierta formalización a algunos temas que habían sido
 presentados informalmente, como por ejemplo la documentación de las funciones.
@@ -484,5 +484,5 @@ def emails2(diccionario):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Gráficos del azar***)](03_gráficos_del_azar.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Documentación y estilo**)](03_Documentar_y_Estilo.md)
 

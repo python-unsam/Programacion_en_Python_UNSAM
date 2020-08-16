@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Gráficos del azar***)](03_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Documentación y estilo**)](03_Documentar_y_Estilo.md) \| [Próximo (5 Gráficos del azar***)](05_gráficos_del_azar.md)
 
-# 6.2 Matplotlib básico
+# 6.4 Matplotlib básico
 
 plots de lineas, una intro completa a traducir:
 [esto](https://scipy-lectures.org/intro/matplotlib/index.html)
@@ -341,5 +341,5 @@ Click on figure for solution.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Gráficos del azar***)](03_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Documentación y estilo**)](03_Documentar_y_Estilo.md) \| [Próximo (5 Gráficos del azar***)](05_gráficos_del_azar.md)
 
