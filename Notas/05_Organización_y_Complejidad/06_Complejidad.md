@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Búsqueda binaria*)](03_BusqBinaria.md) \| [Próximo (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria*)](05_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](07_gráficos_de_complejidad.md)
 
-# 5.4 Complejidad de algoritmos+
+# 5.5 Complejidad de algoritmos+
 
 ### Resumen de algoritmos de Búsqueda
 
@@ -67,13 +67,13 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 
 ## Ejercicios:
 
-### Ejercicio 5.9: Insertar un elemento en una listaUno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
+### Ejercicio 5.12: Insertar un elemento en una listaUno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
 Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un elemento y *e*. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
 
-Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.8](../05_Organización_y_Complejidad/03_BusqBinaria.md#ejercicio-58-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
+Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.11](../05_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-511-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
 
-### Ejercicio 5.10: Cálcular la complejidad de dos resoluciones de `propagar`
+### Ejercicio 5.13: Cálcular la complejidad de dos resoluciones de `propagar`
 En este ejercicio retomamos el [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación) de propagación del fuego en una hilera de fósforos. Queremos que calcules la complejidad en el peor caso de estas dos soluciones:
 
 ```python
@@ -106,5 +106,5 @@ def propagarL(lista):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Búsqueda binaria*)](03_BusqBinaria.md) \| [Próximo (5 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria*)](05_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](07_gráficos_de_complejidad.md)
 

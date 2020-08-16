@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Scripts.md) \| [Próximo (3 Búsqueda binaria*)](03_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Scripts.md) \| [Próximo (3 Módulos)](03_Modulos.md)
 
 # 5.2 Funciones
 
@@ -252,7 +252,7 @@ print(b)               # imprime [1, 2, 3]
 
 Este conjunto de ejercicios te llevan a implementar un programa medianamente complejo. Es no trivial. Hay varios pasos involucrados e implica articular muchos conceptos al mismo tiempo.
 
-La solución que vas a desarrollar involucra soólo unas 25 líneas de código, pero tomate tu tiempo para asegurarte que entendés cada concepto y cada parte del código por separado.
+La solución que vas a desarrollar involucra sólo unas 25 líneas de código, pero tomate tu tiempo para asegurarte que entendés cada concepto y cada parte del código por separado.
 
 La parte central del programa `informe_funciones.py` resuelve la lectura de archivos de tipo CSV. Por ejemplo, la función `leer_camion()` lee un archivo que contiene los datos de un camión organizados como filas, y la función `leer_precios()` lee un archivo que contiene precios. En ambas funciones hay una variedad de acciones detallistas y minuciosas, por ejemplo, ambos abren un archivo y lo envuelven con el módulo `cvs` y ambos convierten cada uno de los campos a un tipo de datos diferente.
 
@@ -429,5 +429,5 @@ Llegaste lejos. Hasta este punto creaste una biblioteca de funciones que es genu
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Scripts.md) \| [Próximo (3 Búsqueda binaria*)](03_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Scripting)](01_Scripts.md) \| [Próximo (3 Módulos)](03_Modulos.md)
 

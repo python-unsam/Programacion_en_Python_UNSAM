@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Documentación y estilo**)](03_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar_y_Estilo.md)
 
-# 6.2 Especificación, Documentación y contratos+
+# 6.4 Especificación, Documentación y contratos+
 
 En esta unidad se le dará cierta formalización a algunos temas que habían sido
 presentados informalmente, como por ejemplo la documentación de las funciones.
@@ -293,7 +293,7 @@ def sumatoria(inicial, final, f):
     '''
 ```
 
-### Ejercicio 6.4: 
+### Ejercicio 6.8: 
 Realizar la implementación correspondiente a la función `sumatoria`.
 
 En definitiva, la estipulación de pre y postcondiciones dentro de la
@@ -446,7 +446,7 @@ deberá a un error en el diseño o utilización del código.
 
 ## Ejercicios
 
-### Ejercicio 6.5: Analizar cada una de las siguientes funciones.
+### Ejercicio 6.9: Analizar cada una de las siguientes funciones.
 ¿Cuál es el contrato de la función? ¿Cómo sería su documentación?
 ¿Es necesario agregar comentarios?
 ¿Se puede simplificar el código y/o mejorar su legibilidad?
@@ -484,5 +484,5 @@ def emails2(diccionario):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Documentación y estilo**)](03_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar_y_Estilo.md)
 

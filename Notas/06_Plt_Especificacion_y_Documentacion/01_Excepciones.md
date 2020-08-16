@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Especificación, Documentación y contratos+)](02_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo principal (main))](02_305Main_module.md)
 
 # 6.1 Control de errores
 
@@ -342,5 +342,5 @@ Modificá `parse_csv()` de modo que el usuario pueda silenciar los informes de e
 Lograr un buen manejo o administración de errores es una de las partes más difíciles en la mayoría de los programas. Estás intentando preveer imprevistos. Como regla general, no silencies los errores. Es mejor informar los problemas y darle al usuario la opción de silenciarlos explícitamente. Un buen diálogo entre el código y el usuario facilita el debugging y el buen uso del programa. 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Especificación, Documentación y contratos+)](02_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo principal (main))](02_305Main_module.md)
 

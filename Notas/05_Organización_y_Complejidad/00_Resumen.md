@@ -14,10 +14,11 @@ En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e
 
 * [5.1 Scripting](01_Scripts.md)
 * [5.2 Funciones](02_Funciones.md)
-* [5.3 Búsqueda binaria*](03_BusqBinaria.md)
-* [5.4 Complejidad de algoritmos+](05_Complejidad.md)
-* [5.5 Gráficos de complejidad**](06_gráficos_de_complejidad.md)
-* [5.6 Cierre*](09_Cierre.md)
+* [5.3 Módulos](03_Modulos.md)
+* [5.4 Búsqueda binaria*](05_BusqBinaria.md)
+* [5.5 Complejidad de algoritmos+](06_Complejidad.md)
+* [5.6 Gráficos de complejidad**](07_gráficos_de_complejidad.md)
+* [5.7 Cierre*](09_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (6 Errores y bugs, especificación y documentación)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
