@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo principal (main))](02_305Main_module.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main*)](02_305Main_module.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
 
 # 6.3 Temas de diseño
 
@@ -84,8 +84,7 @@ There is considerable flexibility with this design.
 
 ### Library Design Best Practices
 
-Code bibliotecas are often better served by embracing flexibility.
-Don't restrict your options.  With great flexibility comes great power.
+Las bibliotecas de código suelen ser más útiles si son flexibles. No restrinjas las opciones. La más flexibilidad ganás más potencia.
 
 ## Ejercicio
 
@@ -133,5 +132,5 @@ Afterwards, your `informe.py` and `costo_camion.py` programs should work
 the same way they always did.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo principal (main))](02_305Main_module.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main*)](02_305Main_module.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
 

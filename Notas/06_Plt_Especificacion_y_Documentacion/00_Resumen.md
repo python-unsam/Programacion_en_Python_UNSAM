@@ -15,7 +15,7 @@ Luego presentamos informalmente la idea de la especificación (formal) de una fu
 
 
 * [6.1 Control de errores](01_Excepciones.md)
-* [6.2 El módulo principal (main)](02_305Main_module.md)
+* [6.2 El módulo *main*](02_305Main_module.md)
 * [6.3 Temas de diseño](03_306Design_discussion.md)
 * [6.4 Especificación, Documentación y contratos+](04_Especificación.md)
 * [6.5 Documentación y estilo**](05_Documentar_y_Estilo.md)

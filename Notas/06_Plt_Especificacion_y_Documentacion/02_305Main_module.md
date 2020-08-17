@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Temas de diseño)](03_306Design_discussion.md)
 
-# 6.2 El módulo principal (main)
+# 6.2 El módulo *main*
 
 This section introduces the concept of a main program or main module.
 

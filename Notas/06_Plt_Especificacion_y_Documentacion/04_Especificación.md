@@ -210,8 +210,7 @@ puede asegurar que devolverá un número correspondiente al cociente solicitado.
 
 ### Aseveraciones
 
-Tanto las precondiciones como las postcondiciones son *aseveraciones*
-(en inglés *assertions*). Es decir, afirmaciones realizadas en un momento particular de la ejecución sobre el estado computacional. Si una tal aseveración llegara a ser falsa, se levanta un excepción que deberá ser (o no) administrada adecuadamente.
+Retomamos aquí el concepto de aseveración que introdujimos en la [Sección 4.1](../04_Random_Plt_Dbg/01_Debugger.md#aseveraciones-assert). Tanto las precondiciones como las postcondiciones pueden pensarse como *aseveraciones* (en inglés *assertions*). Es decir, afirmaciones realizadas en un momento particular de la ejecución sobre el estado computacional. Si una tal aseveración llegara a ser falsa, se levanta un excepción que deberá ser (o no) administrada adecuadamente.
 
 En algunos casos puede ser útil incorporar estas afirmaciones desde el código, y para ello podemos utilizar la instrucción `assert`. Esta instrucción
 recibe una condición a verificar (o sea, una expresión booleana).
@@ -254,7 +253,7 @@ def division(dividendo, divisor):
     Pre: Recibe dos números, divisor debe ser distinto de 0.
     Post: Devuelve un número real, con el cociente de ambos.
     '''
-    assert divisor `= 0, 'El divisor no puede ser 0'
+    assert divisor != 0, 'El divisor no puede ser 0'
     return dividendo / divisor
 ```
 
@@ -310,8 +309,7 @@ adelante.
 
 El invariante de ciclo permite conocer cómo llegar desde las precondiciones
 hasta las postcondiciones, cuando la implementación se compone de un ciclo.
-El invariante de ciclo es, entonces, una
-aseveración que debe ser verdadera al comienzo de cada iteración.
+El invariante de ciclo es, entonces, una aseveración que debe ser verdadera al comienzo de cada cliclo de la iteración.
 
 Por ejemplo, si el problema es ir desde el punto A al punto B, las
 precondiciones dicen que estamos parados en A y las postcondiciones que
@@ -338,10 +336,7 @@ def maximo(lista):
 En este caso, el invariante del ciclo es que `max_elem` contiene el
 valor máximo de la porción de lista analizada.
 
-Los invariantes son de gran importancia al momento de demostrar que un
-algoritmo funciona, pero aún cuando no hagamos una demostración formal es muy
-útil tener los invariantes a la vista, ya que de esta forma es más fácil
-entender cómo funciona un algoritmo y encontrar posibles errores.
+Los invariantes son de gran importancia al momento de demostrar formalmente que un algoritmo funciona, pero aún cuando no hagamos una demostración formal resulta útil tener los invariantes a la vista, ya que de esta forma es más fácil entender cómo funciona un algoritmo y encontrar posibles errores.
 
 Los invariantes, además, son útiles a la hora de determinar las condiciones
 iniciales de un algoritmo, ya que también deben cumplirse para ese caso.  Por
@@ -376,7 +371,7 @@ def suma(lista):
     return suma
 ```
 
-
+En resúmen, el concepto de invariante de ciclo es una herramienta abstracta que nos permiten comprender (explicitar) mejor cómo funciona un algoritmo. Resulta fundamental en la teoría de algoritmos, donde es necesario para *demostrar matemáticamente* que un algoritmo realiza la tarea descripta por la pre- y postcondición. 
 
 ### Parámetros mutables e inmutables
 
@@ -418,11 +413,7 @@ función.
 [1, 8, 27, 64]
 ```
 
-**Atención:** Por omisión se espera que una función que recibe parámetros mutables no los modifique, ya que si se los modifica se podría perder información valiosa.
-
-En el caso en que por una decisión de diseño o especificación se modifiquen
-los parámetros mutables recibidos, esto debe estar claramente documentado
-como parte de las postcondiciones.
+**Atención:** Salvo que sea explícitamente aclarado, una función no debe modificar los valores de sus parámetros. En el caso en que por una decisión de diseño o especificación se modifiquen los parámetros mutables recibidos, esto debe estar claramente documentado como parte de las postcondiciones.
 
 
 ## Resumen
@@ -461,27 +452,17 @@ def Abs(i):
 ```
 
 ```python
-def emails(diccionario):
-    for k, v in diccionario.items():
-        print(f'El e-mail de {k} es {v}')
+ejemplo?
 ```
 
 ```python
-def emails2(diccionario):
-    buenos = {*
-    for k, v in diccionario.items():
-        if '@' in v:
-            buenos[k] = v
-    return buenos
+ejemplo?
 ```
 
-```pythondef emails3(nombres, direcciones):
-    for nom in range(len(nombres)):
-        if direcciones[nom] == None:
-            nombre, apellido = ' '.split(nombres[nom].lower())
-            direcciones[nom] = nombre[0] + apellido + '@ejemplo.com'
-```
 
+```python
+ejemplo?
+```
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar_y_Estilo.md)
