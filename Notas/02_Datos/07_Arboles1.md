@@ -19,9 +19,9 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 |long            | Número flotante (float) |Coordenadas para geolocalización |
 |lat             | Número flotante (float) |Coordenadas para geolocalización |
 |id_arbol            | Número entero (integer) |Identificador único del árbol |
-|altura_tot          | Número entero (integer) |Altura relevada del árbol |
-|diametro            | Número entero (integer) |Diámetro relevado del árbol |
-|inclinacio          | Número entero (integer) |Inclinación relevada del árbol |
+|altura_tot          | Número entero (integer) |Altura del árbol (m)|
+|diametro            | Número entero (integer) |Diámetro del árbol (cm) |
+|inclinacio          | Número entero (integer) |Inclinación del árbol (grados) |
 |id_especie          | Número entero (integer) |Identificador de la especie |
 |nombre_com          | Texto (string) |Nombre común del árbol |
 |nombre_cie          | Texto (string) |Nombre científico del árbol |

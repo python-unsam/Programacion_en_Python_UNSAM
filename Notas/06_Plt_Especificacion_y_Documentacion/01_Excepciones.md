@@ -258,7 +258,7 @@ Esto te permite, por ejemplo, llevar un registro de las excepciones (*log*) sin 
 
 ### Buenas prácticas al administrar excepciones
 
-No atrapes excepciones que no vayas a manejar adecuadamente. Dejalas caer ruidosamente. Si es importante, alguien se va a encargar del problema. Sólo atrapá excepciones si *sos ese "alguien"*. Es decir: sólo atrapá aquéllos errores que podés administrar elegantemente y permitir que el programa siga ejecutando.   
+No atrapes excepciones que no vayas a manejar adecuadamente. Dejalas caer ruidosamente. Si es importante, alguien se va a encargar del problema. Sólo atrapá excepciones si *sos ese "alguien"*. Es decir: sólo atrapá aquéllos errores que podés administrar elegantemente de forma que permita que el programa se siga ejecutando.
 
 ### La instrucción `finally`.
 

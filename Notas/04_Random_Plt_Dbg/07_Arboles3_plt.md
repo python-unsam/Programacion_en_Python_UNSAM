@@ -4,7 +4,20 @@
 
 ## Ploteando datos reales
 
+En esta sección retomamos el dataset del arbolado porteño para hacer algunos gráficos que nos permitan visualizar los datos.
+Seguiremos trabajando en el archivo `arboles.py`.
+
+
+```python
+import os
+os.path.join('Data', 'arbolado-en-espacios-verdes.csv')
+arboleda = leer_arboles(nombre_archivo)
+especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
+medidas = medidas_de_especies(especies, arboleda)
+```
+
 ### Ejercicio 4.26: Scatterplot
+
 Usando lo generado en [Ejercicio 3.20](../03_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-320-lista-de-altos-y-diámetros-de-jacarandá), pasarlo a un `np.array` y plotear con `plt.scatterplot()`
 
 

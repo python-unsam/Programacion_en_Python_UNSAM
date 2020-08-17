@@ -17,7 +17,7 @@ En esta clase discutimos los tipos de errores que pueden aparecer en un programa
 * [3.3 Listas y búsqueda lineal](03_IteradoresLista.md)
 * [3.4 Comprensión de listas](04_Comprension_Listas.md)
 * [3.5 Objetos](05_Objetos.md)
-* [3.6 Arbolado porteño y comprensión+](06_Arboles2_LC.md)
+* [3.6 Arbolado porteño y comprensión de listas](06_Arboles2_LC.md)
 * [3.7 Cierre de la tercera clase](07_Cierre.md)
 
 

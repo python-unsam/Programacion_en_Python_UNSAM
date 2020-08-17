@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño y comprensión+)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 
 # 3.7 Cierre de la tercera clase
 
@@ -14,5 +14,5 @@ En esta tercera clase vimos algo más sobre errores, el manejo de lista y la cre
 
 ¡Gracias! Nos vemos en la próxima clase.
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño y comprensión+)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 

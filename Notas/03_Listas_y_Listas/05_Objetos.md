@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (6 Arbolado porteño y comprensión+)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 
 # 3.5 Objetos
 
@@ -419,5 +419,5 @@ Bonus: ¿Cómo modificarías este ejemplo para transformar la fecha (`date`) en 
 
 Es importante que entiendas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (6 Arbolado porteño y comprensión+)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 
