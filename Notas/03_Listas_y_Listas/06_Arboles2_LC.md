@@ -55,7 +55,7 @@ Vamos a usar esta función la semana próxima. A modo de control, si llamás a l
 
 Acordate de guardar los ejercicios de esta sección en el archivo `arboles.py`.
 
-_Extra: casi todes usan un *for* para crear este diccionario. ¿Lo podés hacer usando una comprensión (de diccionarios)? Te recordamos la sintaxis: `diccionario = { clave: valor for clave in claves }`_
+_Extra: casi todes usan un `for` para crear este diccionario. ¿Lo podés hacer usando una **comprensión de diccionarios**? Te recordamos la sintaxis: `diccionario = { clave: valor for clave in claves }`_
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Objetos)](05_Objetos.md) \| [Próximo (7 Cierre de la tercera clase)](07_Cierre.md)
 
