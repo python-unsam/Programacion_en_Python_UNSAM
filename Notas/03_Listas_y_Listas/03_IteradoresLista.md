@@ -17,8 +17,7 @@ El uso adecuado de estos conceptos puede hacer la diferencia entre un algoritmo 
 
 ### El problema de la búsqueda
 
-Presentamos ahora uno de los problemas más clásicos de la computación, el
-problema de la búsqueda, que se puede enunciar de la siguiente manera:
+Presentamos ahora uno de los problemas más clásicos de la computación: **el problema de la búsqueda**. El mismo se puede enunciar de la siguiente manera:
 
 **Problema:** Dada una lista `lista` y un elemento `e` devolver el índice de `e` en `lista` si `e` está en `lista`, y devolver -1 si `e` no está en `lista`.
 
@@ -238,8 +237,8 @@ def invertir_lista(lista):
 ```
 
 Guardá la función en el archivo `invlista.py` y probala con las siguientes listas:
-`[1,2,3,4,5]`
-`['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
+1. `[1, 2, 3, 4, 5]`
+2. `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
 ### Ejercicio 3.9: Propagación
 Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)
 
 # 6. Errores y bugs, especificación y documentación
 ### **Este material está en revisión**
@@ -25,4 +25,4 @@ Luego presentamos informalmente la idea de la especificación (formal) de una fu
 * [6.9 Cierre*](09_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)

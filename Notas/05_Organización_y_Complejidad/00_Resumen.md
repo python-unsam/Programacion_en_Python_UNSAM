@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (6 Errores y bugs, especificación y documentación)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 
-# 5. Organzación de programas
+# 5. Complejidad y Organzación de programas
 ### **Este material está en revisión**
 ### Estará su versión definitiva desde el 02/09/2020
 
