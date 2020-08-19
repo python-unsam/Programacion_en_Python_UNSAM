@@ -19,4 +19,4 @@ La idea es que todo el material que nos entreguen como ejercicios resueltos lo p
 
 ### Respeto
 
-Esperamos que en todas las instancias del curso (chats, foros, videoconferencias, correcciones de ejercicios, etc.) mantengas un trato cordial y respetuoso con tus compañeres y docentis.
+Esperamos que en todas las instancias del curso tanto oficiales como no oficiales (chats, foros, videoconferencias, correcciones de ejercicios, etc., ) mantengas un trato cordial y respetuoso con tus compañeres y docentis.
