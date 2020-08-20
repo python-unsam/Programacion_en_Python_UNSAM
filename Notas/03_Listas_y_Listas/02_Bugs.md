@@ -14,7 +14,7 @@ El tercer tipo de error es el más difícil de encontrar y de entender. Son los 
 
 ## Debuggear a mano
 
-Los errores (o bugs) son difíciles de rastrear y resolver. Especialmente errores que sólo aparecen bajo cierta combinación particular de condiciones que resulta en que el programa no pueda continuar o de un resultado inesperado. Si tu programa corre, pero no da el resultado que esperás, o _se cuelga_ y no entendés porqué, tenés algunas herramientas concretas que te ayudan a buscar el origen del problema. A continuación veremos algunas metodologías específicas (aunque un poco primitivas) que permiten rastrear el orígen del problema.
+Los errores (o bugs) son difíciles de rastrear y resolver. Especialmente errores que sólo aparecen bajo cierta combinación particular de condiciones que resulta en que el programa no pueda continuar o dé un resultado inesperado. Si tu programa corre, pero no da el resultado que esperás, o _se cuelga_ y no entendés porqué, tenés algunas herramientas concretas que te ayudan a buscar el origen del problema. A continuación veremos algunas metodologías específicas (aunque un poco primitivas) que permiten rastrear el origen del problema.
 
 ### ¿Que dice un traceback?
 
@@ -37,15 +37,15 @@ La última línea dice algo como que "el objeto `int` no tiene un atributo `appe
 
 La última línea es el motivo concreto del error.
 
-Las líneas anteriores te dicen el camino que siguió el programa hasta llegar al error. En este caso: El error ocurrió en `x.append(3)` en la línea 4, dentro de la función `spam` del módulo `"blah.py"`, que fue llamado por la función `bar` en la línea 7 del mismo archivo, que fué llamada por .... y así siguiendo. 
+Las líneas anteriores te dicen el camino que siguió el programa hasta llegar al error. En este caso: el error ocurrió en `x.append(3)` en la línea 4, dentro de la función `spam` del módulo `"blah.py"`, que fue llamado por la función `bar` en la línea 7 del mismo archivo, que fue llamada por... y así siguiendo. 
 
-Sin embargo a veces esto no proporciona suficiente información (por ejemplo, no sabemos el valor de cada parámetro usado en las llamadas.)
+Sin embargo a veces esto no proporciona suficiente información (por ejemplo, no sabemos el valor de cada parámetro usado en las llamadas).
 
-Una posiblidad que a veces da resultado es copiar el traceback en Google. Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y alguien más le haya explicado qué lo causa, o cómo evitarlo. 
+Una posiblidad que a veces da resultado es copiar el traceback en Google. Si estás usando una biblioteca de funciones que mucha gente usa (como `numpy` ó `math`) es muy probable que alguien se haya encontrado antes con el mismo problema que vos, y alguien más le haya explicado qué lo causa, o cómo evitarlo.
 
 ### Usá el modo [REPL](https://es.wikipedia.org/wiki/REPL) de Python
 
-Si usás Python desde la línea de comandos, podés usarlo pasándoles un `-i` como parámetro antes del script a ejecutar. Cuando el intérprete de Python termine de ejecutar el script se va a quedar en modo interactivo (en lugar de volver al sistema opertaivo. Podés averiguar en qué estado quedó el sistema. 
+Si usás Python desde la línea de comandos, podés usarlo pasándole un `-i` como parámetro antes del script a ejecutar. Cuando el intérprete de Python termine de ejecutar el script se va a quedar en modo interactivo (en lugar de volver al sistema opertaivo). Podés averiguar en qué estado quedó el sistema. 
 
 ```bash
 python3 -i blah.py
@@ -62,7 +62,7 @@ AttributeError: 'int' object has no attribute 'append'
 >>>     print( repr(x) )
 ```
 
-Este *parámetro* (el `-i`, que ya usamos antes) preserva el estado del intérprete al finalizar el script y te permite interrogarlo sobre el estado de las variables y obtener información que de otro modo perderías. En el ejemplo de recién interesa saber que es `x` y como llegó a ese estado. Si estás usando un IDE esta posiblidad de interacción suele ocurrir naturalmente.
+Este *parámetro* (el `-i`, que ya usamos antes) preserva el estado del intérprete al finalizar el script y te permite interrogarlo sobre el estado de las variables y obtener información que de otro modo perderías. En el ejemplo de recién interesa saber qué es `x` y cómo llegó a ese estado. Si estás usando un IDE esta posiblidad de interacción suele ocurrir naturalmente.
 
 ### Debuggear con `print`
 
@@ -189,10 +189,9 @@ La siguiente suma no da lo que debería:
 def suma(a,b):
     c = a + b
     
-c = 0
 a = 2
 b = 3
-suma(a,b)
+c = suma(a,b)
 print(f"La suma da {a} + {b} = {c}")
 ```
 
