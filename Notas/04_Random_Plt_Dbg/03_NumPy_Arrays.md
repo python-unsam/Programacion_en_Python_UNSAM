@@ -145,7 +145,7 @@ array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 ```
 
 ### Ejercicio 4.8: arange() y linspace()
-Generá un vector que tenga los número impares entre el 1 y el 19 inclusive usando `arange()`. Repetí ele ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
+Generá un vector que tenga los número impares entre el 1 y el 19 inclusive usando `arange()`. Repetí el ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
 
 **Especificar el tipo de datos**
 
@@ -190,7 +190,7 @@ los podés concatenar usado `np.concatenate()`.
 array([1, 2, 3, 4, 5, 6, 7, 8])
 ```
 
-Un ejemplo un poco más complejo es el siguiente: Si tenés:
+Un ejemplo un poco más complejo es el siguiente:
 
 ```python
 >>> x = np.array([[1, 2], [3, 4]])
@@ -212,7 +212,7 @@ Para sacar elementos de un arreglo, lo más sencillo es usar los índices para s
 ## Conocer el tamaño, dimensiones y forma de un arreglo
 
 
-`ndarray.ndim` te dice la cantidad de ejes (o dimensiones) de arreglo.
+`ndarray.ndim` te dice la cantidad de ejes (o dimensiones) del arreglo.
 
 `ndarray.shape` te va a dar una tupla de enteros que indican la cantidad de elementos en cada eje. Si tenés una matriz con 2 filas y 3 columnas de va a dar `(2, 3)`.
 
@@ -366,7 +366,7 @@ o para definir una nueva variable booleana:
  [ True  True  True True]]
 ```
 
-Finalmente, podés suar `np.nonzero()` para obtener las coordenadas de ciertos elementos de un arreglo.
+Finalmente, podés usar `np.nonzero()` para obtener las coordenadas de ciertos elementos de un arreglo.
 
 Si empezamos con este arreglo:
 
@@ -384,13 +384,13 @@ Podés usar `np.nonzero()` para imprimir los índices de los elementos que son, 
 
 En este ejemplo, la respuesta es una tupla de arreglos: uno por cada dimensión. El primer arreglo representa las filas de los elementos que satisfacen la condición y el segundo sus columnas.
 
-Si querés generar la lista de coordenadas donde se encuetran estos elementos, podés zipear los arreglos, convertir el resultado a una lista e imprimir la lista:
+Si querés generar la lista de coordenadas donde se encuentran estos elementos, podés zipear los arreglos, convertir el resultado en una lista e imprimirla:
 
 ```python
 >>> lista_de_coordenadas = list(zip(b[0], b[1]))
 ```
 
-Surge naturalmente la pregunta: ¿porqué tengo que convertir el objeto `zip` a una lista? Vermos en la segunda mitad de la materia más detalles sobre _generadores_ en Python para entender exactamente lo que está pasando aquí. Simplemente digamos que al zipear `b[0]` y `b[1]` no se genera la lista realmente, sino potencialmente. Sólo al solicitar sus elementos (iterando sobre ello o con `list`) se generan realmente las coordenadas.
+Surge naturalmente la pregunta: ¿porqué tengo que convertir el objeto `zip` a una lista? Veremos en la segunda mitad de la materia más detalles sobre _generadores_ en Python para entender exactamente lo que está pasando aquí. Simplemente digamos que al zipear `b[0]` y `b[1]` no se genera la lista realmente, sino potencialmente. Sólo al solicitar sus elementos (iterando sobre ello o con `list`) se generan realmente las coordenadas.
 
 ```python
 >>> for coord in lista_de_coordenadas:
@@ -408,7 +408,7 @@ Podés usar `np.nonzero()` para imprimir o seleccionar los elementos del arreglo
 [1 2 3 4]
 ```
 
-Si la condición que ponés no la satiface ningún elemento del arreglo entonces el arreglo de índices que obtenés con `np.nonzero()` será vacío. Por ejemplo:
+Si la condición que ponés no la satisface ningún elemento del arreglo entonces el arreglo de índices que obtenés con `np.nonzero()` será vacío. Por ejemplo:
 
 ```python
 >>> no_hay = np.nonzero(a == 42)
@@ -564,12 +564,12 @@ array([1.6, 3.2])
 
 ![./np_multiply_broadcasting.png](./np_multiply_broadcasting.png)
 
-NumPy entiende que la multiplicación debe ocurrir en cada celda del vector. Este concepto se llama **broadcasting**. El mecanismo de broadcasting le permite a NumPy realizar operaicones en arreglos de diferente tamaño, pero los tamaños deben ser compatibles. Por ejemplo si ambos arreglos tienen el mismo tamaño o si uno tiene tamaño 1 (escalar). Si los tamaños no son compatibles, te va a dar un `ValueError`.
+NumPy entiende que la multiplicación debe ocurrir en cada celda del vector. Este concepto se llama **broadcasting**. El mecanismo de broadcasting le permite a NumPy realizar operaciones en arreglos de diferente tamaño, pero los tamaños deben ser compatibles. Por ejemplo si ambos arreglos tienen el mismo tamaño o si uno tiene tamaño 1 (escalar). Si los tamaños no son compatibles, te va a dar un `ValueError`.
 
 
 ## Operaciones un poco más complejas
 
-NumPy también te permite realizar operaciones que resumen los datos. Además de  `min`, `max`, y `sum`, podés usar  `mean` para obtener el promedio, `prod` para calcular el producto, `std` paraq obtener el desvío estándar de los datos, y más.
+NumPy también te permite realizar operaciones que resumen los datos. Además de  `min`, `max`, y `sum`, podés usar  `mean` para obtener el promedio, `prod` para calcular el producto, `std` para obtener el desvío estándar de los datos, y más.
 
 ```python
 >>> data.max()
@@ -782,7 +782,7 @@ En este ejemplo, tanto las predicciones como las etiquetas tienen tres valores. 
 
 ## Guardar y cargar objetos de NumPy
 
-Si seguís usando Python después de este curso, es muy probable que en cierto punto quuieras guardar tus matrices (o arreglos n-dimensionales) para cargarlas en otro momento sin tener que volver a correr el código que las genera. Hay un par de formas de guardar objetos de NumPy. Los objetos ndarray pueden guardarse y leerse de disco con las funciones `loadtxt` y `savetxt` usand archivos de texto (tienen a ventaja de que los podés ver con un editor de textos como el [sublime](https://www.sublimetext.com/) o [geany](https://www.geany.org/)), y con las funciones `load` y `save` que guardan archivos binarios con extensión **.npy**.
+Si seguís usando Python después de este curso, es muy probable que en cierto punto quieras guardar tus matrices (o arreglos n-dimensionales) para cargarlas en otro momento sin tener que volver a correr el código que las genera. Hay un par de formas de guardar objetos de NumPy. Los objetos ndarray pueden guardarse y leerse de disco con las funciones `loadtxt` y `savetxt` usando archivos de texto (tienen la ventaja de que los podés ver con un editor de textos como el [sublime](https://www.sublimetext.com/) o [geany](https://www.geany.org/)), y con las funciones `load` y `save` que guardan archivos binarios con extensión **.npy**.
 Los archivos **.npy** guardan los datos, la forma, el tipo del arreglo y otra información necesaria que permiten reconstruirlos correctamente, incluso en otra máquina con otra arquitectura.
 
 Es sencillo guardar un arreglo con `np.save()`. Solo asegurate de especificar el arreglo que querés guardar y el nombre del archivo. Por ejemplo, si creás este vector:
@@ -840,7 +840,7 @@ Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 4.7](../04
 ### Ejercicio 4.10: Empezando a plotear
 En un rato vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
 
-Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, plotée un histograma de las temperaturas simuladas:
+Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, hacé un histograma de las temperaturas simuladas:
 
 ```python
 import matplotlib.pyplot as plt

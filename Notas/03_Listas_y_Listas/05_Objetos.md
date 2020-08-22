@@ -200,7 +200,7 @@ if isinstance(a, (list,tuple)):
 
 ### Todo es un objeto
 
-Números, cadenas, listas, funciones, excepciones, clases, instancias, etc. son todos objetos. Esto significa que pueden ser nombrados pueden ser pasados como datos, ubicados en contenedors, etc. sin restricciones. No hay objetos especiales en Python. Todos los objetos viajan en primera clase.
+Números, cadenas, listas, funciones, excepciones, clases, instancias, etc. son todos objetos. Esto significa que pueden ser nombrados, pueden ser pasados como datos, ubicados en contenedors, etc. sin restricciones. No hay objetos especiales en Python. Todos los objetos viajan en primera clase.
 
 Un ejemplo simple:
 

@@ -4,7 +4,7 @@
 
 ## Las figuritas del mundial
 
-Esta es una adaptación de una actividad que diseñaron nuetres colegas de Exactas-Programa y amablemente nos dejaron unsar aquí. 
+Esta es una adaptación de una actividad que diseñaron nuestres colegas de Exactas-Programa y amablemente nos dejaron usar aquí. 
 
 El objetivo de esta actividad es hacer un programa en Python que responda la pregunta: **¿Cuántas figuritas hay que comprar para completar el álbum del Mundial?**
 
@@ -22,7 +22,7 @@ Esta pregunta es noticia cada cuatro años:
 2. Cada figurita se imprime en cantidades iguales y se distribuye aleatoriamente.
 3. Cada paquete trae cinco figuritas.
 
-Vamos a utilizar este disparador para presentar conceptos claves.
+Vamos a utilizar este disparador para presentar conceptos clave.
 
 
 ### Herramientas útiles de Python
@@ -38,7 +38,7 @@ En particular, en esta actividad vamos a usar dos módulos:
 Vamos a representar un álbum de n figuritas utilizando un vector de NumPy con posiciones numeradas de 0 a n-1.
 Cada posición representa el estado de una figurita con dos valores: 0 para indicar que aún no la conseguimos y 1 para indicar que sí (o, si preferís, podés usar un número positivo para representar cuántas de esas figus tenés, contando repes).
 
-Por ejemplo, si tuviéramos un álbum de seis figuritas vacío lo vamos a representar como `[0  0  0  0  0  0]`. Cuando consigamos la figurita 3 tendremos que indicarlo poniendo un 1 en el tercer lugar de la lista, es decir `album[2]=1` y el álbum nos va a quedar  `[0  0  1  0  0  0]`, y si queremos representar que nos tocó dos veces la figurita 3, asignamos `album[2]=1` y el álbum queda `[0  0  2  0  0  0]`.
+Por ejemplo, si tuviéramos un álbum de seis figuritas vacío lo vamos a representar como `[0  0  0  0  0  0]`. Cuando consigamos la figurita 3 tendremos que indicarlo poniendo un 1 en el tercer lugar de la lista, es decir `album[2]=1` y el álbum nos va a quedar  `[0  0  1  0  0  0]`, y si queremos representar que nos tocó dos veces la figurita 3, asignamos `album[2] += 1` y el álbum queda `[0  0  2  0  0  0]`.
 
 
 
@@ -48,12 +48,12 @@ Por ejemplo, si tuviéramos un álbum de seis figuritas vacío lo vamos a repres
 Suponé por ahora que las figuritas se compran **individualmente** (de a una, no en un paquete con cinco). En este caso, **la dinámica** del llenado es la siguiente:
 
 - Iniciamos con un álbum vacío y sin haber comprado ninguna figurita.
-- Compramos figuritas (de a una) hasta llenar el álbum; es decir, se repite la acción (*el paso*) de comprar y pegar figuritas *mientras* (while) el álbum este incompleto.
+- Compramos figuritas (de a una) hasta llenar el álbum; es decir, se repite la acción (*el paso*) de comprar y pegar figuritas *mientras* (while) el álbum está incompleto.
 - Al terminar nos interesa saber cuántas figuritas tuvimos que comprar para llenar el álbum.
 
 ## Ejercicios con figus sueltas
 
-Vamos ahora a implementar computacionalmente este modelo. Queremos definir las funciones 
+Vamos ahora a implementar computacionalmente este modelo. Queremos definir las funciones: 
 
 ### Ejercicio 4.11: Crear
 Implementá la función `crear_album(figus_total)` que devuelve un álbum (vector) *vacío* con `figus_total` espacios para pegar figuritas.
@@ -105,14 +105,16 @@ Implementá una función `comprar_paquete(figus_total, figus_paquete)` que, dado
 ### Ejercicio 4.19:  
 Implementá una función `cuantos_paquetes(figus_total, figus_paquete)` que dado el tamaño del álbum y la cantidad de figus por paquete, genere un álbum nuevo, simule su llenado y devuelva cuántos paquetes se debieron comprar para completarlo.
 
-### Ejercicio 4.20: Calculá `n_repeticiones = 100` veces la función `cuantos_paquetes`, utilizando `figus_total = 670`, `figus_paquete = 5`. Guarda los resultados obtenidos en una lista y calculá su promedio. Si te da la compu, hacelo con 1000 repeticiones.
+### Ejercicio 4.20: 
+Calculá `n_repeticiones = 100` veces la función `cuantos_paquetes`, utilizando `figus_total = 670`, `figus_paquete = 5`. Guarda los resultados obtenidos en una lista y calculá su promedio. Si te da la compu, hacelo con 1000 repeticiones.
 
 ## Ejercicios un toque más estadísticos:
 
 
-### Ejercicio 4.21: Utilizando lo implementado en el ítem anterior, **estimá** la probabilidad de completar el álbum con $850$ paquetes o menos.
+### Ejercicio 4.21: 
+Utilizando lo implementado en el ítem anterior, **estimá** la probabilidad de completar el álbum con 850 paquetes o menos.
 
-_Sugerencia:_ No leas esto antes de hacer el ejercicio. Hacelo primeto y luego miralo. En este ejercicios resulta más compacto usar `n_paquetes_hasta_llenar=np.array(lista)` para convertir a vector la lista conteniendo cuántos paquetes compraste en cada experimento hasta llenar el álbum. Trabajar con vectores tiene ventajas. Por ejemplo probá la siguiente instrucción:
+_Sugerencia:_ No leas esto antes de hacer el ejercicio. Hacelo primero y luego miralo. En este ejercicio resulta más compacto usar `n_paquetes_hasta_llenar=np.array(lista)` para convertir a vector la lista conteniendo cuántos paquetes compraste en cada experimento hasta llenar el álbum. Trabajar con vectores tiene ventajas. Por ejemplo probá la siguiente instrucción:
 
 ```python
 (n_paquetes_hasta_llenar <= 850).sum()
@@ -125,7 +127,7 @@ Guardá todo lo que hiciste hasta aquí sobre figuritas en un archivo `histrogra
 
 
 ### Ejercicio 4.23:  
-Utilizando lo implementado, **estimá** cuántos paquetes habría que comprar para tener una chance del $90\%$ de completar el álbum.
+Utilizando lo implementado, **estimá** cuántos paquetes habría que comprar para tener una chance del 90% de completar el álbum.
 
 ### Ejercicio 4.24:  
 Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambian las probabilidades?
