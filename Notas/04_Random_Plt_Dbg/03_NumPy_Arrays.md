@@ -58,7 +58,7 @@ Podemos acceder a los elementos de un arreglo usando corchetes. Acordate que los
 >>> print(a[0]) # si tiene múltiples dimensiones, esto me da una "rebanada" de una dimensión menos
 [1 2 3 4]
 >>> print(a[2]) # otra rebanada
-array([ 9, 10, 11, 12])
+[ 9, 10, 11, 12])
 >>> print(a[2][3]) # accedo al cuarto elemento del tercer vector de a
 12
 >>> print(a[2,3]) # o, equivalentemente, accedo al elemento en la tercera fila y cuarta columna de a
@@ -100,7 +100,7 @@ Vamos a representar la creación con este gráfico:
 
 _Ojo, estas visualizaciones son simplificaciones para representar lo que esta pasando y darte un entendimiento básico de los conceptos y mecanismos de NumPy. Los arreglos y sus operaciones tienen aspectos más complejos que los que quedan capturados en estos dibujitos._
 
-A parte de poder crear una arreglo a partir de una secuencia de elementos, podés crear un arreglo lleno de `0`’s:
+Además de crear una arreglo a partir de una secuencia de elementos, podés crear un arreglo lleno de `0`’s:
 
 ```python
 >>> np.zeros(2)
@@ -145,7 +145,7 @@ array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 ```
 
 ### Ejercicio 4.8: arange() y linspace()
-Generá un vector que tenga los número impares entre el 1 y el 19 inclusive usando `arange()`. Repetí el ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
+Generá un vector que tenga los números impares entre el 1 y el 19 inclusive usando `arange()`. Repetí el ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
 
 **Especificar el tipo de datos**
 
@@ -157,7 +157,7 @@ Si no lo especificás, el tipo de datos (por omisión) de los arreglos es el pun
 array([1, 1])
 ```
 
-En estos dos casos el 64 de los tipos de datos se refiere a la cantidad de bits: 64 bits. 
+En estos dos casos el 64 de los tipos de datos se refiere a la cantidad de bits usados para representar el número en el sistema binario: 64 bits. 
 
 ## Agregar, borrar y ordenar elementos
 
@@ -205,9 +205,6 @@ array([[1, 2],
  [3, 4],
  [5, 6]])
 ```
-
-Para sacar elementos de un arreglo, lo más sencillo es usar los índices para seleccionar los que queremos conservar.
-
 
 ## Conocer el tamaño, dimensiones y forma de un arreglo
 
@@ -295,7 +292,9 @@ O, para convertirlo en un vector columna, podés unsertar un eje en la segunda  
 
 ## Índices y rebanadas
 
-Los arreglos de NumPy los podés indexar y rebanar como hicimos con las listas.
+Podés indexar y rebanar arreglos de NumPy como hicimos con las listas.
+
+Para obtener elementos de un arreglo, lo más sencillo es usar los índices para seleccionar los que queremos conservar.
 
 ```python
 >>> data = np.array([1, 2, 3])
