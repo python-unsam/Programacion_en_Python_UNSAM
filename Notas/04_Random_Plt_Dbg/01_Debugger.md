@@ -244,6 +244,7 @@ propagar([1,0,0,0,0])
 
 
 ### Ejercicio 4.4: Propagar por como el auto fantástico
+
 El siguiente código propaga el fuego inspirado en las luces del [auto fantástico](https://www.youtube.com/watch?v=oNeQi8-PXAU).
 
 ```python
@@ -318,6 +319,8 @@ print("Estado propagado: ",lp)
 **Preguntas:**
 1. ¿Porqué se acorta la listas? 
 2. ¿Podés corregir el error agregando un solo caracter?
+3. Te parece que esta versión es cuadrática como el [Ejercicio 4.3](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-43-propagar-por-vecinos)
+o lineal como el [Ejercicio 4.4](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico)
 
 
 
