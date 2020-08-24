@@ -199,7 +199,8 @@ pprint(camion)
 
 Observá en particular lo que ocurre al leer la segunda fila de datos del archivo y guardarlos en la variable `registro` con los datos ya guardados en la lista `camion`.
 
-### Ejercicio 4.3: Propagar por vecinosEn este ejercicio y los dos siguientes vamos a analizar diferentes soluciones al [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación). Algunas tienen errores que deberás corregir oportunamente.
+### Ejercicio 4.3: Propagar por vecinos
+En este ejercicio y los dos siguientes vamos a analizar diferentes soluciones al [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación). Algunas tienen errores que deberás corregir oportunamente.
 
 
 ```python
@@ -274,7 +275,8 @@ print("Estado propagado: ",lp)
 5. ¿Cuántas operaciones hace como máximo `propagar` en una lista de largo n?
 
 
-### Ejercicio 4.5: Propagar con cadenasEsta versión usa métodos de _cadenas_ para resolver el problema separando los fósforos en grupos sin fósforos quemados y analizando cada grupo. Sin embargo algo falla...
+### Ejercicio 4.5: Propagar con cadenas
+Esta versión usa métodos de _cadenas_ para resolver el problema separando los fósforos en grupos sin fósforos quemados y analizando cada grupo. Sin embargo algo falla...
 
 ```python
 def trad2s(l):
