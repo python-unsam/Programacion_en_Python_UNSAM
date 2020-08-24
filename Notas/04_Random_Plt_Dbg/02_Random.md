@@ -27,7 +27,7 @@ for i in range(5):
 print(tirada)
 ```
 
-### Ejercicio 4.3: Generala servida
+### Ejercicio 4.6: Generala servida
 Queremos estimar la probabilidad de obtener una generala servida en una tirada de dados. Podemos hacer la cuenta usando un poco de teoría de probabilidades, o podemos *simular* que tiramos los dados muchas veces y ver cuántas de esas veces obtuvimos cinco dados iguales. En este ejercicio vamos a usar el segundo camino.
 
 Escribí una función `tirar()` que devuelva una lista con cinco dados generados aleatoriamente. Escribí otra función llamada `es_generala(tirada)` que devuelve `True` si y sólo si los cinco dados de la lista `tirada` son iguales.
@@ -45,7 +45,7 @@ print(f'Podemos estimar la probabilidad de sacar generala servida mediante {prob
 
 ¿Por qué varían más los resultados obtenidos con `N = 100000` que con `N = 1000000`? ¿Cada cuántas tiradas en promedio podrías decir que sale una generala servida? ¿Cómo se puede calcular la probabilidad de forma exacta?
 
-### Ejercicio 4.4: Generala no necesariamente servida
+### Ejercicio 4.7: Generala no necesariamente servida
 Si uno juega con las reglas originales (se puede volver a tirar algunos de los cinco dados hasta dos veces (tres tiradas en total)) siguiendo una estrategia que intente obtener generala (siempre guardar los dados que más se repiten y tirar nuevamente los demás). ¿Podés calcular cuál es la probabilidad de obtener una generala en las tres tiradas de una mano?
 
 ### Elecciones con reposición
@@ -84,7 +84,7 @@ Ahora podemos usar `random.choice(naipes)` para seleccionar un naipe. Sin embarg
 
 A diferencia de `choices` donde el parámetro `k` podía tomar cualquier valor, al dar la instrucción `random.sample(naipes,k=?)` la variable `k` no puede ser mayor que la cantidad de naipes (es decir 40) ya que no se puede sacar *sin reposición* más elementos que la cantidad total.
 
-### Ejercicio 4.5: Envido
+### Ejercicio 4.8: Envido
 Si conocés las reglas del [Truco](https://es.wikipedia.org/wiki/Truco_argentino), estimá la probabilidad de obtener 31, 32 o 33 puntos de envido en una mano. ¿Son iguales estas tres probabilidades? ¿Por qué?
 
 
@@ -117,7 +117,7 @@ print(f'Repartí el {n1[0]} de {n1[1]}, el {n2[0]} de {n2[1]} y el {n3[0]} de {n
 
 Además de generar valores (pseudo)aleatorios discretos, también es posible generar valores continuos. La funcion `random.random()` genera un número de punto flotante entre 0 y 1.
 
-### Ejercicio 4.6: Calcular pi
+### Ejercicio 4.9: Calcular pi
 Es interesante ver cómo los algoritmos estocásticos (basados en elecciones aleatorias) también sirven para resolver problemas que no tienen nada de estocásticos. En este ejercicio vas a usar el generador `random()` para aproximar `pi`.
 
 Por definición `pi` es el área del círculo de radio uno. Si generamos puntos (x,y) con:
@@ -140,7 +140,7 @@ Despejando pi de esta estimación, obtenemos que pi ~ 4*M/N. Esto nos permite es
 Escribí un programa `estimar_pi.py` que genere cien mil puntos aleatorios con la función `generar_punto()`, calcule la proporción de estos puntos que caen en el círculo unitario (usando ¿x^2 + y^2 < 1?) y use este resultado para dar una aproximación de pi.
 
 
-### Ejercicio 4.7: Gaussiana
+### Ejercicio 4.10: Gaussiana
 Con `random.random()` generamos valores aleatorios entre 0 y 1 con una distribución _uniforme_. En esa distribución, todos los valores posibles tienen la misma probabilidad de ser seleccionados. También es posible generar valores aleatorios con otras distribuciones. Una de las distribuciones más importantes es la **distribución normal** o [Gaussiana](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal).
 
 La distribución normal tiene dos parámetros, denominados media y desvío estándar y denotados usualmente con las letras griegas _mu_ y _sigma_, respectivamente.
