@@ -200,7 +200,7 @@ pprint(camion)
 Observá en particular lo que ocurre al leer la segunda fila de datos del archivo y guardarlos en la variable `registro` con los datos ya guardados en la lista `camion`.
 
 ### Ejercicio 4.3: Propagar por vecinos
-En este ejercicio y los dos siguientes porponen diferentes soluciones al [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación) de propagación del fuego. Vamos a analizar sus diferencias y sus complejidades. Algunas soluciones tienen errores que deberás corregir oportunamente.
+En este ejercicio y los dos siguientes porponen diferentes soluciones al [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación) de propagación del fuego. Vamos a analizar sus diferencias y sus complejidades. Algunas soluciones tienen errores que deberás corregir oportunamente. ¡Usá el debugger de Python!
 
 _Observación: Cuando te pidamos que cuentes cuántas operaciones hace una función, no nos va a importar el detalle de las constantes. Por ejemplo: si una función para una entrada de largo n hace n+2 operaciones y otra hace 3*n+5 nos va a importar que ambas hacen una cantidad **lineal** de operaciones en el tamaño de la entrada, pero no las constantes 2, 3 y 5 que figuran en cada caso. En cambio, sí vamos a hacer una diferencia si una fucnión hace n y otra hace n^2 operaciones._
 
