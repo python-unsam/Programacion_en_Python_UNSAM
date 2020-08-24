@@ -202,7 +202,7 @@ Observá en particular lo que ocurre al leer la segunda fila de datos del archiv
 ### Ejercicio 4.3: Propagar por vecinos
 En este ejercicio y los dos siguientes porponen diferentes soluciones al [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación) de propagación del fuego. Vamos a analizar sus diferencias y sus complejidades. Algunas soluciones tienen errores que deberás corregir oportunamente.
 
-_Observación: Cuando te pidamos que cuentes cuántas operaciones hace una función, no nos va a importar el detalle de las constantes. Por ejemplo si una función para una entrada de largo n hace n+2 operaciones y otra hace 3*n+5 nos va a importar que ambas hacen una cantidad **lineal** de operaciones en el tamaño de la entrada, pero no las constantes 2, 3 y 5 que figuran en cada caso. En cambio, sí vamos a hacer una diferencia si una fucnión hace n y otra hace n^2 operaciones._
+_Observación: Cuando te pidamos que cuentes cuántas operaciones hace una función, no nos va a importar el detalle de las constantes. Por ejemplo: si una función para una entrada de largo n hace n+2 operaciones y otra hace 3*n+5 nos va a importar que ambas hacen una cantidad **lineal** de operaciones en el tamaño de la entrada, pero no las constantes 2, 3 y 5 que figuran en cada caso. En cambio, sí vamos a hacer una diferencia si una fucnión hace n y otra hace n^2 operaciones._
 
 
 ```python
@@ -235,16 +235,16 @@ propagar([1,0,0,0,0])
 ```
 
 **Preguntas:**
-1. ¿Por qué los tests `l[i+1]==0` y `l[i-1]==0` de la función `propagar_al_vecino` no causan IndexError?
-2. ¿Por qué `propagar([0,0,0,0,1])` y `propagar([1,0,0,0,0])`, siendo perfectamente simétricas, no generan la misma cantidad de repeticiones de llamadas a la función `propagar_al_vecino`?
+1. ¿Por qué los tests `l[i+1]==0` y `l[i-1]==0` de la función `propagar_al_vecino` no causan un `IndexError`?
+2. ¿Por qué `propagar([0,0,0,0,1])` y `propagar([1,0,0,0,0])`, siendo entradas perfectamente simétricas, no generan la misma cantidad de repeticiones de llamadas a la función `propagar_al_vecino`?
 3. Sobre la complejidad:
     * ¿Cuántas veces como máximo se puede repetir el ciclo while en una lista de largo n?
-    * ¿Cuántas operaciones hace "propagar_al_costa" en una lista de largo n?
-    * ¿Cuántas operaciones hace como máximo esta función propagar en una lista de largo n?
+    * ¿Cuántas operaciones hace "propagar_al_vecino" en una lista de largo n?
+    * ¿Cuántas operaciones hace como máximo esta versión de `propagar` en una lista de largo n?
 
 
 ### Ejercicio 4.4: Propagar por como el auto fantástico
-El siguiente código propaga el fuego inspirado en las luces del [auto fantástico](https://www.youtube.com/watch?v=oNeQi8-PXAU)
+El siguiente código propaga el fuego inspirado en las luces del [auto fantástico](https://www.youtube.com/watch?v=oNeQi8-PXAU).
 
 ```python
 def propagar_a_derecha(l):
@@ -259,7 +259,9 @@ def propagar_a_izquierda(l):
     return propagar_a_derecha(l[::-1])[::-1]
 #%
 def propagar(l):
-    return propagar_a_izquierda(propagar_a_derecha(l))
+    ld=propagar_a_derecha(l)
+    lp = propagar_a_izquierda(ld)
+    return lp
 #%%
 l = [0,0,0,-1,1,0,0,0,-1,0,1,0,0]
 print("Estado original:  ",l)
@@ -271,23 +273,27 @@ print("Estado propagado: ",lp)
 
 **Preguntas:**
 1. ¿Por qué se modificó la lista original? 
-2. ¿Por qué no es igual al output? 
+2. ¿Por qué no quedó igual al `estado propagado`? 
 3. Corregí el código para que no cambie la lista de entrada.
 4. ¿Cuántas operaciones hace como máximo `propagar_a_derecha` en una lista de largo n?
-5. ¿Cuántas operaciones hace como máximo `propagar` en una lista de largo n?
+5. Sabiendo que invertir una lista (`[::-1]`) requiere una cantidad lineal de operaciones en la longitud de la lista ¿Cuántas operaciones hace como máximo `propagar` en una lista de largo n?
 
 
 ### Ejercicio 4.5: Propagar con cadenas
-Esta versión usa métodos de _cadenas_ para resolver el problema separando los fósforos en grupos sin fósforos quemados y analizando cada grupo. Sin embargo algo falla...
+Esta versión usa métodos de _cadenas_ para resolver el problema separando los fósforos en _grupos sin fósforos quemados_ y analizando cada grupo. Sin embargo algo falla...
 
 ```python
 def trad2s(l):
-    d={-1:'x', 0 :'o', 1:'f' }
+    '''traduce una lista con 1,0-1 
+    a una cadena con 'f', 'o' y 'x' '''
+    d={1:'f', 0 :'o', -1:'x'}
     s=''.join([d[c] for c in l])
     return s
 
 def trad2l(s):
-    inv_d={'x':-1, 'o':0, 'f':1 }
+    '''traduce cadena con 'f', 'o' y 'x'
+    a una lista con 1,0-1'''
+    inv_d={'f':1, 'o':0, 'x':-1}
     l = [inv_d[c] for c in ps]
     return l
 
