@@ -200,7 +200,7 @@ pprint(camion)
 Observá en particular lo que ocurre al leer la segunda fila de datos del archivo y guardarlos en la variable `registro` con los datos ya guardados en la lista `camion`.
 
 ### Ejercicio 4.3: Propagar por vecinos
-En este ejercicio y los dos siguientes vamos a analizar diferentes soluciones al [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación). Algunas tienen errores que deberás corregir oportunamente.
+En este ejercicio y los dos siguientes vamos a analizar diferentes soluciones al [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación) de propagación del fuego. Algunas tienen errores que deberás corregir oportunamente.
 
 
 ```python
