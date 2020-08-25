@@ -126,8 +126,6 @@ _Sugerencia:_ No leas esto antes de hacer el ejercicio. Hacelo primero y luego m
 ### Ejercicio 4.26: Plotear el histograma
 Usá un código similar al del [Ejercicio 4.14](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-414-empezando-a-plotear) para hacer un histograma de la cantidad de paquetes que se compraron en cada experimeto, ajustando la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
 
-Guardá todo lo que hiciste hasta aquí sobre figuritas en un archivo `figuritas.py`.
-
 
 ### Ejercicio 4.27:  
 Utilizando lo implementado, **estimá** cuántos paquetes habría que comprar para tener una chance del 90% de completar el álbum.
@@ -137,6 +135,9 @@ Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambi
 
 ### Ejercicio 4.29: Cooperar vs competir
 Por último, suponé que cinco amigues se juntan y deciden compartir la compra de figuritas y el llenado de sus cinco álbumes solidariamente. Calculá cuántos paquetes deberían comprar si deben completar todos. Hacé 100 repeticiones y compará el resultado con la compra individual que calculaste antes.
+
+Acordate de guardar todo lo que hiciste sobre figuritas en un archivo `figuritas.py`.
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
 
