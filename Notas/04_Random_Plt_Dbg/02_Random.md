@@ -91,6 +91,8 @@ Teniendo en cuenta las reglas del [Truco](https://es.wikipedia.org/wiki/Truco_ar
 
 _Observación: como corresponde, en esta materia jugamos al truco **sin** flor._
 
+Guardá este ejercicio en un archivo `envido.py` para entregar.
+
 ### Mezclar 
 La última función que queremos introducir es útil en muchos contextos. En los juegos de naipes, para continuar con nuestro ejemplo, es muy usual mezclar el mazo entero antes de repartir. En Python usamos la función `shuffle` del módulo `random`.
 

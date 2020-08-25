@@ -8,6 +8,7 @@ Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
 
  1. El archivo `generala.py` del [Ejercicio 4.7](../04_Random_Plt_Dbg/02_Random.md#ejercicio-47-generala-no-necesariamente-servida).
+ 2. El archivo `envido.py` del [Ejercicio 4.8](../04_Random_Plt_Dbg/02_Random.md#ejercicio-48-envido)
  2. El archivo `termometro.py` del [Ejercicio 4.11](../04_Random_Plt_Dbg/02_Random.md#ejercicio-411-gaussiana) y el [Ejercicio 4.13](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-413-guardar-temperaturas).
  3. El archivo `plotear_temperaturas.py` del [Ejercicio 4.14](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-414-empezando-a-plotear).
  4. El archivo `figuritas.py` abarcando lo hecho con figuritas (al menos) hasta el [Ejercicio 4.20](../04_Random_Plt_Dbg/04_Figuritas.md#ejercicio-420).
