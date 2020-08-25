@@ -6,10 +6,12 @@ En esta cuarta clase trabajamos con la generación de números (pseudo)aleatorio
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
- 1. El archivo `termometro.py` del [Ejercicio 4.10](../04_Random_Plt_Dbg/02_Random.md#ejercicio-410-gaussiana) y el [Ejercicio 4.12](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-412-guardar-temperaturas).
- 2. El archivo `plotear_temperaturas.py` del [Ejercicio 4.13](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-413-empezando-a-plotear).
- 3. El archivo `histrograma_paquetes.py` abarcando lo hecho con figuritas hasta el [Ejercicio 4.25](../04_Random_Plt_Dbg/04_Figuritas.md#ejercicio-425-plotear-el-histograma).
- 4. AGREGAR EJERCICIOS CON GRAFICOS.
+
+ 1. El archivo `generala.py` del [Ejercicio 4.7](../04_Random_Plt_Dbg/02_Random.md#ejercicio-47-generala-no-necesariamente-servida).
+ 2. El archivo `termometro.py` del [Ejercicio 4.11](../04_Random_Plt_Dbg/02_Random.md#ejercicio-411-gaussiana) y el [Ejercicio 4.13](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-413-guardar-temperaturas).
+ 3. El archivo `plotear_temperaturas.py` del [Ejercicio 4.14](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-414-empezando-a-plotear).
+ 4. El archivo `histrograma_paquetes.py` abarcando lo hecho con figuritas hasta el [Ejercicio 4.26](../04_Random_Plt_Dbg/04_Figuritas.md#ejercicio-426-plotear-el-histograma).
+ 5. AGREGAR EJERCICIOS CON GRAFICOS.
 * Que completes [este formulario](https://docs.google.com/forms/d/LINK) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! Nos vemos en la próxima clase.

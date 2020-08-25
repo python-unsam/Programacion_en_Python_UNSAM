@@ -16,14 +16,14 @@ especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
 medidas = medidas_de_especies(especies, arboleda)
 ```
 
-### Ejercicio 4.29: Scatterplot
+### Ejercicio 4.30: Scatterplot
 
 Usando lo generado en [Ejercicio 3.20](../03_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-320-lista-de-altos-y-diámetros-de-jacarandá), pasarlo a un `np.array` y plotear con `plt.scatterplot()`
 
 
-### Ejercicio 4.30: Hacer histogramas de altos especie
+### Ejercicio 4.31: Hacer histogramas de altos especie
 
-### Ejercicio 4.31: Hacer boxplots comparando altos de especies
+### Ejercicio 4.32: Hacer boxplots comparando altos de especies
 
 
 

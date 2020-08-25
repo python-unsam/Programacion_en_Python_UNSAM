@@ -289,7 +289,7 @@ Esta versión usa métodos de _cadenas_ para resolver el problema separando los 
 
 ```python
 def trad2s(l):
-    '''traduce una lista con 1,0-1 
+    '''traduce una lista con 1,0 y -1 
     a una cadena con 'f', 'o' y 'x' '''
     d={1:'f', 0 :'o', -1:'x'}
     s=''.join([d[c] for c in l])
@@ -297,7 +297,7 @@ def trad2s(l):
 
 def trad2l(ps):
     '''traduce cadena con 'f', 'o' y 'x'
-    a una lista con 1,0-1'''
+    a una lista con 1,0 y -1'''
     inv_d={'f':1, 'o':0, 'x':-1}
     l = [inv_d[c] for c in ps]
     return l
@@ -321,8 +321,8 @@ print("Estado propagado: ",lp)
 ```
 
 **Preguntas:**
-1. ¿Porqué se acorta la listas? 
-2. ¿Podés corregir el error agregando un solo caracter?
+1. ¿Porqué se acorta la lista? 
+2. ¿Podés corregir el error agregando un solo caracter al código?
 3. ¿Te parece que este algoritmo es cuadrático como el [Ejercicio 4.3](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-43-propagar-por-vecinos)
 o lineal como el [Ejercicio 4.4](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico)?
 
