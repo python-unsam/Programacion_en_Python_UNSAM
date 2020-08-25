@@ -6,7 +6,7 @@
 
 Esta es una adaptación de una actividad que diseñaron nuestres colegas de Exactas-Programa y amablemente nos dejaron usar aquí. 
 
-El objetivo de esta actividad es hacer un programa en Python que responda la pregunta: **¿Cuántas figuritas hay que comprar para completar el álbum del Mundial?**
+El objetivo de esta actividad es hacer un programa en Python que responda la pregunta: **¿Cuántas figuritas hay que comprar para completar el álbum del Mundial?** Guardá todo lo que hagas en un archivo `figuritas.py`, te lo vamos a pedir al finalizar la clase.
 
 ![Album de Figuritas](./completo.jpg)
 
@@ -82,9 +82,12 @@ Ejecutá `n_repeticiones = 1000` veces la función anterior utilizando `figus_to
 ¿Podés crear esta lista usando una comprensión de listas?
 
 
-### Ejercicio 4.20:  
+### Ejercicio 4.20: 
 Calculá `n_repeticiones=100` veces la función `cuantas_figus(figus_total=670)` y guardá los resultados obtenidos en cada repetición en una lista.
 Con los resultados obtenidos estimá cuántas figuritas hay que comprar, en promedio, para completar el álbum (de 670 figuritas).
+
+Guardá todo lo que hiciste hasta aquí sobre figuritas en un archivo `figuritas.py`. Lo que sigue profundiza un poco más en el asunto.
+
 
 ### Ahora con paquetes
 
@@ -123,7 +126,7 @@ _Sugerencia:_ No leas esto antes de hacer el ejercicio. Hacelo primero y luego m
 ### Ejercicio 4.26: Plotear el histograma
 Usá un código similar al del [Ejercicio 4.14](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-414-empezando-a-plotear) para hacer un histograma de la cantidad de paquetes que se compraron en cada experimeto, ajustando la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
 
-Guardá todo lo que hiciste hasta aquí sobre figuritas en un archivo `histrograma_paquetes.py`.
+Guardá todo lo que hiciste hasta aquí sobre figuritas en un archivo `figuritas.py`.
 
 
 ### Ejercicio 4.27:  
