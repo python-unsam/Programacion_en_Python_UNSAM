@@ -4,9 +4,9 @@
 
 ## Ploteando datos reales
 
-En esta sección retomamos el dataset del arbolado porteño ('arbolado-en-espacios-verdes.csv') para hacer algunos gráficos que nos permitan visualizar los datos. Te damos una guía muy elemental sobre cómo hacer esto y un par de punteros a la documentación. Ya esperamos que empieces a poder buscar por tu cuenta la info que falte.
+En esta sección retomamos el dataset del arbolado porteño (arbolado-en-espacios-verdes.csv) para hacer algunos gráficos que nos permitan visualizar los datos. Te damos una guía muy elemental sobre cómo hacer esto y un par de punteros a la documentación oficial. Ya esperamos que empieces a poder buscar por tu cuenta la info que falte.
 
-Seguiremos trabajando en el archivo `arboles.py` y usaremos el trabajo hecho con comprensión de listas la clase pasada. Guardá estos tres ejercicios en tres funciones diferentes y entregá el archivo `arboles.py` con estos agregados.
+Seguiremos trabajando en el archivo `arboles.py`. Nos basaremos en el trabajo hecho con comprensión de listas la clase pasada. Los siguientes tres ejercicios hacelos dentro de tres funciones diferentes, guardalas y entregá el archivo `arboles.py` con estos agregados.
 
 ### Ejercicio 4.30: Histograma de altos de Jacarandás
 Usando tu trabajo en el [Ejercicio 3.19](../03_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-319-lista-de-altos-de-jacarandá), generá un histograma con los altos de los Jacarandás en el dataset.
@@ -22,12 +22,12 @@ altos = [comprensión de listas]
 plt.hist(altos,bins=...)
 ```
 
-_Observación:_ Spyder tiene opciones para mostrar las figuras dentro de la misma ventana o en una ventana nueva (Tools -> Preferences -> IPython console -> Graphics -> backend). Te recomendamos generarlas en una ventana nueva. Con `plt.clf()` podés borrar la figura actual y con `plt.figure()` generás una nueva figura por si querés dejar varias abiertas a la vez.
+_Observación:_ Spyder tiene opciones para mostrar las figuras dentro de la misma ventana o en una ventana nueva (Tools -> Preferences -> IPython console -> Graphics -> Backend). Te recomendamos generarlas en una ventana nueva. Luego, con `plt.clf()` podés borrar la figura actual y con `plt.figure()` generás una nueva figura por si querés dejar varias abiertas a la vez.
 
 ### Ejercicio 4.31: Scatterplot (diámetro vs alto) de Jacarandás
 En este ejercicio introducimos un nuevo tipo de gráfico: _el gráfico de dispersión_  o _scatterplot_. El mismo usa coordenadas cartesianas para mostrar los valores de dos variables para un conjunto de datos. 
 
-En este caso vamos a graficar un punto en el plano (x,y) por cada árbol en el dataset (o para cada arbol de cierta especie). El punto correspondiente a un árbol con diámetro *d* (a la altura del pecho) y altura total *h* será ubicado en la posición *x=d* y *y=h*. Este tipo de gráfico permite visualizar relaciones o tendencias entre las variables y es muy útil en el análisis exploratorio de datos.
+En este caso vamos a graficar un punto en el plano (x,y) por cada árbol en el dataset (o para cada arbol de cierta especie). El punto correspondiente a un árbol con diámetro *d* y altura *h* será ubicado en la posición *x=d* y *y=h*. Este tipo de gráfico permite visualizar relaciones o tendencias entre las variables y es muy útil en el análisis exploratorio de datos.
 
 Usando como base tu trabajo del [Ejercicio 3.20](../03_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-320-lista-de-altos-y-diámetros-de-jacarandá), vas a generar un scatterplot para visualizar la relación entre diámetro y alto de los Jacarandás del dataset.
 
@@ -39,9 +39,9 @@ plt.scatter(d,h)
 ```
 
 Algunas recomendaciones:
-1. Convertí la lista generada en un array, de esa forma podés usar rebanadas para obtener un vector *d* con diámteros y otro *h* con alturas.
+1. Convertí la lista generada en un `ndarray` de `numpy`, de esa forma podés usar rebanadas para obtener un vector *d* con diámteros y otro *h* con alturas inmediatamente.
 2. Mirá algún ejemplo como [este](https://matplotlib.org/3.3.1/gallery/shapes_and_collections/scatter.html#sphx-glr-gallery-shapes-and-collections-scatter-py) y tratá de entender cómo se usan los parámetros opcionales *s* (de size, tamaño) y *c* (de color) y *alpha* (de transparencia) de la función [matplotlib.pyplot.scatter](https://matplotlib.org/3.3.1/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter). 
-3. Usando el parámetro *alpha* hacé que el gráfico permita inferir dónde hay mayor densidad de datos.
+3. Usando el parámetro *alpha* hacé que el gráfico permita visualizar dónde hay mayor densidad de datos.
 
 ¿Ves alguna relación entre el diámetro y el alto de los Jacarndás? ¿Te parece que es una relación lineal o de otro tipo?
 
@@ -58,11 +58,11 @@ especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
 medidas = medidas_de_especies(especies, arboleda)
 ```
 
-¿Se mantinen las relaciones que viste en el ejercicio anterior para las tres especies? ¿Hay diferencias entre las especies?
+¿Se mantinen las relaciones que viste en el ejercicio anterior para las tres especies? ¿Hay diferencias entre las especies? Para un mismo alto, ¿cuál tiene mayor diámetro (tipicamente)?
 
 Acordate de guardar estos tres ejercicios dentro de tres funciones diferentes en tu archivo `arboles.py`. Te lo pediremos en la próxima página.
 
-
+_Extra:_ ¿podés hacer un solo gráfico que muestre dos de estas tres especies en diferentes colores y resulte claro? ¿Y las tres especies?
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Cierre de la cuarta clase)](08_Cierre.md)
 
