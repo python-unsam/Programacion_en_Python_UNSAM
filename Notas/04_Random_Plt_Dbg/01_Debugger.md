@@ -82,7 +82,7 @@ Podés encontrar instrucciones detalladas [acá](https://docs.python.org/3/libra
 
 Nos resulta más cómodo usar un IDE como Spyder para hacer debugging y ése es el método que describiremos aquí. Este es el menú desplegable del debugger:
 
-![Menu Debug, en Spyder](./debug1.jpg)
+![Menu Debug, en Spyder](./debug_menu.png)
 
 Fijate los nombres de cada ícono: 
 
@@ -291,7 +291,7 @@ def trad2s(l):
     s=''.join([d[c] for c in l])
     return s
 
-def trad2l(s):
+def trad2l(ps):
     '''traduce cadena con 'f', 'o' y 'x'
     a una lista con 1,0-1'''
     inv_d={'f':1, 'o':0, 'x':-1}
