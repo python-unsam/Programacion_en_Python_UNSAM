@@ -1,15 +1,15 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos+)](06_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](06_Complejidad.md)
 
-# 5.4 Búsqueda binaria*
+# 5.4 Búsqueda binaria
 
-La clase pasada vimos la búsqueda secuencial de un elemento en una lista.
+Hace un par de clases vimos la búsqueda secuencial de un elemento en una lista.
 Si la lista está previamente ordenada,
 ¿podemos encontrar una manera más eficiente de buscar elementos sobre ella?
 
 
 ## Búsqueda sobre listas ordenadas
 
-Si la lista está previamente ordenada,  hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento `e` en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a `e` podemos estar seguros de que `e` no está en la lista, por lo que no es necesario continuar recorriendo el resto.
+Si la lista está ordenada, hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento `e` en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a `e` podemos estar seguros de que `e` no está en la lista, por lo que no es necesario continuar recorriendo el resto.
 
 ### Ejercicio 5.9: Búsqueda lineal sobre listas ordenadas.Modificar la búsqueda lineal para el caso de listas ordenadas.
 En el peor caso, ¿cuál es nuestra nueva hipótesis sobre comportamiento del
@@ -56,7 +56,7 @@ Como no se encontró al valor buscado, devuelve -1.
 
 
 
-En el archivo `bbin.py` mostramos la siguiente implementación de
+El siguiente fragmento de código muestra una implementación de
 este algoritmo, incluyendo una instrucción de depuración (debug) con `print` para verificar su funcionamiento.
 
 ```python
@@ -145,7 +145,7 @@ A continuación varias ejecuciones de prueba:
 
 Para responder esto pensemos en el peor caso, es decir, que se descartaron
 varias veces partes del segmento para finalmente llegar a un segmento vacío y
-el valor buscado no se encontraba en la lista.
+el valor buscado se encontró en este último paso o directamente no se encontraba en la lista.
 
 En cada paso el segmento se divide por la mitad y se desecha una de esas
 mitades, y en cada paso se hace una comparación con el valor buscado. Por lo
@@ -184,13 +184,14 @@ algoritmo de búsqueda binaria, cuyo comportamiento es proporcional al
 *logaritmo* de la cantidad de elementos de la lista, y por lo tanto
 muchísimo más eficiente que la búsqueda lineal, espcialmente si la lista es larga.
 
-### Ejercicio 5.10: Búsqueda secuencial
-Búsqueda secuencial `b_sec.py`
+### Ejercicio 5.10: Búsqueda binaria
+Modificando la función `busqueda_binaria(lista, x)` adecuadamente, definí una función `donde_insertar(lista, x)` de forma que reciba una lista ordenada y un elemento y devuelva la posición de ese elemento en la lista (si se encuentra en la lista) o la posición donde se podría insertar el elemento para que la lista permanezca ordenada (si no está en la lista).
 
-### Ejercicio 5.11: Búsqueda binaria
-Búsqueda binaria `b_bin.py`
+Por ejemplo: el elemento `3` podría insertarse en la posición 2 en la lista `[0,2,4,6]` para mantenerla ordenada. Por lo tanto, el llamado `donde_insertar([0,2,4,6], 3)` deberá devolver `2`, al igual que el llamado `donde_insertar([0,2,4,6], 4)`.
+
+Guarda tu modificación en un archivo `b_bin.py`.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos+)](06_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](06_Complejidad.md)
 

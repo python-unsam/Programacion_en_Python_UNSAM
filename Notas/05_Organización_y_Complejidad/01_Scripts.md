@@ -8,7 +8,7 @@ En esta sección profundizaremos en el proceso de crear scripts en Python.
 
 ### ¿Qué es un script?
 
-Un *script* es un programa que ejecuta una serie de comandos y termina. Es un guión. *Programa* en el sentido clásico de la palabra: una secuencia de eventos.
+Un *script* es un programa que ejecuta una serie de comandos y termina. *Programa* en el sentido clásico de la palabra: una secuencia de eventos. Su traducción literal es **guión**, como el guión de una película, con introducción, nudo y desenlace.
 
 ```python
 # programa.py

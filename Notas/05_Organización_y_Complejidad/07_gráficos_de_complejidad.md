@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos+)](06_Complejidad.md) \| [Próximo (7 Cierre*)](09_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (7 Cierre*)](09_Cierre.md)
 
 # 5.6 Gráficos de complejidad**
 
@@ -12,5 +12,5 @@
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos+)](06_Complejidad.md) \| [Próximo (7 Cierre*)](09_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (7 Cierre*)](09_Cierre.md)
 

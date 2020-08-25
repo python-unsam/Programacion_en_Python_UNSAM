@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria*)](05_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](07_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](05_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](07_gráficos_de_complejidad.md)
 
-# 5.5 Complejidad de algoritmos+
+# 5.5 Complejidad de algoritmos
 
 ### Resumen de algoritmos de Búsqueda
 
@@ -52,9 +52,9 @@ for p in lista :
         if m == p * q :
             print ( " %d= %d* %d " %(m ,p , q ) )
 ```
-Este algoritmo realiza una comparación ( m==p*q ) para cada elemento p y cada elemento q de la lista. Es decir, realiza n*n = n^2 comparaciones. Es un algoritmo cuadrático. Su complejidad es O(n^2). 
+Este algoritmo realiza una comparación ( `m == p*q` ) para cada elemento p y cada elemento q de la lista. Es decir, realiza `n*n = n^2` comparaciones. Es un algoritmo cuadrático. Su complejidad es O(n^2). 
 
-### Compleidad en peor caso
+### Complejidad en peor caso
 
 El término análisis de algoritmos fue acuñado por Donald Knuth, uno de los fundadores de las ciencias de la computación. El análisis de algoritmos es una parte de la teorı́a de la complejidad computacional que no solo estudia la complejidad de los algoritmos sino de los problemas computacionales (la pregunta general de la teorı́a de la complejidad no serı́a cuál es la complejidad de la búsqueda secuencial o binaria, sino cuál es la complejidad mı́nima que puede tener un algoritmo que realice la tarea de buscar un elemento
 en una lista ordenada). En general, y sin mencionarlo, hablamos de la complejidad en peor caso de un algoritmo. En algunos casos puede ocurrir que la búsqueda secuencial sea más eficiente que la búsqueda binaria (por ejemplo, considere el caso en que la clave es justo el primer elemento de la lista, ¿cuánto tarda cada método?). Al hablar de la complejidad de una algoritmo (salvo que se mencione otra cosa) hablamos del tiempo que tarda ese algoritmo en el peor caso posible.
@@ -67,44 +67,15 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 
 ## Ejercicios:
 
-### Ejercicio 5.12: Insertar un elemento en una listaUno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
+### Ejercicio 5.11: Insertar un elemento en una lista
+Uno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
-Escribí una función `insertar(l,e)` que recibe una lista ordenada *l* y un elemento y *e*. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
+Usando lo que hiciste en el [Ejercicio 5.10](../05_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-510-búsqueda-binaria), escribí una función `insertar(l,e)` que recibe una lista ordenada `l` y un elemento y `e`. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
 
-Usá la función `busqueda_binaria(l,e)` del [Ejercicio 5.11](../05_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-511-búsqueda-binaria) para determinar si $e$ se encuentra en $l$.
-
-### Ejercicio 5.13: Cálcular la complejidad de dos resoluciones de `propagar`
-En este ejercicio retomamos el [Ejercicio 3.9](../03_Listas_y_Listas/03_IteradoresLista.md#ejercicio-39-propagación) de propagación del fuego en una hilera de fósforos. Queremos que calcules la complejidad en el peor caso de estas dos soluciones:
-
-```python
-# Versión 1
-def propagarQ(lista):
-    n = len(lista)
-    for i in range(n):
-        for j in range(n-1):
-            if (lista[j]==0) and (lista[j+1]==1):
-                lista[j]=1
-            elif (lista[j]==1) and (lista[j+1]==0):
-                lista[j+1]=1
-    return lista
-```
-
-
-```python
-# Versión 2
-def propagarL(lista):
-    n = len(lista)
-    for j in range(n-1):
-        if (lista[j]==1) and (lista[j+1]==0):
-            lista[j+1]=1
-    for j in range(10-1,0,-1):
-        if (lista[j]==1) and (lista[j-1]==0):
-            lista[j-1]=1
-    return lista
-
-```
+### Ejercicio 5.12: Cálcular la complejidad de dos resoluciones de `propagar`
+Ahora que tenés algunas herramientas teóricas más, volvé a leer las dos versiones de `propagar` del [Ejercicio 4.3](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-43-propagar-por-vecinos) y el [Ejercicio 4.4](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico) y compará sus complejidades.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria*)](05_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](07_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](05_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](07_gráficos_de_complejidad.md)
 
