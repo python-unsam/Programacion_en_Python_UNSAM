@@ -47,8 +47,8 @@ Algunas recomendaciones:
 
 Agregale nombres a los ejes y a la figura usando los siguientes comandos:
 ```python
-plt.xlabel("diametro")
-plt.ylabel("alto")
+plt.xlabel("diametro (cm)")
+plt.ylabel("alto (m)")
 plt.title("Relación diámetro - alto para Jacarandás")
 ```
 
@@ -75,7 +75,7 @@ plt.xlim(0,30)
 plt.ylim(0,100) 
 ```
 
-Acordate de guardar estos tres ejercicios dentro de tres funciones diferentes en tu archivo `arboles.py`. Te lo pediremos en la próxima página.
+Acordate siempre de ponerle título a las figuras y nombres y unidades a los ejes. Guardá los últimos tres ejercicios dentro de tres funciones diferentes en tu archivo `arboles.py`. Te pediremos que lo entregues en la próxima página.
 
 _Extra:_ ¿podés hacer un solo gráfico que muestre dos de estas tres especies en diferentes colores y resulte claro? ¿Y las tres especies?
 
