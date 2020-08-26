@@ -67,7 +67,7 @@ especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
 medidas = medidas_de_especies(especies, arboleda)
 ```
 
-¿Se mantinen las relaciones que viste en el ejercicio anterior para las tres especies? ¿Hay diferencias entre las especies? Para un mismo alto, ¿cuál tiene mayor diámetro (tipicamente)?
+¿Se mantienen las relaciones que viste en el ejercicio anterior para las tres especies? ¿Hay diferencias entre las especies? Para un mismo alto, ¿cuál tiene mayor diámetro (tipicamente)?
 
 Para poder comparar diferentes especies resulta conveniente fijar los límites en los ejes *x* e *y* en las diferentes figuras usando las funciones `xlim()` e  `ylim()`. A continuación un ejemplo:
 ```python

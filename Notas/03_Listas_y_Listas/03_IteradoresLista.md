@@ -115,7 +115,7 @@ def busqueda_lineal(lista, e):
     pos = -1  # comenzamos suponiendo que e no está
     i = 0     
     for z in lista:  # recorremos los elementos de la lista
-        if z == e:   # si entontramos a e
+        if z == e:   # si encontramos a e
             pos = i  # guardamos su posición
             break    # y salimos del ciclo
         i += 1       
@@ -130,7 +130,7 @@ def busqueda_lineal(lista, e):
     '''
     pos = -1  # comenzamos suponiendo que e no está
     for i, z in enumerate(lista): # recorremos la lista
-        if z == e:   # si entontramos a e
+        if z == e:   # si encontramos a e
             pos = i  # guardamos su posición
             break    # y salimos del ciclo
     return pos
@@ -192,7 +192,7 @@ Probá tu función con algunos ejemplos:
 Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()` que reciba una lista y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista. Probá también esta función con algunos ejemplos.
 
 ### Ejercicio 3.7: Búsqueda de máximo y mínimo
-Agregale a tu archivo `busqueda_en_listas.py` una función `maximo()` que busque el valor máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te propomenos que completes el siguiente código:
+Agregale a tu archivo `busqueda_en_listas.py` una función `maximo()` que busque el valor máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te proponemos que completes el siguiente código:
 
 ```python
 def maximo(lista):
@@ -243,7 +243,7 @@ Guardá la función en el archivo `invlista.py` y probala con las siguientes lis
 ### Ejercicio 3.9: Propagación
 Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).
 Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 0 (nuevo), un 1 (encendido) o un -1 (carbonizado). 
-El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósoforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
+El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
 
 Escribí una función llamada `propagar` que reciba un vector con 0's, 1's y -1's y devuelva un vector en el que los 1's se propagaron a sus vecinos con 0. Guardalo en un archivo `propaga.py`.
 

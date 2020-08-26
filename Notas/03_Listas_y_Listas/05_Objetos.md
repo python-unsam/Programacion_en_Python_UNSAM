@@ -29,7 +29,7 @@ b = a
 c = [a,b]
 ```
 
-A continucación te mostramos en un gráfico las operaciones de memoria suyacentes. En este ejemplo, hay solo un objeto lista `[1,2,3]`, pero hay cuatro referencias a él.
+A continuación te mostramos en un gráfico las operaciones de memoria suyacentes. En este ejemplo, hay solo un objeto lista `[1,2,3]`, pero hay cuatro referencias a él.
 
 ![Referencias](referencias.png)
 
@@ -200,7 +200,7 @@ if isinstance(a, (list,tuple)):
 
 ### Todo es un objeto
 
-Números, cadenas, listas, funciones, excepciones, clases, instancias, etc. son todos objetos. Esto significa que pueden ser nombrados, pueden ser pasados como datos, ubicados en contenedors, etc. sin restricciones. No hay objetos especiales en Python. Todos los objetos viajan en primera clase.
+Números, cadenas, listas, funciones, excepciones, clases, instancias, etc. son todos objetos. Esto significa que pueden ser nombrados, pueden ser pasados como datos, ubicados en contenedores, etc. sin restricciones. No hay objetos especiales en Python. Todos los objetos viajan en primera clase.
 
 Un ejemplo simple:
 
