@@ -67,7 +67,7 @@ medidas = medidas_de_especies(especies, arboleda)
 
 ¿Se mantinen las relaciones que viste en el ejercicio anterior para las tres especies? ¿Hay diferencias entre las especies? Para un mismo alto, ¿cuál tiene mayor diámetro (tipicamente)?
 
-Para poder comparar las diferentes especies poné los mismos rangos en los ejes *x* y *y* en las diferentes figuras usando:
+Para poder comparar las diferentes especies fijá los límites en los ejes *x* e *y* en las diferentes figuras usando `xlim()` e  `ylim()` adecuadamente:
 ```python
 plt.xlim(0,30) 
 plt.ylim(0,100) 
