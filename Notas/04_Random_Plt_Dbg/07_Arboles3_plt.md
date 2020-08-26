@@ -59,6 +59,8 @@ Comenzando con éste código, hacé tres gráficos como en el ejercicio anterior
 
 ```python
 import os
+import matplotlib.pyplot as plt
+
 os.path.join('Data', 'arbolado-en-espacios-verdes.csv')
 arboleda = leer_arboles(nombre_archivo)
 especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
