@@ -49,7 +49,7 @@ Agregale nombres a los ejes y a la figura usando los siguientes comandos:
 ```python
 plt.xlabel("diametro (cm)")
 plt.ylabel("alto (m)")
-plt.title("Relación diámetro - alto para Jacarandás")
+plt.title("Relación diámetro-alto para Jacarandás")
 ```
 
 ### Ejercicio 4.32: Scatterplot para diferentes especies
