@@ -45,6 +45,13 @@ Algunas recomendaciones:
 
 ¿Ves alguna relación entre el diámetro y el alto de los Jacarndás? ¿Te parece que es una relación lineal o de otro tipo?
 
+Agregale nombres a los ejes y a la figura usando los siguientes comandos:
+```python
+plt.xlabel("diametro")
+plt.ylabel("alto")
+plt.title("Relación diámetro - alto para Jacarandás")
+```
+
 ### Ejercicio 4.32: Scatterplot para diferentes especies
 Ahora vamos a usar la función `medidas_de_especies()` definida en el [Ejercicio 3.21](../03_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-321-diccionario-con-medidas).
 
@@ -59,6 +66,14 @@ medidas = medidas_de_especies(especies, arboleda)
 ```
 
 ¿Se mantinen las relaciones que viste en el ejercicio anterior para las tres especies? ¿Hay diferencias entre las especies? Para un mismo alto, ¿cuál tiene mayor diámetro (tipicamente)?
+
+Para poder comparar las diferentes especies poné los mismos rangos en los ejes *x* y *y* en las diferentes figuras usando:
+```python
+plt.xlim(0,30) 
+plt.ylim(0,100) 
+```
+
+```
 
 Acordate de guardar estos tres ejercicios dentro de tres funciones diferentes en tu archivo `arboles.py`. Te lo pediremos en la próxima página.
 
