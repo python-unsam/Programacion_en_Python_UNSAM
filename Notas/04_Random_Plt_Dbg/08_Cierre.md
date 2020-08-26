@@ -14,7 +14,7 @@ Para cerrar esta clase te pedimos dos cosas:
  4. El archivo `figuritas.py` abarcando lo hecho con figuritas (al menos) hasta el [Ejercicio 4.20](../04_Random_Plt_Dbg/04_Figuritas.md#ejercicio-420).
  5. El archivo `arboles.py` incluyendo al menos el [Ejercicio 4.31](../04_Random_Plt_Dbg/07_Arboles3_plt.md#ejercicio-431-scatterplot-diámetro-vs-alto-de-jacarandás).
 
-* Que completes [este formulario](https://docs.google.com/forms/d/LINK) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/1HX--FgwcYV1PJ6-UhXhaSUbrFSLsR0tpUnf_A1YLyVE) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! Nos vemos en la próxima clase.
 
