@@ -73,8 +73,6 @@ plt.xlim(0,30)
 plt.ylim(0,100) 
 ```
 
-```
-
 Acordate de guardar estos tres ejercicios dentro de tres funciones diferentes en tu archivo `arboles.py`. Te lo pediremos en la próxima página.
 
 _Extra:_ ¿podés hacer un solo gráfico que muestre dos de estas tres especies en diferentes colores y resulte claro? ¿Y las tres especies?
