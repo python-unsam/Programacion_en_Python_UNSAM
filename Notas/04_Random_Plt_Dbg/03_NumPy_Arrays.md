@@ -465,7 +465,7 @@ array([[99,  2,  3,  4],
  [ 9, 10, 11, 12]])
 ```
 
-Podés usar el método `copy` para copiar los datos (una copia profunda). Por ejemplo:
+Podés usar el método `copy` para copiar los datos. Por ejemplo:
 
 ```python
 >>> b2 = a[1, :].copy()
