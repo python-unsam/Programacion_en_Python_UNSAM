@@ -9,7 +9,7 @@ En esta sección retomamos el dataset del arbolado porteño (arbolado-en-espacio
 Seguiremos trabajando en el archivo `arboles.py`. Nos basaremos en el trabajo hecho con comprensión de listas la clase pasada. Los siguientes tres ejercicios hacelos dentro de tres funciones diferentes, guardalas y entregá el archivo `arboles.py` con estos agregados.
 
 ### Ejercicio 4.30: Histograma de altos de Jacarandás
-Usando tu trabajo en el [Ejercicio 3.19](../03_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-319-lista-de-altos-de-jacarandá), generá un histograma con los altos de los Jacarandás en el dataset.
+Usando tu trabajo en el [Ejercicio 3.19](../03_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-319-lista-de-altos-de-jacarandá), generá un histograma con las alturas de los Jacarandás en el dataset.
 
 Tu código debería verse similar a este:
 

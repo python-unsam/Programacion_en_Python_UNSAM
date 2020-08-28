@@ -22,7 +22,7 @@ Usando comprensión de listas y la variable `arboleda` podés por ejemplo armar 
 H=[float(arbol['altura_tot']) for arbol in arboleda]
 ```
 
-Usá los filtros (recordá la [Sección 3.4](../03_Listas_y_Listas/04_Comprension_Listas.md#filtros)) para armar la lista de los altos de los Jacarandás solamente.
+Usá los filtros (recordá la [Sección 3.4](../03_Listas_y_Listas/04_Comprension_Listas.md#filtros)) para armar la lista de alturas de los Jacarandás solamente.
 
 ### Ejercicio 3.20: Lista de altos y diámetros de Jacarandá
 En el ejercicio anterior usaste una sola linea para seleccionar las alturas de los Jacarandás en parques porteños. Ahora te proponemos que armes una nueva lista que tenga pares (tuplas de longitud 2) conteniendo no solo el alto sino también el diámetro de cada Jacarandá en la lista.

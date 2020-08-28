@@ -37,7 +37,6 @@ Escribí una función `tirar()` que devuelva una lista con cinco dados generados
 Luego analizá el siguiente código. Correlo con `N = 100000` varias veces y observá los valores que obtenés. Luego correlo algunas veces con `N = 1000000` (ojo, hace un millón de experimentos, podría tardar un poco):
 
 ```python
-salio_generala_servida = [es_generala(tirar()) for i in range(N)]
 G = sum([es_generala(tirar()) for i in range(N)])
 prob = G/N
 print(f'Tiré {N} veces, de las cuales {G} saqué generala servida.')
