@@ -7,7 +7,7 @@ Python tiene un debugger poderoso que te permite probar porciones de código. Es
 Vimos en la  [Sección 3.2](../03_Listas_y_Listas/02_Bugs.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
 
 
-## Testear es genial, debuggear es un horrible.
+## Testear es genial, debuggear es horrible.
 
 Se dice que hay un _bug_ (un error) cuando un programa no se comporta como el programador espera o hace algo inesperado. Es muy frecuente que los programas tengan bugs. Después de escribir un fragmento de código por primera vez, es conveniente correrlo algunas veces usando tests que permitan poner en evidencia esos bugs.
 
@@ -229,8 +229,8 @@ def propagar(l):
         veces += 1
 
     print(f"Repetí {veces} veces la función propagar_al_vecino.")
-    print(f"Con input {l}")    
-    print(f"Y obtuve  {m}")
+    print(f"Con input {m}")    
+    print(f"Y obtuve  {l}")
     return m
 #%%
 propagar([0,0,0,0,1])
