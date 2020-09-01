@@ -247,7 +247,7 @@ Volvé a tu programa `tabla_informe.py` y modificalo de modo que todas las opera
 
 ### Ejercicio 5.2: Crear una función de alto nivel para la ejecución del programa.
 
-Juntá la última parte de tu programa en una única función `informe_camion(nombre_archivo_camion, nombre_archivo_precios)`. deberías obtener una función que al llamarla como sigue, imprima el informe:
+Juntá la última parte de tu programa en una única función `informe_camion(nombre_archivo_camion, nombre_archivo_precios)`. Deberías obtener una función que al llamarla como sigue, imprima el informe:
 
 ```python
 informe_camion('Data/camion.csv', 'Data/precios.csv')
