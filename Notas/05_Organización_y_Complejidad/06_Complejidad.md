@@ -67,12 +67,12 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 
 ## Ejercicios:
 
-### Ejercicio 5.11: Insertar un elemento en una lista
+### Ejercicio 5.12: Insertar un elemento en una lista
 Uno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
-Usando lo que hiciste en el [Ejercicio 5.10](../05_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-510-búsqueda-binaria), escribí una función `insertar(l,e)` que recibe una lista ordenada `l` y un elemento y `e`. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
+Usando lo que hiciste en el [Ejercicio 5.11](../05_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-511-búsqueda-binaria), escribí una función `insertar(l,e)` que recibe una lista ordenada `l` y un elemento y `e`. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En ambos casos debe devolver su posición.
 
-### Ejercicio 5.12: Cálcular la complejidad de dos resoluciones de `propagar`
+### Ejercicio 5.13: Cálcular la complejidad de dos resoluciones de `propagar`
 Ahora que tenés algunas herramientas teóricas más, volvé a leer las dos versiones de `propagar` del [Ejercicio 4.3](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-43-propagar-por-vecinos) y el [Ejercicio 4.4](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico) y compará sus complejidades.
 
 

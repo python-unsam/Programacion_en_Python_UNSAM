@@ -421,6 +421,28 @@ if types:
     fila = [func(val) for func, val in zip(types, fila) ]
 ...
 ```
+### Ejercicio 5.6: Trabajando sin encabezados
+Algunos archivos CSV no tiene información de los encabezados.
+Por ejemplo, el archivo `precios.csv` se ve así:
+
+```csv
+Lima,40.22
+Uva,24.85
+Ciruela,44.85
+Cereza,11.27
+...
+```
+
+Modificá la función `parse_csv()` de forma que (opcionalmente) pueda trabajar con este tipo de archivos, creando tuplas en lugar de diccionarios cuando no haya encabezados. Por ejemplo:
+
+```python
+>>> precs = parse_csv('Data/prices.csv', types=[str,float], has_headers=False)
+>>> precs
+[(Lima,40.22), (Uva,24.85), (Ciruela,44.85), (Cereza,11.27), (Frutilla,53.72), (Caqui,105.46), (Tomate,66.67), (Berenjena,28.47), (Lechuga,24.22), (Durazno,73.48), (Remolacha,20.75), (Habas,23.16), (Frambuesa,34.35), (Naranja,106.28), (Bruselas,15.72), (Batata,55.16), (Rúcula,36.9), (Radicheta,26.11), (Repollo,49.16), (Cebolla,58.99), (Cebollín,57.1), (Puerro,27.58), (Mandarina,80.89), (Ajo,15.19), (Rabanito,51.94), (Zapallo,24.79), (Espinaca,52.61), (Acelga,29.26), (Zanahoria,49.74), (Papa,69.35)]
+>>>
+```
+
+Para hacer este cambio, vas a tener que modificar el código de forma que la primera linea de datos no sea interpretada como encabezado. Además, vas a tener que asegurarte de no crear diccionarios, dado que no tenés más los nombres de las columnas para usar en el encabezado.
 
 Incorporá todos estos cambios en el archivo `fileparse.py`.
 

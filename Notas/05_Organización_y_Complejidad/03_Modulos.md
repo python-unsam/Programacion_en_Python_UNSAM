@@ -156,7 +156,7 @@ Dado que existe la lista de módulos cargados `sys.modules`, un pedido de cargar
 
 Para estos ejercicios que involucran módulos, es de suma importancia que te asegures de que estás ejecutando Python en el directorio adecuado.
 
-### Ejercicio 5.6: Importar módulos
+### Ejercicio 5.7: Importar módulos
 En el [Ejercicio 5.3](../05_Organización_y_Complejidad/02_Funciones.md#ejercicio-53-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver como usar esa función en otros programas. 
 
 Empezá por asegurarte que el directorio de trabajo es `ejercicios_python/` y que en el mismo tengas tus ejercicios anteriores (como `hipoteca.py` y el archivo `fileparse.py` con la función `parse_csv()` que armaste antes). Los vamos a importar.
@@ -215,7 +215,7 @@ Importá sólo la función para evitar escribir el nombre del módulo:
 >>>
 ```
 
-### Ejercicio 5.7: Usemos tu módulo
+### Ejercicio 5.8: Usemos tu módulo
 En el [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones)
 escribiste un programa `informe_funciones.py` que produce un informe como este:
 
@@ -236,7 +236,7 @@ Retomá ese programa y modificalo de modo que todo el procesamiento de archivos 
 Guiate por el ejemplo interactivo que dimos un poco más arriba.
 Al final, deberías obtener exactamente el mismo resultado que al principio.
 
-### Ejercicio 5.8: Un poco más allá
+### Ejercicio 5.9: Un poco más allá
 En [Ejercicio 2.5](../02_Datos/02_Funciones.md#ejercicio-25-transformar-un-script-en-una-función) escribiste el programa `costo_camion.py` que lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo.
 
 ```python
