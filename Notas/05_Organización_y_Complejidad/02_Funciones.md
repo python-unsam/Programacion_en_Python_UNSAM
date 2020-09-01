@@ -54,7 +54,7 @@ cortar_datos(data, debug=True)
 cortar_datos(data, debug=True, ignore_errores=True)
 ```
 
-En la mayoría de los casos los argumentos con nombre hacen al código más claro, más fácil de entender, especialmete si estos argumentos son booleanos, que determinan opciones si-no.
+En la mayoría de los casos los argumentos con nombre hacen al código más claro, más fácil de entender, especialmente si estos argumentos son booleanos, que determinan opciones si-no.
 
 ### Buenas prácticas de diseño
 
@@ -68,7 +68,7 @@ def leer_precios(nombre_archivo, debug=False):
     ...
 ```
 
-Quien use la función podría elegir llamarla con argmuentos nombrados.
+Quien use la función podría elegir llamarla con argumentos nombrados.
 
 ```python
 d = leer_precios('precios.csv', debug=True)
@@ -254,7 +254,7 @@ Este conjunto de ejercicios te llevan a implementar un programa medianamente com
 
 La solución que vas a desarrollar involucra sólo unas 25 líneas de código, pero tomate tu tiempo para asegurarte que entendés cada concepto y cada parte del código por separado.
 
-La parte central del programa `informe_funciones.py` resuelve la lectura de archivos de tipo CSV. Por ejemplo, la función `leer_camion()` lee un archivo que contiene los datos de un camión organizados como filas, y la función `leer_precios()` lee un archivo que contiene precios. En ambas funciones hay una variedad de acciones detallistas y minuciosas, por ejemplo, ambos abren un archivo y lo envuelven con el módulo `cvs` y ambos convierten cada uno de los campos a un tipo de datos diferente.
+La parte central del programa `informe_funciones.py` resuelve la lectura de archivos de tipo CSV. Por ejemplo, la función `leer_camion()` lee un archivo que contiene los datos de un camión organizados como filas, y la función `leer_precios()` lee un archivo que contiene precios. En ambas funciones hay una variedad de acciones detallistas y minuciosas, por ejemplo, ambos abren un archivo y lo envuelven con el módulo `csv` y ambos convierten cada uno de los campos a un tipo de datos diferente.
 
 Si tu tarea fuera de verdad leer datos de archivos, entonces querrías limpiar este código un poco, hacerlo más prolijo, y aplicable a un uso más general. Esa es nuestra intención ahora:  
 
@@ -299,7 +299,7 @@ Probémoslo en tu IDE o con `python3 -i fileparse.py`.
 ```python
 >>> camion = parse_csv('Data/camion.csv')
 >>> camion
-[{'precio': '32.20', 'name': 'Lima', 'cajones': '100'}, {'precio': '91.10', 'name': 'Naranja', 'cajones': '50'}, {'precio': '83.44', 'name': 'Caqui', 'cajones': '150'}, {'precio': '51.23', 'name': 'Mandarina', 'cajones': '200'}, {'precio': '40.37', 'name': 'Durazno', 'cajones': '95'}, {'precio': '65.10', 'name': 'Mandarina', 'cajones': '50'}, {'precio': '70.44', 'name': 'Naranja', 'cajones': '100'}]
+[{'nombre': 'Lima', 'cajones': '100', 'precio': '32.2'}, {'nombre': 'Naranja', 'cajones': '50', 'precio': '91.1'}, {'nombre': 'Caqui', 'cajones': '150', 'precio': '103.44'}, {'nombre': 'Mandarina', 'cajones': '200', 'precio': '51.23'}, {'nombre': 'Durazno', 'cajones': '95', 'precio': '40.37'}, {'nombre': 'Mandarina', 'cajones': '50', 'precio': '65.1'}, {'nombre': 'Naranja', 'cajones': '100', 'precio': '70.44'}]
 >>>
 ```
 
@@ -313,12 +313,12 @@ Modifiquemos la función `parse_csv` de modo que permita al usuario elegir (opci
 >>> # Lee todos los datos
 >>> camion = parse_csv('Data/camion.csv')
 >>> camion
-[{'precio': '32.20', 'name': 'Lima', 'cajones': '100'}, {'precio': '91.10', 'name': 'Naranja', 'cajones': '50'}, {'precio': '83.44', 'name': 'Caqui', 'cajones': '150'}, {'precio': '51.23', 'name': 'Mandarina', 'cajones': '200'}, {'precio': '40.37', 'name': 'Durazno', 'cajones': '95'}, {'precio': '65.10', 'name': 'Mandarina', 'cajones': '50'}, {'precio': '70.44', 'name': 'Naranja', 'cajones': '100'}]
+[{'nombre': 'Lima', 'cajones': '100', 'precio': '32.2'}, {'nombre': 'Naranja', 'cajones': '50', 'precio': '91.1'}, {'nombre': 'Caqui', 'cajones': '150', 'precio': '103.44'}, {'nombre': 'Mandarina', 'cajones': '200', 'precio': '51.23'}, {'nombre': 'Durazno', 'cajones': '95', 'precio': '40.37'}, {'nombre': 'Mandarina', 'cajones': '50', 'precio': '65.1'}, {'nombre': 'Naranja', 'cajones': '100', 'precio': '70.44'}]
 
 >>> # Lee solo algunos datos
->>> cajones_retenidos = parse_csv('Data/camion.csv', select=['name','cajones'])
+>>> cajones_retenidos = parse_csv('Data/camion.csv', select=['nombre','cajones'])
 >>> cajones_retenidos
-[{'name': 'Lima', 'cajones': '100'}, {'name': 'Naranja', 'cajones': '50'}, {'name': 'Caqui', 'cajones': '150'}, {'name': 'Mandarina', 'cajones': '200'}, {'name': 'Durazno', 'cajones': '95'}, {'name': 'Mandarina', 'cajones': '50'}, {'name': 'Naranja', 'cajones': '100'}]
+[{'nombre': 'Lima', 'cajones': '100'}, {'nombre': 'Naranja', 'cajones': '50'}, {'nombre': 'Caqui', 'cajones': '150'}, {'nombre': 'Mandarina', 'cajones': '200'}, {'nombre': 'Durazno', 'cajones': '95'}, {'nombre': 'Mandarina', 'cajones': '50'}, {'nombre': 'Naranja', 'cajones': '100'}]
 >>>
 ```
 
@@ -329,7 +329,7 @@ De todos modos, esta es otra forma de resolverlo:
 # fileparse.py
 import csv
 
-def parse_csv(nombre_archivo, selec=None):
+def parse_csv(nombre_archivo, select=None):
     '''
     Parsea un archivo CSV en una lista de registros
     '''
@@ -343,9 +343,9 @@ def parse_csv(nombre_archivo, selec=None):
         #    buscar los índices de las columnas especificadas.
         # Y achicar el conjunto de encabezados para diccionarios
 
-        if selec:
-            indices = [encabezados.index(ncolumna) for ncolumna in selec]
-            encabezados = selec
+        if select:
+            indices = [encabezados.index(ncolumna) for ncolumna in select]
+            encabezados = select
         else:
             indices = []
 
@@ -381,7 +381,7 @@ Y que las columnas seleccionadas fueran:
 Para hacer la selección correctamente, tenés que conventir los nombres de las columnas listadas en `selec` a índices (posiciones) de columnas en el archivo. Eso es exactamente lo que hace este paso:
 
 ```python
->>> indices = [encabezados.index(ncolumna) for ncolumna in selec ]
+>>> indices = [encabezados.index(ncolumna) for ncolumna in select ]
 >>> indices
 [0, 3]
 >>>
@@ -405,11 +405,11 @@ Modificá la función `parse_csv()` de modo que permita, opcionalmente,  convert
 ```python
 >>> camion = parse_csv('Data/camion.csv', types=[str, int, float])
 >>> camion
-[{'precio': 32.2, 'name': 'Lima', 'cajones': 100}, {'precio': 91.1, 'name': 'Naranja', 'cajones': 50}, {'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 51.23, 'name': 'Mandarina', 'cajones': 200}, {'precio': 40.37, 'name': 'Durazno', 'cajones': 95}, {'precio': 65.1, 'name': 'Mandarina', 'cajones': 50}, {'precio': 70.44, 'name': 'Naranja', 'cajones': 100}]
+[{'nombre': 'Lima', 'cajones': '100', 'precio': '32.2'}, {'nombre': 'Naranja', 'cajones': '50', 'precio': '91.1'}, {'nombre': 'Caqui', 'cajones': '150', 'precio': '103.44'}, {'nombre': 'Mandarina', 'cajones': '200', 'precio': '51.23'}, {'nombre': 'Durazno', 'cajones': '95', 'precio': '40.37'}, {'nombre': 'Mandarina', 'cajones': '50', 'precio': '65.1'}, {'nombre': 'Naranja', 'cajones': '100', 'precio': '70.44'}]
 
->>> cajones_lote = parse_csv('Data/camion.csv', select=['name', 'cajones'], types=[str, int])
+>>> cajones_lote = parse_csv('Data/camion.csv', select=['nombre', 'cajones'], types=[str, int])
 >>> cajones_lote
-[{'name': 'Lima', 'cajones': 100}, {'name': 'Naranja', 'cajones': 50}, {'name': 'Caqui', 'cajones': 150}, {'name': 'Mandarina', 'cajones': 200}, {'name': 'Durazno', 'cajones': 95}, {'name': 'Mandarina', 'cajones': 50}, {'name': 'Naranja', 'cajones': 100}]
+[{'nombre': 'Lima', 'cajones': 100}, {'nombre': 'Naranja', 'cajones': 50}, {'nombre': 'Caqui', 'cajones': 150}, {'nombre': 'Mandarina', 'cajones': 200}, {'nombre': 'Durazno', 'cajones': 95}, {'nombre': 'Mandarina', 'cajones': 50}, {'nombre': 'Naranja', 'cajones': 100}]
 >>>
 ```
 
@@ -417,8 +417,8 @@ Ya vimos esto en el [Ejercicio 3.15](../03_Listas_y_Listas/05_Objetos.md#ejercic
 
 ```python
 ...
-if tipos:
-    fila = [func(val) for func, val in zip(tipos, fila) ]
+if types:
+    fila = [func(val) for func, val in zip(types, fila) ]
 ...
 ```
 

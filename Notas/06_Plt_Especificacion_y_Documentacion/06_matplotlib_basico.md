@@ -7,12 +7,12 @@ plots de lineas, una intro completa a traducir:
 
 ##  Matplotlib: plotting
 
-##  Introduction
- Matplotlib is probably the most used Python package for 2D-graphics. It provides both a quick way to visualize data from Python and publication-quality figures in many formats. We are going to explore matplotlib in interactive mode covering most common cases.
+##  Introducción
 
+Matplotlib es probablemente el paquete de Python mas usado para crear gráficos en 2D. Provee una forma rápida de graficar los datos como gráficos en varios formatos de alta calidad listos para ser presentados y publicados. En esta sección vamos a explorar matplotlib en modo interactivo y ver los casos mas comunes.
 
 ##  pyplot
- pyplot provides a procedural interface to the matplotlib object-oriented plotting library. It is modeled closely after Matlab™. Therefore, the majority of plotting commands in pyplot have Matlab™ analogs with similar arguments. Important commands are explained with interactive examples.
+ *pyplot* proporciona una interfase a la biblioteca de matplotlib, que es orientada a objetos como todo en Python. Pyplot está diseñada siguiendo el producto Matlab™. Por lo tanto la mayoría de los comandos para graficar en pyplot tienen análogos en Matlab™ con argumentos similares. Explicaremos las instrucciones mas importantes con ejemplos interactivos. 
 
 ```python
 from matplotlib import pyplot as plt
@@ -20,8 +20,9 @@ from matplotlib import pyplot as plt
 
 
 ## Simple plot
- In this section, we want to draw the cosine and sine functions on the same plot. Starting from the default settings, we’ll enrich the figure step by step to make it nicer.
-First step is to get the data for the sine and cosine functions:
+Para empezar, vamos a plotear las funciones _seno()_ y _coseno()_ en el mismo grafico. Partiendo de la configuración básica, vamos a ir cambiando el gráfico paso por paso para que quede como queremos.
+
+Primero hay que obtener los datos para graficar:
 
 ```python
 import numpy as np
@@ -30,13 +31,15 @@ X = np.linspace(-np.pi, np.pi, 256)
 C, S = np.cos(X), np.sin(X)
 ```
 
-X is now a numpy array with 256 values ranging from -π to +π (included). C is the cosine (256 values) and S is the sine (256 values).
+Ahora tenemos un array de numpy con 256 valores que van desde -π a +π (incluído). C tiene los valores del coseno (256 valores) y S tiene los valores del seno (256 valores).
 
-### 1.5.2.1. Plotting with default settings
+### 1.5.2.1. El ploteo estándard
 
 ![COPETE](./sphx_glr_plot_exercise_1_001.png)
 
- Matplotlib comes with a set of default settings that allow customizing all kinds of properties. You can control the defaults of almost every property in matplotlib: figure size and dpi, line width, color and style, axes, axis and grid properties, text and font properties and so on.
+En Matplotlib los gráficos tienen una configuración por omisión. Cambiándolas podés configurar muchas propiedades del gráfico. Podés cambiar el tamaño de la figura, los DPI (dots per inch, puntos por pulgada), el tamaño, color y estilo del trazo, las propiedades de los ejes y el cuadriculado, los textos y sus propiedades, etc. 
+ 
+ [oski]: # (Matplotlib comes with a set of default settings that allow customizing all kinds of properties. You can control the defaults of almost every property in matplotlib: figure size and dpi, line width, color and style, axes, axis and grid properties, text and font properties and so on.)
 
 ```python
 import numpy as np
@@ -51,57 +54,61 @@ plt.plot(X, S)
 plt.show()
 ```
 
-### 1.5.2.2. Instantiating defaults
+### 1.5.2.2. El gráfico básico
 
 ![COPETE](./sphx_glr_plot_exercise_2_001.png)
 
+En el siguiente script, hemos explicitado y comentado todos las propiedades de una figura que influyen en la apariencia de un gráfico.
 
-In the script below, we’ve instantiated (and commented) all the figure settings that influence the appearance of the plot.
+Cada propiedad se configuró a su valor por omisión, de modo que sepas cuáles son los valores "normales" y puedas jugar con ellos para ver sus efectos sobre el plot. Sobre propiedades y estilos de las líneas hablaremos luego.
 
- The settings have been explicitly set to their default values, but now you can interactively play with the values to explore their affect (see Line properties and Line styles below).
+[oski] : #(In the script below, we’ve instantiated and commented all the figure settings that influence the appearance of the plot.
+
+ The settings have been explicitly set to their default values, but now you can interactively play with the values to explore their affect [see Line properties and Line styles below].)
+
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Create a figure of size 8x6 inches, 80 dots per inch
+# Crea una figura nueva, de 8x6 pulgadas, con 80 puntos por pulgada
 plt.figure(figsize=(8, 6), dpi=80)
 
-# Create a new subplot from a grid of 1x1
+# Crea un nuevo subplot, en una grilla de 1x1
 plt.subplot(1, 1, 1)
 
 X = np.linspace(-np.pi, np.pi, 256)
 C, S = np.cos(X), np.sin(X)
 
-# Plot cosine with a blue continuous line of width 1 (pixels)
+# Plotea el coseno con una línea azul contínua de ancho 1 (en pixeles)
 plt.plot(X, C, color="blue", linewidth=1.0, linestyle="-")
 
-# Plot sine with a green continuous line of width 1 (pixels)
+# Plotea el seno con una línea verde contínua de ancho 1 (en pixeles)
 plt.plot(X, S, color="green", linewidth=1.0, linestyle="-")
 
-# Set x limits
+# Rango del eje x
 plt.xlim(-4.0, 4.0)
 
-# Set x ticks
+# Ponemos marcas (ticks) en el eje x
 plt.xticks(np.linspace(-4, 4, 9))
 
-# Set y limits
+# Rango del eje y
 plt.ylim(-1.0, 1.0)
 
-# Set y ticks
+# Ponemos marcas (ticks) en el eje y
 plt.yticks(np.linspace(-1, 1, 5))
 
-# Save figure using 72 dots per inch
-# plt.savefig("exercise_2.png)", dpi=72)
+# Podemos grabar el gráfico usando 72 dpi
+# plt.savefig("ejercicio_2.png)", dpi=72)
 
-# Show result on screen
+# Mostrar el resultado en pantalla
 plt.show()
 ```
 
-### 1.5.2.3. Changing colors and line widths
+### 1.5.2.3. Como cambiar los colores y ancho de los trazos
 ![COPETE](./sphx_glr_plot_exercise_3_001.png)
 
- First step, we want to have the cosine in blue and the sine in red and a slighty thicker line for both of them. We’ll also slightly alter the figure size to make it more horizontal.
+ Ahora vamos a modificar el gráfico para que quede un poco mejor. Primero, queremos trazar el coseno en azul y el seno en rojo, y ambos con una línea algo más gruesa. Además, vamos a cambiar un poco el tamaño de la figura para hacerla mas apaisada. Corré el siguiente código y compará el resultado con la figura anterior.
 
 ```python
 ...
@@ -111,10 +118,10 @@ plt.plot(X, S, color="red",  linewidth=2.5, linestyle="-")
 ...
 ```
 
-### 1.5.2.4. Setting limits
+### 1.5.2.4. Límites de los ejes
 ![COPETE](./sphx_glr_plot_exercise_4_001.png)
 
- Current limits of the figure are a bit too tight and we want to make some space in order to clearly see all data points.
+ El rango de valores de los ejes es un poco angosto y necesitamos más espacio alrededor para ver claramente todos los puntos. 
 
 ```python
 ...
@@ -123,10 +130,10 @@ plt.ylim(C.min() * 1.1, C.max() * 1.1)
 ...
 ```
 
-### 1.5.2.5. Setting ticks
+### 1.5.2.5. Marcas en los ejes
 ![COPETE](./sphx_glr_plot_exercise_5_001.png)
 
- Current ticks are not ideal because they do not show the interesting values (+/-π,+/-π/2) for sine and cosine. We’ll change them such that they show only these values.
+Así como están, las marcas sobre los ejes no son lo mas útil. Sería bueno destacar los valores interesantes para seno y coseno (+/-π,+/-π/2). Cambiémoslos para mostrar únicamente ésos valores.
 
 ```python
 ...
@@ -135,10 +142,12 @@ plt.yticks([-1, 0, +1])
 ...
 ```
 
-### 1.5.2.6. Setting tick labels
+### 1.5.2.6. Texto de las marcas en los ejes
 ![COPETE](./sphx_glr_plot_exercise_6_001.png)
 
- Ticks are now properly placed but their label is not very explicit. We could guess that 3.142 is π but it would be better to make it explicit. When we set tick values, we can also provide a corresponding label in the second argument list. Note that we’ll use latex to allow for nice rendering of the label.
+Las marcas en los ejes ahora están donde los queremos, pero el texto no es muy explícito. Aunque podemos darnos cuenta que 3.142 es π sería mejor dejarlo explícito.
+
+Al definir un valor para las marcas en los ejes podemos proveer un texto en la segunda lista de argumentos para usar como etiqueta. Fijate que vamos a usar [_LaTeX_](https://www.latex-project.org/) para hacer que los símbolos tengan mejor pinta.
 
 ```python
 ...
@@ -150,14 +159,14 @@ plt.yticks([-1, 0, +1],
 ...
 ```
 
-### 1.5.2.7. Moving spines
+### 1.5.2.7. Movamos el contorno
 ![COPETE](./sphx_glr_plot_exercise_7_001.png)
 
- Spines are the lines connecting the axis tick marks and noting the boundaries of the data area. They can be placed at arbitrary positions and until now, they were on the border of the axis. We’ll change that since we want to have them in the middle. Since there are four of them (top/bottom/left/right), we’ll discard the top and right by setting their color to none and we’ll move the bottom and left ones to coordinate 0 in data space coordinates.
+ El contorno es el conjunto de líneas que delimitan el área de graficación y que unen todas las marcas en los ejes. Podemos ubicarlas en cualquier posición y, hasta ahora, han estado en el extremo de cada eje. Cambiemos éso, así las ubicamos en el centro. Como hay cuatro (arriba, abajo, izquierda y derecha) vamos a esconder dos de ellas dándoles color `none` y vamos a mover la de abajo y la de la izquierda a la posición 0 del espacio de coordenadas. 
 
 ```python
 ...
-ax = plt.gca()  # gca stands for 'get current axis'
+ax = plt.gca()  # gca es 'get current axis' ó 'tomar eje actual'
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 ax.xaxis.set_ticks_position('bottom')
@@ -167,10 +176,10 @@ ax.spines['left'].set_position(('data',0))
 ...
 ```
 
-### 1.5.2.8. Adding a legend
+### 1.5.2.8. Pongámosle título
 ![COPETE](./sphx_glr_plot_exercise_8_001.png)
 
- Let’s add a legend in the upper left corner. This only requires adding the keyword argument label (that will be used in the legend box) to the plot commands.
+ Pongámosle nombres a los trazos al gráfico en la esquina superior izquierda. Para ésto alcanza con agregar a la instrucción 'plot' la palabra clave 'label' y ese texto será usado para el recuadro con los nombres. 
 
 ```python
 ...
@@ -181,10 +190,10 @@ plt.legend(loc='upper left')
 ...
 ```
 
-### 1.5.2.9. Annotate some points
+### 1.5.2.9. Algunos puntos interesantes 
 ![COPETE](./sphx_glr_plot_exercise_9_001.png)
 
- Let’s annotate some interesting points using the annotate command. We chose the 2π/3 value and we want to annotate both the sine and the cosine. We’ll first draw a marker on the curve as well as a straight dotted line. Then, we’ll use the annotate command to display some text with an arrow.
+ Vamos a marcar alguno puntos interesantes usando el comando 'annotate'. Elegimos el valor 2π/3 y queremos marcar tanto el seno como el coseno. Vamos a dibujar una marca en la curva y un línea recta punteada. Además, vamos a usar 'annotate' para mostrar texto y una flecha para destacar el valor de las funciones. 
 
 ```python
 ...
@@ -208,10 +217,12 @@ plt.annotate(r'$sin(\frac{2\pi}{3})=\frac{\sqrt{3}}{2}$',
 ...
 ```
 
-### 1.5.2.10. Devil is in the details
+### 1.5.2.10. El diablo está en los detalles
 ![COPETE](./sphx_glr_plot_exercise_10_001.png)
 
- The tick labels are now hardly visible because of the blue and red lines. We can make them bigger and we can also adjust their properties such that they’ll be rendered on a semi-transparent white background. This will allow us to see both the data and the labels.
+ Apenas si podemos ver las marcas negras originales sobre los ejes porque los trazos azul y rojo los esconden. Podemos hacerlos mas grandes y ajustar sus propiedades de modo que tengan un fondo blanco semi-transparente. Esto nos permitirá ver un poco mejor los datos y los textos. 
+
+ [oski]: # ( ---- la verdad es que la diferencia es casi imperceptible ----The tick labels are now hardly visible because of the blue and red lines. We can make them bigger and we can also adjust their properties such that they’ll be rendered on a semi-transparent white background. This will allow us to see both the data and the labels. )
 
 ```python
 ...

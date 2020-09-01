@@ -191,7 +191,7 @@ Ahora probá importar tu módulo `fileparse` y pedile `help`.
 Intentá usar el módulo para leer datos de un archivo:
 
 ```python
->>> camion = fileparse.parse_csv('Data/camion.csv',select=['name','cajones','precio'], types=[str,int,float])
+>>> camion = fileparse.parse_csv('Data/camion.csv',select=['nombre','cajones','precio'], types=[str,int,float])
 >>> camion
 ... mirá la salida ...
 >>> lista_precios = fileparse.parse_csv('Data/precios.csv',types=[str,float], has_headers=False)
@@ -209,7 +209,7 @@ Importá sólo la función para evitar escribir el nombre del módulo:
 
 ```python
 >>> from fileparse import parse_csv
->>> camion = parse_csv('Data/camion.csv', select=['name','cajones','precio'], types=[str,int,float])
+>>> camion = parse_csv('Data/camion.csv', select=['nombre','cajones','precio'], types=[str,int,float])
 >>> camion
 ... fijate la salida ...
 >>>
@@ -251,7 +251,7 @@ Modificá el archivo `costo_camion.py` para que use la función `informe.leer_ca
 ### Comentario
 
 Al terminar este ejercicio tenés tres programas.
-`fileparse.py` contiene una función para parsear datos de archivos CSV en general, `parse_csv()`. Por otra parte, `informe_funciones.py` que produce un bello informe, y que contiene las funciones `leer_camion()` y `leer_precios()`. Finalmete, `costo_camion.py` calcula el costo de un camión, pero usando la función `leer_camion()` que fue escrita para el programa que genera el informe.
+`fileparse.py` contiene una función para parsear datos de archivos CSV en general, `parse_csv()`. Por otra parte, `informe_funciones.py` que produce un bello informe, y que contiene las funciones `leer_camion()` y `leer_precios()`. Finalmente, `costo_camion.py` calcula el costo de un camión, pero usando la función `leer_camion()` que fue escrita para el programa que genera el informe.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Búsqueda binaria)](05_BusqBinaria.md)

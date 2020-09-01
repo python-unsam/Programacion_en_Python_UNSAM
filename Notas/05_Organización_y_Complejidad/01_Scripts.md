@@ -24,7 +24,7 @@ Hasta aquí mayormente hemos escrito scripts.
 ### Un problema
 
 
-Cuando hayas escrito un script útil, éste va a comenzar a crecer en funciones y opciones. Vas a querer aplicarlo a otros problemas. Con el tiempo puede convertirse en un programa escencial, pero si no lo cuidás puede convertirse en un lío enorme, en un gran embrollo. Veamos como lo organizamos.
+Cuando hayas escrito un script útil, éste va a comenzar a crecer en funciones y opciones. Vas a querer aplicarlo a otros problemas. Con el tiempo puede convertirse en un programa esencial, pero si no lo cuidás puede convertirse en un lío enorme, en un gran embrollo. Veamos como lo organizamos.
 
 
 ### Definir nombres
@@ -140,13 +140,13 @@ Las funciones complejas se basan en funciones más simples, definidas antes; aun
 
 ### Diseño de funciones
 
-Lo ideal es que una función sea una *caja negra*. Una función debería operar únicamente sobre los parámetros provistos, evitar variables globales y efectos secundarios no esperados. Hay dos conceptos claves: **Diseño Modular** y **Predecibilidad**.
+Lo ideal es que una función sea una *caja negra*. Una función debería operar únicamente sobre los parámetros provistos, evitar variables globales y efectos secundarios no esperados. Hay dos conceptos clave: **Diseño Modular** y **Predecibilidad**.
 
 [oski]:# (Esto hay que ampliarlo, explicar predecibilidad y modularidad)
 
 ### Doc-strings
 
-Es buena costumbre incluír documentación en forma de doc-strings. Un doc-string ó "texto de documentación" es texto ubicado en la línea inmediata después del nombre de la función. El doc-string provée información a quien lée la función, pero también se integra con la función `help()`, IDEs y otras herramientas de programación y documentación.     
+Es buena costumbre incluír documentación en forma de doc-strings. Un doc-string ó "texto de documentación" es texto ubicado en la línea inmediata después del nombre de la función. El doc-string provee información a quien lee la función, pero también se integra con la función `help()`, IDEs y otras herramientas de programación y documentación.     
 
 ```python
 def leer_precios(nombre_archivo):
@@ -239,7 +239,7 @@ for row in informe:
 En el siguiente ejercicio vamos a volver a ese programa y organizarlo mejor usando funciones.
 
 ### Ejercicio 5.1: Estructurar un programa como una colección de funciones
-Volvé a tu programa `tabla_informe.py` y modificalo de modo que todas las operaciones principales, incluyendo cálculos e impresión, sean llevados a cabo por una colección de funciones. Guara la nueva versión en un archivo `informe_funciones.py`. Más específicamente:
+Volvé a tu programa `tabla_informe.py` y modificalo de modo que todas las operaciones principales, incluyendo cálculos e impresión, sean llevados a cabo por una colección de funciones. Guarda la nueva versión en un archivo `informe_funciones.py`. Más específicamente:
 
 * Creá una función `imprimir_informe(informe)` que imprima el informe.
 * Cambiá la última parte del programa de modo que consista sólo en una serie de llamados a funciones, sin ningún cómputo.
