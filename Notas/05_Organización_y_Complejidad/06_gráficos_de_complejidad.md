@@ -2,7 +2,7 @@
 
 # 5.6 Gráficos de complejidad
 
-## Grḉafico que comparan la complejidad de algoritmos
+## Gráfico que comparan la complejidad de algoritmos
 
 La siguiente función realiza una búsqueda secuencial de un elemento en una lkista. Devuelve la posición del elemento si lo encuentra y -1 si no lo encuentra.
 
