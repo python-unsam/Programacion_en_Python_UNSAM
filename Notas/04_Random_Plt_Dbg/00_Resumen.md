@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md) \| [Próximo (5 Complejidad y Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md) \| [Próximo (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
 
 # 4. Aleatoridad
 En esta clase introducimos conceptos y técnicas relacionadas al azar. La aleatoriedad puede ser un gran aliado para realizar cálculos de fenómenos estocásticos pero también de fenómenos deterministas.
@@ -21,4 +21,4 @@ A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Ce
 * [4.6 Cierre de la cuarta clase](08_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md) \| [Próximo (5 Complejidad y Organzación de programas)](../05_Organización_y_Complejidad/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Algoritmos sobre listas y comprensión de listas)](../03_Listas_y_Listas/00_Resumen.md) \| [Próximo (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md)

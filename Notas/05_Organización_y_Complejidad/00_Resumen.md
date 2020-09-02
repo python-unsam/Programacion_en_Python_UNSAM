@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (6 Errores y bugs, especificación y documentación)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 
-# 5. Complejidad y Organzación de programas
+# 5. Complejidad y Organización de programas
 
 Hasta aquí aprendimos algunas cosas básicas de Python y escribimos nuestros primeros programa. A medida que escribas programas más grandes, vas a necesitar organizarlos un poco mejor. En esta clase trataremos con mayor detalle cómo escribir funciones y módulos propios.
 
