@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Búsqueda binaria)](05_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Búsqueda binaria)](04_BusqBinaria.md)
 
 # 5.3 Módulos
 
@@ -231,7 +231,7 @@ escribiste un programa `informe_funciones.py` que produce un informe como este:
      Naranja        100     106.28      35.84
 ```
 
-Retomá ese programa y modificalo de modo que todo el procesamiento de archivos de entrada de datos se haga usando funciones del módulo `fileparse`. Para lograr éso, importá `fileparse` como un módulo y cambiá las funciones `leer_camion()` y `leer_precios()` para que usen la función `parse_csv()` .
+Retomá ese programa (si lo perdiste, te dejamos una versión para que la leas y la puedas usar) y modificalo de modo que todo el procesamiento de archivos de entrada de datos se haga usando funciones del módulo `fileparse`. Para lograr éso, importá `fileparse` como un módulo y cambiá las funciones `leer_camion()` y `leer_precios()` para que usen la función `parse_csv()` .
 
 Guiate por el ejemplo interactivo que dimos un poco más arriba.
 Al final, deberías obtener exactamente el mismo resultado que al principio.
@@ -254,5 +254,5 @@ Al terminar este ejercicio tenés tres programas.
 `fileparse.py` contiene una función para parsear datos de archivos CSV en general, `parse_csv()`. Por otra parte, `informe_funciones.py` que produce un bello informe, y que contiene las funciones `leer_camion()` y `leer_precios()`. Finalmente, `costo_camion.py` calcula el costo de un camión, pero usando la función `leer_camion()` que fue escrita para el programa que genera el informe.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Búsqueda binaria)](05_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Búsqueda binaria)](04_BusqBinaria.md)
 

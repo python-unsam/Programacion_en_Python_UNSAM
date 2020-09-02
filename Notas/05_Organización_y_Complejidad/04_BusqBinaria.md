@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](06_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](05_Complejidad.md)
 
 # 5.4 Búsqueda binaria
 
@@ -193,5 +193,5 @@ Guarda tu modificación en un archivo `b_bin.py`.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](06_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](05_Complejidad.md)
 

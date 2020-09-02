@@ -9,7 +9,7 @@ plots de lineas, una intro completa a traducir:
 
 ##  Introducción
 
-Matplotlib es probablemente el paquete de Python mas usado para crear gráficos en 2D. Provee una forma rápida de graficar los datos como gráficos en varios formatos de alta calidad listos para ser presentados y publicados. En esta sección vamos a explorar matplotlib en modo interactivo y ver los casos mas comunes.
+Matplotlib es probablemente el paquete de Python mas usado para crear gráficos en 2D, también llamados ploteos o "plots". Provee una forma rápida de graficar los datos en varios formatos de alta calidad listos para ser presentados y publicados. En esta sección vamos a explorar matplotlib en modo interactivo y vamos a ver los casos mas comunes.
 
 ##  pyplot
  *pyplot* proporciona una interfase a la biblioteca de matplotlib, que es orientada a objetos como todo en Python. Pyplot está diseñada siguiendo el producto Matlab™. Por lo tanto la mayoría de los comandos para graficar en pyplot tienen análogos en Matlab™ con argumentos similares. Explicaremos las instrucciones mas importantes con ejemplos interactivos. 
@@ -18,9 +18,8 @@ Matplotlib es probablemente el paquete de Python mas usado para crear gráficos 
 from matplotlib import pyplot as plt
 ```
 
-
-## Simple plot
-Para empezar, vamos a plotear las funciones _seno()_ y _coseno()_ en el mismo grafico. Partiendo de la configuración básica, vamos a ir cambiando el gráfico paso por paso para que quede como queremos.
+## Un simple plot
+Para empezar, vamos a plotear las funciones _seno()_ y _coseno()_ en el mismo gráfico. Partiendo de la configuración básica, vamos a ir cambiando el gráfico paso por paso para que quede como queremos.
 
 Primero hay que obtener los datos para graficar:
 
@@ -58,9 +57,9 @@ plt.show()
 
 ![COPETE](./sphx_glr_plot_exercise_2_001.png)
 
-En el siguiente script, hemos explicitado y comentado todos las propiedades de una figura que influyen en la apariencia de un gráfico.
+En el siguiente script, hemos explicitado y comentado todas las propiedades de una figura que influyen en la apariencia de un gráfico.
 
-Cada propiedad se configuró a su valor por omisión, de modo que sepas cuáles son los valores "normales" y puedas jugar con ellos para ver sus efectos sobre el plot. Sobre propiedades y estilos de las líneas hablaremos luego.
+Cada propiedad se configuró a su valor por omisión, para que veas cuáles son los valores "normales" y puedas jugar con ellos para ver sus efectos sobre el gráfico. Sobre propiedades y estilos de las líneas hablaremos luego.
 
 [oski] : #(In the script below, we’ve instantiated and commented all the figure settings that influence the appearance of the plot.
 
@@ -220,7 +219,10 @@ plt.annotate(r'$sin(\frac{2\pi}{3})=\frac{\sqrt{3}}{2}$',
 ### 1.5.2.10. El diablo está en los detalles
 ![COPETE](./sphx_glr_plot_exercise_10_001.png)
 
- Apenas si podemos ver las marcas negras originales sobre los ejes porque los trazos azul y rojo los esconden. Podemos hacerlos mas grandes y ajustar sus propiedades de modo que tengan un fondo blanco semi-transparente. Esto nos permitirá ver un poco mejor los datos y los textos. 
+
+ Notá (vas a tener que mirar muy de cerca) que los ejes tapan los trazos de las funciones seno y coseno, y éstas tapan los valores escritos sobre los ejes. Si ésto fuera una publicación quedaría feo.
+
+ Podemos hacer mas grandes las marcas y los textos y ajustar sus propiedades de modo que tengan sean semi-transparentes. Esto nos permitirá ver un poco mejor los datos y los textos. 
 
  [oski]: # ( ---- la verdad es que la diferencia es casi imperceptible ----The tick labels are now hardly visible because of the blue and red lines. We can make them bigger and we can also adjust their properties such that they’ll be rendered on a semi-transparent white background. This will allow us to see both the data and the labels. )
 
@@ -232,55 +234,74 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 ...
 ```
 
-## 1.5.3. Figures, Subplots, Axes and Ticks
+## 1.5.3. Figuras, Subplots, Ejes y Marcas (ticks)
 
-A “figure” in matplotlib means the whole window in the user interface. Within this figure there can be “subplots”.
+[oski]:# (todo esto es confuso incluso en inglés, si puedo lo leo de otro lado y lo refraseo)
 
- So far we have used implicit figure and axes creation. This is handy for fast plots. We can have more control over the display using figure, subplot, and axes explicitly. While subplot positions the plots in a regular grid, axes allows free placement within the figure. Both can be useful depending on your intention. We’ve already worked with figures and subplots without explicitly calling them. When we call plot, matplotlib calls gca() to get the current axes and gca in turn calls gcf() to get the current figure. If there is none it calls figure() to make one, strictly speaking, to make a subplot(111). Let’s look at the details.
+En matplotlib el término "figura" se refiere a toda la ventana que conforma la interfase al usuario. Dentro de esta ventana o figura pueden existir "subfiguras" (subplots).
 
-### 1.5.3.1. Figures
- A figure is the windows in the GUI that has “Figure #” as title. Figures are numbered starting from 1 as opposed to the normal Python way starting from 0. This is clearly MATLAB-style. There are several parameters that determine what the figure looks like:
+Hasta aquí hemos dibujado gráficos y creado sus ejes de forma implícita. Esto es bueno para obtener ploteos rápidos cuando queremos tener una idea de la distribución de los datos. Podemos controlar mejor la apariencia de la figura que generamos si la definimos en forma explícita. Podemos definir la figura, los subplots, y los ejes.
 
+Mientras que *subplot* ubica a sus plots en posiciones espaciadas regularmente (la grilla) uno puede ubicar los ejes libremente en la figura. Ambas cosas pueden ser útiles, depende de qué estés buscando.
 
-Argument | Default  | Description
+Aunque trabajamos con figuras y subplots sin llamarlos explicitamente, es bueno saber que al invocar `plot()` matplotlib llama a `gca()` (get current axes)para obtener acceso a los ejes, y gca a su vez llama a gcf() (get current figure) para obtener acceso a la figura. Si no existe tal figura, llama a figure() para crearla o mas estrictamente hablando, para crear un subplot. Aunque no pidamos explícitamente crear una figura, ésta es creada cuando la necesitamos. Veamos un poco los detalles.
+
+[oski]: #(
+ So far we have used implicit figure and axes creation. This is handy for fast plots. We can have more control over the display using figure, subplot, and axes explicitly. While subplot positions the plots in a regular grid, axes allows free placement within the figure. Both can be useful depending on your intention. We’ve already worked with figures and subplots without explicitly calling them. When we call plot, matplotlib calls gca() to get the current axes and gca in turn calls gcf() to get the current figure. If there is none it calls figure() to make one, strictly speaking, to make a subplot 111. Let’s look at the details.
+)
+
+### 1.5.3.1. Figuras
+
+Una "figura" es la ventana en la interfase al usuario que lleva como título "Figura #". Las figuras se enumeran comenzando en 1, al estilo Matlab, y no en 0 al estilo Python. Varios parámetros  determinan la pinta que tiene una figura: 
+
+Argumento | Por Omisión  | Descripción
 --- | --- | ---
-num | 1 |  number of figure
-figsize |figure.figsize | figure size in inches (width, height)
-dpi | figure.dpi | resolution in dots per inch
-facecolor |  figure.facecolor  |  color of the drawing background
-edgecolor |  figure.edgecolor  |  color of edge around the drawing background
-frameon | True |   draw figure frame or not
+num | 1 |  número de figura
+figsize |figure.figsize | tamaño de figura en pulgadas (ancho, alto)
+dpi | figure.dpi | resolución en puntos por pulgada
+facecolor |  figure.facecolor  |  color del fondo
+edgecolor |  figure.edgecolor  |  color del borde rodeando el fondo
+frameon | True |   dibujar un recuadro para la figura ?
 
-As with other objects, you can set figure properties also setp or with the set_something methods.
-
-When you work with the GUI you can close a figure by clicking on the x in the upper right corner. But you can close a figure programmatically by calling close. Depending on the argument it closes (1) the current figure (no argument), (2) a specific figure (figure number or figure instance as argument), or (3) all figures ("all" as argument).
+Como con otros objetos, podés usar `setp` para setear propiedades de la figura o usar métodos del tipo set_algo.
 
 ```python
-plt.close(1)     # Closes figure 1
+setp(line, linestyle='--')
+
+# donde linestyle pertenece a {'-', '--', '-.', ':', '', (offset, on-off-seq), ...}
 ```
 
+Si estás trabajando en una interfaz gráfica podés cerrar una figura clickeando en la `X` de la ventana. Tambien podés cerrar una ventana desde tu programa llamando al método close(). Dependiendo del parámetro que le pases va a cerrar la figura con que estás trabajando (sin argumentos), una figura específica (como argumento le pasás el número de figura) o todas las figuras (el argumento es "all"). 
+
+```python
+plt.close(1)     # Cierra la figura 1
+```
+
+[oski]: # (acá hay un salto, merece una breve transición en el texto)
+
 ### 1.5.3.2. Subplots
- With subplot you can arrange plots in a regular grid. You need to specify the number of rows and columns and the number of the plot. Note that the gridspec command is a more powerful alternative.
+Podés disponer tus plots en una grilla de intervalos regulares si usás subplots. Sólo tenés que especificar el número del plot y el número de filas y columnas. 
+
 ![COPETE](./sphx_glr_plot_subplot-horizontal_001.png)
 ![COPETE](./sphx_glr_plot_subplot-vertical_001.png)
 ![COPETE](./sphx_glr_plot_subplot-grid_001.png)
 ![COPETE](./sphx_glr_plot_gridspec_001.png)
 
 
-### 1.5.3.3. Axes
-Axes are very similar to subplots but allow placement of plots at any location in the figure. So if we want to put a smaller plot inside a bigger one we do so with axes.
+### 1.5.3.3. Ejes
+Podés usar los ejes para un disponer los ploteos en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
 
 ![COPETE](./sphx_glr_plot_axes_001.png)
 ![COPETE](./sphx_glr_plot_axes-2_001.png)
 
 
 
-### 1.5.4.2. Scatter Plots
+### 1.5.4.2. Ploteos "esparcidos" Scatter Plots
 ![COPETE](./sphx_glr_plot_scatter_001.png)
 
-Starting from the code below, try to reproduce the graphic taking care of marker size, color and transparency.
+Usando el código que sigue reproducí el gráfico cuidando el tamaño de las marcas, el color, y la transparencia de los trazos.
 
-Hint Color is given by angle of (X,Y).
+Pista: El color depende del ángulo del punto (X,Y).
 ```python
 n = 1024
 X = np.random.normal(0,1,n)
