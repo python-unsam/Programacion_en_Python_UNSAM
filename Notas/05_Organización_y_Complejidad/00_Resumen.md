@@ -14,7 +14,7 @@ En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e
 * [5.3 Módulos](03_Modulos.md)
 * [5.4 Búsqueda binaria](04_BusqBinaria.md)
 * [5.5 Complejidad de algoritmos](05_Complejidad.md)
-* [5.6 Gráficos de complejidad**](06_gráficos_de_complejidad.md)
+* [5.6 Gráficos de complejidad](06_gráficos_de_complejidad.md)
 * [5.7 Cierre de la quinta clase](07_Cierre.md)
 
 

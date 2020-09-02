@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](04_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](04_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
 
 # 5.5 Complejidad de algoritmos
 
@@ -75,7 +75,42 @@ Usando lo que hiciste en el [Ejercicio 5.11](../05_Organización_y_Complejidad/0
 ### Ejercicio 5.13: Cálcular la complejidad de dos resoluciones de `propagar`
 Ahora que tenés algunas herramientas teóricas más, volvé a leer las dos versiones de `propagar` del [Ejercicio 4.3](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-43-propagar-por-vecinos) y el [Ejercicio 4.4](../04_Random_Plt_Dbg/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico) y compará sus complejidades.
 
+### Secuencias binarias
 
+Para nosotres, una **secuencia binaria** es una lista que contiene solo 0’s y 1’s. Por ejemplo `s = [0, 1, 0, 0, 1]` es una secuencia binaria de longitud 5. La *primera* secuencia binaria de esa longitud es `[0, 0, 0, 0, 0]`, mientras que *la última* es `[1, 1, 1, 1, 1]`. Cada secuencia tiene una *siguiente* (salvo la última). No vamos a dar una definición precisa, pero escencialmente las secuencias pueden pensarse como representando números enteros en base dos y *la siguiente* secuencia es la que representa al siguiente número. Por convención, diremos que la secuencia siguiente de la última es la primera.
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](04_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+Ejemplos:
+```
+[0, 0, 0, 0, 0]   ->   [0, 0, 0, 0, 1]
+[0, 0, 1, 1, 0]   ->   [0, 0, 1, 1, 1]
+[0, 0, 1, 1, 1]   ->   [0, 1, 0, 0, 0]
+[1, 1, 1, 1, 1]   ->   [0, 0, 0, 0, 0]
+```
+
+La función `incrementar(s)` calcula la secuencia siguiente de una secuencia dada:
+```python
+#%%
+def incrementar(s):
+    carry = 1
+    l=len(s)
+    
+    for i in range(l-1,-1,-1):
+        if (s[i]==1 and carry==1):
+            s[i]=0
+            carry=1
+        else:
+            s[i]=s[i]+carry
+            carry=0
+    return s
+```
+
+### Ejercicio 5.14: Complejidad de `incrementar`
+Si tomamos `n = len(s)` podemos tratar de medir la complejidad de la función `incrementar` en términos de la longitud `n` de la secuencia. ¿Te parece que `incrementar()` es una función lineal, cuadrática, logarítmica o exponencial? ¿Por qué?
+
+### Ejercicio 5.15: Un ejemplo más complejo
+Escribí una funcion `listar_secuencias(n)` que imprima en pantalla **todas** las secuencias binarias de longitud `n` comenzando con la primera (`[0]*n`) y usando en cada paso la función `incrementar()` definida más arriba.
+
+¿Te parece que `listar_secuencias(n)` es una función lineal, cuadrática, logarítmica o exponencial en `n`? ¿Por qué?
+
+[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](04_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
 

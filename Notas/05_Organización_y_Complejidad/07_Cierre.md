@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
 
 # 5.7 Cierre de la quinta clase
 
@@ -11,7 +11,7 @@ Para cerrar esta clase te pedimos dos cosas:
  2. El archivo `informe_funciones.py` de [Ejercicio 5.8](../05_Organización_y_Complejidad/03_Modulos.md#ejercicio-58-usemos-tu-módulo).
  3. El archivo `costo_camion.py` del [Ejercicio 5.9](../05_Organización_y_Complejidad/03_Modulos.md#ejercicio-59-un-poco-más-allá).
  4. El archivo `b_bin.py` del [Ejercicio 5.12](../05_Organización_y_Complejidad/05_Complejidad.md#ejercicio-512-insertar-un-elemento-en-una-lista).
- 5. El archivo `plot_bbin_vs_bsec.py` del [Ejercicio 5.14](../05_Organización_y_Complejidad/06_gráficos_de_complejidad.md#ejercicio-514-búsqueda-binaria-vs-búsqueda-secuencial).
+ 5. El archivo `plot_bbin_vs_bsec.py` del [Ejercicio 5.17](../05_Organización_y_Complejidad/06_gráficos_de_complejidad.md#ejercicio-517-búsqueda-binaria-vs-búsqueda-secuencial).
 
 * Que completes [este formulario](https://docs.google.com/) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
@@ -19,5 +19,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos de complejidad**)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
 
