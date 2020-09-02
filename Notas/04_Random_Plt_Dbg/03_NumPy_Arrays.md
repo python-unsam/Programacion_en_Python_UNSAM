@@ -2,43 +2,43 @@
 
 # 4.3 NumPy
 
-Esta es una introducción a la biblioteca NumPy (**Numerical Python**) de Python. Se trata de una colección de módulos de código abierto que tiene aplicaciones en casi todos los campos de las ciencias y de la ingeniería. Es el estándar para trabajar con datos numéricos en Python. Muchas otras bibliotecas y módulos de Python como Pandas, SciPy, Matplotlib, scikit-learn, scikit-image usan NumPy.
+Esta es una introducción a la biblioteca NumPy (**Numerical Python**) de Python. Se trata de una colección de módulos de código abierto que tiene aplicaciones en casi todos los campos de las ciencias y de la ingeniería. Es el estándar para trabajar con datos numéricos en Python. Muchas otras bibliotecas y módulos de Python como Pandas, SciPy, Matplotlib, scikit-learn, scikit-image usan numpy.
 
-Esta biblioteca permite trabajar cómodamente con matrices multidimensionales por medio del tipo **ndarray**, un objeto n-dimensional homogéneo (es decir, con todas sus entradas del mismo tipo), y con métodos para operar eficientemente sobre él. NumPy puede usarse para una amplia variedad de operaciones matemáticas sombre matrices. Le agrega a Python estructuras de datos muy potentes sobre las que puedés hacer cálculos y operar matemáticamente con eficiencia y a un alto nivel.
+Esta biblioteca permite trabajar cómodamente con matrices multidimensionales por medio del tipo **ndarray**, un objeto n-dimensional homogéneo (es decir, con todas sus entradas del mismo tipo), y con métodos para operar eficientemente sobre él. numpy puede usarse para una amplia variedad de operaciones matemáticas sobre matrices. Le agrega a Python estructuras de datos muy potentes sobre las que puedés hacer cálculos y operar matemáticamente con eficiencia y a un alto nivel.
 
-##  Instalar e importar NumPy
+##  Instalar e importar numpy
 
-Cuando quieras usar NumPy en Python, primero tenés que importarlo:
+Cuando quieras usar numpy en Python, primero tenés que importarlo:
 
 ```python
-import NumPy as np
+import numpy as np
 ```
 
-Acortamos `NumPy` a `np` para ahorrar tiempo y mantener el código estandarizado. Todes escriben `np`.
+Acortamos `numpy` a `np` para ahorrar tiempo y mantener el código estandarizado. Todes escriben `np`.
 
 Si no lo tenés instalado (te dará un error al importarlo) podés instalarlo escribiendo alguno de los siguientes comandos, según corresponda:
 
 ```bash
-conda install NumPy
-pip install NumPy
-pip3 install NumPy
+conda install numpy
+pip install numpy
+pip3 install numpy
 ```
 
 ## ¿Cuál es la diferencia entre listas y arreglos?
 
-NumPy ofrece varias formas muy eficientes de crear vectores y manipular datos numéricos. Mientras que una lista de Python puede contener diferentes tipos de datos en su interior, los elementos de un vector NumPy serán todos del mismo tipo. De esta forma NumPy garantiza un muy alto rendimiento en las operaicones matemáticas.
+numpy ofrece varias formas muy eficientes de crear vectores y manipular datos numéricos. Mientras que una lista de Python puede contener diferentes tipos de datos en su interior, los elementos de un vector numpy serán todos del mismo tipo. De esta forma numpy garantiza un muy alto rendimiento en las operaicones matemáticas.
 
 Además, los arreglos están pensados para tener un tamaño fijo, mientras que las listas están diseñadas para agregar y sacar elementos. Son estructuras de datos similares desde un punto de vista superficial, pero muy diferentes en cuanto a las posibilidades que brindan. 
 
-Las operaciones matemáticas sobre vectores de NumPy son más rápidas que sobre listas. Además los vectores ocupan menos memoria que las listas análogas. En cambio, modificar el tamaño de una lista es algo muy sencillo mientras que el de un vector es costoso. Y combinar diferentes tipos de datos es sencillo en las listas pero imposible en los vectores de NumPy.
+Las operaciones matemáticas sobre vectores de numpy son más rápidas que sobre listas. Además los vectores ocupan menos memoria que las listas análogas. En cambio, modificar el tamaño de una lista es algo muy sencillo mientras que el de un vector es costoso. Y combinar diferentes tipos de datos es sencillo en las listas pero imposible en los vectores de numpy.
 
 ## Arreglos n-dimensionales
 
-Los vectores (unidimensionales) y matrices (bidimensiones) se generalizan a arreglos n-dimensionales. Esta estructura de datos es la central de la biblioteca NumPy. Un arreglo (`ndarray`) tiene una grilla de valores (datos crudos) junto con información sobre cómo ubicarlos y cómo interpretarlos. Los elemnentos de esta grilla pueden ser indexados de diversas maneras y, como ya dijimos, son todos del mismo tipo. Este tipo es frecuentemente abreviado como `dtype` (por data type).
+Los vectores (unidimensionales) y matrices (bidimensiones) se generalizan a arreglos n-dimensionales. Esta estructura de datos es la central de la biblioteca numpy. Un arreglo (`ndarray`) tiene una grilla de valores (datos crudos) junto con información sobre cómo ubicarlos y cómo interpretarlos. Los elementos de esta grilla pueden ser indexados de diversas maneras y, como ya dijimos, son todos del mismo tipo. Este tipo es frecuentemente abreviado como `dtype` (por data type).
 
 Un arreglo puede ser indexado por tuplas de enteros no negativos, por variables booleanas, por otro arreglo o por enteros. El rango (`rank`) de un arreglo es su número de dimensiones. Su forma (`shape`) es una tupla de enteros que dice su tamaño en cada dimensión.
 
-Una forma de inicializar un arreglo de NumPy es mediante una lista de números. Esto nos da un vector (arreglo de dimensión uno). Usando listas anidadas, podemos definir arreglos de más altas dimensiones.
+Una forma de inicializar un arreglo de numpy es mediante una lista de números. Esto nos da un vector (arreglo de dimensión uno). Usando listas anidadas, podemos definir arreglos de más altas dimensiones.
 
 Por ejemplo:
 
@@ -58,7 +58,7 @@ Podemos acceder a los elementos de un arreglo usando corchetes. Acordate que los
 >>> print(a[0]) # si tiene múltiples dimensiones, esto me da una "rebanada" de una dimensión menos
 [1 2 3 4]
 >>> print(a[2]) # otra rebanada
-array([ 9, 10, 11, 12])
+[ 9, 10, 11, 12])
 >>> print(a[2][3]) # accedo al cuarto elemento del tercer vector de a
 12
 >>> print(a[2,3]) # o, equivalentemente, accedo al elemento en la tercera fila y cuarta columna de a
@@ -73,7 +73,7 @@ Ocasionalmente vas a ver que alguien se refiere a un arreglo como un  “ndarray
 
 Un arreglo es usualmente un contenedor de tamaño fijo de elementos del mismo tipo. Su forma (shape) es una tupla de enteros no negativos que especifica el tamaño del arreglo en cada dimensión. Un arreglo tiene tantas dimensiones como coordenadas en la tupla.
 
-En NumPy, las dimensiones se llaman **axes** (ejes). Esto dignifica que si tenés una arreglo bidimensional que se ve así:
+En numpy, las dimensiones se llaman **axes** (ejes). Esto significa que si tenés una arreglo bidimensional que se ve así:
 
 ```
 [[0., 0., 0.],
@@ -86,11 +86,11 @@ De la misma forma que los otros objetos contenedores de Python, los elementos de
 
 ## Crear un arreglo básico
 
-Para crear un arreglo de NumPy podés usar la función `np.array()`.
+Para crear un arreglo de numpy podés usar la función `np.array()`.
 Lo único que necesitás es pasarle una lista. Si querés, podés especificar el tipo de datos que querés que tenga. 
 
 ```python
->>> import NumPy as np
+>>> import numpy as np
 >>> a = np.array([1, 2, 3])
 ```
 
@@ -98,9 +98,9 @@ Vamos a representar la creación con este gráfico:
 
 ![./np_array.png](./np_array.png)
 
-_Ojo, estas visualizaciones son simplificaciones para representar lo que esta pasando y darte un entendimiento básico de los conceptos y mecanismos de NumPy. Los arreglos y sus operaciones tienen aspectos más complejos que los que quedan capturados en estos dibujitos._
+_Ojo, estas visualizaciones son simplificaciones para representar lo que esta pasando y darte un entendimiento básico de los conceptos y mecanismos de numpy. Los arreglos y sus operaciones tienen aspectos más complejos que los que quedan capturados en estos dibujitos._
 
-A parte de poder crear una arreglo a partir de una secuencia de elementos, podés crear un arreglo lleno de `0`’s:
+Además de crear una arreglo a partir de una secuencia de elementos, podés crear un arreglo lleno de `0`’s:
 
 ```python
 >>> np.zeros(2)
@@ -144,8 +144,8 @@ También podés usar `np.linspace()` para crear un vector especificando el **pri
 array([ 0. ,  2.5,  5. ,  7.5, 10. ])
 ```
 
-### Ejercicio 4.8: arange() y linspace()
-Generá un vector que tenga los número impares entre el 1 y el 19 inclusive usando `arange()`. Repetí ele ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
+### Ejercicio 4.12: arange() y linspace()
+Generá un vector que tenga los números impares entre el 1 y el 19 inclusive usando `arange()`. Repetí el ejercicio usando `linspace()`. ¿Qué diferencia hay en el resultado?
 
 **Especificar el tipo de datos**
 
@@ -157,7 +157,7 @@ Si no lo especificás, el tipo de datos (por omisión) de los arreglos es el pun
 array([1, 1])
 ```
 
-En estos dos casos el 64 de los tipos de datos se refiere a la cantidad de bits: 64 bits. 
+En estos dos casos el 64 de los tipos de datos se refiere a la cantidad de bits usados para representar el número en el sistema binario: 64 bits. 
 
 ## Agregar, borrar y ordenar elementos
 
@@ -190,7 +190,7 @@ los podés concatenar usado `np.concatenate()`.
 array([1, 2, 3, 4, 5, 6, 7, 8])
 ```
 
-Un ejemplo un poco más complejo es el siguiente: Si tenés:
+Un ejemplo un poco más complejo es el siguiente:
 
 ```python
 >>> x = np.array([[1, 2], [3, 4]])
@@ -206,13 +206,10 @@ array([[1, 2],
  [5, 6]])
 ```
 
-Para sacar elementos de un arreglo, lo más sencillo es usar los índices para seleccionar los que queremos conservar.
-
-
 ## Conocer el tamaño, dimensiones y forma de un arreglo
 
 
-`ndarray.ndim` te dice la cantidad de ejes (o dimensiones) de arreglo.
+`ndarray.ndim` te dice la cantidad de ejes (o dimensiones) del arreglo.
 
 `ndarray.shape` te va a dar una tupla de enteros que indican la cantidad de elementos en cada eje. Si tenés una matriz con 2 filas y 3 columnas de va a dar `(2, 3)`.
 
@@ -295,7 +292,9 @@ O, para convertirlo en un vector columna, podés unsertar un eje en la segunda  
 
 ## Índices y rebanadas
 
-Los arreglos de NumPy los podés indexar y rebanar como hicimos con las listas.
+Podés indexar y rebanar arreglos de numpy como hicimos con las listas.
+
+Para obtener elementos de un arreglo, lo más sencillo es usar los índices para seleccionar los que queremos conservar.
 
 ```python
 >>> data = np.array([1, 2, 3])
@@ -366,7 +365,7 @@ o para definir una nueva variable booleana:
  [ True  True  True True]]
 ```
 
-Finalmente, podés suar `np.nonzero()` para obtener las coordenadas de ciertos elementos de un arreglo.
+Finalmente, podés usar `np.nonzero()` para obtener las coordenadas de ciertos elementos de un arreglo.
 
 Si empezamos con este arreglo:
 
@@ -384,13 +383,13 @@ Podés usar `np.nonzero()` para imprimir los índices de los elementos que son, 
 
 En este ejemplo, la respuesta es una tupla de arreglos: uno por cada dimensión. El primer arreglo representa las filas de los elementos que satisfacen la condición y el segundo sus columnas.
 
-Si querés generar la lista de coordenadas donde se encuetran estos elementos, podés zipear los arreglos, convertir el resultado a una lista e imprimir la lista:
+Si querés generar la lista de coordenadas donde se encuentran estos elementos, podés zipear los arreglos, convertir el resultado en una lista e imprimirla:
 
 ```python
 >>> lista_de_coordenadas = list(zip(b[0], b[1]))
 ```
 
-Surge naturalmente la pregunta: ¿porqué tengo que convertir el objeto `zip` a una lista? Vermos en la segunda mitad de la materia más detalles sobre _generadores_ en Python para entender exactamente lo que está pasando aquí. Simplemente digamos que al zipear `b[0]` y `b[1]` no se genera la lista realmente, sino potencialmente. Sólo al solicitar sus elementos (iterando sobre ello o con `list`) se generan realmente las coordenadas.
+Surge naturalmente la pregunta: ¿porqué tengo que convertir el objeto `zip` a una lista? Veremos en la segunda mitad de la materia más detalles sobre _generadores_ en Python para entender exactamente lo que está pasando aquí. Simplemente digamos que al zipear `b[0]` y `b[1]` no se genera la lista realmente, sino potencialmente. Sólo al solicitar sus elementos (iterando sobre ello o con `list`) se generan realmente las coordenadas.
 
 ```python
 >>> for coord in lista_de_coordenadas:
@@ -408,7 +407,7 @@ Podés usar `np.nonzero()` para imprimir o seleccionar los elementos del arreglo
 [1 2 3 4]
 ```
 
-Si la condición que ponés no la satiface ningún elemento del arreglo entonces el arreglo de índices que obtenés con `np.nonzero()` será vacío. Por ejemplo:
+Si la condición que ponés no la satisface ningún elemento del arreglo entonces el arreglo de índices que obtenés con `np.nonzero()` será vacío. Por ejemplo:
 
 ```python
 >>> no_hay = np.nonzero(a == 42)
@@ -466,7 +465,7 @@ array([[99,  2,  3,  4],
  [ 9, 10, 11, 12]])
 ```
 
-Podés usar el método `copy` para copiar los datos (una copia profunda). Por ejemplo:
+Podés usar el método `copy` para copiar los datos. Por ejemplo:
 
 ```python
 >>> b2 = a[1, :].copy()
@@ -515,7 +514,7 @@ array([1., 1.])
 
 ![./np_sub_mult_divide.png](./np_sub_mult_divide.png)
 
-Estas operaciones básicas son simples con NumPy. Si querés calcular la suma de los elementos del arreglo, podés usar `sum()`. Esto funciona para vectores, matrices y arreglos de dimensión más alta también.
+Estas operaciones básicas son simples con numpy. Si querés calcular la suma de los elementos del arreglo, podés usar `sum()`. Esto funciona para vectores, matrices y arreglos de dimensión más alta también.
 
 ```python
 >>> a = np.array([1, 2, 3, 4])
@@ -564,12 +563,12 @@ array([1.6, 3.2])
 
 ![./np_multiply_broadcasting.png](./np_multiply_broadcasting.png)
 
-NumPy entiende que la multiplicación debe ocurrir en cada celda del vector. Este concepto se llama **broadcasting**. El mecanismo de broadcasting le permite a NumPy realizar operaicones en arreglos de diferente tamaño, pero los tamaños deben ser compatibles. Por ejemplo si ambos arreglos tienen el mismo tamaño o si uno tiene tamaño 1 (escalar). Si los tamaños no son compatibles, te va a dar un `ValueError`.
+numpy entiende que la multiplicación debe ocurrir en cada celda del vector. Este concepto se llama **broadcasting**. El mecanismo de broadcasting le permite a numpy realizar operaciones en arreglos de diferente tamaño, pero los tamaños deben ser compatibles. Por ejemplo si ambos arreglos tienen el mismo tamaño o si uno tiene tamaño 1 (escalar). Si los tamaños no son compatibles, te va a dar un `ValueError`.
 
 
 ## Operaciones un poco más complejas
 
-NumPy también te permite realizar operaciones que resumen los datos. Además de  `min`, `max`, y `sum`, podés usar  `mean` para obtener el promedio, `prod` para calcular el producto, `std` paraq obtener el desvío estándar de los datos, y más.
+numpy también te permite realizar operaciones que resumen los datos. Además de  `min`, `max`, y `sum`, podés usar  `mean` para obtener el promedio, `prod` para calcular el producto, `std` para obtener el desvío estándar de los datos, y más.
 
 ```python
 >>> data.max()
@@ -591,7 +590,7 @@ Supongamos que tenemos un arreglo, llamado “a”
 ...               [0.12697628, 0.82485143, 0.26590556, 0.56917101]])
 ```
 
-Es usual procesar los datos por fila o por columna. Si no lo aclarás, NumPy procesa los datos de todo el arreglo. Para encontrar la suma o el mínimo del  arreglo, usá:
+Es usual procesar los datos por fila o por columna. Si no lo aclarás, numpy procesa los datos de todo el arreglo. Para encontrar la suma o el mínimo del  arreglo, usá:
 
 ```python
 >>> a.sum()
@@ -685,7 +684,7 @@ array([[2, 3],
 
 ![./np_matrix_arithmetic.png](./np_matrix_arithmetic.png)
 
-También se pueden sumar matrices de tamaños diferentes, pero sólo si una de ellas tiene una sola fila o una sola columna. En este caso, NumPy va a usar las reglas de _broadcast_ para la operación.
+También se pueden sumar matrices de tamaños diferentes, pero sólo si una de ellas tiene una sola fila o una sola columna. En este caso, numpy va a usar las reglas de _broadcast_ para la operación.
 
 ```python
 >>> data = np.array([[1, 2], [3, 4], [5, 6]])
@@ -699,7 +698,7 @@ array([[2, 3],
 
 ![./np_matrix_broadcasting.png](./np_matrix_broadcasting.png)
 
-Tené en cuenta que cuando NumPy imprime arreglos n-dimensionales, el último eje se itera más rápido y el primero más lento. Por ejemplo:
+Tené en cuenta que cuando numpy imprime arreglos n-dimensionales, el último eje se itera más rápido y el primero más lento. Por ejemplo:
 
 ```python
 >>> np.ones((4, 3, 2))
@@ -720,7 +719,7 @@ array([[[1., 1.],
  [1., 1.]]])
 ```
 
-Es frecuente que querramos inicializar los valores de una matriz. NumPy ofrece las funciones `ones()` y `zeros()`, así como también la clase `random.Generator` que genera número aleatorios. Sólo hay que pasarle la cantidad de elementos que queremos generar:
+Es frecuente que querramos inicializar los valores de una matriz. numpy ofrece las funciones `ones()` y `zeros()`, así como también la clase `random.Generator` que genera número aleatorios. Sólo hay que pasarle la cantidad de elementos que queremos generar:
 
 ```python
 >>> np.ones(3)
@@ -760,13 +759,13 @@ Esta idea se generaliza a dimensiones más altas.
 
 ## Fórmulas matemáticas
 
-La facilidad para implementar fórmulas matemáticas sobre un arreglo es una de las características de NumPy que lo hacen tan ampliamente usado en la comunidad científica de Python.
+La facilidad para implementar fórmulas matemáticas sobre un arreglo es una de las características de numpy que lo hacen tan ampliamente usado en la comunidad científica de Python.
 
 Por ejemplo, ésta es la fórmula del error cuadrático medio:
 
 ![./np_MSE_formula.png](./np_MSE_formula.png)
 
-Implementar esta fórmula es simple y directo con NumPy:
+Implementar esta fórmula es simple y directo con numpy:
 
 ![./np_MSE_implementation.png](./np_MSE_implementation.png)
 
@@ -776,13 +775,13 @@ Lo podés visulalizar así:
 
 ![./np_mse_viz1.png](./np_mse_viz1.png)
 
-En este ejemplo, tanto las predicciones como las etiquetas tienen tres valores. Es decir `n` vale tres. Luego de hacer la resta los valores se elevan al cuadrado. Luego NumPy suma los valores, divide por tres, y el resultado es el error de esa predicción y puede usarse como un _puntaje_ que mide la calidad del modelo que predice.
+En este ejemplo, tanto las predicciones como las etiquetas tienen tres valores. Es decir `n` vale tres. Luego de hacer la resta los valores se elevan al cuadrado. Luego numpy suma los valores, divide por tres, y el resultado es el error de esa predicción y puede usarse como un _puntaje_ que mide la calidad del modelo que predice.
 
 ![./np_mse_viz2.png](./np_mse_viz2.png) ![./np_MSE_explanation2.png](./np_MSE_explanation2.png)
 
-## Guardar y cargar objetos de NumPy
+## Guardar y cargar objetos de numpy
 
-Si seguís usando Python después de este curso, es muy probable que en cierto punto quuieras guardar tus matrices (o arreglos n-dimensionales) para cargarlas en otro momento sin tener que volver a correr el código que las genera. Hay un par de formas de guardar objetos de NumPy. Los objetos ndarray pueden guardarse y leerse de disco con las funciones `loadtxt` y `savetxt` usand archivos de texto (tienen a ventaja de que los podés ver con un editor de textos como el [sublime](https://www.sublimetext.com/) o [geany](https://www.geany.org/)), y con las funciones `load` y `save` que guardan archivos binarios con extensión **.npy**.
+Si seguís usando Python después de este curso, es muy probable que en cierto punto quieras guardar tus matrices (o arreglos n-dimensionales) para cargarlas en otro momento sin tener que volver a correr el código que las genera. Hay un par de formas de guardar objetos de numpy. Los objetos ndarray pueden guardarse y leerse de disco con las funciones `loadtxt` y `savetxt` usando archivos de texto (tienen la ventaja de que los podés ver con un editor de textos como el [sublime](https://www.sublimetext.com/) o [geany](https://www.geany.org/)), y con las funciones `load` y `save` que guardan archivos binarios con extensión **.npy**.
 Los archivos **.npy** guardan los datos, la forma, el tipo del arreglo y otra información necesaria que permiten reconstruirlos correctamente, incluso en otra máquina con otra arquitectura.
 
 Es sencillo guardar un arreglo con `np.save()`. Solo asegurate de especificar el arreglo que querés guardar y el nombre del archivo. Por ejemplo, si creás este vector:
@@ -831,20 +830,20 @@ Y lo podés cargar fácilmente usando `loadtxt()`:
 array([1., 2., 3., 4., 5., 6., 7., 8.])
 ```
 
-Las funciones `savetxt()` y `loadtxt()` aceptan parámentros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
+Las funciones `savetxt()` y `loadtxt()` aceptan parámetros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
 
-### Ejercicio 4.9: Guardar temperaturas
-Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 4.7](../04_Random_Plt_Dbg/02_Random.md#ejercicio-47-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99.
+### Ejercicio 4.13: Guardar temperaturas
+Ampliá el código de `termometro.py` que escribiste en el [Ejercicio 4.11](../04_Random_Plt_Dbg/02_Random.md#ejercicio-411-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99.
 
 
-### Ejercicio 4.10: Empezando a plotear
+### Ejercicio 4.14: Empezando a plotear
 En un rato vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
 
-Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, plotée un histograma de las temperaturas simuladas:
+Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, hacé un histograma de las temperaturas simuladas:
 
 ```python
 import matplotlib.pyplot as plt
-plt.hist(tempraturas,bins=25)
+plt.hist(temperaturas,bins=25)
 ```
 
 Ajustá la cantidad de _bins_ para que el gráfico se vea lo mejor posible.

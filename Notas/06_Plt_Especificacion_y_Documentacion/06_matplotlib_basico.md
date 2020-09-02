@@ -7,21 +7,21 @@ plots de lineas, una intro completa a traducir:
 
 ##  Matplotlib: plotting
 
-##  Introduction
- Matplotlib is probably the most used Python package for 2D-graphics. It provides both a quick way to visualize data from Python and publication-quality figures in many formats. We are going to explore matplotlib in interactive mode covering most common cases.
+##  Introducción
 
+Matplotlib es probablemente el paquete de Python mas usado para crear gráficos en 2D, también llamados ploteos o "plots". Provee una forma rápida de graficar los datos en varios formatos de alta calidad listos para ser presentados y publicados. En esta sección vamos a explorar matplotlib en modo interactivo y vamos a ver los casos mas comunes.
 
 ##  pyplot
- pyplot provides a procedural interface to the matplotlib object-oriented plotting library. It is modeled closely after Matlab™. Therefore, the majority of plotting commands in pyplot have Matlab™ analogs with similar arguments. Important commands are explained with interactive examples.
+ *pyplot* proporciona una interfase a la biblioteca de matplotlib, que es orientada a objetos como todo en Python. Pyplot está diseñada siguiendo el producto Matlab™. Por lo tanto la mayoría de los comandos para graficar en pyplot tienen análogos en Matlab™ con argumentos similares. Explicaremos las instrucciones mas importantes con ejemplos interactivos. 
 
 ```python
 from matplotlib import pyplot as plt
 ```
 
+## Un simple plot
+Para empezar, vamos a plotear las funciones _seno()_ y _coseno()_ en el mismo gráfico. Partiendo de la configuración básica, vamos a ir cambiando el gráfico paso por paso para que quede como queremos.
 
-## Simple plot
- In this section, we want to draw the cosine and sine functions on the same plot. Starting from the default settings, we’ll enrich the figure step by step to make it nicer.
-First step is to get the data for the sine and cosine functions:
+Primero hay que obtener los datos para graficar:
 
 ```python
 import numpy as np
@@ -30,13 +30,15 @@ X = np.linspace(-np.pi, np.pi, 256)
 C, S = np.cos(X), np.sin(X)
 ```
 
-X is now a numpy array with 256 values ranging from -π to +π (included). C is the cosine (256 values) and S is the sine (256 values).
+Ahora tenemos un array de numpy con 256 valores que van desde -π a +π (incluído). C tiene los valores del coseno (256 valores) y S tiene los valores del seno (256 valores).
 
-### 1.5.2.1. Plotting with default settings
+### 1.5.2.1. El ploteo estándard
 
 ![COPETE](./sphx_glr_plot_exercise_1_001.png)
 
- Matplotlib comes with a set of default settings that allow customizing all kinds of properties. You can control the defaults of almost every property in matplotlib: figure size and dpi, line width, color and style, axes, axis and grid properties, text and font properties and so on.
+En Matplotlib los gráficos tienen una configuración por omisión. Cambiándolas podés configurar muchas propiedades del gráfico. Podés cambiar el tamaño de la figura, los DPI (dots per inch, puntos por pulgada), el tamaño, color y estilo del trazo, las propiedades de los ejes y el cuadriculado, los textos y sus propiedades, etc. 
+ 
+ [oski]: # (Matplotlib comes with a set of default settings that allow customizing all kinds of properties. You can control the defaults of almost every property in matplotlib: figure size and dpi, line width, color and style, axes, axis and grid properties, text and font properties and so on.)
 
 ```python
 import numpy as np
@@ -51,57 +53,61 @@ plt.plot(X, S)
 plt.show()
 ```
 
-### 1.5.2.2. Instantiating defaults
+### 1.5.2.2. El gráfico básico
 
 ![COPETE](./sphx_glr_plot_exercise_2_001.png)
 
+En el siguiente script, hemos explicitado y comentado todas las propiedades de una figura que influyen en la apariencia de un gráfico.
 
-In the script below, we’ve instantiated (and commented) all the figure settings that influence the appearance of the plot.
+Cada propiedad se configuró a su valor por omisión, para que veas cuáles son los valores "normales" y puedas jugar con ellos para ver sus efectos sobre el gráfico. Sobre propiedades y estilos de las líneas hablaremos luego.
 
- The settings have been explicitly set to their default values, but now you can interactively play with the values to explore their affect (see Line properties and Line styles below).
+[oski] : #(In the script below, we’ve instantiated and commented all the figure settings that influence the appearance of the plot.
+
+ The settings have been explicitly set to their default values, but now you can interactively play with the values to explore their affect [see Line properties and Line styles below].)
+
 
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Create a figure of size 8x6 inches, 80 dots per inch
+# Crea una figura nueva, de 8x6 pulgadas, con 80 puntos por pulgada
 plt.figure(figsize=(8, 6), dpi=80)
 
-# Create a new subplot from a grid of 1x1
+# Crea un nuevo subplot, en una grilla de 1x1
 plt.subplot(1, 1, 1)
 
 X = np.linspace(-np.pi, np.pi, 256)
 C, S = np.cos(X), np.sin(X)
 
-# Plot cosine with a blue continuous line of width 1 (pixels)
+# Plotea el coseno con una línea azul contínua de ancho 1 (en pixeles)
 plt.plot(X, C, color="blue", linewidth=1.0, linestyle="-")
 
-# Plot sine with a green continuous line of width 1 (pixels)
+# Plotea el seno con una línea verde contínua de ancho 1 (en pixeles)
 plt.plot(X, S, color="green", linewidth=1.0, linestyle="-")
 
-# Set x limits
+# Rango del eje x
 plt.xlim(-4.0, 4.0)
 
-# Set x ticks
+# Ponemos marcas (ticks) en el eje x
 plt.xticks(np.linspace(-4, 4, 9))
 
-# Set y limits
+# Rango del eje y
 plt.ylim(-1.0, 1.0)
 
-# Set y ticks
+# Ponemos marcas (ticks) en el eje y
 plt.yticks(np.linspace(-1, 1, 5))
 
-# Save figure using 72 dots per inch
-# plt.savefig("exercise_2.png)", dpi=72)
+# Podemos grabar el gráfico usando 72 dpi
+# plt.savefig("ejercicio_2.png)", dpi=72)
 
-# Show result on screen
+# Mostrar el resultado en pantalla
 plt.show()
 ```
 
-### 1.5.2.3. Changing colors and line widths
+### 1.5.2.3. Como cambiar los colores y ancho de los trazos
 ![COPETE](./sphx_glr_plot_exercise_3_001.png)
 
- First step, we want to have the cosine in blue and the sine in red and a slighty thicker line for both of them. We’ll also slightly alter the figure size to make it more horizontal.
+ Ahora vamos a modificar el gráfico para que quede un poco mejor. Primero, queremos trazar el coseno en azul y el seno en rojo, y ambos con una línea algo más gruesa. Además, vamos a cambiar un poco el tamaño de la figura para hacerla mas apaisada. Corré el siguiente código y compará el resultado con la figura anterior.
 
 ```python
 ...
@@ -111,10 +117,10 @@ plt.plot(X, S, color="red",  linewidth=2.5, linestyle="-")
 ...
 ```
 
-### 1.5.2.4. Setting limits
+### 1.5.2.4. Límites de los ejes
 ![COPETE](./sphx_glr_plot_exercise_4_001.png)
 
- Current limits of the figure are a bit too tight and we want to make some space in order to clearly see all data points.
+ El rango de valores de los ejes es un poco angosto y necesitamos más espacio alrededor para ver claramente todos los puntos. 
 
 ```python
 ...
@@ -123,10 +129,10 @@ plt.ylim(C.min() * 1.1, C.max() * 1.1)
 ...
 ```
 
-### 1.5.2.5. Setting ticks
+### 1.5.2.5. Marcas en los ejes
 ![COPETE](./sphx_glr_plot_exercise_5_001.png)
 
- Current ticks are not ideal because they do not show the interesting values (+/-π,+/-π/2) for sine and cosine. We’ll change them such that they show only these values.
+Así como están, las marcas sobre los ejes no son lo mas útil. Sería bueno destacar los valores interesantes para seno y coseno (+/-π,+/-π/2). Cambiémoslos para mostrar únicamente ésos valores.
 
 ```python
 ...
@@ -135,10 +141,12 @@ plt.yticks([-1, 0, +1])
 ...
 ```
 
-### 1.5.2.6. Setting tick labels
+### 1.5.2.6. Texto de las marcas en los ejes
 ![COPETE](./sphx_glr_plot_exercise_6_001.png)
 
- Ticks are now properly placed but their label is not very explicit. We could guess that 3.142 is π but it would be better to make it explicit. When we set tick values, we can also provide a corresponding label in the second argument list. Note that we’ll use latex to allow for nice rendering of the label.
+Las marcas en los ejes ahora están donde los queremos, pero el texto no es muy explícito. Aunque podemos darnos cuenta que 3.142 es π sería mejor dejarlo explícito.
+
+Al definir un valor para las marcas en los ejes podemos proveer un texto en la segunda lista de argumentos para usar como etiqueta. Fijate que vamos a usar [_LaTeX_](https://www.latex-project.org/) para hacer que los símbolos tengan mejor pinta.
 
 ```python
 ...
@@ -150,14 +158,14 @@ plt.yticks([-1, 0, +1],
 ...
 ```
 
-### 1.5.2.7. Moving spines
+### 1.5.2.7. Movamos el contorno
 ![COPETE](./sphx_glr_plot_exercise_7_001.png)
 
- Spines are the lines connecting the axis tick marks and noting the boundaries of the data area. They can be placed at arbitrary positions and until now, they were on the border of the axis. We’ll change that since we want to have them in the middle. Since there are four of them (top/bottom/left/right), we’ll discard the top and right by setting their color to none and we’ll move the bottom and left ones to coordinate 0 in data space coordinates.
+ El contorno es el conjunto de líneas que delimitan el área de graficación y que unen todas las marcas en los ejes. Podemos ubicarlas en cualquier posición y, hasta ahora, han estado en el extremo de cada eje. Cambiemos éso, así las ubicamos en el centro. Como hay cuatro (arriba, abajo, izquierda y derecha) vamos a esconder dos de ellas dándoles color `none` y vamos a mover la de abajo y la de la izquierda a la posición 0 del espacio de coordenadas. 
 
 ```python
 ...
-ax = plt.gca()  # gca stands for 'get current axis'
+ax = plt.gca()  # gca es 'get current axis' ó 'tomar eje actual'
 ax.spines['right'].set_color('none')
 ax.spines['top'].set_color('none')
 ax.xaxis.set_ticks_position('bottom')
@@ -167,10 +175,10 @@ ax.spines['left'].set_position(('data',0))
 ...
 ```
 
-### 1.5.2.8. Adding a legend
+### 1.5.2.8. Pongámosle título
 ![COPETE](./sphx_glr_plot_exercise_8_001.png)
 
- Let’s add a legend in the upper left corner. This only requires adding the keyword argument label (that will be used in the legend box) to the plot commands.
+ Pongámosle nombres a los trazos al gráfico en la esquina superior izquierda. Para ésto alcanza con agregar a la instrucción 'plot' la palabra clave 'label' y ese texto será usado para el recuadro con los nombres. 
 
 ```python
 ...
@@ -181,10 +189,10 @@ plt.legend(loc='upper left')
 ...
 ```
 
-### 1.5.2.9. Annotate some points
+### 1.5.2.9. Algunos puntos interesantes 
 ![COPETE](./sphx_glr_plot_exercise_9_001.png)
 
- Let’s annotate some interesting points using the annotate command. We chose the 2π/3 value and we want to annotate both the sine and the cosine. We’ll first draw a marker on the curve as well as a straight dotted line. Then, we’ll use the annotate command to display some text with an arrow.
+ Vamos a marcar alguno puntos interesantes usando el comando 'annotate'. Elegimos el valor 2π/3 y queremos marcar tanto el seno como el coseno. Vamos a dibujar una marca en la curva y un línea recta punteada. Además, vamos a usar 'annotate' para mostrar texto y una flecha para destacar el valor de las funciones. 
 
 ```python
 ...
@@ -208,10 +216,15 @@ plt.annotate(r'$sin(\frac{2\pi}{3})=\frac{\sqrt{3}}{2}$',
 ...
 ```
 
-### 1.5.2.10. Devil is in the details
+### 1.5.2.10. El diablo está en los detalles
 ![COPETE](./sphx_glr_plot_exercise_10_001.png)
 
- The tick labels are now hardly visible because of the blue and red lines. We can make them bigger and we can also adjust their properties such that they’ll be rendered on a semi-transparent white background. This will allow us to see both the data and the labels.
+
+ Notá (vas a tener que mirar muy de cerca) que los ejes tapan los trazos de las funciones seno y coseno, y éstas tapan los valores escritos sobre los ejes. Si ésto fuera una publicación quedaría feo.
+
+ Podemos hacer mas grandes las marcas y los textos y ajustar sus propiedades de modo que tengan sean semi-transparentes. Esto nos permitirá ver un poco mejor los datos y los textos. 
+
+ [oski]: # ( ---- la verdad es que la diferencia es casi imperceptible ----The tick labels are now hardly visible because of the blue and red lines. We can make them bigger and we can also adjust their properties such that they’ll be rendered on a semi-transparent white background. This will allow us to see both the data and the labels. )
 
 ```python
 ...
@@ -221,55 +234,74 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 ...
 ```
 
-## 1.5.3. Figures, Subplots, Axes and Ticks
+## 1.5.3. Figuras, Subplots, Ejes y Marcas (ticks)
 
-A “figure” in matplotlib means the whole window in the user interface. Within this figure there can be “subplots”.
+[oski]:# (todo esto es confuso incluso en inglés, si puedo lo leo de otro lado y lo refraseo)
 
- So far we have used implicit figure and axes creation. This is handy for fast plots. We can have more control over the display using figure, subplot, and axes explicitly. While subplot positions the plots in a regular grid, axes allows free placement within the figure. Both can be useful depending on your intention. We’ve already worked with figures and subplots without explicitly calling them. When we call plot, matplotlib calls gca() to get the current axes and gca in turn calls gcf() to get the current figure. If there is none it calls figure() to make one, strictly speaking, to make a subplot(111). Let’s look at the details.
+En matplotlib el término "figura" se refiere a toda la ventana que conforma la interfase al usuario. Dentro de esta ventana o figura pueden existir "subfiguras" (subplots).
 
-### 1.5.3.1. Figures
- A figure is the windows in the GUI that has “Figure #” as title. Figures are numbered starting from 1 as opposed to the normal Python way starting from 0. This is clearly MATLAB-style. There are several parameters that determine what the figure looks like:
+Hasta aquí hemos dibujado gráficos y creado sus ejes de forma implícita. Esto es bueno para obtener ploteos rápidos cuando queremos tener una idea de la distribución de los datos. Podemos controlar mejor la apariencia de la figura que generamos si la definimos en forma explícita. Podemos definir la figura, los subplots, y los ejes.
 
+Mientras que *subplot* ubica a sus plots en posiciones espaciadas regularmente (la grilla) uno puede ubicar los ejes libremente en la figura. Ambas cosas pueden ser útiles, depende de qué estés buscando.
 
-Argument | Default  | Description
+Aunque trabajamos con figuras y subplots sin llamarlos explicitamente, es bueno saber que al invocar `plot()` matplotlib llama a `gca()` (get current axes)para obtener acceso a los ejes, y gca a su vez llama a gcf() (get current figure) para obtener acceso a la figura. Si no existe tal figura, llama a figure() para crearla o mas estrictamente hablando, para crear un subplot. Aunque no pidamos explícitamente crear una figura, ésta es creada cuando la necesitamos. Veamos un poco los detalles.
+
+[oski]: #(
+ So far we have used implicit figure and axes creation. This is handy for fast plots. We can have more control over the display using figure, subplot, and axes explicitly. While subplot positions the plots in a regular grid, axes allows free placement within the figure. Both can be useful depending on your intention. We’ve already worked with figures and subplots without explicitly calling them. When we call plot, matplotlib calls gca() to get the current axes and gca in turn calls gcf() to get the current figure. If there is none it calls figure() to make one, strictly speaking, to make a subplot 111. Let’s look at the details.
+)
+
+### 1.5.3.1. Figuras
+
+Una "figura" es la ventana en la interfase al usuario que lleva como título "Figura #". Las figuras se enumeran comenzando en 1, al estilo Matlab, y no en 0 al estilo Python. Varios parámetros  determinan la pinta que tiene una figura: 
+
+Argumento | Por Omisión  | Descripción
 --- | --- | ---
-num | 1 |  number of figure
-figsize |figure.figsize | figure size in inches (width, height)
-dpi | figure.dpi | resolution in dots per inch
-facecolor |  figure.facecolor  |  color of the drawing background
-edgecolor |  figure.edgecolor  |  color of edge around the drawing background
-frameon | True |   draw figure frame or not
+num | 1 |  número de figura
+figsize |figure.figsize | tamaño de figura en pulgadas (ancho, alto)
+dpi | figure.dpi | resolución en puntos por pulgada
+facecolor |  figure.facecolor  |  color del fondo
+edgecolor |  figure.edgecolor  |  color del borde rodeando el fondo
+frameon | True |   dibujar un recuadro para la figura ?
 
-As with other objects, you can set figure properties also setp or with the set_something methods.
-
-When you work with the GUI you can close a figure by clicking on the x in the upper right corner. But you can close a figure programmatically by calling close. Depending on the argument it closes (1) the current figure (no argument), (2) a specific figure (figure number or figure instance as argument), or (3) all figures ("all" as argument).
+Como con otros objetos, podés usar `setp` para setear propiedades de la figura o usar métodos del tipo set_algo.
 
 ```python
-plt.close(1)     # Closes figure 1
+setp(line, linestyle='--')
+
+# donde linestyle pertenece a {'-', '--', '-.', ':', '', (offset, on-off-seq), ...}
 ```
 
+Si estás trabajando en una interfaz gráfica podés cerrar una figura clickeando en la `X` de la ventana. Tambien podés cerrar una ventana desde tu programa llamando al método close(). Dependiendo del parámetro que le pases va a cerrar la figura con que estás trabajando (sin argumentos), una figura específica (como argumento le pasás el número de figura) o todas las figuras (el argumento es "all"). 
+
+```python
+plt.close(1)     # Cierra la figura 1
+```
+
+[oski]: # (acá hay un salto, merece una breve transición en el texto)
+
 ### 1.5.3.2. Subplots
- With subplot you can arrange plots in a regular grid. You need to specify the number of rows and columns and the number of the plot. Note that the gridspec command is a more powerful alternative.
+Podés disponer tus plots en una grilla de intervalos regulares si usás subplots. Sólo tenés que especificar el número del plot y el número de filas y columnas. 
+
 ![COPETE](./sphx_glr_plot_subplot-horizontal_001.png)
 ![COPETE](./sphx_glr_plot_subplot-vertical_001.png)
 ![COPETE](./sphx_glr_plot_subplot-grid_001.png)
 ![COPETE](./sphx_glr_plot_gridspec_001.png)
 
 
-### 1.5.3.3. Axes
-Axes are very similar to subplots but allow placement of plots at any location in the figure. So if we want to put a smaller plot inside a bigger one we do so with axes.
+### 1.5.3.3. Ejes
+Podés usar los ejes para un disponer los ploteos en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
 
 ![COPETE](./sphx_glr_plot_axes_001.png)
 ![COPETE](./sphx_glr_plot_axes-2_001.png)
 
 
 
-### 1.5.4.2. Scatter Plots
+### 1.5.4.2. Ploteos "esparcidos" Scatter Plots
 ![COPETE](./sphx_glr_plot_scatter_001.png)
 
-Starting from the code below, try to reproduce the graphic taking care of marker size, color and transparency.
+Usando el código que sigue reproducí el gráfico cuidando el tamaño de las marcas, el color, y la transparencia de los trazos.
 
-Hint Color is given by angle of (X,Y).
+Pista: El color depende del ángulo del punto (X,Y).
 ```python
 n = 1024
 X = np.random.normal(0,1,n)

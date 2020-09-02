@@ -17,3 +17,6 @@ Plagiar es copiar ideas, palabra o fragmentos de código sin dar el crédito ade
 
 La idea es que todo el material que nos entreguen como ejercicios resueltos lo podamos usar dentro del proceso pedagógico de la enseñanza de Python. Al enviarnos tu código entendemos que estás aceptando esto. Si por algún motivo preferís que no usemos tu codigo, por favor mandanos un correo a python@unsam.edu.ar indicando `[NO COMPARTIR]` como tema e indicando en el cuerpo que no querés que usemos tus ejercicios en este sentido.
 
+### Respeto
+
+Esperamos que en todas las instancias del curso tanto oficiales como no oficiales (chats, foros, videoconferencias, correcciones de ejercicios, etc., ) mantengas un trato cordial y respetuoso con tus compañeres y docentes.

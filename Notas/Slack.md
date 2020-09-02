@@ -37,4 +37,4 @@ Las consultas online son parte de la forma de programar contemporánea. Es usual
 
 Hay foros que suelen ser de mucha ayuda. En particular, [Stackoverflow](https://stackoverflow.com/) es una gran fuente de conocimiento sobre programación en Python y [su versión en español](https://es.stackoverflow.com/), aunque menos concurrida, también puede ser de utilidad.
 
-Si no encuentran aquí la forma de sacarse una duda, recurran al [grupo de consultas Slack del curso](https://join.slack.com/t/python--unsam/shared_invite/zt-fkzwu21z-HSvy~tajpu6Wy3HHw9iKkQ).
+Si no encuentran aquí la forma de sacarse una duda, recurran al [grupo de consultas Slack del curso](https://join.slack.com/t/python--unsam/shared_invite/zt-gec59g9y-YCvNs84BkR5r70KC52s17Q).
