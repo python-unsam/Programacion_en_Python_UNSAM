@@ -104,10 +104,10 @@ def incrementar(s):
 ```
 
 ### Ejercicio 5.14: Complejidad de `incrementar()`
-Si tomamos `n = len(s)` podemos tratar de medir la complejidad de la función `incrementar` en términos de la longitud `n` de la secuencia. ¿Te parece que `incrementar()` es una función lineal, cuadrática, logarítmica o exponencial? ¿Por qué?
+Si tomamos `n = len(s)` podemos tratar de medir la complejidad de la función `incrementar()` en términos de la longitud `n` de la secuencia. ¿Te parece que `incrementar()` es una función lineal, cuadrática, logarítmica o exponencial? ¿Por qué?
 
 ### Ejercicio 5.15: Un ejemplo más complejo
-Escribí una funcion `listar_secuencias(n)` que imprima en pantalla **todas** las secuencias binarias de longitud `n` comenzando con la primera (`[0]*n`) y usando en cada paso la función `incrementar()` definida más arriba.
+Por último, escribí una funcion `listar_secuencias(n)` que devuelva una lista con  **todas** las secuencias binarias de longitud `n` comenzando con la primera (`[0]*n`) y usando en cada paso la función `incrementar()` definida más arriba.
 
 ¿Te parece que `listar_secuencias(n)` es una función lineal, cuadrática, logarítmica o exponencial en `n`? ¿Por qué?
 
