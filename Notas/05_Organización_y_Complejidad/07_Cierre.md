@@ -13,7 +13,7 @@ Para cerrar esta clase te pedimos dos cosas:
  4. El archivo `b_bin.py` del [Ejercicio 5.12](../05_Organización_y_Complejidad/05_Complejidad.md#ejercicio-512-insertar-un-elemento-en-una-lista).
  5. El archivo `plot_bbin_vs_bsec.py` del [Ejercicio 5.17](../05_Organización_y_Complejidad/06_gráficos_de_complejidad.md#ejercicio-517-búsqueda-binaria-vs-búsqueda-secuencial).
 
-* Que completes [este formulario](https://docs.google.com/) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/1De-riQmiD2H9PZAVUkR5hf4lqU_9tp8IACqZYTvePkA) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! 
 
