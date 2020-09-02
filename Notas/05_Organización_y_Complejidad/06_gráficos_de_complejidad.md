@@ -39,7 +39,7 @@ def busqueda_secuencial_(lista,e):
 
 Si querés acceder a la posición podés usar `busqueda_secuencial_(lista,e)_[0]` y para acceder a la cantidad de comparaciones que hizo `busqueda_secuencial_(lista,e)_[1]`.
 
-### Ejercicio 5.16: Contar comparaciones en la búsqueda binaria.
+### Ejercicio 5.16: Contar comparaciones en la búsqueda binaria
 
 ## Gráficar la cantidad de comparaciones promedio
 
