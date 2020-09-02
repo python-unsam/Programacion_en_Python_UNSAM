@@ -127,8 +127,9 @@ En este Ejercicio vamos a rehacer los gráficos del ejemplo anterior, pero prime
 1. Usando `experimento_secuencial_promedio(lista,m,k)` como base, escribí una función `experimento_binario_promedio(lista,m,k)` que cuente la cantidad de comparaciones que realiza en promedio (entre `k` experimentos elementales) la búsqueda binaria sobre la lista pasada como parámetro.
 2. Graficá los resultados de estos experimentos para listas de largo entre 1 y 256.
 3. Graficá ambas curvas en una misma figura, nombrando adecuadamente las curvas, los ejes y la figura completa.
+4. ¿Qué observas en estos gráficos? ¿Qué podés decir sobre la complejida de cada algoritmo?
 
-Este ejercicio guardalo en `plot_bbin_vs_bsec.py`.
+El código de este ejercicio guardalo en `plot_bbin_vs_bsec.py`.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](05_Complejidad.md) \| [Próximo (7 Cierre de la quinta clase)](07_Cierre.md)
