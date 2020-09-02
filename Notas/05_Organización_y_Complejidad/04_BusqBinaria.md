@@ -60,13 +60,12 @@ El siguiente fragmento de código muestra una implementación de
 este algoritmo, incluyendo una instrucción de depuración (debug) con `print` para verificar su funcionamiento.
 
 ```python
-def busqueda_binaria(lista, x):
+def busqueda_binaria(lista, x, verbose = False):
     '''Búsqueda binaria
     Precondición: la lista está ordenada
     Devuelve -1 si x no está en lista;
     Devuelve p tal que lista[p] == x, si x está en lista
     '''
-    verbose = True # False #para que imprima info [DEBUG]
     if verbose:
         print(f'[DEBUG] izq |der |medio')
     pos = -1 # Inicializo respuesta, el valor no fue encontrado
@@ -89,48 +88,48 @@ def busqueda_binaria(lista, x):
 A continuación varias ejecuciones de prueba:
 
 ```python
->>> busqueda_binaria([1, 3, 5], 0)
+>>> busqueda_binaria([1, 3, 5], 0, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  2 |  1
 [DEBUG]   0 |  0 |  0
 -1
->>> busqueda_binaria([1, 3, 5], 1)
+>>> busqueda_binaria([1, 3, 5], 1, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  2 |  1
 [DEBUG]   0 |  0 |  0
 0
->>> busqueda_binaria([1, 3, 5], 2)
+>>> busqueda_binaria([1, 3, 5], 2, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  2 |  1
 [DEBUG]   0 |  0 |  0
 -1
->>> busqueda_binaria([1, 3, 5], 3)
+>>> busqueda_binaria([1, 3, 5], 3, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  2 |  1
 [DEBUG]   2 |  2 |  2
 1
->>> busqueda_binaria([1, 3, 5], 5)
+>>> busqueda_binaria([1, 3, 5], 5, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  2 |  1
 [DEBUG]   2 |  2 |  2
 2
->>> busqueda_binaria([1, 3, 5], 6)
+>>> busqueda_binaria([1, 3, 5], 6, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  2 |  1
 [DEBUG]   2 |  2 |  2
 -1
->>> busqueda_binaria([], 0)
+>>> busqueda_binaria([], 0, verbose = True)
 [DEBUG] izq |der |medio
 -1
->>> busqueda_binaria([1], 1)
+>>> busqueda_binaria([1], 1, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  0 |  0
 0
->>> busqueda_binaria([1], 3)
+>>> busqueda_binaria([1], 3, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 |  0 |  0
 -1
->>> busqueda_binaria([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23],18)
+>>> busqueda_binaria([1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23],18, verbose = True)
 [DEBUG] izq |der |medio
 [DEBUG]   0 | 11 |  5
 [DEBUG]   6 | 11 |  8
