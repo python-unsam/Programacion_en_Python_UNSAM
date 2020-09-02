@@ -188,7 +188,7 @@ Modificando la función `busqueda_binaria(lista, x)` adecuadamente, definí una 
 
 Por ejemplo: el elemento `3` podría insertarse en la posición 2 en la lista `[0,2,4,6]` para mantenerla ordenada. Por lo tanto, el llamado `donde_insertar([0,2,4,6], 3)` deberá devolver `2`, al igual que el llamado `donde_insertar([0,2,4,6], 4)`.
 
-Guarda tu modificación en un archivo `b_bin.py`.
+Guarda tu modificación en un archivo `bbin.py`.
 
 
 
