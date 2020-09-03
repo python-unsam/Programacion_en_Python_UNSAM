@@ -61,9 +61,7 @@ En el siguiente script, hemos explicitado y comentado todas las propiedades de u
 
 Cada propiedad se configuró a su valor por omisión, para que veas cuáles son los valores "normales" y puedas jugar con ellos para ver sus efectos sobre el gráfico. Sobre propiedades y estilos de las líneas hablaremos luego.
 
-[oski] : #(In the script below, we’ve instantiated and commented all the figure settings that influence the appearance of the plot.
-
- The settings have been explicitly set to their default values, but now you can interactively play with the values to explore their affect [see Line properties and Line styles below].)
+[oski]: # (In the script below, we’ve instantiated and commented all the figure settings that influence the appearance of the plot. The settings have been explicitly set to their default values, but now you can interactively play with the values to explore their affect see Line properties and Line styles below.)
 
 
 ```python
@@ -234,7 +232,7 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 ...
 ```
 
-## 1.5.3. Figuras, Subplots, Ejes y Marcas (ticks)
+## 1.5.3. Figuras, subplots, ejes y marcas (ticks)
 
 [oski]:# (todo esto es confuso incluso en inglés, si puedo lo leo de otro lado y lo refraseo)
 
@@ -277,10 +275,19 @@ Si estás trabajando en una interfaz gráfica podés cerrar una figura clickeand
 plt.close(1)     # Cierra la figura 1
 ```
 
+En Argentina usamos el sistema métrico pero sorprendentemente no hay un modo fácil de especificar distancias o tamaños en centímetros en matplotlib. Podemos usar una función auxiliar como esta para convertir nuestro número en cm a un número en pulgadas:
+
+```python
+def cm2inch(value):
+    return value/2.54
+
+fig = plt.figure(figsize=(cm2inch(12.8), cm2inch(9.6)))
+```
+
 [oski]: # (acá hay un salto, merece una breve transición en el texto)
 
 ### 1.5.3.2. Subplots
-Podés disponer tus plots en una grilla de intervalos regulares si usás subplots. Sólo tenés que especificar el número del plot y el número de filas y columnas. 
+Podés disponer tus plots en una grilla de intervalos regulares si usás subplots. Sólo tenés que especificar el número del plot y el número de filas y columnas.  
 
 ![COPETE](./sphx_glr_plot_subplot-horizontal_001.png)
 ![COPETE](./sphx_glr_plot_subplot-vertical_001.png)
@@ -296,7 +303,7 @@ Podés usar los ejes para un disponer los ploteos en cualquier lugar de la figur
 
 
 
-### 1.5.4.2. Ploteos "esparcidos" Scatter Plots
+### 1.5.4.2. Ploteos "esparcidos" ó scatter plots
 ![COPETE](./sphx_glr_plot_scatter_001.png)
 
 Usando el código que sigue reproducí el gráfico cuidando el tamaño de las marcas, el color, y la transparencia de los trazos.
@@ -309,14 +316,13 @@ Y = np.random.normal(0,1,n)
 plt.scatter(X,Y)
 ```
 
-Click on figure for solution.
-
-### 1.5.4.3. Bar Plots
+### 1.5.4.3. Gráficos de barras
 ![COPETE](./sphx_glr_plot_bar_001.png)
 
-Starting from the code below, try to reproduce the graphic by adding labels for red bars.
+A partir del siguiente código, reproducí el gráfico que se muestra agregando etiquetas para las barras rojas.
 
-Hint You need to take care of text alignment.
+Pista: Cuidá la alineación del texto.
+
 ```python
 n = 12
 X = np.arange(n)
@@ -332,28 +338,26 @@ for x, y in zip(X, Y1):
 plt.ylim(-1.25, +1.25)
 ```
 
-Click on figure for solution.
-
-
-### 1.5.4.9. Multi Plots
+### 1.5.4.9. Múltiples plots
 ![COPETE](./sphx_glr_plot_multiplot_001.png)
 
-Starting from the code below, try to reproduce the graphic.
+A partir del siguiente código, reproducí el gráfico que se muestra.
 
-Hint You can use several subplots with different partition.
+Pista: Podés usar varios subplots divididos de diferentes formas.
+
 ```python
 plt.subplot(2, 2, 1)
 plt.subplot(2, 2, 3)
 plt.subplot(2, 2, 4)
 ```
 
-Click on figure for solution.
-
-### 1.5.4.10. Polar Axis
+### 1.5.4.10. Coordenadas polares
 ![COPETE](./sphx_glr_plot_polar_001.png)
 
-Hint You only need to modify the axes line
-Starting from the code below, try to reproduce the graphic.
+Pista: sólo necesitás modifcar los ejes.
+
+A partir del siguiente código, reproducí el siguiente gráfico.
+
 
 ```python
 plt.axes([0, 0, 1, 1])
@@ -369,7 +373,6 @@ for r, bar in zip(radii, bars):
     bar.set_alpha(0.5)
 ```
 
-Click on figure for solution.
 
 
 

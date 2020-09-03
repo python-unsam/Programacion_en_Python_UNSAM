@@ -442,7 +442,7 @@ Modificá la función `parse_csv()` de forma que (opcionalmente) pueda trabajar 
 >>>
 ```
 
-Para hacer este cambio, vas a tener que modificar el código de forma que la primera linea de datos no sea interpretada como encabezado. Además, vas a tener que asegurarte de no crear diccionarios, dado que no tenés más los nombres de las columnas para usar en el encabezado.
+Para hacer este cambio, vas a tener que modificar el código de forma que la primera linea de datos no sea interpretada como encabezado. Además, vas a tener que asegurarte de no crear diccionarios, dado que no tenés más los nombres de las columnas para usar en el encabezado. Todo esto es una opción dentro de la función, que se activa si le pasás el parámetro `has_headers=False`. Vale aclarar que este parámetro tiene como valor por omisión `True`, con lo que la función sigue funcionando igual que antes si no se especifica.
 
 Incorporá todos estos cambios en el archivo `fileparse.py`.
 
