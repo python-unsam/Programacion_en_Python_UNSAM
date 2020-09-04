@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo *main*)](02_305Main_module.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo *main* (principal))](02_305Main_module.md)
 
 # 6.1 Control de errores
 
@@ -13,7 +13,7 @@ def add(x, y):
     return x + y
 
 add(3, 4)               # 7
-add('Hello', 'World')   # 'HelloWorld'
+add('Hola', 'mundo')    # 'Holamundo'
 add('3', '4')           # '34'
 ```
 
@@ -31,7 +31,7 @@ TypeError: unsupported operand type(s) for +:
 >>>
 ```
 
-Python acusa los errores en el idioma en inglés. El error acusado aquí puede traducisrse como:
+Python acusa los errores en inglés. El error acusado aquí puede traducisrse como:
 ```
 Recapitulando (llamada más reciente al final)
 ...
@@ -65,10 +65,10 @@ Una excepción se propagará hasta el primer `except` que coincida con ella.
 ```python
 def grok():
     ...
-    raise RuntimeError('Whoa!')   # Levanta una excepción aquí
+    raise RuntimeError('Epa !')   # Levanta una excepción aquí
 
 def spam():
-    grok()                        # Esta llamada va a levantaruna excepción
+    grok()                        # Esta llamada va a levantar una excepción
 
 def bar():
     try:
@@ -87,11 +87,11 @@ foo()
 
 [oski]: # (To handle the exception, put statements in the `except` block. You can add any statements you want to handle the error.)
 
-Para administrar la excepción, usá instrucciones en el bloque `except`. Es pertinente realizar acciones relacionadas con la excepción en particular. 
+Para administrar la excepción, usá instrucciones en el bloque `except`. Cualquier instrucción hará que Python considere a la excepción como administrada, incluso un `pass` pero es pertinente realizar acciones relacionadas con la excepción específica a administrar. 
 
 ```python
 def grok(): ...
-    raise RuntimeError('Whoa!')
+    raise RuntimeError('Epa !')
 
 def bar():
     try:
@@ -108,7 +108,7 @@ Una vez atrapada la excepción, la ejecución continúa en la primera instrucci�
 
 ```python
 def grok(): ...
-    raise RuntimeError('Whoa!')
+    raise RuntimeError('Epa !')
 
 def bar():
     try:
@@ -149,29 +149,26 @@ ValueError
 
 ### Valores asociados a excepciones
 
-Usualmente las excepciones llevan valores asociados, que proveen más información sobre la causa detallada del error. Este valor puede ser una cadena (*string*) o una tupla de valores diversos (por ejemplo un código de error y un texto explicando ese código). 
+Usualmente las excepciones llevan valores asociados, que te dan más información sobre la causa precisa del error. Este valor puede ser una cadena (*string*) o una tupla con valores diversos (por ejemplo un código de error y un texto explicando ese código). 
 
 ```python
 raise RuntimeError('Nombre de usuario inválido')
 ```
 
-La instancia de la variable suministrada a `except` lleva este valor asociado. 
-
-[oski]: # (no me gusta como queda. Confuso. El original tambien confuso. En los ejemplos no se muestra como usar este valor asociado.  Igual sigo.
-This value is part of the exception instance that's placed in the variable supplied to `except`.)
+La instancia de la variable suministrada a `except` (en nuestros ejemplos `e`) lleva asociado este valor. 
 
 ```python
 try:
     ...
-except RuntimeError as e:   # `e` contiene la excecpcion lanzada
+except RuntimeError as e:   # `e` contiene la excepción lanzada
     ...
 ```
 
-`e` es una instancia del mismo tipo que la excepción, aunque si lo imprimís suele tener aspecto de una cadena de caracteres.
+`e` es una instancia del mismo tipo que la excepción, aunque si la imprimís suele tener aspecto de una cadena de caracteres.
 
 ```python
 except RuntimeError as e:
-    print('Failed : Reason', e)
+    print('Fracasé. Motivo:', e)
 ```
 
 ### Podés atrapar múltiples excepciones
@@ -208,10 +205,10 @@ Para atrapar todas y cualquier excepción, se usa `Exception` así:
 try:
     ...
 except Exception:       # PELIGRO. (ver abajo)
-    print('An error occurred')
+    print('Hubo un error')
 ```
 
-En general es mala idea "administrar" las excepciones de este modo, porque no te dá ninguna pista de porqué falló el programa.
+En general es mala idea "administrar" las excepciones de este modo, porque no te dá ninguna pista de porqué falló el programa. Sólo sabés que "Hubo un error".
 
 ### Así NO se atrapan excepciones. 
 
@@ -238,9 +235,9 @@ except Exception as e:
 ```
 
 `Exception` incluye toda excepción posible, de modo que no sabés cuál atrapaste.
-Al menos esta última versión te informa el motivo específico del error. Siempre es bueno tener alguna forma de ver o informar errores cuando atrapás todas las excepciones posibles. 
+Al menos esta versión te informa el motivo específico del error. Siempre es bueno tener alguna forma de ver o informar errores cuando atrapás todas las excepciones posibles. 
 
-Sin embargo, por lo general es mejor atrapar errores específicos, y sólo aquellos que podés administrar. Errores que no sepas como manejar adecuadamente, déjalos correr (tal vez alguna otra porción de código los atrape y administre correctamente o sea adecuado que se detenga la ejecución).
+Sin embargo, por lo general es mejor atrapar errores específicos, y sólo aquellos que podés administrar. Errores que no sepas como manejar adecuadamente, déjalos correr (tal vez alguna otra porción de código los atrape y administre correctamente o tal vez lo mejor sea detener la ejecución).
 
 ### Re-lanzar una excepción
 
@@ -278,7 +275,7 @@ Una estructura como ésa resulta en un manejo seguro de los recursos disponibles
 
 ## Ejercicios
 
-### Ejercicio 6.1: Levantando excepciones
+### Ejercicio 6.1: Lancemos excepciones
 
 Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers=False` sean pasados juntos. Y que resulte: 
 
@@ -287,8 +284,8 @@ Modifcá tu código para que lance una excepción en caso que ambos parámetros 
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 9, in parse_csv
-    raise RuntimeError("para seleccionar argumentos necesito encabezados")
-RuntimeError: select argument requires column headers
+    raise RuntimeError("Para seleccionar, necesito encabezados.")
+RuntimeError: Para seleccionar, necesito encabezados.
 >>>
 ```
 
@@ -296,11 +293,11 @@ Ahora que agregaste este control, te estarás preguntando si no deberías compro
 
 Como regla general, es mejor no controlar esas cosas, y dejar que el programa dé un error ante entradas inválidas. El mensaje de error va a darte una idea del origen del problema y te va ayudar a solucionarlo.
 
-El motivo principal para agregar controles de calidad sobre los argumentos de entrada es evitar que tu programa sea ejecutado en condiciones que no tienen sentido (pedirle que haga algo que requiere encabezados y simultáneamente decirle que no existen encabezados) lo cual implicaria un error en el código que llamado a tu función. La idea general es estar protegido contra situaciones que "no deberían suceder" pero podrían. 
+El motivo principal para agregar controles de calidad sobre los parámetros de entrada es evitar que tu programa sea ejecutado en condiciones que no tienen sentido. Si le pedís que haga algo que requiere encabezados y simultáneamente le decís que no existen encabezados implica estás usando la función incorrectamente. La idea general es estar protegido contra situaciones que "no deberían suceder" pero podrían. 
 
 
-### Ejercicio 6.2: Atrapar excepciones
-La función `parse_csv()` que escribiste está destinada a procesar un archivo completo. Pero en una situacion real, es posible que los archivos CSV de entrada estén "rotos", ausentes, o su contenido no conforme con el formato esperado. Probá esto:  
+### Ejercicio 6.2: Atrapemos excepciones
+La función `parse_csv()` que escribiste está destinada a procesar un archivo completo. Pero en una situacion real, es posible que los archivos CSV de entrada estén "rotos", ausentes, o que su contenido no se adecúe al formato esperado. Probá esto:  
 
 ```python
 >>> camion = parse_csv('Data/missing.csv', types=[str, int, float])
@@ -311,6 +308,7 @@ Traceback (most recent call last):
 ValueError: invalid literal for int() with base 10: ''
 >>>
 ```
+El error es: el texto '' es inválido para la función int()
 
 Modificá la función `parse_csv()` de modo que atrape todas las excepciones de tipo `ValueError` generadas durante el armado de los registros a devolver e imprima un mensaje de advertencia para las filas que no pudieron ser convertidas.
 Este mensaje deberá incluír el número de fila que causó el fallo y el motivo por el cual falló la conversión. Para probar tu nueva función, intentá procesar `Data/missing.csv`. Debería darte algo así:  
@@ -327,7 +325,7 @@ Row 7: Motivo: invalid literal for int() with base 10: ''
 >>>
 ```
 
-### Ejercicio 6.3: Silenciar errores
+### Ejercicio 6.3: Errores silenciados
 Modificá `parse_csv()` de modo que el usuario pueda silenciar los informes de errores en el parseo de los datos que agregaste antes. Por ejemplo:
 
 ```python
@@ -342,5 +340,5 @@ Modificá `parse_csv()` de modo que el usuario pueda silenciar los informes de e
 Lograr un buen manejo o administración de errores es una de las partes más difíciles en la mayoría de los programas. Estás intentando preveer imprevistos. Como regla general, no silencies los errores. Es mejor informar los problemas y darle al usuario la opción de silenciarlos explícitamente. Un buen diálogo entre el código y el usuario facilita el debugging y el buen uso del programa. 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo *main*)](02_305Main_module.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo *main* (principal))](02_305Main_module.md)
 

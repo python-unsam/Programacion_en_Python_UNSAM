@@ -30,7 +30,7 @@ print(tirada)
 ## Ejercicios:
 
 ### Ejercicio 4.6: Generala servida
-Queremos estimar la probabilidad de obtener una generala servida en una tirada de dados. Podemos hacer la cuenta usando un poco de teoría de probabilidades, o podemos *simular* que tiramos los dados muchas veces y ver cuántas de esas veces obtuvimos cinco dados iguales. En este ejercicio vamos a usar el segundo camino.
+Queremos estimar la probabilidad de obtener una generala servida (cinco dados iguales) en una tirada de dados. Podemos hacer la cuenta usando un poco de teoría de probabilidades, o podemos *simular* que tiramos los dados muchas veces y ver cuántas de esas veces obtuvimos cinco dados iguales. En este ejercicio vamos a usar el segundo camino.
 
 Escribí una función `tirar()` que devuelva una lista con cinco dados generados aleatoriamente. Escribí otra función llamada `es_generala(tirada)` que devuelve `True` si y sólo si los cinco dados de la lista `tirada` son iguales.
 
@@ -48,6 +48,23 @@ print(f'Podemos estimar la probabilidad de sacar generala servida mediante {prob
 
 ### Ejercicio 4.7: Generala no necesariamente servida
 Si uno juega con las reglas originales (se puede volver a tirar algunos de los cinco dados hasta dos veces, llegando hasta a tres tiradas en total) siguiendo una estrategia que intente obtener generala (siempre guardar los dados que más se repiten y tirar nuevamente los demás) es más probable otener una generala que si sólo consideramos la generala servida. Escribí un programa que estime la probabilidad de obtener una generala en las tres tiradas de una mano y guardalo en un archivo `generala.py`.
+
+
+### Semillas
+
+A veces queremos generar números (pseudo-)aleatorios de una manera reproducible. Puede sonar contradictorio, pero no lo es: es aquí donde se ve claramente la naturalez **pseudo**aleatoria de estos números. Si fijamos una semilla con el comando `random.seed(semilla)`, donde `semilla` es un número entero, los elecciones que hagamos luego serán reproducibles posteriormente utilizando la misma semilla.
+
+Probá por ejemplo correr dos veces el siguiente código:
+```python
+import random
+random.seed(31415)
+
+tirada=[]
+for i in range(5):
+    tirada.append(random.randint(1,6)) 
+
+print(tirada)
+```
 
 ### Elecciones con reposición
 
@@ -88,7 +105,7 @@ A diferencia de `choices` donde el parámetro `k` podía tomar cualquier valor, 
 ### Ejercicio 4.8: Envido
 Teniendo en cuenta las reglas del [Truco](https://es.wikipedia.org/wiki/Truco_argentino), estimá la probabilidad de obtener 31, 32 o 33 puntos de envido en una mano. ¿Son iguales estas tres probabilidades? ¿Por qué?
 
-_Observación: como corresponde, en esta materia jugamos al truco **sin** flor._
+_Observación: como corresponde, en esta materia jugamos al truco **sin** flor. Si no conocés las reglas del Truco y no te dan ganas de aprenderlo ahora, simplemente salteá este ejercicio._
 
 Guardá este ejercicio en un archivo `envido.py` para entregar.
 
@@ -141,11 +158,10 @@ Si el área del círculo completo es pi, el área de nuestro cuarto de círculo 
 
 Despejando pi de esta estimación, obtenemos que pi ~ 4*M/N. Esto nos permite estimar pi mirando cuántos puntos caen realmente dentro del círculo del total de puntos. 
 
-### Ejercicio 4.10: Estimar pi
 Escribí un programa `estimar_pi.py` que genere cien mil puntos aleatorios con la función `generar_punto()`, calcule la proporción de estos puntos que caen en el círculo unitario (usando ¿x^2 + y^2 < 1?) y use este resultado para dar una aproximación de pi.
 
 
-### Ejercicio 4.11: Gaussiana
+### Ejercicio 4.10: Gaussiana
 Con `random.random()` generamos valores aleatorios entre 0 y 1 con una distribución _uniforme_. En esa distribución, todos los valores posibles tienen la misma probabilidad de ser seleccionados. También es posible generar valores aleatorios con otras distribuciones. Una de las distribuciones más importantes es la **distribución normal** o [Gaussiana](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal).
 
 La distribución normal tiene dos parámetros, denominados media y desvío estándar y denotados usualmente con las letras griegas _mu_ y _sigma_, respectivamente.

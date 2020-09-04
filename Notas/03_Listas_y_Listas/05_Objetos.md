@@ -151,7 +151,7 @@ La lista interna sigue siendo compartida.
 
 ### Copias profundas
 
-A veces vas a necesitar hacer una copia de un objeto así como de todos los objetos que contenga. Llamamos a esto una *copia pofunda* (*deep copy*) Podés usar el módulo `copy` para esto:
+A veces vas a necesitar hacer una copia de un objeto así como de todos los objetos que contenga. Llamamos a esto una *copia pofunda* (*deep copy*). Podés usar la función `deepcopy` del módulo `copy` para esto:
 
 ```python
 >>> a = [2,3,[100,101],4]

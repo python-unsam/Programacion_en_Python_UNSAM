@@ -176,18 +176,18 @@ def saludo():
 Las funciones, sin embargo, no alteran normalmente el valor de una variable global.
 
 ```python
-name = 'Dave'
+nombre = 'Dave'
 
 def spam():
-  name = 'Guido'
+  nombre = 'Guido'
 
 spam()
-print(name) # imprime 'Dave'
+print(nombre) # imprime 'Dave'
 ```
 
 Aquí hay dos variables diferentes: `nombre` global, que vale `'Dave'`, y `nombre` local, declarada dentro de la función `spam()` que vale `'Guido'`. Cambiar una no cambia la otra: al cambiar el valor de `nombre` local, `nombre` global no cambia.
 
-**Acordate: Las asignaciones de valores a variables y las declaraciones de variables  dentro de funciones son locales**
+**Acordate: Las asignaciones de valores a variables y las declaraciones de variables  dentro de funciones son locales.**
 
 ### Modificar el valor de una variable global
 
@@ -205,11 +205,11 @@ Si declaramos `global nombre` dentro de la función, entonces `nombre` fuera de 
 
 La declaración de globalidad de la variable (con la palabra reservada `global`) tiene que aparecer antes del uso de la variable dentro de una función, y la declaración de la variable global fuera de la función debe ocurrir en el mismo archivo que ésta.
 
-Dicho ésto, hay que decir también que usar variables globales se considera una mala práctica. Tratá de evitar completamente el uso de `global`. Si tenés una función que depende del estado de una variable global, tu programa es menos modular: no podés reutilizar la función en otro contexto sin agregar una variable global. Si necesitás que una función modifique el estado de algo fuera de esa función, es mejor entonces usar una clase en lugar de una función. Hablaremos de ésto más adelante, en la segunda mitad de la materia.
+Dicho esto, hay que decir también que usar variables globales se considera una mala práctica. Tratá de evitar completamente el uso de `global`. Si tenés una función que depende del estado de una variable global, tu programa es menos modular: no podés reutilizar la función en otro contexto sin agregar una variable global. Si necesitás que una función modifique el estado de algo fuera de esa función, es mejor entonces usar una clase en lugar de una función. Hablaremos de ésto más adelante, en la segunda mitad de la materia.
 
 ### Pasaje de argumentos
 
-Cuando llamás a una función, los argumentos son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales (ver [Sección 3.5](../03_Listas_y_Listas/05_Objetos.md#35-objetos)). Si le pasás tipos mutables, como listas ó diccionarios, la función *sí* los puede modificar.
+Cuando llamás a una función, los argumentos son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales (ver [Sección 3.5](../03_Listas_y_Listas/05_Objetos.md#35-objetos)). Si le pasás tipos mutables, como listas o diccionarios, la función *sí* los puede modificar.
 
 ```python
 def foo(items):
@@ -226,7 +226,7 @@ print(a)                # [1, 2, 3, 42]
 
 Existe una sutil pero importante diferencia entre *modificar* el valor de una variable y *reasignar* una variable.
 
-Es importante que entiendas esa diferencia.
+Es importante que entiendas esta diferencia.
 
 ```python
 def foo(items):
@@ -252,16 +252,15 @@ print(b)               # imprime [1, 2, 3]
 
 Este conjunto de ejercicios te llevan a implementar un programa medianamente complejo. Es no trivial. Hay varios pasos involucrados e implica articular muchos conceptos al mismo tiempo.
 
-La solución que vas a desarrollar involucra sólo unas 25 líneas de código, pero tomate tu tiempo para asegurarte que entendés cada concepto y cada parte del código por separado.
+La solución que vas a desarrollar involucra sólo unas 25 líneas de código, pero tomate tu tiempo para asegurarte de que entendés cada concepto y cada parte del código por separado.
 
 La parte central del programa `informe_funciones.py` resuelve la lectura de archivos de tipo CSV. Por ejemplo, la función `leer_camion()` lee un archivo que contiene los datos de un camión organizados como filas, y la función `leer_precios()` lee un archivo que contiene precios. En ambas funciones hay una variedad de acciones detallistas y minuciosas, por ejemplo, ambos abren un archivo y lo envuelven con el módulo `csv` y ambos convierten cada uno de los campos a un tipo de datos diferente.
 
-Si tu tarea fuera de verdad leer datos de archivos, entonces querrías limpiar este código un poco, hacerlo más prolijo, y aplicable a un uso más general. Esa es nuestra intención ahora:  
+Si tu tarea fuera de verdad leer datos de archivos, entonces querrías limpiar este código un poco, hacerlo más prolijo, y aplicable a un uso más general. Ésa es nuestra intención ahora:
 
-Comenzá este ejercicio creando un nuevo archivo llamado `ejercicios_python/fileparse.py`. Allí vamos a trabajar.
+Comenzá este ejercicio creando un nuevo archivo llamado `ejercicios_python/fileparse.py`. Ahí vamos a trabajar.
 
 _Nota:_ En inglés *to parse* significa analizar gramaticalmente (por ejemplo una frase), separándola en sus partes constitutivas. Es un término muy usado en ciencias de la computación que no tiene una traducción compacta al castellano. Mucha gente usa el anglicismo *parsear* para referirse a esta actividad.
-
 
 ### Ejercicio 5.3: Parsear un archivo CSV
 Vamos a empezar por el problema simple de leer un archivo CSV para guardar los datos que contiene en una lista de diccionarios. En el archivo `fileparse.py` definí la siguiente función:
@@ -279,14 +278,14 @@ def parse_csv(nombre_archivo):
 
         # Lee los encabezados
         headers = next(rows)
-        records = []
+        registros = []
         for row in rows:
             if not row:    # Saltea filas sin datos
                 continue
-            record = dict(zip(headers, row))
-            records.append(record)
+            registro = dict(zip(headers, row))
+            registros.append(registro)
 
-    return records
+    return registros
 ```
 
 Esta función lee un archivo CSV y arma una lista de diccionarios a partir del contenido del archivo CSV. La función aísla al programador de los múltiples pequeños pasos necesarios para abrir un archivo, "envolverlo" con el módulo `csv`, ignorar líneas vacías, y demás minucias.
@@ -323,15 +322,16 @@ Modifiquemos la función `parse_csv` de modo que permita al usuario elegir (opci
 ```
 
 Vimos un ejemplo de un selector de columnas en el [Ejercicio 3.14](../03_Listas_y_Listas/04_Comprension_Listas.md#ejercicio-314-extraer-datos-de-una-arhcivo-csv).
-De todos modos, esta es otra forma de resolverlo:
+De todos modos, ésta es otra forma de resolverlo:
 
 ```python
 # fileparse.py
 import csv
 
-def parse_csv(nombre_archivo, select=None):
+def parse_csv(nombre_archivo, select = None):
     '''
-    Parsea un archivo CSV en una lista de registros
+    Parsea un archivo CSV en una lista de registros.
+    Se puede seleccionar sólo un subconjunto de las columnas, determinando el parámetro select, que debe ser una lista de nombres de las columnas a considerar.
     '''
     with open(nombre_archivo) as f:
         filas = csv.reader(f)
@@ -341,10 +341,10 @@ def parse_csv(nombre_archivo, select=None):
 
         # Si se indicó un selector de columnas,
         #    buscar los índices de las columnas especificadas.
-        # Y achicar el conjunto de encabezados para diccionarios
+        # Y en ese caso achicar el conjunto de encabezados para diccionarios
 
         if select:
-            indices = [encabezados.index(ncolumna) for ncolumna in select]
+            indices = [encabezados.index(nombre_columna) for nombre_columna in select]
             encabezados = select
         else:
             indices = []
@@ -378,10 +378,10 @@ Y que las columnas seleccionadas fueran:
 >>>
 ```
 
-Para hacer la selección correctamente, tenés que conventir los nombres de las columnas listadas en `selec` a índices (posiciones) de columnas en el archivo. Eso es exactamente lo que hace este paso:
+Para hacer la selección correctamente, tenés que conventir los nombres de las columnas listadas en `select` a índices (posiciones) de columnas en el archivo. Esto es exactamente lo que hace este paso:
 
 ```python
->>> indices = [encabezados.index(ncolumna) for ncolumna in select ]
+>>> indices = [encabezados.index(nombre_columna) for nombre_columna in select ]
 >>> indices
 [0, 3]
 >>>
@@ -442,7 +442,9 @@ Modificá la función `parse_csv()` de forma que (opcionalmente) pueda trabajar 
 >>>
 ```
 
-Para hacer este cambio, vas a tener que modificar el código de forma que la primera linea de datos no sea interpretada como encabezado. Además, vas a tener que asegurarte de no crear diccionarios, dado que no tenés más los nombres de las columnas para usar en el encabezado. Todo esto es una opción dentro de la función, que se activa si le pasás el parámetro `has_headers=False`. Vale aclarar que este parámetro tiene como valor por omisión `True`, con lo que la función sigue funcionando igual que antes si no se especifica.
+Para hacer este cambio, vas a tener que modificar el código de forma que, si le pasás el parámetro `has_headers = False`, la primera línea de datos no sea interpretada como encabezado. Además, en ese caso, vas a tener que asegurarte de no crear diccionarios, dado que no tenés más los nombres de las columnas para usar en el encabezado. Vale aclarar que este parámetro debe tener como valor por omisión `True`, con lo que la función sigue funcionando igual que antes si no se especifica `has_headers = False`.
+
+Si bien no es difícil, este es un cambio muy grande en esta función. Un camino posible es poner un `if has_headers` al principio y resolver cada caso por separado. Otro camino es poner condicionales en cada paso donde sea necesario operar de manera diferente.
 
 Incorporá todos estos cambios en el archivo `fileparse.py`.
 

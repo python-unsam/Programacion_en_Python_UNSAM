@@ -1,12 +1,12 @@
 [Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Temas de diseño)](03_306Design_discussion.md)
 
-# 6.2 El módulo *main*
+# 6.2 El módulo *main* (principal)
+ 
+Aquí introduciremos el concepto de un programa principal o un módulo proncipal. 
 
-This section introduces the concept of a main program or main module.
+### Función principal
 
-### Main Functions
-
-In many programming languages, there is a concept of a *main* function or method.
+En muchos lenguajes de programación existe el concepto de método o función *principal*. 
 
 ```c
 // c / c++
@@ -23,77 +23,74 @@ class myprog {
     }
 }
 ```
+Se refiere a la primer función que es ejecutada cuando corremos un programa.
 
-This is the first function that executes when an application is launched.
+### Módulo principal en Python
 
-### Python Main Module
-
-Python has no *main* function or method.  Instead, there is a *main*
-module. The *main module* is the source file that runs first.
+Python no tiene una función o método principal. En su lugar existe un *módulo principal* y éste será el archivo con código fuente que se ejecuta primero.
 
 ```bash
 bash % python3 prog.py
 ...
 ```
 
-Whatever file you give to the interpreter at startup becomes *main*. It doesn't matter the name.
+El archivo que le pases al intérprete al invocarlo será el módulo principal. No importa cómo lo llames.
 
-### `__main__` check
+### Chequear `__main__` 
 
-It is standard practice for modules that run as a main script to use this convention:
+Es una práctica estándard usar la siguiente convención en módulos que son ejecutados como scripts principales: 
 
 ```python
 # prog.py
 ...
 if __name__ == '__main__':
-    # Running as the main program ...
-    statements
+    # Soy el programa principal ...
+    comandos
     ...
 ```
 
-Statements enclosed inside the `if` statement become the *main* program.
+Los comandos dentro del `if` constituyen el *programa principal*
 
-### Main programs vs. biblioteca imports
+### Programa principal vs. módulo importado
 
-Any Python file can either run as main or as a biblioteca import:
+Cualquier archivo.py puede ejecutarse ya sea como el programa principal o como un módulo importado:  
 
 ```bash
-bash % python3 prog.py # Running as main
+bash % python3 prog.py # Corriendo como principal
 ```
 
 ```python
-import prog   # Running as biblioteca import
+import prog   # Corriendo como módulo importado
 ```
 
-In both cases, `__name__` is the name of the module.  However, it will only be set to `__main__` if
-running as main.
+En ambos casos, `__name__` es el nombre del módulo. Sin embargo `__name__` sólo valdrá `__main__` si ese módulo está siendo ejecutado como el script principal. 
 
-Usually, you don't want statements that are part of the main program
-to execute on a biblioteca import.  So, it's common to have an `if-`check
-in code that might be used either way.
+Normalmente deseamos que los comandos que son parte del comportamiento del script en modo *principal* sólo se ejecuten si efectivamente el script es el módulo principal. No queremos que esos comandos se ejecuten si el módulo fué importado.
+
+Por lo tanto es comun escribir una condición `if` que decida cómo se va a portar el código cuando éste puede ser usado de ambas maneras.  
 
 ```python
 if __name__ == '__main__':
-    # Does not execute if loaded with import ...
+    # Esto no se ejecuta en un módulo importado ...
 ```
 
-### Program Template
+### Modelo de programa
 
-Here is a common program template for writing a Python program:
+Este es un modelo común para escribir un programa en Python:
 
 ```python
 # prog.py
-# Import statements (bibliotecas)
+# Comandos Import (bibliotecas)
 import modules
 
-# Functions
+# Funciones
 def spam():
     ...
 
 def blah():
     ...
 
-# Main function
+# Función principal
 def main():
     ...
 
@@ -101,47 +98,45 @@ if __name__ == '__main__':
     main()
 ```
 
-### Command Line Tools
+### Herramientas para la consola 
 
-Python is often used for command-line tools
+Python es muy usado para ejecutar herramientas desde la línea de comandos, como hemos visto en clase:
+
+```bash
+bash % python3 informe.py camion.csv precios.csv
+```
+Lo cual significa que los scripts pueden ser  ejecutados desde la terminal para casos como automatización de procesos, ejecutar tareas en "el fondo", etc.
+
+### Argumentos en la línea de comandos
+
+La línea de comandos es una lista de cadenas de texto.
 
 ```bash
 bash % python3 informe.py camion.csv precios.csv
 ```
 
-It means that the scripts are executed from the shell /
-terminal. Common use cases are for automation, background tasks, etc.
-
-### Command Line Args
-
-The command line is a list of text strings.
-
-```bash
-bash % python3 informe.py camion.csv precios.csv
-```
-
-This list of text strings is found in `sys.argv`.
+Podemos acceder a esta lista de cadenas a través de `sys.argv`.
 
 ```python
-# In the previous bash command
+# Llamado como recién, sys.argv contiene
 sys.argv # ['informe.py, 'camion.csv', 'precios.csv']
 ```
 
-Here is a simple example of processing the arguments:
+Este es un ejemplo simple para procesar los argumentos recibidos al invocar un scrpit desde la terminal:
 
 ```python
 import sys
 
 if len(sys.argv) != 3:
     raise SystemExit(f'Usage: {sys.argv[0]} ' 'portfile preciofile')
-portfile = sys.argv[1]
-preciofile = sys.argv[2]
+camion = sys.argv[1]
+precios = sys.argv[2]
 ...
 ```
 
 ### Standard I/O
 
-Standard Input / Output (or stdio) are files that work the same as normal files.
+Los archivos de entrada y salida estándard (Standard Input / Output (stdio)) son archivos que se portan como archivos normales, pero están definidos por el sistema operativo.
 
 ```python
 sys.stdout
@@ -149,20 +144,21 @@ sys.stderr
 sys.stdin
 ```
 
-By default, print is directed to `sys.stdout`.  Input is read from
-`sys.stdin`.  Tracebacks and errors are directed to `sys.stderr`.
+Por omisión, la salida impresa es dirigida a `sys.stdout`, la entrada se lee de `sys.stdin`, y la recapitulación de errores es dirigida a `sys.stderr`.
 
-Be aware that *stdio* could be connected to terminals, files, pipes, etc.
+Recordá que *stdio* puede estar "atado" a terminales, archivos, adaptadores (pipes / tuberías), etc.
 
 ```bash
-bash % python3 prog.py > results.txt
-# or
+bash % python3 prog.py > resultados.txt
+# ó sino
 bash % cmd1 | python3 prog.py | cmd2
 ```
 
-### Environment Variables
+(Esta syntaxis se llama "piping" o redireccionamiento y significa: ejecutar cmd1, enviar su salida como entrada a prog.py invocado desde la terminal, y la salida de éste será la entrada para cmd2)
 
-Environment variables are set in the shell.
+### Variables de entorno
+
+Las variables de entorno se definen en la consola, desde el sistema operativo.
 
 ```bash
 bash % setenv NAME dave
@@ -170,7 +166,15 @@ bash % setenv RSH ssh
 bash % python3 prog.py
 ```
 
-`os.environ` is a dictionary that contains these values.
+ó bajo DOS y derivados (windows) ...
+
+```bash
+c:\> set NAME=dave
+c:\> set RSH=ssh
+c:\> python3 prog.py
+```
+
+`os.environ` es un diccionario que contiene ésos valores.
 
 ```python
 import os
@@ -178,31 +182,34 @@ import os
 name = os.environ['NAME'] # 'dave'
 ```
 
-Changes are reflected in any subprocesses later launched by the program.
+Y estos cambios serán transmitidos a cualquier subproceso que sea lanzado por nuestro programa.
 
-### Program Exit
+### Terminación del programa
 
-Program exit is handled through exceptions.
+La terminación y salida del programa se administran a traves de excepciones.
 
 ```python
 raise SystemExit
-raise SystemExit(exitcode)
-raise SystemExit('Informative message')
+raise SystemExit(codigo_salida)
+raise SystemExit('Mensaje informativo')
 ```
 
-An alternative.
+O sino.
 
 ```python
 import sys
-sys.exit(exitcode)
+sys.exit(codigo_salida)
 ```
 
-A non-zero exit code indicates an error.
+Es estándard que un codigo de salida de `0` indica que no hubo problemas y otro valor, que los hubo. 
 
-### The `#!` line
+### El comando `#!` 
 
+Bajo Unix (Linux es un Unix) una línea que comienza con `#!` ejecutará un script en el intérprete Python.
+
+[oski]:# (RAFA no probás esto ? Lanza prog.py dentro de python3 ? Sale de python3 al terminar ?
 On Unix, the `#!` line can launch a script as Python.
-Add the following to the first line of your script file.
+Add the following to the first line of your script file.)
 
 ```python
 #!/usr/bin/env python3
@@ -210,39 +217,40 @@ Add the following to the first line of your script file.
 ...
 ```
 
-It requires the executable permission.
+Para ello el archivo prog.py requiere permiso de ejecución asignado. Puede permitirse así: 
 
 ```bash
 bash % chmod +x prog.py
-# Then you can execute
+# Ahora lo podés ejecutar
 bash % prog.py
-... output ...
+... salida ...
 ```
 
-*Observación: The Python Launcher on Windows also looks for the `#!` line to indicate language version.*
+*Observación: Al iniciar un script Python en Windows, se lee la línea que comienza con `#!` dentro del script para saber qué versión del intérprete invocar.*
 
-### Script Template
+### Modelo de script
 
-Finally, here is a common code template for Python programs that run
-as command-line scripts:
+Para terminar, este es un modelo de un programa en Python que se ejecuta como si fuera un script invocado desde la terminal.
+
+Finally, here is a common code template for Python programs that run as command-line scripts:
 
 ```python
 #!/usr/bin/env python3
 # prog.py
 
-# Import statements (bibliotecas)
+# Import (bibliotecas)
 import modules
 
-# Functions
+# Funciones
 def spam():
     ...
 
 def blah():
     ...
 
-# Main function
+# Funcion principal
 def main(argv):
-    # Parse command line args, environment, etc.
+    # Analizar la línea de comandos, etc.
     ...
 
 if __name__ == '__main__':
@@ -253,27 +261,26 @@ if __name__ == '__main__':
 ## Ejercicios
 
 ### Ejercicio 6.4: `main()` functions
-In the file `informe.py` add a `main()` function that accepts a list of
-command line options and produces the same output as before.  You
-should be able to run it interatively like this:
+En tu programa `informe.py` agregá una función `main()` que acepte una lista de opciones en la línea de comandos y produzca la misma salida que antes. Deberías ahora ser capas de ejecutarlo del siguiente modo:
 
 ```python
 >>> import informe
 >>> informe.main(['informe.py', 'Data/camion.csv', 'Data/precios.csv'])
-      Name     Cajons      Price     Change
+      Name    Cajones     Precio     Cambio
 ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
+   Durazno         95      13.48     -26.89
+ Mandarina         50      20.89     -44.21
+   Naranja        100     106.28      35.84
 >>>
 ```
 
-Modify the `costo_camion.py` file so that it has a similar `main()` function:
+Modificá el archivo `costo_camion.py` para que incluya una función similar `main()` que te permita hacer esto:
 
+[oski]:# (Ojo los nombres de las funciones traducidas y los totales)
 ```python
 >>> import pcost
 >>> pcost.main(['costo_camion.py', 'Data/camion.csv'])
@@ -287,15 +294,15 @@ execute as a script on the command line:
 
 ```bash
 bash $ python3 informe.py Data/camion.csv Data/precios.csv
-      Name     Cajons      Price     Change
+      Name    Cajones     Precio     Change
 ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
+   Durazno         95      13.48     -26.89
+ Mandarina         50      20.89     -44.21
+   Naranja        100     106.28      35.84
 
 bash $ python3 costo_camion.py Data/camion.csv
 Total cost: 47671.15
