@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Gráficos del azar***)](08_regresion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Cierre*)](08_Cierre.md)
 
 # 6.7 Gráficos del azar***
 
@@ -12,5 +12,5 @@
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Gráficos del azar***)](08_regresion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Cierre*)](08_Cierre.md)
 

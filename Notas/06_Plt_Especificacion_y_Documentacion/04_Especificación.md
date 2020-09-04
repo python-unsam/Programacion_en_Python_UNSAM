@@ -2,8 +2,8 @@
 
 # 6.4 Especificación, Documentación y contratos+
 
-En esta unidad se le dará cierta formalización a algunos temas que habían sido
-presentados informalmente, como por ejemplo la documentación de las funciones.
+En esta unidad se le una mayor formalización a algunos temas presentados
+anteriormente, como por ejemplo la documentación de las funciones.
 
 Se formalizarán las condiciones que debe cumplir un algoritmo al comenzar, en
 su transcurso, y al terminar, y algunas técnicas para tener en cuenta estas
@@ -36,13 +36,13 @@ código, y *por qué* se decidió implementarlo de esa manera. Los comentarios
 están dirigidos a quien esté leyendo el código fuente.
 
 Podemos ver la diferencia entre la documentación y los comentarios en la
-función `elegir_codigo` de nuestra implementacion del juego Mastermind:
+función `elegir_codigo` de nuestra implementación del juego Mastermind:
 
 ```python
 def elegir_codigo():
     '''Devuelve un codigo de 4 digitos elegido al azar'''
     digitos = ('0','1','2','3','4','5','6','7','8','9')
-    codigo = "
+    codigo = ""
     for i in range(4):
         candidato = random.choice(digitos)
         # Debemos asegurarnos de no repetir digitos
@@ -54,19 +54,21 @@ def elegir_codigo():
 
 ### ¿Por qué documentamos?
 
-Seamos sinceros: nadie quiere escribir documentación. ¿Para qué repetir con
+Muchas veces se plantea el siguiente interrogante: ¿Para qué repetir con
 palabras lo que ya está estipulado en el código? La documentación es algo que
-muy a menudo se deja *para después*, y cuando llega el tan angustioso
-momento de escribirla, lo que se termina haciendo es escribir lo más
-escueto posible que pueda pasar como "documentación".
+muy a menudo se deja *para después* por resultar tedioso y quizás aburrido en
+hoy. Pero en ese *después*, está el yo del futuro, u otre del futuro que
+quiere volver a usar el código y que agradecerá esas líneas que le evitaran
+varios dolores de cabeza.
 
-Incluso es muy frecuente que durante el desarrollo de un proyecto el código
-evolucione con el tiempo, pero que nos olvidemos de actualizar la documentación
-para reflejar los cambios. En este caso no solamente tenemos documentación de
-mala calidad, ¡sino que además es incorrecta`
+Es muy frecuente que durante el desarrollo de un proyecto el código evolucione
+con el tiempo. Si nos olvidemos de actualizar la documentación para reflejar
+los cambios, entonces tendremos documentación de mala calidad, ya que posible
+que este incompleta e incluso incorrecta.
 
 Pese a todo esto, la realidad sigue siendo que una buena documentación es
-componente esencial de cualquier proyecto exitoso. Esto en parte se debe a que
+componente esencial de cualquier proyecto exitoso (NumPy, matplotlib, etc. tienen
+buena documentación). Esto en parte se debe a que
 el código fuente transmite en detalle las operaciones individuales que componen
 un algoritmo o programa, pero no suele transmitir en forma transparente cosas
 como la *intención* del programa, el *diseño* de alto nivel, las
@@ -309,7 +311,7 @@ adelante.
 
 El invariante de ciclo permite conocer cómo llegar desde las precondiciones
 hasta las postcondiciones, cuando la implementación se compone de un ciclo.
-El invariante de ciclo es, entonces, una aseveración que debe ser verdadera al comienzo de cada cliclo de la iteración.
+El invariante de ciclo es, entonces, una aseveración que debe ser verdadera al comienzo de cada ciclo de la iteración.
 
 Por ejemplo, si el problema es ir desde el punto A al punto B, las
 precondiciones dicen que estamos parados en A y las postcondiciones que
@@ -371,7 +373,7 @@ def suma(lista):
     return suma
 ```
 
-En resúmen, el concepto de invariante de ciclo es una herramienta abstracta que nos permiten comprender (explicitar) mejor cómo funciona un algoritmo. Resulta fundamental en la teoría de algoritmos, donde es necesario para *demostrar matemáticamente* que un algoritmo realiza la tarea descripta por la pre- y postcondición. 
+En resumen, el concepto de invariante de ciclo es una herramienta abstracta que nos permiten comprender (explicitar) mejor cómo funciona un algoritmo. Resulta fundamental en la teoría de algoritmos, donde es necesario para *demostrar matemáticamente* que un algoritmo realiza la tarea descripta por la pre- y postcondición.
 
 ### Parámetros mutables e inmutables
 
