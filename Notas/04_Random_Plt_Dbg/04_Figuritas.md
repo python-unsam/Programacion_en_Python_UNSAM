@@ -111,8 +111,37 @@ Implementá una función `cuantos_paquetes(figus_total, figus_paquete)` que dado
 ### Ejercicio 4.23: 
 Calculá `n_repeticiones = 100` veces la función `cuantos_paquetes`, utilizando `figus_total = 670`, `figus_paquete = 5`. Guarda los resultados obtenidos en una lista y calculá su promedio. Si te da la compu, hacelo con 1000 repeticiones.
 
+### Gráficar el llenado del álbum
+
+El siguiente código usa las funciones que hiciste antes para graficar la curva de llenado de un álbum a medida que comprás paquetes de figuritas. Es un primer ejemplo de gráfico de líneas. En las próximas clases estudiaremos los detalles sobre gráficos de una manera sistemática. Por ahora solo un botón de muestra.
+
+```python
+def calcular_historia_figus_pegadas(figus_total, figus_paquete):
+    album = crear_album(figus_total)
+    historia_figus_pegadas = [0]
+    while album_incompleto(album):
+        paquete = comprar_paquete(figus_total, figus_paquete)
+        while paquete:
+            album[paquete.pop()] = 1
+        figus_pegadas = (album>0).sum()
+        historia_figus_pegadas.append(figus_pegadas)        
+    return historia_figus_pegadas
+
+figus_total = 670
+figus_paquete = 5
+
+plt.plot(calcular_historia_figus_pegadas(figus_total, figus_paquete))
+plt.xlabel("Cantidad de paquetes comprados.")
+plt.ylabel("Cantidad de figuritas pegadas.")
+plt.title("La curva de llenado se desacelera al final")
+plt.show()
+
+```
+
+
 ## Ejercicios un toque más estadísticos:
 
+Los siguientes ejercicios suponen algunos conceptos un poco más avanzados de estadística. Son optativos pero interesantes.
 
 ### Ejercicio 4.24: 
 Utilizando lo implementado en el ítem anterior, **estimá** la probabilidad de completar el álbum con 850 paquetes o menos.
@@ -137,6 +166,7 @@ Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambi
 Por último, suponé que cinco amigues se juntan y deciden compartir la compra de figuritas y el llenado de sus cinco álbumes solidariamente. Calculá cuántos paquetes deberían comprar si deben completar todos. Hacé 100 repeticiones y compará el resultado con la compra individual que calculaste antes.
 
 Acordate de guardar todo lo que hiciste sobre figuritas en un archivo `figuritas.py`.
+
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
