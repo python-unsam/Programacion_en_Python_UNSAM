@@ -43,7 +43,7 @@ El nombre del módulo es el nombre del archivo que lo contiene.
 
 ### Definiciones globales
 
-El espacio de nombres contiene todo aquéllo definido con visibilidad *global*.
+El espacio de nombres contiene todo aquello definido con visibilidad *global*.
 Supongamos dos módulos diferentes que definen cada uno una variable `x`:
 
 
@@ -66,7 +66,7 @@ Entonces hay dos definiciones de `x` y cada una refiere a una variable diferente
 **Los módulos están aislados uno de otro.**
 
 ### Módulos como entornos
-Los módulos crean un entorno que contiene a todo el código allí definido.
+Los módulos crean un entorno que contiene a todo el código definido ahí.
 
 ```python
 # foo.py
@@ -76,14 +76,14 @@ def grok(a):
     print(x)
 ```
 
-Aún las variables *globales* son visibles sólo dentro del módulo en que fueron definidas (el mismo archivo).
+Incluso las variables *globales* son visibles sólo dentro del módulo en que fueron definidas (el mismo archivo).
 Cada módulo es un pequeño universo.
 
 ### Ejecución de módulos
 
 Cuando importás un módulo se ejecutan *todas* las instrucciones en ese módulo, una tras otra, hasta llegar al final del archivo. 
 El *namespace* del módulo está poblado por todas las funciones y variables globales cuya definición siga vigente al terminar de ejecutar el módulo. 
-Si existen comandos que se ejecutan en el *namespace*  global del módulo y hacen tareas como crear archivos, imprimir mensajes, etc., se van a ejecutar al importar el módulo.
+Si existen comandos que se ejecutan en el *namespace* global del módulo y hacen tareas como crear archivos, imprimir mensajes, etc., se van a ejecutar al importar el módulo.
 
 ### El comando `import as` 
 
@@ -112,7 +112,7 @@ def rectangular(r, theta):
     return x, y
 ```
 
-Esta forma de importar te permite usar partes de un módulo sin necesidad de especificar la pertenencia a un módulo como prefijo. Es útil para nombres (funciones ó variables) que se usan mucho.
+Esta forma de importar te permite usar partes de un módulo sin necesidad de especificar la pertenencia a un módulo como prefijo. Es útil para nombres (funciones o variables) que se usan mucho.
 
 Si usás `from math import *` vas a importar *todas* las funciones y constantes del módulo `math` como si estuvieran definidas localmente. No es coveniente hacer esto ya que se pierden las ventajas que da trabajar con namespaces.
 
@@ -130,7 +130,7 @@ from math import cos, sin
 ```
 Más específicamente, `import` siempre ejecuta el módulo completo, y los módulos siguen siendo pequeños entornos aislados.
 El comando `import módulo as` sólo cambia el nombre local del módulo.
-El comando `from math import cos, sin`, aunque sólo hace accesibles las funciones `sin` y `cos` de todos modos carga todo el módulo y lo ejecuta. La única diferencia es que copia los nombres de las funciones `sin` y `cos` al namespace local.
+El comando `from math import cos, sin`, aunque sólo hace accesibles las funciones `sin` y `cos`, de todos modos carga todo el módulo y lo ejecuta. La única diferencia es que copia los nombres de las funciones `sin` y `cos` al namespace local.
 
 
 ### Carga de módulos
@@ -157,7 +157,7 @@ Dado que existe la lista de módulos cargados `sys.modules`, un pedido de cargar
 Para estos ejercicios que involucran módulos, es de suma importancia que te asegures de que estás ejecutando Python en el directorio adecuado.
 
 ### Ejercicio 5.7: Importar módulos
-En el [Ejercicio 5.3](../05_Organización_y_Complejidad/02_Funciones.md#ejercicio-53-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver como usar esa función en otros programas. 
+En el [Ejercicio 5.3](../05_Organización_y_Complejidad/02_Funciones.md#ejercicio-53-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver cómo usar esa función en otros programas. 
 
 Empezá por asegurarte que el directorio de trabajo es `ejercicios_python/` y que en el mismo tengas tus ejercicios anteriores (como `hipoteca.py` y el archivo `fileparse.py` con la función `parse_csv()` que armaste antes). Los vamos a importar.
 
@@ -217,18 +217,18 @@ Importá sólo la función para evitar escribir el nombre del módulo:
 
 ### Ejercicio 5.8: Usemos tu módulo
 En el [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones)
-escribiste un programa `informe_funciones.py` que produce un informe como este:
+escribiste un programa `informe_funciones.py` que produce un informe como éste:
 
 ```
-    Nombre     Cajones      Precio     Cambio
-   ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-     Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-   Mandarina        200      20.89     -30.34
-     Durazno         95      13.48     -26.89
-   Mandarina         50      20.89     -44.21
-     Naranja        100     106.28      35.84
+    Nombre    Cajones     Precio     Cambio
+---------- ---------- ---------- ----------
+      Lima        100     $32.20       8.02
+   Naranja         50     $91.10      15.18
+     Caqui        150    $103.44       2.02
+ Mandarina        200     $51.23      29.66
+   Durazno         95     $40.37      33.11
+ Mandarina         50     $65.10      15.79
+   Naranja        100     $70.44      35.84
 ```
 
 Retomá ese programa (si lo perdiste, te dejamos una versión para que la leas y la puedas usar) y modificalo de modo que todo el procesamiento de archivos de entrada de datos se haga usando funciones del módulo `fileparse`. Para lograr éso, importá `fileparse` como un módulo y cambiá las funciones `leer_camion()` y `leer_precios()` para que usen la función `parse_csv()` .

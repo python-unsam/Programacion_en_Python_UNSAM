@@ -72,7 +72,8 @@ buena documentación). Esto en parte se debe a que
 el código fuente transmite en detalle las operaciones individuales que componen
 un algoritmo o programa, pero no suele transmitir en forma transparente cosas
 como la *intención* del programa, el *diseño* de alto nivel, las
-*razones* por las que se decidió utilizar un algoritmo u otro, etc.
+*razones* por las que se decidió utilizar un algoritmo u otro, etc. También se
+pueden incluir ejemplos [clarificar su uso](https://numpy.org/doc/stable/reference/generated/numpy.resize.html)
 
 ### Código autodocumentado
 
@@ -80,7 +81,7 @@ En teoría, si nuestro código pudiera transmitir en forma eficiente todos esos
 conceptos, la documentación sería menos necesaria. De hecho, existe una técnica de
 programación llamada *código autodocumentado*, en la que la idea principal
 es elegir los nombres de funciones y variables de forma tal que la
-documentación sea innecesaria.
+documentación sea menos indispensable.
 
 Tomemos como ejemplo el siguiente código:
 
@@ -110,13 +111,13 @@ tiempo_segundos = 5
 desplazamiento_metros = 0.5 * aceleracion_gravitacional * tiempo_segundos ** 2
 ```
 
-De esta manera logramos que no sea necesario ningún comentario ni documentación
-adicional, ya que la intención del código es mucho más descriptiva.
+De esta manera logramos que la intención del código esté más clara, y que
+se reduzca la necesidad de comentarios y documentación para comprenderlo.
 
 La técnica de código autodocumentado presenta varias limitaciones. Entre ellas:
 
 
-- Elegir buenos nombres es una tarea difícil, que requiere tener en cuenta cosas como: qué tan descriptivo es el nombre (cuanto más, mejor), la longitud del identificador (cuanto más corto mejor), el alcance del identificador (cuánto más grande, más descriptivo debe ser el nombre), y convenciones (`i` para índices, `c` para caracteres, etc).
+- Elegir buenos nombres es una tarea difícil, que requiere tener en cuenta cosas como: qué tan descriptivo es el nombre (cuanto más, mejor), la longitud del identificador (no debe ser excesivamente largo), el alcance del identificador (cuánto más grande, más descriptivo debe ser el nombre), y convenciones (`i` para índices, `c` para caracteres, etc).
 - La documentación de todas formas termina siendo necesaria, ya que por muy bien que elijamos los nombres, muchas veces la única forma de explicar la intención del código y todos sus detalles es en lenguaje coloquial.
 - En ciertos contextos sigue siendo deseable, o imprescindible, que quien quiera utilizar nuestra función o módulo pueda entender su funcionamiento sin necesidad de leer el código fuente.
 
@@ -149,17 +150,17 @@ def buscar_elemento(lista_de_numeros, numero):
 
 Algunas cosas que podemos mejorar:
 
-- En la firma de la función los nombres `buscar_elemento`, `lista_de_numeros` y `numero` se pueden simplificar a `buscar`, `secuencia` y `elemento`. Cambiamos `lista_de_numeros` por `secuencia`, ya que la función puede recibir secuencias de cualquier tipo, con elementos de cualquier tipo, y no hay ninguna razón para limitar a que sea una lista de números.
+- En la firma de la función los nombres `buscar_elemento`, `lista_de_numeros` y `numero` se pueden simplificar a `indice`, `secuencia` y `elemento`. Cambiamos `lista_de_numeros` por `lista`, ya que la función puede recibir secuencias de cualquier tipo, con elementos de cualquier tipo, y no hay ninguna razón para limitar a que sea una lista de números.
 - Las variable interna `indice` también se puede simplificar: por convención podemos usar `i`.
-- "Esta función" es redundante: cuando alguien lea la documentación ya va    a saber que se trata de una función.
+- "Esta función" es redundante: cuando alguien lea la documentación ya va a saber que se trata de una función.
 - "contando desde 0" es redundante: en Python siempre contamos desde 0.
 - Los comentarios son excesivos: la función es suficientemente simple y cualquier persona que sepa programación básica podrá entender el algoritmo.
-- Podemos usar `enumerate`!
+
 
 Corrigiendo todos estos detalles resulta:
 
 ```python
-def buscar(lista, elemento):
+def indice(lista, elemento):
     '''Devuelve el índice en el que se encuentra el `elemento` en la `lista`,
        o -1 si no está.
     '''
@@ -173,46 +174,55 @@ def buscar(lista, elemento):
 
 Cuando hablamos de **contratos** o *programación por
 contratos*, nos referimos a la necesidad de estipular tanto lo que necesita
-como lo que devuelve nuestro código. El contrato de una función suele ser
-incluido en su documentación.
+como lo que devuelve nuestro código. En el se establece el compromiso de una
+función, en la cual si se cumplen los requisitos estipulados, se asegura cierto
+resultado. Es bueno que el contrato de una función esté incluido en su documentación.
 
 Algunos ejemplos de cosas que deben ser estipuladas como parte del contrato
-son: cómo deben ser los parámetros recibidos, cómo va a ser lo que se devuelve,
+son: cómo deben ser los parámetros recibidos, qué va a ser lo que se devuelve,
 y si la función provoca algún efecto secundario (como por ejemplo modificar
-alguno de los parámetros recibidos o imprimir algo en la consola).
+alguno de los parámetros recibidos).
 
-Algunas de estas condiciones deben estar dadas antes de ejecutar el código o
-función; a estas condiciones las llamamos *precondiciones*. Si se cumplen
-las precondiciones, habrá un conjunto de condiciones sobre el estado en que
-quedan las variables y el o los valores de retorno una vez finalizada la
-ejecución, que llamamos *postcondiciones*.
+Las condiciones que se deben cumplir al momento de ejecutar el código o
+función se llaman *precondiciones*. Si se cumplen la precondición,
+el código ejecutará transformando las variables de manera que al finalizar
+su ejecución, el estado final de las variables y de valor de retorno, estarán
+caracterizados en una *poscondición*.
 
 ### Precondiciones
 
-Las precondiciones de una función son las condiciones que deben cumplirse antes
-de ejecutarla, para que se comporte correctamente: cómo deben ser los
-parámetros que recibe, cómo debe ser el estado global, etc.
+La precondición de una función debe cumplirse antes de ejecutarla para que se
+comporte correctamente: cómo deben ser los parámetros que recibe, cómo debe
+ser el estado global, etc. Si no se cumplen, no hay garantías del funcionamiento
+del código (podría colgarse, o dar error, o peor aun dar resultados erroneos).
 
-Por ejemplo, en una función que divide dos números, las precondiciones son que los parámetros
-son números, y que el divisor es distinto de 0.
+Por ejemplo, en una función que realiza la división entre dos números,
+las precondición debe decir que son que ambos parámetros deben ser números,
+y que el divisor debe ser distinto de 0.
 
-Si estipulamos las precondiciones como parte de la documentación, en el cuerpo
+Si incluimos la precondición como parte de la documentación, en el cuerpo
 de la función podremos asumir que son ciertas, y no será necesario escribir
 código para lidiar con los casos en los que no se cumplen.
 
-### Postcondiciones
+### Poscondiciones
 
-Las postcodiciones son las condiciones que se cumplirán una vez finalizada la
-ejecución de la función (asumiendo que se cumplen las precondiciones): cómo
-será el valor de retorno, si los parámetros recibidos o variables globales son
-alteradas, si se imprimen cosas, si se modifican archivos, etc.
+La poscondición caracterizará cómo será el valor de retorno y cómo se
+modificarán las variables de entrada (en caso de que corresponda) al finalizar
+la ejecución siempre asumiendo que se cumplió la precondición al inicio.
 
-En el ejemplo anterior, la función división, dadas las precondiciones
-puede asegurar que devolverá un número correspondiente al cociente solicitado.
+En el ejemplo anterior, la función división, dada la precondición, nos permite
+asegurar que la función devolverá un número y este será el cociente solicitado.
+
+### El qué, no el cómo
+
+Notar que al especificar un problema con pre y poscondición estamos
+definiendo qué es lo que debe suceder. En ningún momento decimos cómo es que esto
+sucede. Para una misma especificación podemos definir varias funciones que cumplan
+el contrato, y cada una puede resolverlo a su manera.
 
 ### Aseveraciones
 
-Retomamos aquí el concepto de aseveración que introdujimos en la [Sección 4.1](../04_Random_Plt_Dbg/01_Debugger.md#aseveraciones-assert). Tanto las precondiciones como las postcondiciones pueden pensarse como *aseveraciones* (en inglés *assertions*). Es decir, afirmaciones realizadas en un momento particular de la ejecución sobre el estado computacional. Si una tal aseveración llegara a ser falsa, se levanta un excepción que deberá ser (o no) administrada adecuadamente.
+Retomamos aquí el concepto de aseveración que introdujimos en la [Sección 4.1](../04_Random_Plt_Dbg/01_Debugger.md#aseveraciones-assert). Tanto las precondiciones como las poscondiciones pueden pensarse como *aseveraciones* (en inglés *assertions*). Es decir, afirmaciones realizadas en un momento particular de la ejecución sobre el estado computacional. Si una aseveración llegara a ser falsa, se levanta un excepción interrumpiendo la normal ejecución del programa.
 
 En algunos casos puede ser útil incorporar estas afirmaciones desde el código, y para ello podemos utilizar la instrucción `assert`. Esta instrucción
 recibe una condición a verificar (o sea, una expresión booleana).
@@ -238,7 +248,7 @@ un mensaje de error que mostrará en caso que la condición no se cumpla.
 AssertionError: El divisor no puede ser 0^)
 ```
 
-**Atencion:**
+**Atención:**
 Es importante tener en cuenta que `assert` está pensado para ser
 usado en la etapa de desarrollo. Un programa terminado nunca debería dejar
 de funcionar por este tipo de errores.
@@ -253,54 +263,64 @@ def division(dividendo, divisor):
     '''Cálculo de la división
 
     Pre: Recibe dos números, divisor debe ser distinto de 0.
-    Post: Devuelve un número real, con el cociente de ambos.
+    Pos: Devuelve un número real, con el cociente de ambos.
     '''
     assert divisor != 0, 'El divisor no puede ser 0'
     return dividendo / divisor
 ```
 
-Otro ejemplo, tal vez más interesante, puede ser una función que implemente
-una sumatoria *sum_i=inicial^final f(i)*.  En este caso hay que
-analizar cuáles van a ser los parámetros que recibirá la función, y las
-precondiciones que estos parámetros deberán cumplir.
+Otro ejemplo, tal vez más interesante: una función que implemente
+una sumatoria *sum_i=desde^hasta i*.
+![\sum_{i=desde}^{hasta} i
+](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Csum_%7Bi%3Ddesde%7D%5E%7Bhasta%7D+i%0A)
 
-La función `sumatoria` a escribir necesita de un valor inicial, un valor
-final, y una función a la cual llamar en cada paso. Es decir que recibe
-tres parámetros.
+ En este caso,
+analizando los parámetros que recibirá la función, podemos definir la
+precondición para indicar lo que estos deberán cumplir.
+
+La función `sumar_enteros` tomará un valor `desde`, un valor `hasta`.
+Es decir que recibe dos parámetros.
 
 ```python
-def sumatoria(inicial, final, f):
+def sumar_enteros(desde, hasta):
 ```
 
-Tanto `inicial` como `final` deben ser números enteros,
-y dependiendo de la implementación a realizar o de la especificación
-previa, puede ser necesario que `final` deba ser mayor o igual a
-`inicial`.
+Tanto `desde` como `hasta` deben ser números enteros,
+y dependiendo de la implementación a realizar o de los requisitos
+con los que nos enfrentamos al escribir la precondición puede ser
+necesario exigir que `hasta` sea mayor o igual a
+`desde`.
 
-Con respecto a `f`, se trata de una función que será llamada con
-un parámetro en cada paso y se requiere poder sumar el resultado, por lo
-que debe ser una función que reciba un número y devuelva un número.
-
-La declaración de la función queda, entonces, de la siguiente manera.
+La declaración de la función, incluyendo documentación, precondición
+y poscondición queda de la siguiente manera.
 
 ```python
-def sumatoria(inicial, final, f):
-    '''Calcula la sumatoria desde i=inicial hasta final de f(i)
+def sumar_enteros(desde, hasta):
+    '''Calcula la sumatoria de los números entre desde y hasta.
+       Si hasta < desde, entonces devuelve cero
 
-    Pre: inicial y final son números enteros, f es una función que
-         recibe un entero y devuelve un número.
-    Post: Se devuelve el valor de la sumatoria de aplicar f a cada
-          número comprendido entre inicial y final.
+    Pre: desde y hasta son números enteros
+    Pos: Se devuelve el valor de sumar todos los números del intervalo
+        [desde, hasta]. Si el intervalo es vacío se devuelve 0
     '''
 ```
 
-### Ejercicio 6.8: 
-Realizar la implementación correspondiente a la función `sumatoria`.
+Prestá atención a que tanto la pre como la pos no dicen cómo hace la función
+para resolver el problema, sino que caracterizan el resultado. La implementación
+(o código) serán el cómo. En este caso puede ser con un ciclo que emule los pasos
+de dichas sumas, podría utilizarse una fórmula cerrada que calcule el valor sin
+utilizar un ciclo, entre otras opciones. Lo importante es ver que a fines de la
+especificación, eso no importa.
 
-En definitiva, la estipulación de pre y postcondiciones dentro de la
-documentación de las funciones es una forma de especificar claramente el
-comportamiento del código.  Las pre y postcondiciones son, en efecto, un
-*contrato* entre el código invocante y el invocado.
+En definitiva, la estipulación de pre y poscondiciones dentro de la
+documentación de las funciones es una forma de definir claramente el
+comportamiento del código.  Son en efecto un
+*contrato* entre el código invocante (o usuarie) y el invocado (o función).
+
+
+### Ejercicio 6.8: 
+Realizar la implementación correspondiente a la función `sumar_enteros`.
+
 
 ##  Invariantes de ciclo
 
@@ -309,19 +329,23 @@ de un contexto o porción de código.  Hay invariantes de ciclo, que son los
 que veremos a continuación, e invariantes de estado, que se verán más
 adelante.
 
-El invariante de ciclo permite conocer cómo llegar desde las precondiciones
-hasta las postcondiciones, cuando la implementación se compone de un ciclo.
-El invariante de ciclo es, entonces, una aseveración que debe ser verdadera al comienzo de cada ciclo de la iteración.
+El invariante de ciclo es, una aseveración que debe ser verdadera al
+comienzo de cada iteración del ciclo y al salir del mismo.
 
 Por ejemplo, si el problema es ir desde el punto A al punto B, las
-precondiciones dicen que estamos parados en A y las postcondiciones que
-estamos parados en B, un invariante podría ser "estamos en algún punto entre
-A y B, en el punto más cercano a B que estuvimos hasta ahora.
+precondición dice que tenemos que estar parados en A y la poscondición que
+al terminar estaremos parados en B. Son invariantes:  "estamos en algún punto entre
+A y B", "estamos en el punto más cercano a B que estuvimos hasta ahora", etc.
+Son todas aseveraciones que podría tener nuestro código (y dependen
+exclusivamente de como lo programamos).
 
-Más específicamente, si analizamos el ciclo para buscar el máximo en una lista
-desordenada, la precondición es que la lista contiene elementos que son
-comparables y la postcondición es que se devuelve el elemento máximo de la
-lista.
+Pensar en términos de invariantes de ciclo nos ayuda a reflexionar y comprender mejor
+que es lo que debe realizar nuestro código y nos ayuda a desarrollarlo.
+
+Por ejemplo, para la función `maximo`, que busca el valor más grande de una
+lista desordenada, podemos enunciar:
+- precondición: la lista contiene elementos que tienen una relación de orden (son comparables con <)
+- poscondición: se devolverá el elemento máximo de la lista si tiene elementos, sino se retornará None.
 
 ```python
 def maximo(lista):
@@ -336,7 +360,7 @@ def maximo(lista):
 ```
 
 En este caso, el invariante del ciclo es que `max_elem` contiene el
-valor máximo de la porción de lista analizada.
+valor máximo de la porción de lista que ya fue analizada.
 
 Los invariantes son de gran importancia al momento de demostrar formalmente que un algoritmo funciona, pero aún cuando no hagamos una demostración formal resulta útil tener los invariantes a la vista, ya que de esta forma es más fácil entender cómo funciona un algoritmo y encontrar posibles errores.
 
@@ -346,23 +370,24 @@ ejemplo, consideremos el algoritmo para obtener la potencia `n` de
 un número.
 
 ```python
-def potencia(b, n):
-    'Devuelve la potencia n del número b, con n entero mayor que 0.'
-    p = 1
-    for i in range(n):
-        p *= b
-    return p
+def potencia(base, exp):
+    'Calcula la potencia exp del número base, con exp entero mayor que 0.'
+    resultado = 1
+    for i in range(exp):
+        resultado *= b
+    return resultado
 ```
 
-En este caso, el invariante del ciclo es que la variable `p`
+En este caso, el invariante del ciclo es que la variable `resultado`
 contiene el valor de la potencia correspondiente a esa iteración. Teniendo en
-cuenta esta condición, es fácil ver que `p` debe comenzar el ciclo
+cuenta esta condición, es fácil ver que `resultado` debe comenzar el ciclo
 con un valor de 1, ya que ese es el valor correspondiente a $p^0$.
 
 De la misma manera, si la operación que se quiere realizar es sumar todos los
 elementos de una lista, el invariante será que una variable `suma`
-contenga la suma de todos los elementos ya recorridos, por lo que es claro que
-este invariante debe ser 0 cuando aún no se haya recorrido ningún elemento.
+contenga la suma de todos los elementos ya recorridos. Antes de empezar a recorrer
+siguiendo lo expresado en este invariante, esta `suma` debe ser 0 ya que no
+recorrió ningún elemento.
 
 ```python
 def suma(lista):
@@ -373,7 +398,9 @@ def suma(lista):
     return suma
 ```
 
-En resumen, el concepto de invariante de ciclo es una herramienta abstracta que nos permiten comprender (explicitar) mejor cómo funciona un algoritmo. Resulta fundamental en la teoría de algoritmos, donde es necesario para *demostrar matemáticamente* que un algoritmo realiza la tarea descripta por la pre- y postcondición.
+En resumen, el concepto de invariante de ciclo es una herramienta que nos permiten comprender (explicitar) mejor cómo funciona un algoritmo. Resulta fundamental en la teoría de algoritmos, donde es necesario para *demostrar* que:
+- un algoritmo es correcto, es decir que realiza la tarea descripta por la pre y poscondición
+- un algoritmo termina (y no se cuelga)
 
 ### Parámetros mutables e inmutables
 
@@ -415,7 +442,7 @@ función.
 [1, 8, 27, 64]
 ```
 
-**Atención:** Salvo que sea explícitamente aclarado, una función no debe modificar los valores de sus parámetros. En el caso en que por una decisión de diseño o especificación se modifiquen los parámetros mutables recibidos, esto debe estar claramente documentado como parte de las postcondiciones.
+**Atención:** Salvo que sea explícitamente aclarado, una función no debe modificar los valores de sus parámetros. En el caso en que por una decisión de diseño o especificación se modifiquen los parámetros mutables recibidos, esto debe estar claramente documentado como parte de las poscondiciones.
 
 
 ## Resumen
@@ -426,9 +453,9 @@ función.
     código y *por qué* se decidió implementarlo de esa manera, y están dirigidos a
     quien esté leyendo el código fuente.
 - El **contrato** de una función especifica qué condiciones se deben
-    cumplir para que la función pueda ser invocada (**precondiciones**),
+    cumplir para que la función pueda ser invocada (**precondición**),
     y qué condiciones se garantiza que serán válidas cuando la función termine
-    su ejecución (**postcondiciones**).
+    su ejecución (**poscondición**).
 - Los **invariantes de ciclo** son las condiciones que deben
 cumplirse al comienzo de cada iteración de un ciclo.
 - En el caso en que estas **aseveraciones** no sean verdaderas, se
@@ -446,25 +473,39 @@ deberá a un error en el diseño o utilización del código.
 ¿Hay algún invariante de ciclo?
 
 ```python
-def Abs(i):
-    if i >= 0:
-        return i
+def valor_absoluto(n):
+    if n >= 0:
+        return n
     else:
-        return -i
+        return -n
 ```
 
 ```python
-ejemplo?
+def suma_pares(l):
+    res = 0
+    for e in l:
+        if e % 2 ==0:
+            res += e
+        else:
+            res += 0
+
+    return res
 ```
 
 ```python
-ejemplo?
+def collatz(n):
+    res = 1
+
+    while n!=1:
+        if n % 2 == 0:
+            n = n/2
+        else:
+            n = 3 * n + 1
+        res += 1
+
+    return res
 ```
 
-
-```python
-ejemplo?
-```
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar_y_Estilo.md)
