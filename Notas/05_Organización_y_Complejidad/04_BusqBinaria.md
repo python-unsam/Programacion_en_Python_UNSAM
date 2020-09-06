@@ -12,7 +12,9 @@ Si la lista está previamente ordenada,
 Si la lista está ordenada, hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento `e` en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a `e` podemos estar seguros de que `e` no está en la lista, por lo que no es necesario continuar recorriendo el resto.
 
 ### Ejercicio 5.10: Búsqueda lineal sobre listas ordenadas.
-Modificar la búsqueda lineal para el caso de listas ordenadas.
+
+Modificá la función `busqueda_lineal(lista, e)`  de la [Sección 3.3](../03_Listas_y_Listas/03_IteradoresLista.md#búsqueda-lineal) para el caso de listas ordenadas, de forma que la función pare cuando encuentre un elemento mayor a `e`. Llamá a tu nueva función `busqueda_lineal_lordenada(lista,e)` y guardala en el archivo `busqueda_en_listas.py`.
+
 En el peor caso, ¿cuál es nuestra nueva hipótesis sobre comportamiento del
 algoritmo? ¿Es realmente más eficiente?
 
@@ -24,21 +26,21 @@ irá achicando a segmentos cada vez menores de la lista original.
 La idea es descartar segmentos de la lista donde el valor seguro que no puede
 estar:
 
-1. Consideramos como segmento inicial de búsqueda a la lista completa.
+* Consideramos como segmento inicial de búsqueda a la lista completa.
 
-2. Analizamos el punto medio del segmento (el valor central); si es el valor
+* Analizamos el punto medio del segmento (el valor central); si es el valor
 buscado, devolvemos el índice del punto medio.
 
-3. Si el valor central es mayor al buscado, podemos descartar el segmento
-que está desde el punto medio hacia la a derecha.
+* Si el valor central es mayor al buscado, podemos descartar el segmento
+que está desde el punto medio hacia la derecha.
 
-4. Si el valor central es menor al buscado, podemos descartar el segmento
+* Si el valor central es menor al buscado, podemos descartar el segmento
 que está desde el punto medio hacia la izquierda.
 
-5. Una vez descartado el segmento que no nos interesa, volvemos a analizar
+* Una vez descartado el segmento que no nos interesa, volvemos a analizar
 el segmento restante, de la misma forma.
 
-6. Si en algún momento el segmento a analizar tiene longitud 0
+* Si en algún momento el segmento a analizar tiene longitud 0
 significa que el valor buscado no se encuentra en la lista.
 
 
@@ -139,7 +141,7 @@ A continuación varias ejecuciones de prueba:
 -1
 ```
 
-**Pregunta**: En la línea `medio = (izq + der) // 2` efectuamos la división usando el operador `//` en lugar de `/`. ¿Qué pasa su usáramos `/`?
+**Pregunta**: En la línea `medio = (izq + der) // 2` efectuamos la división usando el operador `//` en lugar de `/`. ¿Qué pasaría su usáramos `/`?
     
 ### ¿Cuántas comparaciones hace este programa?
 
@@ -164,7 +166,7 @@ lista es una potencia de 2, digamos `len(lista)`*= 2^k*:
 
 Por lo tanto este programa hace a lo sumo (en el peor caso) *k* comparaciones con el valor buscado cuando `len(lista)`*= 2^k*.
 Pero si despejamos *k* de la ecuación anterior, podemos ver que este programa
-realiza aproximadamente `log2(len(lista)` comparaciones.
+realiza aproximadamente `log2(len(lista))` comparaciones.
 
 Cuando `len(lista)` no es una potencia de 2 el razonamiento es menos
 prolijo, pero también vale que este programa realiza aproximadamente

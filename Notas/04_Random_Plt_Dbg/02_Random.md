@@ -53,7 +53,7 @@ _Extra:_ Hay gente que, si en la primera tirada le salen todos dados diferentes,
 
 ### Semillas
 
-A veces queremos generar números (pseudo-)aleatorios de una manera reproducible. Puede sonar contradictorio, pero no lo es: es aquí donde se ve claramente la naturalez **pseudo**aleatoria de estos números. Si fijamos una semilla con el comando `random.seed(semilla)`, donde `semilla` es un número entero, los elecciones que hagamos luego serán reproducibles posteriormente utilizando la misma semilla.
+A veces queremos generar números (pseudo-)aleatorios de una manera reproducible. Puede sonar contradictorio, pero no lo es: es aquí donde se ve claramente la naturalez **pseudo**aleatoria de estos números. Si fijamos una semilla con el comando `random.seed(semilla)`, donde `semilla` es un número entero, la secuencia de números aleatorios que obtengamos será reproducible utilizando la misma semilla.
 
 Probá por ejemplo correr dos veces el siguiente código:
 ```python
