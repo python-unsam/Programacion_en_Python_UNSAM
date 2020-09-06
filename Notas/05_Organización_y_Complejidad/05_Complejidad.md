@@ -109,7 +109,10 @@ Si tomamos `n = len(s)` podemos tratar de medir la complejidad de la función `i
 ### Ejercicio 5.15: Un ejemplo más complejo
 Por último, escribí una funcion `listar_secuencias(n)` que devuelva una lista con  **todas** las secuencias binarias de longitud `n` comenzando con la primera (`[0]*n`) y usando en cada paso la función `incrementar()` definida más arriba.
 
+¿Podés correr `listar_secuencias(10)`? ¿Y `listar_secuencias(20)`? Hasta cúanto llegas a correr en un tiempo razonable? ¿Cuántas listas hay de longitud `n`?
+
 ¿Te parece que `listar_secuencias(n)` es una función lineal, cuadrática, logarítmica o exponencial en `n`? ¿Por qué?
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](04_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
 
