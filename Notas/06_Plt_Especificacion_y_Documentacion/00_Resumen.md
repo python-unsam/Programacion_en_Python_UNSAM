@@ -4,9 +4,13 @@
 ### **Este material está en revisión**
 ### Estará su versión definitiva desde el 09/09/2020
 
-A medida que escriban programas más grandes, es conveniente administrar los errores. En esta clase veremos algunas formas de hacerlo. También se vuelve indispensable el uso del debugguer, que es una herramienta que nos ayuda a ejecutar paso a paso o hasta cierto punto un programa de forma de ayudarnos a encontrar errores inesperados (bugs) en nuestro propio código.
+En este curso queremos que aprendas a escribir un script que te resuelva un problema computacional. Pero también queremos que puedas escribir adecuadamente programas más grandes, que lo spuedas compartir y volver a usar vos misme unos años más tarde.
 
-Luego presentamos informalmente la idea de la especificación (formal) de una función o un algoritmo para terminar explicando un poco más en profundidad algunas buenas prácticas de documentación y reglas de estilo de Python.
+Por eso insistimos con algunos temas de estilo, documentación, especificiación y diseño que ya hemos comentado anteriormente y sobre los que volveremos en esta clase. Uno de ellos es que es conveniente administrar los errores; seguiremos hablando sobre las formas adecuadas de hacerlo y porqué no conviene hacerlo de más. También se vuelve indispensable estructurar adecuadamente el código y aprender a definir una función *main*. Vamos a continuar con nuestras discuiones sobre el diseño de algoritmos y sus estructuras de datos asociadas. También queremos que aprendas algunos conceptos elementales sobre especificación de problemas. Son procesos de abstracción que nos ayudan a pensar con mayor claridad. Al especificar un problema con precondiciones y poscondiciones estamos definiendo qué es lo que debe pasar en una función, por ejemplo (aunque en ningún momento decimos cómo debe pasar esto). Una especificación es como un contrato y podemos definir varias funciones que cumplan el contrato, y cada una puede resolverlo a su manera.
+
+Finalmente, daremos un poco más sistemáticamente algunos concepto de la biblioteca matplotlib, incluyendo el manejo de figuras y subplots.
+
+Esta es la última clase antes del primer parcial. El miércoles 16/9 acordate de estar atenta de 14 a 16hs que tomaremos el parcial on-line. Sabemos que hay gente que no está haciendo la materia por los créditos sino para aprender los contenidos. Les pedimos que igual rindan los exámenes y soliciten el certificado final de aprobación. Para nosotros es importante que los que hayan seguido el curso figuren formalmente para que esta expericiencia pueda tener continuidad en el tiempo.
 
 
 

@@ -38,18 +38,18 @@ Recapitulando (llamada más reciente al final)
 Error de tipo (de datos): tipo de argumento no admitido para +: 'int' y 'str'.
 ```
 
-Es decir: la función intentó aplicar el operador + (suma) a dos argumentos de tipos distintos (entero y cadena) y no supo hacerlo. Luego levantó una excepción. 
+Es decir: la función intentó aplicar el operador + (suma) a dos argumentos de tipos distintos (entero y cadena) y no supo hacerlo. Por eso levantó una excepción. 
 
 ### Excepciones
 
-Como ya dijimos, las excepciones son una forma de señalar errores en tiempo de ejecución.  Para levantar una excepción, usá la instrucción `raise` . 
+Como ya dijimos, las excepciones son una forma de señalar errores en tiempo de ejecución. Acordate que podés levantar una excepción usando la instrucción `raise` . 
 
 ```python
 if nombre not in autorizados:
     raise RuntimeError(f'{nombre} no autorizado')
 ```
 
-Para _atrapar_ una excepción, usá us bloque `try-except`. 
+Para _atrapar_ una excepción, usá un bloque `try-except`. 
 
 ```python
 try:
@@ -84,8 +84,6 @@ def foo():
 
 foo()
 ```
-
-[oski]: # (To handle the exception, put statements in the `except` block. You can add any statements you want to handle the error.)
 
 Para administrar la excepción, usá instrucciones en el bloque `except`. Cualquier instrucción hará que Python considere a la excepción como administrada, incluso un `pass` pero es pertinente realizar acciones relacionadas con la excepción específica a administrar. 
 
