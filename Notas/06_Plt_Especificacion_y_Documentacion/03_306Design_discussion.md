@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificación.md)
 
 # 6.3 Temas de diseño
 
@@ -132,5 +132,5 @@ Afterwards, your `informe.py` and `costo_camion.py` programs should work
 the same way they always did.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Especificación, Documentación y contratos+)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificación.md)
 

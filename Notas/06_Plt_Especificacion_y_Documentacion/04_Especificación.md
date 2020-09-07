@@ -1,21 +1,14 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
 
-# 6.4 Especificación, Documentación y contratos+
+# 6.4 Contratos: Especificación y Documentación
 
-En esta unidad se le una mayor formalización a algunos temas presentados
-anteriormente, como por ejemplo la documentación de las funciones.
+En esta unidad formalizamos a algunos temas que ya mencionamos brevemente en las clases anteriores sobre la especificación y documentación de funciones.
 
-Se formalizarán las condiciones que debe cumplir un algoritmo al comenzar, en
-su transcurso, y al terminar, y algunas técnicas para tener en cuenta estas
-condiciones.
-
-También se verá una forma de modelar el espacio donde *viven* las
-variables.
+Trabajaremos informalmente con conceptos formales. Por ejemplo, trataremos de responder en algunos casos concretos: ¿qué condiciones debe cumplir una función al comenzar? ¿Qué condiciones se mantinen durante su ejecución? ¿Que debemos garantizar cuando se termina de ejecutar? Y veremos algunas técnicas para tener en cuenta estas condiciones.
 
 ## Documentación
 
-Comenzamos formalizando un poco más acerca de la documentación, cuál es su
-objetivo y las distintas formas de documentar.
+Comenzamos formalizando un poco más algunos conceptos relacionados con la documentación, cuál es su objetivo y las distintas formas de documentar.
 
 ###  Comentarios vs documentación
 
@@ -173,10 +166,7 @@ def indice(lista, elemento):
 ## Contratos
 
 Cuando hablamos de **contratos** o *programación por
-contratos*, nos referimos a la necesidad de estipular tanto lo que necesita
-como lo que devuelve nuestro código. En el se establece el compromiso de una
-función, en la cual si se cumplen los requisitos estipulados, se asegura cierto
-resultado. Es bueno que el contrato de una función esté incluido en su documentación.
+contratos*, nos referimos a una forma de estipular tanto lo que necesita (o asume) como lo que devuelve nuestro código. En el se establece el compromiso de una función, en la cual si se cumplen los requisitos estipulados, se asegura cierto resultado. Es bueno que el contrato de una función esté incluido en su documentación.
 
 Algunos ejemplos de cosas que deben ser estipuladas como parte del contrato
 son: cómo deben ser los parámetros recibidos, qué va a ser lo que se devuelve,
@@ -216,9 +206,7 @@ asegurar que la función devolverá un número y este será el cociente solicita
 ### El qué, no el cómo
 
 Notar que al especificar un problema con pre y poscondición estamos
-definiendo qué es lo que debe suceder. En ningún momento decimos cómo es que esto
-sucede. Para una misma especificación podemos definir varias funciones que cumplan
-el contrato, y cada una puede resolverlo a su manera.
+definiendo qué es lo que debe suceder. En ningún momento decimos cómo es que esto sucede. Para una misma especificación podemos definir varias funciones que cumplan el contrato, y cada una puede resolverlo a su manera.
 
 ### Aseveraciones
 
@@ -268,15 +256,25 @@ def division(dividendo, divisor):
     assert divisor != 0, 'El divisor no puede ser 0'
     return dividendo / divisor
 ```
+o directamente
 
-Otro ejemplo, tal vez más interesante: una función que implemente
-una sumatoria *sum_i=desde^hasta i*.
+```python
+def division(dividendo, divisor):
+    '''Cálculo de la división
+
+    Pre: Recibe dos números, divisor debe ser distinto de 0.
+    Pos: Devuelve un número real, con el cociente de ambos.
+    '''
+    return dividendo / divisor
+```
+
+Es interesante discutir un poco en detalle este ejemplo. La función *asume* que el divisor es no nulo. Esto tiene sentido, ya que no podemos dividir por cero. Podríamos atrapar el error y, si nos pasan un divisor nulo, devolver por ejemplo *cero*. De esta forma evitamos que se termine el programa. Pero ¿tiene sentido esto? ¿Nos ahorra un problema o nos genera un nuevo problema? No es una buena práctica atrapar errores que no sabemos manejar. Que `1/0` devuelva cero en principio **no es correcto**. Como ya mencionamos en la Sección ?, es mejor los errores generen excepciones ruidosamente y no atraparlas si no sabemos exactamente cómo manejarlas.
+
+veamos otro ejemplo, tal vez más interesante. Consideremos una función que implementa la sumatoria *sum_i=desde^hasta i*.
 ![\sum_{i=desde}^{hasta} i
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Csum_%7Bi%3Ddesde%7D%5E%7Bhasta%7D+i%0A)
 
- En este caso,
-analizando los parámetros que recibirá la función, podemos definir la
-precondición para indicar lo que estos deberán cumplir.
+En este caso, analizando los parámetros que recibirá la función, podemos definir la precondición para indicar lo que estos deberán cumplir.
 
 La función `sumar_enteros` tomará un valor `desde`, un valor `hasta`.
 Es decir que recibe dos parámetros.
@@ -297,7 +295,7 @@ y poscondición queda de la siguiente manera.
 ```python
 def sumar_enteros(desde, hasta):
     '''Calcula la sumatoria de los números entre desde y hasta.
-       Si hasta < desde, entonces devuelve cero
+       Si hasta < desde, entonces devuelve cero.
 
     Pre: desde y hasta son números enteros
     Pos: Se devuelve el valor de sumar todos los números del intervalo
@@ -306,20 +304,17 @@ def sumar_enteros(desde, hasta):
 ```
 
 Prestá atención a que tanto la pre como la pos no dicen cómo hace la función
-para resolver el problema, sino que caracterizan el resultado. La implementación
-(o código) serán el cómo. En este caso puede ser con un ciclo que emule los pasos
-de dichas sumas, podría utilizarse una fórmula cerrada que calcule el valor sin
-utilizar un ciclo, entre otras opciones. Lo importante es ver que a fines de la
-especificación, eso no importa.
+para resolver el problema, sino que caracterizan el resultado. La implementación (o código) serán el cómo. En este caso puede ser con un ciclo que emule los pasos de dichas sumas, podría utilizarse una fórmula cerrada que calcule el valor sin utilizar un ciclo, entre otras opciones. Lo importante es ver que a fines de la especificación, eso no importa.
 
 En definitiva, la estipulación de pre y poscondiciones dentro de la
 documentación de las funciones es una forma de definir claramente el
-comportamiento del código.  Son en efecto un
-*contrato* entre el código invocante (o usuarie) y el invocado (o función).
+comportamiento del código.  Son en efecto un *contrato* entre el código invocante (o usuarie) y el invocado (o función).
 
 
-### Ejercicio 6.8: 
-Realizar la implementación correspondiente a la función `sumar_enteros`.
+### Ejercicio 6.8: Sumas
+Realizar la implementación correspondiente a la función `sumar_enteros`. ¿Lo podés hace sin ciclos? ¿Podés implementar esta función en tiempo constante?
+
+_Ayuda: Estas sumas se pueden escribir como diferencia de dos [números triagulares](https://es.wikipedia.org/wiki/N%C3%BAmero_triangular)._
 
 
 ##  Invariantes de ciclo
@@ -508,5 +503,5 @@ def collatz(n):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Documentación y estilo**)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
 

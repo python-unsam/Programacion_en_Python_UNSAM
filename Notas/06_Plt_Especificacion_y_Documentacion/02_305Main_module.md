@@ -2,7 +2,7 @@
 
 # 6.2 El módulo *main* (principal)
  
-Aquí introduciremos el concepto de un programa principal o un módulo proncipal. 
+en esta sección  introducimos el concepto de un programa principal o un módulo proncipal. 
 
 ### Función principal
 
@@ -80,7 +80,7 @@ Este es un modelo común para escribir un programa en Python:
 
 ```python
 # prog.py
-# Comandos Import (bibliotecas)
+# Comandos import (bibliotecas o módulos)
 import modules
 
 # Funciones
@@ -105,7 +105,7 @@ Python es muy usado para ejecutar herramientas desde la línea de comandos, como
 ```bash
 bash % python3 informe.py camion.csv precios.csv
 ```
-Lo cual significa que los scripts pueden ser  ejecutados desde la terminal para casos como automatización de procesos, ejecutar tareas en "el fondo", etc.
+Lo cual significa que los scripts pueden ser ejecutados desde la terminal para casos como automatización de procesos, ejecutar tareas en "el fondo", etc.
 
 ### Argumentos en la línea de comandos
 
@@ -122,7 +122,7 @@ Podemos acceder a esta lista de cadenas a través de `sys.argv`.
 sys.argv # ['informe.py, 'camion.csv', 'precios.csv']
 ```
 
-Este es un ejemplo simple para procesar los argumentos recibidos al invocar un scrpit desde la terminal:
+Este es un ejemplo simple para procesar los argumentos recibidos al invocar un script desde la terminal:
 
 ```python
 import sys
@@ -146,7 +146,7 @@ sys.stdin
 
 Por omisión, la salida impresa es dirigida a `sys.stdout`, la entrada se lee de `sys.stdin`, y la recapitulación de errores es dirigida a `sys.stderr`.
 
-Recordá que *stdio* puede estar "atado" a terminales, archivos, adaptadores (pipes / tuberías), etc.
+Las entradas y salidad de *stdio* pueden estar ligadas a una terminal, a la pantalla, a archivos o incluir cosas más extrañas como pipes, etc.
 
 ```bash
 bash % python3 prog.py > resultados.txt
@@ -155,34 +155,6 @@ bash % cmd1 | python3 prog.py | cmd2
 ```
 
 (Esta syntaxis se llama "piping" o redireccionamiento y significa: ejecutar cmd1, enviar su salida como entrada a prog.py invocado desde la terminal, y la salida de éste será la entrada para cmd2)
-
-### Variables de entorno
-
-Las variables de entorno se definen en la consola, desde el sistema operativo.
-
-```bash
-bash % setenv NAME dave
-bash % setenv RSH ssh
-bash % python3 prog.py
-```
-
-ó bajo DOS y derivados (windows) ...
-
-```bash
-c:\> set NAME=dave
-c:\> set RSH=ssh
-c:\> python3 prog.py
-```
-
-`os.environ` es un diccionario que contiene ésos valores.
-
-```python
-import os
-
-name = os.environ['NAME'] # 'dave'
-```
-
-Y estos cambios serán transmitidos a cualquier subproceso que sea lanzado por nuestro programa.
 
 ### Terminación del programa
 
@@ -194,7 +166,7 @@ raise SystemExit(codigo_salida)
 raise SystemExit('Mensaje informativo')
 ```
 
-O sino.
+O, alternativamente:
 
 ```python
 import sys
@@ -206,10 +178,6 @@ Es estándard que un codigo de salida de `0` indica que no hubo problemas y otro
 ### El comando `#!` 
 
 Bajo Unix (Linux es un Unix) una línea que comienza con `#!` ejecutará un script en el intérprete Python.
-
-[oski]:# (RAFA no probás esto ? Lanza prog.py dentro de python3 ? Sale de python3 al terminar ?
-On Unix, the `#!` line can launch a script as Python.
-Add the following to the first line of your script file.)
 
 ```python
 #!/usr/bin/env python3
@@ -228,11 +196,9 @@ bash % prog.py
 
 *Observación: Al iniciar un script Python en Windows, se lee la línea que comienza con `#!` dentro del script para saber qué versión del intérprete invocar.*
 
-### Modelo de script
+### Modelo de script con parámetros
 
 Para terminar, este es un modelo de un programa en Python que se ejecuta como si fuera un script invocado desde la terminal.
-
-Finally, here is a common code template for Python programs that run as command-line scripts:
 
 ```python
 #!/usr/bin/env python3
@@ -260,7 +226,7 @@ if __name__ == '__main__':
 
 ## Ejercicios
 
-### Ejercicio 6.4: `main()` functions
+### Ejercicio 6.4: Función `main()`
 En tu programa `informe.py` agregá una función `main()` que acepte una lista de opciones en la línea de comandos y produzca la misma salida que antes. Deberías ahora ser capas de ejecutarlo del siguiente modo:
 
 ```python
@@ -280,32 +246,30 @@ En tu programa `informe.py` agregá una función `main()` que acepte una lista d
 
 Modificá el archivo `costo_camion.py` para que incluya una función similar `main()` que te permita hacer esto:
 
-[oski]:# (Ojo los nombres de las funciones traducidas y los totales)
 ```python
->>> import pcost
->>> pcost.main(['costo_camion.py', 'Data/camion.csv'])
+>>> import costo_camion
+>>> costo_camion.main(['costo_camion.py', 'Data/camion.csv'])
 Total cost: 47671.15
 >>>
 ```
 
-### Ejercicio 6.5: Making Scripts
-Modify the `informe.py` and `costo_camion.py` programs so that they can
-execute as a script on the command line:
+### Ejercicio 6.5: Hacer un script
+Modificá tus programas `informe.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
 
 ```bash
 bash $ python3 informe.py Data/camion.csv Data/precios.csv
-      Name    Cajones     Precio     Change
----------- ---------- ---------- ----------
-      Lima        100       9.22     -22.98
-   Naranja         50     106.28      15.18
-     Caqui        150      35.46     -47.98
- Mandarina        200      20.89     -30.34
-   Durazno         95      13.48     -26.89
- Mandarina         50      20.89     -44.21
-   Naranja        100     106.28      35.84
+    Nombre    Cajones     Precio     Cambio
+ ---------- ---------- ---------- ----------
+      Lima        100      $32.2       8.02
+   Naranja         50      $91.1      15.18
+     Caqui        150    $103.44       2.02
+ Mandarina        200     $51.23      29.66
+   Durazno         95     $40.37      33.11
+ Mandarina         50      $65.1      15.79
+   Naranja        100     $70.44      35.84
 
 bash $ python3 costo_camion.py Data/camion.csv
-Total cost: 47671.15
+Costo total: 47671.15
 ```
 
 

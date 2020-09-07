@@ -1,15 +1,194 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Especificación, Documentación y contratos+)](04_Especificación.md) \| [Próximo (6 Matplotlib básico)](06_matplotlib_basico.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificación.md) \| [Próximo (6 Matplotlib básico)](06_matplotlib_basico.md)
 
-# 6.5 Documentación y estilo**
+# 6.5 Estilo
 
-## Docstrings
+## PEP 8 - La guía de estilo para Python
 
-## Algo de PEP8
-[resumen](https://bioinf.comav.upv.es/courses/linux/python/estilo.html)
+La comunidad de usuarios de Python ha adoptado una guía de estilo que facilita la lectura del código y la consistencia entre programas de distintos usuarios. Esta guía no es de seguimiento obligatorio, pero es altamente recomendable. El documento completo se denomina PEP 8 y está escrito originalmente en [inglés](https://www.python.org/dev/peps/pep-0008/), aunque hay alguna traducción al [castellano](http://recursospython.com/pep8es.pdf). 
 
-[pdf](http://recursospython.com/pep8es.pdf)
+A continuación presentamos un resumen con solo algunas recomendaciones.
 
-## recordar el help()
+### Indentación
+Utilizar siempre 4 espacios y nunca mezclar tabuladores y espacios.
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Especificación, Documentación y contratos+)](04_Especificación.md) \| [Próximo (6 Matplotlib básico)](06_matplotlib_basico.md)
+Si se continua una línea hay dos opciones aceptables:
+
+```pyhton
+# Correcto
+    foo = funcion_que_crea_bar(variable_1, variable2
+                               variable_3)
+    # opcion 2
+    foo = funcion_que_crea_bar(
+                  variable_1, variable2
+                  variable_3)
+```
+
+```pyhton
+# Incorrecto
+    foo = funcion_que_crea_bar(variable_1, variable2
+                  variable_3)
+```
+
+### Tamaño máximo de línea
+Las líneas deben limitarse a un máximo de 79 caracteres.
+
+### Líneas en blanco
+Separar las definiciones de las clases y funciones con dos líneas en blanco. Los métodos dentro de clases se separan con una línea en blanco. Se recomienda utilizar líneas en blanco para separar partes del código, por ejemplo dentro de una función, que realizan tareas diferenciadas.
+
+### Imports
+Los imports de distintos módulos deben estar en líneas diferentes:
+
+```pyhton
+Si: import os
+    import sys
+```
+
+```pyhton
+No: import os, sys
+```
+
+Sí se pueden poner en una línea los elementos que se importan de un mismo módulo:
+
+```pyhton
+from subprocess import Popen, PIPE
+```
+
+Los imports deben ponerse siempre al principio del archivo, justo después de los comentarios y de la documentación y antes de la definición de las variables globales y las constantes.
+
+Los imports deben agruparse en el siguiente orden:
+
+1. bibliotecas o módulos estandar. 
+2. bibliotecas o módulos de 3os.
+3. bibliotecas o módulos locales o propios
+
+Cada grupo de imports debe estar separado por una línea en blanco.
+
+### Espacios en blanco en expresiones
+Evitar espacios en blanco extra en:
+
+Dentro de paréntesis.
+```pyhton
+Yes: 
+spam(ham[1], {eggs: 2})
+```
+
+```pyhton
+No:  
+spam( ham[ 1 ], { eggs: 2 })
+```
+
+Después de una coma.
+```pyhton
+Yes: 
+if x == 4: print x, y; x, y = y, x N
+```
+
+```pyhton
+No: 
+if x == 4 : print x , y ; x , y = y , x
+```
+
+Antes del paréntesis de una llamada a una función.
+```pyhton
+Yes: 
+spam(1)
+```
+
+```pyhton
+No:  
+spam (1)
+```
+
+Antes del paréntesis de un índice.
+```pyhton
+Yes: 
+dict['key'] = list[index]
+```
+
+```pyhton
+No:  
+dict ['key'] = list [index]
+```
+
+Siempre separá los operadores binarios con un espacio simple a ambos lados: asignación (=), asignación aumentada (+=, -= etc.), comparación (==, <, >, !=, <>, <=, >=, in, not in, is, is not), booleanos (and, or, not).
+
+Usá espacios alrededor de operadores artiméticos:
+
+```pyhton
+Yes:
+    i = i + 1
+    submitted += 1
+    x = x * 2 - 1
+    hypot2 = x * x + y * y
+    c = (a + b) * (a - b)
+```
+
+```pyhton
+No:
+
+    i=i+1
+    submitted +=1
+    x = x*2 - 1
+    hypot2 = x*x + y*y
+    c = (a+b) * (a-b)
+```
+
+
+### Concenciones de nombres
+
+Las convenciones de nombres en Python son un lío y probablemente nunca lograremos que todo sea consistente. Sin embargo, te damos algunas de las recomendaciones actuales sobre nombres. Los nuevos módulos deberían ser escritos respetándolos, aunque la consistencia interna es preferible para bibliotecas que ya tengan partes hechas...
+
+### Estilos de nombres
+
+Hay muchos estilos para nombrar variable, funciones, etc. Es útil reconocer qué estiulo se está usando, independientemente de para qué se está usando.
+
+Estos son algunos estilos:
+
+* b (una sola letra, en minúscula)
+* B (una sola letra, en mayúscula)
+* minusculas
+* minusculas_con_guines_bajos
+* MAYUSCULAS
+* MAYUSCULAS_CON_GUINES_BAJOS
+* PalabrasConMayusculas (también llamado estilo camello por las jorobas)
+* mixedCase (difiere del camello en la inicial)
+* Con_Mayusculas_Y_Guiones_Bajos (horrible!)
+
+Se recomienda no usar acentos ni caracateres especiales de ningún tipo para evitar problemas de compatibilidadd. Los nombres de funciones y variables deberían estar escritos en minúsculas, eventualmente usando guines bajos para mejorar la legibilidad. 
+
+### Hay mucho más!
+
+Esto es solo un breve resúmen, mirá el [PEP 8](https://www.python.org/dev/peps/pep-0008/) para tener toda la información sobre estilo recomendado en Python.
+
+## Zen de Pyhton
+
+Ya que estamos hablando de los PEPs, queremos mencionar el PEP 20 (PEP viene de Python Enhancement Proposals), también conocido como el [Zen de Python](https://es.wikipedia.org/wiki/Zen_de_Python)
+
+El Zen de Python es una colección de 20 principios de software que influyen en el diseño del lenguaje. El texto, que copiamos a continuación se puede encontrar en el sitio oficial de Python y también se incluye como sorpresa en  el intérprete de Python al escribir la instrucción `import this`.​
+
+**Zen de Pyhton**
+
+>Bello es mejor que feo.
+>Explícito es mejor que implícito.
+>Simple es mejor que complejo.
+>Complejo es mejor que complicado.
+>Plano es mejor que anidado.
+>Espaciado es mejor que denso.
+>La legibilidad es importante.
+>Los casos especiales no son lo suficientemente especiales como para romper las reglas.
+>Sin embargo la practicidad le gana a la pureza.
+>Los errores nunca deberían pasar silenciosamente.
+>A menos que se silencien explícitamente.
+>Frente a la ambigüedad, evitá la tentación de adivinar.
+>Debería haber una, y preferiblemente solo una, manera obvia de hacerlo.
+>A pesar de que esa manera no sea obvia a menos que seas Holandés.
+>Ahora es mejor que nunca.
+>A pesar de que nunca es muchas veces mejor que *justo* ahora.
+>Si la implementación es difícil de explicar, es una mala idea.
+>Si la implementación es fácil de explicar, puede que sea una buena idea.
+>Los espacios de nombres son una gran idea, ¡hagamos más de ellos!
+
+
+
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificación.md) \| [Próximo (6 Matplotlib básico)](06_matplotlib_basico.md)
 

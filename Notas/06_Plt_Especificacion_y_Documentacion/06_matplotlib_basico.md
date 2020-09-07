@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Documentación y estilo**)](05_Documentar_y_Estilo.md) \| [Próximo (7 Gráficos del azar***)](07_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Gráficos del azar***)](07_gráficos_del_azar.md)
 
 # 6.6 Matplotlib básico
 
@@ -376,5 +376,5 @@ for r, bar in zip(radii, bars):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Documentación y estilo**)](05_Documentar_y_Estilo.md) \| [Próximo (7 Gráficos del azar***)](07_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Gráficos del azar***)](07_gráficos_del_azar.md)
 
