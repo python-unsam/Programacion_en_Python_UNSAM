@@ -7,7 +7,7 @@
 * [3. Algoritmos sobre listas y comprensión de listas](03_Listas_y_Listas/00_Resumen.md)
 * [4. Aleatoridad](04_Random_Plt_Dbg/00_Resumen.md)
 * [5. Complejidad y Organización de programas](05_Organización_y_Complejidad/00_Resumen.md)
-* [6. Errores y bugs, especificación y documentación](06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
+* [6. Diseño, especificación, documentación y estilo.](06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 * [7. Creación de módulos, SO y Pandas](07_Modulos_Pandas_SO/00_Resumen.md)
 * [8. Clases, Objetos y Seaborn](08_OOP_Seaborn/00_Resumen.md)
 * [9. Generadores y Series temporales](09_Generadores_y_Series/00_Resumen.md)

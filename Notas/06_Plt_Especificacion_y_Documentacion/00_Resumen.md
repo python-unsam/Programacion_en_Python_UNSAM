@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)
 
-# 6. Errores y bugs, especificación y documentación
+# 6. Diseño, especificación, documentación y estilo.
 ### **Este material está en revisión**
 ### Estará su versión definitiva desde el 09/09/2020
 

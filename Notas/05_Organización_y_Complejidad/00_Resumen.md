@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (6 Errores y bugs, especificación y documentación)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 
 # 5. Complejidad y Organización de programas
 
@@ -18,4 +18,4 @@ En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e
 * [5.7 Cierre de la quinta clase](07_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (6 Errores y bugs, especificación y documentación)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Aleatoridad)](../04_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
