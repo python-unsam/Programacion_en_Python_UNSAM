@@ -26,12 +26,12 @@ def add(x, y):
 >>> add(3, '4')
 Traceback (most recent call last):
 ...
-TypeError: unsupported operand type(s) for +:
+TypeError: unsupported operand type(s) for +::
 'int' and 'str'
 >>>
 ```
 
-Python acusa los errores en inglés. El error acusado aquí puede traducisrse como:
+Python acusa los errores en inglés. El error acusado acá puede traducirse como:
 ```
 Recapitulando (llamada más reciente al final)
 ...
@@ -42,7 +42,7 @@ Es decir: la función intentó aplicar el operador + (suma) a dos argumentos de 
 
 ### Excepciones
 
-Como ya dijimos, las excepciones son una forma de señalar errores en tiempo de ejecución. Acordate que podés levantar una excepción usando la instrucción `raise` . 
+Como ya dijimos, las excepciones son una forma de señalar errores en tiempo de ejecución. Acordate de que podés levantar una excepción usando la instrucción `raise` . 
 
 ```python
 if nombre not in autorizados:
@@ -65,21 +65,21 @@ Una excepción se propagará hasta el primer `except` que coincida con ella.
 ```python
 def grok():
     ...
-    raise RuntimeError('Epa !')   # Levanta una excepción aquí
+    raise RuntimeError('Epa!')   # Levanta una excepción acá
 
 def spam():
     grok()                        # Esta llamada va a levantar una excepción
 
 def bar():
     try:
-       spam()
-    except RuntimeError as e:     # Aquí atrapamos la excepción
+        spam()
+    except RuntimeError as e:     # Acá atrapamos la excepción
         ...
 
 def foo():
     try:
-         bar()
-    except RuntimeError as e:     # Por lo tanto la excepción no llega aquí
+        bar()
+    except RuntimeError as e:     # Por lo tanto la excepción no llega acá
         ...
 
 foo()
@@ -89,14 +89,14 @@ Para administrar la excepción, usá instrucciones en el bloque `except`. Cualqu
 
 ```python
 def grok(): ...
-    raise RuntimeError('Epa !')
+    raise RuntimeError('Epa!')
 
 def bar():
     try:
       grok()
     except RuntimeError as e:   # Excepción atrapada
-        statements              # Ejecute estos comandos
-        statements
+        instrucciones           # Ejecuta estos comandos
+        instrucciones
         ...
 
 bar()
@@ -111,12 +111,12 @@ def grok(): ...
 def bar():
     try:
       grok()
-    except RuntimeError as e:   # Excepción atrapada
-        statements
-        statements
+    except RuntimeError as e:      # Excepción atrapada
+        instrucciones
+        instrucciones
         ...
-    statements                  # La ejecución del programa 
-    statements                  # continúa aquí
+    instrucciones                  # La ejecución del programa 
+    instrucciones                  # continúa acá
     ...
 
 bar()
@@ -191,7 +191,7 @@ Como alternativa, si las vas a procesar a todas de la misma manera, las podés a
 ```python
 try:
   ...
-except (IOError,LookupError,RuntimeError) as e:
+except (IOError, LookupError, RuntimeError) as e:
   ...
 ```
 
@@ -202,11 +202,11 @@ Para atrapar todas y cualquier excepción, se usa `Exception` así:
 ```python
 try:
     ...
-except Exception:       # PELIGRO. (ver abajo)
+except Exception:           # PELIGRO. (ver abajo)
     print('Hubo un error')
 ```
 
-En general es mala idea "administrar" las excepciones de este modo, porque no te dá ninguna pista de porqué falló el programa. Sólo sabés que "Hubo un error".
+En general es mala idea "administrar" las excepciones de este modo, porque no te da ninguna pista de por qué falló el programa. Sólo sabés que "Hubo un error".
 
 ### Así NO se atrapan excepciones. 
 
@@ -223,7 +223,7 @@ Esto atrapa todos los errores posibles, y puede complicar mucho el debugging cua
 
 ### Así es un poco mejor.
 
-Si va a atrapar todas las excepciones, aquí hay un modo algo más decente:
+Si vas a atrapar todas las excepciones, acá hay un modo algo más decente:
 
 ```python
 try:
@@ -253,11 +253,11 @@ Esto te permite, por ejemplo, llevar un registro de las excepciones (*log*) sin 
 
 ### Buenas prácticas al administrar excepciones
 
-No atrapes excepciones que no vayas a manejar adecuadamente. Dejalas caer ruidosamente. Si es importante, alguien se va a encargar del problema. Sólo atrapá excepciones si *sos ese "alguien"*. Es decir: sólo atrapá aquéllos errores que podés administrar elegantemente de forma que permita que el programa se siga ejecutando.
+No atrapes excepciones que no vayas a manejar adecuadamente. Dejalas caer ruidosamente. Si es importante, alguien se va a encargar del problema. Sólo atrapá excepciones si *sos ese "alguien"*. Es decir: sólo atrapá aquellos errores que podés administrar elegantemente de forma que permita que el programa se siga ejecutando.
 
 ### La instrucción `finally`.
 
-`finally` especifica que esa porción de código debe ejecutarse sin importar si una excepción fué atrapada o no.
+`finally` especifica que esa porción de código debe ejecutarse sin importar si una excepción fue atrapada o no.
 
 ```python
 lock = Lock()
@@ -276,10 +276,10 @@ Una estructura como ésa resulta en un manejo seguro de los recursos disponibles
 ### Ejercicio 6.1: Lancemos excepciones
 La función `parse_csv()` que escribiste en el [Ejercicio 5.6](../05_Organización_y_Complejidad/02_Funciones.md#ejercicio-56-trabajando-sin-encabezados) admite seleccionar algunas columnas por el usuario, pero eso sólo funciona si el archivo de entrada tiene encabezados.
 
-Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers=False` sean pasados juntos. Y que resulte: 
+Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers = False` sean pasados juntos. Y que resulte: 
 
 ```python
->>> parse_csv('Data/precios.csv', select=['name','precio'], has_headers=False)
+>>> parse_csv('Data/precios.csv', select = ['name','precio'], has_headers = False)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 9, in parse_csv
@@ -299,7 +299,7 @@ El motivo principal para agregar controles de calidad sobre los parámetros de e
 La función `parse_csv()` que escribiste está destinada a procesar un archivo completo. Pero en una situacion real, es posible que los archivos CSV de entrada estén "rotos", ausentes, o que su contenido no se adecúe al formato esperado. Probá esto:  
 
 ```python
->>> camion = parse_csv('Data/missing.csv', types=[str, int, float])
+>>> camion = parse_csv('Data/missing.csv', types = [str, int, float])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 36, in parse_csv
@@ -309,34 +309,43 @@ ValueError: invalid literal for int() with base 10: ''
 ```
 El error es: el texto '' es inválido para la función int()
 
-Modificá la función `parse_csv()` de modo que atrape todas las excepciones de tipo `ValueError` generadas durante el armado de los registros a devolver e imprima un mensaje de advertencia para las filas que no pudieron ser convertidas.
-Este mensaje deberá incluír el número de fila que causó el fallo y el motivo por el cual falló la conversión. Para probar tu nueva función, intentá procesar `Data/missing.csv`. Debería darte algo así:  
+Modificá la función `parse_csv()` de modo que atrape todas las excepciones de tipo `ValueError` generadas durante el armado de los registros a devolver e imprima un mensaje de advertencia para las filas que no pudieron ser convertidas. Estas filas no deben ser procesadas (ya que no se puede hacer adecuadamente), y deben ser omitidas en el output de la función.
+
+Este mensaje deberá incluír el número de fila que causó el problema y el motivo por el cual falló la conversión. Para probar tu nueva función, intentá procesar `Data/missing.csv`. Debería darte algo así:  
 
 ```python
->>> camion = parse_csv('Data/missing.csv', types=[str, int, float])
+>>> camion = parse_csv('Data/missing.csv', types = [str, int, float])
 Row 4: No pude convertir ['Mandarina', '', '51.23']
 Row 4: Motivo: invalid literal for int() with base 10: ''
 Row 7: No pude convertir ['Naranja', '', '70.44']
 Row 7: Motivo: invalid literal for int() with base 10: ''
 >>>
 >>> camion
-[{'precio': 32.2, 'nombre': 'Lima', 'cajones': 100}, {'precio': 91.1, 'nombre': 'Naranja', 'cajones': 50}, {'precio': 83.44, 'nombre': 'Caqui', 'cajones': 150}, {'precio': 40.37, 'nombre': 'Durazno', 'cajones': 95}, {'precio': 65.1, 'nombre': 'Mandarina', 'cajones': 50}]
+[{'cajones': 100, 'nombre': 'Lima', 'precio': 32.2},
+ {'cajones': 50, 'nombre': 'Naranja', 'precio': 91.1},
+ {'cajones': 150, 'nombre': 'Caqui', 'precio': 103.44},
+ {'cajones': 95, 'nombre': 'Durazno', 'precio': 40.37},
+ {'cajones': 50, 'nombre': 'Mandarina', 'precio': 65.1}]
 >>>
 ```
 
 ### Ejercicio 6.3: Errores silenciados
-Modificá `parse_csv()` de modo que el usuario pueda silenciar los informes de errores en el parseo de los datos que agregaste antes. Por ejemplo:
+Modificá `parse_csv()` de modo que el usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes. Por ejemplo:
 
 ```python
->>> camion = parse_csv('Data/missing.csv', types=[str,int,float], silence_errors=True)
+>>> camion = parse_csv('Data/missing.csv', types = [str,int,float], silence_errors = True)
 >>> camion
-[{'precio': 32.2, 'name': 'Lima', 'cajones': 100}, {'precio': 91.1, 'name': 'Naranja', 'cajones': 50}, {'precio': 83.44, 'name': 'Caqui', 'cajones': 150}, {'precio': 40.37, 'name': 'Durazno', 'cajones': 95}, {'precio': 65.1, 'name': 'Mandarina', 'cajones': 50}]
+[{'cajones': 100, 'nombre': 'Lima', 'precio': 32.2},
+ {'cajones': 50, 'nombre': 'Naranja', 'precio': 91.1},
+ {'cajones': 150, 'nombre': 'Caqui', 'precio': 103.44},
+ {'cajones': 95, 'nombre': 'Durazno', 'precio': 40.37},
+ {'cajones': 50, 'nombre': 'Mandarina', 'precio': 65.1}]
 >>>
 ```
 
 ### Comentarios
 
-Lograr un buen manejo o administración de errores es una de las partes más difíciles en la mayoría de los programas. Estás intentando preveer imprevistos. Como regla general, no silencies los errores. Es mejor informar los problemas y darle al usuario la opción de silenciarlos explícitamente. Un buen diálogo entre el código y el usuario facilita el debugging y el buen uso del programa. 
+Lograr un buen manejo o administración de errores es una de las partes más difíciles en la mayoría de los programas. Estás intentando prever imprevistos. Como regla general, no silencies los errores. Es mejor informar los problemas y darle al usuarie la opción de silenciarlos explícitamente. Un buen diálogo entre el código y el usuarie facilita el debugging y el buen uso del programa. 
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 El módulo *main* (principal))](02_305Main_module.md)

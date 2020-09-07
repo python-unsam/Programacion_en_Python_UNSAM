@@ -2,7 +2,7 @@
 
 # 6.2 El módulo *main* (principal)
  
-en esta sección  introducimos el concepto de un programa principal o un módulo proncipal. 
+En esta sección introducimos el concepto de un programa principal o un módulo proncipal. 
 
 ### Función principal
 
@@ -23,7 +23,7 @@ class myprog {
     }
 }
 ```
-Se refiere a la primer función que es ejecutada cuando corremos un programa.
+Se refiere a la primera función que es ejecutada cuando corremos un programa.
 
 ### Módulo principal en Python
 
@@ -38,7 +38,7 @@ El archivo que le pases al intérprete al invocarlo será el módulo principal. 
 
 ### Chequear `__main__` 
 
-Es una práctica estándard usar la siguiente convención en módulos que son ejecutados como scripts principales: 
+Es una práctica estándar usar la siguiente convención en módulos que son ejecutados como scripts principales: 
 
 ```python
 # prog.py
@@ -65,9 +65,9 @@ import prog   # Corriendo como módulo importado
 
 En ambos casos, `__name__` es el nombre del módulo. Sin embargo `__name__` sólo valdrá `__main__` si ese módulo está siendo ejecutado como el script principal. 
 
-Normalmente deseamos que los comandos que son parte del comportamiento del script en modo *principal* sólo se ejecuten si efectivamente el script es el módulo principal. No queremos que esos comandos se ejecuten si el módulo fué importado.
+Normalmente deseamos que los comandos que son parte del comportamiento del script en modo *principal* sólo se ejecuten si efectivamente el script es el módulo principal. No queremos que esos comandos se ejecuten si el módulo fue importado.
 
-Por lo tanto es comun escribir una condición `if` que decida cómo se va a portar el código cuando éste puede ser usado de ambas maneras.  
+Por lo tanto es común escribir una condición `if` que decida cómo se va a portar el código cuando éste puede ser usado de ambas maneras.  
 
 ```python
 if __name__ == '__main__':
@@ -76,7 +76,7 @@ if __name__ == '__main__':
 
 ### Modelo de programa
 
-Este es un modelo común para escribir un programa en Python:
+Éste es un modelo común para escribir un programa en Python:
 
 ```python
 # prog.py
@@ -103,32 +103,38 @@ if __name__ == '__main__':
 Python es muy usado para ejecutar herramientas desde la línea de comandos, como hemos visto en clase:
 
 ```bash
-bash % python3 informe.py camion.csv precios.csv
+bash % python3 tabla_informe.py camion.csv precios.csv
 ```
 Lo cual significa que los scripts pueden ser ejecutados desde la terminal para casos como automatización de procesos, ejecutar tareas en "el fondo", etc.
 
 ### Argumentos en la línea de comandos
 
-La línea de comandos es una lista de cadenas de texto.
+Python interpreta una línea de comandos como una lista de cadenas de texto.
 
 ```bash
-bash % python3 informe.py camion.csv precios.csv
+bash % python3 tabla_informe.py camion.csv precios.csv
 ```
 
-Podemos acceder a esta lista de cadenas a través de `sys.argv`.
+Como el script `tabla_informe.py` no está preparado para leer parámetros, no los va a usar. Igual, podés acceder a esta lista de cadenas usando `sys.argv`. Por ejemplo, si permanecés en el intérprete interactivo luego de llamar a `tabla_informe.py` con los parámteros anteriores
+
+```bash
+bash % python3 -i tabla_informe.py camion.csv precios.csv
+```
+luego podrás ver el contenido de esta lista:
 
 ```python
 # Llamado como recién, sys.argv contiene
+import sys
 sys.argv # ['informe.py, 'camion.csv', 'precios.csv']
 ```
 
-Este es un ejemplo simple para procesar los argumentos recibidos al invocar un script desde la terminal:
+Ahora vamos a hacer que los tenga en cuenta. El siguiente es un ejemplo de script simple para procesar los argumentos recibidos al invocarlo desde la terminal. Te permite usar tu script para generar el informe con archivos de diferentes camiones o precios, pasados como parámetros por la línea de comandos:
 
 ```python
 import sys
 
 if len(sys.argv) != 3:
-    raise SystemExit(f'Usage: {sys.argv[0]} ' 'portfile preciofile')
+    raise SystemExit(f'Uso adecuado: {sys.argv[0]} ' 'archivo_camion archivo_precios')
 camion = sys.argv[1]
 precios = sys.argv[2]
 ...
@@ -144,21 +150,21 @@ sys.stderr
 sys.stdin
 ```
 
-Por omisión, la salida impresa es dirigida a `sys.stdout`, la entrada se lee de `sys.stdin`, y la recapitulación de errores es dirigida a `sys.stderr`.
+Por omisión, la salida impresa es dirigida a `sys.stdout` (usualmente la pantalla), la entrada se lee de `sys.stdin` (usualmente el teclado), y la recapitulación de errores es dirigida a `sys.stderr` (usualmente, la pantalla otra vez).
 
-Las entradas y salidad de *stdio* pueden estar ligadas a una terminal, a la pantalla, a archivos o incluir cosas más extrañas como pipes, etc.
+Las entradas y salidas de *stdio* pueden estar ligadas al teclado, a la pantalla, a una impresora, a diferentes archivos o incluir cosas más extrañas como pipes, etc.
 
 ```bash
 bash % python3 prog.py > resultados.txt
-# ó sino
+# o si no
 bash % cmd1 | python3 prog.py | cmd2
 ```
 
-(Esta syntaxis se llama "piping" o redireccionamiento y significa: ejecutar cmd1, enviar su salida como entrada a prog.py invocado desde la terminal, y la salida de éste será la entrada para cmd2)
+Esta sintaxis se llama "piping" o redireccionamiento y significa: ejecutar cmd1, enviar su salida como entrada a prog.py invocado desde la terminal, y la salida de éste será la entrada para cmd2.
 
 ### Terminación del programa
 
-La terminación y salida del programa se administran a traves de excepciones.
+La terminación y salida del programa se administran a través de excepciones.
 
 ```python
 raise SystemExit
@@ -173,11 +179,12 @@ import sys
 sys.exit(codigo_salida)
 ```
 
-Es estándard que un codigo de salida de `0` indica que no hubo problemas y otro valor, que los hubo. 
+Es estándar que un codigo de salida de `0` indica que no hubo problemas y otro valor, que los hubo. 
 
 ### El comando `#!` 
 
-Bajo Unix (Linux es un Unix) una línea que comienza con `#!` ejecutará un script en el intérprete Python.
+Bajo Unix (Linux es un Unix) una línea que comienza con `#!` ejecutará un script en el intérprete Python. Por ejemplo, si agregás la siguiente línea al comienzo de tu script podés ejecutar directamente el script (sin invocar manualmente a Python en la misma línea).
+
 
 ```python
 #!/usr/bin/env python3
@@ -185,12 +192,12 @@ Bajo Unix (Linux es un Unix) una línea que comienza con `#!` ejecutará un scri
 ...
 ```
 
-Para ello el archivo prog.py requiere permiso de ejecución asignado. Puede permitirse así: 
+Para porder ser ejecutado, el archivo prog.py requiere permiso de ejecución asignado. Podés asignarle este permiso así: 
 
 ```bash
 bash % chmod +x prog.py
 # Ahora lo podés ejecutar
-bash % prog.py
+bash % ./prog.py
 ... salida ...
 ```
 
@@ -198,7 +205,7 @@ bash % prog.py
 
 ### Modelo de script con parámetros
 
-Para terminar, este es un modelo de un programa en Python que se ejecuta como si fuera un script invocado desde la terminal.
+Para terminar, éste es un modelo usual de programa en Python que se ejecuta invocado desde la terminal.
 
 ```python
 #!/usr/bin/env python3
@@ -224,27 +231,37 @@ if __name__ == '__main__':
     main(sys.argv)
 ```
 
+_Observación: Este modelo es flexible en el sentido que te permite escribir programas que podés llamar desde la terminal pasándole parámetros o ejecutar directamente dentro de un intérprete usando `import` y llamando a su función `main` como veremos en los siguientes ejercicios._
+
 ## Ejercicios
 
 ### Ejercicio 6.4: Función `main()`
-En tu programa `informe.py` agregá una función `main()` que acepte una lista de opciones en la línea de comandos y produzca la misma salida que antes. Deberías ahora ser capas de ejecutarlo del siguiente modo:
+Usando estas ideas, agregá a tu programa `tabla_informe.py` una función `main()` que tome una lista de parámetros en la línea de comandos y produzca la misma salida que antes.
+
+```bash
+bash % python3 tabla_informe.py Data/camion.csv Data/precios.csv
+```
+
+También deberías poder ejecutarlo del siguiente modo dentro del intérprete interactivo de Python:
 
 ```python
->>> import informe
->>> informe.main(['informe.py', 'Data/camion.csv', 'Data/precios.csv'])
-      Name    Cajones     Precio     Cambio
----------- ---------- ---------- ----------
-      Lima        100       9.22     -22.98
-   Naranja         50     106.28      15.18
-     Caqui        150      35.46     -47.98
- Mandarina        200      20.89     -30.34
-   Durazno         95      13.48     -26.89
- Mandarina         50      20.89     -44.21
-   Naranja        100     106.28      35.84
+>>> import tabla_informe
+>>> tabla_informe.main(['tabla_informe.py', 'Data/camion.csv', 'Data/precios.csv'])
+
+    Nombre    Cajones     Precio     Cambio
+ ---------- ---------- ---------- ----------
+      Lima        100      $32.2       8.02
+   Naranja         50      $91.1      15.18
+     Caqui        150    $103.44       2.02
+ Mandarina        200     $51.23      29.66
+   Durazno         95     $40.37      33.11
+ Mandarina         50      $65.1      15.79
+   Naranja        100     $70.44      35.84
+
 >>>
 ```
 
-Modificá el archivo `costo_camion.py` para que incluya una función similar `main()` que te permita hacer esto:
+Análogamente, modificá el archivo `costo_camion.py` para que incluya una función similar `main()` que te permita hacer esto:
 
 ```python
 >>> import costo_camion
@@ -254,10 +271,10 @@ Total cost: 47671.15
 ```
 
 ### Ejercicio 6.5: Hacer un script
-Modificá tus programas `informe.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
+Finalmente, modificá tus programas `tabla_informe.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
 
 ```bash
-bash $ python3 informe.py Data/camion.csv Data/precios.csv
+bash $ python3 tabla_informe.py Data/camion.csv Data/precios.csv
     Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
       Lima        100      $32.2       8.02
