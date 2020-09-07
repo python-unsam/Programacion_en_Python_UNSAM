@@ -270,7 +270,7 @@ def division(dividendo, divisor):
 
 Es interesante discutir un poco en detalle este ejemplo. La función *asume* que el divisor es no nulo. Esto tiene sentido, ya que no podemos dividir por cero. Podríamos atrapar el error y, si nos pasan un divisor nulo, devolver por ejemplo *cero*. De esta forma evitamos que se termine el programa. Pero ¿tiene sentido esto? ¿Nos ahorra un problema o nos genera un nuevo problema? No es una buena práctica atrapar errores que no sabemos manejar. Que `1/0` devuelva cero en principio **no es correcto**. Como ya mencionamos en la Sección ?, es mejor los errores generen excepciones ruidosamente y no atraparlas si no sabemos exactamente cómo manejarlas.
 
-Veamos otro ejemplo, tal vez más interesante. Consideremos una función que implementa la sumatoria *sum_i=desde^hasta i*.
+Veamos otro ejemplo, tal vez más interesante. Consideremos una función `sumar_enteros(desde, hasta)` que implementa la sumatoria *sum_i=desde^hasta i*.
 
 ![sumar_enteros(desde, hasta) = \sum_{i=desde}^{hasta} i
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Csum_%7Bi%3Ddesde%7D%5E%7Bhasta%7D+i%0A)
