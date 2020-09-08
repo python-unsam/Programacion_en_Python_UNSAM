@@ -13,13 +13,10 @@ También estudiamos Vimos diversos estilos de gráficos, como obtener un vistazo
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
 
-
+1. `errores_silenciados.py` del [Ejercicio 6.1](../06_Plt_Especificacion_y_Documentacion/01_Excepciones.md#ejercicio-61-errores-silenciados).
 1. El archivo `fileparse.py` del [Ejercicio 6.4](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-64-de-archivos-a-objetos-cual-archivos).
-2. El archivo `tabla_informe.py` del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-65-arreglemos-las-funciones-existentes).
- 1. `errores_silenciados.py` del [Ejercicio 6.1](../06_Plt_Especificacion_y_Documentacion/01_Excepciones.md#ejercicio-61-errores-silenciados).
- 2. `tabla_informe.py` y `costo_camion.py` del [Ejercicio 6.3](../06_Plt_Especificacion_y_Documentacion/02_305Main_module.md#ejercicio-63-hacer-un-script).
- 3. `informe.py` del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-65-arreglemos-las-funciones-existentes)
- 4. `documentacion.py` del [Ejercicio 6.7](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-67-funciones-y-documentacion)
+1. El archivo `tabla_informe.py` del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-65-arreglemos-las-funciones-existentes).
+1. El archivo `documentacion.py` del [Ejercicio 6.7](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-67-funciones-y-documentacion)
  
 * Que completes [este formulario](https://docs.google.com/forms/) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
