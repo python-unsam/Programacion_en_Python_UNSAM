@@ -349,7 +349,7 @@ plt.show()
 
 En este ejercicio te pedimos:
 
-1. Modificalo poníendole nombres alos ejes ("tiempo" y distancia al orígen"), nombre al gráfico. 
+1. Modificalo poníendole nombres a los ejes ("tiempo" y distancia al orígen"), nombre al gráfico. 
 2. Graficá 12 trayectorias en la misma figura, con diferentes colores.
 3. Usá la estructura de subplots sugerida en el [Ejercicio 6.9](../06_Plt_Especificacion_y_Documentacion/06_matplotlib_basico.md#ejercicio-69-subplots-fuera-de-una-grilla) para graficar tres pubflots en una figura:
     * Arriba, grande, 12 trayectorias aleatorias como en el item anterior
