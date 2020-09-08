@@ -332,7 +332,7 @@ Row 7: Motivo: invalid literal for int() with base 10: ''
 ```
 
 ### Ejercicio 6.1: Errores silenciados
-Modificá `parse_csv()` de modo que el usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes. (guardá tu archivo como `errores_silenciados.py`) Por ejemplo:
+Modificá `parse_csv()` de modo que le usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes.Por ejemplo:
 
 ```python
 >>> camion = parse_csv('Data/missing.csv', types = [str,int,float], silence_errors = True)
