@@ -26,7 +26,7 @@ foo = funcion_que_crea_bar(
 ```
 
 ```python
-# Incorrecto
+# Incorrecto, en cualquier lado.
 foo = funcion_que_crea_bar(variable_1, variable2,
               variable_3)
 ```
@@ -99,7 +99,7 @@ spam(1)
 ```
 
 ```python
-# No:  
+# No, ese espacio es espantoso
 spam (1)
 ```
 
@@ -110,7 +110,7 @@ dict['key'] = list[index]
 ```
 
 ```python
-# No:  
+# No, ese espacio es igual de espantoso que el anterior
 dict ['key'] = list [index]
 ```
 
@@ -131,10 +131,11 @@ c = (a + b) * (a - b)
 # No:
 i=i+1
 submitted +=1
-x = x*2 - 1
+x = x*2 - 1 #no es recomendado pero a veces lo usamos
 hypot2 = x*x + y*y
 c = (a+b) * (a-b)
 ```
+
 
 
 ### Convenciones de nombres
