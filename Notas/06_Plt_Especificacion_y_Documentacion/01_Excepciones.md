@@ -158,7 +158,8 @@ La instancia de la variable suministrada a `except` (en nuestros ejemplos `e`) l
 ```python
 try:
     ...
-except RuntimeError as e:   # `e` contiene la excepción lanzada
+except RuntimeError as e:   
+    # `e` contiene la excepción lanzada con su mensaje específico
     ...
 ```
 

@@ -15,18 +15,20 @@ Si se continúa una línea hay dos opciones aceptables:
 
 ```pyhton
 # Correcto
-    foo = funcion_que_crea_bar(variable_1, variable2,
-                               variable_3)
-    # opcion 2
-    foo = funcion_que_crea_bar(
-                  variable_1, variable2,
-                  variable_3)
+#opción 1, indentar a la apertura del paréntesis:
+foo = funcion_que_crea_bar(variable_1, variable2,
+                           variable_3, variable_4)
+
+# opcion 2, agregar 4 espacios:
+foo = funcion_que_crea_bar(
+    variable_1, variable2,
+    variable_3)
 ```
 
 ```pyhton
 # Incorrecto
-    foo = funcion_que_crea_bar(variable_1, variable2,
-                  variable_3)
+foo = funcion_que_crea_bar(variable_1, variable2,
+              variable_3)
 ```
 
 ### Tamaño máximo de línea
@@ -40,13 +42,13 @@ Los imports de distintos módulos deben estar en líneas diferentes:
 
 ```pyhton
 # Sí: 
-    import os
-    import sys
+import os
+import sys
 ```
 
 ```pyhton
 # No:
-    import os, sys
+import os, sys
 ```
 
 Sí se pueden poner en una línea los elementos que se importan de un mismo módulo:
@@ -118,20 +120,20 @@ Usá espacios alrededor de operadores artiméticos:
 
 ```pyhton
 # Sí:
-    i = i + 1
-    submitted += 1
-    x = x * 2 - 1
-    hypot2 = x * x + y * y
-    c = (a + b) * (a - b)
+i = i + 1
+submitted += 1
+x = x * 2 - 1
+hypot2 = x * x + y * y
+c = (a + b) * (a - b)
 ```
 
 ```pyhton
 # No:
-    i=i+1
-    submitted +=1
-    x = x*2 - 1
-    hypot2 = x*x + y*y
-    c = (a+b) * (a-b)
+i=i+1
+submitted +=1
+x = x*2 - 1
+hypot2 = x*x + y*y
+c = (a+b) * (a-b)
 ```
 
 
