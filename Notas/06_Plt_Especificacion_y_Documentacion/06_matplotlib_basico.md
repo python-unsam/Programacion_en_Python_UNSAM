@@ -94,7 +94,7 @@ plt.show()
 
 Los gráficos que genera matplotlib son muy flexibles, te dejamos [un machete](https://github.com/matplotlib/cheatsheets/blob/master/cheatsheets.pdf) resumiendo las variaciones más usuales.
 
-A continuación presentamos detalles técnicos de esta biblioteca tan útil. No hace falta que te los aprendas (igual te los vas a olvidar), ni que pruebes todas las combinaciones. Podés vovler a esta página o a la [documentación oficial](https://scipy-lectures.org/intro/matplotlib/index.html) cuando lo necesites. Iguál mirá los ejercicios al final de esta sección, el primero es muy sencillo y te pedimos que lo entregues.
+A continuación presentamos detalles técnicos de esta biblioteca tan útil. No hace falta que te los aprendas (igual te los vas a olvidar), ni que pruebes todas las combinaciones. Podés volver a esta página o a la [documentación](https://matplotlib.org/) cuando lo necesites. Iguál mirá los ejercicios al final de esta sección, el primero es muy sencillo y te pedimos que lo entregues.
 
 ## Detalles de un plot simple
 

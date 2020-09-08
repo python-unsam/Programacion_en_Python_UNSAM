@@ -358,7 +358,7 @@ En resumen, el concepto de invariante de ciclo es una herramienta que nos permit
 ### Ejercicio 6.7: Invariante en sumas
 En el [Ejercicio 6.6](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-66-sumas), escribiste una función `sumar_enteros(desde, hasta)` que utiliza un ciclo. ¿Cuál es el invariante de este ciclo?
 
-### Parámetros mutables e inmutables
+## Parámetros mutables e inmutables
 
 Las funciones reciben parámetros que pueden ser mutables o inmutables.
 
