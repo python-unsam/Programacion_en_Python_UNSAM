@@ -272,7 +272,7 @@ fig = plt.figure(figsize=(cm2inch(12.8), cm2inch(9.6)))
 [oski]: # (acá hay un salto, merece una breve transición en el texto)
 
 ### Subplots
-Podés disponer tus plots en una grilla de intervalos regulares si usás `subplots`. Sólo tenés que especificar el número de columnas, el de filas y luego el del subplot.
+Podés disponer tus plots en una grilla de intervalos regulares si usás `subplots`. Sólo tenés que especificar el número de filas, el de columnas y finalmente el número de subplot.
 
 Ejemplo:
 
@@ -298,27 +298,12 @@ Ejemplo:
 ![COPETE](./sphx_glr_plot_axes-2_001.png)
 
 
-## Ejemplos de ploteos
+## Ejercicios:
 
-### Ploteos "dispersos" ó scatter plots
+Solo te pedimos que entregues el primero, los otros son optativos.
 
-Usando el código que sigue reproducí el gráfico cuidando el tamaño de las marcas, el color, y la transparencia de los trazos.
-
-Pista: El color depende del ángulo del punto (X,Y).
-```python
-n = 1024
-X = np.random.normal(0,1,n)
-Y = np.random.normal(0,1,n)
-plt.scatter(X,Y)
-```
-
-![COPETE](./sphx_glr_plot_scatter_001.png)
-
-### Gráficos de barras
-
-A partir del siguiente código, reproducí el gráfico que se muestra agregando etiquetas para las barras rojas.
-
-Pista: Cuidá la alineación del texto.
+### Ejercicio 6.8: Gráficos de barras
+Modificá el siguiente código para reproducir el gráfico que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
 
 ```python
 n = 12
@@ -337,26 +322,32 @@ plt.ylim(-1.25, +1.25)
 
 ![COPETE](./sphx_glr_plot_bar_001.png)
 
-### Múltiples plots
-
-A partir del siguiente código, reproducí el gráfico que se muestra.
-
-Pista: Podés usar varios subplots divididos de diferentes formas.
+### Ejercicio 6.9: Subplots fuera de una grilla
+Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots.
 
 ```python
-plt.subplot(2, 2, 1)
-plt.subplot(2, 2, 3)
-plt.subplot(2, 2, 4)
+import matplotlib.pyplot as plt
+
+fig = plt.figure()
+plt.subplot(2, 1, 1) # define la figura de arriba
+plt.plot([0,1,2],[0,1,0]) # dibuja la curva
+plt.xticks([]), plt.yticks([]) # saca las marcas
+
+plt.subplot(2, 2, 3) # define la primera de abajo, que sería la tercera si fuera una grilla regular de 2x2
+plt.plot([0,1],[0,1])
+plt.xticks([]), plt.yticks([])
+
+plt.subplot(2, 2, 4) # define la segunda de abajo, que sería la cuarta figura si fuera una grilla regular de 2x2
+plt.plot([0,1],[1,0])
+plt.xticks([]), plt.yticks([])
+
+plt.show()
 ```
 
-![COPETE](./sphx_glr_plot_multiplot_001.png)
+![COPETE](./ex_subplots.png)
 
-### Coordenadas polares
-
-
+### Ejercicio 6.10: Coordenadas polares
 A partir de este código, reproducí el siguiente gráfico.
-
-Pista: sólo necesitás modifcar los ejes.
 
 ```python
 plt.axes([0, 0, 1, 1])
@@ -374,6 +365,21 @@ for r, bar in zip(radii, bars):
 
 ![COPETE](./sphx_glr_plot_polar_001.png)
 
+_Pista_: sólo necesitás modifcar los ejes en la primera línea. Fijate que hay un parámetro `polar` que tiene por omisión valor `False`.
+
+### Ejercicio 6.11: Setear el color de un scatter plot
+Modificá el código que sigue para reproducir el gráfico prestando atencióan al tamaño de las marcas, el color, y la transparencia de los trazos.
+
+```python
+n = 1024
+X = np.random.normal(0,1,n)
+Y = np.random.normal(0,1,n)
+plt.scatter(X,Y)
+```
+
+![COPETE](./sphx_glr_plot_scatter_001.png)
+
+_Pista_: El color depende del ángulo del punto (X,Y), fijate cómo calcularlo.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Gráficos del azar***)](07_gráficos_del_azar.md)
