@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Cuestiones de diseño)](03_306Design_discussion.md)
 
 # 6.2 El módulo *main* (principal)
  
-En esta sección introducimos el concepto de un programa principal o un módulo principal. 
+En esta sección introducimos el concepto de **módulo principal**. 
 
 ### Función principal
 
@@ -51,7 +51,9 @@ if __name__ == '__main__':
 
 Los comandos dentro del `if` constituyen el *programa principal*
 
-### Programa principal vs. módulo importado
+
+
+### Módulo principal vs. módulo importado
 
 Cualquier archivo.py puede ejecutarse ya sea como el programa principal o como un módulo importado:  
 
@@ -63,7 +65,7 @@ bash % python3 prog.py # Corriendo como principal
 import prog   # Corriendo como módulo importado
 ```
 
-En ambos casos, `__name__` es el nombre del módulo. Sin embargo `__name__` sólo valdrá `__main__` si ese módulo está siendo ejecutado como el script principal. 
+La variable `__name__` es el nombre del módulo. Sin embargo, esta variable  `__name__` valdrá `__main__` si ese módulo está siendo ejecutado como el script principal. 
 
 Normalmente deseamos que los comandos que son parte del comportamiento del script en modo *principal* sólo se ejecuten si efectivamente el script es el módulo principal. No queremos que esos comandos se ejecuten si el módulo fue importado.
 
@@ -76,7 +78,7 @@ if __name__ == '__main__':
 
 ### Modelo de programa
 
-Éste es un modelo común para escribir un programa en Python:
+Éste es un modelo usual para escribir un programa en Python:
 
 ```python
 # prog.py
@@ -100,12 +102,13 @@ if __name__ == '__main__':
 
 ### Herramientas para la consola 
 
-Python es muy usado para ejecutar herramientas desde la línea de comandos, como hemos visto en clase:
+Python se usa muy frecuentemente para correr herramientas desde la línea de comandos. En clase vimos algún ejemplo:
 
 ```bash
 bash % python3 tabla_informe.py camion.csv precios.csv
 ```
-Lo cual significa que los scripts pueden ser ejecutados desde la terminal para casos como automatización de procesos, ejecutar tareas en "el fondo", etc.
+
+Esto permite que los scripts sean ejecutados desde la terminal para correr ciertos procesos automáticos, ejecutar tareas en segundo plano, etc.
 
 ### Argumentos en la línea de comandos
 
@@ -290,5 +293,5 @@ Costo total: 47671.15
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Cuestiones de diseño)](03_306Design_discussion.md)
 

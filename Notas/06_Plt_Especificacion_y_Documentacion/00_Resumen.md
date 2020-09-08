@@ -20,7 +20,7 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 
 * [6.1 Control de errores](01_Excepciones.md)
 * [6.2 El módulo *main* (principal)](02_305Main_module.md)
-* [6.3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos)](03_306Design_discussion.md)
+* [6.3 Cuestiones de diseño](03_306Design_discussion.md)
 * [6.4 Contratos: Especificación y Documentación](04_Especificación.md)
 * [6.5 Estilo](05_Documentar_y_Estilo.md)
 * [6.6 Matplotlib básico](06_matplotlib_basico.md)

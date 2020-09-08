@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
 
 # 6.4 Contratos: Especificación y Documentación
 
@@ -508,5 +508,5 @@ def collatz(n):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
 
