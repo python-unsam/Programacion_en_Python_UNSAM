@@ -13,7 +13,7 @@ También estudiamos Vimos diversos estilos de gráficos, como obtener un vistazo
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
 
-1. `errores_silenciados.py` del [Ejercicio 6.1](../06_Plt_Especificacion_y_Documentacion/01_Excepciones.md#ejercicio-61-errores-silenciados).
+1. El archivo `errores_silenciados.py` del [Ejercicio 6.1](../06_Plt_Especificacion_y_Documentacion/01_Excepciones.md#ejercicio-61-errores-silenciados).
 1. El archivo `fileparse.py` del [Ejercicio 6.4](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-64-de-archivos-a-objetos-cual-archivos).
 1. El archivo `tabla_informe.py` del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-65-arreglemos-las-funciones-existentes).
 1. El archivo `documentacion.py` del [Ejercicio 6.7](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-67-funciones-y-documentacion)
