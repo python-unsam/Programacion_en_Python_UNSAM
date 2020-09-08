@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Gráficos del azar***)](07_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Gráficos del azar***)](07_gráficos_del_azar.md)
 
-# 6.8 Cierre de la sexta clase
+# 6.7 Cierre de la sexta clase
 
-En esta sexta clase vimos como se hace una administración eficiente de errores, como atrapar excepciones, cómo lanzarlas, y cuando conviene hacer o no hacer estas cosas.
+En esta sexta clase vimos cómo se hace una administración eficiente de errores, cómo atrapar excepciones, cómo lanzarlas, y cuándo conviene hacer o no hacer estas cosas.
 
 Vimos que un archivo `.py` correctamente escrito puede usarse como un módulo, como un programa en sí mismo, o como ambas cosas dependiendo del caso, y mostramos que aunque uno esté escribiendo una pequeña función para solucionar un pequeño problema, es bueno pensar en grande y no imponer restricciones innecesarias.
 
@@ -24,5 +24,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 Gráficos del azar***)](07_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Gráficos del azar***)](07_gráficos_del_azar.md)
 

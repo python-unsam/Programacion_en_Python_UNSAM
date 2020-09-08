@@ -24,8 +24,8 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 * [6.4 Contratos: Especificación y Documentación](04_Especificación.md)
 * [6.5 Estilo](05_Documentar_y_Estilo.md)
 * [6.6 Matplotlib básico](06_matplotlib_basico.md)
-* [6.7 Gráficos del azar***](07_gráficos_del_azar.md)
-* [6.8 Cierre de la sexta clase](08_Cierre.md)
+* [6.7 Cierre de la sexta clase](07_Cierre.md)
+* [6.8 Gráficos del azar***](07_gráficos_del_azar.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)

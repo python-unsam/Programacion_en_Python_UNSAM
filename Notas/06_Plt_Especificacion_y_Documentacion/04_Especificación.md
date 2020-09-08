@@ -445,7 +445,7 @@ def veces(a, b):
     res = 0
     nb = b
     while nb != 0:
-        print(nb * a + res)
+        #print(nb * a + res)
         res += a
         nb -= 1
     return res

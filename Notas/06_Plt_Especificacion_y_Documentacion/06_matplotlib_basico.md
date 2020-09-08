@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Gráficos del azar***)](07_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 
 # 6.6 Matplotlib básico
 
@@ -384,5 +384,24 @@ plt.scatter(X,Y)
 _Pista_: El color depende del ángulo del punto (X,Y), fijate cómo calcularlo.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Gráficos del azar***)](07_gráficos_del_azar.md)
+### Ejercicio 6.13: Random Walks.
+Una "caminata al azar" ó random walk es modelo de muchos procesos naturales, probablemente el mas conocido sea el [movimiento browniano](https://es.wikipedia.org/wiki/Movimiento_browniano). Es un proceso por el cual en cada paso la posición puede: aumentar en 1, dismunuir en 1 ó no cambiar. Sabiendo que este código (analizálo, corrélo) devuelve una trayectoria en una dimension proveniente de un proceso de random walk
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def randomwalk(largo):
+    pasos=np.random.randint (-1,2,largo)    
+    return pasos.cumsum()
+
+plt.plot(randomwalk(100000))
+
+plt.show()
+```
+
+Graficálo para obtener algo de este estilo:
+![COPETE](./random_walk.png)
+
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 

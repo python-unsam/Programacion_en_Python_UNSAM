@@ -4,28 +4,28 @@
 
 ## PEP 8 - La guía de estilo para Python
 
-La comunidad de usuarios de Python ha adoptado una guía de estilo que facilita la lectura del código y la consistencia entre programas de distintos usuarios. Esta guía no es de seguimiento obligatorio, pero es altamente recomendable. El documento completo se denomina PEP 8 y está escrito originalmente en [inglés](https://www.python.org/dev/peps/pep-0008/), aunque hay alguna traducción al [castellano](http://recursospython.com/pep8es.pdf). 
+La comunidad de usuaries de Python ha adoptado una guía de estilo que facilita la lectura del código y la consistencia entre programas de distintos usuaries. Esta guía no es de seguimiento obligatorio, pero es altamente recomendable. El documento completo se denomina PEP 8 y está escrito originalmente en [inglés](https://www.python.org/dev/peps/pep-0008/), aunque hay alguna traducción al [castellano](http://recursospython.com/pep8es.pdf). 
 
 A continuación presentamos un resumen con solo algunas recomendaciones.
 
 ### Indentación
 Utilizar siempre 4 espacios y nunca mezclar tabuladores y espacios.
 
-Si se continua una línea hay dos opciones aceptables:
+Si se continúa una línea hay dos opciones aceptables:
 
 ```pyhton
 # Correcto
-    foo = funcion_que_crea_bar(variable_1, variable2
+    foo = funcion_que_crea_bar(variable_1, variable2,
                                variable_3)
     # opcion 2
     foo = funcion_que_crea_bar(
-                  variable_1, variable2
+                  variable_1, variable2,
                   variable_3)
 ```
 
 ```pyhton
 # Incorrecto
-    foo = funcion_que_crea_bar(variable_1, variable2
+    foo = funcion_que_crea_bar(variable_1, variable2,
                   variable_3)
 ```
 
@@ -39,12 +39,14 @@ Separar las definiciones de las clases y funciones con dos líneas en blanco. Lo
 Los imports de distintos módulos deben estar en líneas diferentes:
 
 ```pyhton
-Si: import os
+# Sí: 
+    import os
     import sys
 ```
 
 ```pyhton
-No: import os, sys
+# No:
+    import os, sys
 ```
 
 Sí se pueden poner en una línea los elementos que se importan de un mismo módulo:
@@ -53,69 +55,69 @@ Sí se pueden poner en una línea los elementos que se importan de un mismo mód
 from subprocess import Popen, PIPE
 ```
 
-Los imports deben ponerse siempre al principio del archivo, justo después de los comentarios y de la documentación y antes de la definición de las variables globales y las constantes.
+Los imports deben ponerse siempre al principio del archivo, justo después de los comentarios y de la documentación del archivo y antes de la definición de las variables globales y las constantes.
 
 Los imports deben agruparse en el siguiente orden:
 
-1. bibliotecas o módulos estandar. 
-2. bibliotecas o módulos de 3os.
-3. bibliotecas o módulos locales o propios
+1. bibliotecas o módulos estándar. 
+2. bibliotecas o módulos de terceros.
+3. bibliotecas o módulos locales o propios.
 
 Cada grupo de imports debe estar separado por una línea en blanco.
 
 ### Espacios en blanco en expresiones
 Evitar espacios en blanco extra en:
 
-Dentro de paréntesis.
+Dentro de paréntesis, corchetes o llaves.
 ```pyhton
-Yes: 
+# Sí: 
 spam(ham[1], {eggs: 2})
 ```
 
 ```pyhton
-No:  
+# No:  
 spam( ham[ 1 ], { eggs: 2 })
 ```
 
-Después de una coma.
+Antes de una coma.
 ```pyhton
-Yes: 
-if x == 4: print x, y; x, y = y, x N
+# Sí: 
+if x == 4: print x, y; x, y = y, x 
 ```
 
 ```pyhton
-No: 
+# No: 
 if x == 4 : print x , y ; x , y = y , x
 ```
 
 Antes del paréntesis de una llamada a una función.
 ```pyhton
-Yes: 
+# Sí: 
 spam(1)
 ```
 
 ```pyhton
-No:  
+# No:  
 spam (1)
 ```
 
-Antes del paréntesis de un índice.
+Antes del corchete de un índice o clave.
 ```pyhton
-Yes: 
+# Sí: 
 dict['key'] = list[index]
 ```
 
 ```pyhton
-No:  
+# No:  
 dict ['key'] = list [index]
 ```
 
-Siempre separá los operadores binarios con un espacio simple a ambos lados: asignación (=), asignación aumentada (+=, -= etc.), comparación (==, <, >, !=, <>, <=, >=, in, not in, is, is not), booleanos (and, or, not).
+Siempre separá los operadores binarios con un espacio simple a ambos lados: asignación (=), asignación aumentada (+=, -= , etc.), comparación (==, <, >, !=, <>, <=, >=, in, not in, is, is not), booleanos (and, or, not).
 
 Usá espacios alrededor de operadores artiméticos:
 
 ```pyhton
-Yes:
+# Sí:
     i = i + 1
     submitted += 1
     x = x * 2 - 1
@@ -124,8 +126,7 @@ Yes:
 ```
 
 ```pyhton
-No:
-
+# No:
     i=i+1
     submitted +=1
     x = x*2 - 1
@@ -134,15 +135,15 @@ No:
 ```
 
 
-### Concenciones de nombres
+### Convenciones de nombres
 
 Las convenciones de nombres en Python son un lío y probablemente nunca lograremos que todo sea consistente. Sin embargo, te damos algunas de las recomendaciones actuales sobre nombres. Los nuevos módulos deberían ser escritos respetándolos, aunque la consistencia interna es preferible para bibliotecas que ya tengan partes hechas...
 
 ### Estilos de nombres
 
-Hay muchos estilos para nombrar variable, funciones, etc. Es útil reconocer qué estiulo se está usando, independientemente de para qué se está usando.
+Hay muchos estilos para nombrar variable, funciones, etc. Es útil reconocer qué estilo se está usando, independientemente de para qué se está usando.
 
-Estos son algunos estilos:
+Éstos son algunos estilos:
 
 * b (una sola letra, en minúscula)
 * B (una sola letra, en mayúscula)
@@ -158,7 +159,7 @@ Se recomienda no usar acentos ni caracateres especiales de ningún tipo para evi
 
 ### Hay mucho más!
 
-Esto es solo un breve resúmen, mirá el [PEP 8](https://www.python.org/dev/peps/pep-0008/) para tener toda la información sobre estilo recomendado en Python.
+Esto es solo un breve resumen, mirá el [PEP 8](https://www.python.org/dev/peps/pep-0008/) para tener toda la información sobre estilo recomendado en Python.
 
 ## Zen de Pyhton
 

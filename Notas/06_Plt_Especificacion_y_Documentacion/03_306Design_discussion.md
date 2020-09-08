@@ -34,7 +34,7 @@ with open('file.csv') as f:
     d = read_data(f)
 ```
 
-* ¿Cuál de las funciones `read_data()` preferís y porqué?
+* ¿Cuál de las funciones `read_data()` preferís y por qué?
 * ¿Cuál de las funciones permite mayor flexibilidad?
 
 ### Una idea profunda: "Duck Typing" (Identificación de patos)
@@ -58,7 +58,7 @@ Esto implica que la podemos usar con otro tipo de *líneas*, no necesariamente a
 
 
 ```python
-# Un archivo .CSV 
+# Un archivo .csv
 lines = open('data.csv')
 data = read_data(lines)
 
@@ -66,12 +66,12 @@ data = read_data(lines)
 lines = gzip.open('data.csv.gz','rt')
 data = read_data(lines)
 
-# La entrada estándard (Standard Input), por teclado
+# La entrada estándar (Standard Input), por teclado
 lines = sys.stdin
 data = read_data(lines)
 
 # Una lista de cadenas
-lines = ['Kinoto,50,91.1','Naranja,75,123.45', ... ]
+lines = ['Quinoto,50,91.1','Naranja,75,123.45', ... ]
 data = read_data(lines)
 ```
 
@@ -81,7 +81,7 @@ Esto nos lleva nuevamente a la identificación de patos: es suficiente con saber
 lines = open('data.csv')
 lines = gzip.open('data.csv.gz','rt')
 lines = sys.stdin
-lines = ['Kinoto,50,91.1','Naranja,75,123.45', ... ]
+lines = ['Quinoto,50,91.1','Naranja,75,123.45', ... ]
 ```
 
 son iterables de texto, por lo tanto los usaremos como "patos" en la función `read_data()`.
