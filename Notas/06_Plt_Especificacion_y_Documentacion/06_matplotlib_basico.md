@@ -2,11 +2,6 @@
 
 # 6.6 Matplotlib básico
 
-plots de lineas, una intro completa a traducir:
-[esto](https://scipy-lectures.org/intro/matplotlib/index.html)
-
-##  Matplotlib: gráficos
-
 ##  Introducción
 
 Matplotlib es probablemente el paquete de Python mas usado para crear gráficos en 2D, también llamados ploteos o "plots". Provee una forma rápida de graficar los datos en varios formatos de alta calidad listos para ser presentados y publicados. En esta sección vamos a explorar matplotlib en modo interactivo y vamos a ver los casos mas comunes.
