@@ -2,7 +2,7 @@
 
 # 6.6 Matplotlib básico
 
-Matplotlib es probablemente la biblioteca de Python más usado para crear gráficos en 2D, también llamados plots. Provée una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos o/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib.
+Matplotlib es probablemente la biblioteca de Python más usado para crear gráficos en 2D, también llamados plots. Provée una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos y/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib.
 
 ##  pyplot
 *pyplot* proporciona una interfase a la biblioteca de matplotlib. Pyplot está diseñada siguiendo el estilo de Matlab y la mayoría de los comandos para graficar en pyplot tienen análogos en Matlab con argumentos similares. Explicaremos las instrucciones más importantes con ejemplos interactivos. 
