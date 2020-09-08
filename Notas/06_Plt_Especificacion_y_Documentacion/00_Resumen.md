@@ -19,11 +19,11 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 
 
 * [6.1 Control de errores](01_Excepciones.md)
-* [6.2 El módulo *main* (principal)](02_305Main_module.md)
-* [6.3 Cuestiones de diseño](03_306Design_discussion.md)
-* [6.4 Contratos: Especificación y Documentación](04_Especificación.md)
-* [6.5 Estilo](05_Documentar_y_Estilo.md)
-* [6.6 Matplotlib básico](06_matplotlib_basico.md)
+* [6.2 El módulo *main* (principal)](02_Modulo_principal.md)
+* [6.3 Cuestiones de diseño](03_Flexibilidad.md)
+* [6.4 Contratos: Especificación y Documentación](04_Especificacion_y_Documentacion.md)
+* [6.5 Estilo](05_Estilo.md)
+* [6.6 Matplotlib básico](06_Matplotlib.md)
 * [6.7 Cierre de la sexta clase](07_Cierre.md)
 
 

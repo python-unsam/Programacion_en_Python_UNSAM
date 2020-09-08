@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificación.md) \| [Próximo (6 Matplotlib básico)](06_matplotlib_basico.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificacion_y_Documentacion.md) \| [Próximo (6 Matplotlib básico)](06_Matplotlib.md)
 
 # 6.5 Estilo
 
@@ -211,5 +211,5 @@ El Zen de Python es una colección de 20 principios de software que influyen en 
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificación.md) \| [Próximo (6 Matplotlib básico)](06_matplotlib_basico.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificacion_y_Documentacion.md) \| [Próximo (6 Matplotlib básico)](06_Matplotlib.md)
 

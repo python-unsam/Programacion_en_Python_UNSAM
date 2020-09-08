@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_Modulo_principal.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificacion_y_Documentacion.md)
 
 # 6.3 Cuestiones de diseño
 
@@ -135,5 +135,5 @@ Arreglá las funciones `leer_camion()` y `leer_precios()` en el archivo `tabla_i
 Por ahora dejamos estos archivos y pasamos a otras discusiones. Dejá estos archivos listos para entregar al final de la clase. 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificación.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_Modulo_principal.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificacion_y_Documentacion.md)
 

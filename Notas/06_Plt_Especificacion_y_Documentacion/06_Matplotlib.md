@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 
 # 6.6 Matplotlib básico
 
@@ -351,7 +351,7 @@ En este ejercicio te pedimos:
 
 1. Modificalo poníendole nombres a los ejes ("tiempo" y distancia al orígen"), nombre al gráfico. 
 2. Graficá 12 trayectorias en la misma figura, con diferentes colores.
-3. Usá la estructura de subplots sugerida en el [Ejercicio 6.9](../06_Plt_Especificacion_y_Documentacion/06_matplotlib_basico.md#ejercicio-69-subplots-fuera-de-una-grilla) para graficar tres pubflots en una figura:
+3. Usá la estructura de subplots sugerida en el [Ejercicio 6.9](../06_Plt_Especificacion_y_Documentacion/06_Matplotlib.md#ejercicio-69-subplots-fuera-de-una-grilla) para graficar tres pubflots en una figura:
     * Arriba, grande, 12 trayectorias aleatorias como en el item anterior
     * Abajo a la izquierda la trayectoria que más se aleja del origen.
     * Abajo a la izquierda la trayectoria que menos se aleja del origen.
@@ -420,5 +420,5 @@ plt.scatter(X,Y)
 _Pista_: El color depende del ángulo del punto (X,Y), fijate cómo calcularlo.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 

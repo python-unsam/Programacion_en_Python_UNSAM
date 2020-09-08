@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_Flexibilidad.md) \| [Próximo (5 Estilo)](05_Estilo.md)
 
 # 6.4 Contratos: Especificación y Documentación
 
@@ -356,7 +356,7 @@ En resumen, el concepto de invariante de ciclo es una herramienta que nos permit
 - un algoritmo termina (y no se cuelga).
 
 ### Ejercicio 6.7: Invariante en sumas
-En el [Ejercicio 6.6](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-66-sumas), escribiste una función `sumar_enteros(desde, hasta)` que utiliza un ciclo. ¿Cuál es el invariante de este ciclo?
+En el [Ejercicio 6.6](../06_Plt_Especificacion_y_Documentacion/04_Especificacion_y_Documentacion.md#ejercicio-66-sumas), escribiste una función `sumar_enteros(desde, hasta)` que utiliza un ciclo. ¿Cuál es el invariante de este ciclo?
 
 ## Parámetros mutables e inmutables
 
@@ -466,5 +466,5 @@ def collatz(n):
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_Flexibilidad.md) \| [Próximo (5 Estilo)](05_Estilo.md)
 
