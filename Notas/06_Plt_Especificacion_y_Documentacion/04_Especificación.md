@@ -470,6 +470,8 @@ Analizar cada una de las siguientes funciones.
 ¿Es necesario agregar comentarios?
 ¿Se puede simplificar el código y/o mejorar su legibilidad?
 ¿Hay algún invariante de ciclo?
+
+Agregale la documentación pertinente (incluyendo )
 Por favor: Guardá este código y tus respuestas en `documentacion.py`.
 
 ```python
