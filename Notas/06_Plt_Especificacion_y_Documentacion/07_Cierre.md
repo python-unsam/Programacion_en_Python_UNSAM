@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Gráficos del azar***)](07_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md)
 
 # 6.7 Cierre de la sexta clase
 
@@ -24,5 +24,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Gráficos del azar***)](07_gráficos_del_azar.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md)
 

@@ -301,7 +301,7 @@ Ejemplo:
 
 
 ## Ejercicios:
-Solo te pedimos que entregues el primero, los otros son optativos.
+Solo te pedimos que entregues el segundo ejercicio, los otros son optativos.
 
 ### Ejercicio 6.9: Subplots fuera de una grilla
 Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots. 
