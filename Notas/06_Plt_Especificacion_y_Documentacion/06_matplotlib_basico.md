@@ -2,9 +2,7 @@
 
 # 6.6 Matplotlib básico
 
-##  Introducción
-
-Matplotlib es probablemente el paquete de Python mas usado para crear gráficos en 2D, también llamados ploteos o "plots". Provee una forma rápida de graficar los datos en varios formatos de alta calidad listos para ser presentados y publicados. En esta sección vamos a explorar matplotlib en modo interactivo y vamos a ver los casos mas comunes.
+Matplotlib es probablemente el paquete de Python mas usado para crear gráficos en 2D, también llamados ploteos o "plots". Provée una forma rápida de graficar datos en varios formatos de alta calidad para ser compartidos o/o publicados. En esta sección vamos a explorar matplotlib en modo interactivo y vamos a ver los casos mas comunes.
 
 ##  pyplot
  *pyplot* proporciona una interfase a la biblioteca de matplotlib, que es orientada a objetos como todo en Python. Pyplot está diseñada siguiendo el producto Matlab™. Por lo tanto la mayoría de los comandos para graficar en pyplot tienen análogos en Matlab™ con argumentos similares. Explicaremos las instrucciones mas importantes con ejemplos interactivos. 
