@@ -303,7 +303,7 @@ Ejemplo:
 ## Ejercicios:
 Solo te pedimos que entregues el primero, los otros son optativos.
 
-### Ejercicio 6.8: Subplots fuera de una grilla
+### Ejercicio 6.9: Subplots fuera de una grilla
 Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots. Guarda tu solución en el archivo `subplots.py`
 
 ```python
@@ -327,7 +327,7 @@ plt.show()
 
 ![COPETE](./ex_subplots.png)
 
-### Ejercicio 6.9: Gráficos de barras
+### Ejercicio 6.10: Gráficos de barras
 Modificá el siguiente código para reproducir el gráfico que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
 
 ```python
@@ -348,7 +348,7 @@ plt.ylim(-1.25, +1.25)
 ![COPETE](./sphx_glr_plot_bar_001.png)
 
 
-### Ejercicio 6.10: Coordenadas polares
+### Ejercicio 6.11: Coordenadas polares
 A partir de este código, reproducí el siguiente gráfico.
 
 ```python
@@ -369,7 +369,7 @@ for r, bar in zip(radii, bars):
 
 _Pista_: sólo necesitás modifcar los ejes en la primera línea. Fijate que hay un parámetro `polar` que tiene por omisión valor `False`.
 
-### Ejercicio 6.11: Setear el color de un scatter plot
+### Ejercicio 6.12: Setear el color de un scatter plot
 Modificá el código que sigue para reproducir el gráfico prestando atencióan al tamaño de las marcas, el color, y la transparencia de los trazos.
 
 ```python

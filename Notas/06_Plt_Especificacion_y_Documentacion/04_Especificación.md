@@ -278,9 +278,10 @@ comportamiento del código. Son en efecto un *contrato* entre el código invocan
 
 
 ### Ejercicio 6.6: Sumas
-Realizar la implementación correspondiente a la función `sumar_enteros`. 
+En este ejercicio vas a realizar dos implementaciones correspondientes a la función `sumar_enteros` definida recién. 
 
-Extra: ¿Lo podés hacer sin ciclos? ¿Podés implementar esta función en tiempo constante (es decir, usando una cantidad de operaciones que no depende de las entradas a la función)?
+1. En la primera implementación te pedimos que uses un ciclo.
+2. En la sugunda te pedimos que lo hagas sin ciclos: implementá la función de manera que trabaje en tiempo constante (es decir, usando una cantidad de operaciones que no depende de las entradas a la función.
 
 _Ayuda: Estas sumas se pueden escribir como diferencia de dos [números triagulares](https://es.wikipedia.org/wiki/N%C3%BAmero_triangular)._
 
@@ -351,8 +352,11 @@ def suma(lista):
 ```
 
 En resumen, el concepto de invariante de ciclo es una herramienta que nos permite comprender (explicitar) mejor cómo funciona un algoritmo. Resulta fundamental en la teoría de algoritmos, donde es necesario para *demostrar* que:
-- un algoritmo es correcto, es decir que realiza la tarea descripta por la pre y poscondición
-- un algoritmo termina (y no se cuelga)
+- un algoritmo es correcto, es decir que realiza la tarea descripta por la pre y poscondición.
+- un algoritmo termina (y no se cuelga).
+
+### Ejercicio 6.7: Invariante en sumas
+En el [Ejercicio 6.6](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-66-sumas), escribiste una función `sumar_enteros(desde, hasta)` que utiliza un ciclo. ¿Cuál es el invariante de este ciclo?
 
 ### Parámetros mutables e inmutables
 
@@ -407,7 +411,7 @@ caso, los cambios realizados tienen efecto tanto dentro como fuera de la funció
 
 ## Ejercicios
 
-### Ejercicio 6.7: Funciones y documentación
+### Ejercicio 6.8: Funciones y documentación
 Para cada una de las siguientes funciones:
 * Pensá cuál es el contrato de la función.
 * Agregale la documentación adecuada.
