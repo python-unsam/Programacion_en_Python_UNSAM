@@ -11,7 +11,7 @@ Matplotlib es probablemente la biblioteca de Python más usado para crear gráfi
 from matplotlib import pyplot as plt
 ```
 
-## Un simple plot
+## Un plot simple 
 Para empezar, vamos a plotear las funciones _seno_ y _coseno_ en el mismo gráfico. Partiendo de la configuración básica, vamos a ir cambiando el gráfico paso por paso para que quede como queremos.
 
 Primero hay que obtener los datos para graficar:
@@ -45,7 +45,7 @@ plt.plot(X, S)
 plt.show()
 ```
 
-### El gráfico básico
+### Un gráfico básico
 
 En el siguiente script, hemos explicitado y comentado todas las propiedades de una figura que influyen en la apariencia de un gráfico.
 
@@ -94,7 +94,9 @@ plt.show()
 
 Los gráficos que genera matplotlib son muy flexibles, te dejamos [un machete](https://github.com/matplotlib/cheatsheets/blob/master/cheatsheets.pdf) resumiendo las variaciones más usuales.
 
-A continuación presentamos detalles técnicos de esta biblioteca tan útil. No hace falta que te los aprendas (igual te los vas a olvidar), ni que pruebes todas las combinaciones. Podés vovler a esta página o a la [documentación oficial](https://scipy-lectures.org/intro/matplotlib/index.html) cuando lo necesites.
+A continuación presentamos detalles técnicos de esta biblioteca tan útil. No hace falta que te los aprendas (igual te los vas a olvidar), ni que pruebes todas las combinaciones. Podés vovler a esta página o a la [documentación oficial](https://scipy-lectures.org/intro/matplotlib/index.html) cuando lo necesites. Iguál mirá los ejercicios al final de esta sección, el primero es muy sencillo y te pedimos que lo entregues.
+
+## Detalles de un plot simple
 
 ### Como cambiar los colores y ancho de los trazos
 
@@ -299,31 +301,10 @@ Ejemplo:
 
 
 ## Ejercicios:
-
 Solo te pedimos que entregues el primero, los otros son optativos.
 
-### Ejercicio 6.8: Gráficos de barras
-Modificá el siguiente código para reproducir el gráfico que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
-
-```python
-n = 12
-X = np.arange(n)
-Y1 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
-Y2 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
-
-plt.bar(X, +Y1, facecolor='#9999ff', edgecolor='white')
-plt.bar(X, -Y2, facecolor='#ff9999', edgecolor='white')
-
-for x, y in zip(X, Y1):
-    plt.text(x + 0.4, y + 0.05, '%.2f' % y, ha='center', va='bottom')
-
-plt.ylim(-1.25, +1.25)
-```
-
-![COPETE](./sphx_glr_plot_bar_001.png)
-
-### Ejercicio 6.9: Subplots fuera de una grilla
-Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots.
+### Ejercicio 6.8: Subplots fuera de una grilla
+Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots. Guarda tu solución en el archivo `subplots.py`
 
 ```python
 import matplotlib.pyplot as plt
@@ -345,6 +326,27 @@ plt.show()
 ```
 
 ![COPETE](./ex_subplots.png)
+
+### Ejercicio 6.9: Gráficos de barras
+Modificá el siguiente código para reproducir el gráfico que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
+
+```python
+n = 12
+X = np.arange(n)
+Y1 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
+Y2 = (1 - X / float(n)) * np.random.uniform(0.5, 1.0, n)
+
+plt.bar(X, +Y1, facecolor='#9999ff', edgecolor='white')
+plt.bar(X, -Y2, facecolor='#ff9999', edgecolor='white')
+
+for x, y in zip(X, Y1):
+    plt.text(x + 0.4, y + 0.05, '%.2f' % y, ha='center', va='bottom')
+
+plt.ylim(-1.25, +1.25)
+```
+
+![COPETE](./sphx_glr_plot_bar_001.png)
+
 
 ### Ejercicio 6.10: Coordenadas polares
 A partir de este código, reproducí el siguiente gráfico.

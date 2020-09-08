@@ -16,7 +16,7 @@ Para cerrar esta clase te pedimos dos cosas:
 1. El archivo `fileparse.py` del [Ejercicio 6.4](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-64-de-archivos-a-objetos-cual-archivos).
 1. El archivo `tabla_informe.py` del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-65-arreglemos-las-funciones-existentes).
 1. El archivo `documentacion.py` del [Ejercicio 6.7](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-67-funciones-y-documentación).
-1. El archivo `plots.py` del Ejercicio ?.
+1. El archivo `subplots.py` del Ejercicio ?.
  
 * Que completes [este formulario](https://docs.google.com/forms/) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
