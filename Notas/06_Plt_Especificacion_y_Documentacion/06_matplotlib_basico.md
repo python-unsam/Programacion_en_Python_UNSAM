@@ -304,7 +304,7 @@ Ejemplo:
 Solo te pedimos que entregues el primero, los otros son optativos.
 
 ### Ejercicio 6.9: Subplots fuera de una grilla
-Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots. Guarda tu solución en el archivo `subplots.py`
+Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots. 
 
 ```python
 import matplotlib.pyplot as plt
@@ -327,7 +327,43 @@ plt.show()
 
 ![COPETE](./ex_subplots.png)
 
-### Ejercicio 6.10: Gráficos de barras
+### Ejercicio 6.10: Caminatas al azar
+
+Una [caminata al azar](https://es.wikipedia.org/wiki/Camino_aleatorio) ó *random walk* es una formalización matemática de la trayectoria que resulta de hacer sucesivos pasos aleatorios. Por ejemplo, la ruta trazada por una molécula mientras viaja por un líquido o un gas, el camino que sigue un animal en su búsqueda de comida, el precio de una acción fluctuante y la situación financiera de un jugador pueden tratarse como una caminata aleatoria.
+
+El siguiente código genera una caminata al azar de `N` pasos de largo y la grafica.
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+def randomwalk(largo):
+    pasos=np.random.randint (-1,2,largo)    
+    return pasos.cumsum()
+
+N = 100000
+
+plt.plot(randomwalk(N))
+plt.show()
+```
+
+En este ejercicio te pedimos:
+
+1. Modificalo poníendole nombres alos ejes ("tiempo" y distancia al orígen"), nombre al gráfico. 
+2. Graficá 12 trayectorias en la misma figura, con diferentes colores.
+3. Usá la estructura de subplots sugerida en el [Ejercicio 6.9](../06_Plt_Especificacion_y_Documentacion/06_matplotlib_basico.md#ejercicio-69-subplots-fuera-de-una-grilla) para graficar tres pubflots en una figura:
+    * Arriba, grande, 12 trayectorias aleatorias como en el item anterior
+    * Abajo a la izquierda la trayectoria que más se aleja del origen.
+    * Abajo a la izquierda la trayectoria que menos se aleja del origen.
+
+Ojo, cuando decimos la que más o menos se aleja, nos referimos a *algún momento*, no necesariamente a la que termina más cerca o más lejos.
+
+Guarda tu solución al último punto en el archivo `random_walk.py`. Debería verse aproximadamente como este plot:
+
+![RW](./RW.png)
+
+
+### Ejercicio 6.11: Gráficos de barras
 Modificá el siguiente código para reproducir el gráfico que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
 
 ```python
@@ -348,7 +384,7 @@ plt.ylim(-1.25, +1.25)
 ![COPETE](./sphx_glr_plot_bar_001.png)
 
 
-### Ejercicio 6.11: Coordenadas polares
+### Ejercicio 6.12: Coordenadas polares
 A partir de este código, reproducí el siguiente gráfico.
 
 ```python
@@ -369,7 +405,7 @@ for r, bar in zip(radii, bars):
 
 _Pista_: sólo necesitás modifcar los ejes en la primera línea. Fijate que hay un parámetro `polar` que tiene por omisión valor `False`.
 
-### Ejercicio 6.12: Setear el color de un scatter plot
+### Ejercicio 6.13: Setear el color de un scatter plot
 Modificá el código que sigue para reproducir el gráfico prestando atencióan al tamaño de las marcas, el color, y la transparencia de los trazos.
 
 ```python
@@ -383,25 +419,6 @@ plt.scatter(X,Y)
 
 _Pista_: El color depende del ángulo del punto (X,Y), fijate cómo calcularlo.
 
-
-### Ejercicio 6.13: Random Walks.
-Una "caminata al azar" ó random walk es modelo de muchos procesos naturales, probablemente el mas conocido sea el [movimiento browniano](https://es.wikipedia.org/wiki/Movimiento_browniano). Es un proceso por el cual en cada paso la posición puede: aumentar en 1, dismunuir en 1 ó no cambiar. Sabiendo que este código (analizálo, corrélo) devuelve una trayectoria en una dimension proveniente de un proceso de random walk
-
-```python
-import numpy as np
-import matplotlib.pyplot as plt
-
-def randomwalk(largo):
-    pasos=np.random.randint (-1,2,largo)    
-    return pasos.cumsum()
-
-plt.plot(randomwalk(100000))
-
-plt.show()
-```
-
-Graficálo para obtener algo de este estilo:
-![COPETE](./random_walk.png)
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Documentar_y_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 
