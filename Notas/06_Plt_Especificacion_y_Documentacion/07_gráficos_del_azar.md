@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Cierre*)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Cierre de la sexta clase)](08_Cierre.md)
 
 # 6.7 Gráficos del azar***
 
@@ -53,5 +53,5 @@ Cúantos puntos hay que generar aproximadamente, para obtener el N-ésimo dígit
 -- sigo mas tarde con caminatas al azar --
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Cierre*)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_matplotlib_basico.md) \| [Próximo (8 Cierre de la sexta clase)](08_Cierre.md)
 

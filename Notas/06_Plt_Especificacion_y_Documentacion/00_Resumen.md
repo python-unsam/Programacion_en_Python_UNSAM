@@ -20,12 +20,12 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 
 * [6.1 Control de errores](01_Excepciones.md)
 * [6.2 El módulo *main* (principal)](02_305Main_module.md)
-* [6.3 Temas de diseño](03_306Design_discussion.md)
+* [6.3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos)](03_306Design_discussion.md)
 * [6.4 Contratos: Especificación y Documentación](04_Especificación.md)
 * [6.5 Estilo](05_Documentar_y_Estilo.md)
 * [6.6 Matplotlib básico](06_matplotlib_basico.md)
 * [6.7 Gráficos del azar***](07_gráficos_del_azar.md)
-* [6.8 Cierre*](08_Cierre.md)
+* [6.8 Cierre de la sexta clase](08_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Creación de módulos, SO y Pandas)](../07_Modulos_Pandas_SO/00_Resumen.md)

@@ -374,7 +374,7 @@ Esta parte es un toque técnica y merece una mirada de más cerca. El paso más 
 Y que las columnas seleccionadas fueran:
 
 ```python
->>> selec = ['nombre', 'cajones']
+>>> select = ['nombre', 'cajones']
 >>>
 ```
 

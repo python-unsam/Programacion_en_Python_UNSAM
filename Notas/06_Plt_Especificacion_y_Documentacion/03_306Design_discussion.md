@@ -1,15 +1,17 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificación.md)
 
-# 6.3 Temas de diseño
+# 6.3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos)
 
-In this section we reconsider a design decision made earlier.
+Cuestiones de diseño
 
-### Filenames versus Iterables
+Vamos a volver a evaluar una desición de diseño que hicimos antes.
 
-Compare these two programs that return the same output.
+### Archivos versus iterables
+
+Compará estos dos programas que resultan en la misma salida.
 
 ```python
-# Provide a nombre_archivo
+# Necesita el nombre de un archivo
 def read_data(nombre_archivo):
     records = []
     with open(nombre_archivo) as f:
@@ -22,7 +24,7 @@ d = read_data('file.csv')
 ```
 
 ```python
-# Provide lines
+# Necesita líneas de texto
 def read_data(lines):
     records = []
     for line in lines:
@@ -34,20 +36,16 @@ with open('file.csv') as f:
     d = read_data(f)
 ```
 
-* Which of these functions do you prefer? Why?
-* Which of these functions is more flexible?
+* ¿Cuál de las funciones `read_data()` preferís y porqué ?
+* ¿Cuál de las funciones permite mayor flexibilidad ?
 
-### Deep Idea: "Duck Typing"
+### Una idea profunda: "Duck Typing" (Identificación de patos)
 
-[Duck Typing](https://en.wikipedia.org/wiki/Duck_typing) is a computer
-programming concept to determine whether an object can be used for a
-particular purpose.  It is an application of the [duck
-test](https://en.wikipedia.org/wiki/Duck_test).
+[Duck Typing](https://en.wikipedia.org/wiki/Duck_typing) del inglés o en español ["Test del pato"](https://es.wikipedia.org/wiki/Duck_typing) es un concepto usado en programación para determinar si un objeto puede ser usado para un propósito en particular. Se trata de una aplicación particular del [test del pato](https://en.wikipedia.org/wiki/Duck_test) que puede resumirse así:
 
-> If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck.
+> Si un ave se parece a un pato, nada como un pato, y grazna como un pato, entonces probablemente se trate de un pato.
 
-In the second version of `read_data()` above, the function expects any
-iterable object. Not just the lines of a file.
+Mientras que la primera versión de `read_data()` requiere específicamente líneas de un archivo de texto, la segunda versión funciona con *cualquier* iterable. 
 
 ```python
 def read_data(lines):
@@ -58,39 +56,48 @@ def read_data(lines):
     return records
 ```
 
-This means that we can use it with other *lines*.
+Esto implica que la podemos usar con otros tipos de *líneas*, no necesariamente archivos. Veamos algunos ejemplos.
+
 
 ```python
-# A CSV file
+# Un archivo .CSV 
 lines = open('data.csv')
 data = read_data(lines)
 
-# A zipped file
+# Un archivo zipeado 
 lines = gzip.open('data.csv.gz','rt')
 data = read_data(lines)
 
-# The Standard Input
+# La entrada estándard (Standard Input)
 lines = sys.stdin
 data = read_data(lines)
 
-# A list of strings
-lines = ['ACME,50,91.1','Naranja,75,123.45', ... ]
+# Una lista de cadenas
+lines = ['Kinoto,50,91.1','Naranja,75,123.45', ... ]
 data = read_data(lines)
 ```
+Lo cual nos lleva nuevamente a la identificación de patos: Es suficiente con saber si grazna como pato, camina como pato, ó vuela como pato, (dependiendo de qué parte de "es un pato" necesiten) para saber que pueden usarlo como pato. Volveremos a esta idea al hablar de diseño de objetos. En este caso en particular, todos nuestros "patos" ...
 
-There is considerable flexibility with this design.
+```python
+lines = open('data.csv')
+lines = gzip.open('data.csv.gz','rt')
+lines = sys.stdin
+lines = ['Kinoto,50,91.1','Naranja,75,123.45', ... ]
+```
 
-*Question: Should we embrace or fight this flexibility?*
+son iterables de texto, por lo tanto los usaremos como "patos" en la función `read_data()`.
 
-### Library Design Best Practices
+La flexibilidad que este diseño permite es considerable.
+*Pregunta: ¿Debemos agradecer u oponernos a esta flexibilidad?* 
 
-Las bibliotecas de código suelen ser más útiles si son flexibles. No restrinjas las opciones. La más flexibilidad ganás más potencia.
+
+### Buenas prácticas en el diseño de bibliotecas
+
+Las bibliotecas de código suelen ser más útiles si son flexibles. No restrinjas las opciones. Más flexibilidad es más potencia.
 
 ## Ejercicio
 
-### Ejercicio 6.6: From nombre_archivos to file-like objects
-You've now created a file `fileparse.py` that contained a
-function `parse_csv()`.  The function worked like this:
+### Ejercicio 6.4: De archivos a "objetos cual archivos"
 
 ```python
 >>> import fileparse
@@ -98,38 +105,35 @@ function `parse_csv()`.  The function worked like this:
 >>>
 ```
 
-Right now, the function expects to be passed a nombre_archivo.  However, you
-can make the code more flexible.  Modify the function so that it works
-with any file-like/iterable object.  For example:
+Actualmente la función solicita el nombre de un archivo, pero podés hacer el código más flexible. Modificá la función de modo que funcione con cualquier objeto ó iterable que se comporte como un archivo. Por ejemplo:
 
-```
+
+```python
 >>> import fileparse
 >>> import gzip
 >>> with gzip.open('Data/camion.csv.gz', 'rt') as file:
-...      port = fileparse.parse_csv(file, types=[str,int,float])
+...      camion = fileparse.parse_csv(file, types=[str,int,float])
 ...
->>> lines = ['name,cajones,precio', 'Lima,100,34.23', 'Naranja,50,91.1', 'HPE,75,45.1']
->>> port = fileparse.parse_csv(lines, types=[str,int,float])
+>>> lines = ['name,cajones,precio', 'Lima,100,34.23', 'Naranja,50,91.1', 'Mburucuya,75,45.1']
+>>> camion = fileparse.parse_csv(lines, types=[str,int,float])
 >>>
 ```
 
-In this new code, what happens if you pass a nombre_archivo as before?
+Y ahora que pasa si le pasás un nombre de archivo como antes ?
 
-```
->>> port = fileparse.parse_csv('Data/camion.csv', types=[str,int,float])
->>> port
-... look at output (it should be crazy) ...
+```python
+>>> camion = fileparse.parse_csv('Data/camion.csv', types=[str,int,float])
+>>> camion
+... mirá la salida  (debería ser un lío) ...
 >>>
 ```
 
-Yes, you'll need to be careful.   Could you add a safety check to avoid this?
+Si, hay que tener cuidado. Podés agregar un chequeo de seguridad para evitar esto ?
 
-### Ejercicio 6.7: Fixing existing functions
-Fix the `leer_camion()` and `read_precios()` functions in the
-`informe.py` file so that they work with the modified version of
-`parse_csv()`.  This should only involve a minor modification.
-Afterwards, your `informe.py` and `costo_camion.py` programs should work
-the same way they always did.
+### Ejercicio 6.5: Arreglemos las funciones existentes
+Arreglá las funciones `leer_camion()` y `leer_precios()` en el archivo `informe.py` de modo que funcionen con la nueva versión de `parse_csv()`. Con una pequeña modificación es suficiente. Después de esto tus programas `informe.py` y `costo_camion.py` deberían funcionar tan bien como antes. 
+
+
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 El módulo *main* (principal))](02_305Main_module.md) \| [Próximo (4 Contratos: Especificación y Documentación)](04_Especificación.md)

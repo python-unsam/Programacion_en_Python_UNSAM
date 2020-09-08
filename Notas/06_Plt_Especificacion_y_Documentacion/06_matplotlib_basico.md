@@ -5,7 +5,7 @@
 plots de lineas, una intro completa a traducir:
 [esto](https://scipy-lectures.org/intro/matplotlib/index.html)
 
-##  Matplotlib: plotting
+##  Matplotlib: gráficos
 
 ##  Introducción
 
@@ -32,7 +32,7 @@ C, S = np.cos(X), np.sin(X)
 
 Ahora tenemos un array de numpy con 256 valores que van desde -π a +π (incluído). C tiene los valores del coseno (256 valores) y S tiene los valores del seno (256 valores).
 
-### 1.5.2.1. El ploteo estándard
+### El ploteo estándard
 
 ![COPETE](./sphx_glr_plot_exercise_1_001.png)
 
@@ -53,15 +53,11 @@ plt.plot(X, S)
 plt.show()
 ```
 
-### 1.5.2.2. El gráfico básico
-
-![COPETE](./sphx_glr_plot_exercise_2_001.png)
+### El gráfico básico
 
 En el siguiente script, hemos explicitado y comentado todas las propiedades de una figura que influyen en la apariencia de un gráfico.
 
 Cada propiedad se configuró a su valor por omisión, para que veas cuáles son los valores "normales" y puedas jugar con ellos para ver sus efectos sobre el gráfico. Sobre propiedades y estilos de las líneas hablaremos luego.
-
-[oski]: # (In the script below, we’ve instantiated and commented all the figure settings that influence the appearance of the plot. The settings have been explicitly set to their default values, but now you can interactively play with the values to explore their affect see Line properties and Line styles below.)
 
 
 ```python
@@ -95,17 +91,21 @@ plt.ylim(-1.0, 1.0)
 # Ponemos marcas (ticks) en el eje y
 plt.yticks(np.linspace(-1, 1, 5))
 
-# Podemos grabar el gráfico usando 72 dpi
+# Podemos grabar el gráfico (con 72 dpi)
 # plt.savefig("ejercicio_2.png)", dpi=72)
 
-# Mostrar el resultado en pantalla
+# Mostramos el resultado en pantalla
 plt.show()
 ```
 
-### 1.5.2.3. Como cambiar los colores y ancho de los trazos
-![COPETE](./sphx_glr_plot_exercise_3_001.png)
+![COPETE](./sphx_glr_plot_exercise_2_001.png)
 
- Ahora vamos a modificar el gráfico para que quede un poco mejor. Primero, queremos trazar el coseno en azul y el seno en rojo, y ambos con una línea algo más gruesa. Además, vamos a cambiar un poco el tamaño de la figura para hacerla mas apaisada. Corré el siguiente código y compará el resultado con la figura anterior.
+Los gráficos que genera matplotlib son muy flexibles, te dejamos [un machete de las variaciones mas comunes](https://github.com/matplotlib/cheatsheets).
+
+### Como cambiar los colores y ancho de los trazos
+
+
+ Ahora vamos a modificar el gráfico para que quede un poco mejor. Primero, queremos trazar el coseno en azul y el seno en rojo, y ambos con una línea algo más gruesa. Además, vamos a cambiar un poco el tamaño de la figura para hacerla apaisada. Corré el siguiente código y compará el resultado con la figura anterior.
 
 ```python
 ...
@@ -114,9 +114,9 @@ plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-")
 plt.plot(X, S, color="red",  linewidth=2.5, linestyle="-")
 ...
 ```
+![COPETE](./sphx_glr_plot_exercise_3_001.png)
 
-### 1.5.2.4. Límites de los ejes
-![COPETE](./sphx_glr_plot_exercise_4_001.png)
+### Límites de los ejes
 
  El rango de valores de los ejes es un poco angosto y necesitamos más espacio alrededor para ver claramente todos los puntos. 
 
@@ -127,8 +127,9 @@ plt.ylim(C.min() * 1.1, C.max() * 1.1)
 ...
 ```
 
-### 1.5.2.5. Marcas en los ejes
-![COPETE](./sphx_glr_plot_exercise_5_001.png)
+![COPETE](./sphx_glr_plot_exercise_4_001.png)
+
+### Marcas en los ejes
 
 Así como están, las marcas sobre los ejes no son lo mas útil. Sería bueno destacar los valores interesantes para seno y coseno (+/-π,+/-π/2). Cambiémoslos para mostrar únicamente ésos valores.
 
@@ -139,8 +140,9 @@ plt.yticks([-1, 0, +1])
 ...
 ```
 
-### 1.5.2.6. Texto de las marcas en los ejes
-![COPETE](./sphx_glr_plot_exercise_6_001.png)
+![COPETE](./sphx_glr_plot_exercise_5_001.png)
+
+### Texto de las marcas en los ejes
 
 Las marcas en los ejes ahora están donde los queremos, pero el texto no es muy explícito. Aunque podemos darnos cuenta que 3.142 es π sería mejor dejarlo explícito.
 
@@ -156,8 +158,9 @@ plt.yticks([-1, 0, +1],
 ...
 ```
 
-### 1.5.2.7. Movamos el contorno
-![COPETE](./sphx_glr_plot_exercise_7_001.png)
+![COPETE](./sphx_glr_plot_exercise_6_001.png)
+
+### Movamos el contorno
 
  El contorno es el conjunto de líneas que delimitan el área de graficación y que unen todas las marcas en los ejes. Podemos ubicarlas en cualquier posición y, hasta ahora, han estado en el extremo de cada eje. Cambiemos éso, así las ubicamos en el centro. Como hay cuatro (arriba, abajo, izquierda y derecha) vamos a esconder dos de ellas dándoles color `none` y vamos a mover la de abajo y la de la izquierda a la posición 0 del espacio de coordenadas. 
 
@@ -172,9 +175,9 @@ ax.yaxis.set_ticks_position('left')
 ax.spines['left'].set_position(('data',0))
 ...
 ```
+![COPETE](./sphx_glr_plot_exercise_7_001.png)
 
-### 1.5.2.8. Pongámosle título
-![COPETE](./sphx_glr_plot_exercise_8_001.png)
+### Pongámosle un título
 
  Pongámosle nombres a los trazos al gráfico en la esquina superior izquierda. Para ésto alcanza con agregar a la instrucción 'plot' la palabra clave 'label' y ese texto será usado para el recuadro con los nombres. 
 
@@ -187,8 +190,9 @@ plt.legend(loc='upper left')
 ...
 ```
 
-### 1.5.2.9. Algunos puntos interesantes 
-![COPETE](./sphx_glr_plot_exercise_9_001.png)
+![COPETE](./sphx_glr_plot_exercise_8_001.png)
+
+### Algunos puntos interesantes 
 
  Vamos a marcar alguno puntos interesantes usando el comando 'annotate'. Elegimos el valor 2π/3 y queremos marcar tanto el seno como el coseno. Vamos a dibujar una marca en la curva y un línea recta punteada. Además, vamos a usar 'annotate' para mostrar texto y una flecha para destacar el valor de las funciones. 
 
@@ -214,8 +218,9 @@ plt.annotate(r'$sin(\frac{2\pi}{3})=\frac{\sqrt{3}}{2}$',
 ...
 ```
 
-### 1.5.2.10. El diablo está en los detalles
-![COPETE](./sphx_glr_plot_exercise_10_001.png)
+![COPETE](./sphx_glr_plot_exercise_9_001.png)
+
+### El diablo está en los detalles
 
 
  Notá (vas a tener que mirar muy de cerca) que los ejes tapan los trazos de las funciones seno y coseno, y éstas tapan los valores escritos sobre los ejes. Si ésto fuera una publicación quedaría feo.
@@ -232,9 +237,9 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 ...
 ```
 
-## 1.5.3. Figuras, subplots, ejes y marcas (ticks)
+![COPETE](./sphx_glr_plot_exercise_10_001.png)
 
-[oski]:# (todo esto es confuso incluso en inglés, si puedo lo leo de otro lado y lo refraseo)
+## Figuras, subplots, ejes y marcas (ticks)
 
 En matplotlib el término "figura" se refiere a toda la ventana que conforma la interfase al usuario. Dentro de esta ventana o figura pueden existir "subfiguras" (subplots).
 
@@ -248,9 +253,9 @@ Aunque trabajamos con figuras y subplots sin llamarlos explicitamente, es bueno 
  So far we have used implicit figure and axes creation. This is handy for fast plots. We can have more control over the display using figure, subplot, and axes explicitly. While subplot positions the plots in a regular grid, axes allows free placement within the figure. Both can be useful depending on your intention. We’ve already worked with figures and subplots without explicitly calling them. When we call plot, matplotlib calls gca() to get the current axes and gca in turn calls gcf() to get the current figure. If there is none it calls figure() to make one, strictly speaking, to make a subplot 111. Let’s look at the details.
 )
 
-### 1.5.3.1. Figuras
+### Figuras
 
-Una "figura" es la ventana en la interfase al usuario que lleva como título "Figura #". Las figuras se enumeran comenzando en 1, al estilo Matlab, y no en 0 al estilo Python. Varios parámetros  determinan la pinta que tiene una figura: 
+Una "figura" es la ventana en la interfase al usuario que lleva como título "Figura #". Las figuras se enumeran comenzando en 1 al estilo Matlab, y no en 0 al estilo Python. Varios parámetros  determinan la pinta que tiene una figura: 
 
 Argumento | Por Omisión  | Descripción
 --- | --- | ---
@@ -275,7 +280,7 @@ Si estás trabajando en una interfaz gráfica podés cerrar una figura clickeand
 plt.close(1)     # Cierra la figura 1
 ```
 
-En Argentina usamos el sistema métrico pero sorprendentemente no hay un modo fácil de especificar distancias o tamaños en centímetros en matplotlib. Podemos usar una función auxiliar como esta para convertir nuestro número en cm a un número en pulgadas:
+En Argentina usamos el sistema métrico pero sorprendentemente no hay un modo fácil de especificar distancias o tamaños en centímetros en matplotlib. Podemos usar una función auxiliar como esta para convertir una distancia de *cm* a *pulgadas*:
 
 ```python
 def cm2inch(value):
@@ -286,7 +291,7 @@ fig = plt.figure(figsize=(cm2inch(12.8), cm2inch(9.6)))
 
 [oski]: # (acá hay un salto, merece una breve transición en el texto)
 
-### 1.5.3.2. Subplots
+### Subplots
 Podés disponer tus plots en una grilla de intervalos regulares si usás subplots. Sólo tenés que especificar el número del plot y el número de filas y columnas.  
 
 ![COPETE](./sphx_glr_plot_subplot-horizontal_001.png)
@@ -295,16 +300,15 @@ Podés disponer tus plots en una grilla de intervalos regulares si usás subplot
 ![COPETE](./sphx_glr_plot_gridspec_001.png)
 
 
-### 1.5.3.3. Ejes
-Podés usar los ejes para un disponer los ploteos en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
+### Ejes
+Podés usar los ejes para un disponer los plots en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
 
 ![COPETE](./sphx_glr_plot_axes_001.png)
 ![COPETE](./sphx_glr_plot_axes-2_001.png)
 
 
 
-### 1.5.4.2. Ploteos "esparcidos" ó scatter plots
-![COPETE](./sphx_glr_plot_scatter_001.png)
+### Ploteos "dispersos" ó scatter plots
 
 Usando el código que sigue reproducí el gráfico cuidando el tamaño de las marcas, el color, y la transparencia de los trazos.
 
@@ -316,8 +320,9 @@ Y = np.random.normal(0,1,n)
 plt.scatter(X,Y)
 ```
 
-### 1.5.4.3. Gráficos de barras
-![COPETE](./sphx_glr_plot_bar_001.png)
+![COPETE](./sphx_glr_plot_scatter_001.png)
+
+### Gráficos de barras
 
 A partir del siguiente código, reproducí el gráfico que se muestra agregando etiquetas para las barras rojas.
 
@@ -338,8 +343,9 @@ for x, y in zip(X, Y1):
 plt.ylim(-1.25, +1.25)
 ```
 
-### 1.5.4.9. Múltiples plots
-![COPETE](./sphx_glr_plot_multiplot_001.png)
+![COPETE](./sphx_glr_plot_bar_001.png)
+
+### Múltiples plots
 
 A partir del siguiente código, reproducí el gráfico que se muestra.
 
@@ -351,13 +357,14 @@ plt.subplot(2, 2, 3)
 plt.subplot(2, 2, 4)
 ```
 
-### 1.5.4.10. Coordenadas polares
-![COPETE](./sphx_glr_plot_polar_001.png)
+![COPETE](./sphx_glr_plot_multiplot_001.png)
+
+### Coordenadas polares
+
+
+A partir de este código, reproducí el siguiente gráfico.
 
 Pista: sólo necesitás modifcar los ejes.
-
-A partir del siguiente código, reproducí el siguiente gráfico.
-
 
 ```python
 plt.axes([0, 0, 1, 1])
@@ -373,6 +380,7 @@ for r, bar in zip(radii, bars):
     bar.set_alpha(0.5)
 ```
 
+![COPETE](./sphx_glr_plot_polar_001.png)
 
 
 

@@ -273,7 +273,8 @@ Una estructura como ésa resulta en un manejo seguro de los recursos disponibles
 
 ## Ejercicios
 
-### Ejercicio 6.1: Lancemos excepciones
+### Lancemos excepciones
+
 La función `parse_csv()` que escribiste en el [Ejercicio 5.6](../05_Organización_y_Complejidad/02_Funciones.md#ejercicio-56-trabajando-sin-encabezados) admite seleccionar algunas columnas por el usuario, pero eso sólo funciona si el archivo de entrada tiene encabezados.
 
 Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers = False` sean pasados juntos. Y que resulte: 
@@ -295,7 +296,8 @@ Como regla general, es mejor no controlar esas cosas, y dejar que el programa d�
 El motivo principal para agregar controles de calidad sobre los parámetros de entrada es evitar que tu programa sea ejecutado en condiciones que no tienen sentido. Si le pedís que haga algo que requiere encabezados y simultáneamente le decís que no existen encabezados implica estás usando la función incorrectamente. La idea general es estar protegido contra situaciones que "no deberían suceder" pero podrían. 
 
 
-### Ejercicio 6.2: Atrapemos excepciones
+### Atrapemos excepciones
+
 La función `parse_csv()` que escribiste está destinada a procesar un archivo completo. Pero en una situacion real, es posible que los archivos CSV de entrada estén "rotos", ausentes, o que su contenido no se adecúe al formato esperado. Probá esto:  
 
 ```python
@@ -329,8 +331,8 @@ Row 7: Motivo: invalid literal for int() with base 10: ''
 >>>
 ```
 
-### Ejercicio 6.3: Errores silenciados
-Modificá `parse_csv()` de modo que el usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes. Por ejemplo:
+### Ejercicio 6.1: Errores silenciados
+Modificá `parse_csv()` de modo que el usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes. (guardá tu archivo como `errores_silenciados.py`) Por ejemplo:
 
 ```python
 >>> camion = parse_csv('Data/missing.csv', types = [str,int,float], silence_errors = True)

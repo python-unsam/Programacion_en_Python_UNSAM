@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Temas de diseño)](03_306Design_discussion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md)
 
 # 6.2 El módulo *main* (principal)
  
-En esta sección introducimos el concepto de un programa principal o un módulo proncipal. 
+En esta sección introducimos el concepto de un programa principal o un módulo principal. 
 
 ### Función principal
 
@@ -115,7 +115,7 @@ Python interpreta una línea de comandos como una lista de cadenas de texto.
 bash % python3 tabla_informe.py camion.csv precios.csv
 ```
 
-Como el script `tabla_informe.py` no está preparado para leer parámetros, no los va a usar. Igual, podés acceder a esta lista de cadenas usando `sys.argv`. Por ejemplo, si permanecés en el intérprete interactivo luego de llamar a `tabla_informe.py` con los parámteros anteriores
+Como el script `tabla_informe.py` no está preparado para leer parámetros, no los va a usar. Igual, podés acceder a esta lista de cadenas usando `sys.argv`. Por ejemplo, si usas el parámetro `-i` para invocar a python de modo que el intérprete interactivo no termine luego de llamar a `tabla_informe.py` con los parámetros anteriores
 
 ```bash
 bash % python3 -i tabla_informe.py camion.csv precios.csv
@@ -192,7 +192,7 @@ Bajo Unix (Linux es un Unix) una línea que comienza con `#!` ejecutará un scri
 ...
 ```
 
-Para porder ser ejecutado, el archivo prog.py requiere permiso de ejecución asignado. Podés asignarle este permiso así: 
+Para porder ser ejecutado, el archivo `prog.py` requiere permiso de ejecución asignado. Podés asignarle este permiso así: 
 
 ```bash
 bash % chmod +x prog.py
@@ -235,7 +235,7 @@ _Observación: Este modelo es flexible en el sentido que te permite escribir pro
 
 ## Ejercicios
 
-### Ejercicio 6.4: Función `main()`
+### Ejercicio 6.2: Función `main()`
 Usando estas ideas, agregá a tu programa `tabla_informe.py` una función `main()` que tome una lista de parámetros en la línea de comandos y produzca la misma salida que antes.
 
 ```bash
@@ -270,7 +270,7 @@ Total cost: 47671.15
 >>>
 ```
 
-### Ejercicio 6.5: Hacer un script
+### Ejercicio 6.3: Hacer un script
 Finalmente, modificá tus programas `tabla_informe.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
 
 ```bash
@@ -290,5 +290,5 @@ Costo total: 47671.15
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Temas de diseño)](03_306Design_discussion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md)
 

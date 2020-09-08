@@ -1,10 +1,10 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
 
 # 6.4 Contratos: Especificación y Documentación
 
-En esta unidad formalizamos a algunos temas que ya mencionamos brevemente en las clases anteriores sobre la especificación y documentación de funciones.
+En esta unidad formalizamos algunos temas que ya mencionamos brevemente en las clases anteriores sobre la especificación y documentación de funciones.
 
-Trabajaremos informalmente con conceptos formales. Por ejemplo, trataremos de responder en algunos casos concretos: ¿qué condiciones debe cumplir una función al comenzar? ¿Qué condiciones se mantinen durante su ejecución? ¿Que debemos garantizar cuando se termina de ejecutar? Y veremos algunas técnicas para tener en cuenta estas condiciones.
+Trabajaremos informalmente con conceptos formales. Por ejemplo, trataremos de responder en algunos casos concretos: ¿qué condiciones debe cumplir una función al comenzar? ¿Qué condiciones se mantienen durante su ejecución? ¿Que debemos garantizar cuando se termina de ejecutar? Y veremos algunas técnicas para tener en cuenta en estas condiciones.
 
 ## Documentación
 
@@ -51,13 +51,13 @@ Muchas veces se plantea el siguiente interrogante: ¿Para qué repetir con
 palabras lo que ya está estipulado en el código? La documentación es algo que
 muy a menudo se deja *para después* por resultar tedioso y quizás aburrido en
 hoy. Pero en ese *después*, está el yo del futuro, u otre del futuro que
-quiere volver a usar el código y que agradecerá esas líneas que le evitaran
+quiere volver a usar el código y que agradecerá esas líneas que le evitarán
 varios dolores de cabeza.
 
 Es muy frecuente que durante el desarrollo de un proyecto el código evolucione
-con el tiempo. Si nos olvidemos de actualizar la documentación para reflejar
-los cambios, entonces tendremos documentación de mala calidad, ya que posible
-que este incompleta e incluso incorrecta.
+con el tiempo. Si nos olvidamos de actualizar la documentación para reflejar
+los cambios, entonces tendremos documentación de mala calidad, ya que es posible
+que esté incompleta e incluso incorrecta.
 
 Pese a todo esto, la realidad sigue siendo que una buena documentación es
 componente esencial de cualquier proyecto exitoso (NumPy, matplotlib, etc. tienen
@@ -66,7 +66,7 @@ el código fuente transmite en detalle las operaciones individuales que componen
 un algoritmo o programa, pero no suele transmitir en forma transparente cosas
 como la *intención* del programa, el *diseño* de alto nivel, las
 *razones* por las que se decidió utilizar un algoritmo u otro, etc. También se
-pueden incluir ejemplos [clarificar su uso](https://numpy.org/doc/stable/reference/generated/numpy.resize.html)
+pueden incluir ejemplos [clarificar su uso](https://numpy.org/doc/stable/reference/generated/numpy.resize.html).
 
 ### Código autodocumentado
 
@@ -174,7 +174,7 @@ y si la función provoca algún efecto secundario (como por ejemplo modificar
 alguno de los parámetros recibidos).
 
 Las condiciones que se deben cumplir al momento de ejecutar el código o
-función se llaman *precondiciones*. Si se cumplen la precondición,
+función se llaman *precondiciones*. Si se cumple la precondición,
 el código ejecutará transformando las variables de manera que al finalizar
 su ejecución, el estado final de las variables y de valor de retorno, estarán
 caracterizados en una *poscondición*.
@@ -312,10 +312,10 @@ documentación de las funciones es una forma de definir claramente el
 comportamiento del código.  Son en efecto un *contrato* entre el código invocante (o usuarie) y el invocado (o función).
 
 
-### Ejercicio 6.8: Sumas
+### Ejercicio 6.6: Sumas
 Realizar la implementación correspondiente a la función `sumar_enteros`. 
 
-Extra: ¿Lo podés hace sin ciclos? ¿Podés implementar esta función en tiempo constante (es decir, usando una cantidad de operaciones que no depende de las entradas a la función)?
+Extra: ¿Lo podés hacer sin ciclos? ¿Podés implementar esta función en tiempo constante (es decir, usando una cantidad de operaciones que no depende de las entradas a la función)?
 
 _Ayuda: Estas sumas se pueden escribir como diferencia de dos [números triagulares](https://es.wikipedia.org/wiki/N%C3%BAmero_triangular)._
 
@@ -464,11 +464,13 @@ deberá a un error en el diseño o utilización del código.
 
 ## Ejercicios
 
-### Ejercicio 6.9: Analizar cada una de las siguientes funciones.
+### Ejercicio 6.7: Funciones y documentacion
+Analizar cada una de las siguientes funciones.
 ¿Cuál es el contrato de la función? ¿Cómo sería su documentación?
 ¿Es necesario agregar comentarios?
 ¿Se puede simplificar el código y/o mejorar su legibilidad?
 ¿Hay algún invariante de ciclo?
+Por favor: Guardá este código y tus respuestas en `documentacion.py`.
 
 ```python
 def valor_absoluto(n):
@@ -506,5 +508,5 @@ def collatz(n):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Temas de diseño)](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 [oski](Hace un juego de palabras con from file_names to file_like objects. Traduzco file_cosas por archivos))](03_306Design_discussion.md) \| [Próximo (5 Estilo)](05_Documentar_y_Estilo.md)
 
