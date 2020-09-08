@@ -275,21 +275,26 @@ fig = plt.figure(figsize=(cm2inch(12.8), cm2inch(9.6)))
 Podés disponer tus plots en una grilla de intervalos regulares si usás `subplots`. Sólo tenés que especificar el número de columnas, el de filas y luego el del subplot.
 
 Ejemplo:
+
 ![COPETE](./sphx_glr_plot_subplot-horizontal_001.png)
 
 Ejemplo:
+
 ![COPETE](./sphx_glr_plot_subplot-vertical_001.png)
 
 Ejemplo:
+
 ![COPETE](./sphx_glr_plot_subplot-grid_001.png)
 
 ### Ejes
 Podés usar los ejes para un disponer los plots en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
 
 Ejemplo:
+
 ![COPETE](./sphx_glr_plot_axes_001.png)
 
 Ejemplo:
+
 ![COPETE](./sphx_glr_plot_axes-2_001.png)
 
 
