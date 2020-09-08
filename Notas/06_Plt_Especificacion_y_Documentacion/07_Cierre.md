@@ -16,7 +16,7 @@ Para cerrar esta clase te pedimos dos cosas:
 1. El archivo `fileparse.py` del [Ejercicio 6.4](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-64-de-archivos-a-objetos-cual-archivos).
 1. El archivo `tabla_informe.py` del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_306Design_discussion.md#ejercicio-65-arreglemos-las-funciones-existentes).
 1. El archivo `documentacion.py` del [Ejercicio 6.8](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-68-funciones-y-documentación).
-1. El archivo ``random_walk.py` del [Ejercicio 6.10](../06_Plt_Especificacion_y_Documentacion/06_matplotlib_basico.md#ejercicio-610-caminatas-al-azar).
+1. El archivo `random_walk.py` del [Ejercicio 6.10](../06_Plt_Especificacion_y_Documentacion/06_matplotlib_basico.md#ejercicio-610-caminatas-al-azar).
  
 * Que completes [este formulario](https://docs.google.com/forms/) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
