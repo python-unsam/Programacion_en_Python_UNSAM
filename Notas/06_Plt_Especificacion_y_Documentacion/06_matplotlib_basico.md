@@ -221,8 +221,6 @@ plt.annotate(r'$sin(\frac{2\pi}{3})=\frac{\sqrt{3}}{2}$',
 
  Podemos hacer más grandes las marcas y los textos y ajustar sus propiedades de modo que tengan sean semi-transparentes. Esto nos permitirá ver un poco mejor los datos y los textos. 
 
- [oski]: # ( ---- la verdad es que la diferencia es casi imperceptible ----The tick labels are now hardly visible because of the blue and red lines. We can make them bigger and we can also adjust their properties such that they’ll be rendered on a semi-transparent white background. This will allow us to see both the data and the labels. )
-
 ```python
 ...
 for label in ax.get_xticklabels() + ax.get_yticklabels():
@@ -235,21 +233,17 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 
 ## Figuras, subplots, ejes y marcas (ticks)
 
-En matplotlib el término "figura" se refiere a toda la ventana que conforma la interfase al usuario. Dentro de esta ventana o figura pueden existir "subfiguras" (subplots).
+En matplotlib el término "figura" se refiere a toda la ventana que conforma la interfase al usuario. Dentro de esta ventana o figura pueden existir diversos subplots.
 
-Hasta aquí hemos dibujado gráficos y creado sus ejes de forma implícita. Esto es bueno para obtener ploteos rápidos cuando queremos tener una idea de la distribución de los datos. Podemos controlar mejor la apariencia de la figura que generamos si la definimos en forma explícita. Podemos definir la figura, los subplots, y los ejes.
+Hasta aquí hemos dibujado gráficos y creado sus ejes de forma implícita. Esto es bueno para obtener ploteos rápidos. Pero podemos controlar mejor la apariencia de la figura que generamos si definimos todo en forma explícita. Podemos definir la figura, los subplots y los ejes.
 
-Mientras que *subplot* ubica a sus plots en posiciones espaciadas regularmente (la grilla) uno puede ubicar los ejes libremente en la figura. Ambas cosas pueden ser útiles, depende de qué estés buscando.
+Mientras que *subplot* ubica a sus plots en posiciones espaciadas regularmente (una grilla) uno puede ubicar los *ejes* libremente en la figura. Ambas cosas pueden ser útiles, depende de qué estés buscando.
 
-Aunque trabajamos con figuras y subplots sin llamarlos explicitamente, es bueno saber que al invocar `plot()` matplotlib llama a `gca()` (get current axes)para obtener acceso a los ejes, y gca a su vez llama a gcf() (get current figure) para obtener acceso a la figura. Si no existe tal figura, llama a figure() para crearla o más estrictamente hablando, para crear un subplot. Aunque no pidamos explícitamente crear una figura, ésta es creada cuando la necesitamos. Veamos un poco los detalles.
-
-[oski]: #(
- So far we have used implicit figure and axes creation. This is handy for fast plots. We can have more control over the display using figure, subplot, and axes explicitly. While subplot positions the plots in a regular grid, axes allows free placement within the figure. Both can be useful depending on your intention. We’ve already worked with figures and subplots without explicitly calling them. When we call plot, matplotlib calls gca() to get the current axes and gca in turn calls gcf() to get the current figure. If there is none it calls figure() to make one, strictly speaking, to make a subplot 111. Let’s look at the details.
-)
+Aunque trabajamos con figuras y subplots sin llamarlos explicitamente, es bueno saber que al invocar `plot()` matplotlib llama a `gca()` (get current axes) para obtener acceso a los ejes, y `gca()` a su vez llama a `gcf()` (get current figure) para obtener acceso a la figura. Si no existe tal figura, llama a `figure()` para crearla o más estrictamente hablando, para crear un subplot 111. Aunque no pidamos explícitamente crear una figura, ésta es creada cuando la necesitamos. Veamos un poco los detalles.
 
 ### Figuras
 
-Una "figura" es la ventana en la interfase al usuario que lleva como título "Figura #". Las figuras se enumeran comenzando en 1 al estilo Matlab, y no en 0 al estilo Python. Varios parámetros  determinan la pinta que tiene una figura: 
+Una "figura" es la ventana en la interfase al usuario que lleva como título "Figura #". Las figuras se enumeran comenzando en 1. Varios parámetros  determinan la pinta que tiene una figura: 
 
 Argumento | Por Omisión  | Descripción
 --- | --- | ---
@@ -259,14 +253,6 @@ dpi | figure.dpi | resolución en puntos por pulgada
 facecolor |  figure.facecolor  |  color del fondo
 edgecolor |  figure.edgecolor  |  color del borde rodeando el fondo
 frameon | True |   dibujar un recuadro para la figura ?
-
-Como con otros objetos, podés usar `setp` para setear propiedades de la figura o usar métodos del tipo set_algo.
-
-```python
-setp(line, linestyle='--')
-
-# donde linestyle pertenece a {'-', '--', '-.', ':', '', (offset, on-off-seq), ...}
-```
 
 Si estás trabajando en una interfaz gráfica podés cerrar una figura clickeando en la `X` de la ventana. Tambien podés cerrar una ventana desde tu programa llamando al método close(). Dependiendo del parámetro que le pases va a cerrar la figura con que estás trabajando (sin argumentos), una figura específica (como argumento le pasás el número de figura) o todas las figuras (el argumento es "all"). 
 
@@ -286,13 +272,11 @@ fig = plt.figure(figsize=(cm2inch(12.8), cm2inch(9.6)))
 [oski]: # (acá hay un salto, merece una breve transición en el texto)
 
 ### Subplots
-Podés disponer tus plots en una grilla de intervalos regulares si usás subplots. Sólo tenés que especificar el número del plot y el número de filas y columnas.  
+Podés disponer tus plots en una grilla de intervalos regulares si usás `subplots`. Sólo tenés que especificar el número de columnas, el de filas y luego el del subplot.
 
 ![COPETE](./sphx_glr_plot_subplot-horizontal_001.png)
 ![COPETE](./sphx_glr_plot_subplot-vertical_001.png)
 ![COPETE](./sphx_glr_plot_subplot-grid_001.png)
-![COPETE](./sphx_glr_plot_gridspec_001.png)
-
 
 ### Ejes
 Podés usar los ejes para un disponer los plots en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
@@ -301,6 +285,7 @@ Podés usar los ejes para un disponer los plots en cualquier lugar de la figura.
 ![COPETE](./sphx_glr_plot_axes-2_001.png)
 
 
+## Ejemplos de ploteos
 
 ### Ploteos "dispersos" ó scatter plots
 
