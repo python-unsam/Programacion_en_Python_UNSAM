@@ -13,7 +13,7 @@ Utilizar siempre 4 espacios y nunca mezclar tabuladores y espacios.
 
 Si se continúa una línea hay dos opciones aceptables:
 
-```pyhton
+```python
 # Correcto
 #opción 1, indentar a la apertura del paréntesis:
 foo = funcion_que_crea_bar(variable_1, variable2,
@@ -25,7 +25,7 @@ foo = funcion_que_crea_bar(
     variable_3)
 ```
 
-```pyhton
+```python
 # Incorrecto
 foo = funcion_que_crea_bar(variable_1, variable2,
               variable_3)
@@ -40,20 +40,20 @@ Separar las definiciones de las clases y funciones con dos líneas en blanco. Lo
 ### Imports
 Los imports de distintos módulos deben estar en líneas diferentes:
 
-```pyhton
+```python
 # Sí: 
 import os
 import sys
 ```
 
-```pyhton
+```python
 # No:
 import os, sys
 ```
 
 Sí se pueden poner en una línea los elementos que se importan de un mismo módulo:
 
-```pyhton
+```python
 from subprocess import Popen, PIPE
 ```
 
@@ -71,45 +71,45 @@ Cada grupo de imports debe estar separado por una línea en blanco.
 Evitar espacios en blanco extra en:
 
 Dentro de paréntesis, corchetes o llaves.
-```pyhton
+```python
 # Sí: 
 spam(ham[1], {eggs: 2})
 ```
 
-```pyhton
+```python
 # No:  
 spam( ham[ 1 ], { eggs: 2 })
 ```
 
 Antes de una coma.
-```pyhton
+```python
 # Sí: 
 if x == 4: print x, y; x, y = y, x 
 ```
 
-```pyhton
+```python
 # No: 
 if x == 4 : print x , y ; x , y = y , x
 ```
 
 Antes del paréntesis de una llamada a una función.
-```pyhton
+```python
 # Sí: 
 spam(1)
 ```
 
-```pyhton
+```python
 # No:  
 spam (1)
 ```
 
 Antes del corchete de un índice o clave.
-```pyhton
+```python
 # Sí: 
 dict['key'] = list[index]
 ```
 
-```pyhton
+```python
 # No:  
 dict ['key'] = list [index]
 ```
@@ -118,7 +118,7 @@ Siempre separá los operadores binarios con un espacio simple a ambos lados: asi
 
 Usá espacios alrededor de operadores artiméticos:
 
-```pyhton
+```python
 # Sí:
 i = i + 1
 submitted += 1
@@ -127,7 +127,7 @@ hypot2 = x * x + y * y
 c = (a + b) * (a - b)
 ```
 
-```pyhton
+```python
 # No:
 i=i+1
 submitted +=1
