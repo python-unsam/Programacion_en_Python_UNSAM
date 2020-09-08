@@ -18,7 +18,7 @@ Para cerrar esta clase te pedimos dos cosas:
 1. El archivo `documentacion.py` del [Ejercicio 6.8](../06_Plt_Especificacion_y_Documentacion/04_Especificación.md#ejercicio-68-funciones-y-documentación).
 1. El archivo `random_walk.py` del [Ejercicio 6.10](../06_Plt_Especificacion_y_Documentacion/06_matplotlib_basico.md#ejercicio-610-caminatas-al-azar).
  
-* Que completes [este formulario](https://docs.google.com/forms/) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/1LmeHVZqiEznUUD7FjhTbi6eRQFzvb8Er4dOF3mOy9oo) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! 
 
