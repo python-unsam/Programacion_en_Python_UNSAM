@@ -123,11 +123,11 @@ Y ahora que pasa si le pasás un nombre de archivo como antes ?
 ```python
 >>> camion = fileparse.parse_csv('Data/camion.csv', types=[str,int,float])
 >>> camion
-... mirá la salida  (debería ser un lío) ...
+... mirá la salida (debería ser un lío) ...
 >>>
 ```
 
-Si, hay que tener cuidado. ¿Podés agregar un chequeo de seguridad para evitar esto?
+Sí, hay que tener cuidado.
 
 ### Ejercicio 6.5: Arreglemos las funciones existentes
 Arreglá las funciones `leer_camion()` y `leer_precios()` en el archivo `tabla_informe.py` de modo que funcionen con la nueva versión de `parse_csv()`. Con una pequeña modificación es suficiente. Después de esto tus programas `tabla_informe.py` y `costo_camion.py` deberían funcionar tan bien como antes. 

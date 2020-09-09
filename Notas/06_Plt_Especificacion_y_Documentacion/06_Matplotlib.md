@@ -2,7 +2,7 @@
 
 # 6.6 Matplotlib básico
 
-Matplotlib es probablemente la biblioteca de Python más usado para crear gráficos en 2D, también llamados plots. Provée una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos y/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib.
+Matplotlib es probablemente la biblioteca de Python más usada para crear gráficos en 2D, también llamados plots. Provee una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos y/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib.
 
 ##  pyplot
 *pyplot* proporciona una interfase a la biblioteca de matplotlib. Pyplot está diseñada siguiendo el estilo de Matlab y la mayoría de los comandos para graficar en pyplot tienen análogos en Matlab con argumentos similares. Explicaremos las instrucciones más importantes con ejemplos interactivos. 
@@ -25,7 +25,7 @@ C, S = np.cos(X), np.sin(X)
 
 Ahora tenemos un array de numpy con 256 valores que van desde -π a +π (incluído). C tiene los valores del coseno (256 valores) y S tiene los valores del seno (256 valores).
 
-### El ploteo estándard
+### El ploteo estándar
 
 ![COPETE](./sphx_glr_plot_exercise_1_001.png)
 
@@ -94,11 +94,11 @@ plt.show()
 
 Los gráficos que genera matplotlib son muy flexibles, te dejamos [un machete](https://github.com/matplotlib/cheatsheets/blob/master/cheatsheets.pdf) resumiendo las variaciones más usuales.
 
-A continuación presentamos detalles técnicos de esta biblioteca tan útil. No hace falta que te los aprendas (igual te los vas a olvidar), ni que pruebes todas las combinaciones. Podés volver a esta página o a la [documentación](https://matplotlib.org/) cuando lo necesites. Iguál mirá los ejercicios al final de esta sección, el primero es muy sencillo y te pedimos que lo entregues.
+A continuación presentamos detalles técnicos de esta biblioteca tan útil. No hace falta que te los aprendas (igual te los vas a olvidar), ni que pruebes todas las combinaciones. Podés volver a esta página o a la [documentación](https://matplotlib.org/) cuando lo necesites. Iguál mirá los ejercicios al final de esta sección, te pediremos que entregues el segundo.
 
 ## Detalles de un plot simple
 
-### Como cambiar los colores y ancho de los trazos
+### Cómo cambiar los colores y ancho de los trazos
 
 
  Ahora vamos a modificar el gráfico para que quede un poco mejor. Primero, queremos trazar el coseno en azul y el seno en rojo, y ambos con una línea algo más gruesa. Además, vamos a cambiar un poco el tamaño de la figura para hacerla apaisada. Corré el siguiente código y compará el resultado con la figura anterior.
@@ -142,7 +142,7 @@ plt.yticks([-1, 0, +1])
 
 Las marcas en los ejes ahora están donde los queremos, pero el texto no es muy explícito. Aunque podemos darnos cuenta que 3.142 es π sería mejor dejarlo explícito.
 
-Al definir un valor para las marcas en los ejes podemos proveer un texto en la segunda lista de argumentos para usar como etiqueta. Fijate que vamos a usar [_LaTeX_](https://es.wikipedia.org/wiki/LaTeX) para hacer que los símbolos tengan mejor pinta (otra de los geniales inventos de Donald Knuth, el mismo acuñó el término *análisis de algoritmos*).
+Al definir un valor para las marcas en los ejes podemos proveer un texto en la segunda lista de argumentos para usar como etiqueta. Fijate que vamos a usar [_LaTeX_](https://es.wikipedia.org/wiki/LaTeX) para hacer que los símbolos tengan mejor pinta (otro de los geniales inventos de Donald Knuth, el mismo acuñó el término *análisis de algoritmos*).
 
 ```python
 ...
@@ -175,12 +175,12 @@ ax.spines['left'].set_position(('data',0))
 
 ### Pongámosle un título
 
- Pongámosle nombres a los trazos al gráfico en la esquina superior izquierda. Para ésto alcanza con agregar a la instrucción `plot` la palabra clave `label` y ese texto será usado para el recuadro con los nombres. 
+ Pongámosle nombres a los trazos al gráfico en la esquina superior izquierda. Para esto alcanza con agregar a la instrucción `plot` la palabra clave `label` y ese texto será usado para el recuadro con los nombres. 
 
 ```python
 ...
-plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-", label="cosine")
-plt.plot(X, S, color="red",  linewidth=2.5, linestyle="-", label="sine")
+plt.plot(X, C, color="blue", linewidth=2.5, linestyle="-", label="coseno")
+plt.plot(X, S, color="red",  linewidth=2.5, linestyle="-", label="seno")
 
 plt.legend(loc='upper left')
 ...
@@ -190,7 +190,7 @@ plt.legend(loc='upper left')
 
 ### Algunos puntos interesantes 
 
- Vamos a marcar alguno puntos interesantes usando el comando `annotate`. Elegimos el valor 2π/3 y queremos marcar tanto el seno como el coseno. Vamos a dibujar una marca en la curva y un línea recta punteada. Además, vamos a usar `annotate` para mostrar texto y una flecha para destacar el valor de las funciones. 
+ Vamos a marcar algunos puntos interesantes usando el comando `annotate`. Elegimos el valor 2π/3 y queremos marcar tanto el seno como el coseno. Vamos a dibujar una marca en la curva y una línea recta punteada. Además, vamos a usar `annotate` para mostrar texto y una flecha para destacar el valor de las funciones. 
 
 ```python
 ...
@@ -219,7 +219,7 @@ plt.annotate(r'$sin(\frac{2\pi}{3})=\frac{\sqrt{3}}{2}$',
 ### El diablo está en los detalles
 
 
- Notá (vas a tener que mirar muy de cerca) que los ejes tapan los trazos de las funciones seno y coseno, y éstas tapan los valores escritos sobre los ejes. Si ésto fuera una publicación quedaría feo.
+ Notá (vas a tener que mirar muy de cerca) que los ejes tapan los trazos de las funciones seno y coseno, y éstas tapan los valores escritos sobre los ejes. Si esto fuera una publicación quedaría feo.
 
  Podemos hacer más grandes las marcas y los textos y ajustar sus propiedades de modo que tengan sean semi-transparentes. Esto nos permitirá ver un poco mejor los datos y los textos. 
 
@@ -235,17 +235,17 @@ for label in ax.get_xticklabels() + ax.get_yticklabels():
 
 ## Figuras, subplots, ejes y marcas (ticks)
 
-En matplotlib el término "figura" se refiere a toda la ventana que conforma la interfase al usuario. Dentro de esta ventana o figura pueden existir diversos subplots.
+En matplotlib el término "figura" se refiere a toda la ventana que conforma la interfase al usuarie. Dentro de esta ventana o figura pueden existir diversos subplots.
 
-Hasta aquí hemos dibujado gráficos y creado sus ejes de forma implícita. Esto es bueno para obtener ploteos rápidos. Pero podemos controlar mejor la apariencia de la figura que generamos si definimos todo en forma explícita. Podemos definir la figura, los subplots y los ejes.
+Hasta acá dibujamos gráficos y creamos sus ejes de forma implícita. Esto es bueno para obtener ploteos rápidos. Pero podemos controlar mejor la apariencia de la figura que generamos si definimos todo en forma explícita. Podemos definir la figura, los subplots y los ejes.
 
 Mientras que *subplot* ubica a sus plots en posiciones espaciadas regularmente (una grilla) uno puede ubicar los *ejes* libremente en la figura. Ambas cosas pueden ser útiles, depende de qué estés buscando.
 
-Aunque trabajamos con figuras y subplots sin llamarlos explicitamente, es bueno saber que al invocar `plot()` matplotlib llama a `gca()` (get current axes) para obtener acceso a los ejes, y `gca()` a su vez llama a `gcf()` (get current figure) para obtener acceso a la figura. Si no existe tal figura, llama a `figure()` para crearla o más estrictamente hablando, para crear un subplot 111. Aunque no pidamos explícitamente crear una figura, ésta es creada cuando la necesitamos. Veamos un poco los detalles.
+Aunque trabajamos con figuras y subplots sin llamarlos explicitamente, es bueno saber que al invocar `plot()` matplotlib llama a `gca()` (get current axes) para obtener acceso a los ejes, y `gca()` a su vez llama a `gcf()` (get current figure) para obtener acceso a la figura. Si no existe tal figura, llama a `figure()` para crearla o más estrictamente hablando, para crear un un único subplot (el número 1 en una grilla de 1x1). Aunque no pidamos explícitamente crear una figura, ésta es creada cuando la necesitamos. Veamos un poco los detalles.
 
 ### Figuras
 
-Una "figura" es la ventana en la interfase al usuario que lleva como título "Figura #". Las figuras se enumeran comenzando en 1. Varios parámetros  determinan la pinta que tiene una figura: 
+Una "figura" es la ventana en la interfase al usuarie que lleva como título "Figura #". Las figuras se enumeran comenzando en 1. Varios parámetros  determinan la pinta que tiene una figura: 
 
 Argumento | Por Omisión  | Descripción
 --- | --- | ---
@@ -262,7 +262,7 @@ Si estás trabajando en una interfaz gráfica podés cerrar una figura clickeand
 plt.close(1)     # Cierra la figura 1
 ```
 
-En Argentina usamos el sistema métrico pero sorprendentemente no hay un modo fácil de especificar distancias o tamaños en centímetros en matplotlib. Podemos usar una función auxiliar como esta para convertir una distancia de *cm* a *pulgadas*:
+A pesar de que en casi todo el mundo usamos el sistema métrico, increíblemente el imperialismo llega al punto que no hay un modo directo de especificar distancias o tamaños en centímetros en matplotlib. Podemos usar una función auxiliar como ésta para convertir una distancia de *cm* a *pulgadas*:
 
 ```python
 def cm2inch(value):
@@ -271,10 +271,9 @@ def cm2inch(value):
 fig = plt.figure(figsize=(cm2inch(12.8), cm2inch(9.6)))
 ```
 
-[oski]: # (acá hay un salto, merece una breve transición en el texto)
 
 ### Subplots
-Podés disponer tus plots en una grilla de intervalos regulares si usás `subplots`. Sólo tenés que especificar el número de filas, el de columnas y finalmente el número de subplot.
+Podés disponer tus plots en una grilla de intervalos regulares si usás `subplots`. Sólo tenés que especificar el número de filas, el de columnas y finalmente el número de subplot para activar el subplot correspondiente.
 
 Ejemplo:
 
@@ -289,7 +288,7 @@ Ejemplo:
 ![COPETE](./sphx_glr_plot_subplot-grid_001.png)
 
 ### Ejes
-Podés usar los ejes para un disponer los plots en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
+Podés usar los ejes para ubicar los plots en cualquier lugar de la figura. Si queremos poner un pequeño gráfico como inserto en uno más grande, lo podemos hacer moviendo sus ejes.
 
 Ejemplo:
 
@@ -329,7 +328,7 @@ plt.show()
 
 ### Ejercicio 6.10: Caminatas al azar
 
-Una [caminata al azar](https://es.wikipedia.org/wiki/Camino_aleatorio) ó *random walk* es una formalización matemática de la trayectoria que resulta de hacer sucesivos pasos aleatorios. Por ejemplo, la ruta trazada por una molécula mientras viaja por un líquido o un gas, el camino que sigue un animal en su búsqueda de comida, el precio de una acción fluctuante y la situación financiera de un jugador pueden tratarse como una caminata aleatoria.
+Una [caminata al azar](https://es.wikipedia.org/wiki/Camino_aleatorio) o *random walk* es una formalización matemática de la trayectoria que resulta de hacer sucesivos pasos aleatorios. Por ejemplo, la ruta trazada por una molécula mientras viaja por un líquido o un gas, el camino que sigue un animal en su búsqueda de comida, el precio de una acción fluctuante y la situación financiera de un jugador pueden tratarse, bajo ciertas hipótesis, como una caminata aleatoria.
 
 El siguiente código genera una caminata al azar de `N` pasos de largo y la grafica.
 
@@ -349,16 +348,16 @@ plt.show()
 
 En este ejercicio te pedimos:
 
-1. Modificalo poníendole nombres a los ejes ("tiempo" y distancia al orígen"), nombre al gráfico. 
+1. Modificá el código anterior para ponerles nombres a los ejes ("tiempo" y distancia al origen") y al gráfico. 
 2. Graficá 12 trayectorias en la misma figura, con diferentes colores.
-3. Usá la estructura de subplots sugerida en el [Ejercicio 6.9](../06_Plt_Especificacion_y_Documentacion/06_Matplotlib.md#ejercicio-69-subplots-fuera-de-una-grilla) para graficar tres pubflots en una figura:
-    * Arriba, grande, 12 trayectorias aleatorias como en el item anterior
+3. Usá la estructura de subplots sugerida en el [Ejercicio 6.9](../06_Plt_Especificacion_y_Documentacion/06_Matplotlib.md#ejercicio-69-subplots-fuera-de-una-grilla) para graficar tres pubplots en una figura:
+    * Arriba, grande, 12 trayectorias aleatorias como en el inciso anterior
     * Abajo a la izquierda la trayectoria que más se aleja del origen.
-    * Abajo a la izquierda la trayectoria que menos se aleja del origen.
+    * Abajo a la derecha la trayectoria que menos se aleja del origen.
 
-Ojo, cuando decimos la que más o menos se aleja, nos referimos a *algún momento*, no necesariamente a la que termina más cerca o más lejos.
+Ojo, cuando decimos la que más o menos se aleja, nos referimos a *en algún momento*, no necesariamente a la que termina más cerca o más lejos.
 
-Guarda tu solución al último punto en el archivo `random_walk.py`. Debería verse aproximadamente como este plot:
+Guardá tu solución al último punto en el archivo `random_walk.py`. Debería verse aproximadamente como este plot:
 
 ![RW](./RW.png)
 

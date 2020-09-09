@@ -15,7 +15,7 @@ Si se continúa una línea hay dos opciones aceptables:
 
 ```python
 # Correcto
-#opción 1, indentar a la apertura del paréntesis:
+# opción 1, indentar a la apertura del paréntesis:
 foo = funcion_que_crea_bar(variable_1, variable2,
                            variable_3, variable_4)
 
