@@ -20,7 +20,7 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 * [6.3 Cuestiones de diseño](03_Flexibilidad.md)
 * [6.4 Contratos: Especificación y Documentación](04_Especificacion_y_Documentacion.md)
 * [6.5 Estilo](05_Estilo.md)
-* [6.6 Matplotlib básico](06_Matplotlib.md)
+* [6.6 La librería Matplotlib](06_Matplotlib.md)
 * [6.7 Cierre de la sexta clase](07_Cierre.md)
 
 

@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 
-# 6.6 Matplotlib básico
+# 6.6 La librería Matplotlib
 
 Matplotlib es probablemente la biblioteca de Python más usada para crear gráficos en 2D, también llamados plots. Provee una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos y/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib.
 

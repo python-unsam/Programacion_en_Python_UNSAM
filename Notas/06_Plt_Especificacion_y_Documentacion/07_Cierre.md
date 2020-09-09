@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_Matplotlib.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 La librería Matplotlib)](06_Matplotlib.md)
 
 # 6.7 Cierre de la sexta clase
 
@@ -24,5 +24,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Matplotlib básico)](06_Matplotlib.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 La librería Matplotlib)](06_Matplotlib.md)
 
