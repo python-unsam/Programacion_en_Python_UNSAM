@@ -16,7 +16,7 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 
 
 * [6.1 Control de errores](01_Excepciones.md)
-* [6.2 El módulo *main* (principal)](02_Modulo_principal.md)
+* [6.2 El módulo principal](02_Modulo_principal.md)
 * [6.3 Cuestiones de diseño](03_Flexibilidad.md)
 * [6.4 Contratos: Especificación y Documentación](04_Especificacion_y_Documentacion.md)
 * [6.5 Estilo](05_Estilo.md)
