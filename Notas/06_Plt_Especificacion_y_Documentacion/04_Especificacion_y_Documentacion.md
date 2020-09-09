@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_Flexibilidad.md) \| [Próximo (5 Estilo)](05_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_Flexibilidad.md) \| [Próximo (5 Estilos de codeo)](05_Estilo.md)
 
 # 6.4 Contratos: Especificación y Documentación
 
@@ -466,5 +466,5 @@ def collatz(n):
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_Flexibilidad.md) \| [Próximo (5 Estilo)](05_Estilo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Cuestiones de diseño)](03_Flexibilidad.md) \| [Próximo (5 Estilos de codeo)](05_Estilo.md)
 

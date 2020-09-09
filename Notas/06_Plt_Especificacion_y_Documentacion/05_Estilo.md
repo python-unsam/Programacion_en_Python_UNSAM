@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificacion_y_Documentacion.md) \| [Próximo (6 La librería Matplotlib)](06_Matplotlib.md)
 
-# 6.5 Estilo
+# 6.5 Estilos de codeo
 
 ## PEP 8 - La guía de estilo para Python
 

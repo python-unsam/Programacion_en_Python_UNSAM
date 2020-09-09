@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilos de codeo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 
 # 6.6 La librería Matplotlib
 
@@ -419,5 +419,5 @@ plt.scatter(X,Y)
 _Pista_: El color depende del ángulo del punto (X,Y), fijate cómo calcularlo.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Estilos de codeo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
 
