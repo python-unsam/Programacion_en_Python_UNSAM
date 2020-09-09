@@ -416,7 +416,7 @@ plt.scatter(X,Y)
 
 ![COPETE](./sphx_glr_plot_scatter_001.png)
 
-_Pista_: El color depende del ángulo del punto (X,Y), fijate cómo calcularlo.
+_Pista_: El color depende del ángulo que forma el vector (X,Y) con los ejes. Hay diversas formas de calcularlo.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Estilos de codeo)](05_Estilo.md) \| [Próximo (7 Cierre de la sexta clase)](07_Cierre.md)
