@@ -151,14 +151,14 @@ Hay muchos estilos para nombrar variable, funciones, etc. Es útil reconocer qu�
 * b (una sola letra, en minúscula)
 * B (una sola letra, en mayúscula)
 * minusculas
-* minusculas_con_guines_bajos
+* minusculas_con_guiones_bajos
 * MAYUSCULAS
-* MAYUSCULAS_CON_GUINES_BAJOS
+* MAYUSCULAS_CON_GUIONES_BAJOS
 * PalabrasConMayusculas (también llamado estilo camello por las jorobas)
 * mixedCase (difiere del camello en la inicial)
 * Con_Mayusculas_Y_Guiones_Bajos (horrible!)
 
-Se recomienda no usar acentos ni caracateres especiales de ningún tipo para evitar problemas de compatibilidadd. Los nombres de funciones y variables deberían estar escritos en minúsculas, eventualmente usando guines bajos para mejorar la legibilidad. 
+Se recomienda no usar acentos ni caracteres especiales de ningún tipo para evitar problemas de compatibilidadd. Los nombres de funciones y variables deberían estar escritos en minúsculas, eventualmente usando guiones bajos para mejorar la legibilidad. 
 
 ### Hay mucho más!
 

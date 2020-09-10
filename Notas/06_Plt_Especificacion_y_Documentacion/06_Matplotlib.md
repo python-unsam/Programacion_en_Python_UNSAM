@@ -357,13 +357,16 @@ En este ejercicio te pedimos:
 
 Ojo, cuando decimos la que más o menos se aleja, nos referimos a *en algún momento*, no necesariamente a la que termina más cerca o más lejos.
 
-Guardá tu solución al último punto en el archivo `random_walk.py`. Debería verse aproximadamente como este plot:
+Guardá tu solución del inciso 3 en el archivo `random_walk.py`. Debería verse aproximadamente como este plot:
 
 ![RW](./RW.png)
 
+## Optativos:
+
+Los siguientes ejercicios profundizan en algunos estilos particulares y son optativos. Si querés ver las soluciones exactas a algunos de estos ejercicios y otros problemas más, podés consultar [acá](https://scipy-lectures.org/intro/matplotlib/index.html#other-types-of-plots-examples-and-exercises).
 
 ### Ejercicio 6.11: Gráficos de barras
-Modificá el siguiente código para reproducir el gráfico que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
+Modificá el siguiente código para generar un gráfico similar al que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
 
 ```python
 n = 12
@@ -384,7 +387,7 @@ plt.ylim(-1.25, +1.25)
 
 
 ### Ejercicio 6.12: Coordenadas polares
-A partir de este código, reproducí el siguiente gráfico.
+A partir de este código, generá un gráfico como el siguiente.
 
 ```python
 plt.axes([0, 0, 1, 1])
@@ -405,7 +408,7 @@ for r, bar in zip(radii, bars):
 _Pista_: sólo necesitás modifcar los ejes en la primera línea. Fijate que hay un parámetro `polar` que tiene por omisión valor `False`.
 
 ### Ejercicio 6.13: Setear el color de un scatter plot
-Modificá el código que sigue para reproducir el gráfico prestando atencióan al tamaño de las marcas, el color, y la transparencia de los trazos.
+Modificá el código que sigue para generar un gráfico similar al que se muestra, prestando atención a los límites, el tamaño de las marcas, el color, y la transparencia de los trazos.
 
 ```python
 n = 1024

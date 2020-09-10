@@ -152,38 +152,27 @@ def indice(lista, elemento):
 
 Cuando hablamos de **contratos** o *programación por contratos*, nos referimos a una forma de estipular tanto lo que nuestro código asume sobre los parámetros, como lo que devuelve. En los contratos se establecen compromisos que garantizan que si se cumplen los requisitos estipulados, la función devolverá cierto resultado. Es bueno que el contrato de una función esté incluido en su documentación.
 
-Algunos ejemplos de cosas que deben ser estipuladas como parte del contrato
-son: cómo deben ser los parámetros recibidos, qué va a ser lo que se devuelve,
-y si la función provoca algún efecto secundario (como por ejemplo modificar
-alguno de los parámetros recibidos).
+Algunos ejemplos de cosas que deben ser estipuladas como parte del contrato son: cómo deben ser los parámetros recibidos, qué va a ser lo que se devuelve, y si la función provoca algún efecto secundario (como por ejemplo modificar alguno de los parámetros recibidos).
 
-Las condiciones que se deben cumplir al momento de ejecutar el código o
-función se llaman *precondiciones*. Si se cumplen las precondiciones, el código se ejecutará de manera que al finalizar su ejecución el estado final de las variables y de valor de retorno, estarán caracterizados en una *poscondición*.
+Las condiciones que se deben cumplir al momento de ejecutar el código o función se llaman *precondiciones*. Si se cumplen las precondiciones, el código se ejecutará de manera que al finalizar su ejecución el estado final de las variables y de valor de retorno, estarán caracterizados en una *poscondición*.
 
 ### Precondiciones
 
-La precondición de una función debe cumplirse antes de ejecutarla para que se
-comporte correctamente: cómo deben ser los parámetros que recibe, cómo debe
-ser el estado global, etc. Si no se cumplen, no hay garantías del funcionamiento del código (podría colgarse, o dar error, o peor aún dar resultados erróneos).
+La precondición de una función debe cumplirse antes de ejecutarla para que se comporte correctamente: cómo deben ser los parámetros que recibe, cómo debe ser el estado global, etc. Si no se cumplen, no hay garantías del funcionamiento del código (podría colgarse, o dar error, o peor aún dar resultados erróneos).
 
-Por ejemplo, en una función que realiza la división entre dos números, las precondición debe decir que ambos parámetros deben ser números, y que el divisor debe ser distinto de 0.
+Por ejemplo, en una función que realiza la división entre dos números, la precondición debe decir que ambos parámetros deben ser números, y que el divisor debe ser distinto de 0.
 
-Si incluimos la precondición como parte de la documentación, en el cuerpo
-de la función podremos asumir que son ciertas, y no será necesario escribir
-código para lidiar con los casos en los que no se cumplan.
+Si incluimos las precondiciones como parte de la documentación, en el cuerpo de la función podremos asumir que son ciertas, y no será necesario escribir código para lidiar con los casos en los que no se cumplan.
 
 ### Poscondiciones
 
-La poscondición caracterizará cómo será el valor de retorno y cómo se
-modificarán las variables de entrada (en caso de que corresponda) al finalizar
-la ejecución siempre asumiendo que se cumplió la precondición al inicio.
+La poscondición caracterizará cómo será el valor de retorno y cómo se modificarán las variables de entrada (en caso de que corresponda) al finalizar la ejecución siempre asumiendo que se cumplió la precondición al inicio.
 
-En el ejemplo anterior, la función división nos garantiza que si se satisface la precondición la función devolverá un número y éste será el cociente solicitado.
+En el ejemplo anterior, la función división nos garantiza que si se satisface la precondición, la función devolverá un número y éste será el cociente solicitado.
 
 ### El qué, no el cómo
 
-Notar que al especificar un problema con pre y poscondición estamos
-definiendo qué es lo que debe suceder. En ningún momento decimos cómo es que esto sucede. Para una misma especificación podemos definir varias funciones que cumplan el contrato, y cada una puede resolverlo a su manera.
+Notar que al especificar un problema con pre y poscondición estamos definiendo qué es lo que debe suceder. En ningún momento decimos cómo es que esto sucede. Para una misma especificación podemos definir varias funciones que cumplan el contrato, y cada una puede resolverlo a su manera.
 
 ### Aseveraciones
 
@@ -269,43 +258,33 @@ def sumar_enteros(desde, hasta):
     '''
 ```
 
-Prestá atención a que tanto la pre como la pos no dicen cómo hace la función
-para resolver el problema, sino que caracterizan el resultado. La implementación (o código) serán el cómo. En este caso puede ser con un ciclo que emule los pasos de dichas sumas, podría utilizarse una fórmula cerrada que calcule el valor sin utilizar un ciclo, entre otras opciones. Lo importante es ver que a fines de la especificación, esto no importa.
+Prestá atención a que tanto la pre como la pos no dicen cómo hace la función para resolver el problema, sino que caracterizan el resultado. La implementación (o código) serán el cómo. En este caso puede ser con un ciclo que emule los pasos de dichas sumas, podría utilizarse una fórmula cerrada que calcule el valor sin utilizar un ciclo, entre otras opciones. Lo importante es ver que a fines de la especificación, esto no importa.
 
-En definitiva, la estipulación de pre y poscondiciones dentro de la
-documentación de las funciones es una forma de definir claramente el
-comportamiento del código. Son en efecto un *contrato* entre el código invocante (o usuarie) y el código invocado (o función).
+En definitiva, la estipulación de pre y poscondiciones dentro de la documentación de las funciones es una forma de definir claramente el comportamiento del código. Son, en efecto, un *contrato* entre el código invocante (o usuarie) y el código invocado (o función).
 
 
 ### Ejercicio 6.6: Sumas
 En este ejercicio vas a realizar dos implementaciones correspondientes a la función `sumar_enteros` definida recién. 
 
 1. En la primera implementación te pedimos que uses un ciclo.
-2. En la sugunda te pedimos que lo hagas sin ciclos: implementá la función de manera que trabaje en tiempo constante (es decir, usando una cantidad de operaciones que no depende de las entradas a la función.
+2. En la segunda te pedimos que lo hagas sin ciclos: implementá la función de manera que trabaje en tiempo constante (es decir, usando una cantidad de operaciones que no depende de las entradas a la función.
 
-_Ayuda: Estas sumas se pueden escribir como diferencia de dos [números triagulares](https://es.wikipedia.org/wiki/N%C3%BAmero_triangular)._
+_Ayuda: Estas sumas se pueden escribir como diferencia de dos [números triangulares](https://es.wikipedia.org/wiki/N%C3%BAmero_triangular)._
 
 
 ##  Invariantes de ciclo
 
-Los invariantes se refieren a estados o condiciones que no cambian dentro
-de un contexto o porción de código. Hay invariantes de ciclo, que son los
-que veremos a continuación, e invariantes de estado, que se verán más
-adelante.
+Los invariantes se refieren a estados o condiciones que no cambian dentro de un contexto o porción de código. Hay invariantes de ciclo, que son los que veremos a continuación, e invariantes de estado, que se verán más adelante.
 
-Un invariante de ciclo es una aseveración que debe ser verdadera al
-comienzo de cada iteración del ciclo y al salir del mismo.
+Un invariante de ciclo es una aseveración que debe ser verdadera al comienzo de cada iteración del ciclo y al salir del mismo.
 
-Por ejemplo, si el problema es ir desde el punto A al punto B, la
-precondición dice que tenemos que estar parados en A y la poscondición que
-al terminar estaremos parados en B. En este caso las siguientes aseveraciones son invariantes: "estamos en algún punto entre A y B", "estamos en el punto más cercano a B que estuvimos hasta ahora". Son aseveraciones que podría tener nuestro código (y dependen exclusivamente de cómo lo programamos).
+Por ejemplo, si el problema es ir desde el punto A al punto B, la precondición dice que tenemos que estar parados en A y la poscondición que al terminar estaremos parados en B. En este caso las siguientes aseveraciones son invariantes: "estamos en algún punto entre A y B", "estamos en el punto más cercano a B que estuvimos hasta ahora". Son aseveraciones que podría tener nuestro código (y dependen exclusivamente de cómo lo programamos).
 
 Pensar en términos de invariantes de ciclo nos ayuda a reflexionar y comprender mejor qué es lo que debe realizar nuestro código y nos ayuda a desarrollarlo.
 
-Por ejemplo, para la función `maximo`, que busca el valor más grande de una
-lista desordenada, podemos enunciar:
+Por ejemplo, para la función `maximo`, que busca el valor más grande de una lista desordenada, podemos enunciar:
 - precondición: la lista contiene elementos que tienen una relación de orden (son comparables con <)
-- poscondición: se devolverá el elemento máximo de la lista, si es que tiene lementos, y si no se devolverá None.
+- poscondición: se devolverá el elemento máximo de la lista, si es que tiene elementos, y si no se devolverá None.
 
 ```python
 def maximo(lista):
@@ -319,14 +298,11 @@ def maximo(lista):
     return max_elem
 ```
 
-En este caso, el invariante del ciclo es que `max_elem` contiene el
-valor máximo de la porción de lista que ya fue analizada.
+En este caso, el invariante del ciclo es que `max_elem` contiene el valor máximo de la porción de lista que ya fue analizada.
 
 Los invariantes son de gran importancia al momento de demostrar formalmente que un algoritmo funciona, pero aún cuando no hagamos una demostración formal resulta útil tener los invariantes a la vista, ya que de esta forma es más fácil entender cómo funciona un algoritmo y encontrar posibles errores.
 
-Los invariantes, además, son útiles a la hora de determinar las condiciones
-iniciales de un algoritmo, ya que también deben cumplirse para ese caso. Por
-ejemplo, consideremos el algoritmo para obtener la potencia `n` de un número.
+Los invariantes, además, son útiles a la hora de determinar las condiciones iniciales de un algoritmo, ya que también deben cumplirse para ese caso. Por ejemplo, consideremos el algoritmo para obtener la potencia `n` de un número.
 
 ```python
 def potencia(base, exp):
@@ -362,14 +338,9 @@ En el [Ejercicio 6.6](../06_Plt_Especificacion_y_Documentacion/04_Especificacion
 
 Las funciones reciben parámetros que pueden ser mutables o inmutables.
 
-Si dentro del cuerpo de la función se modifica uno de estos parámetros para
-que *referencie* a otro valor, este cambio no se verá reflejado fuera de la
-función. Si, en cambio, se modifica el *contenido* de alguno de los
-parámetros mutables, este cambio *sí* se verá reflejado fuera de la
-función.
+Si dentro del cuerpo de la función se modifica uno de estos parámetros para que *referencie* a otro valor, este cambio no se verá reflejado fuera de la función. Si, en cambio, se modifica el *contenido* de alguno de los parámetros mutables, este cambio *sí* se verá reflejado fuera de la función.
 
-A continuación vemos un ejemplo en el cual se asigna la variable recibida a un
-nuevo valor. Esa asignación sólo tiene efecto dentro de la función.
+A continuación vemos un ejemplo en el cual se asigna la variable recibida a un nuevo valor. Esa asignación sólo tiene efecto dentro de la función.
 
 ```python
 >>> def no_cambia_lista(lista):
@@ -383,8 +354,7 @@ Dentro de la funcion lista = [0, 1, 2, 3]
 [10, 20, 30, 40]
 ```
 
-A continuación un ejemplo en el cual se modifica la variable recibida. En este
-caso, los cambios realizados tienen efecto tanto dentro como fuera de la función.
+A continuación un ejemplo en el cual se modifica la variable recibida. En este caso, los cambios realizados tienen efecto tanto dentro como fuera de la función.
 
 ```python
 >>> def cambia_lista(lista):
