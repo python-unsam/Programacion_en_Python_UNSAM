@@ -238,11 +238,14 @@ _Observación: Este modelo es flexible en el sentido que te permite escribir pro
 
 ## Ejercicios
 
+Trabajá siempre con las últimas versiones de tus archivos. Para poder volver a tus veriosnes viejas, copiá `informe_funciones.py` a `informe.py`, trabajaremos sobre este último.
+
+
 ### Ejercicio 6.2: Función `main()`
-Usando estas ideas, agregá a tu programa `tabla_informe.py` una función `main()` que tome una lista de parámetros en la línea de comandos y produzca la misma salida que antes.
+Usando estas ideas, agregá a tu programa `informe.py` una función `main()` que tome una lista de parámetros en la línea de comandos y produzca la misma salida que antes.
 
 ```bash
-bash % python3 tabla_informe.py Data/camion.csv Data/precios.csv
+bash % python3 informe.py Data/camion.csv Data/precios.csv
 ```
 
 También deberías poder ejecutarlo del siguiente modo dentro del intérprete interactivo de Python:
@@ -274,7 +277,7 @@ Total cost: 47671.15
 ```
 
 ### Ejercicio 6.3: Hacer un script
-Finalmente, modificá tus programas `tabla_informe.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
+Finalmente, modificá tus programas `informe.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
 
 ```bash
 bash $ python3 tabla_informe.py Data/camion.csv Data/precios.csv

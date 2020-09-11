@@ -6,6 +6,8 @@ Ordenar una lista de números es una de las tareas fundamentales que realiza un 
 
 
 
+
+
 * [12.1 Ordenamientos sencillos de listas](01_Ordenamiento_sencillo.md)
 * [12.2 Ordenamiento mergesort](02_Divide_and_Conquer.md)
 
