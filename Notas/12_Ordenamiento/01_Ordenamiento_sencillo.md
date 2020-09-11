@@ -269,7 +269,7 @@ Mostrar los pasos del ordenamiento de la lista `[0, 9, 3, 8, 5, 3, 2, 4]`
 con los algoritmos de inserción y selección.
 
 ### Ejercicio 12.1: burbujeo
-te cuento la idea, implementalo.
+[te cuento la idea, implementalo.](https://www.programiz.com/dsa/bubble-sort)
 
 Este es el [burbujeo](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja).
 

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Creación de módulos, SO y Pandas)](../07_SO_Pandas_RL/00_Resumen.md) \| [Próximo (9 Matrices, Imágenes y Simulaciones)](../09_Imagenes_y_Objetos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_SO_Pandas_RL/00_Resumen.md) \| [Próximo (9 Matrices, Imágenes y Simulaciones)](../09_Imagenes_y_Objetos/00_Resumen.md)
 
 # 8. Clases, Objetos y Seaborn
 So far, our programs have only used built-in Python datatypes.  In
@@ -18,4 +18,4 @@ and defining new exceptions.
 * [8.6 Cierre](06_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 Creación de módulos, SO y Pandas)](../07_SO_Pandas_RL/00_Resumen.md) \| [Próximo (9 Matrices, Imágenes y Simulaciones)](../09_Imagenes_y_Objetos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_SO_Pandas_RL/00_Resumen.md) \| [Próximo (9 Matrices, Imágenes y Simulaciones)](../09_Imagenes_y_Objetos/00_Resumen.md)

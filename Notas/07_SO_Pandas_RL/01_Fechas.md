@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Tareas de administración del sistema operativo***)](02_Directorios.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Manejo de carpetas)](02_Directorios.md)
 
 # 7.1 Manejo de fechas y horas
 
@@ -452,5 +452,5 @@ By the way, `%d`, `%B` and `%Y` format codes are used for `day`, `month`(full na
 
 Visitá [la documentación](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior) para más detalles.
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Tareas de administración del sistema operativo***)](02_Directorios.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Manejo de carpetas)](02_Directorios.md)
 
