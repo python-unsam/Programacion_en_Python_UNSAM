@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](05_Arboles3_plt.md)
 
 # 4.4 El album de Figuritas
 
@@ -169,5 +169,5 @@ Acordate de guardar todo lo que hiciste sobre figuritas en un archivo `figuritas
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](07_Arboles3_plt.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 NumPy)](03_NumPy_Arrays.md) \| [Próximo (5 Gráficos del Arbolado porteño)](05_Arboles3_plt.md)
 

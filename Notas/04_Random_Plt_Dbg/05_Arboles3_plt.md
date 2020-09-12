@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Cierre de la cuarta clase)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Cierre de la cuarta clase)](06_Cierre.md)
 
 # 4.5 Gráficos del Arbolado porteño
 
@@ -79,5 +79,5 @@ Acordate siempre de ponerle título a las figuras y nombres y unidades a los eje
 
 _Extra:_ ¿podés hacer un solo gráfico que muestre dos de estas tres especies en diferentes colores y resulte claro? ¿Y las tres especies?
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Cierre de la cuarta clase)](08_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 El album de Figuritas)](04_Figuritas.md) \| [Próximo (6 Cierre de la cuarta clase)](06_Cierre.md)
 

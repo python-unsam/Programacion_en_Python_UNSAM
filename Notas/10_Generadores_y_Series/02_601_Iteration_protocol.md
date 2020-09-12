@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 [Contents](../Contents.md) \| [Prev (5 Inner Workings of Python Objects)](../05_Object_model/00_Overview.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](04_600_Overview.md) \| [Próximo (3 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](06_602_Customizing_iteration.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 [Contents](../Contents.md) \| [Prev (5 Inner Workings of Python Objects)](../05_Object_model/00_Overview.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](01_600_Overview.md) \| [Próximo (3 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_602_Customizing_iteration.md)
 
 # 10.2 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md)
 
@@ -315,5 +315,5 @@ part of this.
 
 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md)
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 [Contents](../Contents.md) \| [Prev (5 Inner Workings of Python Objects)](../05_Object_model/00_Overview.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](04_600_Overview.md) \| [Próximo (3 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](06_602_Customizing_iteration.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 [Contents](../Contents.md) \| [Prev (5 Inner Workings of Python Objects)](../05_Object_model/00_Overview.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](01_600_Overview.md) \| [Próximo (3 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_602_Customizing_iteration.md)
 
