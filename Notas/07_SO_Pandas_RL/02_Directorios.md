@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de carpetas)](02_Archivos_y_Directorios.md) \| [Próximo (4 Tareas de administración del sistema operativo***)](03_Manipulando_fechas_de_archivos.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de carpetas)](02_Archivos_y_Directorios.md) \| [Próximo (4 Introducción a Pandas)](06_Pandas_basico.md)
 
 # 7.3 Manejo de carpetas
 
@@ -267,5 +267,5 @@ os.utime(fileLocation, (modTime, modTime))
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de carpetas)](02_Archivos_y_Directorios.md) \| [Próximo (4 Tareas de administración del sistema operativo***)](03_Manipulando_fechas_de_archivos.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de carpetas)](02_Archivos_y_Directorios.md) \| [Próximo (4 Introducción a Pandas)](06_Pandas_basico.md)
 

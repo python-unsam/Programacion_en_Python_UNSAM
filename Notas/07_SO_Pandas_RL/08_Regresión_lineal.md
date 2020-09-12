@@ -1,10 +1,10 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Plots con Pandas)](07_Pandas_graficos.md) \| [Próximo (8 Cierre*)](09_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Plots con Pandas)](07_Pandas_graficos.md) \| [Próximo (7 Cierre*)](09_Cierre.md)
 
-# 7.7 Regresión lineal, revisitada
+# 7.6 Regresión lineal, revisitada
 
 Cierre clase
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Plots con Pandas)](07_Pandas_graficos.md) \| [Próximo (8 Cierre*)](09_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Plots con Pandas)](07_Pandas_graficos.md) \| [Próximo (7 Cierre*)](09_Cierre.md)
 
