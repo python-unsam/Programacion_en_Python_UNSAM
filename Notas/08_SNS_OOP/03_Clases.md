@@ -2,38 +2,40 @@
 
 # 8.3 Clases***
 
-This section introduces the class statement and the idea of creating new objects.
+La programación orientada a objetos requiere un pequeño pero importante cambio en la forma de pensar la programación tradicional. Dejá decantar los conceptos nuevos mientras lees esta sección. Si acabás de leer Seaborn, hacé una pausa antes de comenzar.
 
-### Object Oriented (OO) programming
+En esta sección veremos la instruccción `class` y el concepto de crear nuevos objetos, su utilidad, y las ventajas de esa forma de organizar los programas.
 
-A Programming technique where code is organized as a collection of
-*objects*.
+### Programación orientada a objetos (OOP)
 
-An *object* consists of:
+La programación orientada a objetos es una forma de organizar el código. Así como un algoritmo suele estar asociado a una estructura de datos particular, la programación orientada a objetos "empaqueta" los datos junto con los métodos usados para tratarlos. 
 
-* Data. Attributes
-* Behavior. Methods which are functions applied to the object.
+Cada uno de esos *objetos* consiste en 
 
-You have already been using some OO during this course.
+* Datos. (son atributes ó propiedades)
+* Comportamiento. ( son métodos, funciones, que actúan sobre las propiedades del objeto).
 
-For example, manipulating a list.
+Ya usaste objetos durante el curso, por ejemplo, al manipular una lista.
+
 
 ```python
 >>> nums = [1, 2, 3]
->>> nums.append(4)      # Method
->>> nums.insert(1,10)   # Method
+>>> nums.append(4)      # Esto es un método
+>>> nums.insert(1,10)   # Otro método
 >>> nums
-[1, 10, 2, 3, 4]        # Data
+[1, 10, 2, 3, 4]        # Estos son los datos modificados por los métodos
 >>>
 ```
 
-`nums` is an *instance* of a list.
+En ese fragmento de código decimos que `nums` es una *instancia* de una lista, donde "lista" se refiere a la clase llamada "lista". Cada variable de tipo lista es una instancia de la clase lista. 
 
-Methods (`append()` and `insert()`) are attached to the instance (`nums`).
+Acá usamos "instancia" con el mismo significado que "objeto". Muchas veces uno relaja la nomenclatura y dice que un objeto es una instancia de una clase, pero "objeto" también se interpreta como la clase a la cual un objeto pertenece lo que vuelve todo algo confuso. 
 
-### The `class` statement
+Los métodos (`append()` e `insert()`) existen asociados a la instancia (`nums`).
 
-Use the `class` statement to define a new object.
+### La instrucción `class`
+
+Para definir un tipo nuevo de objeto, usá la instrucción `class`.
 
 ```python
 class Player:
@@ -50,28 +52,30 @@ class Player:
         self.health -= pts
 ```
 
-In a nutshell, a class is a set of functions that carry out various operations on so-called *instances*.
+Muy brevemente, una clase es un conjunto de funciones que operan sobre las diversas instancias de esa clase.
 
-### Instances
+Puede decirse que una clase es la definición formal de las relaciones entre los datos y los metodos que los manipulan. Un objeto es una instancia particular de la clase a la cual pertenece, con datos propios pero los mismos métodos que los demás  objetos de la misma clase. Este concepto va a quedar mas claro al verlo funcionar y usarlo vos misme.
 
-Instances are the actual *objects* that you manipulate in your program.
+### Instancias
 
-They are created by calling the class as a function.
+Los programas manipulan instancias individuales de las clases. Cada instancia se llama *objeto*, y es en cada objeto que uno puede manipular los datos y llamar a sus métodos. 
+
+Podés crear un objeto mediante un llamado a la clase como si fuera una función.
 
 ```python
->>> a = Player(2, 3)
+>>> a = Player(2, 3)    # Clase Player definida antes
 >>> b = Player(10, 20)
 >>>
 ```
 
-`a` and `b` are instances of `Player`.
+`a` y `b` son instancias de `Player`, definida mas arriba. i.e. a y b son objetos de la clase `Player`.
 
-*Emphasize: The class statement is just the definition (it does
- nothing by itself). Similar to a function definition.*
+*Importante: La instrucción `class` es solamente la definición de una clase, no **hace** nada por sí misma. Tal como la definición de una función es sólo una definición.*
 
-### Instance Data
+### Datos de una instancia
 
-Each instance has its own local data.
+Cada instancia tiene sus propios datos locales. 
+Aquí pedimos ver la propiedad `x` de cada instancia:
 
 ```python
 >>> a.x
@@ -80,119 +84,111 @@ Each instance has its own local data.
 10
 ```
 
-This data is initialized by the `__init__()`.
+Estos datos locales se inicializan, para cada instancia, durante la ejecución del método `__init__()` de la clase.
 
 ```python
 class Player:
     def __init__(self, x, y):
-        # Any value stored on `self` is instance data
+        # Todo dato guardado en `self` es propio de esta instancia
         self.x = x
         self.y = y
         self.health = 100
 ```
 
-There are no restrictions on the total number or type of attributes stored.
+No hay restricciones en la cantidad o el tipo de datos almacenados en cada instancia, ni sobre el número de propiedades que ésta pueda tener.
 
-### Instance Methods
+### Métodos de una instancia.
 
-Instance methods are functions applied to instances of an object.
+Los métodos de una instancia son los métodos y las funciones que actúan sobre los datos almacenados en esa instancia. 
 
 ```python
 class Player:
     ...
-    # `move` is a method
-    def move(self, dx, dy):
+    # `mover` es un metodo
+    def mover(self, dx, dy):
         self.x += dx
         self.y += dy
 ```
 
-The object itself is always passed as first argument.
+Siempre se recibe la instancia misma como primer argumento:
+"self" significa "mismo" como en "mi mismo" ó "en sí misma" es como decir "yo".
 
 ```python
->>> a.move(1, 2)
+>>> a.mover(1, 2)
 
-# matches `a` to `self`
-# matches `1` to `dx`
-# matches `2` to `dy`
+# `self` refiere a `a`
+# `dx` refiere a `1`
+# `dy` refiere a `2`
 def move(self, dx, dy):
 ```
 
-By convention, the instance is called `self`. However, the actual name
-used is unimportant. The object is always passed as the first
-argument. It is merely Python programming style to call this argument
-`self`.
+Por convención siempre llamamos `self` a la instancia actual, y ésta es siempre pasada como primer argumento. En realidad el nombre real de la variable no importa, pero es una convención en Python llamar al primer argumento `self`. 
 
-### Class Scoping
+### Visibilidad en clases (Scoping)
 
-Classes do not define a scope of names.
+Las clases no definen ni limitan (como los módulos) un entorno de visibilidad.
 
 ```python
 class Player:
     ...
-    def move(self, dx, dy):
+    def mover(self, dx, dy):
         self.x += dx
         self.y += dy
 
-    def left(self, amt):
-        move(-amt, 0)       # NO. Calls a global `move` function
-        self.move(-amt, 0)  # YES. Calls method `move` from above.
+    def izquierda(self, dist):
+        mover(-dist, 0)       # NO ! Refiere a la función global `mover`
+        self.mover(-dist, 0)  # Si. Llama al método `mover` definido arriba.
 ```
 
-If you want to operate on an instance, you always refer to it explicitly (e.g., `self`).
+Si necesitás manipular datos o usar funciones de una instancia, te refís a ella explícitamente (i.e. `self`), sino te estás refiriendo a otra cosa.
 
 ## Ejercicios
 
-Starting with this set of ejercicios, we start to make a series of
-changes to existing code from previous sections.  It is critical that
-you have a working version of Ejercicio 3.18 to start.  If you don't
-have that, please work from the solution code found in the
-`Solutions/3_18` directory.  It's fine to copy it.
 
-### Ejercicio 8.1: Objects as Data Structures
-In section 2 and 3, we worked with data represented as tuples and
-dictionaries.  For example, a holding of cajon could be represented as
-a tuple like this:
+Si no lo tenés, vas a encontrar una versión en [los ejercios resueltos](link al repo ejercicios resueltos por docentes) . Lo podés copiar y trabajar con ése.
+
+
+### Ejercicio 8.1: Objetos como estructura de datos.
+En las secciones 2 y 3 trabajamos con datos en forma de tuplas y diccionarios. Un cajón de frutas, por ejemplo, estaba representado por una tupla, como esta:
 
 ```python
 s = ('Pera',100,490.10)
 ```
 
-or as a dictionary like this:
+ó como un diccionario, de esta otra forma:
 
 ```python
-s = { 'name'   : 'Pera',
+s = { 'nombre'  : 'Pera',
       'cajones' : 100,
       'precio'  : 490.10
 }
 ```
 
-You can even write functions for manipulating such data.  For example:
+Incluso escribimos funciones para manipular datos almacenados de ese modo:
 
 ```python
-def cost(s):
-    return s['cajones'] * s['precio']
+def costo_camion(camion):
+    return camion['cajones'] * camion['precio']
 ```
 
-However, as your program gets large, you might want to create a better
-sense of organization.  Thus, another approach for representing data
-would be to define a class.  Create a file called `cajon.py` and
-define a class `Cajon` that represents a single holding of cajon.
-Have the instances of `Cajon` have `name`, `cajones`, and `precio`
-attributes.  For example:
+A medida que tu programa se hace mas grande, vas a necesitar (de nuevo) organizarlo mejor.
+
+Otra forma de representar los datos con los que estás trabajando es definir una clase. Creá un archivo llamado `cajon.py`. Definí una clase llamada `Cajon` que represente un único cajón de mercadería. Definila de modo que cada instancia de la clase `cajon` (es decir, cada objeto cajón) tenga las propiedades `nombre`, `cantidad`, y `precio`. Este es un ejemplo del comportamiento buscado:
+
 
 ```python
 >>> import cajon
 >>> a = cajon.Cajon('Pera',100,490.10)
->>> a.name
+>>> a.nombre
 'Pera'
->>> a.cajones
+>>> a.cantidad
 100
 >>> a.precio
 490.1
 >>>
 ```
 
-Create a few more `Cajon` objects and manipulate them.  For example:
+Vamos a crear más objetos de tipo `Cajon` para manipularlos. Por ejemplo:
 
 ```python
 >>> b = cajon.Cajon('Manzana', 50, 122.34)
@@ -204,90 +200,80 @@ Create a few more `Cajon` objects and manipulate them.  For example:
 >>> cajones = [a, b, c]
 >>> cajones
 [<cajon.Cajon object at 0x37d0b0>, <cajon.Cajon object at 0x37d110>, <cajon.Cajon object at 0x37d050>]
->>> for s in cajones:
-     print(f'{s.name:>10s} {s.cajones:>10d} {s.precio:>10.2f}')
+>>> for c in cajones:
+     print(f'{c.nombre:>10s} {c.cantidad:>10d} {c.precio:>10.2f}')
 
-... look at the output ...
+... mirá el resultado ...
 >>>
 ```
 
-One thing to emphasize here is that the class `Cajon` acts like a
-factory for creating instances of objects.  Basically, you call
-it as a function and it creates a new object for you.  Also, it must
-be emphasized that each object is distinct---they each have their
-own data that is separate from other objects that have been created.
+Algo que merece mencionar específicamente es que la clase `Cajon` funciona como una "fábrica" para crear objetos que son instancias de esa clase. Vos la llamás como si fuera una función y ésta crea una nueva instancia de sí misma. Más aún, cada instancia es única y tiene sus propios datos que son independientes de las demás instancias de la misma clase.
 
-An object defined by a class is somewhat similar to a dictionary--just
-with somewhat different syntax.  For example, instead of writing
-`s['name']` or `s['precio']`, you now write `s.name` and `s.precio`.
+Una instancia definida por una clase tiene cierta similitud con un diccionario, pero usa una sintaxis algo diferente. Por ejemplo, en lugar de escribir `c['nombre']` ó `c['precio']` en objetos escribís `c.nombre` ó `c.precio`
 
-### Ejercicio 8.2: Adding some Methods
-With classes, you can attach functions to your objects.  These are
-known as methods and are functions that operate on the data
-stored inside an object.  Add a `cost()` and `sell()` method to your
-`Cajon` object.  They should work like this:
+
+### Ejercicio 8.2: Agregá algunos métodos
+Al definir una clase podés agregar funciones a los objetos que definís. Las funciones específicas de objetos se llaman *métodos* y operan sobre los datos guardados junto con (dentro de) cada instancia.
+
+Agregá los métodos `costo()` y `vender()` a tu objeto `Cajon`. Deberían dar este comportamiento:
 
 ```python
 >>> import cajon
 >>> s = cajon.Cajon('Pera', 100, 490.10)
->>> s.cost()
+>>> s.precio()
 49010.0
->>> s.cajones
+>>> s.cantidad
 100
->>> s.sell(25)
->>> s.cajones
+>>> s.vender(25)
+>>> s.cantidad
 75
->>> s.cost()
+>>> s.precio()
 36757.5
 >>>
 ```
 
-### Ejercicio 8.3: Creating a list of instances
-Try these steps to make a list of Cajon instances from a list of
-dictionaries. Then compute the total cost:
+### Ejercicio 8.3: Lista de instancias
+Seguí estos pasos para crear una lista de las instancias de `Cajon` (una lista de objetos `Cajon`) a partir de una lista de diccionarios. Luego calculá el precio total de todas esas instancias.
 
 ```python
 >>> import fileparse
->>> with open('Data/camion.csv') as lines:
-...     portdicts = fileparse.parse_csv(lines, select=['name','cajones','precio'], types=[str,int,float])
+>>> with open('Data/camion.csv') as lineas:
+...     portdicts = fileparse.parse_csv(lineas, select=['name','cajones','precio'], types=[str,int,float])
 ...
->>> camion = [ cajon.Cajon(d['name'], d['cajones'], d['precio']) for d in portdicts]
+>>> camion = [ cajon.Cajon(d['nombre'], d['cantidad'], d['precio']) for d in portdicts]
 >>> camion
 [<cajon.Cajon object at 0x10c9e2128>, <cajon.Cajon object at 0x10c9e2048>, <cajon.Cajon object at 0x10c9e2080>,
  <cajon.Cajon object at 0x10c9e25f8>, <cajon.Cajon object at 0x10c9e2630>, <cajon.Cajon object at 0x10ca6f748>,
  <cajon.Cajon object at 0x10ca6f7b8>]
->>> sum([s.cost() for s in camion])
+>>> sum([c.precio() for c in camion])
 47671.15
 >>>
 ```
 
-### Ejercicio 8.4: Using your class
-Modify the `leer_camion()` function in the `informe.py` program so
-that it reads a camion into a list of `Cajon` instances as just
-shown in Ejercicio 4.3.  Once you have done that, fix all of the code
-in `informe.py` and `costo_camion.py` so that it works with `Cajon` instances
-instead of dictionaries.
+### Ejercicio 8.4: Usá tu clase
+Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Cajon` como mostramos recién en el [Ejercicio 8.3](../08_SNS_OOP/03_Clases.md#ejercicio-83-lista-de-instancias).
 
-Ayuda: You should not have to make major changes to the code.  You will mainly
-be changing dictionary access such as `s['cajones']` into `s.cajones`.
+Cuando hayas hecho éso, cambiá un poco el código en `informe.py` y en  `costo_camion.py` de modo que funcionen con objetos `Cajon` (instancias de la clase `Cajon` en lugar de diccionarios.
 
-You should be able to run your functions the same as before:
+Ayuda: No deberían ser cambios importantes, se trata de cambiar referencias a diccionarios a referencias a objetos (`c['cajones']` cambia a `c.cajones`).
+
+Hecho ésto, deberías poder ejecutar tus funciones como antes:
 
 ```python
->>> import pcost
->>> pcost.costo_camion('Data/camion.csv')
+>>> import costo_camion
+>>> costo_camion.costo_camion('Data/camion.csv')
 47671.15
 >>> import informe
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
       Name     Cajons      Price     Change
 ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
+   Durazno         95      13.48     -26.89
+ Mandarina         50      20.89     -44.21
+   Naranja        100     106.28      35.84
 >>>
 ```
 

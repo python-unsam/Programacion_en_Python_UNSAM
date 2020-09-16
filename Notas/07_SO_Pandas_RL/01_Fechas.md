@@ -452,5 +452,15 @@ By the way, `%d`, `%B` and `%Y` format codes are used for `day`, `month`(full na
 
 Visitá [la documentación](https://docs.python.org/3/library/datetime.html#strftime-strptime-behavior) para más detalles.
 
+## Ejercicios:
+
+### Ejercicio 7.1: Segundos vividos
+Escribí una función a la que le pasás tu fecha de nacimiento como cadena en formato "dd/mm/AAAA" (año me día, con 4, 2 y 2 dígitos, separados con barras normales) y te devuelve la cantidad de segundos que viviste (asumiendo que naciste a las 00:00hs de tu fecha de nacimiento).
+
+
+
+
+
+
 [Contenidos](../Contenidos.md) \| [Próximo (2 Manejo de carpetas)](02_Archivos_y_Directorios.md)
 

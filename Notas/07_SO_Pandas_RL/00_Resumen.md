@@ -1,6 +1,9 @@
 [Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases, Objetos y Seaborn)](../08_SNS_OOP/00_Resumen.md)
 
 # 7. Fechas, Carpetas y Pandas
+**Esta clase está en preparación.**
+**El material sufrirtá cambios hasta el miércoles 23/9, cuando daremos inicio a estos temas en el curso.**
+
 En esta clase introduciremos módulos y discutiremos algunos conceptos de diseño de algoritmos y programas. Al completarla deberían ser capaces de escribir programas que estén subdivididos en funciones distribuídas en varios archivos. 
 
 Introducimos un par de métodos para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo.

@@ -2,12 +2,11 @@
 
 # 8.4 Herencia***
 
-Inheritance is a commonly used tool for writing extensible programs.
-This section explores that idea.
+Herencia entre clases es una herramienta muy usada para escribir programas extensibles. Exploraremos esa idea en esta sección.
 
-### Introduction
+### Introducción
 
-Inheritance is used to specialize existing objects:
+Se usa herencia para crear objetos mas especializados a partir de objetos existentes.
 
 ```python
 class Padre:
@@ -16,294 +15,266 @@ class Padre:
 class Hijo(Padre):
     ...
 ```
+Se dice que `Hijo` es una clase derivada o subclase. La clase `Padre` es conocida como la clase base, o superclase. La expresión `class Hijo(Padre):` significa que estamos creando una clase llamada `Hijo` que es derivada de la clase `Padre`. 
 
-The new class `Hijo` is called a derived class or subclass.  The
-`Padre` class is known as base class or superclass.  `Padre` is
-specified in `()` after the class name, `class Hijo(Padre):`.
 
-### Extending
+### Extensiones
 
-With inheritance, you are taking an existing class and:
+Al usar herencia podés tomar una clase existente y ...
 
-* Adding new methods
-* Redefining some of the existing methods
-* Adding new attributes to instances
+* Agregarle métodos
+* Redifinir métodos existentes
+* Agregar nuevos atributos
 
-In the end you are **extending existing code**.
+Podés verlo como una forma de **extender** de tu codigo existente. Darle nuevos comportamientos, abarcar un abanico mas amplio de posibilidades ó aumentar su compatibilidad. 
 
-### Example
+### Ejemplo
 
-Suppose that this is your starting class:
+Suponé que partís de la siguiente clase:
 
 ```python
 class Cajon:
-    def __init__(self, name, cajones, precio):
-        self.name = name
-        self.cajones = cajones
+    def __init__(self, nombre, cantidad, precio):
+        self.nombre = nombre
+        self.cantidad = cantidad
         self.precio = precio
 
     def cost(self):
-        return self.cajones * self.precio
+        return self.cantidad * self.precio
 
     def sell(self, ncajones):
-        self.cajones -= ncajones
+        self.cantidad -= ncajones
 ```
+[oski] : # (si Cajon representa un unico cajon, ncajones tiene que ser n;umero de unidades de fruta vendida. )
 
-You can change any part of this via inheritance.
+Podés modificar no que necesites mediante herencia.
 
-### Add a new method
+### Agregar un método nuevo
 
 ```python
 class MiCajon(Cajon):
-    def panic(self):
-        self.sell(self.cajones)
+    def rematar(self):
+        self.sell(self.cantidad)
 ```
 
-Usage example.
+Se puede usar así:
 
 ```python
->>> s = MiCajon('Pera', 100, 490.1)
->>> s.sell(25)
->>> s.cajones
+>>> c = MiCajon('Pera', 100, 490.1)
+>>> c.vender(25)
+>>> c.cajones
 75
->>> s.panic()
->>> s.cajones
+>>> c.rematar()
+>>> c.cajones
 0
 >>>
 ```
 
-### Redefining an existing method
+### Redefinir un método existente
 
 ```python
 class MiCajon(Cajon):
-    def cost(self):
-        return 1.25 * self.cajones * self.precio
+    def precio(self):
+        return 1.25 * self.cantidad * self.precio
 ```
 
-Usage example.
+Un ejemplo de uso:
 
 ```python
->>> s = MiCajon('Pera', 100, 490.1)
->>> s.cost()
+>>> c = MiCajon('Pera', 100, 490.1)
+>>> c.precio()
 61262.5
 >>>
 ```
 
-The new method takes the place of the old one. The other methods are unaffected. It's tremendous.
+El método nuevo simplemente reemplaza al definido en la clase base. Los demás métodos y variables no son afectados. No es buenísimo ??
 
 ## Overriding
 
-Sometimes a class extends an existing method, but it wants to use the
-original implementation inside the redefinition.  For this, use `super()`:
+Hay veces en que una clase extiende el método de la superclase a la que pertenece, pero necesita ejecutar el método original como parte de la redefinición del método nuevo. Para referirte a la superclase, usá `super()`:
 
 ```python
 class Cajon:
     ...
     def cost(self):
-        return self.cajones * self.precio
+        return self.cantidad * self.precio
     ...
 
 class MiCajon(Cajon):
-    def cost(self):
-        # Check the call to `super`
-        actual_cost = super().cost()
-        return 1.25 * actual_cost
+    def precio(self):
+        # Fijate como usamos `super`
+        precio_actualizado = super().cost()
+        return 1.25 * precio_actualizado
 ```
 
 Use `super()` to call the previous version.
 
-*Caution: In Python 2, the syntax was more verbose.*
 
-```python
-actual_cost = super(MiCajon, self).cost()
-```
+### El método `__init__` y herencia.
 
-### `__init__` and inheritance
-
-If `__init__` is redefined, it is essential to initialize the parent.
+Al crear cada instancia se ejecuta `__init__`. Ahí reside el código importante para la creación de una instancia nueva. Si redefinís `__init__` siempre incluí un llamado al método `__init__` de la clase base para inicializarla también.
 
 ```python
 class Cajon:
-    def __init__(self, name, cajones, precio):
-        self.name = name
-        self.cajones = cajones
+    def __init__(self, nombre, cantidad, precio):
+        self.nombre = nombre
+        self.cantidad = cantidad
         self.precio = precio
 
 class MiCajon(Cajon):
-    def __init__(self, name, cajones, precio, factor):
-        # Check the call to `super` and `__init__`
+    def __init__(self, nombre, cantidad, precio, factor):
+        # Fijate como es el llamado a `super().__init__()`
         super().__init__(name, cajones, precio)
         self.factor = factor
 
     def cost(self):
-        return self.factor * super().cost()
+        return self.factor * super().precio()
 ```
+Es necesario llamar al método `__init__()` en la clase base, es una forma de ejecutar la versión previa (vieja) del método que estamos redefiniendo, como mostramos recién.
 
-You should call the `__init__()` method on the `super` which is the
-way to call the previous version as shown previously.
+### Usos de herencia
 
-### Using Inheritance
-
-Inheritance is sometimes used to organize related objects.
+Uno de los usos de hacer una clase por herencia de otra es organizar objetos que están relacionados.
 
 ```python
-class Shape:
+class FiguraGeom:
     ...
 
-class Circle(Shape):
+class Circulo(FiguraGeom):
     ...
 
-class Rectangle(Shape):
+class Rectangulo(FiguraGeom):
     ...
 ```
 
-Think of a logical hierarchy or taxonomy.  However, a more common (and
-practical) usage is related to making reusable or extensible code.
-For example, a framework might define a base class and instruct you
-to customize it.
+Imaginate por ejemplo su uso en una jerarquía lógica, o taxonomica, en la que las clases tienen una relación natural tal que hace intuitivo derivar una de otra. 
+
+Una aplicación mas común, y tal vez mas práctica, consiste en escribir código que es reusable y/o extensible. Podríamos definir una clase base para una interfase de transferencia de datos y permitir que cada fabricante de equipo de adquisición de datos implemente los detalles de comunicación con cada interfase en particular.
 
 ```python
-class CustomHandler(TCPHandler):
-    def handle_request(self):
+class Procesador_de_datos(TCPHandler):
+    def procesar_pedido(self):
         ...
-        # Custom processing
+        # Procesamiento de datos
 ```
 
-The base class contains some general purpose code.
-Your class inherits and customized specific parts.
+La clase base contiene código de administración no específico. Cada clase hereda ese código y modifica las partes necesarias.
 
-### "is a" relationship
+### Relación "es un"
 
-Inheritance establishes a type relationship.
+La herencia establece una relación de clases.
 
 ```python
-class Shape:
+class FiguraGeom:
     ...
 
-class Circle(Shape):
-    ...
+class Circulo(FiguraGeom):
 ```
 
-Check for object instance.
+Preguntamos si un objeto es una instancia de cierta clase:
 
 ```python
->>> c = Circle(4.0)
->>> isinstance(c, Shape)
+>>> f = Circulo(4.0)
+>>> isinstance(f, FiguraGeom)
 True
 >>>
 ```
 
-*Important: Ideally, any code that worked with instances of the parent
-class will also work with instances of the child class.*
+*Importante: Idealmente, todo código que funcione con instancias de una clase base debería tambien funcionar con instancias de las clases derivadas de ella.*
 
-### `object` base class
+### La clase base `object` 
 
-If a class has no parent, you sometimes see `object` used as the base.
+Si una clase no tiene superclase, a veces se escribe  `object` como clase base.
 
 ```python
-class Shape(object):
+class Figura_geom(object):
     ...
 ```
 
-`object` is the parent of all objects in Python.
+`object` es la superclase de todo objeto en Python.
 
-*Observación: it's not technically required, but you often see it specified
-as a hold-over from it's required use in Python 2. If omitted, the
-class still implicitly inherits from `object`.
+### Herencia múltiple.
 
-### Multiple Inheritance
-
-You can inherit from multiple classes by specifying them in the definition of the class.
+Podés heredar un objeto de varias clases simultáneamente si los especificás en la definición de clase.
 
 ```python
-class Mother:
+class Madre:
     ...
 
-class Father:
+class Padre:
     ...
 
-class Hijo(Mother, Father):
+class Hijo(Madre, Padre):
     ...
 ```
 
-The class `Hijo` inherits features from both parents.  There are some
-rather tricky details. Don't do it unless you know what you are doing.
-Some further information will be given in the next section, but we're not
-going to utilize multiple inheritance further in this course.
+La clase `Hijo` hereda características de ambos padres. Algunos detalles son un poco delicados y no vamos a usar esa forma de heredar clases en este curso, aunque vas a encontrar un poco mas de información en la próxima sección.
+
 
 ## Ejercicios
 
-A major use of inheritance is in writing code that's meant to be
-extended or customized in various ways--especially in bibliotecas or
-frameworks. To illustrate, consider the `print_informe()` function
-in your `informe.py` program.  It should look something like this:
+El concepto de herencia es especialmente útil cuando uno está escribiendo código que va a ser extendido o adaptado, ya sea en bibliotecas o grandes sistemas configurables, pero también en pequeños paquetes de procesamiento de datos que pueden adquirir datos de diversas fuentes. Uno puede escribir las relaciones y comportamientos fundamentales y dejar los detalles de implementación de cada interfase cuando sean necesarios.
+
+
+[oski]: # (Necesitamos darle una pasada a todo el texto y homogeneizar "name, cajones, precio, change")
 
 ```python
-def print_informe(informedata):
+def imprimir_informe(informedata):
     '''
-    Print a nicely formated table from a list of (name, cajones, precio, change) tuples.
+    Imprime una tabla prolija desde una lista de tuplas con (nombre, cantidad, precio, diferencia) 
     '''
-    headers = ('Name','Cajons','Price','Change')
+    headers = ('Nombre','Cantidad','Precio','Diferencia')
     print('%10s %10s %10s %10s' % headers)
     print(('-'*10 + ' ')*len(headers))
     for row in informedata:
         print('%10s %10d %10.2f %10.2f' % row)
 ```
 
-When you run your informe program, you should be getting output like this:
-
-```
->>> import informe
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
-      Name     Cajons      Price     Change
----------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
-```
-
-### Ejercicio 8.5: An Extensibility Problem
-Suppose that you wanted to modify the `print_informe()` function to
-support a variety of different output formats such as plain-text,
-HTML, CSV, or XML.  To do this, you could try to write one gigantic
-function that did everything.  However, doing so would likely lead to
-an unmaintainable mess.  Instead, this is a perfect opportunity to use
-inheritance instead.
-
-To start, focus on the steps that are involved in a creating a table.
-At the top of the table is a set of table headers.  After that, rows
-of table data appear.  Let's take those steps and and put them into
-their own class.  Create a file called `tableformat.py` and define the
-following class:
+Al ejecutar tu programa `imprimir_informe()` la salida es algo parecido a esto: 
 
 ```python
-# tableformat.py
+>>> import informe
+>>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
+      Name    Cajones     Precio Diferencia
+---------- ---------- ---------- ----------
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
+   Durazno         95      13.48     -26.89
+ Mandarina         50      20.89     -44.21
+   Naranja        100     106.28      35.84
+```
 
-class TableFormatter:
+[oski]: # (no me gusta esta traducción : extensibility --> extenbsibilidad, pero no encuentro otra)
+
+### Ejercicio 8.5: Un problema en extensibilidad
+Imaginá que necesitás que la función `imprimir_informe()` pueda exportar el informe en una variedad de formatos. Texto simple, HTML, CSV ó XML. Podrías escribir una función enorme que resuelva todos los casos, pero resultaría en código repetido, y difícil de mantener. Esta es una oportunidad perfecta para usar herencia de objetos.
+
+Vamos a enfocarnos en los pasos necesarios para crear una tabla. 
+
+Al principio de la tabla tenemos los encabezados de las columnas. Después de éso, los datos de la tabla ordenados en una fila por ítem. Pongamos cada uno de esos pasos en una clase distinta. Creá un archivo llamado `formatotabla.py` y definí la siguiente clase:
+
+```python
+# formatotabla.py
+
+class FormatoTabla:
     def headings(self, headers):
         '''
-        Emit the table headings.
+        Crea el encabezado de la tabla.
         '''
 	raise NotImplementedError()
 
     def row(self, rowdata):
         '''
-        Emit a single row of table data.
+        Crear una única fila de datos de la tabla.
         '''
 	raise NotImplementedError()
 ```
 
-This class does nothing, but it serves as a kind of design specification for
-additional classes that will be defined shortly.  A class like this is
-sometimes called an "abstract base class."
+Por ahora la clase no hace nada, pero sirve como una especie de especificación de diseño para otras clases que vamos a definir. Una clase como ésta es a menudo llamada "clase abstracta base"
 
-Modify the `print_informe()` function so that it accepts a
-`TableFormatter` object as input and invokes methods on it to produce
-the output.  For example, like this:
+Ahora es necesario modificar la función `imprimir_informe` para que acepte como fuente de datos un objeto `formato_tabla` e invoque los métodos de este objeto para producir la tabla de salida. Algo así:
 
 ```python
 # informe.py
@@ -311,17 +282,16 @@ the output.  For example, like this:
 
 def print_informe(informedata, formatter):
     '''
-    Print a nicely formated table from a list of (name, cajones, precio, change) tuples.
+    Imprime una tabla prolija desde una lista de tuplas con (nombre, cantidad, precio, diferencia) 
     '''
-    formatter.headings(['Name','Cajons','Price','Change'])
-    for name, cajones, precio, change in informedata:
-        rowdata = [ name, str(cajones), f'{precio:0.2f}', f'{change:0.2f}' ]
+    formatter.headings(['Nombre','Cantidad','Precio','Diferencia'])
+    for name, cantidad, precio, diferencia in informedata:
+        rowdata = [ name, str(cantidad), f'{precio:0.2f}', f'{diferencia:0.2f}' ]
         formatter.row(rowdata)
 ```
 
-Since you added an argument to print_informe(), you're going to need to modify the
-`informe_camion()` function as well.  Change it so that it creates a `TableFormatter`
-like this:
+Como agregaste un argumento a `imprimir_informe()`, hay que modificar  también `informe_camion()`. Cambialo para que cree un objeto `
+tableformatter` de este modo:
 
 ```python
 # informe.py
@@ -331,21 +301,21 @@ import tableformat
 ...
 def informe_camion(camionfile, preciofile):
     '''
-    Make a cajon informe given camion and precio data files.
+    Crea un informe por camion a partir de archivos camion y precio.
     '''
-    # Read data files
+    # Leer archivos con datos
     camion = leer_camion(camionfile)
     precios = read_precios(preciofile)
 
-    # Create the informe data
+    # Crear los datos del informe
     informe = make_informe_data(camion, precios)
 
-    # Print it out
+    # Generar informe
     formatter = tableformat.TableFormatter()
     print_informe(informe, formatter)
 ```
 
-Run this new code:
+Ejecutá ese código:
 
 ```python
 >>> ================================ RESTART ================================
@@ -354,20 +324,18 @@ Run this new code:
 ... crashes ...
 ```
 
-It should immediately crash with a `NotImplementedError` exception.  That's not
-too exciting, but it's exactly what we expected.  Continue to the next part.
+Debería dar inmediatamente una excepción de tipo `NotImplementedError`. No es nada maravilloso, pero es exactamente lo que esperábamos que sucediera, no ?   Sigamos...
 
-### Ejercicio 8.6: Using Inheritance to Produce Different Output
-The `TableFormatter` class you defined in part (a) is meant to be
-extended via inheritance.  In fact, that's the whole idea.  To
-illustrate, define a class `TextTableFormatter` like this:
+
+### Ejercicio 8.6: Usemos herencia para cambiar la salida
+La clase FormatoTabla que definiste en la primera parte es sólo la base de un sistema extensible. Este es el momento de extenderla. Definí una clase `FormatoTablaTXT` como sigue:
 
 ```python
-# tableformat.py
+# formatotabla.py
 ...
-class TextTableFormatter(TableFormatter):
+class FormatoTablaTXT(FormatoTabla):
     '''
-    Emit a table in plain-text format
+    Generar una tabla en formato TXT
     '''
     def headings(self, headers):
         for h in headers:
@@ -381,54 +349,53 @@ class TextTableFormatter(TableFormatter):
         print()
 ```
 
-Modify the `informe_camion()` function like this and try it:
+Modificá la función `informe_camion()` y probála: 
 
 ```python
 # informe.py
 ...
 def informe_camion(camionfile, preciofile):
     '''
-    Make a cajon informe given camion and precio data files.
+    Crea un informe por camion a partir de archivos camion y precio.
     '''
-    # Read data files
+    # Leer archivos con datos
     camion = leer_camion(camionfile)
-    precios = read_precios(preciofile)
+    precios = leer_precios(preciofile)
 
-    # Create the informe data
+    # Obtener los datos para un informe
     informe = make_informe_data(camion, precios)
 
-    # Print it out
+    # Imprimir
     formatter = tableformat.TextTableFormatter()
     print_informe(informe, formatter)
 ```
 
-This should produce the same output as before:
+Este código debería dar la misma salida que antes:
 
 ```python
->>> ================================ RESTART ================================
+>>> ========================REINICIAR INTERPRETE========================
 >>> import informe
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
-      Name     Cajons      Price     Change
+    Nombre   Cantidad     Precio Diferencia
 ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
+   Durazno         95      13.48     -26.89
+ Mandarina         50      20.89     -44.21
+   Naranja        100     106.28      35.84
 >>>
 ```
 
-However, let's change the output to something else.  Define a new
-class `CSVTableFormatter` that produces output in CSV format:
+Entonces cambiemos la salida a alguna otra cosa: Definí una nueva clase llamada `FormatoTablaCSV` que genere la salida en formato CSV:
 
 ```python
-# tableformat.py
+# formatotabla.py
 ...
 class CSVTableFormatter(TableFormatter):
     '''
-    Output camion data in CSV format.
+    Generar una tabla en formato CSV
     '''
     def headings(self, headers):
         print(','.join(headers))
@@ -437,32 +404,32 @@ class CSVTableFormatter(TableFormatter):
         print(','.join(rowdata))
 ```
 
-Modify your main program as follows:
+Modificá tu programa principal e este modo:
 
 ```python
 def informe_camion(camionfile, preciofile):
     '''
-    Make a cajon informe given camion and precio data files.
+    Crea un informe por camion a partir de archivos camion y precio.
     '''
-    # Read data files
+    # Leer archivos con datos
     camion = leer_camion(camionfile)
     precios = read_precios(preciofile)
 
-    # Create the informe data
+    # Obtener los datos para un informe
     informe = make_informe_data(camion, precios)
 
-    # Print it out
+    # Imprimir
     formatter = tableformat.CSVTableFormatter()
     print_informe(informe, formatter)
 ```
 
-You should now see CSV output like this:
+Ahora la salida debería tener este aspecto:
 
 ```python
->>> ================================ RESTART ================================
+>>> ========================REINICIAR INTERPRETE========================
 >>> import informe
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
-Name,Cajons,Price,Change
+Nombre,Cantidad,Precio,Diferencia
 Lima,100,9.22,-22.98
 Naranja,50,106.28,15.18
 Caqui,150,35.46,-47.98
@@ -472,11 +439,10 @@ Mandarina,50,20.89,-44.21
 Naranja,100,106.28,35.84
 ```
 
-Using a similar idea, define a class `HTMLTableFormatter`
-that produces a table with the following output:
+Usando las mismas ideas creá un objeto llamado `FormatoTablaHTML` que produzca un tabla de la siguiente forma:
 
 ```
-<tr><th>Name</th><th>Cajons</th><th>Price</th><th>Change</th></tr>
+<tr><th>Nombre</th><th>Cajones</th><th>Precio</th><th>Diferencia</th></tr>
 <tr><td>Lima</td><td>100</td><td>9.22</td><td>-22.98</td></tr>
 <tr><td>Naranja</td><td>50</td><td>106.28</td><td>15.18</td></tr>
 <tr><td>Caqui</td><td>150</td><td>35.46</td><td>-47.98</td></tr>
@@ -486,34 +452,25 @@ that produces a table with the following output:
 <tr><td>Naranja</td><td>100</td><td>106.28</td><td>35.84</td></tr>
 ```
 
-Test your code by modifying the main program to create a
-`HTMLTableFormatter` object instead of a
-`CSVTableFormatter` object.
+Para testear tu código, modificá el programa principal de modo que use un objeto de la clase `FormatoTablaHTML` en lugar de uno de la clase `FormatoTablaCSV` para darle formato a la tabla de salida. Fijate lo fácil que es cambiar el comportamiento de un programa cuando tenés objetos que son compatibles entre sí.
 
-### Ejercicio 8.7: Polymorphism in Action
-A major feature of object-oriented programming is that you can
-plug an object into a program and it will work without having to
-change any of the existing code.  For example, if you wrote a program
-that expected to use a `TableFormatter` object, it would work no
-matter what kind of `TableFormatter` you actually gave it.  This
-behavior is sometimes referred to as "polymorphism."
+### Ejercicio 8.7: Polimorfismo en acción
+Una de las grandes ventajas de la programación orientada a objetos es que podés cambiar un objeto por otro compatible y tu programa va a funcionar sin necesidad adaptar el código que usa esos objetos.
 
-One potential problem is figuring out how to allow a user to pick out
-the formatter that they want.  Direct use of the class names such as
-`TextTableFormatter` is often annoying.  Thus, you might consider some
-simplified approach.  Perhaps you embed an `if-`statement into the
-code like this:
+Si escribiste un programa diseñado para usar un objeto de la clase `FormatoTabla`, va a funcionar sin importar *que* objeto de esa clase uses. A este comportamiento particular, y la capacidad de usar la misma interfase con diferentes objetos de la misma clase, haciendo que el programa como un todo se porte distinto se lo llama polimorfismo.
+
+Un problema potencial de usar polimorfismo en tus programas es diseñar un buen método para que el usuario final pueda decidir que objeto usar. No podés pedirle que reprograme tu código y cambie objetos o hablarle de los objetos por su nombre real, sería poco práctico. Lo que uno suele hacer es usar un `if` y permitir que el programa use diferentes objetos en base a decisiones del usuario, algo como esto:
 
 ```python
 def informe_camion(camionfile, preciofile, fmt='txt'):
     '''
-    Make a cajon informe given camion and precio data files.
+    Crea un informe por camion a partir de archivos camion y precio.
     '''
-    # Read data files
+    # Leer archivos con datos
     camion = leer_camion(camionfile)
     precios = read_precios(preciofile)
 
-    # Create the informe data
+    # Obtener los datos para un informe
     informe = make_informe_data(camion, precios)
 
     # Print it out
@@ -542,7 +499,7 @@ looks like this:
 ```python
 def informe_camion(camionfile, preciofile, fmt='txt'):
     '''
-    Make a cajon informe given camion and precio data files.
+    Crea un informe por camion a partir de archivos camion y precio.
     '''
     # Read data files
     camion = leer_camion(camionfile)
@@ -551,32 +508,31 @@ def informe_camion(camionfile, preciofile, fmt='txt'):
     # Create the informe data
     informe = make_informe_data(camion, precios)
 
-    # Print it out
+    # Imprimir
     formatter = tableformat.create_formatter(fmt)
     print_informe(informe, formatter)
 ```
 
-Try calling the function with different formats to make sure it's working.
+Acordate de testear todas las ramas posibles del código para asegurarte de que está funcionando. Llamalo y pedile crear salidas en todos los formatos (podés ver el HTML con un webbrowser).
 
-### Ejercicio 8.8: Putting it all together
-Modify the `informe.py` program so that the `informe_camion()` function takes
-an optional argument specifying the output format. For example:
+### Ejercicio 8.8: Volvamos a armar todo
+Modificá tu programa `informe.py` de modo que la función `informe_camion()` acepte un parámetro opcionar que especifique el formato de salida deseado. Por ejemplo:
 
 ```python
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv', 'txt')
-      Name     Cajons      Price     Change
+    Nombre   Cantidad     Precio Diferencia
 ---------- ---------- ---------- ----------
-        Lima        100       9.22     -22.98
-       Naranja         50     106.28      15.18
-       Caqui        150      35.46     -47.98
-      Mandarina        200      20.89     -30.34
-        Durazno         95      13.48     -26.89
-      Mandarina         50      20.89     -44.21
-       Naranja        100     106.28      35.84
+      Lima        100       9.22     -22.98
+   Naranja         50     106.28      15.18
+     Caqui        150      35.46     -47.98
+ Mandarina        200      20.89     -30.34
+   Durazno         95      13.48     -26.89
+ Mandarina         50      20.89     -44.21
+   Naranja        100     106.28      35.84
 >>>
 ```
 
-Modify the main program so that a format can be given on the command line:
+Modificá el prgrama principal y usá `sys.argv()` para poder pedirle un formato particular directamente desde la línea de comandos (notá el último parámetro en este ejemplo):
 
 ```bash
 bash $ python3 informe.py Data/camion.csv Data/precios.csv csv
@@ -591,34 +547,18 @@ Naranja,100,106.28,35.84
 bash $
 ```
 
-### Discussion
+### Discusión
 
-Writing extensible code is one of the most common uses of inheritance
-in bibliotecas and frameworks.  For example, a framework might instruct
-you to define your own object that inherits from a provided base
-class.  You're then told to fill in various methods that implement
-various bits of functionality.
+El caso que vimos es un ejemplo de uno de los usos mas comunes de herencia en programación orientada a objetos: escribir programas extensibles. Un sistema puede definir una interfase mediante una superclase base, y pedirte que escribas tus propias implementaciones derivadas de esa clase. Si escribis los métodos específicos para tu caso particular podes adaptar la función de un sistema general para resolver tu problema. 
 
-Another somewhat deeper concept is the idea of "owning your
-abstractions."  In the ejercicios, we defined *our own class* for
-formatting a table.  You may look at your code and tell yourself "I should
-just use a formatting biblioteca or something that someone else already
-made instead!"  No, you should use BOTH your class and a biblioteca.
-Using your own class promotes loose coupling and is more flexible.
-As long as your application uses the programming interface of your class,
-you can change the internal implementation to work in any way that you
-want.  You can write all-custom code.  You can use someone's third
-party package.  You swap out one third-party package for a different
-package when you find a better one.  It doesn't matter--none of
-your application code will break as long as you preserve keep the
-interface.   That's a powerful idea and it's one of the reasons why
-you might consider inheritance for something like this.
+Otro concepto, un poco mas interesante, es el de crear tus propias abstracciones. En los ejercicios de esta parte definimos *nuestra propia clase* para crear variaciones en el formato de un informe.
 
-That said, designing object oriented programs can be extremely
-difficult.  For more information, you should probably look for books
-on the topic of design patterns (although understanding what happened
-in this ejercicio will take you pretty far in terms of using objects in
-a practically useful way).
+Tal vez estés diciendo "Debería usar una biblioteca para crear formatos ya escrita por otro !". Bueno, no. Deberías usar *tanto* tu propia clase *como* una biblioteca ya escrita. El hecho de usar tu propia clase te dá flexibilidad. 
+
+Siempre que tu programa adhiera a la interfase de objetos definida por tu clase, podés cambiar la implementación interna en los objetos que escribas para que funcionen del modo que elijas. Podés escribir todo el código vos mismo ó usar bibliotecas escritas por otro, no importa. Cuando encuentres algo mejor, cambiás un código de terceros por el nuevo. Si la interfase está bien escrita no necesitas modificar el programa que usa las diferentes implementaciones. Simplemente funcionan si cumplen los contratos de la interfase. Es algo muy util y es una de los motivos por los que usar herencia puede resolverte los problemas de extensibilidad y diversidad a futuro.
+
+Dicho esto, es cierto que diseñar un programa orientado a objetos puede volverse algo muy difícil. Si vas a encarar un proyecto grande con esta herramienta tal vez debieras consultar material específico sobre el diseño de estos sistemas. De todos modos, haber entendido lo que acabamos de hacer te va a servir para llegar bastante lejos.
+
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Clases***)](03_Clases.md) \| [Próximo (5 Métodos especiales)](05_Métodos_Especiales.md)

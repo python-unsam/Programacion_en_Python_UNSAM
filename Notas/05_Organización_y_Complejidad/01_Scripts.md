@@ -273,7 +273,7 @@ Cuando tu programa es una única función, es muy simple ejecutarlo con diferent
 
 ### Comentario
 
-En Python es muy fácil escribir código en forma de un script relativamente poco estructurado, en el que tenés un archivo que contiene una secuencia de comandos. A la larga, casi siempre es mejor usar funciones para organizar el código.
+En Python es muy fácil escribir código en forma de un script relativamente poco estructurado, en el que tenés un archivo que contiene una secuencia de comandos. A la larga, casi siempre es mejor convertir estos scripts en funciones para organizar el código.
 
 En algún momento, si ese script crece, vas a desear haber sido un poco más organizado desde el comienzo. Tratá de organizar tu código en funciones simples. Es un buen principio es que cada función haga una sola cosa sencilla y concreta, que tenga una sola responsabilidad.
 
