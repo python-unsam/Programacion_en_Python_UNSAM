@@ -392,17 +392,26 @@ El siguiente comando realiza un [boxplot](https://es.wikipedia.org/wiki/Diagrama
 
 Realizá un gráfico similar pero de los altos en lugar de los anchos de los árboles.
 
-### Ejercicio 7.7: Boxplots para tipas
-Ahora nos preguntamos si el ancho de la acera en la que está plantada una Tipa (nombre_científico *Tipuana tipu*), por ejemplo, tiene relación con su creciemiento.
+### Ejercicio 7.7: Comparando especies en parques y en veredas
+Al comienzo abrimos el dataset de arboles en parques. Recién trabajamos con otro dataset: el de árboles en veredas. Ahora nos preguntamos si hay diferencias notables entre los ejemplares de una misma especie que crecen en el un tipo de sitio o en otro. Queremos hacer un boxplot de los DAP (diámetro a la altura del pecho) y para las Tipas (su nombre científico es *tipuana tipu*), que crecen en ambos tipos de sitio. Para esto tendremos que mezclar datos de dos bases de datos diferentes. 
 
-Imprimí los 10 anchos de aceras más frecuentes en las que hay Tipas plantadas. Creá una lista `anchos_sel` con aquellos anchos de acera donde hay más de 500 ejemplares de Tipas.
+Nos vamos en meter en un lío. El GCBA usa en un dataset 'altura_tot', 'diametro' y 'nombre_cie' para las alturas, diámetros y nombres científicos de los ejemplares, y en el otro dataset usa 'altura_arbol', 'diametro_altura_pecho' y 'nombre_cientifico' para los mismos datos.
 
-```python
->>> anchos_sel = ['4.4', '3.2', '4', '5.6']
-```
+Es más, los nombres científicos varían de un dataset al otro. 'Tipuana Tipu' se transforma en 'Tipuana tipu' y 'Jacarandá mimosifolia' en 'Jacaranda mimosifolia'. Obviamente son cambios menores pero suficientes para desalentar al usuario desprevenido.
 
-Usá esta lista para armar un DataFrame seleccionando los datos de la Tipas que están plantadas en  aceras con estos anchos. Luego, usá este DataFrame para hacer un boxplot de los diámetros de las tipas agrupados por el ancho de las aceras. ¿Pareciera influir el ancho de la acera en el diámetro de los ejemplares?
+En este ejercicio te proponemos los siguientes pasos para comparar los DAPs de las tipas en ambos tipos de entornos:
 
+1. Abrí ambos dataset y llamamos dp y dv (por parques y veredas).
+2. Para cada dateset armate otro seleccionando solamente las filas correspondientes a las tipas (llamalos dTTp y dTTv, respectivamente) y las columnas correspondientes a DAPs y alturas. Llamá a estas columnas 'DAP' y 'altura' para comanzar a uniformizar.
+3. Agregale a cada nuevo dataframe (dTTp y dTTv) una columna llamada 'ambiente' que en un caso valga siempre 'parque' y en el otro caso 'vereda'. 
+4. Juntá ambos datasets con el comando `dTT = pd.concat([dTTl, dTTp])` en uno solo que contenga los DAPs y altos de las tipas de ambos datasets, distinguiéndolos por ambiente.
+5. Creá un boxplot para los DAPs de la tipas distinguiendo los ambientes (`boxplot('DAP',by='sitio')`).
+6. Repetí para alturas.
+7. Armá una función a la que le pases ambos datasets originales y los respectivos nombre científicos de una misma especie en cada dataset y te devuelva un DataFrame con los DAPs y alturas de todos los ejemplares distinguiéndolos por ambiente (pasos 2,3 y 4 anteriores).
+8. Usá la función anterior para seleccionar los Jacarandás ('Jacarandá mimosifolia' y 'Jacaranda mimosifolia' se llaman en uno y otro dataset) y grafića los boxplots para ver si presentan diferencias en sus DAPs y en sus alturas.
+
+### Ejercicio 7.8: Un toque de seaborn
+Vamos a sacarle un poco más de jugo a los datos que armamos recién
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de carpetas)](02_Archivos_y_Directorios.md) \| [Próximo (4 Plots con Pandas)](07_Pandas_graficos.md)
 
