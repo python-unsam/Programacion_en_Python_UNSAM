@@ -410,8 +410,6 @@ En este ejercicio te proponemos los siguientes pasos para comparar los DAPs de l
 7. Armá una función a la que le pases ambos datasets originales y los respectivos nombre científicos de una misma especie en cada dataset y te devuelva un DataFrame con los DAPs y alturas de todos los ejemplares distinguiéndolos por ambiente (pasos 2,3 y 4 anteriores).
 8. Usá la función anterior para seleccionar los Jacarandás ('Jacarandá mimosifolia' y 'Jacaranda mimosifolia' se llaman en uno y otro dataset) y grafića los boxplots para ver si presentan diferencias en sus DAPs y en sus alturas.
 
-### Ejercicio 7.8: Un toque de seaborn
-Vamos a sacarle un poco más de jugo a los datos que armamos recién
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de carpetas)](02_Archivos_y_Directorios.md) \| [Próximo (4 Plots con Pandas)](07_Pandas_graficos.md)
 
