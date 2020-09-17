@@ -8,7 +8,7 @@ A continuación introducimos el módulo `datetime` que permite manipular adecuad
 
 **intercalarle un par de ejercicios**
 
-### Ejemplo 1: Obtener fecha y hora actuales
+### Ejemplo: Obtener fecha y hora actuales
 
 ```python
 import datetime
@@ -26,7 +26,7 @@ Cuando corras este código, vas a obtener algo así:
 Lo que hicimos fue importar el módulo **datetime** con la instrucción `import datetime`. Luego utilizamos la clase `datetime` del módulo, y usamos el métido `now()` para crear el objeto `fecha_hora` con la fecha y la hora actuales.
 
 
-### Ejemplo 2: Obtener fecha actual
+### Ejemplo: Obtener fecha actual
 
 ```python
 import datetime
@@ -63,17 +63,17 @@ Si lo hacés, vas a obtener algo así:
 
 Las clases más usadas del módulo datetime son:
 
-* date 
-* time 
-* datetime 
-* timedelta 
+* date
+* time
+* datetime
+* timedelta
 
-## La clase datetime.date 
+## La clase datetime.date
 
 Podés generar objetos de tipo fecha con la clase `date`. Un objeto de esta clase representa una fecha (año, mes, día).
 
 
-### Ejemplo 3: Un objeto para representar una fecha
+### Ejemplo: Un objeto para representar una fecha
 
 ```python
 import datetime
@@ -102,7 +102,7 @@ print(d)
 ```
 
 
-### Ejemplo 4: Obtener la fecha a partir de un timestamp
+### Ejemplo: Obtener la fecha a partir de un timestamp
 
 También podemos crear objetos `date` desde un timestamp. Un timestamp de Unix es el número de segundos transcurridos desde el primero de enero de 1970 a las 0 horas UTC hasta un determinado momento. Podés convertir un timestamp a fecha usando el método `fromtimestamp()`.
 
@@ -121,14 +121,14 @@ Fecha = 2012-01-11
 ```
 
 
-### Ejemplo 5: Imprimir el año, el mes y el día por separado.
+### Ejemplo: Imprimir el año, el mes y el día por separado.
 
 Así podés obtener el año, el mes, el día y el día de la semana:
 
 ```python
 from datetime import date
 
-hoy = date.today() 
+hoy = date.today()
 
 print('Año actual:', hoy.year)
 print('Mes actual:', hoy.month)
@@ -141,7 +141,7 @@ print('Día de la semana:', hoy.weekday()) # va de 0 a 6 empezando en lunes
 Un objeto de la clase `time` representa el tiempo local.
 
 
-### Ejemplo 6: Representar la hora con un objeto `time`
+### Ejemplo: Representar la hora con un objeto `time`
 
 Con el comando `time()` representamos un horario.
 
@@ -172,7 +172,7 @@ d = 11:34:56.234566
 ```
 
 
-### Ejemplo 7: Imprimir horas, minutos, segundos y microsegundos
+### Ejemplo: Imprimir horas, minutos, segundos y microsegundos
 
 Una vez que creaste un objeto `time`, podés imprimir sus atributos así:
 
@@ -191,9 +191,9 @@ Como no le pasaste ningún valor para el argumento `microsecond`, éste va a tom
 
 ## datetime.datetime
 
-El módulo `datetime` tiene una clase llamada `datetime` que contiene información de fecha y hora a la vez. 
+El módulo `datetime` tiene una clase llamada `datetime` que contiene información de fecha y hora a la vez.
 
-### Ejemplo 8: Objeto datetime
+### Ejemplo: Objeto datetime
 
 ```python
 from datetime import datetime
@@ -217,7 +217,7 @@ Al correr el código vas a obtener:
 Los primeros tres argumentos, `year`, `month` y `day` del constructor `datetime()` son obligatorios.
 
 
-### Ejemplo 9: Imprimir año, mes, día, hora, minutos, timestamp
+### Ejemplo: Imprimir año, mes, día, hora, minutos, timestamp
 
 ```python
 from datetime import datetime
@@ -247,7 +247,7 @@ timestamp = 1511913359.34238
 
 Un objeto `timedelta` representa una duración, es decir, la diferencia entre dos fechas o momentos.
 
-### Ejemplo 10: Diferencia entre fechas y horarios
+### Ejemplo: Diferencia entre fechas y horarios
 
 ```python
 from datetime import datetime, date
@@ -262,7 +262,7 @@ t5 = datetime(year = 2019, month = 6, day = 10, hour = 5, minute = 55, second = 
 t6 = t4 - t5
 print('t6 =', t6)
 
-print('type of t3 =', type(t3)) 
+print('type of t3 =', type(t3))
 print('type of t6 =', type(t6))  
 ```
 
@@ -278,7 +278,7 @@ type of t6 = <class 'datetime.timedelta'>
 Observá que `t3` y `t6` son de tipo `<class 'datetime.timedelta'>`.
 
 
-### Ejemplo 11: Diferencia entre objetos timedelta
+### Ejemplo: Diferencia entre objetos timedelta
 
 ```python
 from datetime import timedelta
@@ -301,7 +301,7 @@ t3 = 14 days, 13:55:39
 `t3` también es de tipo `<class 'datetime.timedelta'>`.
 
 
-### Ejemplo 12: Imprimir objetos timedelta negativos
+### Ejemplo: Imprimir objetos timedelta negativos
 
 ```python
 from datetime import timedelta
@@ -322,7 +322,7 @@ t3 = 0:00:21
 ```
 
 
-### Ejemplo 13: Duración en segundos
+### Ejemplo: Duración en segundos
 
 Podés obtener el tiempo medido en segundos usando el método `total_seconds()`.
 
@@ -354,7 +354,7 @@ En Python tenemos los métodos `strftime()` y `strptime()` para manejar esto.
 El método `strftime()` está definido en las clases `date`, `datetime` y `time`. Este método crea una cadena con formato a partir estos objetos.
 
 
-### Ejemplo 14: Formato de fecha usando strftime()
+### Ejemplo: Formato de fecha usando strftime()
 
 ```python
 from datetime import datetime
@@ -369,7 +369,7 @@ s1 = now.strftime('%m/%d/%Y, %H:%M:%S')
 print('s1:', s1)
 
 s2 = now.strftime('%d/%m/%Y, %H:%M:%S')
-# en formato dd/mm/YY H:M:S 
+# en formato dd/mm/YY H:M:S
 print('s2:', s2)
 ```
 
@@ -393,7 +393,7 @@ Para aprender más sobre `strftime()` visitá [la documentación](https://docs.p
 El método `strptime()` crea un objeto `datetime` a partir de una cadena.
 
 
-### Ejemplo 15: strptime()
+### Ejemplo: strptime()
 
 ```python
 from datetime import datetime
@@ -424,7 +424,7 @@ Visitá [la documentación](https://docs.python.org/3/library/datetime.html#strf
 ## Ejercicios:
 
 ### Ejercicio 7.1: Segundos vividos
-Escribí una función a la que le pasás tu fecha de nacimiento como cadena en formato "dd/mm/AAAA" (año me día, con 4, 2 y 2 dígitos, separados con barras normales) y te devuelve la cantidad de segundos que viviste (asumiendo que naciste a las 00:00hs de tu fecha de nacimiento).
+Escribí una función a la que le pasás tu fecha de nacimiento como cadena en formato 'dd/mm/AAAA' (año me día, con 4, 2 y 2 dígitos, separados con barras normales) y te devuelve la cantidad de segundos que viviste (asumiendo que naciste a las 00:00hs de tu fecha de nacimiento).
 
 ### Ejercicio 7.2: Cuánto falta
 Escribí un programa que calcule cuántos días faltan para fin de año.
@@ -433,14 +433,9 @@ Escribí un programa que calcule cuántos días faltan para fin de año.
 Si tenés una licencia por ma(pa)ternidad que empieza el 26 de septiembre de 2020 y dura 200 días, ¿qué día te reincorporás al trabajo?
 
 ### Ejercicio 7.4: Días hábiles
-Escribí una función `dias_habiles(inicio, fin, feriados) que calcule los días hábiles en un determinado lapso temporal. La función debe tener como argumentos el día inicial, el día final, y una lista con las fechas correspondientes a los feriados que haya en ese lapso, y debe devolver una lista con las fechas de días hábiles del período. 
+Escribí una función `dias_habiles(inicio, fin, feriados)` que calcule los días hábiles en un determinado lapso temporal. La función debe tener como argumentos el día inicial, el día final, y una lista con las fechas correspondientes a los feriados que haya en ese lapso, y debe devolver una lista con las fechas de días hábiles del período.
 
 Consideramos día hábil a un día que no es feriado ni sábado ni domingo.
-
-
-
-
-
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Manejo de carpetas)](02_Archivos_y_Directorios.md)

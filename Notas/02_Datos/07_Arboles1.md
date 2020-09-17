@@ -10,7 +10,7 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 
 ![Arbolado porteño](arboles.jpg)
 
-#### Descripción de la base
+### Descripción de la base
 
 
 
