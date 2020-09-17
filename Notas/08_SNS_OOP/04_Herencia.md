@@ -47,7 +47,7 @@ class Cajon:
 ```
 [oski] : # (si Cajon representa un unico cajon, ncajones tiene que ser n;umero de unidades de fruta vendida. )
 
-Podés modificar no que necesites mediante herencia.
+Podés modificar lo que necesites mediante herencia.
 
 ### Agregar un método nuevo
 
@@ -96,19 +96,18 @@ Hay veces en que una clase extiende el método de la superclase a la que pertene
 ```python
 class Cajon:
     ...
-    def cost(self):
+    def costo(self):
         return self.cantidad * self.precio
     ...
 
 class MiCajon(Cajon):
     def precio(self):
         # Fijate como usamos `super`
-        precio_actualizado = super().cost()
+        precio_actualizado = super().costo()
         return 1.25 * precio_actualizado
 ```
 
-Use `super()` to call the previous version.
-
+Usá `super()` para llamar al método de la clase base.
 
 ### El método `__init__` y herencia.
 
@@ -147,7 +146,7 @@ class Rectangulo(FiguraGeom):
     ...
 ```
 
-Imaginate por ejemplo su uso en una jerarquía lógica, o taxonomica, en la que las clases tienen una relación natural tal que hace intuitivo derivar una de otra. 
+Imaginate por ejemplo su uso en una jerarquía lógica, o taxonómica, en la que las clases tienen una relación natural tal que hace intuitivo derivar una de otra. 
 
 Una aplicación mas común, y tal vez mas práctica, consiste en escribir código que es reusable y/o extensible. Podríamos definir una clase base para una interfase de transferencia de datos y permitir que cada fabricante de equipo de adquisición de datos implemente los detalles de comunicación con cada interfase en particular.
 

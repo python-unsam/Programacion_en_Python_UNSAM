@@ -2,15 +2,11 @@
 
 # 8.5 Métodos especiales
 
-Various parts of Python's behavior can be customized via special or so-called "magic" methods.
-This section introduces that idea.  In addition dynamic attribute access and bound methods
-are discussed.
+Podemos modificar muchos comportamientos de Python definiendo lo que se conoce como "métodos mágicos". Aquí vamos a ver como usarlos, además de discutir brevemente otras herramientas, como *acceso dinámco de atributos* y *métodos asociados*.
 
-### Introduction
+### Introducción
 
-Classes may define special methods. These have special meaning to the
-Python interpreter.  They are always preceded and followed by
-`__`. For example `__init__`.
+Una clase puede definir métodos especiales. Estos métodos tienen un significado particular para el intérprete de Python. Sus nombres empiezan y terminan en `__` (doble guión bajo). Por ejemplo `__init__`.
 
 ```python
 class Stock(object):
@@ -20,11 +16,12 @@ class Stock(object):
         ...
 ```
 
-There are dozens of special methods, but we will only look at a few specific examples.
+Hay decenas de métodos especiales pero sólo vamos a tratar algunos ejemplos específicos acá. 
 
 ### Special methods for String Conversions
+Métodos especiales para convertir Strings
 
-Objects have two string representations.
+Los objetos tienen dos representaciones de tipo cadena (string)
 
 ```python
 >>> from datetime import date
@@ -36,7 +33,7 @@ datetime.date(2012, 12, 21)
 >>>
 ```
 
-The `str()` function is used to create a nice printable output:
+La función `str()` se usa para crear una representación agradable de ver:
 
 ```python
 >>> str(d)
@@ -44,8 +41,7 @@ The `str()` function is used to create a nice printable output:
 >>>
 ```
 
-The `repr()` function is used to create a more detailed representation
-for programmers.
+Pero para crear una representación mas agradable para programadores, se usa la función `repr()`. 
 
 ```python
 >>> repr(d)
@@ -53,8 +49,7 @@ for programmers.
 >>>
 ```
 
-Those functions, `str()` and `repr()`, use a pair of special methods
-in the class to produce the string to be displayed.
+Las funciones `str()` y `repr()` usan un par de métodos especiales de la clase datetime.date() para generar la cadena de caracteres que se va a mostrar. 
 
 ```python
 class Date(object):
@@ -71,15 +66,13 @@ class Date(object):
     def __repr__(self):
         return f'Date({self.year},{self.month},{self.day})'
 ```
+*Nota: La convención para `__repr__()` es devolver un string que, cuando sea pasado a `eval()` vuelva a crear el objeto subayacente. Analizá el ejemplo de `datetime.date(2012, 12, 21)`.  Si no es posible crear un string que haga éso, la convención es generar una representación que sea fácil de leer para un humano.*
 
-*Note: The convention for `__repr__()` is to return a string that,
- when fed to `eval()`, will recreate the underlying object. If this
- is not possible, some kind of easily readable representation is used
- instead.*
 
 ### Special Methods for Mathematics
+Métodos especiales para operaciones matemáticas.
 
-Mathematical operators involve calls to the following methods.
+Las operaciones matemáticas sobre los objetos involucran llamados a los siguientes métodos.
 
 ```python
 a + b       a.__add__(b)
@@ -100,8 +93,9 @@ abs(a)      a.__abs__()
 ```
 
 ### Special Methods for Item Access
+Métodos especiales para acceder a elementos.
 
-These are the methods to implement containers.
+Los siguientes métodos se usan para implementar containers (contenedores / recipientes):
 
 ```python
 len(x)      x.__len__()
@@ -110,7 +104,7 @@ x[a] = v    x.__setitem__(a,v)
 del x[a]    x.__delitem__(a)
 ```
 
-You can use them in your classes.
+Los podés implementar en tus clases.
 
 ```python
 class Sequence:
@@ -125,72 +119,76 @@ class Sequence:
 ```
 
 ### Method Invocation
+Invocar métodos.
 
-Invoking a method is a two-step process.
+El proceso de invocar un método puede dividirse en dos partes:
 
-1. Lookup: The `.` operator
-2. Method call: The `()` operator
+1. Busqueda: Se usa el operator `.`
+2. Llamado : Se usan `()`
 
 ```python
->>> s = Stock('GOOG',100,490.10)
->>> c = s.cost  # Lookup
+>>> m = Mercado('Pera',100,490.10)
+>>> c = m.costo  # Búsqueda
 >>> c
-<bound method Stock.cost of <Stock object at 0x590d0>>
->>> c()         # Method call
+<bound method Mercado.costo of <Mercado object at 0x590d0>>
+>>> c()         # Llamado
 49010.0
 >>>
 ```
+*Nota: la respuesta al pedido de representación de `c` es algo así como 
+<Método Mercado.costo asociado al <objeto Mercado en 0x590d0>>*
 
 ### Bound Methods
+Métodos asociados.
 
-A method that has not yet been invoked by the function call operator `()` is known as a *bound method*.
-It operates on the instance where it originated.
+Un método que aún no ha sido llamado por el operador de llamado a funciones `()` se conoce como *método asociado* y opera dentro de la instancia en la que fué originado.
 
 ```python
->>> s = Stock('GOOG', 100, 490.10) >>> s
-<Stock object at 0x590d0>
->>> c = s.cost
+>>> m = Mercado('Pera', 100, 490.10) 
+>>> m
+<Mercado object at 0x590d0>
+>>> c = m.cost
 >>> c
-<bound method Stock.cost of <Stock object at 0x590d0>>
+<bound method Mercado.costo of <Mercado object at 0x590d0>>
 >>> c()
 49010.0
 >>>
 ```
 
-Bound methods are often a source of careless non-obvious errors. For example:
+Estos métodos asociados pueden ser el origen de errores por desprolijidad, que no son nada obvios. Por ejemplo:
 
 ```python
->>> s = Stock('GOOG', 100, 490.10)
->>> print('Cost : %0.2f' % s.cost)
+>>> m = Mercado('Pera', 100, 490.10)
+>>> print('Costo : %0.2f' % m.costo)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: float argument required
 >>>
 ```
 
-Or devious behavior that's hard to debug.
+O una fuente de comportamiento extraño que es difícil de debuggear.
 
 ```python
 f = open(filename, 'w')
 ...
-f.close     # Oops, Didn't do anything at all. `f` still open.
+f.close   # EPA !! No hicimos nada. `f` sigue abierto.
 ```
 
-In both of these cases, the error is cause by forgetting to include the
-trailing parentheses.  For example, `s.cost()` or `f.close()`.
+En ambos casos, el error está causado por omitir los paréntesis en el (intento de) llamado a la función. Por ejemplo, `m.costo()` o `f.close()`. Sin los paréntesis, no estamos llamando a la función sino buscando al objeto.
 
 ### Attribute Access
+Acceso a atributos.
 
-There is an alternative way to access, manipulate and manage attributes.
+Existe una forma alternativa de acceder, manipular, y administrar las propiedades (o atributos) de un objeto.
 
 ```python
-getattr(obj, 'name')          # Same as obj.name
-setattr(obj, 'name', value)   # Same as obj.name = value
-delattr(obj, 'name')          # Same as del obj.name
-hasattr(obj, 'name')          # Tests if attribute exists
+getattr(obj, 'name')          # Equivale a obj.name
+setattr(obj, 'name', value)   # Equivale a obj.name = value
+delattr(obj, 'name')          # Equivale a del obj.name
+hasattr(obj, 'name')          # Mira si la propiedad existe
 ```
 
-Example:
+Ejemplo:
 
 ```python
 if hasattr(obj, 'x'):
@@ -199,89 +197,77 @@ else:
     x = None
 ```
 
-*Note: `getattr()` also has a useful default value *arg*.
+*Nota: si `getattr()` no encuentra el atributo buscado (`x` en este ejemplo), devuelve el argumento opcional *arg* (`None` en este caso)
 
 ```python
 x = getattr(obj, 'x', None)
 ```
 
-## Exercises
+## Ejercicios
 
 ### Ejercicio 8.9: Better output for printing objects
-Modify the `Stock` object that you defined in `stock.py`
-so that the `__repr__()` method produces more useful output.  For
-example:
 
 ```python
->>> goog = Stock('GOOG', 100, 490.1)
->>> goog
-Stock('GOOG', 100, 490.1)
+>>> peras = Cajon('Pera', 100, 490.1)
+>>> peras
+Cajon('Pera', 100, 490.1)
 >>>
 ```
 
-See what happens when you read a portfolio of stocks and view the
-resulting list after you have made these changes.  For example:
+Fijate lo que ocurre cuando lees un camión de frutas y mirás la salida resultante después de hacer estos cambios. Un ejemplo:
 
-```
->>> import report
->>> portfolio = report.read_portfolio('Data/portfolio.csv')
->>> portfolio
-... see what the output is ...
+```python
+>>> import informe
+>>> camion = report.read_camion('Data/camion.csv')
+>>> camion
+... fijate cual es la salida ...
 >>>
 ```
 
-### Ejercicio 8.10: An example of using getattr()
-`getattr()` is an alternative mechanism for reading attributes.  It can be used to
-write extremely flexible code.  To begin, try this example:
+### Ejercicio 8.10: An example of using getattr()`getattr()` es un mecanismo alternativo de leer atributos. Puede usarse para escribir código sumamente versátil. Probá este ejemplo, para empezar: 
 
 ```python
->>> import stock
->>> s = stock.Stock('GOOG', 100, 490.1)
->>> columns = ['name', 'shares']
->>> for colname in columns:
-        print(colname, '=', getattr(s, colname))
+>>> import cajones
+>>> c = cajon.Cajones('Peras', 100, 490.1)
+>>> columnas = ['nombre', 'cantidad']
+>>> for colname in columnas:
+        print(colname, '=', getattr(c, colname))
 
-name = GOOG
-shares = 100
+nombre = Peras
+cantidad = 100
 >>>
 ```
 
-Carefully observe that the output data is determined entirely by the attribute
-names listed in the `columns` variable.
+Queremos que notes algo interesante: los datos de salida están completamente especificados por los nombres de los atributos listados en la variable `columnas`. No fué necesario hacer ninguna conversión ni preguntar nada al usuario para usar el nombre de un dato como nombre de una variable.  
 
-In the file `tableformat.py`, take this idea and expand it into a generalized
-function `print_table()` that prints a table showing
-user-specified attributes of a list of arbitrary objects.  As with the
-earlier `print_report()` function, `print_table()` should also accept
-a `TableFormatter` instance to control the output format.  Here's how
-it should work:
+
 
 ```python
->>> import report
->>> portfolio = report.read_portfolio('Data/portfolio.csv')
->>> from tableformat import create_formatter, print_table
->>> formatter = create_formatter('txt')
->>> print_table(portfolio, ['name','shares'], formatter)
-      name     shares
+>>> import informe
+>>> portfolio = informe.leer_camion('Data/camion.csv')
+>>> from formatotabla import crear_formato, imprimir_tabla
+>>> formato = crear_formato('txt')
+>>> imprimir_tabla(camion, ['name','shares'], formato)
+    Nombre   Cantidad
 ---------- ----------
-        AA        100
-       IBM         50
-       CAT        150
-      MSFT        200
-        GE         95
-      MSFT         50
-       IBM        100
+      Lima        100
+   Naranja         50
+     Caqui        150
+ Mandarina        200
+   Durazno         95
+ Mandarina         50
+   Naranja        100
 
->>> print_table(portfolio, ['name','shares','price'], formatter)
-      name     shares      price
+>>> imprimir_tabla(camion, ['nombre','cantidad','precio'], formato)
+    Nombre   Cantidad     Precio
 ---------- ---------- ----------
-        AA        100       32.2
-       IBM         50       91.1
-       CAT        150      83.44
-      MSFT        200      51.23
-        GE         95      40.37
-      MSFT         50       65.1
-       IBM        100      70.44
+      Lima        100       32.2
+   Naranja         50       91.1
+     Caqui        150      83.44
+ Mandarina        200      51.23
+   Durazno         95      40.37
+ Mandarina         50       65.1
+   Naranja        100      70.44
 >>>
 ```
 
