@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de fechas y horas)](01_Fechas.md) \| [Próximo (3 Manejo de carpetas)](02_Directorios.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de fechas y horas)](01_Fechas.md) \| [Próximo (3 Introducción a Pandas)](06_Pandas_basico.md)
 
 # 7.2 Manejo de carpetas
 
@@ -267,5 +267,5 @@ os.utime(fileLocation, (modTime, modTime))
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de fechas y horas)](01_Fechas.md) \| [Próximo (3 Manejo de carpetas)](02_Directorios.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de fechas y horas)](01_Fechas.md) \| [Próximo (3 Introducción a Pandas)](06_Pandas_basico.md)
 
