@@ -4,10 +4,9 @@
 
 La  biblioteca Pandas es una extensión de NumPy para manipulación y análisis de datos. En particular, ofrece estructuras de datos y operaciones para manipular tablas de datos (numéricos o de otros tipos) y series temporales. Se distribuye como software libre.
 
-Esta es una breve introducción [Pandas](https://pandas.pydata.org/docs/getting_started/index.html). Para información más completa te recomendamos consultar [la documentación oficial](https://pandas.pydata.org/docs/user_guide/10min.html). Obviamente, al mostrar las posiblidades que ofrece una biblioteca pes
+Ésta es una breve introducción [Pandas](https://pandas.pydata.org/docs/getting_started/index.html). Para información más completa te recomendamos consultar [la documentación oficial](https://pandas.pydata.org/docs/user_guide/10min.html).
 
 Esta biblioteca tiene dos tipos de datos fundamentales: las `series` que contienen secuencias de datos y los `DataFrames` que almacenan tablas de datos. 
-
 
 ## Lectura de datos
 
@@ -15,6 +14,7 @@ Pandas permite leer diversos formatos de tablas de datos directamente. Probá el
 
 ```python
 import pandas as pd
+import os
 
 directorio = 'Data'
 archivo = 'arbolado-en-espacios-verdes.csv'
@@ -22,18 +22,19 @@ fname = os.path.join(directorio,archivo)
 df = pd.read_csv(fname)
 ```
 
-la variable `df` es de tipo `DataFrame` y continene todos los datos del archivo csv estructurados adecuadamente.
+La variable `df` es de tipo `DataFrame` y contiene todos los datos del archivo csv estructurados adecuadamente.
 
 Con `df.head()` podés ver las primeras líneas de datos. Si a `head` le pasás un número como parámetro podés seleccionar cuántas lineas querés ver. Análogamente con `df.tail(n)` verás las últimas `n` líneas de datos.
 
 ```python
 >>> df.head()
-        long        lat  id_arbol  ...            origen       coord_x       coord_y
-0 -58.477564 -34.645015         1  ...           Exótico  98692.305719  98253.300738
-1 -58.477559 -34.645047         2  ...           Exótico  98692.751564  98249.733979
-2 -58.477551 -34.645091         3  ...           Exótico  98693.494639  98244.829684
-3 -58.478129 -34.644567         4  ...  Nativo/Autóctono  98640.439091  98302.938142
-4 -58.478121 -34.644598         5  ...  Nativo/Autóctono  98641.182166  98299.519997
+
+   long       lat      id_arbol ...          origen       coord_x       coord_y
+0 -58.477564 -34.645015    1  ...           Exótico  98692.305719  98253.300738
+1 -58.477559 -34.645047    2  ...           Exótico  98692.751564  98249.733979
+2 -58.477551 -34.645091    3  ...           Exótico  98693.494639  98244.829684
+3 -58.478129 -34.644567    4  ...  Nativo/Autóctono  98640.439091  98302.938142
+4 -58.478121 -34.644598    5  ...  Nativo/Autóctono  98641.182166  98299.519997
 ```
 
 
@@ -50,8 +51,7 @@ Index(['long', 'lat', 'id_arbol', 'altura_tot', 'diametro', 'inclinacio',
 RangeIndex(start=0, stop=51502, step=1)
 ```
 
-
-Otra herramienta útil para inspeccionar los datos recien levantados es `describe()`. Para ver mejor una parte, podemos seleccionar algunas columnas de interés antes de pedirle la descripción.
+Otra herramienta útil para inspeccionar los datos recién levantados es `describe()`. Para ver mejor una parte, podemos seleccionar algunas columnas de interés antes de pedirle la descripción.
 
 ```python
 >>> df[['altura_tot', 'diametro', 'inclinacio']].describe()
@@ -80,6 +80,7 @@ Por ejemplo con `df['nombre_com']` veremos la columna (que es una serie) de nomb
  'Acacia',
  'Acacia blanca',
  ...
+ 'Ñangapirí (Grosella o Cereza de Cayena)'}
 }
 ```
 
@@ -90,6 +91,7 @@ Podemos preguntar cuáles se llaman de cierta manera ('Jacarandá' en este caso)
 0        False
 1        False
 2        False
+...
 ```
 
 Observá que esto generó una serie. Podemos sumar los `True` de esta serie para contar la cantidad de Jacarandás:
@@ -103,7 +105,7 @@ Si queremos hacer lo mismo para otras especies podemos usar `value_counts()`
 
 ```python
 >>> cant_ejemplares = df['nombre_com'].value_counts()
->>> df['nombre_com'].value_counts().head(10)
+>>> cant_ejemplares.head(10)
 Eucalipto               4112
 Tipa blanca             4031
 Jacarandá               3255
@@ -119,9 +121,9 @@ Name: nombre_com, dtype: int64
 
 De esta forma obtenermos, en orden decreciente, los nombres comunes y las cantidades de las especies más frecuentes en la base de datos.
 
-### Seleccion con indexación boolena
+### Filtros booleanos
 
-La serie booleana  que obtuvimos con `df['nombre_com']=='Jacarandá'` puede usarse para seleccionar esas filas del DataFrame:
+La serie booleana que obtuvimos con `df['nombre_com']=='Jacarandá'` puede usarse para seleccionar esas filas del DataFrame:
 
 ```python
 >>> dJ = df[df['nombre_com']=='Jacarandá']
@@ -131,7 +133,7 @@ Análogamente, podemos seleccionar algunas columnas de interés y generar vistas
 
 ```python
 >>> cols = ['altura_tot', 'diametro', 'inclinacio']
->>> dJ=dJ[cols]
+>>> dJ = dJ[cols]
 >>> dJ.tail()
        altura_tot  diametro  inclinacio
 51104           7        97           4
@@ -156,24 +158,29 @@ Observá que cuando le pedimos los últimos datos de `dJ` nos mostró los últim
 
 ### Scatterplots
 
-
-Pandas también permite [hace gráficos bonitos](https://pandas.pydata.org/docs/user_guide/visualization.html). Es realmente sencillo:
+Pandas también permite [hacer gráficos bonitos](https://pandas.pydata.org/docs/user_guide/visualization.html). Es realmente sencillo:
 
 ```python
->>> dJ.plot.scatter(x='altura_tot', y='diametro')
->>> Index(['Eucalipto', 'Tipa blanca', 'Jacarandá', 'Palo borracho rosado',
-       'Casuarina', 'Fresno americano', 'Plátano', 'Ciprés', 'Ceibo', 'Pindó',
-       ...
-       'Naranjo dulce', 'Peltophorum', 'Ligustrina de California',
-       'Afrocarpus', 'Caranday', 'Esterculea', 'Boj cepillo', 'Sesbania',
-       'Ligustrum', 'Árbol del humo'],
-      dtype='object', length=337)
+dJ.plot.scatter(x = 'diametro', y = 'altura_tot')
+
+```
+
+Hay otro módulo para hacer gráficos que se llama [Seaborn](https://seaborn.pydata.org/). Está basada en matplotlib, y ofrece una interfaz de alto nivel para realizar gráficos estadísticos atractivos e informativos. En criollo: "seaborn es la posta".
+
+
+Usando seaborn para el scatterplot:
+
+```python
+import seaborn as sns
+
+sns.scatterplot(data = dJ, x = 'diametro', y = 'altura_tot')
+
 ```
 
 
-### Selección por índice y por posición
+### Filtro por índice y por posición
 
-Como ya mencionamos `df` no tiene un índice interesante. Veamos en cambio la serie que generamos con `cant_ejemplares = df['nombre_com'].value_counts()` si lo tiene:
+Como ya mencionamos, `df` no tiene un índice interesante. Veamos en cambio que la serie que generamos con `cant_ejemplares = df['nombre_com'].value_counts()` sí lo tiene:
 
 ```python
 >>> cant_ejemplares.index
@@ -188,7 +195,7 @@ Index(['Eucalipto', 'Tipa blanca', 'Jacarandá', 'Palo borracho rosado',
 
 `cant_ejemplares` es una serie (es como un DataFrame de una sola columna). tiene los nombres de las especies como índice y sus respectivas cantidades como dato asociado.
 
-Podemos usar los índices para acceder a una fila de un DataFarme o una Serie como en los siguientes ejemplos:
+Podemos acceder a una fila de un DataFarme o una Serie tanto a través de su posición como a través de su índice. Para acceder con el índice usá `loc[]` como en los siguientes ejemplos:
 
 ```python
 >>> df.loc[165]
@@ -215,7 +222,7 @@ Name: 165, dtype: object
 4112
 ```
 
-También podemos acceder por posición usando `iloc`.
+Para acceder por posición usá `iloc`, com se muestra a continuación.
 
 ```python
 >>> dJ.iloc[0] 
@@ -225,7 +232,7 @@ inclinacio     0
 Name: 165, dtype: int64
 ```
 
-Esto nos devuelve los datos de la primera fila de `dJ` que corresponde al índice 165 (lo dice en la última línea). También podemos acceder a rebanadas (slices) usando `iloc`:
+Observá que esto nos devuelve los datos de la primera fila de `dJ` que corresponde al índice 165 (lo dice en la última línea). También podemos acceder a rebanadas (slices) usando `iloc`:
 
 ```python
 >>> cant_ejemplares.iloc[0:3]
@@ -235,7 +242,7 @@ Jacarandá      3255
 Name: nombre_com, dtype: int64
 ```
 
-Por otra parte, podemos seleecciona tanto filas como columnas, si separamos con comas las respectivas selecciones:
+Por otra parte, podemos seleccionar tanto filas como columnas, si separamos con comas las respectivas selecciones:
 
     
 ```python
@@ -248,9 +255,11 @@ Por otra parte, podemos seleecciona tanto filas como columnas, si separamos con 
 Name: inclinacio, dtype: int64
 ```
 
+Esto nos devuelve los datos correspondientes a las últimas 5 filas y a la tercera columna ('inclinacio'). Fijate que siempre vienen acompañados del índice.
+
 ### Selección de una columna
 
-Si queremos seleccionar una sola columna podemos especificarla por medio de su nombre. Recordemos que al tener una sola columna tenemos una Series en lugar de un DataFrame:
+Si queremos seleccionar una sola columna podemos especificarla por medio de su nombre. Recordemos que al tomar una sola columna obtenemos una serie en lugar de un DataFrame:
 
 ```python
 >>> dJd = dJ['diametro']
@@ -262,21 +271,22 @@ pandas.core.series.Series
 
 ## Series temporales en Pandas
 
-Pandas tiene un gran potencial para el manejo de series temporales. Es muy sencillo crear indices con fechas y frecuencias seleccionadas:
+Pandas tiene un gran potencial para el manejo de series temporales. Es muy sencillo crear índices con fechas y frecuencias seleccionadas.
+
 ```python
->>> pd.date_range('20200923', periods=7)
+>>> pd.date_range('20200923', periods = 7)
 DatetimeIndex(['2020-09-23', '2020-09-24', '2020-09-25', '2020-09-26',
                '2020-09-27', '2020-09-28', '2020-09-29'],
               dtype='datetime64[ns]', freq='D')
 
->>> pd.date_range('20200923 14:00', periods=7)
+>>> pd.date_range('20200923 14:00', periods = 7)
 DatetimeIndex(['2020-09-23 14:00:00', '2020-09-24 14:00:00',
                '2020-09-25 14:00:00', '2020-09-26 14:00:00',
                '2020-09-27 14:00:00', '2020-09-28 14:00:00',
                '2020-09-29 14:00:00'],
               dtype='datetime64[ns]', freq='D')
 
->>> pd.date_range('20200923 14:00', periods=6, freq='H')
+>>> pd.date_range('20200923 14:00', periods = 6, freq = 'H')
 DatetimeIndex(['2020-09-23 14:00:00', '2020-09-23 15:00:00',
                '2020-09-23 16:00:00', '2020-09-23 17:00:00',
                '2020-09-23 18:00:00', '2020-09-23 19:00:00'],
@@ -284,10 +294,10 @@ DatetimeIndex(['2020-09-23 14:00:00', '2020-09-23 15:00:00',
 
 ```
 
-Luego, podés usar esos índices junto con datos para aramr series temporales o DataFrames:
+Luego, podés usar esos índices junto con datos para armar series temporales o DataFrames:
 
 ```python
->>> pd.Series([1, 2, 3, 4, 5, 6], index=pd.date_range('20200923 14:00', periods=6, freq='H'))
+>>> pd.Series([1, 2, 3, 4, 5, 6], index = pd.date_range('20200923 14:00', periods = 6, freq = 'H'))
 2020-09-23 14:00:00    1
 2020-09-23 15:00:00    2
 2020-09-23 16:00:00    3
