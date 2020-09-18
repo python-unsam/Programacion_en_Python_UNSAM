@@ -13,13 +13,13 @@ Este es un ejercicio guiado en el que vamos a integrar las últimas dos seccione
 4. Los archivos que no son PNG no los modifiques.
 5. Borrá todas las subcarpetas de `Data/ordenar/` que hayan quedado vacías.
 
-Este es un ejercicio simple y un poco caprichoso. Pero este tipo de tareas se repiten con mucha frecuencia y tener la capacidad de programar un script de python que realice este tipo de tareas te puede ahorrar muchísimo tiempo.
+Este tipo de tareas se repite con mucha frecuencia. Tener la capacidad de automatizarlas mediante un script de Python te puede ahorrar muchísimo tiempo.
 
 **Algunos puntos importantes:**
 * El *procesamiento* de un archivo PNG lo debería hacer una función. 
 * Tu script debería poder ejecutarse desde la línea de comandos recibiendo dos parámetros: el directorio origianl y el directorio a crear. En la [Sección 6.2](../06_Plt_Especificacion_y_Documentacion/02_Modulo_principal.md#modelo-de-script-con-parámetros) dimos un modelo de script que te puede servir.
 * Usa docstrings y comentarios en tu código de manera que sea legible. 
-* Guradá el script resultante en un archivo `ordennar_imgs.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
+* Guradá el script resultante en un archivo `ordenar_imgs.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
 
 
 
