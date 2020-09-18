@@ -9,8 +9,10 @@ Octavio da dos cursos de posgrado sobre Series Temporales altamente recomendados
 
 Para comenzar, copiate [el archivo](./OBS_SHN_SF-BA.csv) con datos de mareas en los puertos de San Fernando y Buenos Aires a tu carpeta 'Datos/'
 
-En este práctico vamos a visualizar los datos de mareas
+En este práctico vamos a visualizar y analizar datos de mareas.
 
+
+## 
 
 
 ## Análisis por medio de transformadas de fourier
@@ -21,7 +23,7 @@ La transformada de Fourier descompone una señal en una suma de sinusoides con d
 
 Para cada frecuencia, la señal está descompuesta en un componente real (coseno) y uno imaginario (seno). La magnitud (o amplitud, o potencia) de la señal en esa frecuencia es la suma vectorial de ambos componentes.
 
-![Vectorial](./vectorial.jpeg)
+![Vectorial](./vectorial.jpg)
 
 La fase (o posición del máximo respecto del origen de las coordenadas), es el ángulo entre el componente real y el imaginario.
 
