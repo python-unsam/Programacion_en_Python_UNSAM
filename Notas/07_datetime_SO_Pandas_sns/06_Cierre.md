@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 # Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
 
 # 7.6 Cierre de la séptima
 
@@ -18,5 +18,5 @@ Para cerrar esta clase te pedimos dos cosas:
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 # Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
 

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivosen Python**)](03_Ordenando_archivos.md) \| [Próximo (5 # Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivosen Python**)](03_Ordenando_archivos.md) \| [Próximo (5 Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
 
 # 7.4 Introducción a Pandas
 
@@ -413,5 +413,5 @@ En este ejercicio te proponemos los siguientes pasos para comparar los DAPs de l
 8. Usá la función anterior para seleccionar los Jacarandás ('Jacarandá mimosifolia' y 'Jacaranda mimosifolia' se llaman en uno y otro dataset) y grafića los boxplots para ver si presentan diferencias en sus DAPs y en sus alturas.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivosen Python**)](03_Ordenando_archivos.md) \| [Próximo (5 # Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivosen Python**)](03_Ordenando_archivos.md) \| [Próximo (5 Detección de patrones periódicos)](05_Opt_Series_Temporales.md)
 

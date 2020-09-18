@@ -1,22 +1,35 @@
 [Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas_basico.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
 
-# 7.5 # Detección de patrones periódicos
+# 7.5 Detección de patrones periódicos
 
-## Por medio de transformadas de fourier
+## Tema Optativo: Series temporales
+
+Autor: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio)
+Octavio da dos cursos de posgrado sobre Series Temporales altamente recomendados para los que tienen que analizar datos temporales.
+
+Para comenzar, copiate [el archivo](./OBS_SHN_SF-BA.csv) con datos de mareas en los puertos de San Fernando y Buenos Aires a tu carpeta 'Datos/'
+
+En este práctico vamos a visualizar los datos de mareas
+
+
+
+## Análisis por medio de transformadas de fourier
 
 La transformada de Fourier descompone una señal en una suma de sinusoides con diferente frecuencia.
-<img src="cuadrada.gif"/>
-<br><br>
+
+![Fourier](./cuadrada.gif)
+
 Para cada frecuencia, la señal está descompuesta en un componente real (coseno) y uno imaginario (seno). La magnitud (o amplitud, o potencia) de la señal en esa frecuencia es la suma vectorial de ambos componentes.
-<img src="vectorial.jpeg"/>
-<br><br>
+
+![Vectorial](./vectorial.jpeg)
+
 La fase (o posición del máximo respecto del origen de las coordenadas), es el ángulo entre el componente real y el imaginario.
-<img src="phase_shift.png"/>
+
+![Fase](./phase_shift.png)
 
 ## Lectura de datos con un bucle para verificar un archivo desconocido
-<br><br>
-Alternativamente puede usarse la función loadtxt
 
+Alternativamente puede usarse la función `loadtxt()`.
 
 ```python
 %pylab inline
