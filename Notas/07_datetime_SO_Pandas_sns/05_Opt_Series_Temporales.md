@@ -4,86 +4,135 @@
 
 ## Tema Optativo: Series temporales
 
-Autor: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio)
-Octavio da dos cursos de posgrado sobre Series Temporales altamente recomendados para los que tienen que analizar datos temporales.
+Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Rafael Grimson
+
+* Octavio da dos cursos de posgrado sobre Series Temporales (uno centrado en  Análisis del dominio del Tiempo y el otro en el dominio de las Frecuencias)
+
 
 Para comenzar, copiate [el archivo](./OBS_SHN_SF-BA.csv) con datos de mareas en los puertos de San Fernando y Buenos Aires a tu carpeta 'Datos/'
 
 En este práctico vamos a visualizar y analizar datos de mareas.
 
 
-## 
+## Lectura de archivos temporales
 
 
-## Análisis por medio de transformadas de fourier
+```python
+import pandas as pd
 
-La transformada de Fourier descompone una señal en una suma de sinusoides con diferente frecuencia.
+df=pd.read_csv('Data/OBS_SHN_SF-BA.csv')
+```
+
+Observá los datos:
+    
+```python
+df.head()
+df.tail()
+
+df.index
+```
+
+Este archivo tiene alturas del agua en el puerto de San Fernando (columna 'H_SF') y en el puerto de Buenos Aires (columna 'H_BA') medidas en centímetros.
+Tiene un dato por hora durante (columna 'Time') cuatro años.
+Como suele pasar con este tipo de archivos, tiene muchos datos faltantes.
+
+No es del todo razonable que el índice de esta DataFrame sea un simple rango numérico. 
+El índice debería ser el instante en le que se tomó cada muestra ('Time'). 
+Para esto tenemos que decirle a la función `read_csv` dos cosas: 
+por una lado que use la columna 'Time' como índice (index_col=['Time']) 
+y por el otro que la interprete como un timestamp (parse_dates=True).
+
+
+```python
+df=pd.read_csv('Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
+```
+
+Observá la diferencia:
+    
+```python
+df.head()
+df.tail()
+
+df.index
+```
+
+Que el índice sea temporal nos da una versatilidad genial para trabajar con estos datos.
+Probá por ejemplo los siguientes comandos:
+    
+```python
+df['1-18-2014 9:00':'1-18-2014 18:00']
+df['2-19-2014'] #observá que el formato de fechas que se usa es el de USA
+df['12-25-2014':]
+```
+
+## Mareas en el Río de la Plata
+
+Grafiquemos estos últimos datos:
+    
+```python
+df['12-25-2014':].plot()
+```
+
+Aca se ven tres fenómenos interesantes: 
+* Hay 14 picos en 7 días, esto corresponde a la frecuencia _semidiurna_ de las mareas. 
+Cada 12hs aproxiamdamente tenemos un ciclo con pleamar y bajamar. Dos ciclos por día.
+* Por otra parte, se ve que las mareas en San Fernando están retrasadas respecto a las de Buenos Aires. 
+Esto se debe a que las ondas de marea vienen del mar atlántico y se propagan por el estuario del rio de la Plata, 
+pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando.
+* Finalmente, se ve que la altura en San Fernando está por encima de la de Buenos Aires. Esto se debe a que las escalas con las que se registran los datos no tiene un cero comun bien calibrado.
+
+## Tormentas y sudestadas en el Río de la Plata
+
+Si miramos un gráfico un poco más extendido en el tiempo vamos a ver que las alturas no solo fluctuan con las mareas semidiurnas sino que la componente meteorológica (vientos principalmente) modifican las alturas de manera muy considerable.
+
+Esto genera un gráfico entre el 15 de octubre de 2014 y el 15 de diciembre del mismo año. 
+```python
+df['10-15-2014':'12-15-2014'].plot()
+```
+Se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días.
+
+
+### Ejercicio 7.8: 
+Trabajemos con una copia de este fragmento:
+
+```python
+dh=df['12-25-2014':].copy()
+```
+
+Podemos desplazar (shift en inglés) una serie temporal usando el método `ds.shift(pasos)`. Podemos subir o bajar su gráfico sumando una constante a todas las mediciones `ds + cte`.
+
+Finalmente podemos unir dos series en un en un DataFrame de manera muy simple, para poder graficarlas juntas. Si concatenamos estas operaciones obtenemos algo así:
+
+```python
+delta_t = 0 #tiempo que tarda la marea entre ambos puertos
+delta_h = 0 #diferencia de los ceros de escala entre ambos puertos
+pd.DataFrame([dh['H_SF'].shift(delta_t)-delta_h,dh['H_BA']]).T.plot()
+```
+
+Buscá los valores de `delta_t` (entero, son pasos) y `delta_h` (puede tener decimales, es un float) que hacen que los dos gráficos se vean lo más similares posible.
+
+En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos a mano en el ejercicio anterior pero de una manera menos *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace esto.
+
+## Análisis por medio de transformadas de Fourier
+
+La transformada de Fourier descompone una señal en una suma de senos y cosenos (sinusoides) con diferentes frecuencias y amplitudes.
+
+Este gráfico ilustra el proceso de la tranformada de Fourier de una forma bastante intuitiva.
 
 ![Fourier](./cuadrada.gif)
 
-Para cada frecuencia, la señal está descompuesta en un componente real (coseno) y uno imaginario (seno). La magnitud (o amplitud, o potencia) de la señal en esa frecuencia es la suma vectorial de ambos componentes.
+La transofrmada da, para cada frecuencia, un número complejo `a + bi` que puede pensarse como un vector `(a,b)` en el plano. La parte real va a multiplicar un coseno con la frecuencia indicada y la parte imaginaria un seno con la misma frecuencia. La magnitud (o amplitud, o potencia) de la señal en esa frecuencia se corresponde con el largo del vector `(a,b)`.
 
 ![Vectorial](./vectorial.jpg)
 
-La fase (o posición del máximo respecto del origen de las coordenadas), es el ángulo entre el componente real y el imaginario.
+La fase (o desplazamiento del máximo respecto del origen de las coordenadas), se corresponde con ángulo que forma este vector `(a,b)` con el semieje de los reales positivos.
 
 ![Fase](./phase_shift.png)
 
-## Lectura de datos con un bucle para verificar un archivo desconocido
 
-Alternativamente puede usarse la función `loadtxt()`.
+### Fast fourier transform en Python
 
-```python
-%pylab inline
-#lectura de  datos
-def leedatos():
-    #nombre del archivo con los datos
-    txt = "OBS_SHN_SF-BA.csv"
-    #array vacio donde meter los datos
-    serie = []
-    
-    for linea in open(txt):
-        linea = linea.split(',')
-        hsf = -1
-        hba = -1
-        try:
-            hsf = float(linea[1])
-        except ValueError:
-            print("\r Dato no valido en hsf", end = '')
-        try:
-            hba = float(linea[2])
-        except ValueError:
-            print("\r Dato no valido en hba", end = '\r')
-        serie.append([hsf, hba])
-    serie = array(serie)
-    serie = ma.masked_less(serie, -1)
-    #luego de graficar la serie
-    #retorno la parte de la serie donde ambas series son continuas
-    return serie[4500:24500]
-
-
-```
-
-    Populating the interactive namespace from numpy and matplotlib
-
-
-
-```python
-#grafico las series
-figsize(16,9)
-serie = leedatos()
-plot(serie[:,0])
-plot(serie[:,1], alpha = 0.5)
-#xlim(4500,24500)
-show()
-```
-
-     Dato no valido en hsf
-
-
-![png](output_5_1.png)
-
-
+Vamos a usar los siguientes módulos:
 
 ```python
 #importo modulos para procesar señales
@@ -91,6 +140,7 @@ from scipy import signal
 from scipy import fftpack, fft
 ```
 
+Primero vamos a eliminar 
 
 ```python
 #se le quita la tendencia a la serie
