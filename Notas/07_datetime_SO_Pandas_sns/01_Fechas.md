@@ -88,6 +88,7 @@ En los sistemas operativos derivados de Unix (Mac OS X, Linux, etc.) un timestam
 Fecha = 2012-01-10
 ```
 
+Esto es importante porque las fechas de modificación de los archivos usan timestamps por ejemplo.
 
 ### Ejemplo: Imprimir el año, el mes y el día por separado.
 
@@ -162,12 +163,12 @@ Cmo ya mencionams, el módulo `datetime` tiene una clase con su mismo nombre que
 >>> from datetime import datetime
 
 >>> #datetime(year, month, day)
->>> a = datetime(2020, 04, 21)
+>>> a = datetime(2020, 4, 21)
 >>> print(a)
 2020-04-21 00:00:00
 
 >>> # datetime(year, month, day, hour, minute, second, microsecond)
->>> b = datetime(2021, 04, 21, 06, 53, 31, 342260)
+>>> b = datetime(2021, 4, 21, 6, 53, 31, 342260)
 >>> print(b)
 2021-04-21 06:53:31.342260
 ```
@@ -179,10 +180,12 @@ Los primeros tres argumentos, `year`, `month` y `day` del constructor `datetime(
 
 El siguiente código genera un objeto `datetime` con valores pasados por parámetro y luego imprime la información.
 
+En particular, muestra como convertir una fecha a timestamp. En general los timestamps son enteros y no tienen en cuenta décimas de segundos.
+
 ```python
 from datetime import datetime
 
-a = datetime(2021, 04, 21, 06, 53, 31, 342260)
+a = datetime(2021, 4, 21, 6, 53, 31, 342260)
 print('año =', a.year)
 print('mes =', a.month)
 print('día =', a.day)
