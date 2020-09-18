@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia***)](04_Herencia.md) \| [Próximo (6 Cierre)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia***)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
 
 # 8.5 Métodos especiales
 
@@ -272,5 +272,5 @@ Queremos que notes algo interesante: los datos de salida están completamente es
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia***)](04_Herencia.md) \| [Próximo (6 Cierre)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia***)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
 
