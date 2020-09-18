@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_602_Customizing_iteration.md) \| [Próximo (5 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](05_604_More_generators.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_iteracion_a_medida.md) \| [Próximo (4 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](05_Mos_generadores.md)
 
-# 10.4 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md)
+# 10.3 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md)
 
 # 6.3 Producers, Consumers and Pipelines
 
@@ -299,5 +299,5 @@ the `parse_stock_data()` function).
 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_602_Customizing_iteration.md) \| [Próximo (5 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](05_604_More_generators.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_iteracion_a_medida.md) \| [Próximo (4 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](05_Mos_generadores.md)
 

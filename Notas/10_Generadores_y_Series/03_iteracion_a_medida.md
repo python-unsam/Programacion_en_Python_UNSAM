@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md))](02_601_Iteration_protocol.md) \| [Próximo (4 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md))](04_603_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md))](02_protocolo_Iteracion.md) \| [Próximo (3 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md))](04_Producers_consumers.md)
 
-# 10.3 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md)
+# 10.2 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md)
 
 # 6.2 Customizing Iteration
 
@@ -267,5 +267,5 @@ That's kind of cool.
 
 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md)
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md))](02_601_Iteration_protocol.md) \| [Próximo (4 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md))](04_603_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md))](02_protocolo_Iteracion.md) \| [Próximo (3 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md))](04_Producers_consumers.md)
 
