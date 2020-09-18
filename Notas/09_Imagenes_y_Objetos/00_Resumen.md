@@ -1,6 +1,9 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases, Objetos y Seaborn)](../08_SNS_OOP/00_Resumen.md) \| [Próximo (10 Generadores y Series temporales)](../10_Generadores_y_Series/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases, Objetos y Seaborn)](../08_OOP_RL/00_Resumen.md) \| [Próximo (10 Generadores y Series temporales)](../10_Generadores_y_Series/00_Resumen.md)
 
-# 9. Matrices, Imágenes y Simulaciones
+# 9. Matrices, Imágenes y ReEx
+**Esta clase está en preparación.**
+**El material sufrirá cambios hasta el miércoles 7/10, cuando daremos inicio a estos temas en el curso.**
+
 Aquí debe ir un resumen de los temas que se tratan.
 
 
@@ -11,4 +14,4 @@ Aquí debe ir un resumen de los temas que se tratan.
 * [9.5 Pandas revisitado](05_Pandas2.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases, Objetos y Seaborn)](../08_SNS_OOP/00_Resumen.md) \| [Próximo (10 Generadores y Series temporales)](../10_Generadores_y_Series/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases, Objetos y Seaborn)](../08_OOP_RL/00_Resumen.md) \| [Próximo (10 Generadores y Series temporales)](../10_Generadores_y_Series/00_Resumen.md)

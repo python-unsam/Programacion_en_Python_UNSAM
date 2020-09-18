@@ -1,6 +1,9 @@
-[Contenidos](../Contenidos.md) \| [Anterior (9 Matrices, Imágenes y Simulaciones)](../09_Imagenes_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión)](../11_Recursion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (9 Matrices, Imágenes y ReEx)](../09_Imagenes_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión)](../11_Recursion/00_Resumen.md)
 
 # 10. Generadores y Series temporales
+**Esta clase está en preparación.**
+**El material sufrirá cambios hasta el miércoles 14/10, cuando daremos inicio a estos temas en el curso.**
+
 Aquí debe ir un resumen de los temas que se tratan.
 
 
@@ -11,4 +14,4 @@ Aquí debe ir un resumen de los temas que se tratan.
 * [10.5 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md)](05_604_More_generators.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (9 Matrices, Imágenes y Simulaciones)](../09_Imagenes_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión)](../11_Recursion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (9 Matrices, Imágenes y ReEx)](../09_Imagenes_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión)](../11_Recursion/00_Resumen.md)
