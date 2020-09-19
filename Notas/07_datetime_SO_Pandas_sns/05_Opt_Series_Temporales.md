@@ -170,7 +170,7 @@ La transofrmada da, para cada frecuencia, un número complejo `a + bi` que puede
 
 La fase (o desplazamiento del máximo respecto del origen de las coordenadas), se corresponde con ángulo que forma este vector `(a,b)` con el semieje de los reales positivos.
 
-![Fase](./phase_shift.png){width=20%}
+<img src="./phase_shift.png" width="200">
 
 Aquí, la variable tita representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo). Esta *fase* suele medirse en radianes, correspondiendo 2*pi a un ciclo completo de desfazaje.
 
