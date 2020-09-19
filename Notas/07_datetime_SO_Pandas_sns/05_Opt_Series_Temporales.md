@@ -152,6 +152,8 @@ Buscá los valores de `delta_t` (entero, son pasos) y `delta_h` (puede tener dec
 
 ![Figura](./Figure175424.png)
 
+## Parte optativa
+
 En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos a mano en el ejercicio anterior pero de una manera menos *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace esto.
 
 ## Análisis por medio de transformadas de Fourier
@@ -315,11 +317,17 @@ Por lo tanto, el retardo de la onda de mareas puede calcularse usando
 angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/frecSF[350]
 ```
 
-Lo que corresponde a poco mas de 55 minutos.
+### Ejercicio 7.9: Desfazajes
+¿A cuántos minutos corresponde aproximadamente tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
+¿Estimá la diferencia en los ceros de escala de ambos puertos?
 
-###Ejercicio: Otros períodos
+### Ejercicio 7.10: Otros períodos
+Este análisis se realizó con el primer semestre del 2014. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
 
- este análisis se realizó con el primer semestre del 2014. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
+### Ejercicio 7.11: Otros puertos
+Usando el [archivo con datos del Puerto de Zárate](./Data_Zarate.csv), estimá la diferencia en los ceros ce escala de ambos puertos y el delay de la onda de mareas en llegar de un puerto al otro.
+
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas_basico.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
 
