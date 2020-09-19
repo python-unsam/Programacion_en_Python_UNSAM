@@ -16,7 +16,7 @@ No te marées, son 4 bibliotecas o módulos muy diferentes e importantes de Pyth
 * [7.2 Manejo de archivos y carpetas](02_Archivos_y_Directorios.md)
 * [7.3 Ordenar archivos en Python](03_Ordenando_archivos.md)
 * [7.4 Introducción a Pandas](04_Pandas_basico.md)
-* [7.5 Detección de patrones periódicos](05_Opt_Series_Temporales.md)
+* [7.5 Series temporales](05_Opt_Series_Temporales.md)
 * [7.6 Cierre de la séptima](06_Cierre.md)
 
 

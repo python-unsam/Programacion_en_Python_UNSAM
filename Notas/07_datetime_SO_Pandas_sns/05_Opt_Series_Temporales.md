@@ -1,18 +1,16 @@
 [Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas_basico.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
 
-# 7.5 Detección de patrones periódicos
-
-## Tema Optativo: Series temporales
+# 7.5 Series temporales
 
 Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Rafael Grimson
 
 * Octavio da dos cursos de posgrado excelentes sobre Series Temporales. Uno enfoca los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias.
 
+## Análisis y visualización de series temporales.
+
+En este práctico vamos a visualizar y analizar datos de mareas en el Río de la Plata. Tiene una primera parte que esperamos que todos hagan y una segunda parte, más larga y compleja, optativa.
 
 Para comenzar, copiate [el archivo](./OBS_SHN_SF-BA.csv) con datos de mareas en los puertos de San Fernando y Buenos Aires a tu carpeta 'Datos/'
-
-En este práctico vamos a visualizar y analizar datos de mareas.
-
 
 ## Lectura de archivos temporales
 
