@@ -97,6 +97,18 @@ Para renombrar un directorio o archivo, la función `rename()` toma dos argument
 
 ```
 
+La función `rename()` también es útil para mover un archivo o directorio, cambiando el camino (_path_) de acceso al archivo. Probá hacer esto:
+
+```python
+>>> os.chdir('..')                          # salgo en el directorio 'test'
+                                            # (vuelvo a 'Ejercicios')
+>>> os.rename('test/carpeta/', './carpeta') # cambio el path de carpeta
+>>> os.listdir('test')
+[]
+```
+
+La carpeta 'carpeta' ahora se encuentra en 'Ejercicios', y no dentro de 'Ejercicios/test'.
+
 **Ojo**: `rename()` solamente puede renombrar un archivo (o directorio) de un disco en el mismo disco (o más específicamente de una partición a la misma partición). Si querés cambiar un archivo del disco a un pendrive, por ejemplo, lo correcto es copiar el archivo al pendrive y luego borrarlo del disco. `rename()` no hace esto: no copia y borra, simplemente cambia el nombre ¡que es mucho más rápido!. Para renombrar en caso que se pueda o copiar y borrar si lo primero no es posible, podés usar la función `move()` del módulo `shutil`. Este módulo es de más alto nivel y usa las primitivas de bajo nivel del módulo `os`. Al usar `os` tenemos un control más estricto de las operaciones. Las funciones de `shutil` pueden resultar más cómodas, pero en el camino pueden invocar a diversas funciones de bajo nivel del módulo `os`.
 
 

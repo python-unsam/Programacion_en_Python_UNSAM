@@ -89,7 +89,8 @@ Un ejemplo de uso:
 
 El método nuevo simplemente reemplaza al definido en la clase base. Los demás métodos y variables no son afectados. No es buenísimo ??
 
-## Overriding
+## Redefinición 
+[](Overriding)
 
 Hay veces en que una clase extiende el método de la superclase a la que pertenece, pero necesita ejecutar el método original como parte de la redefinición del método nuevo. Para referirte a la superclase, usá `super()`:
 

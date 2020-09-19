@@ -54,7 +54,7 @@ class Player:
 
 Muy brevemente, una clase es un conjunto de funciones que operan sobre las diversas instancias de esa clase.
 
-Puede decirse que una clase es la definición formal de las relaciones entre los datos y los metodos que los manipulan. Un objeto es una instancia particular de la clase a la cual pertenece, con datos propios pero los mismos métodos que los demás  objetos de la misma clase. Este concepto va a quedar mas claro al verlo funcionar y usarlo vos misme.
+Puede decirse que una clase es la definición formal de las relaciones entre los datos y los metodos que los manipulan. Un objeto es una instancia particular de la clase a la cual pertenece, con datos propios pero los mismos métodos que los demás objetos de la misma clase. Este concepto va a quedar mas claro al verlo funcionar y usarlo vos misme.
 
 ### Instancias
 
@@ -255,7 +255,7 @@ Modificá la función `leer_camion()` en el programa `informe.py` de modo que le
 
 Cuando hayas hecho éso, cambiá un poco el código en `informe.py` y en  `costo_camion.py` de modo que funcionen con objetos `Cajon` (instancias de la clase `Cajon` en lugar de diccionarios.
 
-Ayuda: No deberían ser cambios importantes, se trata de cambiar referencias a diccionarios a referencias a objetos (`c['cajones']` cambia a `c.cajones`).
+Ayuda: No deberían ser cambios importantes, Las referencias a diccionarios ahora tienen que hacer referencia a objetos (`c['cajones']` cambia a `c.cajones`).
 
 Hecho ésto, deberías poder ejecutar tus funciones como antes:
 

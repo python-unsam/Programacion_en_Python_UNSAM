@@ -79,7 +79,7 @@ Cada 12hs aproxiamdamente tenemos un ciclo con pleamar y bajamar. Dos ciclos por
 * Por otra parte, se ve que las mareas en San Fernando están retrasadas respecto a las de Buenos Aires. 
 Esto se debe a que las ondas de marea vienen del mar atlántico y se propagan por el estuario del rio de la Plata, 
 pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando.
-* Finalmente, se ve que la altura en San Fernando está por encima de la de Buenos Aires. Esto se debe a que las escalas con las que se registran los datos no tiene un cero comun bien calibrado.
+* Finalmente, se ve que la altura registrada en San Fernando está por encima de la de Buenos Aires. Esto se debe a que las dos escalas, a partir de las que se registran los datos, tienen ceros que no están nivelados.
 
 ## Tormentas y sudestadas en el Río de la Plata
 
@@ -117,7 +117,7 @@ En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis s
 
 La transformada de Fourier descompone una señal en una suma de senos y cosenos (sinusoides) con diferentes frecuencias y amplitudes.
 
-Este gráfico ilustra el proceso de la tranformada de Fourier de una forma bastante intuitiva.
+Este gráfico ilustra gráficamente el proceso de la tranformada de Fourier.
 
 ![Fourier](./cuadrada.gif)
 
@@ -129,167 +129,149 @@ La fase (o desplazamiento del máximo respecto del origen de las coordenadas), s
 
 ![Fase](./phase_shift.png)
 
+Aquí tita representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo).
 
-### Fast fourier transform en Python
+
+### Preparación de módulos y datos
 
 Vamos a usar los siguientes módulos:
 
 ```python
-#importo modulos para procesar señales
+import matplotlib
+
+#importar el módulo de scipy para procesar señales
 from scipy import signal
-from scipy import fftpack, fft
 ```
 
-Primero vamos a eliminar 
+Seleccionemos las dos series como vectores de numpy (con la instrucción `values` de pandas).
 
 ```python
-#se le quita la tendencia a la serie
-sdt0 = detrend_linear(serie[:,0])
-#espectro de potencia (amplitud de los sinusoides)
-#parametros: serie de datos y frecuencia de muestreo (24/dia)
-(mg0, frc0, linea0) = magnitude_spectrum(sdt0, 24.)
-#se buscan lospicos del espectro de potencia
-picos0 = signal.find_peaks(mg0, prominence=4, distance = 10)[0]
-#verificar los picos con un print
-#se ve la prominencia de ser necesario
-#print(signal.peak_prominences(mg0, picos0))
+HSF=df['2014-1':'2014-06']['H_SF'].values
+HBA=df['2014-1':'2014-06']['H_BA'].values
+```
+
+### Espectro de potencia y de ángulos para San Fernando
+
+El espectro de potencia nos permite ver la amplitud de los sinusoides para cada frecuencia. el módulo pyplot de matplotlib nos permite calcularlo y graficarlo en un solo paso. Recibe como paráametros la serie de datos y frecuencia de muestreo (en nuestro caso es de 24 muestras por dia).
+
+```python
+mgSF, frecSF, lineasSF = plt.magnitude_spectrum(HSF, Fs =24.)
+```
+
+La variable `mgSF` guarda las magnitudes correspondientes a las frecuencias almacenadas en `frecSF`. La variable `lineasSF` guarda simplemente información del gráfico.
+
+A simple vista se obervan dos picos, uno en fecuencia 0 (constante relacionada con el cero de escala) y otro pico cercano a la frecuencia 2 (frecuencia semidiurna) que está relacionado con la onda de mareas. 
+
+El pico en la primera posición efectivamente se corresponde con la frecuencia 0 y su amplitud es:
+
+```python
+>>> frecSF[0]
+0.0
+>>> mgSF[0]
+112.40499716091024
+```
+
+A partir de esto podemos decir que las altura del río en San Fernando durante este período oscilan alrededor de los 112.4cm de altura.
+
+Para analizar precisamente el pico semidiurno podemos usar `find_peaks` del módulo `signal` para evitar hacerlo a ojo.
+
+```python
+>>> print(signal.find_peaks(mgSF, prominence=8))
+(array([350]), {'prominences': array([12.2833]), 'left_bases': array([275]), 'right_bases': array([1802])})
+```
+
+Esta respuesta nos indica que hay un pico con la prominencia solicitada (al menos 8), que tiene un magnitud de 12.2833 y que corresponde a la posición 350 del vector.
+
+```python
+>>> frecSF[350]
+1.9337016574585635
+```
+
+La frecuencia relacionada con esa posición es cercana a dos, como ya habíamos observado en el gráfico. Podemos distinguir los picos agregando un punto rojo:
+
+```python
+mgSF, frecSF, lineasSF = plt.magnitude_spectrum(HSF, Fs =24.)
+plt.xlim(0,3)
+plt.ylim(0,15)
+picosSF = signal.find_peaks(mgSF, prominence=8)[0]
 #se grafican los picos como circulitos rojos
-scatter(frc0[picos0], mg0[picos0], facecolor='r')
-show()
-#idem para la segunda serie
-sdt1 = detrend_linear(serie[:,1])
-(mg1, frc1, linea1) = magnitude_spectrum(sdt1, 24.)
-picos1 = signal.find_peaks(mg1, prominence=4, distance = 10)[0]
-#print(signal.peak_prominences(mg1, picos1))
-scatter(frc1[picos1], mg1[picos1], facecolor='r')
-show()
-```
-
-
-![png](output_7_0.png)
-
-
-
-![png](output_7_1.png)
-
-
-
-```python
-set_printoptions(precision=4,suppress=True,linewidth=180)
-#se obtiene elespectro de angulos
-#parametros: serie de datos y frecuencia de muestreo (1/hora o 24/dia)
-ang0, frec0, lin0 = angle_spectrum(sdt0, 24.)
-#vemos la fase de los picos en horas
-print("Frecuencia",frec0[picos0])
-print("Angulo",ang0[picos0] / (2 * pi) * 1/frec0[picos0])
-show()
-ang1, frec1, lin1 = angle_spectrum(sdt1, 24.)
-print("Frecuencia",frec1[picos1])
-print("Angulo",ang1[picos1] / (2 * pi) * 1/frec1[picos1])
-show()
-#ver la diferencia de fase entre los picos de la misma frecuencia
-```
-
-    Frecuencia [0.0024 0.06   0.1404 0.93   1.896  1.932 ]
-    Angulo [-137.1708    6.7523    3.5428   -0.4326   -0.0325   -0.0334]
-
-
-
-![png](output_8_1.png)
-
-
-    Frecuencia [0.06   0.1404 0.93   1.896  1.932 ]
-    Angulo [ 7.0631 -3.5528 -0.402   0.0014 -0.0031]
-
-
-
-![png](output_8_3.png)
-
-
-
-```python
-#hacer lo mismo con la frecuencia en días
-ang0, frec0, lin0 = angle_spectrum(sdt0, 1.)
-#vemos la fase de los picos en horas
-print(ang0[picos0] / (2 * pi) * 1/frec0[picos0])
-show()
-ang1, frec1, lin1 = angle_spectrum(sdt1, 1.)
-print(ang1[picos1] / (2 * pi) * 1/frec1[picos1])
-show()
-```
-
-    [-3292.0991   162.0544    85.0273   -10.3817    -0.7797    -0.8008]
-
-
-
-![png](output_9_1.png)
-
-
-    [169.5149 -85.2664  -9.6469   0.0325  -0.0749]
-
-
-
-![png](output_9_3.png)
-
-
-
-```python
-#ejemplo importado de la documentación de matplotlib
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-
-np.random.seed(0)
-
-dt = 0.01  # sampling interval
-Fs = 1 / dt  # sampling frequency
-t = np.arange(0, 10, dt)
-
-# generate noise:
-nse = np.random.randn(len(t))
-r = np.exp(-t / 0.05)
-cnse = np.convolve(nse, r) * dt
-cnse = cnse[:len(t)]
-
-s = 0.1 * np.sin(4 * np.pi * t) + cnse  # the signal
-
-fig, axs = plt.subplots(nrows=3, ncols=2, figsize=(7, 7))
-
-# plot time signal:
-axs[0, 0].set_title("Signal")
-axs[0, 0].plot(t, s, color='C0')
-axs[0, 0].set_xlabel("Time")
-axs[0, 0].set_ylabel("Amplitude")
-
-# plot different spectrum types:
-axs[1, 0].set_title("Magnitude Spectrum")
-axs[1, 0].magnitude_spectrum(s, Fs=Fs, color='C1')
-
-axs[1, 1].set_title("Log. Magnitude Spectrum")
-axs[1, 1].magnitude_spectrum(s, Fs=Fs, scale='dB', color='C1')
-
-axs[2, 0].set_title("Phase Spectrum ")
-axs[2, 0].phase_spectrum(s, Fs=Fs, color='C2')
-
-axs[2, 1].set_title("Angle Spectrum")
-axs[2, 1].angle_spectrum(s, Fs=Fs, color='C2')
-
-axs[0, 1].remove()  # don't display empty ax
-
-fig.tight_layout()
+plt.scatter(frecSF[picosSF], mgSF[picosSF], facecolor='r')
 plt.show()
 ```
 
-
-![png](output_10_0.png)
-
-
+Por otra parte, con el comando
 
 ```python
-
+angSF, frecSF, linSF = plt.angle_spectrum(HSF, 24.)
 ```
 
+podemos calcular el espectro de ángulos. `angSF[350]` entonces nos dará información sobre la fase de esa componente de la transformadad de Fourier.
+
+```python
+>>> angSF[350]
+1.5094504268950777
+```
+
+Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfazaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuacia diaria ligeramente inferior a 2 (frecSF[350]~1.93), 2*pi corresponde a 24/1.93 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de 
+
+```python
+>>> angSF[350]*12/np.pi/frecSF[350]
+2.9816781201906313
+```
+poco menos de 3hs respecto al seno que comienza a medianoche.
+
+### Espectro de potencia y de ángulos para Buenos Aires
+
+Repitamos velozmente el procedimiento para el puerto de Buenos Aires y analicemos las diferencias.
+
+```python
+mgBA, frecBA, lineasBA = plt.magnitude_spectrum(HBA, Fs =24.)
+plt.xlim(0,3)
+plt.ylim(0,15)
+picosBA = signal.find_peaks(mgBA, prominence=8)[0]
+#se grafican los picos como circulitos rojos
+plt.scatter(frecBA[picosBA], mgBA[picosBA], facecolor='r')
+plt.show()
+```
+
+Si buscamos la constante alrededor de la que oscilan las mareas según el nivel del puerto de Buenos Aires obtenemos.
+
+```python
+>>> mgBA[0]
+88.40835357673745
+```
+
+Con este resultado es sencillo obtener una estimación para la diferencia de de alturas de los ceros de escala entre ambos puertos.
+
+Por otra parte, observamos que el espectro de potencia y sus picos son súmamente similares.
+
+```python
+>>> print(signal.find_peaks(mgBA, prominence=8))
+(array([350]), {'prominences': array([13.657]), 'left_bases': array([167]), 'right_bases': array([739])})
+```
+
+Las mareas de Buenos Aires tiene una componente de máxima amplitud en la misma frecuencia y con una magnitud de 13.657. Resta estudiar la fase de la curva en estas frecuencias para poder determinar con precisión la diferencia de fase entre ambos puertos. Primero calculamos el espectro de ángulos:
+
+```python
+angBA, frecBA, linBA = plt.angle_spectrum(HBA, 24.)
+```
+La variable `angBA[350]` contiene la fase de la curva para la frecuencia de interés. Convertida a horas da
+
+```python
+>>> angBA[350]*12/np.pi/frecBA[350]
+3.9013844071274755
+```
+
+Por lo tanto, el retardo de la onda de mareas puede calcularse usando
+```python
+angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/frecSF[350]
+```
+
+Lo que corresponde a poco mas de 55 minutos.
+
+###Ejercicio: Otros dias
+
+ este análisis se realizó con el primer semestre del 2014. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas_basico.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
 

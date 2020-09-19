@@ -4,13 +4,14 @@
 **Esta clase está en preparación.**
 **El material sufrirá cambios hasta el miércoles 30/9, cuando daremos inicio a estos temas en el curso.**
 
-So far, our programs have only used built-in Python datatypes.  In
-this section, we introduce the concept of classes and objects.  You'll
-learn about the `class` statement that allows you to make new objects.
-We'll also introduce the concept of inheritance, a tool that is commonly
-use to build extensible programs.  Finally, we'll look at a few other
-features of classes including special methods, dynamic attribute lookup,
-and defining new exceptions.
+
+Esta clase tiene dos partes indempendientes.
+Seaborn
+
+
+Programación orientada a objetos.
+Hasta ahora los programas con que estuviste trabajando usaron sólo typos de datos nativos de Python. En esta sección vamos a ver los conceptos de clases y objetos. Vamos a usar la instrucción `class` para crear nuevo objetos. Vamos a hablar del concepto de herencia, una herramienta comunmente usada para escribir programas extensibles. Por último, vamos a referirnos algunos métodos especiales, a la búsqued dinámica de atributos (y definir nuevas excepciones [entra esto ?])
+
 
 
 * [8.1 Pandas  y seaborn**](01_Pandas_seaborn.md)
