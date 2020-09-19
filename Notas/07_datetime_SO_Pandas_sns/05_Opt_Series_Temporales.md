@@ -321,8 +321,10 @@ angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/frecSF[350]
 ¿A cuántos minutos corresponde aproximadamente tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
 ¿Estimá la diferencia en los ceros de escala de ambos puertos?
 
+## Un poco más avanzados:
+
 ### Ejercicio 7.10: Otros períodos
-Este análisis se realizó con el primer semestre del 2014. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
+Este análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
 
 ### Ejercicio 7.11: Otros puertos
 Usando el [archivo con datos del Puerto de Zárate](./Data_Zarate.csv), estimá la diferencia en los ceros ce escala de ambos puertos y el delay de la onda de mareas en llegar de un puerto al otro.
