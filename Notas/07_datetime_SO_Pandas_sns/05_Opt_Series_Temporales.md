@@ -147,12 +147,11 @@ pd.DataFrame([dh['H_SF'].shift(delta_t)-delta_h,dh['H_BA']]).T.plot()
 
 Buscá los valores de `delta_t` (entero, son pasos) y `delta_h` (puede tener decimales, es un float) que hacen que los dos gráficos se vean lo más similares posible.
 
-
-![Figura](./Figure175424.png)
+Guardá tu código en el archivo `desplazamientos.py` para entregar.
 
 ## Parte optativa
 
-En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos a mano en el ejercicio anterior pero de una manera menos *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace esto.
+En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace esto.
 
 ## Análisis por medio de transformadas de Fourier
 
