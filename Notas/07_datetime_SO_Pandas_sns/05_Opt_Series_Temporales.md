@@ -6,7 +6,7 @@
 
 Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Rafael Grimson
 
-* Octavio da dos cursos de posgrado sobre Series Temporales (uno centrado en  Análisis del dominio del Tiempo y el otro en el dominio de las Frecuencias)
+* Octavio da dos cursos de posgrado excelentes sobre Series Temporales. Uno enfoca los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias.
 
 
 Para comenzar, copiate [el archivo](./OBS_SHN_SF-BA.csv) con datos de mareas en los puertos de San Fernando y Buenos Aires a tu carpeta 'Datos/'
@@ -26,21 +26,27 @@ df=pd.read_csv('Data/OBS_SHN_SF-BA.csv')
 Observá los datos:
     
 ```python
-df.head()
-df.tail()
+>>> df.head()
+                  Time  H_SF   H_BA
+0  2011-01-01 00:00:00   NaN   92.0
+1  2011-01-01 01:00:00   NaN  110.0
+2  2011-01-01 02:00:00   NaN  124.0
+3  2011-01-01 03:00:00   NaN  132.0
+4  2011-01-01 04:00:00   NaN  136.0
 
-df.index
+>>> df.index
+RangeIndex(start=0, stop=35064, step=1)
 ```
 
 Este archivo tiene alturas del agua en el puerto de San Fernando (columna 'H_SF') y en el puerto de Buenos Aires (columna 'H_BA') medidas en centímetros.
 Tiene un dato por hora durante (columna 'Time') cuatro años.
-Como suele pasar con este tipo de archivos, tiene muchos datos faltantes.
+En los priemros registros se observa algo muy frecuente con este tipo de archivos: tiene muchos datos faltantes.
 
-No es del todo razonable que el índice de esta DataFrame sea un simple rango numérico. 
-El índice debería ser el instante en le que se tomó cada muestra ('Time'). 
+Por otra parte, no es del todo razonable que el índice de esta DataFrame sea un simple rango numérico. El índice debería ser el instante en le que se tomó cada muestra ('Time'). 
+
 Para esto tenemos que decirle a la función `read_csv` dos cosas: 
-por una lado que use la columna 'Time' como índice (index_col=['Time']) 
-y por el otro que la interprete como un timestamp (parse_dates=True).
+* por una lado que use la columna 'Time' como índice (index_col=['Time']) y
+* por el otro que la interprete como un timestamp (parse_dates=True).
 
 
 ```python
@@ -50,20 +56,42 @@ df=pd.read_csv('Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
 Observá la diferencia:
     
 ```python
-df.head()
-df.tail()
+>>> df.head()
+                     H_SF   H_BA
+Time                            
+2011-01-01 00:00:00   NaN   92.0
+2011-01-01 01:00:00   NaN  110.0
+2011-01-01 02:00:00   NaN  124.0
+2011-01-01 03:00:00   NaN  132.0
+2011-01-01 04:00:00   NaN  136.0
 
-df.index
+>>> df.index
+DatetimeIndex(['2011-01-01 00:00:00', '2011-01-01 01:00:00',
+               ...
+               '2014-12-31 22:00:00', '2014-12-31 23:00:00'],
+              dtype='datetime64[ns]', name='Time', length=35064, freq=None)
 ```
 
 Que el índice sea temporal nos da una versatilidad genial para trabajar con estos datos.
 Probá por ejemplo los siguientes comandos:
     
 ```python
-df['1-18-2014 9:00':'1-18-2014 18:00']
-df['2-19-2014'] #observá que el formato de fechas que se usa es el de USA
-df['12-25-2014':]
+>>> df['1-18-2014 9:00':'1-18-2014 18:00']
+                     H_SF  H_BA
+Time                           
+2014-01-18 09:00:00  85.0  67.0
+2014-01-18 10:00:00  79.0  60.0
+2014-01-18 11:00:00  73.0  49.0
+2014-01-18 12:00:00  65.0  43.0
+2014-01-18 13:00:00  59.0  36.0
+2014-01-18 14:00:00  53.0  29.0
+2014-01-18 15:00:00  48.0  22.0
+2014-01-18 16:00:00  42.0  18.0
+2014-01-18 17:00:00  36.0  33.0
+2014-01-18 18:00:00  40.0  67.0
 ```
+
+Probá también `df['2-19-2014']` (observá que el formato de fechas que se usa es el de EEUU), y `df['12-25-2014':]`.
 
 ## Mareas en el Río de la Plata
 
@@ -72,6 +100,8 @@ Grafiquemos estos últimos datos:
 ```python
 df['12-25-2014':].plot()
 ```
+
+![Figura](./Figure 2020-09-19 175144.png)
 
 Aca se ven tres fenómenos interesantes: 
 * Hay 14 picos en 7 días, esto corresponde a la frecuencia _semidiurna_ de las mareas. 
@@ -89,6 +119,10 @@ Esto genera un gráfico entre el 15 de octubre de 2014 y el 15 de diciembre del 
 ```python
 df['10-15-2014':'12-15-2014'].plot()
 ```
+
+![Figura](./Figure 2020-09-19 175349.png)
+
+
 Se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días.
 
 
@@ -109,7 +143,14 @@ delta_h = 0 #diferencia de los ceros de escala entre ambos puertos
 pd.DataFrame([dh['H_SF'].shift(delta_t)-delta_h,dh['H_BA']]).T.plot()
 ```
 
+
+![Figura](./Figure 2020-09-19 175447.png)
+
+
 Buscá los valores de `delta_t` (entero, son pasos) y `delta_h` (puede tener decimales, es un float) que hacen que los dos gráficos se vean lo más similares posible.
+
+
+![Figura](./Figure 2020-09-19 175424.png)
 
 En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos a mano en el ejercicio anterior pero de una manera menos *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace esto.
 
@@ -137,10 +178,9 @@ Aquí tita representa el desplazamiento de fase de la curva azul (respecto a la 
 Vamos a usar los siguientes módulos:
 
 ```python
-import matplotlib
-
 #importar el módulo de scipy para procesar señales
 from scipy import signal
+import matplotlib.pyplot as plt
 ```
 
 Seleccionemos las dos series como vectores de numpy (con la instrucción `values` de pandas).
@@ -157,6 +197,8 @@ El espectro de potencia nos permite ver la amplitud de los sinusoides para cada 
 ```python
 mgSF, frecSF, lineasSF = plt.magnitude_spectrum(HSF, Fs =24.)
 ```
+
+![Figura](./Figure 2020-09-19 175811.png)
 
 La variable `mgSF` guarda las magnitudes correspondientes a las frecuencias almacenadas en `frecSF`. La variable `lineasSF` guarda simplemente información del gráfico.
 
@@ -199,6 +241,9 @@ plt.scatter(frecSF[picosSF], mgSF[picosSF], facecolor='r')
 plt.show()
 ```
 
+![Figura](./Figure 2020-09-19 175902.png)
+
+
 Por otra parte, con el comando
 
 ```python
@@ -233,6 +278,8 @@ picosBA = signal.find_peaks(mgBA, prominence=8)[0]
 plt.scatter(frecBA[picosBA], mgBA[picosBA], facecolor='r')
 plt.show()
 ```
+
+![Figura](./Figure 2020-09-19 175932.png)
 
 Si buscamos la constante alrededor de la que oscilan las mareas según el nivel del puerto de Buenos Aires obtenemos.
 
@@ -269,7 +316,7 @@ angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/frecSF[350]
 
 Lo que corresponde a poco mas de 55 minutos.
 
-###Ejercicio: Otros dias
+###Ejercicio: Otros períodos
 
  este análisis se realizó con el primer semestre del 2014. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
 
