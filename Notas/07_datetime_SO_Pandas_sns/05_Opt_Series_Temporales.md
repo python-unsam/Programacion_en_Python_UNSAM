@@ -151,7 +151,9 @@ Guardá tu código en el archivo `desplazamientos.py` para entregar.
 
 ## Parte optativa
 
-En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace esto.
+En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace este análisis.
+
+**Lo que sigue es optativo**.
 
 ## Análisis por medio de transformadas de Fourier
 
