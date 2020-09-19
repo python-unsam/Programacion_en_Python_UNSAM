@@ -101,7 +101,7 @@ Grafiquemos estos últimos datos:
 df['12-25-2014':].plot()
 ```
 
-![Figura](./Figure 2020-09-19 175144.png)
+![Figura](./Figure175144.png)
 
 Aca se ven tres fenómenos interesantes: 
 * Hay 14 picos en 7 días, esto corresponde a la frecuencia _semidiurna_ de las mareas. 
@@ -120,7 +120,7 @@ Esto genera un gráfico entre el 15 de octubre de 2014 y el 15 de diciembre del 
 df['10-15-2014':'12-15-2014'].plot()
 ```
 
-![Figura](./Figure 2020-09-19 175349.png)
+![Figura](./Figure175349.png)
 
 
 Se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días.
@@ -144,13 +144,13 @@ pd.DataFrame([dh['H_SF'].shift(delta_t)-delta_h,dh['H_BA']]).T.plot()
 ```
 
 
-![Figura](./Figure 2020-09-19 175447.png)
+![Figura](./Figure175447.png)
 
 
 Buscá los valores de `delta_t` (entero, son pasos) y `delta_h` (puede tener decimales, es un float) que hacen que los dos gráficos se vean lo más similares posible.
 
 
-![Figura](./Figure 2020-09-19 175424.png)
+![Figura](./Figure175424.png)
 
 En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos a mano en el ejercicio anterior pero de una manera menos *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace esto.
 
@@ -170,7 +170,7 @@ La fase (o desplazamiento del máximo respecto del origen de las coordenadas), s
 
 ![Fase](./phase_shift.png)
 
-Aquí tita representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo).
+Aquí, la variable tita representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo). Esta *fase* suele medirse en radianes, correspondiendo 2*pi a un ciclo completo de desfazaje.
 
 
 ### Preparación de módulos y datos
@@ -198,7 +198,8 @@ El espectro de potencia nos permite ver la amplitud de los sinusoides para cada 
 mgSF, frecSF, lineasSF = plt.magnitude_spectrum(HSF, Fs =24.)
 ```
 
-![Figura](./Figure 2020-09-19 175811.png)
+![Figura](./Figure175811.png)
+
 
 La variable `mgSF` guarda las magnitudes correspondientes a las frecuencias almacenadas en `frecSF`. La variable `lineasSF` guarda simplemente información del gráfico.
 
@@ -241,7 +242,7 @@ plt.scatter(frecSF[picosSF], mgSF[picosSF], facecolor='r')
 plt.show()
 ```
 
-![Figura](./Figure 2020-09-19 175902.png)
+![Figura](./Figure175902.png)
 
 
 Por otra parte, con el comando
@@ -279,7 +280,7 @@ plt.scatter(frecBA[picosBA], mgBA[picosBA], facecolor='r')
 plt.show()
 ```
 
-![Figura](./Figure 2020-09-19 175932.png)
+![Figura](./Figure175932.png)
 
 Si buscamos la constante alrededor de la que oscilan las mareas según el nivel del puerto de Buenos Aires obtenemos.
 
