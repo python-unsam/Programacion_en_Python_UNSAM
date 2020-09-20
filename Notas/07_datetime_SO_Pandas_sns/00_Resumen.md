@@ -4,7 +4,7 @@
 **Esta clase está en preparación.**
 **El material sufrirá cambios hasta el miércoles 23/9, cuando daremos inicio a estos temas en el curso.**
 
-En esta clase introducimos el módulo `datetime` ara manejar datos realcionados con el tiempo y el un par de métodos del módulo `os` para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo.
+En esta clase introducimos el módulo `datetime` para manejar datos realcionados con el tiempo y un par de funciones del módulo `os` para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo.
 
 En la segunda mitad introducimos el módulo Pandas y el tipo `DataFrame` así como algunos de sus métodos elementales. Terminaremos realizando algunos plots sencillos con Pandas.
 
