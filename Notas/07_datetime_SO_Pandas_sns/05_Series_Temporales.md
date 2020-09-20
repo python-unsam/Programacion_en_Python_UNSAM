@@ -104,7 +104,7 @@ df['12-25-2014':].plot()
 Aca se ven tres fenómenos interesantes: 
 * Hay 14 picos en 7 días, esto corresponde a la frecuencia _semidiurna_ de las mareas. Cada poco más de 12hs tenemos un ciclo con pleamar y bajamar. Dos ciclos por día.
 * Por otra parte, se ve que las mareas en San Fernando están retrasadas respecto a las de Buenos Aires. 
-Esto se debe a que las ondas de marea vienen del mar atlántico y se propagan por el estuario del rio de la Plata, 
+Esto se debe a que las ondas de marea vienen del océano atlántico y se propagan por el estuario del rio de la Plata, 
 pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando. En ciertas condiciones esta onda de mareas puede llegar a la ciudad de Rosario, aunque se va atenuando en su viaje desde el atlántico.
 * Finalmente, hay una marcada diferencia entre la altura registrada en San Fernando y la de Buenos Aires. Esto se debe a que las dos escalas, a partir de las que se registran los datos, tienen ceros que no están nivelados.
 
@@ -196,7 +196,7 @@ HBA=df['2014-1':'2014-06']['H_BA'].values
 
 ### Espectro de potencia y de ángulos para San Fernando
 
-El espectro de potencia nos permite ver la amplitud de los sinusoides para cada frecuencia. el módulo pyplot de matplotlib nos permite calcularlo y graficarlo en un solo paso. Recibe como paráametros la serie de datos y frecuencia de muestreo (en nuestro caso es de 24 muestras por dia).
+El espectro de potencia nos permite ver la amplitud de los sinusoides para cada frecuencia. el módulo pyplot de matplotlib nos permite calcularlo y graficarlo en un solo paso. Recibe como parámetros la serie de datos y frecuencia de muestreo (en nuestro caso es de 24 muestras por dia).
 
 ```python
 mgSF, frecSF, lineasSF = plt.magnitude_spectrum(HSF, Fs =24.)
