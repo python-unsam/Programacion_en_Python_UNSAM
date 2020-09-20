@@ -9,7 +9,7 @@ Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Raf
 
 ## Análisis y visualización de series temporales.
 
-En este práctico vamos a visualizar y analizar datos de mareas en el Río de la Plata. Tiene una primera parte que esperamos que todos hagan y una segunda parte, más larga y compleja, optativa.
+En este práctico vamos a visualizar y analizar datos de mareas en el Río de la Plata. Tiene una primera parte que esperamos que todos hagan y una segunda parte, más larga y compleja, optativa. Trabajá en el archivo `mareas_fft.py`.
 
 Para comenzar, copiate [el archivo](./OBS_SHN_SF-BA.csv) con datos de mareas en los puertos de San Fernando y Buenos Aires a tu carpeta 'Datos/'
 
@@ -232,7 +232,7 @@ Si quisiéramos graficar `freqSF` contra `fftSF` no podríamos ver mucho ya que 
 La potencia (o amplitud) para cada frecuencia se calcula como el módulo del número complejo correspondiente (para la frecuencia `freqSF[i]` la potencia es `abs(fftSF[i])`). Al graficar esto podemos ver la amplitud de los sinusoides para cada frecuencia. Este gráfico se llama el *espectro de potencias* de la onda original. 
 
 ```python
-plt.plot(freqSF, abs(fftSF))
+plt.plot(freqSF, np.abs(fftSF))
 plt.xlabel("Frecuencia")
 plt.ylabel("Potencia (energía)")
 plt.show()
@@ -248,7 +248,7 @@ El pico en la primera posición efectivamente se corresponde con la frecuencia 0
 ```python
 >>> freqSF[0]
 0.0
->>> abs(fftSF)
+>>> np.abs(fftSF[0])
 111.83
 ```
 
@@ -257,7 +257,7 @@ A partir de esto podemos decir que las altura del río en San Fernando durante e
 Para analizar precisamente el pico semidiurno podemos usar `find_peaks` del módulo `signal` para evitar hacerlo a ojo.
 
 ```python
->>> print(signal.find_peaks(abs(fftSF), prominence=8))
+>>> print(signal.find_peaks(np.abs(fftSF), prominence=8))
 >>> (array([350]), {'prominences': array([11.4554514]), 'left_bases': array([307]), 'right_bases': array([2109])})
 ```
 
@@ -271,39 +271,38 @@ Esta respuesta nos indica que hay un pico con la prominencia solicitada (al meno
 La frecuencia relacionada con esa posición es cercana a dos, como ya habíamos observado en el gráfico. Podemos distinguir los picos agregando un punto rojo:
 
 ```python
-plt.plot(freqSF, abs(fftSF))
+plt.plot(freqSF, np.abs(fftSF))
 plt.xlabel("Frecuencia")
 plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
-picosSF = signal.find_peaks(abs(fftSF), prominence=8)[0]
+#me quedo solo con el último pico
+picoSF = signal.find_peaks(np.abs(fftSF), prominence=8)[0][-1]
 #se grafican los picos como circulitos rojos
-plt.scatter(freqSF[picosSF], abs(fftSF)[picosSF], facecolor='r')
+plt.scatter(freqSF[picoSF], np.abs(fftSF)[picoSF], facecolor='r')
 plt.show()
 ```
 
 ![Figura](./Figure175902_.png)
 
-Lo que se observa en estos gráficos es que si descomponemos la curva de alturas en San Fernando como suma de sinusoidales, el sinusoide con frecuencia 1.93 tiene una magnitud considerablemente llamativa. Se trata de la frecuencia de las mareas lunares justamente. Si conocemos las fases de estas componentes es dos puertos distintos, podremos estimar el tiempo que tarda en desplazarse la marea de uno a otro.
+Podemos interpretar estos gráficos como diciendo que si descomponemos la curva de alturas en San Fernando como suma de sinusoidales, el sinusoide con frecuencia 1.93 tiene una magnitud considerablemente llamativa. Se trata de la frecuencia de las mareas lunares justamente. 
 
-Por otra parte, con el comando
+Ahora viene la parte un poco más sutíl: **el análisis de las fases**. Si conocemos la fase de estas componentes en dos puertos distintos, podremos estimar el tiempo que tarda en desplazarse la marea de uno a otro.
+
+Para calcular la fase (entre -pi y pi) de la componente 350ava en el puerto de San Fernando, podemos simplemente usar `np.angle()` y pasarle el número complejo en cuestión:
+
 
 ```python
-angSF, freqSF, linSF = plt.angle_spectrum(HSF, 24.)
+>>> angSF = np.angle(fftSF)[picoSF]
+>>> print(angSF)
+1.4849
 ```
 
-podemos calcular el espectro de ángulos. `angSF[350]` entonces nos dará información sobre la fase de esa componente de la transformadad de Fourier.
+Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfazaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freqSF[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de 
 
 ```python
->>> angSF[350]
-1.5094504268950777
-```
-
-Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfazaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuacia diaria ligeramente inferior a 2 (freqSF[350]~1.93), 2*pi corresponde a 24/1.93 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de 
-
-```python
->>> angSF[350]*12/np.pi/freqSF[350]
-2.9816781201906313
+>>> angSF*12/np.pi/freqSF[350]
+2.93
 ```
 poco menos de 3hs respecto al seno que comienza a medianoche.
 
@@ -312,22 +311,26 @@ poco menos de 3hs respecto al seno que comienza a medianoche.
 Repitamos velozmente el procedimiento para el puerto de Buenos Aires y analicemos las diferencias.
 
 ```python
-mgBA, frecBA, lineasBA = plt.magnitude_spectrum(HBA, Fs =24.)
-plt.xlim(0,3)
-plt.ylim(0,15)
-picosBA = signal.find_peaks(mgBA, prominence=8)[0]
+plt.plot(freqBA, np.abs(fftBA))
+plt.xlabel("Frecuencia")
+plt.ylabel("Potencia (energía)")
+plt.xlim(0,4)
+plt.ylim(0,20)
+#me quedo solo con el último pico
+picoBA = signal.find_peaks(np.abs(fftBA), prominence=8)[0][-1]
 #se grafican los picos como circulitos rojos
-plt.scatter(frecBA[picosBA], mgBA[picosBA], facecolor='r')
+plt.scatter(freqBA[picoBA], np.abs(fftBA)[picoBA], facecolor='r')
+plt.title("Espectro de Potencias Bs.As.")
 plt.show()
 ```
 
-![Figura](./Figure175932.png)
+![Figura](./Figure175932_.png)
 
 Si buscamos la constante alrededor de la que oscilan las mareas según el nivel del puerto de Buenos Aires obtenemos.
 
 ```python
->>> mgBA[0]
-88.40835357673745
+>>> np.abs(fftBA[0])
+88.21
 ```
 
 Con este resultado es sencillo obtener una estimación para la diferencia de de alturas de los ceros de escala entre ambos puertos.
@@ -335,29 +338,27 @@ Con este resultado es sencillo obtener una estimación para la diferencia de de 
 Por otra parte, observamos que el espectro de potencia y sus picos son súmamente similares.
 
 ```python
->>> print(signal.find_peaks(mgBA, prominence=8))
-(array([350]), {'prominences': array([13.657]), 'left_bases': array([167]), 'right_bases': array([739])})
+>>> print(signal.find_peaks(np.abs(fftBA), prominence=8))
+(array([350]), {'prominences': array([12.67228046]), 'left_bases': array([279]), 'right_bases': array([1000])})
 ```
 
-Las mareas de Buenos Aires tiene una componente de máxima amplitud en la misma frecuencia y con una magnitud de 13.657. Resta estudiar la fase de la curva en estas frecuencias para poder determinar con precisión la diferencia de fase entre ambos puertos. Primero calculamos el espectro de ángulos:
+Las mareas de Buenos Aires tiene una componente de máxima amplitud en la misma frecuencia y con una magnitud de 12.67 (bastante similar a la amplitud de San Fernando). Resta estudiar la fase de la curva en estas frecuencias para poder determinar con precisión la diferencia de fase entre ambos puertos. Primero calculamos el ángulo de la componente correspondiente y luego lo convertimos en horas:
 
 ```python
-angBA, frecBA, linBA = plt.angle_spectrum(HBA, 24.)
-```
-La variable `angBA[350]` contiene la fase de la curva para la frecuencia de interés. Convertida a horas da
-
-```python
->>> angBA[350]*12/np.pi/frecBA[350]
-3.9013844071274755
+>>> angBA = np.angle(fftBA)[picoBA]
+>>> print(angBA)
+1.96
+>>> angBA*12/np.pi/freqBA[350]
+3.8786004708135566
 ```
 
 Por lo tanto, el retardo de la onda de mareas puede calcularse usando
 ```python
-angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/freqSF[350]
+angBA*12/np.pi/freqBA[350]-angSF*12/np.pi/freqSF[350]
 ```
 
 ### Ejercicio 7.15: Desfazajes
-¿A cuántos minutos corresponde aproximadamente tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
+¿A cuántos minutos corresponde aproximadamente el tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
 Estimá la diferencia en los ceros de escala de ambos puertos. Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.14](../07_datetime_SO_Pandas_sns/05_Series_Temporales2.md#ejercicio-714) (vas a tener que redondear a horas enteras el delay temporal).
 
 ## Un poco más avanzados:
@@ -365,7 +366,9 @@ Estimá la diferencia en los ceros de escala de ambos puertos. Usá estos datos 
 ### Ejercicio 7.16: Otros puertos
 Usando el [archivo con datos del Puerto de Zárate](./OBS_Zarate_2013A.csv), estimá el tiempo (expresado en horas y minutos) que le toma a la onda de marea llegar de Buenos Aires a Zárate. 
 
-Obviamente la onda llega atenuada a Zárate. ¿Cómo se expresa este hecho en los la transformada? ¿Cuánto se atenúo respecto a Buenos Aires?
+Obviamente la onda llega atenuada a Zárate. ¿Cómo se refleja esta atenuación en la transformada? ¿Podés cuantificar esta atenuación?
+
+Guardá lo que hayas hecho hasta aca en el archivo `mareas_fft.py` para entregar.
 
 ### Ejercicio 7.17: Otros períodos
 El primer análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
