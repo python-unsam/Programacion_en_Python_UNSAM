@@ -123,7 +123,7 @@ df['10-15-2014':'12-15-2014'].plot()
 ![Figura](./Figure175349.png)
 
 
-Se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días. Las siguientes fotos son de esa sudestada. Fueron tomadas el primero de Noviembre del 2014 por Gustavo Castaing.
+En ese gráfico se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días. Las dos fotos que siguen son justamente de esa sudestada. Fueron tomadas el primero de noviembre por Gustavo Castaing.
 
 <img src="./sudestada.jpg" width="500"> <img src="./sudestada_.jpg" width="500">
 
