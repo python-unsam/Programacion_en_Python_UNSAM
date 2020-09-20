@@ -92,7 +92,7 @@ Time
 
 Probá también `df['2-19-2014']` (observá que el formato de fechas que se usa es el de EEUU), y `df['12-25-2014':]`.
 
-## Mareas en el Río de la Plata
+## Ondas de marea en el Río de la Plata
 
 Grafiquemos estos últimos datos:
     
@@ -109,9 +109,9 @@ Esto se debe a que las ondas de marea vienen del océano atlántico y se propaga
 pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando. En ciertas condiciones esta onda de mareas puede llegar a la ciudad de Rosario, aunque se va atenuando en su viaje desde el atlántico.
 * Finalmente, hay una marcada diferencia entre la altura registrada en San Fernando y la de Buenos Aires. Esto se debe a que las dos escalas, a partir de las que se registran los datos, tienen ceros que no están nivelados.
 
-En este práctico nos proponemos estudiar la propagación de esta *onda de marea*.
+En este práctico nos proponemos estudiar la propagación de esta *onda de marea* que es generada por la atracción gravitacional que ejercen la luna y el sol sobre el agua. Vamos a usar una transformada de Fourier que nos permite estudiar las frecuencias predominantes en la serie de alturas. Las mareas se verán claramente porque estos efectos astronómicos son regulares y tienen frecuencias invantiantes.
 
-## Tormentas y sudestadas en el Río de la Plata
+## Vientos y ondas de tormenta en el Río de la Plata
 
 Si miramos un gráfico un poco más extendido en el tiempo vamos a ver que las alturas no solo fluctuan con las mareas semidiurnas sino que la componente meteorológica (vientos principalmente, que generan *ondas de tormenta*) modifican las alturas de manera muy considerable.
 
@@ -132,6 +132,7 @@ Así como el viento del sudeste empuja el agua del mar hacia adentro del estuari
 
 <img src="./bajante19062019.jpg" width="500"> <img src="./bajante219062019.jpg" width="500">
 
+La transformada de Fourier no resultará muy útil para ver estas *ondas de tormenta*. Como carecen de regularidad, no aparecerán claramente en el espectro de frecuencias.
 
 ### Ejercicio 7.10: 
 Trabajemos con una copia de este fragmento:
