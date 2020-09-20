@@ -2,6 +2,7 @@
 
 # 7.1 Manejo de fechas y horas
 
+
 ## El módulo datetime
 
 A continuación introducimos el módulo `datetime` que permite manipular adecuadamente fechas y horas. Este módulo tiene definida una clase `datetime` (sí, la clase tiene el mismo nombre que el módulo), que permite almacenar un instante temporal (fecha y hora). También tiene definida la clase `date` que  almacena sólo una fecha. Análogamente tiene la clase `time` que sólo almacena una hora. Finalmente, en esta breve introducción al módulo `datetime` mencionaremos la clase `timedelta` que permite almacenar y manipular deltas de tiempo, es decir, duraciones.

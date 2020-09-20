@@ -17,7 +17,8 @@ No te marées, son 4 bibliotecas o módulos muy diferentes e importantes de Pyth
 * [7.3 Ordenar archivos en Python](03_Ordenando_archivos.md)
 * [7.4 Introducción a Pandas](04_Pandas.md)
 * [7.5 Series temporales](05_Series_Temporales.md)
-* [7.6 Cierre de la séptima](06_Cierre.md)
+* [7.6 Series temporales](05_Series_Temporales2.md)
+* [7.7 Cierre de la séptima](06_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases, Objetos y Seaborn)](../08_OOP_RL/00_Resumen.md)

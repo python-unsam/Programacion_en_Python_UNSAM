@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas.md) \| [Próximo (6 Series temporales)](05_Series_Temporales2.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Series temporales)](05_Series_Temporales.md) \| [Próximo (7 Cierre de la séptima)](06_Cierre.md)
 
-# 7.5 Series temporales
+# 7.6 Series temporales
 
 Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Rafael Grimson
 
@@ -135,7 +135,7 @@ Así como el viento del sudeste empuja el agua del mar hacia adentro del estuari
 
 La transformada de Fourier no resultará muy útil para ver estas *ondas de tormenta*. Como carecen de regularidad, no aparecerán claramente en el espectro de frecuencias.
 
-### Ejercicio 7.10: 
+### Ejercicio 7.14: 
 Trabajemos con una copia de este fragmento:
 
 ```python
@@ -200,71 +200,96 @@ import matplotlib.pyplot as plt
 Seleccionemos las dos series como vectores de numpy (con la instrucción `values` de pandas).
 
 ```python
-HSF=df['2014-1':'2014-06']['H_SF'].values
-HBA=df['2014-1':'2014-06']['H_BA'].values
+ini='2014-01'
+fin='2014-06'
+HSF=df[ini:fin]['H_SF'].values
+HBA=df[ini:fin]['H_BA'].values
+```
+
+Primero definamos una función que calcule la transformada de Fourier para datos horarios y considerando como unidad de frecuencia los días (descartamos la mitad de los coeficientes de la transformada porque los datos son reales y no complejos). Podés tomarla como una caja negra por ahora...
+
+```python
+def calcular_fft(y,freq_sampleo=24.):
+    '''y debe ser una vector con número reales representando datos de una serie temporal. freq_sampleo esta seteado para considerar 24 datos por unidad.
+    Devuelve dos vectores, uno de frecuencias y otro con la transformada propiamente. La transformada contiene los valores complejos que se corresponden con respectivas frecuencias.'''
+    N=len(y)
+    freq = np.fft.fftfreq(N, d=1/freq_sampleo)[:N//2]
+    tran = (np.fft.fft(y)/N)[:N//2]
+    return freq, tran
 ```
 
 
 ### Espectro de potencia y de ángulos para San Fernando
 
-El espectro de potencia nos permite ver la amplitud de los sinusoides para cada frecuencia. El módulo pyplot de matplotlib nos permite calcularlo y graficarlo en un solo paso. Recibe como parámetros la serie de datos y frecuencia de muestreo (en nuestro caso es de 24 muestras por dia).
+Primero entonces calculamos la transformada de las alturas de San Fernando.
 
 ```python
-mgSF, frecSF, lineasSF = plt.magnitude_spectrum(HSF, Fs =24.)
+freqSF, fftSF = calcular_fft(HSF)
 ```
 
-![Figura](./Figure175811.png)
+Si quisiéramos graficar `freqSF` contra `fftSF` no podríamos ver mucho ya que `fftSF` contiene números complejos.
 
+La potencia (o amplitud) para cada frecuencia se calcula como el módulo del número complejo correspondiente (para la frecuencia `freqSF[i]` la potencia es `abs(fftSF[i])`). Al graficar esto podemos ver la amplitud de los sinusoides para cada frecuencia. Este gráfico se llama el *espectro de potencias* de la onda original. 
 
-La variable `mgSF` guarda las magnitudes correspondientes a las frecuencias almacenadas en `frecSF`. La variable `lineasSF` guarda simplemente información del gráfico.
+```python
+plt.plot(freqSF, abs(fftSF))
+plt.xlabel("Frecuencia")
+plt.ylabel("Potencia (energía)")
+plt.show()
+```
+
+![Figura](./Figure175811_.png)
+
 
 A simple vista se obervan dos picos, uno en fecuencia 0 (constante relacionada con el cero de escala) y otro pico cercano a la frecuencia 2 (frecuencia semidiurna) que está relacionado con la onda de mareas. 
 
 El pico en la primera posición efectivamente se corresponde con la frecuencia 0 y su amplitud es:
 
 ```python
->>> frecSF[0]
+>>> freqSF[0]
 0.0
->>> mgSF[0]
-112.40499716091024
+>>> abs(fftSF)
+111.83
 ```
 
-A partir de esto podemos decir que las altura del río en San Fernando durante este período oscilan alrededor de los 112.4cm de altura.
+A partir de esto podemos decir que las altura del río en San Fernando durante este período oscilan alrededor de los 111.8cm de altura.
 
 Para analizar precisamente el pico semidiurno podemos usar `find_peaks` del módulo `signal` para evitar hacerlo a ojo.
 
 ```python
->>> print(signal.find_peaks(mgSF, prominence=8))
-(array([350]), {'prominences': array([12.2833]), 'left_bases': array([275]), 'right_bases': array([1802])})
+>>> print(signal.find_peaks(abs(fftSF), prominence=8))
+>>> (array([350]), {'prominences': array([11.4554514]), 'left_bases': array([307]), 'right_bases': array([2109])})
 ```
 
-Esta respuesta nos indica que hay un pico con la prominencia solicitada (al menos 8), que tiene un magnitud de 12.2833 y que corresponde a la posición 350 del vector. 
+Esta respuesta nos indica que hay un pico con la prominencia solicitada (al menos 8), que tiene un magnitud de 11.45 y que corresponde a la posición 350 del vector. 
 
 ```python
->>> frecSF[350]
-1.9337016574585635
+>>> freqSF[350]
+1.93
 ```
 
 La frecuencia relacionada con esa posición es cercana a dos, como ya habíamos observado en el gráfico. Podemos distinguir los picos agregando un punto rojo:
 
 ```python
-mgSF, frecSF, lineasSF = plt.magnitude_spectrum(HSF, Fs =24.)
-plt.xlim(0,3)
-plt.ylim(0,15)
-picosSF = signal.find_peaks(mgSF, prominence=8)[0]
+plt.plot(freqSF, abs(fftSF))
+plt.xlabel("Frecuencia")
+plt.ylabel("Potencia (energía)")
+plt.xlim(0,4)
+plt.ylim(0,20)
+picosSF = signal.find_peaks(abs(fftSF), prominence=8)[0]
 #se grafican los picos como circulitos rojos
-plt.scatter(frecSF[picosSF], mgSF[picosSF], facecolor='r')
+plt.scatter(freqSF[picosSF], abs(fftSF)[picosSF], facecolor='r')
 plt.show()
 ```
 
-![Figura](./Figure175902.png)
+![Figura](./Figure175902_.png)
 
 Lo que se observa en estos gráficos es que si descomponemos la curva de alturas en San Fernando como suma de sinusoidales, el sinusoide con frecuencia 1.93 tiene una magnitud considerablemente llamativa. Se trata de la frecuencia de las mareas lunares justamente. Si conocemos las fases de estas componentes es dos puertos distintos, podremos estimar el tiempo que tarda en desplazarse la marea de uno a otro.
 
 Por otra parte, con el comando
 
 ```python
-angSF, frecSF, linSF = plt.angle_spectrum(HSF, 24.)
+angSF, freqSF, linSF = plt.angle_spectrum(HSF, 24.)
 ```
 
 podemos calcular el espectro de ángulos. `angSF[350]` entonces nos dará información sobre la fase de esa componente de la transformadad de Fourier.
@@ -274,10 +299,10 @@ podemos calcular el espectro de ángulos. `angSF[350]` entonces nos dará inform
 1.5094504268950777
 ```
 
-Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfazaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuacia diaria ligeramente inferior a 2 (frecSF[350]~1.93), 2*pi corresponde a 24/1.93 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de 
+Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfazaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuacia diaria ligeramente inferior a 2 (freqSF[350]~1.93), 2*pi corresponde a 24/1.93 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de 
 
 ```python
->>> angSF[350]*12/np.pi/frecSF[350]
+>>> angSF[350]*12/np.pi/freqSF[350]
 2.9816781201906313
 ```
 poco menos de 3hs respecto al seno que comienza a medianoche.
@@ -328,25 +353,34 @@ La variable `angBA[350]` contiene la fase de la curva para la frecuencia de inte
 
 Por lo tanto, el retardo de la onda de mareas puede calcularse usando
 ```python
-angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/frecSF[350]
+angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/freqSF[350]
 ```
 
-### Ejercicio 7.11: Desfazajes
+### Ejercicio 7.15: Desfazajes
 ¿A cuántos minutos corresponde aproximadamente tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
 Estimá la diferencia en los ceros de escala de ambos puertos. Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.14](../07_datetime_SO_Pandas_sns/05_Series_Temporales2.md#ejercicio-714) (vas a tener que redondear a horas enteras el delay temporal).
 
 ## Un poco más avanzados:
 
-### Ejercicio 7.12: Otros puertos
+### Ejercicio 7.16: Otros puertos
 Usando el [archivo con datos del Puerto de Zárate](./OBS_Zarate_2013A.csv), estimá el tiempo (expresado en horas y minutos) que le toma a la onda de marea llegar de Buenos Aires a Zárate. 
 
 Obviamente la onda llega atenuada a Zárate. ¿Cómo se expresa este hecho en los la transformada? ¿Cuánto se atenúo respecto a Buenos Aires?
 
-### Ejercicio 7.13: Otros períodos
-Este análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
+### Ejercicio 7.17: Otros períodos
+El primer análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
+
+La siguiente función completa datos faltantes y corrige pequeños problemas en los índices.
+
+```python
+def reparar(df):
+    df=df.interpolate()
+    df=df.resample('H').mean()
+    df=df.fillna(method='ffill')
+    return df
+```
 
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas.md) \| [Próximo (6 Series temporales)](05_Series_Temporales2.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Series temporales)](05_Series_Temporales.md) \| [Próximo (7 Cierre de la séptima)](06_Cierre.md)
 
