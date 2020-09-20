@@ -102,16 +102,17 @@ df['12-25-2014':].plot()
 ![Figura](./Figure175144.png)
 
 Aca se ven tres fenómenos interesantes: 
-* Hay 14 picos en 7 días, esto corresponde a la frecuencia _semidiurna_ de las mareas. 
-Cada 12hs aproxiamdamente tenemos un ciclo con pleamar y bajamar. Dos ciclos por día.
+* Hay 14 picos en 7 días, esto corresponde a la frecuencia _semidiurna_ de las mareas. Cada poco más de 12hs tenemos un ciclo con pleamar y bajamar. Dos ciclos por día.
 * Por otra parte, se ve que las mareas en San Fernando están retrasadas respecto a las de Buenos Aires. 
 Esto se debe a que las ondas de marea vienen del mar atlántico y se propagan por el estuario del rio de la Plata, 
-pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando.
-* Finalmente, se ve que la altura registrada en San Fernando está por encima de la de Buenos Aires. Esto se debe a que las dos escalas, a partir de las que se registran los datos, tienen ceros que no están nivelados.
+pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando. En ciertas condiciones esta onda de mareas puede llegar a la ciudad de Rosario, aunque se va atenuando en su viaje desde el atlántico.
+* Finalmente, hay una marcada diferencia entre la altura registrada en San Fernando y la de Buenos Aires. Esto se debe a que las dos escalas, a partir de las que se registran los datos, tienen ceros que no están nivelados.
+
+En este práctico nos proponemos estudiar la propagación de esta *onda de marea*.
 
 ## Tormentas y sudestadas en el Río de la Plata
 
-Si miramos un gráfico un poco más extendido en el tiempo vamos a ver que las alturas no solo fluctuan con las mareas semidiurnas sino que la componente meteorológica (vientos principalmente) modifican las alturas de manera muy considerable.
+Si miramos un gráfico un poco más extendido en el tiempo vamos a ver que las alturas no solo fluctuan con las mareas semidiurnas sino que la componente meteorológica (vientos principalmente, que generan *ondas de tormenta*) modifican las alturas de manera muy considerable.
 
 El siguiente comando genera un gráfico entre el 15 de octubre de 2014 y el 15 de diciembre del mismo año. 
 ```python
@@ -151,7 +152,7 @@ Guardá tu código en el archivo `mareas_a_mano.py` para entregar.
 
 ## Parte optativa
 
-En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. En particular vamos a hacer un análisis por medio de la transformada de Fourier. El desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Veamos cómo se hace este análisis.
+En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. Para una onda sinusoidal, el desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Vamos a descomponer la serie de alturas observadas del agua por medio de la transformada de Fourier. 
 
 **Lo que sigue es optativo**.
 
@@ -172,6 +173,8 @@ La fase (o desplazamiento del máximo respecto del origen de las coordenadas), s
 <img src="./phase_shift.png" width="300">
 
 Aquí, la variable tita representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo). Esta *fase* suele medirse en radianes, correspondiendo 2*pi a un ciclo completo de desfazaje.
+
+Vamos a aplicar estas herramientas al análisis de la propagación de la onda de marea por el estuario del plata. La onda de marea se genera por
 
 
 ### Preparación de módulos y datos
@@ -224,7 +227,7 @@ Para analizar precisamente el pico semidiurno podemos usar `find_peaks` del mód
 (array([350]), {'prominences': array([12.2833]), 'left_bases': array([275]), 'right_bases': array([1802])})
 ```
 
-Esta respuesta nos indica que hay un pico con la prominencia solicitada (al menos 8), que tiene un magnitud de 12.2833 y que corresponde a la posición 350 del vector.
+Esta respuesta nos indica que hay un pico con la prominencia solicitada (al menos 8), que tiene un magnitud de 12.2833 y que corresponde a la posición 350 del vector. 
 
 ```python
 >>> frecSF[350]
@@ -245,6 +248,7 @@ plt.show()
 
 ![Figura](./Figure175902.png)
 
+Lo que se observa en estos gráficos es que si descomponemos la curva de alturas en San Fernando como suma de sinusoidales, el sinusoide con frecuencia 1.93 tiene una magnitud considerablemente llamativa. Se trata de la frecuencia de las mareas lunares justamente. Si conocemos las fases de estas componentes es dos puertos distintos, podremos estimar el tiempo que tarda en desplazarse la marea de uno a otro.
 
 Por otra parte, con el comando
 
@@ -318,15 +322,18 @@ angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/frecSF[350]
 
 ### Ejercicio 7.11: Desfazajes
 ¿A cuántos minutos corresponde aproximadamente tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
-¿Estimá la diferencia en los ceros de escala de ambos puertos?
+Estimá la diferencia en los ceros de escala de ambos puertos. Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.10](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-710) (vas a tener que redondear a horas enteras el delay temporal).
 
 ## Un poco más avanzados:
 
-### Ejercicio 7.12: Otros períodos
+### Ejercicio 7.12: Otros puertos
+Usando el [archivo con datos del Puerto de Zárate](./OBS_Zarate_2013A.csv), estimá el tiempo (expresado en horas y minutos) que le toma a la onda de marea llegar de Buenos Aires a Zárate. 
+
+Obviamente la onda llega atenuada a Zárate. ¿Cómo se expresa este hecho en los la transformada? ¿Cuánto se atenúo respecto a Buenos Aires?
+
+### Ejercicio 7.13: Otros períodos
 Este análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
 
-### Ejercicio 7.13: Otros puertos
-Usando el [archivo con datos del Puerto de Zárate](./Data_Zarate.csv), estimá la diferencia en los ceros ce escala de ambos puertos y el delay de la onda de mareas en llegar de un puerto al otro.
 
 
 
