@@ -14,7 +14,7 @@ _Obvservación:_ Al final, tu script debería poder ejecutarse desde la línea d
 Guardá tu programa en el archivo `recorrer_arbol.py`.
 
 
-### Ejercicio 7.6: Optativo -
+### Ejercicio 7.6: Ordenar el arbol de archivos - Optativo
 te permita ordenar las imágenes PNG de esta carpeta.
 
 
@@ -32,7 +32,7 @@ Este tipo de tareas se repite con mucha frecuencia. Tener la capacidad de automa
 
 **Algunos puntos importantes:**
 * El *procesamiento* de un archivo PNG lo debería hacer una función. 
-* Usa docstrings y comentarios en tu código de manera que sea legible. 
+* Usá docstrings y comentarios en tu código de manera que sea legible. 
 * Guradá el script resultante en un archivo `ordenar_imgs.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
 
 
