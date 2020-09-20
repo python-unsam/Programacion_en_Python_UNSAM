@@ -10,7 +10,7 @@ Para cerrar esta clase te pedimos dos cosas:
   3. El archivo  `arbolado_parques_veredas.py` del [Ejercicio 7.9](../07_datetime_SO_Pandas_sns/04_Pandas.md#ejercicio-79-comparando-especies-en-parques-y-en-veredas).
   4. El archivo  `mareas_a_mano.py` del [Ejercicio 7.10](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-710).
 
-  Podés entregar además dos optativos:
+  Te proponemos además dos optativos:
   1. El archivo  `ordenar_imgs.py` del [Ejercicio 7.6](../07_datetime_SO_Pandas_sns/03_Ordenando_archivos.md#ejercicio-76-optativo).
   2. El archivo  `mareas_fft.py` del [Ejercicio 7.12](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-712-otros-puertos).
  
