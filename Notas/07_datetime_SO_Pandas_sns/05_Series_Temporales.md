@@ -4,7 +4,8 @@
 
 Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Rafael Grimson
 
-* Octavio da dos cursos de posgrado excelentes sobre Series Temporales. Uno enfoca los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente escribió algunas ideas para esta clase.
+* Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente escribió algunas ideas para este trabajo práctico.
+
 
 ## Análisis y visualización de series temporales.
 
@@ -122,7 +123,16 @@ df['10-15-2014':'12-15-2014'].plot()
 ![Figura](./Figure175349.png)
 
 
-Se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días.
+Se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días. Las siguientes foto son de esa sudestada. Fueron tomadas el primero de Noviembre del 2014 por Gustavo Castaing.
+
+<img src="./sudestada.jpg" width="300">
+<img src="./sudestada_.jpg" width="300">
+
+
+También los vientos del norte o el oeste impactan en la altura del agua generando bajantes. En las siguientes dos fotos puede verse una bajante tomada por Juan Carlos Martínez Bigozzi el 19 de junio del 2019. 
+
+<img src="./bajante19062019.jpg" width="300">
+<img src="./bajante219062019.jpg" width="300">
 
 
 ### Ejercicio 7.10: 
