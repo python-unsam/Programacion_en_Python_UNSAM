@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Series temporales)](05_Opt_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Series temporales)](05_Series_Temporales.md)
 
 # 7.6 Cierre de la séptima
 
@@ -7,10 +7,12 @@ En esta séptima clase clase vimos
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
 
-1. El archivo `fileparse.py` del [Ejercicio 6.4](../06_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-64-de-archivos-a-objetos-cual-archivos).
-1. El archivo `informe.py` del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-65-arreglemos-las-funciones-existentes).
-1. El archivo `documentacion.py` del [Ejercicio 6.8](../06_Plt_Especificacion_y_Documentacion/04_Especificacion_y_Documentacion.md#ejercicio-68-funciones-y-documentación).
-1. El archivo `random_walk.py` del [Ejercicio 6.10](../06_Plt_Especificacion_y_Documentacion/06_Matplotlib.md#ejercicio-610-caminatas-al-azar).
+1. Fechas `vida.py` [Ejercicio 7.1](../07_datetime_SO_Pandas_sns/01_Fechas.md#ejercicio-71-segundos-vividos).
+2. Ordenar `recorrer_arbol.py` [Ejercicio 7.5](../07_datetime_SO_Pandas_sns/03_Ordenando_archivos.md#ejercicio-75-recorrer-el-arbol-de-archivos).
+3. Ordenar `ordenar_imgs.py` [Ejercicio 7.6](../07_datetime_SO_Pandas_sns/03_Ordenando_archivos.md#ejercicio-76-optativo) (optativo).
+4. Pandas `arbolado_parques_veredas.py` [Ejercicio 7.9](../07_datetime_SO_Pandas_sns/04_Pandas.md#ejercicio-79-comparando-especies-en-parques-y-en-veredas).
+5. Mareas `mareas_a_mano.py` [Ejercicio 7.10](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-710).
+5. Mareas `mareas_fft.py` Ejercicio ? (optativo).
  
 * Que completes [este formulario](https://docs.google.com/forms/d/1LmeHVZqiEznUUD7FjhTbi6eRQFzvb8Er4dOF3mOy9oo) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
@@ -18,5 +20,6 @@ Para cerrar esta clase te pedimos dos cosas:
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Series temporales)](05_Opt_Series_Temporales.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (5 Series temporales)](05_Series_Temporales.md)
 

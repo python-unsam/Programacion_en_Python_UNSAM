@@ -1,10 +1,10 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas_basico.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
 
 # 7.5 Series temporales
 
 Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Rafael Grimson
 
-* Octavio da dos cursos de posgrado excelentes sobre Series Temporales. Uno enfoca los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias.
+* Octavio da dos cursos de posgrado excelentes sobre Series Temporales. Uno enfoca los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente escribió algunas ideas para esta clase.
 
 ## Análisis y visualización de series temporales.
 
@@ -38,7 +38,7 @@ RangeIndex(start=0, stop=35064, step=1)
 
 Este archivo tiene alturas del agua en el puerto de San Fernando (columna 'H_SF') y en el puerto de Buenos Aires (columna 'H_BA') medidas en centímetros.
 Tiene un dato por hora durante (columna 'Time') cuatro años.
-En los priemros registros se observa algo muy frecuente con este tipo de archivos: tiene muchos datos faltantes.
+En los primeros registros se observa algo muy frecuente con este tipo de archivos: tiene muchos datos faltantes.
 
 Por otra parte, no es del todo razonable que el índice de esta DataFrame sea un simple rango numérico. El índice debería ser el instante en le que se tomó cada muestra ('Time'). 
 
@@ -113,7 +113,7 @@ pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando.
 
 Si miramos un gráfico un poco más extendido en el tiempo vamos a ver que las alturas no solo fluctuan con las mareas semidiurnas sino que la componente meteorológica (vientos principalmente) modifican las alturas de manera muy considerable.
 
-Esto genera un gráfico entre el 15 de octubre de 2014 y el 15 de diciembre del mismo año. 
+El siguiente comando genera un gráfico entre el 15 de octubre de 2014 y el 15 de diciembre del mismo año. 
 ```python
 df['10-15-2014':'12-15-2014'].plot()
 ```
@@ -124,7 +124,7 @@ df['10-15-2014':'12-15-2014'].plot()
 Se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días.
 
 
-### Ejercicio 7.8: 
+### Ejercicio 7.10: 
 Trabajemos con una copia de este fragmento:
 
 ```python
@@ -147,7 +147,7 @@ pd.DataFrame([dh['H_SF'].shift(delta_t)-delta_h,dh['H_BA']]).T.plot()
 
 Buscá los valores de `delta_t` (entero, son pasos) y `delta_h` (puede tener decimales, es un float) que hacen que los dos gráficos se vean lo más similares posible.
 
-Guardá tu código en el archivo `desplazamientos.py` para entregar.
+Guardá tu código en el archivo `mareas_a_mano.py` para entregar.
 
 ## Parte optativa
 
@@ -316,19 +316,19 @@ Por lo tanto, el retardo de la onda de mareas puede calcularse usando
 angBA[350]*12/np.pi/frecBA[350]-angSF[350]*12/np.pi/frecSF[350]
 ```
 
-### Ejercicio 7.9: Desfazajes
+### Ejercicio 7.11: Desfazajes
 ¿A cuántos minutos corresponde aproximadamente tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
 ¿Estimá la diferencia en los ceros de escala de ambos puertos?
 
 ## Un poco más avanzados:
 
-### Ejercicio 7.10: Otros períodos
+### Ejercicio 7.12: Otros períodos
 Este análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
 
-### Ejercicio 7.11: Otros puertos
+### Ejercicio 7.13: Otros puertos
 Usando el [archivo con datos del Puerto de Zárate](./Data_Zarate.csv), estimá la diferencia en los ceros ce escala de ambos puertos y el delay de la onda de mareas en llegar de un puerto al otro.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas_basico.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas.md) \| [Próximo (6 Cierre de la séptima)](06_Cierre.md)
 

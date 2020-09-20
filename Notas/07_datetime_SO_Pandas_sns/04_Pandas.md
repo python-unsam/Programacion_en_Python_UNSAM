@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivos en Python)](03_Ordenando_archivos.md) \| [Próximo (5 Series temporales)](05_Opt_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivos en Python)](03_Ordenando_archivos.md) \| [Próximo (5 Series temporales)](05_Series_Temporales.md)
 
 # 7.4 Introducción a Pandas
 
@@ -383,9 +383,9 @@ dsuav.plot()
 
 Guardar una serie o un DataFrame en el disco es algo ralmente sencillo. Probá el por ejemplo el efecto del comando `dsuav.to_csv('CaminataApostolica.csv')`.
 
-## Ejercicios de Arbolado lineal
+## Incorporando el Arbolado lineal
 
-### Ejercicio 7.5: Lectura y selección
+### Ejercicio 7.7: Lectura y selección
 Vamos a trabajar ahora con el archivo ['arbolado-publico-lineal-2017-2018.csv'](https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal). Descargalo y guardalo en tu ditectorio 'Data/'.
 
 Levantalo y armá un DataFrame `dl` que tenga solamente las siguiente columnas:
@@ -409,7 +409,7 @@ We = np.array([n in esp_sel for n in dl['nombre_cientifico']])
 ds = dl[We]
 ```
 
-### Ejercicio 7.6: Boxplots
+### Ejercicio 7.8: Boxplots
 El siguiente comando realiza un [boxplot](https://es.wikipedia.org/wiki/Diagrama_de_caja) de los diámteros de los árboles agrupados por especie.
 
 ```python
@@ -417,7 +417,25 @@ ds.boxplot('diametro_altura_pecho', by = 'nombre_cientifico')
 ```
 Realizá un gráfico similar pero de los altos en lugar de los diámetros de los árboles.
 
-### Ejercicio 7.7: Comparando especies en parques y en veredas
+### Ejemplo de pairplot
+
+Otro gráfico interesante que resume muy bien la información es el *pairplot* de seaborn que es una grilla cuadrada de subplots.
+
+Probá el siguiente código:
+```python
+sns.pairplot(data=ds[cols_sel],hue='nombre_cientifico')
+```
+
+![Figura](./Figure200027.png)
+
+
+El gráfico va a tener una fila (y columna) por cada variable numérica en el DataFrame pasado como `data`. En la diagonal del gŕafico, va a haber kdeplots (kernel density estimation plots, una versión suavizada de los histogramas) y fuera de la diagonal scatterplots combinando todos los pares de variables (cada combinación aparece dos veces, una sobre y otra debajo de la diagonal). 
+
+El `hue` selecciona la variable categórica a usar para distinguir subgrupos y asociarles colores. En la diagonal de este ejemplo (y en los scatterplots también) se ve por ejemplo que las Tipas suelen ser más anchas y más altas que los Tilos y los Jacarandás. 
+
+Pergunta: ¿Por qué el ancho_acera no tiene lugar en el gráfico?
+
+### Ejercicio 7.9: Comparando especies en parques y en veredas
 Al comienzo de la materia estuvimos trabajando con el dataset de árboles en parques. Ahora estuvimos analizando otro dataset: el de árboles en veredas.
 Ahora queremos estudiar si hay diferencias notables entre los ejemplares de una misma especie según si crecen en un tipo de sitio o en otro. Queremos hacer un boxplot de los DAP (diámetro a la altura del pecho) para las Tipas (su nombre científico es *tipuana tipu*), que crecen en ambos tipos de sitio. Para eso tendremos que mezclar datos de dos bases de datos diferentes. 
 
@@ -425,7 +443,7 @@ Nos vamos en meter en un lío. El GCBA usa en un dataset 'altura_tot', 'diametro
 
 Es más, los nombres científicos varían de un dataset al otro. 'Tipuana Tipu' se transforma en 'Tipuana tipu' y 'Jacarandá mimosifolia' en 'Jacaranda mimosifolia'. Obviamente son cambios menores pero suficientes para desalentar al usuarie desprevenide.
 
-En este ejercicio te proponemos los siguientes pasos para comparar los DAPs de las tipas en ambos tipos de entornos. Guardá este trabajo en un archivo `arbolado_parques_veredas.py`
+En este ejercicio te proponemos los siguientes pasos para comparar los DAPs de las tipas en ambos tipos de entornos. Guardá este trabajo en un archivo `arbolado_parques_veredas.py`.
 
 1. Abrí ambos dataset y llamamos dp y dv (por parques y veredas).
 2. Para cada dateset armate otro seleccionando solamente las filas correspondientes a las tipas (llamalos dTTp y dTTv, respectivamente) y las columnas correspondientes a DAPs y alturas. Hacelo como copias (usando `.copy()` como hicimos más arriba) para poder trabajar en estos nuevos dataframes sin modificar los dataframes grandes originales. Renombrá las columnas 'altura' y 'DAP' para comanzar a uniformizar.
@@ -433,9 +451,9 @@ En este ejercicio te proponemos los siguientes pasos para comparar los DAPs de l
 4. Juntá ambos datasets con el comando `dTT = pd.concat([dTTv, dTTp])` en uno solo que contenga los DAPs y altos de las tipas de ambos datasets, distinguiéndolos por ambiente.
 5. Creá un boxplot para los DAPs de la tipas distinguiendo los ambientes (`boxplot('DAP',by = 'ambiente')`).
 6. Repetí para alturas.
-7. Armá una función a la que le pases ambos datasets originales, los nombres de las columnas de especie, altura y DAP de cada uno, y los respectivos nombres científicos de una misma especie en cada dataset y te devuelva un DataFrame con los DAPs y alturas de todos los ejemplares distinguiéndolos por ambiente (pasos 2,3 y 4 anteriores).
-8. Usá la función anterior para seleccionar los Jacarandás ('Jacarandá mimosifolia' y 'Jacaranda mimosifolia' se llaman en uno y otro dataset) y grafića los boxplots para ver si presentan diferencias en sus DAPs y en sus alturas.
+7. ¿Qué tendrías que cambiar para repetir el análisis para otras especies? ¿Convendría definir una función?
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivos en Python)](03_Ordenando_archivos.md) \| [Próximo (5 Series temporales)](05_Opt_Series_Temporales.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivos en Python)](03_Ordenando_archivos.md) \| [Próximo (5 Series temporales)](05_Series_Temporales.md)
 
