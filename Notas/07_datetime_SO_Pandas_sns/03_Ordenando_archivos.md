@@ -33,7 +33,7 @@ Este tipo de tareas se repite con mucha frecuencia. Tener la capacidad de automa
 **Algunos puntos importantes:**
 * El *procesamiento* de un archivo PNG lo debería hacer una función. 
 * Usá docstrings y comentarios en tu código de manera que sea legible. 
-* Guradá el script resultante en un archivo `ordenar_imgs.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
+* Guradá el script resultante en un archivo `ordenar_arbol.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
 
 
 
