@@ -14,7 +14,7 @@ Para cerrar esta clase te pedimos dos cosas:
 
 Podés entregar además dos optativos:
 1. El archivo  `ordenar_imgs.py` del [Ejercicio 7.6](../07_datetime_SO_Pandas_sns/03_Ordenando_archivos.md#ejercicio-76-optativo).
-2. El archivo  `mareas_fft.py` del Ejercicio ?.
+2. El archivo  `mareas_fft.py` del [Ejercicio 7.12](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-712-otros-puertos).
  
 * Que completes [este formulario](https://docs.google.com/forms/d/1LmeHVZqiEznUUD7FjhTbi6eRQFzvb8Er4dOF3mOy9oo) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
