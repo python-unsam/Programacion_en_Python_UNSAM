@@ -125,7 +125,7 @@ df['10-15-2014':'12-15-2014'].plot()
 
 En ese gráfico se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días. Las dos fotos que siguen son justamente de esa sudestada. Fueron tomadas el primero de noviembre por Gustavo Castaing.
 
-<img src="./sudestada.jpg" width="500"> <img src="./sudestada_.jpg" width="500">
+<img src="https://64.media.tumblr.com/22e647b1e723d132c7c00668bae1ecd0/tumblr_ned8qqsPig1rf9hn3o1_1280.jpg" width="500"> <img src="https://images.clarin.com/2014/11/01/r1MQfoi37g_1256x620.jpg" width="500">
 
 
 Así como el viento del sudeste empuja el agua del mar hacia adentro del estuario y genera crecidas, los vientos del norte o el oeste también impulsan desplazamientos del agua del estuario, en este caso generando bajantes. En las siguientes dos fotos puede verse una bajante capturada por Juan Carlos Martínez Bigozzi el 19 de junio del 2019. 
