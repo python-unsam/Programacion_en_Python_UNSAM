@@ -268,7 +268,7 @@ Esta respuesta nos indica que hay un pico con la prominencia solicitada (al meno
 1.93
 ```
 
-La frecuencia relacionada con esa posición es cercana a dos, como ya habíamos observado en el gráfico. Podemos distinguir los picos agregando un punto rojo:
+La frecuencia relacionada con esa posición es cercana a dos, como ya habíamos observado en el gráfico. Podemos distinguir los picos agregando un punto rojo y mirando más de cerca el área de interés:
 
 ```python
 plt.plot(freqSF, np.abs(fftSF))

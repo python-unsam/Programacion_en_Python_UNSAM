@@ -108,7 +108,7 @@ print('Día de la semana:', hoy.weekday()) # va de 0 a 6 empezando en lunes
 
 ## datetime.time
 
-Un objeto de la clase `time` representa el tiempo local. No nos vamos a meter en esta clase con los husos horarios (timezones), pero si vas a usar datos provistos por otros, es importante que sepas si está expresado en tu hora local, en la hora local de otro lugar o en [UTC](https://es.wikipedia.org/wiki/Tiempo_universal_coordinado).
+Un objeto de la clase `time` representa el tiempo local. No nos vamos a meter en esta clase con los [husos horarios](https://es.wikipedia.org/wiki/Huso_horario) (conocido también como timezones), pero si vas a usar datos provistos por otros, es importante que sepas si está expresado en tu hora local, en la hora local de otro lugar o en [UTC](https://es.wikipedia.org/wiki/Tiempo_universal_coordinado).
 
 
 ### Ejemplo: Representar la hora con un objeto `time`
