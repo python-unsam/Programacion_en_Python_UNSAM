@@ -129,7 +129,7 @@ En ese gráfico se puede observar cómo una sudestada a principios de noviembre 
 
 
 
-Así como el viento del sudeste empuja el agua del mar hacia adentro del estuario y genera crecidas, los vientos del norte o el oeste también impulsan desplazamientos del agua del estuario, en este caso generando bajantes. En las siguientes dos fotos puede verse una bajante capturada por Juan Carlos Martínez Bigozzi el 19 de junio del 2019. 
+Así como el viento del sudeste empuja el agua del mar hacia adentro del estuario y genera crecidas, los vientos del norte o el oeste también impulsan desplazamientos del agua del estuario, en este caso generando bajantes. En las siguientes dos fotos puede verse una bajante capturada por Juan Pablo Martínez Bigozzi el 19 de junio del 2019. 
 
 <img src="./bajante19062019.jpg" width="500"> <img src="./bajante219062019.jpg" width="500">
 
