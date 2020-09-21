@@ -4,7 +4,7 @@
 
 ## Manejo de archivos y directorios
 
-Una carpeta o directorio es una colección de archivos y subdirectorios. Python tiene el módulo `os` que ofrece muchos herramientas útiles para trabajar con directorios y archivos. 
+Una carpeta o directorio es una colección de archivos y directorios. Python tiene el módulo `os` que ofrece muchos herramientas útiles para trabajar con directorios y archivos.
 
 En esta sección vas a aprender cómo crear un directorio, renombrarlo, listar todos sus archivos y subdirectorios, etc.
 
@@ -22,16 +22,20 @@ Esta función te devuelve el directorio actual en forma de cadena.
 
 ```
 
-### Cambiar de directorio de trabajo
+Es importante ver que la salida dependerá del sistema operativo que estés usando. Por ejemplo, en Windows podrías obtener algo así: `C:\\usuario\\ejercicios_python`.
 
-Podés cambiar de directorio usando la función `chdir()` (_change directory_). Los directorios pueden ser relativos o absolutos ('.' es el directorio actual, '..' es el anterior, '/' es el directorio raíz).
+
+
+### Cambiar el directorio de trabajo
+
+Podés cambiar de directorio usando la función `chdir()` (_change directory_). Los directorios pueden ser relativos o absolutos (en sistemas operativos basados en Unix '.' es el directorio actual, '..' es el anterior, '/' es el directorio raíz).
 
 ```python
->>> os.chdir('./Data')
+>>> os.chdir('./Data')              # entro en Data
 >>> print(os.getcwd())
 /home/usuario/ejercicios_python/Data
->>> os.chdir('..')
->>> os.chdir('..')
+>>> os.chdir('..')                  # subo un nivel
+>>> os.chdir('..')                  # subo otro nivel
 >>> print(os.getcwd())
 /home/usuario/
 >>> os.chdir('/home')
@@ -39,9 +43,9 @@ Podés cambiar de directorio usando la función `chdir()` (_change directory_). 
 /home
 ```
 
-Para cambiar de directorio, le pasás el nuevo directorio como cadena a esta función. 
+Para cambiar de directorio, le pasás el nuevo directorio como cadena a esta función.
 
-En diferentes sistemas operativos las barras de directorio se escriben de diferentes maneras. Es recomendable usar el comando `os.path.join` como en el siguiente ejemplo de manera que tu código funcione correctamente en diferentes computadoras.
+En diferentes sistemas operativos las barras de directorio se escriben de diferentes maneras. Es recomendable usar el comando `os.path.join` como en el siguiente ejemplo de manera que tu código funcione independientemente del sistema operativo en el que se lo corra.
 
 ```python
 >>> directorio = os.path.join('/home','usuario','ejercicios_python')
@@ -53,6 +57,8 @@ En diferentes sistemas operativos las barras de directorio se escriben de difere
 La función `listdir()` toma un directorio (_path_ o camino) y devuelve una lista con todos los archivos y subdirectorios de un directorio. Si no se le pasa ningún path, devuelve los del directorio de trabajo actual.
 
 ```python
+>>> os.getcwd()
+'/home/usuario/ejercicios_python'
 >>> os.listdir('Data')
 
 ['camion2.csv',
@@ -80,7 +86,6 @@ Esta función toma como argumento el path del nuevo directorio. Si no se especif
 >>> os.mkdir('test/carpeta')  # creo el subdirectorio carpeta dentro de test
 >>> os.listdir('test')
 ['carpeta']
-
 ```
 
 ## Renombrar un directorio o un archivo
@@ -94,16 +99,24 @@ Para renombrar un directorio o archivo, la función `rename()` toma dos argument
 >>> os.rename('carpeta','carpeta_nueva') # cambio el nombre de carpeta
 >>> os.listdir()
 ['carpeta_nueva']
+```
 
+Esto mismo se puede hacer trabajando desde el directorio `Ejercicios`, sin entrar en 'test', marcando el camino hacia la carpeta que queremos renombrar.
+
+```python
+>>> os.chdir('..')                          # subo un nivel
+>>> os.listdir('test')                      # miro qué hay en test
+['carpeta_nueva']
+>>> os.rename('test/carpeta_nueva','test/carpeta_vieja')
+>>> os.listdir('test')
+['carpeta_vieja']
 ```
 
 La función `rename()` también es útil para mover un archivo o directorio, cambiando el camino (_path_) de acceso al archivo. Probá hacer esto:
 
 ```python
->>> os.chdir('..')                          # salgo en el directorio 'test'
-                                            # (vuelvo a 'Ejercicios')
->>> os.rename('test/carpeta/', './carpeta') # cambio el path de carpeta
->>> os.listdir('test')
+>>> os.rename('test/carpeta_vieja/', './carpeta_vieja') # cambio el path
+>>> os.listdir('test')                                  # test quedó vacío
 []
 ```
 
@@ -117,8 +130,9 @@ La carpeta 'carpeta' ahora se encuentra en 'Ejercicios', y no dentro de 'Ejercic
 Podés eliminar un archivo usando la función `remove()`. También podés eliminar un directorio vacío usando `rmdir()`.
 
 ```python
->>> os.listdir('otra_carpeta')  # entro en otra carpeta que tiene 
+>>> os.chdir('otra_carpeta')    # entro otra carpeta que tiene
                                 # una subcarpeta y un archivo de texto
+>>> os.listdir()
 ['subcarpeta', 'archivo.txt']
 
 >>> os.remove('archivo.txt')    # elimino el archivo
@@ -155,7 +169,7 @@ OSError: [Errno 39] Directory not empty: 'carpeta'
 
 ## Recorriendo directorios con `os.walk()`
 
-La función `walk()` del módulo `os` genera una lista con los nombres de todos los archivos del árbol de subdirectorios de un directorio dado. Es decir, lista los archivos de un directorio dado y luego entra en cada subdirectorio y hace lo mismo, recursivamente (_top-down_). O al revés, desde las hojas del árbol de directorios hasta la raiz (_bottom-up_).
+La función `walk()` del módulo `os` genera una lista con los nombres de todos los archivos del árbol de subdirectorios de un directorio dado. Es decir, lista los archivos de un directorio dado y luego entra en cada subdirectorio y hace lo mismo, recursivamente (_top-down_). O al revés, desde las hojas del árbol de directorios hasta la raíz (_bottom-up_).
 
 La función `walk()` recibe como único parámetro obligatorio el directorio donde comenzar a mirar (la raíz del árbol). Además, tiene algunos parámetros opcionales: en particular con `topdown = False` se le puede modificar el orden de recorrida.
 
@@ -173,14 +187,14 @@ for root, dirs, files in os.walk(".", topdown = False):
 ```
 
 
-## Cambiar el Determinar el momento de última modificación
+## Cambiar el momento de última modificación
 
-Dependiendo del sistema operativo, un archivo puede tener asociadas diferentes fechas (de creación original, de modificación del contenido, de cambio en sus metadatos (permisos por ejemplo), de acceso para lectura). 
+Dependiendo del sistema operativo, un archivo puede tener asociadas diferentes fechas (de creación original, de modificación del contenido, de cambio en sus metadatos (permisos por ejemplo), de acceso para lectura).
 
 Para editar el momento de modificación de un archivo necesitás importar `os` y `datetime`. Después, definís la fecha elegida y llamás a `utime` como se muestra acá:
 
-```python 
-import os 
+```python
+import os
 import datetime
 camino = './rebotes.py'
 fecha_acceso = datetime.datetime(year = 2017, month = 9, day = 21, hour = 19, minute =51, second = 0)
@@ -191,7 +205,7 @@ ts_modifi = fecha_modifi.timestamp()
 os.utime(camino, (ts_acceso, ts_modifi))
 ```
 
-Si mirás la información del archivo `./rebotes.py` deberís ver las modificaciones.
+Si mirás la información del archivo `./rebotes.py` deberías ver las modificaciones.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de fechas y horas)](01_Fechas.md) \| [Próximo (3 Ordenar archivos en Python)](03_Ordenando_archivos.md)

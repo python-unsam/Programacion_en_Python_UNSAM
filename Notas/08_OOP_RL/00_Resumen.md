@@ -16,8 +16,8 @@ Hasta ahora los programas con que estuviste trabajando usaron sólo typos de dat
 
 * [8.1 Pandas  y seaborn**](01_Pandas_seaborn.md)
 * [8.2 Optativo: Regresión Lineal**](02_OPT_RL.md)
-* [8.3 Clases***](03_Clases.md)
-* [8.4 Herencia***](04_Herencia.md)
+* [8.3 Clases](03_Clases.md)
+* [8.4 Herencia](04_Herencia.md)
 * [8.5 Métodos especiales](05_Métodos_Especiales.md)
 * [8.6 Ejercicio de objetos](06_Ejs_OOP.md)
 * [8.7 Cierre](07_Cierre.md)

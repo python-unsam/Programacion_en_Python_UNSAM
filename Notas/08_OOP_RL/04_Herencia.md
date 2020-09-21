@@ -1,12 +1,12 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Clases***)](03_Clases.md) \| [Próximo (5 Métodos especiales)](05_Métodos_Especiales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Clases)](03_Clases.md) \| [Próximo (5 Métodos especiales)](05_Métodos_Especiales.md)
 
-# 8.4 Herencia***
+# 8.4 Herencia
 
 Herencia entre clases es una herramienta muy usada para escribir programas extensibles. Exploraremos esa idea en esta sección.
 
 ### Introducción
 
-Se usa herencia para crear objetos mas especializados a partir de objetos existentes.
+Se usa herencia para crear objetos más especializados a partir de objetos existentes.
 
 ```python
 class Padre:
@@ -26,7 +26,7 @@ Al usar herencia podés tomar una clase existente y ...
 * Redifinir métodos existentes
 * Agregar nuevos atributos
 
-Podés verlo como una forma de **extender** de tu codigo existente. Darle nuevos comportamientos, abarcar un abanico mas amplio de posibilidades ó aumentar su compatibilidad. 
+Podés verlo como una forma de **extender** de tu codigo existente. Darle nuevos comportamientos, abarcar un abanico más amplio de posibilidades ó aumentar su compatibilidad. 
 
 ### Ejemplo
 
@@ -149,7 +149,7 @@ class Rectangulo(FiguraGeom):
 
 Imaginate por ejemplo su uso en una jerarquía lógica, o taxonómica, en la que las clases tienen una relación natural tal que hace intuitivo derivar una de otra. 
 
-Una aplicación mas común, y tal vez mas práctica, consiste en escribir código que es reusable y/o extensible. Podríamos definir una clase base para una interfase de transferencia de datos y permitir que cada fabricante de equipo de adquisición de datos implemente los detalles de comunicación con cada interfase en particular.
+Una aplicación más común, y tal vez más práctica, consiste en escribir código que es reusable y/o extensible. Podríamos definir una clase base para una interfase de transferencia de datos y permitir que cada fabricante de equipo de adquisición de datos implemente los detalles de comunicación con cada interfase en particular.
 
 ```python
 class Procesador_de_datos(TCPHandler):
@@ -208,7 +208,7 @@ class Hijo(Madre, Padre):
     ...
 ```
 
-La clase `Hijo` hereda características de ambos padres. Algunos detalles son un poco delicados y no vamos a usar esa forma de heredar clases en este curso, aunque vas a encontrar un poco mas de información en la próxima sección.
+La clase `Hijo` hereda características de ambos padres. Algunos detalles son un poco delicados y no vamos a usar esa forma de heredar clases en este curso, aunque vas a encontrar un poco más de información en la próxima sección.
 
 
 ## Ejercicios
@@ -549,9 +549,9 @@ bash $
 
 ### Discusión
 
-El caso que vimos es un ejemplo de uno de los usos mas comunes de herencia en programación orientada a objetos: escribir programas extensibles. Un sistema puede definir una interfase mediante una superclase base, y pedirte que escribas tus propias implementaciones derivadas de esa clase. Si escribis los métodos específicos para tu caso particular podes adaptar la función de un sistema general para resolver tu problema. 
+El caso que vimos es un ejemplo de uno de los usos más comunes de herencia en programación orientada a objetos: escribir programas extensibles. Un sistema puede definir una interfase mediante una superclase base, y pedirte que escribas tus propias implementaciones derivadas de esa clase. Si escribis los métodos específicos para tu caso particular podes adaptar la función de un sistema general para resolver tu problema. 
 
-Otro concepto, un poco mas interesante, es el de crear tus propias abstracciones. En los ejercicios de esta parte definimos *nuestra propia clase* para crear variaciones en el formato de un informe.
+Otro concepto, un poco más interesante, es el de crear tus propias abstracciones. En los ejercicios de esta parte definimos *nuestra propia clase* para crear variaciones en el formato de un informe.
 
 Tal vez estés diciendo "Debería usar una biblioteca para crear formatos ya escrita por otro !". Bueno, no. Deberías usar *tanto* tu propia clase *como* una biblioteca ya escrita. El hecho de usar tu propia clase te dá flexibilidad. 
 
@@ -561,5 +561,5 @@ Dicho esto, es cierto que diseñar un programa orientado a objetos puede volvers
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Clases***)](03_Clases.md) \| [Próximo (5 Métodos especiales)](05_Métodos_Especiales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Clases)](03_Clases.md) \| [Próximo (5 Métodos especiales)](05_Métodos_Especiales.md)
 

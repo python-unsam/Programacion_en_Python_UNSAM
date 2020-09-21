@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia***)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
 
 # 8.5 Métodos especiales
 
@@ -41,7 +41,7 @@ La función `str()` se usa para crear una representación agradable de ver:
 >>>
 ```
 
-Pero para crear una representación mas agradable para programadores, se usa la función `repr()`. 
+Pero para crear una representación más agradable para programadores, se usa la función `repr()`. 
 
 ```python
 >>> repr(d)
@@ -272,5 +272,5 @@ Queremos que notes algo interesante: los datos de salida están completamente es
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia***)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
 

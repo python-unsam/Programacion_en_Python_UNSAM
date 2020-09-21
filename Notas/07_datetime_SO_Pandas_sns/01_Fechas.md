@@ -5,7 +5,7 @@
 
 ## El módulo datetime
 
-A continuación introducimos el módulo `datetime` que permite manipular adecuadamente fechas y horas. Este módulo tiene definida una clase `datetime` (sí, la clase tiene el mismo nombre que el módulo), que permite almacenar un instante temporal (fecha y hora). También tiene definida la clase `date` que  almacena sólo una fecha. Análogamente tiene la clase `time` que sólo almacena una hora. Finalmente, en esta breve introducción al módulo `datetime` mencionaremos la clase `timedelta` que permite almacenar y manipular deltas de tiempo, es decir, duraciones.
+A continuación introducimos el módulo `datetime` que permite trabajar con fechas y horas. Este módulo define un nuevo tipo de objeto: `datetime` (sí, con el mismo nombre del módulo), que permite representar un instante temporal (fecha y hora). También tiene define `date` que  para representar sólo una fecha. Análogamente tiene `time` par unicamente un horario. Finalmente, en esta breve introducción al módulo `datetime` mencionaremos el tipo `timedelta` que representa diferencias entre instantes de tiempos, es decir, duraciones y trabajar con ellos.
 
 ### Ejemplo: Obtener fecha y hora actuales
 
@@ -38,16 +38,19 @@ En Python podemos usar la función `dir()` para obtener una lista de todos los a
 
 ```python
 >>> print(dir(datetime))
-['MAXYEAR', 'MINYEAR', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_divide_and_round', 'date', 'datetime', 'datetime_CAPI', 'time', 'timedelta', 'timezone', 'tzinfo']
+['MAXYEAR', 'MINYEAR', '__builtins__', '__cached__', '__doc__', '__file__',
+ '__loader__', '__name__', '__package__', '__spec__', '_divide_and_round',
+ 'date', 'datetime', 'datetime_CAPI', 'time', 'timedelta', 'timezone', 'tzinfo']
 ```
 
 
-Las clases más usadas del módulo datetime son:
+Nos vamos a concentrar en lo más usado de `datetime`:
 
 * date
 * time
 * datetime
 * timedelta
+
 
 ## La clase datetime.date
 
@@ -62,7 +65,7 @@ Podés generar objetos de tipo fecha con la clase `date`. Un objeto de esta clas
 2019-04-13
 ```
 
-El comando `date()` de este ejemplo es un constructor de la clase `date`. Este constructor toma tres argumentos: año, mes y día.
+El comando `date()` de este ejemplo construye un objeto de tipo `date`. Este _constructor_ toma tres argumentos: año, mes y día.
 
 La variable `d` es un objeto de tipo `date` (es decir, representa una fecha).
 
@@ -70,7 +73,7 @@ También podríamos importar directamente la clase `date` del módulo `datetime`
 
 ```python
 >>> from datetime import date
->>> 
+>>>
 >>> d = date(2019, 4, 13)
 >>> print(d)
 2019-04-13
@@ -78,7 +81,7 @@ También podríamos importar directamente la clase `date` del módulo `datetime`
 
 ### Ejemplo: Obtener la fecha a partir de un timestamp
 
-En los sistemas operativos derivados de Unix (Mac OS X, Linux, etc.) un timestamp es el número de segundos transcurridos desde el primero de enero de 1970 a las 0 horas UTC hasta un determinado momento. Podés convertir un timestamp a fecha usando el método `fromtimestamp()`.
+En los sistemas operativos derivados de Unix (Mac OS X, Linux, etc.) se toma como medida de tiempo el número de segundos transcurridos desde el primero de enero de 1970 a las 0 horas UTC hasta el momento a representar. Se lo conoce como Unix timestamp. Podés convertir un timestamp a fecha usando el método `fromtimestamp()`.
 
 
 ```python
@@ -91,7 +94,7 @@ Fecha = 2012-01-10
 
 Esto es importante porque las fechas de modificación de los archivos usan timestamps por ejemplo.
 
-### Ejemplo: Imprimir el año, el mes y el día por separado.
+### Ejemplo: Obtener el año, el mes y el día por separado.
 
 Así podés obtener el año, el mes, el día y el día de la semana:
 
@@ -106,10 +109,9 @@ print('Día actual:', hoy.day)
 print('Día de la semana:', hoy.weekday()) # va de 0 a 6 empezando en lunes
 ```
 
-## datetime.time
+## La clase datetime.time
 
-Un objeto de la clase `time` representa el tiempo local. No nos vamos a meter en esta clase con los [husos horarios](https://es.wikipedia.org/wiki/Huso_horario) (conocido también como timezones), pero si vas a usar datos provistos por otros, es importante que sepas si está expresado en tu hora local, en la hora local de otro lugar o en [UTC](https://es.wikipedia.org/wiki/Tiempo_universal_coordinado).
-
+Un objeto de la clase `time` representa la hora local (de como este configurada tu computadora). No nos vamos a meter en esta clase con los [husos horarios](https://es.wikipedia.org/wiki/Huso_horario) (conocido también como timezones), pero si vas a usar datos provistos por otres, es importante que sepas si está expresado en tu hora local, en la hora local de otro lugar o en [UTC](https://es.wikipedia.org/wiki/Tiempo_universal_coordinado).
 
 ### Ejemplo: Representar la hora con un objeto `time`
 
@@ -117,7 +119,7 @@ La clase  `time` se usa para representar horarios. A continuación damos algunos
 
 ```python
 >>> from datetime import time
->>> 
+>>>
 >>> a = time()       # time(hour = 0, minute = 0, second = 0)
 >>> print('a =', a)
 a = 00:00:00
@@ -130,16 +132,15 @@ b = 11:34:56
 >>> print('c =', c)
 c = 11:34:56
 
->>> # time(hour, minute, second, microsecond)
->>> d = time(11, 34, 56, 234566)
+>>> d = time(11, 34, 56, 234566)  # time(hour, minute, second, microsecond)
 >>> print('d =', d)
 d = 11:34:56.234566
 ```
 
 
-### Ejemplo: Imprimir horas, minutos, segundos y microsegundos
+### Ejemplo: Obtener horas, minutos, segundos y micro-segundos
 
-Una vez que creaste un objeto `time`, podés imprimir sus atributos así:
+Una vez que creaste un objeto `time`, podés extraer sus atributos así:
 
 ```python
 from datetime import time
@@ -154,16 +155,16 @@ print('microsecond =', a.microsecond)
 
 Como no le pasaste ningún valor para el argumento `microsecond`, éste va a tomar el valor predeterminado, que es `0`.
 
-## datetime.datetime
+## La clase datetime.datetime
 
-Cmo ya mencionams, el módulo `datetime` tiene una clase con su mismo nombre que permite almacenar información de fecha y hora en un solo objeto.
+Como ya mencionamos, el módulo `datetime` tiene una clase con su mismo nombre que permite almacenar información de fecha y hora en un solo objeto.
 
 ### Ejemplo: Objeto datetime
 
 ```python
 >>> from datetime import datetime
 
->>> #datetime(year, month, day)
+>>> # datetime(year, month, day)
 >>> a = datetime(2020, 4, 21)
 >>> print(a)
 2020-04-21 00:00:00
@@ -174,14 +175,13 @@ Cmo ya mencionams, el módulo `datetime` tiene una clase con su mismo nombre que
 2021-04-21 06:53:31.342260
 ```
 
-Los primeros tres argumentos, `year`, `month` y `day` del constructor `datetime()` son obligatorios. Los otros tiene a 0 como valor pr omisión.
+Los primeros tres argumentos, `year`, `month` y `day` del constructor `datetime()` son obligatorios. Los otros tienen a 0 como valor por omisión.
 
-
-### Ejemplo: Imprimir año, mes, día, hora, minutos, timestamp
+### Ejemplo: Obtener año, mes, día, hora, minutos, timestamp de un datetime
 
 El siguiente código genera un objeto `datetime` con valores pasados por parámetro y luego imprime la información.
 
-En particular, muestra como convertir una fecha a timestamp. En general los timestamps son enteros y no tienen en cuenta décimas de segundos.
+En particular, muestra cómo convertir una fecha a timestamp. En general los timestamps son enteros y no tienen en cuenta las décimas de segundos.
 
 ```python
 from datetime import datetime
@@ -195,9 +195,9 @@ print('minuto =', a.minute)
 print('timestamp =', a.timestamp())
 ```
 
-## datetime.timedelta
+## La clase datetime.timedelta
 
-Un objeto `timedelta` representa una duración, es decir, la diferencia entre dos fechas o momentos.
+Un objeto `timedelta` representa una duración, es decir, la diferencia entre dos instantes de tiempo.
 
 ### Ejemplo: Diferencia entre fechas y horarios
 
@@ -219,7 +219,7 @@ Un objeto `timedelta` representa una duración, es decir, la diferencia entre do
 >>> print('tipo de t3 =', type(t3))
 tipo de t3 = <class 'datetime.timedelta'>
 
->>> print('tipo de t6 =', type(t6))  
+>>> print('tipo de t6 =', type(t6))
 tipo de t6 = <class 'datetime.timedelta'>
 ```
 
@@ -362,19 +362,23 @@ Escribí una función a la que le pasás tu fecha de nacimiento como cadena en f
 Guardá este código en el archivo `vida.py`.
 
 ### Ejercicio 7.2: Cuánto falta
+Un conocido canal Argentino tiene por costumbre anunciar la cantidad de días que faltan para la próxima primavera.
 
-Escribí un programa que calcule cuántos días faltan para fin de año.
+![Figura](./cronica.jpg)
+
+
+Escribí un programa que asista a los técnicos del canal indicándoles, al correr el programa el número que deben poner en la placa.
 
 ### Ejercicio 7.3: Fecha de reincorporación
 Si tenés una licencia por xaternidad que empieza el 26 de septiembre de 2020 y dura 200 días, ¿qué día te reincorporás al trabajo?
 
 ### Ejercicio 7.4: Días hábiles
-Escribí una función `dias_habiles(inicio, fin, feriados)` que calcule los días hábiles entre dos fechas dadas. La función debe tener como argumentos el día inicial, el día final, y una lista con las fechas correspondientes a los feriados que haya en ese lapso, y debe devolver una lista con las fechas de días hábiles del período. Las fechas de entrada y salida deben manejarse en formato de texto.
+Escribí una función `dias_habiles(inicio, fin, feriados)` que calcule los días hábiles entre dos fechas dadas. La función debe tener como argumentos el día inicial, el día final, y una lista con las fechas correspondientes a los feriados que haya en ese lapso, y debe devolver una lista con las fechas de días hábiles del período, incluyendo la fecha inicial y la fecha final indicadas. Las fechas de entrada y salida deben manejarse en formato de texto.
 
 Consideramos día hábil a un día que no es feriado ni sábado ni domingo.
 
 Probala entre hoy y el 10 de octubre, sabiendo que no hay feriados en el medio.
-Probala entre hoy y fin de año considereando los siguientes feriados:
+Probala entre hoy y fin de año considerando los siguientes feriados de Argentina:
 
 `feriados = ['12/10/2020', '23/11/2020', '7/12/2020', '8/12/2020', '25/12/2020']`
 

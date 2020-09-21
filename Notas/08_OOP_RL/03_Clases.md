@@ -1,21 +1,21 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Optativo: Regresión Lineal**)](02_OPT_RL.md) \| [Próximo (4 Herencia***)](04_Herencia.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Optativo: Regresión Lineal**)](02_OPT_RL.md) \| [Próximo (4 Herencia)](04_Herencia.md)
 
-# 8.3 Clases***
+# 8.3 Clases
 
-La programación orientada a objetos requiere un pequeño pero importante cambio en la forma de pensar la programación tradicional. Dejá decantar los conceptos nuevos mientras lees esta sección. Si acabás de leer Seaborn, hacé una pausa antes de comenzar.
+La programación orientada a objetos requiere un pequeño pero importante cambio en la forma de pensar la programación tradicional. Dejá decantar los conceptos nuevos mientras lees esta sección.
 
-En esta sección veremos la instruccción `class` y el concepto de crear nuevos objetos, su utilidad, y las ventajas de esa forma de organizar los programas.
+En esta sección veremos el concepto de clase, cómo crear nuevos objetos, su utilidad, y las ventajas de esa forma de organizar los programas.
 
-### Programación orientada a objetos (OOP)
+### Programación orientada a objetos (POO)
 
 La programación orientada a objetos es una forma de organizar el código. Así como un algoritmo suele estar asociado a una estructura de datos particular, la programación orientada a objetos "empaqueta" los datos junto con los métodos usados para tratarlos. 
 
 Cada uno de esos *objetos* consiste en 
 
-* Datos. (son atributes ó propiedades)
-* Comportamiento. ( son métodos, funciones, que actúan sobre las propiedades del objeto).
+* Datos (atributos ó propiedades de los objetos).
+* Comportamiento (son métodos de los objetos: funciones, que actúan sobre las propiedades del objeto).
 
-Ya usaste objetos durante el curso, por ejemplo, al manipular una lista.
+Ya usaste objetos durante el curso infinidad de veces. Por ejemplo, al manipular una lista.
 
 
 ```python
@@ -27,11 +27,11 @@ Ya usaste objetos durante el curso, por ejemplo, al manipular una lista.
 >>>
 ```
 
-En ese fragmento de código decimos que `nums` es una *instancia* de una lista, donde "lista" se refiere a la clase llamada "lista". Cada variable de tipo lista es una instancia de la clase lista. 
+Miremos un poco más en detalle ese fragmento de código. Decimos que `nums` es una *instancia* de un la clase *list*. Cada variable de tipo lista es una instancia de esa misma clase. 
 
-Acá usamos "instancia" con el mismo significado que "objeto". Muchas veces uno relaja la nomenclatura y dice que un objeto es una instancia de una clase, pero "objeto" también se interpreta como la clase a la cual un objeto pertenece lo que vuelve todo algo confuso. 
+Acá usamos "instancia" con el mismo significado que "objeto": un objeto es una instancia de una clase. La clase es como el tipo, el objeto es una instancia concreta, con sus valores reales.
 
-Los métodos (`append()` e `insert()`) existen asociados a la instancia (`nums`).
+Los métodos (`append()` e `insert()`) se definen cuando se define la clase, pero se usan para modificar (o acceder a) los datos de un objeto concreto (`nums` en este caso).
 
 ### La instrucción `class`
 
@@ -54,7 +54,7 @@ class Player:
 
 Muy brevemente, una clase es un conjunto de funciones que operan sobre las diversas instancias de esa clase.
 
-Puede decirse que una clase es la definición formal de las relaciones entre los datos y los metodos que los manipulan. Un objeto es una instancia particular de la clase a la cual pertenece, con datos propios pero los mismos métodos que los demás objetos de la misma clase. Este concepto va a quedar mas claro al verlo funcionar y usarlo vos misme.
+Puede decirse que una clase es la definición formal de las relaciones entre los datos y los métodos que los manipulan. Un objeto es una instancia particular de la clase a la cual pertenece, con datos propios pero los mismos métodos que los demás objetos de esa clase. Este concepto te va a quedar más claro cuando lo veas funcionar y lo uses.
 
 ### Instancias
 
@@ -68,9 +68,9 @@ Podés crear un objeto mediante un llamado a la clase como si fuera una función
 >>>
 ```
 
-`a` y `b` son instancias de `Player`, definida mas arriba. i.e. a y b son objetos de la clase `Player`.
+`a` y `b` son instancias de `Player`, definida más arriba. i.e. a y b son objetos de la clase `Player`.
 
-*Importante: La instrucción `class` es solamente la definición de una clase, no **hace** nada por sí misma. Tal como la definición de una función es sólo una definición.*
+*Importante: La instrucción `class` es solamente la definición de una clase, no **hace** nada por sí misma. Es como la definición de una función: es sólo una definición.*
 
 ### Datos de una instancia
 
@@ -89,7 +89,7 @@ Estos datos locales se inicializan, para cada instancia, durante la ejecución d
 ```python
 class Player:
     def __init__(self, x, y):
-        # Todo dato guardado en `self` es propio de esta instancia
+        # Todo dato guardado en `self` es propio de esa instancia
         self.x = x
         self.y = y
         self.health = 100
@@ -104,14 +104,14 @@ Los métodos de una instancia son los métodos y las funciones que actúan sobre
 ```python
 class Player:
     ...
-    # `mover` es un metodo
+    # `mover` es un método
     def mover(self, dx, dy):
         self.x += dx
         self.y += dy
 ```
 
 Siempre se recibe la instancia misma como primer argumento:
-"self" significa "mismo" como en "mi mismo" ó "en sí misma" es como decir "yo".
+"self" significa "mismo" como en "mi mismo" ó "en sí misma". Es como decir "yo".
 
 ```python
 >>> a.mover(1, 2)
@@ -122,7 +122,19 @@ Siempre se recibe la instancia misma como primer argumento:
 def move(self, dx, dy):
 ```
 
-Por convención siempre llamamos `self` a la instancia actual, y ésta es siempre pasada como primer argumento. En realidad el nombre real de la variable no importa, pero es una convención en Python llamar al primer argumento `self`. 
+Por convención siempre llamamos `self` a la instancia actual, y ésta es siempre pasada como primer argumento a todos los métodos. En realidad el nombre real de la variable no importa, pero es una convención en Python llamar al primer argumento `self`. 
+
+Podríamos usar `mismo`, por ejemplo, en lugar de `self` y todo va a funcionar igual, pero no repeta las convenciones de la comunidad:
+
+```python
+class Player:
+    ...
+    # `mover` es un método
+    def mover(mismo, dx, dy):
+        mismo.x += dx
+        mismo.y += dy
+```
+
 
 ### Visibilidad en clases (Scoping)
 
@@ -136,16 +148,16 @@ class Player:
         self.y += dy
 
     def izquierda(self, dist):
-        mover(-dist, 0)       # NO ! Refiere a la función global `mover`
-        self.mover(-dist, 0)  # Si. Llama al método `mover` definido arriba.
+        mover(-dist, 0)       # NO! Refiere a la función global `mover`.
+        self.mover(-dist, 0)  # Sí. Llama al método `mover` definido antes.
 ```
 
-Si necesitás manipular datos o usar funciones de una instancia, te refís a ella explícitamente (i.e. `self`), sino te estás refiriendo a otra cosa.
+Si necesitás referite a un dato o un método de una clase tenés que hacer una referencia explícita (agregando el `self`), sino te estás refiriendo a 
+otra cosa como en el ejemplo anterior.
 
 ## Ejercicios
 
-
-Si no lo tenés, vas a encontrar una versión en [los ejercios resueltos](link al repo ejercicios resueltos por docentes) . Lo podés copiar y trabajar con ése.
+Vamos a comenzar esta serie de ejercicios modificando código que escribiste en secciones anteriores. En particular retomaremos el código del \ref_ref{Arreglemos_las_existentes}. Si no tenés a mano una versión que funcione, podés bajarte y usar [esta](./ejs.zip).
 
 
 ### Ejercicio 8.1: Objetos como estructura de datos.
@@ -171,7 +183,7 @@ def costo_camion(camion):
     return camion['cajones'] * camion['precio']
 ```
 
-A medida que tu programa se hace mas grande, vas a necesitar (de nuevo) organizarlo mejor.
+A medida que tu programa se hace más grande, vas a necesitar (de nuevo) organizarlo mejor.
 
 Otra forma de representar los datos con los que estás trabajando es definir una clase. Creá un archivo llamado `cajon.py`. Definí una clase llamada `Cajon` que represente un único cajón de mercadería. Definila de modo que cada instancia de la clase `cajon` (es decir, cada objeto cajón) tenga las propiedades `nombre`, `cantidad`, y `precio`. Este es un ejemplo del comportamiento buscado:
 
@@ -278,5 +290,5 @@ Hecho ésto, deberías poder ejecutar tus funciones como antes:
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Optativo: Regresión Lineal**)](02_OPT_RL.md) \| [Próximo (4 Herencia***)](04_Herencia.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Optativo: Regresión Lineal**)](02_OPT_RL.md) \| [Próximo (4 Herencia)](04_Herencia.md)
 
