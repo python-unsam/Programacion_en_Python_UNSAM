@@ -157,17 +157,17 @@ otra cosa como en el ejemplo anterior.
 
 ## Ejercicios
 
-Vamos a comenzar esta serie de ejercicios modificando código que escribiste en secciones anteriores. En particular retomaremos el código del \ref_ref{Arreglemos_las_existentes}. Si no tenés a mano una versión que funcione, podés bajarte y usar [esta](./ejs.zip).
+Vamos a comenzar esta serie de ejercicios modificando código que escribiste en secciones anteriores. En particular retomaremos el código del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-65-arreglemos-las-funciones-existentes). Si no tenés a mano una versión que funcione, podés bajarte y usar [esta](./ejs.zip).
 
 
 ### Ejercicio 8.1: Objetos como estructura de datos.
-En las secciones 2 y 3 trabajamos con datos en forma de tuplas y diccionarios. Un cajón de frutas, por ejemplo, estaba representado por una tupla, como esta:
+Durante las primeras clases trabajamos con datos en forma de tuplas y diccionarios. Un cajón de frutas, por ejemplo, estaba representado por una tupla, como esta:
 
 ```python
 s = ('Pera',100,490.10)
 ```
 
-ó como un diccionario, de esta otra forma:
+ó por un diccionario, de esta otra forma:
 
 ```python
 s = { 'nombre'  : 'Pera',
@@ -176,14 +176,12 @@ s = { 'nombre'  : 'Pera',
 }
 ```
 
-Incluso escribimos funciones para manipular datos almacenados de ese modo:
+Incluso escribiste funciones para manipular datos almacenados de ese modo:
 
 ```python
 def costo_camion(camion):
     return camion['cajones'] * camion['precio']
 ```
-
-A medida que tu programa se hace más grande, vas a necesitar (de nuevo) organizarlo mejor.
 
 Otra forma de representar los datos con los que estás trabajando es definir una clase. Creá un archivo llamado `cajon.py`. Definí una clase llamada `Cajon` que represente un único cajón de mercadería. Definila de modo que cada instancia de la clase `cajon` (es decir, cada objeto cajón) tenga las propiedades `nombre`, `cantidad`, y `precio`. Este es un ejemplo del comportamiento buscado:
 
@@ -219,15 +217,15 @@ Vamos a crear más objetos de tipo `Cajon` para manipularlos. Por ejemplo:
 >>>
 ```
 
-Algo que merece mencionar específicamente es que la clase `Cajon` funciona como una "fábrica" para crear objetos que son instancias de esa clase. Vos la llamás como si fuera una función y ésta crea una nueva instancia de sí misma. Más aún, cada instancia es única y tiene sus propios datos que son independientes de las demás instancias de la misma clase.
+Volvemos a mencionar específicamente es que la clase `Cajon` funciona como una "fábrica" para crear objetos que son instancias de esa clase. Vos la llamás como si fuera una función y ésta crea una nueva instancia de sí misma. Más aún, cada instancia es única y tiene sus propios datos que son independientes de las demás instancias de la misma clase.
 
-Una instancia definida por una clase tiene cierta similitud con un diccionario, pero usa una sintaxis algo diferente. Por ejemplo, en lugar de escribir `c['nombre']` ó `c['precio']` en objetos escribís `c.nombre` ó `c.precio`
+Una instancia definida por una clase tiene cierta similitud con un diccionario, pero usa una sintaxis algo diferente. Por ejemplo, en lugar de escribir `c['nombre']` ó `c['precio']` en objetos escribís `c.nombre` ó `c.precio`.
 
 
 ### Ejercicio 8.2: Agregá algunos métodos
-Al definir una clase podés agregar funciones a los objetos que definís. Las funciones específicas de objetos se llaman *métodos* y operan sobre los datos guardados junto con (dentro de) cada instancia.
+Al definir una clase podés agregar funciones a los objetos que definís. Las funciones específicas de objetos se llaman *métodos* y operan sobre los datos guardados en cada instancia.
 
-Agregá los métodos `costo()` y `vender()` a tu objeto `Cajon`. Deberían dar este comportamiento:
+Agregá los métodos `precio()` y `vender()` a tu objeto `Cajon`. Deberían dar este comportamiento:
 
 ```python
 >>> import cajon
