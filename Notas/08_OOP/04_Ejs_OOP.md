@@ -13,6 +13,8 @@ Una **cola** es una estructura de datos. Se caracteriza por contener una secuenc
 
 Las colas también se llaman estructuras FIFO (del inglés First In First Out), debido a que el primer elemento en entrar a la cola será también el primero en salir. Es nombre cola se le da por su analogía con las colas del cine, el supermercado, etc.
 
+![Cola](./colas.png)
+
 Aquí abajo damos una implementación de la clase `Cola`. Usándo un par de objetos de estas clase como atributos, escribí una nueva clase llamada `TorreDeControl` que modele el trabajo de una torre de control de un aeropuerto con una pista de aterrizaje. Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. La clase debe funcionar conforme al siguiente ejemplo:
 
 ```python
