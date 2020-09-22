@@ -4,7 +4,7 @@
 
 La  biblioteca Pandas es una extensión de NumPy para manipulación y análisis de datos. En particular, ofrece estructuras de datos y operaciones para manipular tablas de datos (numéricos y de otros tipos) y series temporales. Se distribuye como software libre.
 
-Ésta es una breve introducción [Pandas](https://pandas.pydata.org/docs/getting_started/index.html). Para información más completa te recomendamos consultar [la documentación oficial](https://pandas.pydata.org/docs/user_guide/10min.html).
+Ésta es una breve introducción a [Pandas](https://pandas.pydata.org/docs/getting_started/index.html). Para información más completa, te recomendamos consultar [la documentación oficial](https://pandas.pydata.org/docs/user_guide/10min.html).
 
 Esta biblioteca tiene dos tipos de datos fundamentales: los `DataFrames` que almacenan tablas de datos y las `series` que contienen secuencias de datos.
 
@@ -38,7 +38,7 @@ Con `df.head()` podés ver las primeras líneas de datos. Si a `head` le pasás 
 ```
 
 
-Usando `df.columns` pandas te va a devolver un índice con los nombres de las columnas del DataFrame. Recordá que en la \ref_sec{desc_arboles} describimos la base de datos. A su vez, `df.index` te mostrará el índice. En este caso el índice es numérico y se corresponde con el número de la línea leida del archivo. En principio no es muy interesante para analizar cuestiones de árboles, simplemente tenemos las filas numeradas. Veremos otros ejemplos donde el índice puede contener información vital (una categoría, un timestamp,etc).
+Usando `df.columns` pandas te va a devolver un índice con los nombres de las columnas del DataFrame. Recordá que en la \ref_sec{desc_arboles} describimos la base de datos. A su vez, `df.index` te mostrará el índice. En este caso el índice es numérico y se corresponde con el número de la línea leida del archivo. En principio no es muy interesante para analizar cuestiones de árboles, simplemente tenemos las filas numeradas. Veremos otros ejemplos donde el índice puede contener información vital (una categoría, un timestamp, etc).
 
 ```python
 >>> df.columns
@@ -70,7 +70,7 @@ max       54.000000    500.000000     90.000000
 
 Una de las operaciones primitivas más importantes es la selección de fragmentos de las tablas de datos, ya sean filas, columnas o rangos de filas y columnas.
 
-Por ejemplo con `df['nombre_com']` veremos la columna (que es una serie) de nombres comunes de los árboles en la base. Podemos usar `set` para ver una vez cada nombre:
+Por ejemplo con `df['nombre_com']` veremos la columna (que es una serie) de nombres comunes de los árboles en la base. Podemos usar `unique` para ver una vez cada nombre:
 
 ```python
 >>> df['nombre_com'].unique()
@@ -186,7 +186,7 @@ sns.scatterplot(data = df_jacarandas, x = 'diametro', y = 'altura_tot')
 
 ### Filtros por índice y por posición
 
-Como ya mencionamos, `df` el índice no tiene una semántica interesante. Veamos en cambio que la serie que generamos con `cant_ejemplares = df['nombre_com'].value_counts()` sí lo tiene:
+Como ya mencionamos, el índice de `df` no tiene una semántica interesante. Veamos, en cambio, que la serie que generamos con `cant_ejemplares = df['nombre_com'].value_counts()` sí lo tiene:
 
 ```python
 >>> cant_ejemplares.index
@@ -380,12 +380,12 @@ df_walk_suav.plot()
 
 ### Guardando datos
 
-Guardar una serie o un DataFrame en el disco es algo realmente sencillo. Probá el por ejemplo el efecto del comando `df_walk_suav.to_csv('CaminataApostolica.csv')`.
+Guardar una serie o un DataFrame en el disco es algo realmente sencillo. Probá, por ejemplo, el efecto del comando `df_walk_suav.to_csv('CaminataApostolica.csv')`.
 
 ## Incorporando el Arbolado lineal
 
 ### Ejercicio 7.7: Lectura y selección
-Vamos a trabajar ahora con el archivo ['arbolado-publico-lineal-2017-2018.csv'](https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal). Descargalo y guardalo en tu ditectorio 'Data/'.
+Vamos a trabajar ahora con el archivo ['arbolado-publico-lineal-2017-2018.csv'](https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal). Descargalo y guardalo en tu directorio 'Data/'.
 
 Levantalo y armá un DataFrame `df_lineal` que tenga solamente las siguiente columnas:
 
@@ -444,7 +444,7 @@ Es más, los nombres científicos varían de un dataset al otro. 'Tipuana Tipu' 
 En este ejercicio te proponemos los siguientes pasos para comparar los diámetros a la altura del pecho de las tipas en ambos tipos de entornos. Guardá este trabajo en un archivo `arbolado_parques_veredas.py`.
 
 1. Abrí ambos dataset a los que llamaremos df_parques y df_veredas.
-2. Para cada dateset armate otro seleccionando solamente las filas correspondientes a las tipas (llamalos df_tipas_parques y df_tipas_veredas, respectivamente) y las columnas correspondientes al diametro a la altura del pecho y alturas. Hacelo como copias (usando `.copy()` como hicimos más arriba) para poder trabajar en estos nuevos dataframes sin modificar los dataframes grandes originales. Renombrá las columnas que muestran la altura y el diámetro a la altura del pecho para que se llamen igual en ambos dataframes, para ello explorá el comando [`rename`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html).
+2. Para cada dataset armate otro seleccionando solamente las filas correspondientes a las tipas (llamalos df_tipas_parques y df_tipas_veredas, respectivamente) y las columnas correspondientes al diametro a la altura del pecho y alturas. Hacelo como copias (usando `.copy()` como hicimos más arriba) para poder trabajar en estos nuevos dataframes sin modificar los dataframes grandes originales. Renombrá las columnas que muestran la altura y el diámetro a la altura del pecho para que se llamen igual en ambos dataframes, para ello explorá el comando [`rename`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html).
 3. Agregale a cada dataframe (df_tipas_parques y df_tipas_veredas) una columna llamada 'ambiente' que en un caso valga siempre 'parque' y en el otro caso 'vereda'.
 4. Juntá ambos datasets con el comando `df_tipas = pd.concat([df_tipas_veredas, df_tipas_parques])`. De esta forma tenemos en un mismo dataframe la información de las tipas  distinguidas por ambiente.
 5. Creá un boxplot para los diámetros a la altura del pecho de la tipas distinguiendo los ambientes (`boxplot('diametro_altura_pecho',by = 'ambiente')`).

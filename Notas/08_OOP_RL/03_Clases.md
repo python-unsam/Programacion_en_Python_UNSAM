@@ -38,7 +38,7 @@ Los métodos (`append()` e `insert()`) se definen cuando se define la clase, per
 Para definir un tipo nuevo de objeto, usá la instrucción `class`.
 
 ```python
-class Player:
+class Jugador:
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -63,12 +63,12 @@ Los programas manipulan instancias individuales de las clases. Cada instancia se
 Podés crear un objeto mediante un llamado a la clase como si fuera una función.
 
 ```python
->>> a = Player(2, 3)    # Clase Player definida antes
->>> b = Player(10, 20)
+>>> a = Jugador(2, 3)    # Clase Jugador definida antes
+>>> b = Jugador(10, 20)
 >>>
 ```
 
-`a` y `b` son instancias de `Player`, definida más arriba. i.e. a y b son objetos de la clase `Player`.
+`a` y `b` son instancias de `Jugador`, definida más arriba. i.e. a y b son objetos de la clase `Jugador`.
 
 *Importante: La instrucción `class` es solamente la definición de una clase, no **hace** nada por sí misma. Es como la definición de una función: es sólo una definición.*
 
@@ -87,7 +87,7 @@ Aquí pedimos ver la propiedad `x` de cada instancia:
 Estos datos locales se inicializan, para cada instancia, durante la ejecución del método `__init__()` de la clase.
 
 ```python
-class Player:
+class Jugador:
     def __init__(self, x, y):
         # Todo dato guardado en `self` es propio de esa instancia
         self.x = x
@@ -102,7 +102,7 @@ No hay restricciones en la cantidad o el tipo de datos almacenados en cada insta
 Los métodos de una instancia son los métodos y las funciones que actúan sobre los datos almacenados en esa instancia. 
 
 ```python
-class Player:
+class Jugador:
     ...
     # `mover` es un método
     def mover(self, dx, dy):
@@ -127,7 +127,7 @@ Por convención siempre llamamos `self` a la instancia actual, y ésta es siempr
 Podríamos usar `mismo`, por ejemplo, en lugar de `self` y todo va a funcionar igual, pero no repeta las convenciones de la comunidad:
 
 ```python
-class Player:
+class Jugador:
     ...
     # `mover` es un método
     def mover(mismo, dx, dy):
@@ -141,7 +141,7 @@ class Player:
 Las clases no definen ni limitan (como los módulos) un entorno de visibilidad.
 
 ```python
-class Player:
+class Jugador:
     ...
     def mover(self, dx, dy):
         self.x += dx

@@ -8,7 +8,7 @@ En esta clase introducimos el módulo `datetime` para manejar datos relacionados
 
 En la segunda mitad introducimos el módulo Pandas y el tipo `DataFrame` así como algunos de sus métodos elementales. Terminaremos realizando algunos plots sencillos desde Pandas.
 
-No te marées, son 3 módulos (o bibliotecas) muy diferentes y populares de Python.
+No te marees, son 3 módulos (o bibliotecas) muy diferentes y populares de Python.
 
 Además, hacia el final proponemos un ejercicio de análisis de datos de mareas en el Río de la Plata usando la transformada de Fourier.
 

@@ -107,7 +107,7 @@ Esto se debe a que las ondas de marea vienen del océano atlántico y se propaga
 pasando primero por Buenos Aires y llegando luego, con retraso, a San Fernando. En ciertas condiciones esta onda de mareas puede llegar a la ciudad de Rosario, aunque se va atenuando en su viaje desde el atlántico.
 * Finalmente, hay una marcada diferencia entre la altura registrada en San Fernando y la de Buenos Aires. Esto se debe a que las dos escalas, a partir de las que se registran los datos, tienen ceros que no están nivelados.
 
-En este práctico nos proponemos estudiar la propagación de esta *onda de marea* que es generada por la atracción gravitacional que ejercen la luna y el sol sobre el agua. Vamos a usar una transformada de Fourier que nos permite estudiar las frecuencias predominantes en la serie de alturas. Las mareas se verán claramente porque estos efectos astronómicos son regulares y tienen frecuencias invantiantes.
+En este práctico nos proponemos estudiar la propagación de esta *onda de marea* que es generada por la atracción gravitacional que ejercen la luna y el sol sobre el agua. Vamos a usar una transformada de Fourier que nos permite estudiar las frecuencias predominantes en la serie de alturas. Las mareas se verán claramente porque estos efectos astronómicos son regulares y tienen frecuencias invariantes.
 
 ## Vientos y ondas de tormenta en el Río de la Plata
 
@@ -160,7 +160,7 @@ Guardá tu código en el archivo `mareas_a_mano.py` para entregar.
 
 ## Parte optativa
 
-En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. Para una onda sinusoidal, el desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una contante aditiva. Vamos a descomponer la serie de alturas observadas del agua por medio de la transformada de Fourier. 
+En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. Para una onda sinusoidal, el desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplente una constante aditiva. Vamos a descomponer la serie de alturas observadas del agua por medio de la transformada de Fourier. 
 
 **Lo que sigue es optativo**.
 
@@ -180,9 +180,9 @@ La fase (o desplazamiento del máximo respecto del origen de las coordenadas), s
 
 <img src="./phase_shift.png" width="300">
 
-Aquí, la variable tita representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo). Esta *fase* suele medirse en radianes, correspondiendo 2*pi a un ciclo completo de desfazaje.
+Aquí, la variable tita representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo). Esta *fase* suele medirse en radianes, correspondiendo 2*pi a un ciclo completo de desfasaje.
 
-Vamos a aplicar estas herramientas al análisis de la propagación de la onda de marea por el estuario del plata. La onda de marea se genera por
+Vamos a aplicar estas herramientas al análisis de la propagación de la onda de marea por el estuario del plata.
 
 
 ### Preparación de módulos y datos
@@ -216,7 +216,7 @@ def calcular_fft(y,freq_sampleo=24.):
     return freq, tran
 ```
 
-Al querer analizar una onda por medio de su transformada de Fourier, es usual quitarle si tuviera una tendencia linel usando, por ejemplo, la función `scipy.signal.detrend()`. En este caso supondremos que la marea media de mantuvo estable a lo largo del período de estudio.
+Al querer analizar una onda por medio de su transformada de Fourier, es usual quitarle si tuviera una tendencia linel usando, por ejemplo, la función `scipy.signal.detrend()`. En este caso supondremos que la marea media se mantuvo estable a lo largo del período de estudio.
 
 <img src="./detrend.png" width="300">
 
@@ -231,7 +231,7 @@ freqSF, fftSF = calcular_fft(HSF)
 
 Si quisiéramos graficar `freqSF` contra `fftSF` no podríamos ver mucho ya que `fftSF` contiene números complejos.
 
-La potencia (o amplitud) para cada frecuencia se calcula como el módulo del número complejo correspondiente (para la frecuencia `freqSF[i]` la potencia es `abs(fftSF[i])`). Al graficar esto podemos ver la amplitud de los sinusoides para cada frecuencia. Este gráfico se llama el *espectro de potencias* de la onda original. 
+La potencia (o amplitud) para cada frecuencia se calcula como el módulo del número complejo correspondiente (para la frecuencia `freqSF[i]` y la potencia es `abs(fftSF[i])`). Al graficar esto podemos ver la amplitud de los sinusoides para cada frecuencia. Este gráfico se llama el *espectro de potencias* de la onda original. 
 
 ```python
 plt.plot(freqSF, np.abs(fftSF))
@@ -278,9 +278,10 @@ plt.xlabel("Frecuencia")
 plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
-#me quedo solo con el último pico
+# me quedo solo con el último pico
 picoSF = signal.find_peaks(np.abs(fftSF), prominence=8)[0][-1]
-#se grafican los picos como circulitos rojos
+# es el pico a analizar, el de la onda de mareas
+# marco ese pico con un circulito rojo
 plt.scatter(freqSF[picoSF], np.abs(fftSF)[picoSF], facecolor='r')
 plt.show()
 ```
@@ -301,13 +302,14 @@ Para calcular la fase (entre -pi y pi) de la componente 350ava en el puerto de S
 1.4849
 ```
 
-Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfazaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freqSF[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de 
+Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfazaje de un ciclo completo de la curva. Nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freqSF[picoSF]~1.93). Un ciclo completo de esta curva (2*pi) corresponde a 24/1.93 horas ~ 12.44 horas (un ciclo de poco más de medio dío, diremos _semidiurno_). Por lo tanto es inmediato que la fase obtenida con angSF corresponde a un desfazaje de 
 
 ```python
->>> angSF*12/np.pi/freqSF[350]
+>>> angSF * 24 / (2*np.pi*freqSF[350])
 2.93
 ```
-poco menos de 3hs respecto al seno que comienza a medianoche.
+
+Es decir, este sinusoide está desfazado poco menos de 3hs respecto al seno _neutro_.
 
 ### Espectro de potencia y de ángulos para Buenos Aires
 
@@ -338,29 +340,33 @@ Si buscamos la constante alrededor de la que oscilan las mareas según el nivel 
 
 Con este resultado es sencillo obtener una estimación para la diferencia de de alturas de los ceros de escala entre ambos puertos.
 
-Por otra parte, observamos que el espectro de potencia y sus picos son súmamente similares.
+_Pregunta:_ ¿Cuál es la diferencia así obtenida? ¿De qué otra forma se puede estimar el valor medio de un puerto? ¿Cuánto da la diferencia con este otro método?
+
+Por otra parte, si observamos que el espectro de potencia vemos que los picos en ambos puertos son súmamente similares.
 
 ```python
 >>> print(signal.find_peaks(np.abs(fftBA), prominence=8))
 (array([350]), {'prominences': array([12.67228046]), 'left_bases': array([279]), 'right_bases': array([1000])})
 ```
 
-Las mareas de Buenos Aires tiene una componente de máxima amplitud en la misma frecuencia y con una magnitud de 12.67 (bastante similar a la amplitud de San Fernando). Resta estudiar la fase de la curva en estas frecuencias para poder determinar con precisión la diferencia de fase entre ambos puertos. Primero calculamos el ángulo de la componente correspondiente y luego lo convertimos en horas:
+Las mareas de Buenos Aires tiene una componente de máxima amplitud en la  frecuencia 1.93 (misma que San Fernando) y con una magnitud de 12.67 (bastante similar a la magnitud correspondiente en San Fernando). Resta estudiar la fase de la curva `HBA` en esta frecuencia para poder determinar con precisión la diferencia de fase entre ambos puertos para ondas de marea. Primero calculamos el ángulo de la componente correspondiente y luego lo convertimos en horas usando el factor `ang2h`:
 
 ```python
 >>> angBA = np.angle(fftBA)[picoBA]
 >>> print(angBA)
 1.96
->>> angBA*12/np.pi/freqBA[350]
+>>> freq = freqBA[picoBA]
+>>> ang2h = 24 / (2*np.pi*freq)
+>>> angBA * ang2h
 3.8786004708135566
 ```
 
 Por lo tanto, el retardo de la onda de mareas puede calcularse usando
 ```python
-angBA*12/np.pi/freqBA[350]-angSF*12/np.pi/freqSF[350]
+(angBA - angSF) * ang2h
 ```
 
-### Ejercicio 7.11: Desfazajes
+### Ejercicio 7.11: Desfasajes
 ¿A cuántos minutos corresponde aproximadamente el tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
 Estimá la diferencia en los ceros de escala de ambos puertos. Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.10](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-710) (vas a tener que redondear a horas enteras el delay temporal).
 

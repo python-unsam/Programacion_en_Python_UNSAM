@@ -123,7 +123,7 @@ class Lote:
 class MiLote(Lote):
     def __init__(self, nombre, cajones, precio, factor):
         # Fijate como es el llamado a `super().__init__()`
-        super().__init__(name, cajones, precio)
+        super().__init__(nombre, cajones, precio)
         self.factor = factor
 
     def cost(self):
@@ -216,17 +216,15 @@ El concepto de herencia es especialmente útil cuando uno está escribiendo cód
 
 Para verlo mejor volvamos a la función `imprimir_informe()` del [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones) , parte del programa `informe.py`.  Tenía más o menos este aspecto:
 
-[oski]: # (Necesitamos darle una pasada a todo el texto y homogeneizar "name, cajones, precio, change")
-
 ```python
-def imprimir_informe(informedata):
+def imprimir_informe(data_informe):
     '''
     Imprime una tabla prolija desde una lista de tuplas con (nombre, cajones, precio, diferencia) 
     '''
-    headers = ('Nombre','Cantidad','Precio','Diferencia')
+    headers = ('Nombre','Cajones','Precio','Cambio')
     print('%10s %10s %10s %10s' % headers)
     print(('-'*10 + ' ')*len(headers))
-    for row in informedata:
+    for row in data_informe:
         print('%10s %10d %10.2f %10.2f' % row)
 ```
 
@@ -235,7 +233,7 @@ Al ejecutar tu programa `imprimir_informe()` la salida es algo parecido a esto:
 ```python
 >>> import informe
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
-   Nombre    Cajones     Precio     Cambio
+    Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
       Lima        100      $32.2       8.02
    Naranja         50      $91.1      15.18
@@ -246,7 +244,7 @@ Al ejecutar tu programa `imprimir_informe()` la salida es algo parecido a esto:
    Naranja        100     $70.44      35.84
 ```
 
-### Ejercicio 8.5: Un problema en extensión
+### Ejercicio 8.5: Un problema de extensibilidad
 Imaginá que necesitás que la función `imprimir_informe()` pueda exportar el informe en una variedad de formatos. Texto simple, HTML, CSV ó XML. Podrías escribir una función enorme que resuelva todos los casos, pero resultaría en código repetido, y difícil de mantener. Esta es una oportunidad perfecta para usar herencia de objetos.
 
 Vamos a enfocarnos en los pasos necesarios para crear una tabla. 
@@ -278,18 +276,18 @@ Ahora es necesario modificar la función `imprimir_informe` para que acepte como
 # informe.py
 ...
 
-def print_informe(informedata, formatter):
+def print_informe(data_informe, formateador):
     '''
     Imprime una tabla prolija desde una lista de tuplas con (nombre, cajones, precio, diferencia) 
     '''
-    formatter.headings(['Nombre','Cantidad','Precio','Diferencia'])
-    for name, cajones, precio, diferencia in informedata:
-        rowdata = [ name, str(cajones), f'{precio:0.2f}', f'{diferencia:0.2f}' ]
-        formatter.row(rowdata)
+    formateador.headings(['Nombre','Cantidad','Precio','Diferencia'])
+    for nombre, cajones, precio, diferencia in data_informe:
+        rowdata = [ nombre, str(cajones), f'{precio:0.2f}', f'{diferencia:0.2f}' ]
+        formateador.row(rowdata)
 ```
 
 Como agregaste un argumento a `imprimir_informe()`, hay que modificar  también `informe_camion()`. Cambialo para que cree un objeto `
-tableformatter` de este modo:
+tableformateador` de este modo:
 
 ```python
 # informe.py
@@ -309,8 +307,8 @@ def informe_camion(camionfile, preciofile):
     informe = make_informe_data(camion, precios)
 
     # Generar informe
-    formatter = tableformat.TableFormatter()
-    print_informe(informe, formatter)
+    formateador = tableformat.TableFormatter()
+    print_informe(informe, formateador)
 ```
 
 Ejecutá ese código:
@@ -364,8 +362,8 @@ def informe_camion(camionfile, preciofile):
     informe = make_informe_data(camion, precios)
 
     # Imprimir
-    formatter = tableformat.TextTableFormatter()
-    print_informe(informe, formatter)
+    formateador = tableformat.TextTableFormatter()
+    print_informe(informe, formateador)
 ```
 
 Este código debería dar la misma salida que antes:
@@ -417,8 +415,8 @@ def informe_camion(camionfile, preciofile):
     informe = make_informe_data(camion, precios)
 
     # Imprimir
-    formatter = tableformat.CSVTableFormatter()
-    print_informe(informe, formatter)
+    formateador = tableformat.CSVTableFormatter()
+    print_informe(informe, formateador)
 ```
 
 Ahora la salida debería tener este aspecto:
@@ -457,7 +455,7 @@ Una de las grandes ventajas de la programación orientada a objetos es que podé
 
 Si escribiste un programa diseñado para usar un objeto de la clase `FormatoTabla`, va a funcionar sin importar *que* objeto de esa clase uses. A este comportamiento particular, y la capacidad de usar la misma interfase con diferentes objetos de la misma clase, haciendo que el programa como un todo se porte distinto se lo llama polimorfismo.
 
-Un problema potencial de usar polimorfismo en tus programas es diseñar un buen método para que el usuario final pueda decidir que objeto usar. No podés pedirle que reprograme tu código y cambie objetos o hablarle de los objetos por su nombre real, sería poco práctico. Lo que uno suele hacer es usar un `if` y permitir que el programa use diferentes objetos en base a decisiones del usuario, algo como esto:
+Un problema potencial de usar polimorfismo en tus programas es diseñar un buen método para que el usuario final pueda decidir qué objeto usar. No podés pedirle que reprograme tu código y cambie objetos o hablarle de los objetos por su nombre real, sería poco práctico. Lo que uno suele hacer es usar un `if` y permitir que el programa use diferentes objetos en base a decisiones del usuario, algo como esto:
 
 ```python
 def informe_camion(camionfile, preciofile, fmt='txt'):
@@ -473,24 +471,24 @@ def informe_camion(camionfile, preciofile, fmt='txt'):
 
     # Print it out
     if fmt == 'txt':
-        formatter = tableformat.TextTableFormatter()
+        formateador = tableformat.TextTableFormatter()
     elif fmt == 'csv':
-        formatter = tableformat.CSVTableFormatter()
+        formateador = tableformat.CSVTableFormatter()
     elif fmt == 'html':
-        formatter = tableformat.HTMLTableFormatter()
+        formateador = tableformat.HTMLTableFormatter()
     else:
         raise RuntimeError(f'Unknown format {fmt}')
-    print_informe(informe, formatter)
+    print_informe(informe, formateador)
 ```
 
-In this code, the user specifies a simplified name such as `'txt'` or
+In this code, the user specifies a simplified nombre such as `'txt'` or
 `'csv'` to pick a format.  However, is putting a big `if`-statement in
 the `informe_camion()` function like that the best idea?  It might
 be better to move that code to a general purpose function somewhere
 else.
 
-In the `tableformat.py` file, add a function `create_formatter(name)`
-that allows a user to create a formatter given an output name such as
+In the `tableformat.py` file, add a function `create_formateador(nombre)`
+that allows a user to create a formateador given an output nombre such as
 `'txt'`, `'csv'`, or `'html'`.  Modify `informe_camion()` so that it
 looks like this:
 
@@ -507,8 +505,8 @@ def informe_camion(camionfile, preciofile, fmt='txt'):
     informe = make_informe_data(camion, precios)
 
     # Imprimir
-    formatter = tableformat.create_formatter(fmt)
-    print_informe(informe, formatter)
+    formateador = tableformat.create_formateador(fmt)
+    print_informe(informe, formateador)
 ```
 
 Acordate de testear todas las ramas posibles del código para asegurarte de que está funcionando. Llamalo y pedile crear salidas en todos los formatos (podés ver el HTML con un webbrowser).
