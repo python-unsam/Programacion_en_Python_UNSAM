@@ -33,34 +33,33 @@ Podés verlo como una forma de **extender** de tu codigo existente. Darle nuevos
 Suponé que partís de la siguiente clase:
 
 ```python
-class Cajon:
-    def __init__(self, nombre, cantidad, precio):
+class Lote:
+    def __init__(self, nombre, cajones, precio):
         self.nombre = nombre
-        self.cantidad = cantidad
+        self.cajones = cajones
         self.precio = precio
 
-    def cost(self):
-        return self.cantidad * self.precio
+    def costo(self):
+        return self.cajones * self.precio
 
-    def sell(self, ncajones):
-        self.cantidad -= ncajones
+    def vender(self, ncajones):
+        self.cajones -= ncajones
 ```
-[oski] : # (si Cajon representa un unico cajon, ncajones tiene que ser n;umero de unidades de fruta vendida. )
 
 Podés modificar lo que necesites mediante herencia.
 
 ### Agregar un método nuevo
 
 ```python
-class MiCajon(Cajon):
+class MiLote(Lote):
     def rematar(self):
-        self.sell(self.cantidad)
+        self.vender(self.cajones)
 ```
 
 Se puede usar así:
 
 ```python
->>> c = MiCajon('Pera', 100, 490.1)
+>>> c = MiLote('Pera', 100, 490.1)
 >>> c.vender(25)
 >>> c.cajones
 75
@@ -73,15 +72,15 @@ Se puede usar así:
 ### Redefinir un método existente
 
 ```python
-class MiCajon(Cajon):
+class MiLote(Lote):
     def precio(self):
-        return 1.25 * self.cantidad * self.precio
+        return 1.25 * self.cajones * self.precio
 ```
 
 Un ejemplo de uso:
 
 ```python
->>> c = MiCajon('Pera', 100, 490.1)
+>>> c = MiLote('Pera', 100, 490.1)
 >>> c.precio()
 61262.5
 >>>
@@ -95,13 +94,13 @@ El método nuevo simplemente reemplaza al definido en la clase base. Los demás 
 Hay veces en que una clase extiende el método de la superclase a la que pertenece, pero necesita ejecutar el método original como parte de la redefinición del método nuevo. Para referirte a la superclase, usá `super()`:
 
 ```python
-class Cajon:
+class Lote:
     ...
     def costo(self):
-        return self.cantidad * self.precio
+        return self.cajones * self.precio
     ...
 
-class MiCajon(Cajon):
+class MiLote(Lote):
     def precio(self):
         # Fijate como usamos `super`
         precio_actualizado = super().costo()
@@ -115,14 +114,14 @@ Usá `super()` para llamar al método de la clase base.
 Al crear cada instancia se ejecuta `__init__`. Ahí reside el código importante para la creación de una instancia nueva. Si redefinís `__init__` siempre incluí un llamado al método `__init__` de la clase base para inicializarla también.
 
 ```python
-class Cajon:
-    def __init__(self, nombre, cantidad, precio):
+class Lote:
+    def __init__(self, nombre, cajones, precio):
         self.nombre = nombre
-        self.cantidad = cantidad
+        self.cajones = cajones
         self.precio = precio
 
-class MiCajon(Cajon):
-    def __init__(self, nombre, cantidad, precio, factor):
+class MiLote(Lote):
+    def __init__(self, nombre, cajones, precio, factor):
         # Fijate como es el llamado a `super().__init__()`
         super().__init__(name, cajones, precio)
         self.factor = factor
@@ -222,7 +221,7 @@ Para verlo mejor volvamos a la función `imprimir_informe()` del [Ejercicio 5.1]
 ```python
 def imprimir_informe(informedata):
     '''
-    Imprime una tabla prolija desde una lista de tuplas con (nombre, cantidad, precio, diferencia) 
+    Imprime una tabla prolija desde una lista de tuplas con (nombre, cajones, precio, diferencia) 
     '''
     headers = ('Nombre','Cantidad','Precio','Diferencia')
     print('%10s %10s %10s %10s' % headers)
@@ -236,20 +235,18 @@ Al ejecutar tu programa `imprimir_informe()` la salida es algo parecido a esto:
 ```python
 >>> import informe
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
-      Name    Cajones     Precio Diferencia
----------- ---------- ---------- ----------
-      Lima        100       9.22     -22.98
-   Naranja         50     106.28      15.18
-     Caqui        150      35.46     -47.98
- Mandarina        200      20.89     -30.34
-   Durazno         95      13.48     -26.89
- Mandarina         50      20.89     -44.21
-   Naranja        100     106.28      35.84
+   Nombre    Cajones     Precio     Cambio
+ ---------- ---------- ---------- ----------
+      Lima        100      $32.2       8.02
+   Naranja         50      $91.1      15.18
+     Caqui        150    $103.44       2.02
+ Mandarina        200     $51.23      29.66
+   Durazno         95     $40.37      33.11
+ Mandarina         50      $65.1      15.79
+   Naranja        100     $70.44      35.84
 ```
 
-[oski]: # (no me gusta esta traducción : extensibility --> extenbsibilidad, pero no encuentro otra)
-
-### Ejercicio 8.5: Un problema en extensibilidad
+### Ejercicio 8.5: Un problema en extensión
 Imaginá que necesitás que la función `imprimir_informe()` pueda exportar el informe en una variedad de formatos. Texto simple, HTML, CSV ó XML. Podrías escribir una función enorme que resuelva todos los casos, pero resultaría en código repetido, y difícil de mantener. Esta es una oportunidad perfecta para usar herencia de objetos.
 
 Vamos a enfocarnos en los pasos necesarios para crear una tabla. 
@@ -283,11 +280,11 @@ Ahora es necesario modificar la función `imprimir_informe` para que acepte como
 
 def print_informe(informedata, formatter):
     '''
-    Imprime una tabla prolija desde una lista de tuplas con (nombre, cantidad, precio, diferencia) 
+    Imprime una tabla prolija desde una lista de tuplas con (nombre, cajones, precio, diferencia) 
     '''
     formatter.headings(['Nombre','Cantidad','Precio','Diferencia'])
-    for name, cantidad, precio, diferencia in informedata:
-        rowdata = [ name, str(cantidad), f'{precio:0.2f}', f'{diferencia:0.2f}' ]
+    for name, cajones, precio, diferencia in informedata:
+        rowdata = [ name, str(cajones), f'{precio:0.2f}', f'{diferencia:0.2f}' ]
         formatter.row(rowdata)
 ```
 
@@ -431,13 +428,13 @@ Ahora la salida debería tener este aspecto:
 >>> import informe
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
 Nombre,Cantidad,Precio,Diferencia
-Lima,100,9.22,-22.98
-Naranja,50,106.28,15.18
-Caqui,150,35.46,-47.98
-Mandarina,200,20.89,-30.34
-Durazno,95,13.48,-26.89
-Mandarina,50,20.89,-44.21
-Naranja,100,106.28,35.84
+Lima,100,32.2,8.02
+Naranja,50,91.1,15.18
+Caqui,150,103.44,2.02
+Mandarina,200,51.23,29.66
+Durazno,95,40.37,33.11
+Mandarina,50,65.1,15.79
+Naranja,100,70.44,35.84
 ```
 
 Usando las mismas ideas creá un objeto llamado `FormatoTablaHTML` que produzca un tabla de la siguiente forma:
@@ -537,7 +534,7 @@ Modificá el prgrama principal y usá `sys.argv()` para poder pedirle un formato
 
 ```bash
 bash $ python3 informe.py Data/camion.csv Data/precios.csv csv
-Name,Cajons,Price,Change
+Name,Cajones,Precio,Cambio
 Lima,100,9.22,-22.98
 Naranja,50,106.28,15.18
 Caqui,150,35.46,-47.98

@@ -157,7 +157,7 @@ otra cosa como en el ejemplo anterior.
 
 ## Ejercicios
 
-Vamos a comenzar esta serie de ejercicios modificando código que escribiste en secciones anteriores. En particular retomaremos el código del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-65-arreglemos-las-funciones-existentes). Si no tenés a mano una versión que funcione, podés bajarte y usar [esta](./ejs.zip).
+Vamos a comenzar esta serie de ejercicios modificando código que escribiste en antes del parcial. En particular retomaremos el código del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-65-arreglemos-las-funciones-existentes). [Acá](./ejs.zip) te dejamos una versión funcionando que podés mirar y/o usar. Tiene cosas interesantes, aunque tengas el tuyo funcionando si querés pegale una mirada. 
 
 
 ### Ejercicio 8.1: Objetos como estructura de datos.
@@ -179,45 +179,45 @@ s = { 'nombre'  : 'Pera',
 Incluso escribiste funciones para manipular datos almacenados de ese modo:
 
 ```python
-def costo_camion(camion):
-    return camion['cajones'] * camion['precio']
+def costo(registro):
+    return registro['cajones'] * registro['precio']
 ```
 
-Otra forma de representar los datos con los que estás trabajando es definir una clase. Creá un archivo llamado `cajon.py`. Definí una clase llamada `Cajon` que represente un único cajón de mercadería. Definila de modo que cada instancia de la clase `cajon` (es decir, cada objeto cajón) tenga las propiedades `nombre`, `cantidad`, y `precio`. Este es un ejemplo del comportamiento buscado:
+Otra forma de representar los datos con los que estás trabajando es definir una clase. Creá un archivo llamado `lote.py` y adentro definí una clase llamada `Lote` que represente un lote de cajones de una misma fruta. Definila de modo que cada instancia de la clase `Lote` (es decir, cada objeto cajón) tenga las propiedades `nombre`, `cajones`, y `precio`. Este es un ejemplo del comportamiento buscado:
 
 
 ```python
->>> import cajon
->>> a = cajon.Cajon('Pera',100,490.10)
+>>> import lote
+>>> a = lote.Lote('Pera',100,490.10)
 >>> a.nombre
 'Pera'
->>> a.cantidad
+>>> a.cajones
 100
 >>> a.precio
 490.1
 >>>
 ```
 
-Vamos a crear más objetos de tipo `Cajon` para manipularlos. Por ejemplo:
+Vamos a crear más objetos de tipo `Lote` para manipularlos. Por ejemplo:
 
 ```python
->>> b = cajon.Cajon('Manzana', 50, 122.34)
->>> c = cajon.Cajon('Naranja', 75, 91.75)
+>>> b = lote.Lote('Manzana', 50, 122.34)
+>>> c = lote.Lote('Naranja', 75, 91.75)
 >>> b.cajones * b.precio
 6117.0
 >>> c.cajones * c.precio
 6881.25
->>> cajones = [a, b, c]
->>> cajones
-[<cajon.Cajon object at 0x37d0b0>, <cajon.Cajon object at 0x37d110>, <cajon.Cajon object at 0x37d050>]
->>> for c in cajones:
-     print(f'{c.nombre:>10s} {c.cantidad:>10d} {c.precio:>10.2f}')
+>>> lotes = [a, b, c]
+>>> lotes
+[<lote.Lote object at 0x37d0b0>, <lote.Lote object at 0x37d110>, <lote.Lote object at 0x37d050>]
+>>> for c in lotes:
+     print(f'{c.nombre:>10s} {c.cajones:>10d} {c.precio:>10.2f}')
 
 ... mirá el resultado ...
 >>>
 ```
 
-Volvemos a mencionar específicamente es que la clase `Cajon` funciona como una "fábrica" para crear objetos que son instancias de esa clase. Vos la llamás como si fuera una función y ésta crea una nueva instancia de sí misma. Más aún, cada instancia es única y tiene sus propios datos que son independientes de las demás instancias de la misma clase.
+Volvemos a mencionar específicamente es que la clase `Lote` funciona como una "fábrica" para crear objetos que son instancias de esa clase. Vos la llamás como si fuera una función y ésta crea una nueva instancia de sí misma. Más aún, cada instancia es única y tiene sus propios datos que son independientes de las demás instancias de la misma clase.
 
 Una instancia definida por una clase tiene cierta similitud con un diccionario, pero usa una sintaxis algo diferente. Por ejemplo, en lugar de escribir `c['nombre']` ó `c['precio']` en objetos escribís `c.nombre` ó `c.precio`.
 
@@ -225,17 +225,17 @@ Una instancia definida por una clase tiene cierta similitud con un diccionario, 
 ### Ejercicio 8.2: Agregá algunos métodos
 Al definir una clase podés agregar funciones a los objetos que definís. Las funciones específicas de objetos se llaman *métodos* y operan sobre los datos guardados en cada instancia.
 
-Agregá los métodos `precio()` y `vender()` a tu objeto `Cajon`. Deberían dar este comportamiento:
+Agregá los métodos `precio()` y `vender()` a tu objeto `Lote`. Deberían dar este comportamiento:
 
 ```python
->>> import cajon
->>> s = cajon.Cajon('Pera', 100, 490.10)
+>>> import lote
+>>> s = lote.Lote('Pera', 100, 490.10)
 >>> s.precio()
 49010.0
->>> s.cantidad
+>>> s.cajones
 100
 >>> s.vender(25)
->>> s.cantidad
+>>> s.cajones
 75
 >>> s.precio()
 36757.5
@@ -243,27 +243,27 @@ Agregá los métodos `precio()` y `vender()` a tu objeto `Cajon`. Deberían dar 
 ```
 
 ### Ejercicio 8.3: Lista de instancias
-Seguí estos pasos para crear una lista de las instancias de `Cajon` (una lista de objetos `Cajon`) a partir de una lista de diccionarios. Luego calculá el precio total de todas esas instancias.
+Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista de objetos `Lote`) a partir de una lista de diccionarios. Luego calculá el precio total de todas esas instancias.
 
 ```python
 >>> import fileparse
 >>> with open('Data/camion.csv') as lineas:
 ...     portdicts = fileparse.parse_csv(lineas, select=['name','cajones','precio'], types=[str,int,float])
 ...
->>> camion = [ cajon.Cajon(d['nombre'], d['cantidad'], d['precio']) for d in portdicts]
+>>> camion = [ lote.Lote(d['nombre'], d['cajones'], d['precio']) for d in portdicts]
 >>> camion
-[<cajon.Cajon object at 0x10c9e2128>, <cajon.Cajon object at 0x10c9e2048>, <cajon.Cajon object at 0x10c9e2080>,
- <cajon.Cajon object at 0x10c9e25f8>, <cajon.Cajon object at 0x10c9e2630>, <cajon.Cajon object at 0x10ca6f748>,
- <cajon.Cajon object at 0x10ca6f7b8>]
+[<lote.Lote object at 0x10c9e2128>, <lote.Lote object at 0x10c9e2048>, <lote.Lote object at 0x10c9e2080>,
+ <lote.Lote object at 0x10c9e25f8>, <lote.Lote object at 0x10c9e2630>, <lote.Lote object at 0x10ca6f748>,
+ <lote.Lote object at 0x10ca6f7b8>]
 >>> sum([c.precio() for c in camion])
 47671.15
 >>>
 ```
 
 ### Ejercicio 8.4: Usá tu clase
-Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Cajon` como mostramos recién en el [Ejercicio 8.3](../08_OOP_RL/03_Clases.md#ejercicio-83-lista-de-instancias).
+Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Lote` como mostramos recién en el [Ejercicio 8.3](../08_OOP_RL/03_Clases.md#ejercicio-83-lista-de-instancias).
 
-Cuando hayas hecho éso, cambiá un poco el código en `informe.py` y en  `costo_camion.py` de modo que funcionen con objetos `Cajon` (instancias de la clase `Cajon` en lugar de diccionarios.
+Cuando hayas hecho éso, cambiá un poco el código en `informe.py` y en  `costo_camion.py` de modo que funcionen con objetos `Lote` (instancias de la clase `Lote` en lugar de diccionarios.
 
 Ayuda: No deberían ser cambios importantes, Las referencias a diccionarios ahora tienen que hacer referencia a objetos (`c['cajones']` cambia a `c.cajones`).
 
@@ -275,16 +275,15 @@ Hecho ésto, deberías poder ejecutar tus funciones como antes:
 47671.15
 >>> import informe
 >>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
-      Name     Cajons      Price     Change
----------- ---------- ---------- ----------
-      Lima        100       9.22     -22.98
-   Naranja         50     106.28      15.18
-     Caqui        150      35.46     -47.98
- Mandarina        200      20.89     -30.34
-   Durazno         95      13.48     -26.89
- Mandarina         50      20.89     -44.21
-   Naranja        100     106.28      35.84
->>>
+   Nombre    Cajones     Precio     Cambio
+ ---------- ---------- ---------- ----------
+      Lima        100      $32.2       8.02
+   Naranja         50      $91.1      15.18
+     Caqui        150    $103.44       2.02
+ Mandarina        200     $51.23      29.66
+   Durazno         95     $40.37      33.11
+ Mandarina         50      $65.1      15.79
+   Naranja        100     $70.44      35.84
 ```
 
 
