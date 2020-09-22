@@ -12,8 +12,8 @@ La programación orientada a objetos es una forma de organizar el código. Así 
 
 Cada uno de esos *objetos* consiste en 
 
-* Datos (atributos ó propiedades de los objetos).
-* Comportamiento (son métodos de los objetos: funciones, que actúan sobre las propiedades del objeto).
+* Datos (atributos de los objetos).
+* Comportamiento (son métodos de los objetos: funciones, que actúan sobre los atributos del objeto).
 
 Ya usaste objetos durante el curso infinidad de veces. Por ejemplo, al manipular una lista.
 
@@ -75,7 +75,7 @@ Podés crear un objeto mediante un llamado a la clase como si fuera una función
 ### Datos de una instancia
 
 Cada instancia tiene sus propios datos locales. 
-Aquí pedimos ver la propiedad `x` de cada instancia:
+Aquí pedimos ver el atributos `x` de cada instancia:
 
 ```python
 >>> a.x
@@ -95,7 +95,7 @@ class Jugador:
         self.health = 100
 ```
 
-No hay restricciones en la cantidad o el tipo de datos almacenados en cada instancia, ni sobre el número de propiedades que ésta pueda tener.
+No hay restricciones en la cantidad o el tipo de datos almacenados en cada instancia, ni sobre el número de atributos que ésta pueda tener.
 
 ### Métodos de una instancia.
 
@@ -183,7 +183,7 @@ def costo(registro):
     return registro['cajones'] * registro['precio']
 ```
 
-Otra forma de representar los datos con los que estás trabajando es definir una clase. Creá un archivo llamado `lote.py` y adentro definí una clase llamada `Lote` que represente un lote de cajones de una misma fruta. Definila de modo que cada instancia de la clase `Lote` (es decir, cada objeto cajón) tenga las propiedades `nombre`, `cajones`, y `precio`. Este es un ejemplo del comportamiento buscado:
+Otra forma de representar los datos con los que estás trabajando es definir una clase. Creá un archivo llamado `lote.py` y adentro definí una clase llamada `Lote` que represente un lote de cajones de una misma fruta. Definila de modo que cada instancia de la clase `Lote` (es decir, cada objeto cajón) tenga los atributos `nombre`, `cajones`, y `precio`. Este es un ejemplo del comportamiento buscado:
 
 
 ```python

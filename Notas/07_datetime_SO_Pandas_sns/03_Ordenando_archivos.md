@@ -11,14 +11,10 @@ Escribí un programa que dado un directorio, imprima en pantalla los nombres de 
 
 _Observación:_ Al final, tu script debería poder ejecutarse desde la línea de comandos recibiendo como parámetro el directorio a leer original. En la [Sección 6.2](../06_Plt_Especificacion_y_Documentacion/02_Modulo_principal.md#modelo-de-script-con-parámetros) dimos un modelo de script que te puede servir.
 
-Guardá el script resultante en un archivo `ordenar_arbol.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
-
-
-
+Guardá el script resultante en un archivo `listar_imgs.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
 
 ### Ejercicio 7.6: Ordenar el árbol de archivos - Optativo
-Escribí un programa que te permita ordenar las imágenes PNG de esta carpeta.
-
+Escribí un programa que te permita ordenar las imágenes PNG de esta carpeta. Guardalo en un archivo `ordenar_imgs.py`.
 
 1. Creá un nuevo directorio `Data/imgs_procesadas/`.
 2. Usá `os.walk()` para recorrer los archivos en la carpeta `Data/ordenar/` (y sus subcarpetas).
@@ -37,7 +33,7 @@ Podés experimentar nuevas formas, por ejemplo, adentro de `imgs_procesadas`, cr
 
 **Algunos puntos importantes:**
 
-  * El *procesamiento* de un archivo `png` lo debería hacer una función.
+  * Te recomendamos que modularices el procesamiento de los archivos `png`. Podés, por ejemplo, escribir una función que manipule strings (que tome el nombre de un archivo y devuelva la fecha y el nombre corregido) y otra función que precese cada archivo (que use la función anterior para renombrar, mover y modificar la fecha de cada archivo). La modularización del código es clave para que otras personas lo puedan entender y que sea sencillo de mantener.
   * Usá docstrings y comentarios en tu código de manera que sea legible.
 
 

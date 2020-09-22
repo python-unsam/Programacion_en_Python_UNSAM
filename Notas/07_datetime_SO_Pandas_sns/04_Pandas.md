@@ -24,7 +24,7 @@ df = pd.read_csv(fname)
 
 La variable `df` es de tipo `DataFrame` y contiene todos los datos del archivo csv estructurados adecuadamente.
 
-Con `df.head()` podés ver las primeras líneas de datos. Si a `head` le pasás un número como parámetro podés seleccionar cuántas lineas querés ver. Análogamente con `df.tail(n)` verás las últimas `n` líneas de datos.
+Con `df.head()` podés ver las primeras líneas de datos. Si a `head` le pasás un número como parámetro podés seleccionar cuántas líneas querés ver. Análogamente con `df.tail(n)` verás las últimas `n` líneas de datos.
 
 ```python
 >>> df.head()
@@ -85,7 +85,7 @@ array(['Washingtonia (Palmera washingtonia)', 'Ombú', 'Catalpa', 'Ceibo',
 Podemos preguntar cuáles se llaman de cierta manera ('Ombú' en este caso), como hacíamos con los ndarrays en numpy:
 
 ```python
->>> df['nombre_com']=='Ombú'
+>>> df['nombre_com'] == 'Ombú'
 0        False
 1        False
 2        False
@@ -96,7 +96,7 @@ Podemos preguntar cuáles se llaman de cierta manera ('Ombú' en este caso), com
 Observá que esto generó una serie. Podemos sumar los `True` de esta serie para contar la cantidad de Ombús:
 
 ```python
->>> (df['nombre_com']=='Ombú').sum()
+>>> (df['nombre_com'] == 'Ombú').sum()
 590
 ```
 
@@ -122,10 +122,10 @@ De esta forma obtenemos, en orden decreciente, los nombres comunes y las cantida
 
 ### Filtros booleanos
 
-La serie booleana que obtuvimos con `df['nombre_com']=='Ombú'` puede usarse para seleccionar esas filas del DataFrame. Probemos con Jacarandá:
+La serie booleana que obtuvimos con `df['nombre_com'] == 'Ombú'` puede usarse para seleccionar esas filas del DataFrame. Probemos con Jacarandá:
 
 ```python
->>> df_jacarandas = df[df['nombre_com']=='Jacarandá']
+>>> df_jacarandas = df[df['nombre_com'] == 'Jacarandá']
 ```
 
 Análogamente, podemos seleccionar algunas columnas de interés y generar vistas (ojo, en estos casos no estamos copiando la información):
@@ -158,9 +158,8 @@ Observá que cuando le pedimos los últimos datos de `df_jacarandas` nos mostró
 Si vas a querer modificar `df_jacarandas` es conveniente crear una copia de los datos de `df` en lugar de simplemente una vista. Esto se puede hacer con el método `copy()` como en el siguiente ejemplo.
 
 ```python
->>> df_jacarandas = df[df['nombre_com']=='Jacarandá'][cols].copy()
+>>> df_jacarandas = df[df['nombre_com'] == 'Jacarandá'][cols].copy()
 ```
-
 
 ### Scatterplots
 
@@ -168,11 +167,9 @@ Pandas también permite [hacer gráficos bonitos](https://pandas.pydata.org/docs
 
 ```python
 df_jacarandas.plot.scatter(x = 'diametro', y = 'altura_tot')
-
 ```
 
-Hay otro módulo para hacer gráficos que interactúa muy bien con pandas y se llama [Seaborn](https://seaborn.pydata.org/). Está basada en matplotlib, y ofrece una interfaz de alto nivel para realizar gráficos estadísticos atractivos e informativos. En criollo: "usar pandas para manejar los datos y seaborn para visualizarlos, es la posta".
-
+Hay otro módulo para hacer gráficos que interactúa muy bien con pandas y se llama [Seaborn](https://seaborn.pydata.org/). Está basado en matplotlib, y ofrece una interfaz de alto nivel para realizar gráficos estadísticos atractivos e informativos. En criollo: "usar pandas para manejar los datos y seaborn para visualizarlos, es la posta".
 
 Fijate que seaborn entiende los DataFrames y las columnas y su sintaxis es muy similar a la de pandas:
 
@@ -180,9 +177,7 @@ Fijate que seaborn entiende los DataFrames y las columnas y su sintaxis es muy s
 import seaborn as sns
 
 sns.scatterplot(data = df_jacarandas, x = 'diametro', y = 'altura_tot')
-
 ```
-
 
 ### Filtros por índice y por posición
 
@@ -199,7 +194,7 @@ Index(['Eucalipto', 'Tipa blanca', 'Jacarandá', 'Palo borracho rosado',
       dtype='object', length=337)
 ```
 
-`cant_ejemplares` es una serie (es como un DataFrame de una sola columna). tiene los nombres de las especies como índice y sus respectivas cantidades como dato asociado.
+`cant_ejemplares` es una serie (es como un DataFrame de una sola columna). Tiene los nombres de las especies como índice y sus respectivas cantidades como dato asociado.
 
 Podemos acceder a una fila de un DataFarme o una Serie tanto a través de su posición como a través de su índice. Para acceder con el índice usá `loc[]` como en los siguientes ejemplos:
 
@@ -249,7 +244,6 @@ Name: nombre_com, dtype: int64
 ```
 
 Por otra parte, podemos seleccionar tanto filas como columnas, si separamos con comas las respectivas selecciones:
-
 
 ```python
 >>> df_jacarandas.iloc[-5:,2]
@@ -320,8 +314,8 @@ Volviendo al tema de las caminatas al azar, podemos hacer una caminata de dos ho
 ```python
 import numpy as np
 
-idx = pd.date_range('20200923 14:00', periods=120, freq='min')
-s1 = pd.Series(np.random.randint(-1,2,120), index=idx)
+idx = pd.date_range('20200923 14:00', periods = 120, freq = 'min')
+s1 = pd.Series(np.random.randint(-1,2,120), index = idx)
 s2 = s1.cumsum()
 ```
 
@@ -339,11 +333,10 @@ w = 5 # ancho en minutos de la ventana
 s3 = s2.rolling(w).mean()
 s3.plot()
 ```
-
 Podés ver ambas curvas en un mismo gráfico para ver más claramente el efecto del suavizado:
 
 ```python
-df_series_23 = pd.DataFrame([s2,s3]).T  # armo un dataframe con ambas series
+df_series_23 = pd.DataFrame([s2, s3]).T  # armo un dataframe con ambas series
 df_series_23.plot()
 ```
 
@@ -374,13 +367,13 @@ w = 45
 df_walk_suav = df_walks.rolling(w, min_periods = 1).mean() # datos suavizados
 nsuav = ['S_' + n for n in nombres]
 df_walk_suav.columns = nsuav # cambio el nombre de las columnas
-                      # para los datos suavizados
+                             # para los datos suavizados
 df_walk_suav.plot()
 ```
 
 ### Guardando datos
 
-Guardar una serie o un DataFrame en el disco es algo realmente sencillo. Probá, por ejemplo, el efecto del comando `df_walk_suav.to_csv('CaminataApostolica.csv')`.
+Guardar una serie o un DataFrame en el disco es algo realmente sencillo. Probá, por ejemplo, el efecto del comando `df_walk_suav.to_csv('caminata_apostolica.csv')`.
 
 ## Incorporando el Arbolado lineal
 

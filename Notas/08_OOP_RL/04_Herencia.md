@@ -2,7 +2,7 @@
 
 # 8.4 Herencia
 
-Herencia entre clases es una herramienta muy usada para escribir programas extensibles. Exploraremos esa idea en esta sección.
+La herencia entre clases es una herramienta muy usada para escribir programas extensibles. Exploraremos esa idea a continuación.
 
 ### Introducción
 
@@ -69,6 +69,8 @@ Se puede usar así:
 >>>
 ```
 
+Esta clase heredó los atributos y métodos de `Lote` y la extendío con un nuevo método (`rematar()`).
+
 ### Redefinir un método existente
 
 ```python
@@ -86,7 +88,7 @@ Un ejemplo de uso:
 >>>
 ```
 
-El método nuevo simplemente reemplaza al definido en la clase base. Los demás métodos y variables no son afectados. No es buenísimo ??
+El método nuevo simplemente reemplaza al definido en la clase base. Los demás métodos y atributos no son afectados. ¿No es buenísimo?
 
 ## Redefinición 
 [](Overriding)
@@ -107,7 +109,7 @@ class MiLote(Lote):
         return 1.25 * precio_actualizado
 ```
 
-Usá `super()` para llamar al método de la clase base.
+Usá `super()` para llamar al método de la clase base (del la que esta es heredera).
 
 ### El método `__init__` y herencia.
 
@@ -129,11 +131,13 @@ class MiLote(Lote):
     def cost(self):
         return self.factor * super().precio()
 ```
-Es necesario llamar al método `__init__()` en la clase base, es una forma de ejecutar la versión previa (vieja) del método que estamos redefiniendo, como mostramos recién.
+Es necesario llamar al método `__init__()` en la clase base, es una forma de ejecutar la versión previa (heredada) del método que estamos redefiniendo, como mostramos recién.
 
 ### Usos de herencia
 
-Uno de los usos de hacer una clase por herencia de otra es organizar objetos que están relacionados.
+Uno de los usos de definir una clase como heredera de otra es organizar jerárquicamente objetos que están relacionados.
+
+Un ejemplo: Las figuras geométricas pueden tener ciertos métodos y atributos que luego son refinados en casos concretos como círculos o rectángulos.
 
 ```python
 class FiguraGeom:
@@ -159,7 +163,7 @@ class Procesador_de_datos(TCPHandler):
 
 La clase base contiene código de administración no específico. Cada clase hereda ese código y modifica las partes necesarias.
 
-### Relación "es un"
+### Relación "isinstance"
 
 La herencia establece una relación de clases.
 
@@ -194,7 +198,7 @@ class Figura_geom(object):
 
 ### Herencia múltiple.
 
-Podés heredar un objeto de varias clases simultáneamente si los especificás en la definición de clase.
+Podés heredar de varias clases simultáneamente si los especificás en la definición de clase.
 
 ```python
 class Madre:
@@ -212,14 +216,14 @@ La clase `Hijo` hereda características de ambos padres. Algunos detalles son un
 
 ## Ejercicios
 
-El concepto de herencia es especialmente útil cuando uno está escribiendo código que va a ser extendido o adaptado, ya sea en bibliotecas o grandes sistemas configurables, pero también en pequeños paquetes de procesamiento de datos que pueden adquirir datos de diversas fuentes. Uno puede escribir las relaciones y comportamientos fundamentales y dejar los detalles de implementación de cada interfase cuando sean necesarios.
+El concepto de herencia es especialmente útil cuando uno está escribiendo código que va a ser extendido o adaptado, ya sea en bibliotecas o grandes sistemas configurables, pero también en pequeños paquetes de procesamiento de datos que pueden adquirir datos de diversas fuentes. Como ya dijimos antes, uno puede escribir las relaciones y comportamientos fundamentales y dejar los detalles de implementación de cada interfase para cuando sean necesarios.
 
 Para verlo mejor volvamos a la función `imprimir_informe()` del [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones) , parte del programa `informe.py`.  Tenía más o menos este aspecto:
 
 ```python
 def imprimir_informe(data_informe):
     '''
-    Imprime una tabla prolija desde una lista de tuplas con (nombre, cajones, precio, diferencia) 
+    Imprime una tabla prolija desde una lista de tuplas con (nombre, cajones, precio, cambio) 
     '''
     headers = ('Nombre','Cajones','Precio','Cambio')
     print('%10s %10s %10s %10s' % headers)
@@ -244,71 +248,72 @@ Al ejecutar tu programa `imprimir_informe()` la salida es algo parecido a esto:
    Naranja        100     $70.44      35.84
 ```
 
+A continuación vamos a trabajar con herencias relacionadas con este código.
+
 ### Ejercicio 8.5: Un problema de extensibilidad
-Imaginá que necesitás que la función `imprimir_informe()` pueda exportar el informe en una variedad de formatos. Texto simple, HTML, CSV ó XML. Podrías escribir una función enorme que resuelva todos los casos, pero resultaría en código repetido, y difícil de mantener. Esta es una oportunidad perfecta para usar herencia de objetos.
+Imaginá que necesitás que la función `imprimir_informe()` pueda exportar el informe en una variedad de formatos: texto plano, HTML, CSV ó XML. Podrías escribir una función enorme que resuelva todos los casos, pero resultaría en código repetido, y difícil de mantener. Esta es una oportunidad perfecta para usar herencia de objetos.
 
 Vamos a enfocarnos en los pasos necesarios para crear una tabla. 
 
-Al principio de la tabla tenemos los encabezados de las columnas. Después de éso, los datos de la tabla ordenados en una fila por ítem. Pongamos cada uno de esos pasos en una clase distinta. Creá un archivo llamado `formatotabla.py` y definí la siguiente clase:
+Al principio de la tabla tenemos los encabezados de las columnas. Después de éso, los datos de la tabla ordenados en una fila por ítem. Pongamos cada uno de esos pasos en una clase distinta. Creá un archivo llamado `formato_tabla.py` y definí la siguiente clase:
 
 ```python
 # formatotabla.py
 
 class FormatoTabla:
-    def headings(self, headers):
+    def encabezado(self, headers):
         '''
         Crea el encabezado de la tabla.
         '''
 	raise NotImplementedError()
 
-    def row(self, rowdata):
+    def fila(self, rowdata):
         '''
-        Crear una única fila de datos de la tabla.
+        Crea una única fila de datos de la tabla.
         '''
 	raise NotImplementedError()
 ```
 
-Por ahora la clase no hace nada, pero sirve como una especie de especificación de diseño para otras clases que vamos a definir. Una clase como ésta es a menudo llamada "clase abstracta base"
+Por ahora la clase no hace nada, pero sirve como una especie de especificación de diseño para otras clases que vamos a definir. Una clase como ésta es a menudo llamada "clase base abstracta".
 
-Ahora es necesario modificar la función `imprimir_informe` para que acepte como fuente de datos un objeto `formato_tabla` e invoque los métodos de este objeto para producir la tabla de salida. Algo así:
+Ahora es necesario modificar la función `imprimir_informe` para que acepte como fuente de datos un objeto `FormatoTabla` e invoque los métodos de este objeto para producir la tabla de salida. Algo así:
 
 ```python
 # informe.py
 ...
 
-def print_informe(data_informe, formateador):
+def imprimir_informe(data_informe, formateador):
     '''
     Imprime una tabla prolija desde una lista de tuplas con (nombre, cajones, precio, diferencia) 
     '''
-    formateador.headings(['Nombre','Cantidad','Precio','Diferencia'])
-    for nombre, cajones, precio, diferencia in data_informe:
-        rowdata = [ nombre, str(cajones), f'{precio:0.2f}', f'{diferencia:0.2f}' ]
+    formateador.headings(['Nombre','Cantidad','Precio','Cambio'])
+    for nombre, cajones, precio, cambio in data_informe:
+        rowdata = [ nombre, str(cajones), f'{precio:0.2f}', f'{cambio:0.2f}' ]
         formateador.row(rowdata)
 ```
 
-Como agregaste un argumento a `imprimir_informe()`, hay que modificar  también `informe_camion()`. Cambialo para que cree un objeto `
-tableformateador` de este modo:
+Como agregaste un argumento a `imprimir_informe()`, hay que modificar  también `informe_camion()`. Cambialo para que cree un objeto `formateador` de este modo:
 
 ```python
 # informe.py
 
-import tableformat
+import formato_tabla
 
 ...
-def informe_camion(camionfile, preciofile):
+def informe_camion(archivo_camion, archivo_precios):
     '''
     Crea un informe por camion a partir de archivos camion y precio.
     '''
     # Leer archivos con datos
-    camion = leer_camion(camionfile)
-    precios = read_precios(preciofile)
+    camion = leer_camion(archivo_camion)
+    precios = read_precios(archivo_precios)
 
     # Crear los datos del informe
-    informe = make_informe_data(camion, precios)
+    data_informe = crear_data_informe(camion, precios)
 
     # Generar informe
-    formateador = tableformat.TableFormatter()
-    print_informe(informe, formateador)
+    formateador = formato_tabla.FormatoTabla()
+    imprimir_informe(data_informe, formateador)
 ```
 
 Ejecutá ese código:
@@ -320,7 +325,7 @@ Ejecutá ese código:
 ... crashes ...
 ```
 
-Debería dar inmediatamente una excepción de tipo `NotImplementedError`. No es nada maravilloso, pero es exactamente lo que esperábamos que sucediera, no ?   Sigamos...
+Debería dar inmediatamente una excepción de tipo `NotImplementedError`. No es nada maravilloso, pero es exactamente lo que esperábamos que sucediera, ¿no?   Sigamos...
 
 
 ### Ejercicio 8.6: Usemos herencia para cambiar la salida
@@ -333,14 +338,14 @@ class FormatoTablaTXT(FormatoTabla):
     '''
     Generar una tabla en formato TXT
     '''
-    def headings(self, headers):
+    def encabezado(self, headers):
         for h in headers:
             print(f'{h:>10s}', end=' ')
         print()
         print(('-'*10 + ' ')*len(headers))
 
-    def row(self, rowdata):
-        for d in rowdata:
+    def fila(self, data_fila):
+        for d in data_fila:
             print(f'{d:>10s}', end=' ')
         print()
 ```
@@ -350,20 +355,20 @@ Modificá la función `informe_camion()` y probála:
 ```python
 # informe.py
 ...
-def informe_camion(camionfile, preciofile):
+def informe_camion(archivo_camion, archivo_precios):
     '''
     Crea un informe por camion a partir de archivos camion y precio.
     '''
     # Leer archivos con datos
-    camion = leer_camion(camionfile)
-    precios = leer_precios(preciofile)
+    camion = leer_camion(archivo_camion)
+    precios = leer_precios(archivo_precios)
 
     # Obtener los datos para un informe
-    informe = make_informe_data(camion, precios)
+    informe = crear_data_informe(camion, precios)
 
     # Imprimir
-    formateador = tableformat.TextTableFormatter()
-    print_informe(informe, formateador)
+    formateador = formato_tabla.FormatoTablaTXT()
+    imprimir_informe(data_informe, formateador)
 ```
 
 Este código debería dar la misma salida que antes:
@@ -384,39 +389,39 @@ Este código debería dar la misma salida que antes:
 >>>
 ```
 
-Entonces cambiemos la salida a alguna otra cosa: Definí una nueva clase llamada `FormatoTablaCSV` que genere la salida en formato CSV:
+Ahora probemos otras variantes. Definí, para empezar, una nueva clase llamada `FormatoTablaCSV` que genere la salida en formato CSV:
 
 ```python
 # formatotabla.py
 ...
-class CSVTableFormatter(TableFormatter):
+class FormatoTablaCSV(FormatoTabla):
     '''
     Generar una tabla en formato CSV
     '''
-    def headings(self, headers):
+    def encabezado(self, headers):
         print(','.join(headers))
 
-    def row(self, rowdata):
-        print(','.join(rowdata))
+    def fila(self, data_fila):
+        print(','.join(data_fila))
 ```
 
-Modificá tu programa principal e este modo:
+Modificá tu programa principal de este modo:
 
 ```python
-def informe_camion(camionfile, preciofile):
+def informe_camion(archivo_camion, archivo_precios):
     '''
     Crea un informe por camion a partir de archivos camion y precio.
     '''
     # Leer archivos con datos
-    camion = leer_camion(camionfile)
-    precios = read_precios(preciofile)
+    camion = leer_camion(archivo_camion)
+    precios = read_precios(archivo_precios)
 
     # Obtener los datos para un informe
-    informe = make_informe_data(camion, precios)
+    data_informe = crear_informe_data(camion, precios)
 
     # Imprimir
-    formateador = tableformat.CSVTableFormatter()
-    print_informe(informe, formateador)
+    formateador = formato_tabla.FormatoTablaCSV()
+    imprimir_informe(data_informe, formateador)
 ```
 
 Ahora la salida debería tener este aspecto:
@@ -453,69 +458,63 @@ Para testear tu código, modificá el programa principal de modo que use un obje
 ### Ejercicio 8.7: Polimorfismo en acción
 Una de las grandes ventajas de la programación orientada a objetos es que podés cambiar un objeto por otro compatible y tu programa va a funcionar sin necesidad adaptar el código que usa esos objetos.
 
-Si escribiste un programa diseñado para usar un objeto de la clase `FormatoTabla`, va a funcionar sin importar *que* objeto de esa clase uses. A este comportamiento particular, y la capacidad de usar la misma interfase con diferentes objetos de la misma clase, haciendo que el programa como un todo se porte distinto se lo llama polimorfismo.
+Si escribiste un programa diseñado para usar un objeto de la clase `FormatoTabla`, va a funcionar sin importar *qué* objeto de esa clase uses. A este comportamiento particular se lo llama polimorfismo. Está relacionado con la capacidad de usar la misma interfase con diferentes objetos de la misma clase, haciendo que el programa como un todo se porte distinto.
 
 Un problema potencial de usar polimorfismo en tus programas es diseñar un buen método para que el usuario final pueda decidir qué objeto usar. No podés pedirle que reprograme tu código y cambie objetos o hablarle de los objetos por su nombre real, sería poco práctico. Lo que uno suele hacer es usar un `if` y permitir que el programa use diferentes objetos en base a decisiones del usuario, algo como esto:
 
 ```python
-def informe_camion(camionfile, preciofile, fmt='txt'):
+def informe_camion(archivo_camion, archivo_precios, fmt='txt'):
     '''
     Crea un informe por camion a partir de archivos camion y precio.
     '''
     # Leer archivos con datos
-    camion = leer_camion(camionfile)
-    precios = read_precios(preciofile)
+    camion = leer_camion(archivo_camion)
+    precios = read_precios(archivo_precios)
 
     # Obtener los datos para un informe
-    informe = make_informe_data(camion, precios)
+    informe = crear_informe_data(camion, precios)
 
     # Print it out
     if fmt == 'txt':
-        formateador = tableformat.TextTableFormatter()
+        formateador = formato_tabla.FormatoTablaTXT()
     elif fmt == 'csv':
-        formateador = tableformat.CSVTableFormatter()
+        formateador = formato_tabla.FormatoTablaCSV()
     elif fmt == 'html':
-        formateador = tableformat.HTMLTableFormatter()
+        formateador = formato_tabla.FormatoTablaHTML()
     else:
         raise RuntimeError(f'Unknown format {fmt}')
-    print_informe(informe, formateador)
+    imprimir_informe(informe, formateador)
 ```
 
-In this code, the user specifies a simplified nombre such as `'txt'` or
-`'csv'` to pick a format.  However, is putting a big `if`-statement in
-the `informe_camion()` function like that the best idea?  It might
-be better to move that code to a general purpose function somewhere
-else.
+En este código, el usuario especifica un nombre simplificado como `'txt'` o
+`'csv'` para elegir el formato. Pero bancá. ¿Es una buena idea poner un gran bloque `if` en la función `informe_camion()`? ¿O quizás sería mejor ponerla directamente en una función de propósito general en otro lado?
 
-In the `tableformat.py` file, add a function `create_formateador(nombre)`
-that allows a user to create a formateador given an output nombre such as
-`'txt'`, `'csv'`, or `'html'`.  Modify `informe_camion()` so that it
-looks like this:
+En el archivo `formato_tabla.py`, agregá la función `crear_formateador(nombre)` que permita creat un objeto formateador dado un tipo de salida como `'txt'`, `'csv'`, o `'html'`.  Modificá `informe_camion()` para que se vea así:
 
 ```python
-def informe_camion(camionfile, preciofile, fmt='txt'):
+def informe_camion(archivo_camion, archivo_precios, fmt='txt'):
     '''
     Crea un informe por camion a partir de archivos camion y precio.
     '''
-    # Read data files
-    camion = leer_camion(camionfile)
-    precios = read_precios(preciofile)
+    # Lee archivos de datos
+    camion = leer_camion(archivo_camion)
+    precios = read_precios(archivo_precios)
 
-    # Create the informe data
-    informe = make_informe_data(camion, precios)
+    # Crea la data del informe
+    informe = crear_informe_data(camion, precios)
 
-    # Imprimir
-    formateador = tableformat.create_formateador(fmt)
-    print_informe(informe, formateador)
+    # Imprime el informe
+    formateador = formato_tabla.crear_formateador(fmt)
+    imprimir_informe(informe, formateador)
 ```
 
-Acordate de testear todas las ramas posibles del código para asegurarte de que está funcionando. Llamalo y pedile crear salidas en todos los formatos (podés ver el HTML con un webbrowser).
+Acordate de testear todas las ramas posibles del código para asegurarte de que está funcionando. Llamalo y pedile crear salidas en todos los formatos (podés ver el HTML con tu browser).
 
 ### Ejercicio 8.8: Volvamos a armar todo
 Modificá tu programa `informe.py` de modo que la función `informe_camion()` acepte un parámetro opcionar que especifique el formato de salida deseado. Por ejemplo:
 
 ```python
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv', 'txt')
+>>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv', fmt='txt')
     Nombre   Cantidad     Precio Diferencia
 ---------- ---------- ---------- ----------
       Lima        100       9.22     -22.98
@@ -528,7 +527,7 @@ Modificá tu programa `informe.py` de modo que la función `informe_camion()` ac
 >>>
 ```
 
-Modificá el prgrama principal y usá `sys.argv()` para poder pedirle un formato particular directamente desde la línea de comandos (notá el último parámetro en este ejemplo):
+Modificá el programa principal y usá `sys.argv()` para poder definir un formato particular directamente desde la línea de comandos. En el siguiente ejemplo de ve un caso de uso. Idealmente, ese parámetro debería ser opcional y, si no se lo pasás, debería andar como antes.
 
 ```bash
 bash $ python3 informe.py Data/camion.csv Data/precios.csv csv
@@ -545,17 +544,14 @@ bash $
 
 ### Discusión
 
-El caso que vimos es un ejemplo de uno de los usos más comunes de herencia en programación orientada a objetos: escribir programas extensibles. Un sistema puede definir una interfase mediante una superclase base, y pedirte que escribas tus propias implementaciones derivadas de esa clase. Si escribis los métodos específicos para tu caso particular podes adaptar la función de un sistema general para resolver tu problema. 
+El caso que vimos es un ejemplo de uno de los usos más comunes de herencia en programación orientada a objetos: escribir programas extensibles. Un sistema puede definir una interfase mediante una superclase base, y pedirte que escribas tus propias implementaciones derivadas de esa clase. Si escribís los métodos específicos para tu caso particular podés adaptar la función de un sistema general para resolver tu problema. 
 
 Otro concepto, un poco más interesante, es el de crear tus propias abstracciones. En los ejercicios de esta parte definimos *nuestra propia clase* para crear variaciones en el formato de un informe.
+Tal vez estés pensando "¡Debería usar una biblioteca para crear formatos ya escrita por otro!". Bueno, no. Está bueno que puedas *tanto* crear tu propia clase *como* usar una biblioteca ya escrita. El hecho de usar tu propia clase te dá flexibilidad (¡ya me siento un maestro de artes marciales hablando tanto de la flexibilidad!).
 
-Tal vez estés diciendo "Debería usar una biblioteca para crear formatos ya escrita por otro !". Bueno, no. Deberías usar *tanto* tu propia clase *como* una biblioteca ya escrita. El hecho de usar tu propia clase te dá flexibilidad. 
+Siempre que tu programa adhiera a la interfase de objetos definida por tu clase, podés cambiar la implementación interna en los objetos que escribas para que funcionen del modo que elijas. Podés escribir todo el código vos ó usar bibliotecas escritas por otro, no importa. Cuando encuentres algo mejor, cambiás tu implementación para que llame al nuevo código. Si la interfase que hiciste está bien escrita, no vas a necesitar modificar el programa que usa las diferentes implementaciones. Simplemente funcionan si cumplen los contratos de la interfase. Es algo muy útil y es una de los motivos por los que usar herencia puede resolverte los problemas de extensibilidad y diversidad a futuro.
 
-Siempre que tu programa adhiera a la interfase de objetos definida por tu clase, podés cambiar la implementación interna en los objetos que escribas para que funcionen del modo que elijas. Podés escribir todo el código vos mismo ó usar bibliotecas escritas por otro, no importa. Cuando encuentres algo mejor, cambiás un código de terceros por el nuevo. Si la interfase está bien escrita no necesitas modificar el programa que usa las diferentes implementaciones. Simplemente funcionan si cumplen los contratos de la interfase. Es algo muy util y es una de los motivos por los que usar herencia puede resolverte los problemas de extensibilidad y diversidad a futuro.
-
-Dicho esto, es cierto que diseñar un programa orientado a objetos puede volverse algo muy difícil. Si vas a encarar un proyecto grande con esta herramienta tal vez debieras consultar material específico sobre el diseño de estos sistemas. De todos modos, haber entendido lo que acabamos de hacer te va a servir para llegar bastante lejos.
-
-
+Dicho esto, es cierto que diseñar un programas en el paradigma orientado a objetos puede resultar algo muy difícil. Si vas a encarar proyectos grandes con esta herramienta, consultá libros sobre patrones de diseño en POO. De todos modos, haber entendido lo que acabamos de hacer te permita llegar bastante lejos.
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Clases)](03_Clases.md) \| [Próximo (5 Métodos especiales)](05_Métodos_Especiales.md)
 
