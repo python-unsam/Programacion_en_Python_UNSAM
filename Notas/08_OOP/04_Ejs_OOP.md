@@ -5,7 +5,7 @@
 En esta sección tendrás que resolver algunos ejercicios definiendo clases y objetos.
 
 ### Algun ej geométrico?
-Un cuadrado datos por dos vertices con herencia?
+Usando la clase Punto que vimos antes, agregarle algunas cosas y luego usarla para hacer alguna figura tipo cuadrado dado por sus dos vertices con herencia o algo así. Los manuales de programación tienen siempre de estos ejemplos, no?
 
 
 ### Ejercicio 8.11: Torre de Control
