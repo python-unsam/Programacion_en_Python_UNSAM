@@ -170,6 +170,8 @@ Guardá tu código en el archivo `mareas_a_mano.py` para entregar.
 
 En lo que sigue vamos a usar herramientas matemáticas para hacer un análisis similar al que hicimos recién de manera *artesanal*. Para una onda sinusoidal, el desplazamiento horizontal corresponde a una diferencia de fase y el desplazamiento vertical es simplemente una constante aditiva. Vamos a descomponer la serie de alturas observadas del agua por medio de la transformada de Fourier.
 
+Las ondas de marea se mueven lentamente y tardan cierto tiempo en llegar de un puerto a otro. En lo que sigue vamos a ver cómo calcular el tiempo que le toma a esta onda en desplazarse de Buenos Aires hasta San Fernando.
+
 **Lo que sigue es optativo**.
 
 ## Análisis por medio de transformadas de Fourier
@@ -407,7 +409,7 @@ Guardá lo que hayas hecho hasta aca en el archivo `mareas_fft.py` para entregar
 ### Ejercicio 7.13: Otros períodos
 El primer análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
 
-La siguiente función completa datos faltantes y corrige pequeños problemas en los índices.
+La siguiente función completa datos faltantes y corrige pequeños problemas en los índices. Es un poco brutal tratar así un DataFrame: es conveniente mirar los datos antes de completar faltantes. Lo dejamos como puntero para les que quieran profundizar en estos métodos tan útiles.
 
 ```python
 def reparar(df):

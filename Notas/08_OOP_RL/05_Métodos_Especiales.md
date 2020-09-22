@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia)](04_Herencia.md) \| [Próximo (6 Ejercicios de objetos)](06_Ejs_OOP.md)
 
 # 8.5 Métodos especiales
 
@@ -304,5 +304,5 @@ Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 5.1](
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia)](04_Herencia.md) \| [Próximo (6 Ejercicio de objetos)](06_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Herencia)](04_Herencia.md) \| [Próximo (6 Ejercicios de objetos)](06_Ejs_OOP.md)
 

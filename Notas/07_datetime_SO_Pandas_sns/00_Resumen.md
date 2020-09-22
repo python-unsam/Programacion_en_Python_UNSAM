@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases, Objetos y Seaborn)](../08_OOP_RL/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_OOP_RL/00_Resumen.md)
 
 # 7. Fechas, Carpetas y Pandas
 **Esta clase está en preparación.**
@@ -20,4 +20,4 @@ Además, hacia el final proponemos un ejercicio de análisis de datos de mareas 
 * [7.6 Cierre de la séptima](06_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases, Objetos y Seaborn)](../08_OOP_RL/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_OOP_RL/00_Resumen.md)

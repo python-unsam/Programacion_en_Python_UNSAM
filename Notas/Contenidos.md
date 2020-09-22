@@ -9,7 +9,7 @@
 * [5. Complejidad y Organización de programas](05_Organización_y_Complejidad/00_Resumen.md)
 * [6. Diseño, especificación, documentación y estilo.](06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 * [7. Fechas, Carpetas y Pandas](07_datetime_SO_Pandas_sns/00_Resumen.md)
-* [8. Clases, Objetos y Seaborn](08_OOP_RL/00_Resumen.md)
+* [8. Clases y objetos](08_OOP_RL/00_Resumen.md)
 * [9. Matrices, Imágenes y ReEx](09_Imagenes_y_Objetos/00_Resumen.md)
 * [10. Generadores](10_Generadores_y_Series/00_Resumen.md)
 * [11. Recursión](11_Recursion/00_Resumen.md)

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases, Objetos y Seaborn)](../08_OOP_RL/00_Resumen.md) \| [Próximo (10 Generadores)](../10_Generadores_y_Series/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_OOP_RL/00_Resumen.md) \| [Próximo (10 Generadores)](../10_Generadores_y_Series/00_Resumen.md)
 
 # 9. Matrices, Imágenes y ReEx
 **Esta clase está en preparación.**
@@ -14,4 +14,4 @@ Aquí debe ir un resumen de los temas que se tratan.
 * [9.5 Pandas revisitado](05_Pandas2.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases, Objetos y Seaborn)](../08_OOP_RL/00_Resumen.md) \| [Próximo (10 Generadores)](../10_Generadores_y_Series/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_OOP_RL/00_Resumen.md) \| [Próximo (10 Generadores)](../10_Generadores_y_Series/00_Resumen.md)

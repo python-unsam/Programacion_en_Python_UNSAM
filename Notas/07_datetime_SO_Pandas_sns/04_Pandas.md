@@ -426,6 +426,8 @@ El `hue` selecciona la variable categórica a usar para distinguir subgrupos y a
 
 Pregunta: ¿Por qué el ancho_acera no tiene lugar en el gráfico?
 
+*Te recomendamos pegarle una mirada a [esta página](http://seaborn.pydata.org/introduction.html) donde vas a poder ver un poco más sobre el potencial de seaborn.*
+
 ### Ejercicio 7.9: Comparando especies en parques y en veredas
 Al comienzo de la materia estuvimos trabajando con el dataset de árboles en parques. Ahora estuvimos analizando otro dataset: el de árboles en veredas.
 Ahora queremos estudiar si hay diferencias entre los ejemplares de una misma especie según si crecen en un sitio o en otro. Queremos hacer un boxplot del diámetro a la altura del pecho para las Tipas (su nombre científico es *tipuana tipu*), que crecen en ambos tipos de ambiente. Para eso tendremos que juntar datos de dos bases de datos diferentes.

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Ejercicio de objetos)](06_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Ejercicios de objetos)](06_Ejs_OOP.md)
 
 # 8.7 Cierre
 
@@ -16,5 +16,5 @@ La experiencia de cada une les va a permitir decidir cuándo es mas conveniente 
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Ejercicio de objetos)](06_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Ejercicios de objetos)](06_Ejs_OOP.md)
 
