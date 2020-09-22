@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (9 Matrices, Imágenes y ReEx)](../09_Imagenes_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión)](../11_Recursion/00_Resumen.md)
 
-# 10. Generadores
+# 10. Generadores e iteradores
 **Esta clase está en preparación.**
 **El material sufrirá cambios hasta el miércoles 14/10, cuando daremos inicio a estos temas en el curso.**
 
@@ -12,10 +12,6 @@ in the form of a so-called "generator function."  This section
 introduces this topic.  By the end, you'll write some programs that
 process some real-time streaming data in an interesting way.
 
-* [6.1 Iteration Protocol](01_Iteration_protocol.md)
-* [6.2 Customizing Iteration with Generators](02_Customizing_iteration.md)
-* [6.3 Producer/Consumer Problems and Workflows](03_Producers_consumers.md)
-* [6.4 Generator Expressions](04_More_generators.md)
 
 
 

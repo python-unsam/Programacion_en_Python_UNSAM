@@ -11,7 +11,7 @@
 * [7. Fechas, Carpetas y Pandas](07_datetime_SO_Pandas_sns/00_Resumen.md)
 * [8. Clases y objetos](08_OOP/00_Resumen.md)
 * [9. Matrices, Imágenes y ReEx](09_Imagenes_y_Objetos/00_Resumen.md)
-* [10. Generadores](10_Generadores_y_Series/00_Resumen.md)
+* [10. Generadores e iteradores](10_Generadores_e_Iteradores/00_Resumen.md)
 * [11. Recursión](11_Recursion/00_Resumen.md)
 * [12. Ordenamiento](12_Ordenamiento/00_Resumen.md)
 * [13. Optativos](13_Optativos/00_Resumen.md)
