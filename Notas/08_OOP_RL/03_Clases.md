@@ -157,7 +157,7 @@ otra cosa como en el ejemplo anterior.
 
 ## Ejercicios
 
-Vamos a comenzar esta serie de ejercicios modificando código que escribiste en antes del parcial. En particular retomaremos el código del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-65-arreglemos-las-funciones-existentes). [Acá](./ejs.zip) te dejamos una versión funcionando que podés mirar y/o usar. Tiene cosas interesantes, aunque tengas el tuyo funcionando si querés pegale una mirada. 
+Vamos a comenzar esta serie de ejercicios modificando código que escribiste en antes del parcial. En particular retomaremos el código del [Ejercicio 6.5](../06_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-65-arreglemos-las-funciones-existentes). Te dejamos [acá](./ejs.zip) una versión funcionando que podés mirar y/o usar. Tiene cosas interesantes, aunque tengas la tuya funcionando si querés pegale una mirada. 
 
 
 ### Ejercicio 8.1: Objetos como estructura de datos.
@@ -217,7 +217,7 @@ Vamos a crear más objetos de tipo `Lote` para manipularlos. Por ejemplo:
 >>>
 ```
 
-Volvemos a mencionar específicamente es que la clase `Lote` funciona como una "fábrica" para crear objetos que son instancias de esa clase. Vos la llamás como si fuera una función y ésta crea una nueva instancia de sí misma. Más aún, cada instancia es única y tiene sus propios datos que son independientes de las demás instancias de la misma clase.
+Fijate que la clase `Lote` funciona como una "fábrica" para crear objetos que son instancias de esa clase. Vos la llamás como si fuera una función y te crea una nueva instancia de sí misma. Más aún, cada instancia es única y tiene sus propios datos que son independientes de las demás instancias de la misma clase.
 
 Una instancia definida por una clase tiene cierta similitud con un diccionario, pero usa una sintaxis algo diferente. Por ejemplo, en lugar de escribir `c['nombre']` ó `c['precio']` en objetos escribís `c.nombre` ó `c.precio`.
 
@@ -248,9 +248,9 @@ Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista d
 ```python
 >>> import fileparse
 >>> with open('Data/camion.csv') as lineas:
-...     portdicts = fileparse.parse_csv(lineas, select=['name','cajones','precio'], types=[str,int,float])
+...     camion_dicts = fileparse.parse_csv(lineas, select=['nombre','cajones','precio'], types=[str,int,float])
 ...
->>> camion = [ lote.Lote(d['nombre'], d['cajones'], d['precio']) for d in portdicts]
+>>> camion = [ lote.Lote(d['nombre'], d['cajones'], d['precio']) for d in camion_dicts]
 >>> camion
 [<lote.Lote object at 0x10c9e2128>, <lote.Lote object at 0x10c9e2048>, <lote.Lote object at 0x10c9e2080>,
  <lote.Lote object at 0x10c9e25f8>, <lote.Lote object at 0x10c9e2630>, <lote.Lote object at 0x10ca6f748>,
