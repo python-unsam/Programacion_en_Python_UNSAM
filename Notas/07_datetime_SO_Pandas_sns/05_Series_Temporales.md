@@ -293,6 +293,7 @@ Ahora viene la parte un poco más sutíl: **el análisis de las fases**. Si cono
 
 Para calcular la fase (entre -pi y pi) de la componente 350ava en el puerto de San Fernando, podemos simplemente usar `np.angle()` y pasarle el número complejo en cuestión:
 
+<img src="./phase_shift.png" width="300">
 
 ```python
 >>> angSF = np.angle(fftSF)[picoSF]
