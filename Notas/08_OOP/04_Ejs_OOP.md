@@ -9,7 +9,11 @@ Un cuadrado datos por dos vertices con herencia?
 
 
 ### Ejercicio 8.11: Torre de Control
-Usando la clase `Cola` definida aquí abajo, escribí una clase  `TorreDeControl` que modele el trabajo de una torre de control de un aeropuerto con una pista de aterrizaje. Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. La clase debe funcionar conforme al siguiente ejemplo:
+Una **cola** es una estructura de datos. Se caracteriza por contener una secuencia de elementos y dos operaciones: encolar y desencolar. La primera, encolar, agrega un elemento al final de la secuencia que contiene la cola. Desencolar, por su parte, devuelve el primer elemento de la secuencia y lo elimina de la misma. 
+
+Las colas también se llaman estructuras FIFO (del inglés First In First Out), debido a que el primer elemento en entrar a la cola será también el primero en salir. Es nombre cola se le da por su analogía con las colas del cine, el supermercado, etc.
+
+Aquí abajo damos una implementación de la clase `Cola`. Usándo un par de objetos de estas clase como atributos, escribí una nueva clase llamada `TorreDeControl` que modele el trabajo de una torre de control de un aeropuerto con una pista de aterrizaje. Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. La clase debe funcionar conforme al siguiente ejemplo:
 
 ```python
 >>> torre = TorreDeControl()
@@ -29,10 +33,12 @@ El vuelo KLM1267 despegó con éxito.
 No hay vuelos en espera.
 ```
 
-La clase Cola está definida a continuación:
+Esta es la implementación que damos de la clase Cola:
 ```python
 class Cola:
-    '''Representa a una cola, con operaciones de encolar y desencolar. El primero en ser encolado es tambien el primero en ser desencolado.'''
+    '''Representa a una cola, con operaciones de encolar y desencolar.
+    El primero en ser encolado es tambien el primero en ser desencolado.
+    '''
 
     def __init__(self):
         '''Crea una cola vacia.'''
@@ -43,18 +49,21 @@ class Cola:
         self.items.append(x)
 
     def desencolar(self):
-        '''Elimina el primer elemento de la cola y devuelve su
-        valor. Si la cola esta vacia, levanta ValueError.'''
+        '''Elimina el primer elemento de la cola 
+        y devuelve su valor. 
+        Si la cola esta vacia, levanta ValueError.'''
         if self.esta_vacia():
             raise ValueError('La cola esta vacia')
         return self.items.pop(0)
 
     def esta_vacia(self):
-        '''Devuelve True si la cola esta vacia, False si no.'''
+        '''Devuelve 
+        True si la cola esta vacia, 
+        False si no.'''
         return len(self.items) == 0
 ```
 
-Guardá tu solución en `torre_control.py` para entregar.
+Guardá tu solución conteniendo la definición de la clase `Cola` en `torre_control.py` para entregar.
 
 
 ### Ejercicio 8.12: Canguros buenos y canguros malos
