@@ -15,9 +15,10 @@ La experiencia de cada une les va a permitir decidir cuándo es mas conveniente 
 
 Entregá:
 
-* El archivo `lote.py` del [Ejercicio 8.9](../08_OOP/03_Métodos_Especiales.md#ejercicio-89-mejor-salida-para-objetos).
 * El archivo `informe.py` del [Ejercicio 8.8](../08_OOP/02_Herencia.md#ejercicio-88-volvamos-a-armar-todo).
+* El archivo `lote.py` del [Ejercicio 8.9](../08_OOP/03_Métodos_Especiales.md#ejercicio-89-mejor-salida-para-objetos).
 * El archivo `torre_control.py` del [Ejercicio 8.11](../08_OOP/04_Ejs_OOP.md#ejercicio-811-torre-de-control).
+* El archivo `CangurosBuenos.py` del [Ejercicio 8.12](../08_OOP/04_Ejs_OOP.md#ejercicio-812-canguros-buenos-y-canguros-malos).
 * El archivo `opt_objetos.py` del [Ejercicio 8.14](../08_OOP/05_Ejs_OOP_Volterra.md#ejercicio-814) (optativo).
 
 
