@@ -31,7 +31,7 @@ Es importante ver que la salida dependerá del sistema operativo que estés usan
 Podés cambiar de directorio usando la función `chdir()` (_change directory_). Los directorios pueden ser relativos o absolutos (en sistemas operativos basados en Unix '.' es el directorio actual, '..' es el anterior, '/' es el directorio raíz).
 
 ```python
->>> os.chdir('./Data')              # entro en Data
+>>> os.chdir('./Data')              # entro en Data, subdirectorio del actual
 >>> print(os.getcwd())
 /home/usuario/ejercicios_python/Data
 >>> os.chdir('..')                  # subo un nivel
@@ -56,6 +56,8 @@ En caso de usarlo en Windows, será similar a:
 >>> directorio = os.path.join('c:\\', 'usuario', 'ejercicios_python')
 >>> os.chdir(directorio)
 ```
+
+Usar directorios relativos al actual (que comienzan con './') y no absolutos (que comienzan con '/') facilita la portabilidad del código de una compu a otra.
 
 ## Listar directorios y archivos
 
@@ -202,11 +204,11 @@ for root, dirs, files in os.walk("."):
 ```
 
 
-## Cambiar atributosde un archivo
+## Cambiar atributos de un archivo
 
 Dependiendo del sistema operativo, un archivo puede tener asociadas diferentes fechas (de creación original, de modificación del contenido, de cambio en sus metadatos, de acceso para lectura).
 
-Vamos a cambiar la fecha de modificación de un archivo. Para ello necesitás importar `os` y `datetime`. Después, definís la fecha elegida y llamás a `utime` como se muestra acá:
+Vamos a cambiar la fecha de modificación de un archivo. Para ello necesitás importar `os` y `datetime`. Después, converís la fecha elegida a `timestamp` y se la asocías al archivo con `utime`, como se muestra acá abajo:
 
 ```python
 import os

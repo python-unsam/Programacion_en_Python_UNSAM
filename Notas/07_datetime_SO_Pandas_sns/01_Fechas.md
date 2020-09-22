@@ -5,7 +5,7 @@
 
 ## El módulo datetime
 
-A continuación introducimos el módulo `datetime` que permite trabajar con fechas y horas. Este módulo define un nuevo tipo de objeto: `datetime` (sí, con el mismo nombre del módulo), que permite representar un instante temporal (fecha y hora). También tiene define `date` que  para representar sólo una fecha. Análogamente tiene `time` par unicamente un horario. Finalmente, en esta breve introducción al módulo `datetime` mencionaremos el tipo `timedelta` que representa diferencias entre instantes de tiempos, es decir, duraciones y trabajar con ellos.
+A continuación introducimos el módulo `datetime` que permite trabajar con fechas y horas. Este módulo define un nuevo tipo de objeto: `datetime` (sí, con el mismo nombre del módulo), que permite representar un instante temporal (fecha y hora). También  define objetos de tipo `date`  para representar sólo una fecha y de tipo `time` para guardar y trabajar con horarios. Finalmente, en esta breve introducción al módulo `datetime` mencionamos el tipo `timedelta` que se usa para representar diferencias entre instantes de tiempos, es decir, duraciones y trabajar con ellas.
 
 ### Ejemplo: Obtener fecha y hora actuales
 

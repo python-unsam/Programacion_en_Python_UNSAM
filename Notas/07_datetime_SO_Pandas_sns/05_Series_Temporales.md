@@ -2,9 +2,7 @@
 
 # 7.5 Series temporales
 
-Autores: [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio) y Rafael Grimson
-
-* Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente escribió algunas ideas para este trabajo práctico.
+Para esta Sección contamos con el valioso aporte de [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio). Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente nos compartió algunas ideas para este trabajo práctico.
 
 
 ## Análisis y visualización de series temporales.
@@ -217,6 +215,10 @@ def calcular_fft(y,freq_sampleo=24.):
     tran = (np.fft.fft(y)/N)[:N//2]
     return freq, tran
 ```
+
+Al querer analizar una onda por medio de su transformada de Fourier, es usual quitarle si tuviera una tendencia linel por medio de la función `scipy.signal.detrend()`. En este caso supondremos que la marea media de mantuvo estable a lo largo del período de estudio.
+
+<img src="./detrend.png" width="500">
 
 
 ### Espectro de potencia y de ángulos para San Fernando
