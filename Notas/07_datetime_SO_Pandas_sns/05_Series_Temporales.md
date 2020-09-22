@@ -216,9 +216,9 @@ def calcular_fft(y,freq_sampleo=24.):
     return freq, tran
 ```
 
-Al querer analizar una onda por medio de su transformada de Fourier, es usual quitarle si tuviera una tendencia linel por medio de la función `scipy.signal.detrend()`. En este caso supondremos que la marea media de mantuvo estable a lo largo del período de estudio.
+Al querer analizar una onda por medio de su transformada de Fourier, es usual quitarle si tuviera una tendencia linel usando, por ejemplo, la función `scipy.signal.detrend()`. En este caso supondremos que la marea media de mantuvo estable a lo largo del período de estudio.
 
-<img src="./detrend.png" width="500">
+<img src="./detrend.png" width="300">
 
 
 ### Espectro de potencia y de ángulos para San Fernando
