@@ -211,26 +211,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-Seleccionemos las dos series como vectores de numpy (con la instrucción `values` de pandas).
+Seleccionemos las dos series como vectores de numpy (con el método `to_numpy()`).
 
 ```python
 inicio = '2014-01'
 fin = '2014-06'
-df_sf = df[inicio:fin]['H_SF'].to_numpy()
-df_ba = df[inicio:fin]['H_BA'].to_numpy()
+alturas_sf = df[inicio:fin]['H_SF'].to_numpy()
+alturas_ba = df[inicio:fin]['H_BA'].to_numpy()
 ```
 
 Primero definamos una función que calcule la transformada de Fourier para datos horarios y considerando como unidad de frecuencia los días (descartamos la mitad de los coeficientes de la transformada porque los datos son reales y no complejos). Podés tomarla como una caja negra por ahora...
 
 ```python
-def calcular_fft(y, freq_sampleo=24.0):
-    '''y debe ser una vector con número reales representando datos de una serie temporal.
-    freq_sampleo esta seteado para considerar 24 datos por unidad.
-    Devuelve dos vectores, uno de frecuencias y otro con la transformada propiamente.
-    La transformada contiene los valores complejos que se corresponden con respectivas
-    frecuencias.'''
+def calcular_fft(y, freq_sampleo = 24.0):
+    '''y debe ser un vector con números reales
+    representando datos de una serie temporal.
+    freq_sampleo está seteado para considerar 24 datos por unidad.
+    Devuelve dos vectores, uno de frecuencias 
+    y otro con la transformada propiamente.
+    La transformada contiene los valores complejos
+    que se corresponden con respectivas frecuencias.'''
     N = len(y)
-    freq = np.fft.fftfreq(N, d=1/freq_sampleo)[:N//2]
+    freq = np.fft.fftfreq(N, d = 1/freq_sampleo)[:N//2]
     tran = (np.fft.fft(y)/N)[:N//2]
     return freq, tran
 ```
@@ -246,10 +248,10 @@ En nuestro caso supondremos que la marea media se mantuvo estable a lo largo del
 
 ### Espectro de potencia y de ángulos para San Fernando
 
-Primero entonces calculamos la transformada de las alturas de San Fernando.
+Primero calculamos la transformada de las alturas de San Fernando.
 
 ```python
-freq_sf, fft_sf = calcular_fft(df_sf)
+freq_sf, fft_sf = calcular_fft(alturas_sf)
 ```
 
 Si quisiéramos graficar `freq_sf` contra `fft_sf` no podríamos ver mucho ya que `fft_sf` contiene números complejos.
@@ -280,12 +282,12 @@ El pico en la primera posición efectivamente se corresponde con la frecuencia 0
 111.83
 ```
 
-A partir de esto podemos decir que las altura del río en San Fernando durante este período oscilan alrededor de los 111.8 cm de altura.
+A partir de esto podemos decir que las alturas del río en San Fernando durante este período oscilan alrededor de los 111.8 cm de altura.
 
 Para analizar precisamente el pico semidiurno podemos usar `find_peaks` que provee`scipy.signal` para evitar hacerlo a ojo. Vamos a pedir aquellos picos que superen el valor 8.
 
 ```python
->>> print(signal.find_peaks(np.abs(fft_sf), prominence=8))
+>>> print(signal.find_peaks(np.abs(fft_sf), prominence = 8))
 (array([350]), {'prominences': array([11.4554514]), 'left_bases': array([307]), 'right_bases': array([2109])})
 ```
 
@@ -296,7 +298,7 @@ Esta respuesta nos indica que hay un pico con la prominencia solicitada (al meno
 1.93
 ```
 
-La frecuencia relacionada con esa posición es cercana a dos, como ya habíamos observado en el gráfico. Podemos distinguir los picos agregando un punto rojo y mirando más de cerca el área de interés:
+La frecuencia relacionada con esa posición es cercana a dos, como ya habíamos observado en el gráfico (dos ciclos por día). Podemos distinguir los picos agregando un punto rojo y mirando más de cerca el área de interés:
 
 ```python
 plt.plot(freq_sf, np.abs(fft_sf))
@@ -305,10 +307,10 @@ plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
 # me quedo solo con el último pico
-picoSF = signal.find_peaks(np.abs(fft_sf), prominence=8)[0][-1]
+picoSF = signal.find_peaks(np.abs(fft_sf), prominence = 8)[0][-1]
 # es el pico a analizar, el de la onda de mareas
 # marco ese pico con un circulito rojo
-plt.scatter(freq_sf[picoSF], np.abs(fft_sf)[picoSF], facecolor='r')
+plt.scatter(freq_sf[picoSF], np.abs(fft_sf)[picoSF], facecolor = 'r')
 plt.show()
 ```
 
@@ -323,49 +325,50 @@ Para calcular la fase (entre -pi y pi) de la componente 350ava en el puerto de S
 ![Vectorial](./vectorial.jpg)
 
 ```python
->>> angSF = np.angle(fft_sf)[picoSF]
->>> print(angSF)
+>>> ang_sf = np.angle(fft_sf)[pico_sf]
+>>> print(ang_sf)
 1.4849
 ```
 
-Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfasaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freq_sf[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de
+Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfasaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freq_sf[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con ang_sf[350] corresponde a un retardo de
 
 
 ```python
->>> angSF * 24 / (2*np.pi*freq_sf[350])
+>>> ang_sf * 24 / (2*np.pi*freq_sf[350])
 2.93
 ```
 
-Es decir, este sinusoide está desfazado poco menos de 3hs respecto al seno _neutro_.
+Es decir, este sinusoide está desfasado poco menos de 3hs respecto al seno _neutro_.
 
 ### Espectro de potencia y de ángulos para Buenos Aires
 
 Repitamos velozmente el procedimiento para el puerto de Buenos Aires y analicemos las diferencias.
 
 ```python
-plt.plot(freqBA, np.abs(fftBA))
+freq_ba, fft_ba = calcular_fft(alturas_ba)
+plt.plot(freq_ba, np.abs(fft_ba))
 plt.xlabel("Frecuencia")
 plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
-#me quedo solo con el último pico
-picoBA = signal.find_peaks(np.abs(fftBA), prominence=8)[0][-1]
+# me quedo solo con el último pico
+pico_ba = signal.find_peaks(np.abs(fft_ba), prominence = 8)[0][-1]
 #se grafican los picos como circulitos rojos
-plt.scatter(freqBA[picoBA], np.abs(fftBA)[picoBA], facecolor='r')
+plt.scatter(freq_ba[pico_ba], np.abs(fft_ba)[pico_ba], facecolor='r')
 plt.title("Espectro de Potencias Bs.As.")
 plt.show()
 ```
 
 ![Figura](./Figure175932_.png)
 
-Si buscamos la constante alrededor de la que oscilan las mareas según el nivel del puerto de Buenos Aires obtenemos.
+Si buscamos la constante alrededor de la que oscilan las mareas según el nivel del puerto de Buenos Aires obtenemos:
 
 ```python
->>> np.abs(fftBA[0])
+>>> np.abs(fft_ba[0])
 88.21
 ```
 
-Con este resultado es sencillo obtener una estimación para la diferencia de de alturas de los ceros de escala entre ambos puertos.
+Con este resultado es sencillo obtener una estimación para la diferencia de alturas de los ceros de escala entre ambos puertos.
 
 _Pregunta:_ ¿Cuál es la diferencia así obtenida? ¿De qué otra forma se puede estimar el valor medio de un puerto? ¿Cuánto da la diferencia con este otro método?
 
@@ -379,18 +382,18 @@ Por otra parte, si observamos que el espectro de potencia vemos que los picos en
 Las mareas de Buenos Aires tiene una componente de máxima amplitud en la  frecuencia 1.93 (misma que San Fernando) y con una magnitud de 12.67 (bastante similar a la magnitud correspondiente en San Fernando). Resta estudiar la fase de la curva `HBA` en esta frecuencia para poder determinar con precisión la diferencia de fase entre ambos puertos para ondas de marea. Primero calculamos el ángulo de la componente correspondiente y luego lo convertimos en horas usando el factor `ang2h`:
 
 ```python
->>> angBA = np.angle(fftBA)[picoBA]
->>> print(angBA)
+>>> ang_ba = np.angle(fft_ba)[pico_ba]
+>>> print(ang_ba)
 1.96
->>> freq = freqBA[picoBA]
+>>> freq = freq_ba[pico_ba]
 >>> ang2h = 24 / (2*np.pi*freq)
->>> angBA * ang2h
+>>> ang_ba * ang2h
 3.8786004708135566
 ```
 
 Por lo tanto, el retardo de la onda de mareas puede calcularse usando
 ```python
-(angBA - angSF) * ang2h
+(ang_ba - ang_sf) * ang2h
 ```
 
 ### Ejercicio 7.11: Desfasajes
