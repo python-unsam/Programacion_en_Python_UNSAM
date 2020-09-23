@@ -370,7 +370,9 @@ Si buscamos la constante alrededor de la que oscilan las mareas según el nivel 
 
 Con este resultado es sencillo obtener una estimación para la diferencia de alturas de los ceros de escala entre ambos puertos.
 
-_Pregunta:_ ¿Cuál es la diferencia así obtenida? ¿De qué otra forma se puede estimar el valor medio de un puerto? ¿Cuánto da la diferencia con este otro método?
+_Pregunta 1:_ ¿Cuál es la diferencia de altura media entre los puertos obtenida de esta forma? 
+
+_Pregunta 2:_ ¿De qué otra forma se puede estimar el valor medio de un puerto? ¿Cuánto da la diferencia con este otro método?
 
 Por otra parte, si observamos que el espectro de potencia vemos que los picos en ambos puertos son súmamente similares.
 
@@ -397,8 +399,11 @@ Por lo tanto, el retardo de la onda de mareas puede calcularse usando
 ```
 
 ### Ejercicio 7.11: Desfasajes
+En la Pregunta 1 estimaste el desfasaje vertical entre los ceros de escala de los puertos analizados.
+Ahora tenés que estimar el desfasaje temporal de las ondas de marea entre ambos puertos.
 ¿A cuántos minutos corresponde aproximadamente el tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
-Estimá la diferencia en los ceros de escala de ambos puertos. Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.10](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-710) (vas a tener que redondear a horas enteras el delay temporal).
+
+Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.10](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-710) (vas a tener que redondear a horas enteras el delay temporal).
 
 ## Un poco más avanzados:
 
@@ -407,18 +412,21 @@ Usando el [archivo con datos del Puerto de Zárate](./OBS_Zarate_2013A.csv), est
 
 Obviamente la onda llega atenuada a Zárate. ¿Cómo se refleja esta atenuación en la transformada? ¿Podés cuantificar esta atenuación?
 
-Guardá lo que hayas hecho hasta aca en el archivo `mareas_fft.py` para entregar.
+Guardá lo que hayas hecho hasta acá en el archivo `mareas_fft.py` para entregar.
 
 ### Ejercicio 7.13: Otros períodos
-El primer análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. ¿Se puede realizar el mismo análisis en otros semestres? ¿Es posible utilizar la serie completa? ¿Cuál es el mayor intervalo que podés usar para realizar estos cálculos aprovechar al máximo los datos pero evitando problemas?
+El primer análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. Este ejercicio es una invitación a explorar estos problemas tan frecuentes.
 
-La siguiente función completa datos faltantes y corrige pequeños problemas en los índices. Es un poco brutal tratar así un DataFrame: es conveniente mirar los datos antes de completar faltantes. Lo dejamos como puntero para les que quieran profundizar en estos métodos tan útiles.
+* ¿Se puede comparar Zárate con San Fernando usando todos los datso de Zárate? ¿Cómo se comporta San Fernando en esas fechas?
+* ¿Se pueden usar las series completas de BA y SF para calcular el desfasaje de la onda de mareas? ¿Qué son las alturas negativas? ¿Tienen sentido?
+
+La siguiente función completa datos faltantes y corrige pequeños problemas en los índices. Es un poco brutal tratar así un DataFrame: es conveniente mirar los datos antes de completar faltantes. Lo dejamos como puntero a diferentes  métodos muy útiles para la limpieza de series.
 
 ```python
 def reparar(df):
-    df=df.interpolate()
-    df=df.resample('H').mean()
-    df=df.fillna(method='ffill')
+    df = df.interpolate()
+    df = df.resample('H').mean()
+    df = df.fillna(method = 'ffill')
     return df
 ```
 

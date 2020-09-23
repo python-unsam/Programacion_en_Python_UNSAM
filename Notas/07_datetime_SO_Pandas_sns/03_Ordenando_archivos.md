@@ -13,7 +13,7 @@ _Observación:_ Al final, tu script debería poder ejecutarse desde la línea de
 
 Guardá el script resultante en un archivo `listar_imgs.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
 
-### Ejercicio 7.6: Ordenar el árbol de archivos - Optativo
+### Ejercicio 7.6: Ordenar el árbol de archivos (optativo)
 Escribí un programa que te permita ordenar las imágenes PNG de esta carpeta. Guardalo en un archivo `ordenar_imgs.py`.
 
 1. Creá un nuevo directorio `Data/imgs_procesadas/`.
