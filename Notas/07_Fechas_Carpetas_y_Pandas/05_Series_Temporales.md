@@ -454,11 +454,7 @@ La siguiente función completa datos faltantes y corrige pequeños problemas en 
 def reparar(df):
     df = df.interpolate()
     df = df.resample('H').mean()
-<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
-    df = df.fillna(method='ffill')
-=======
     df = df.fillna(method = 'ffill')
->>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
     return df
 ```
 
