@@ -5,7 +5,7 @@ En esta clase introducimos el módulo `datetime` para manejar datos relacionados
 
 En la segunda mitad introducimos el módulo Pandas y el tipo `DataFrame` así como algunos de sus métodos elementales. Usamos pandas para analizar dos datasets de Arbolado Porteño graficando algunos de sus datos. En esta parte tenés que comparar caracterísiticas de  árboles que crecen en los parques con otros que crecen en las veredas (Sección 4 y ejercicio de revisión por pares).
 
-En la última parte (Sección 5), proponemos análizar ondas de mareas en el Río de la Plata como excusa para introducir el procesamiento de series temporales. Nos metemos un poco en temas específicos con una última parte optativa que incluye un breve análsis de Fourier para medir el tiempo que tarda esta onda de marea en trasladarse de un puerto a otro.
+En la parte, Sección 5, te proponemos análizar ondas de mareas en el Río de la Plata como excusa para introducir el procesamiento de series temporales. Nos metemos un poco en temas específicos con una última parte optativa que incluye un breve análsis de la transformada de Fourier para medir el tiempo que tarda esta onda de marea en trasladarse de un puerto a otro.
 
 
 * [7.1 Manejo de fechas y horas](01_Fechas.md)
