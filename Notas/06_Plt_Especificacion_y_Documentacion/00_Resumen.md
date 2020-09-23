@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Series temporales)](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md)
 
 # 6. Diseño, especificación, documentación y estilo.
 En este curso queremos que aprendas a escribir un script que te resuelva un problema computacional. Pero también queremos que puedas escribir adecuadamente programas más grandes, que los puedas compartir y volver a usar vos misme unos años más tarde.
@@ -24,4 +24,4 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 * [6.7 Cierre de la sexta clase](07_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Series temporales)](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad y Organización de programas)](../05_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md)

@@ -284,7 +284,7 @@ El pico en la primera posición efectivamente se corresponde con la frecuencia 0
 
 A partir de esto podemos decir que las alturas del río en San Fernando durante este período oscilan alrededor de los 111.8 cm de altura.
 
-Para analizar precisamente el pico semidiurno podemos usar `find_peaks` que provee`scipy.signal` para evitar hacerlo a ojo. Vamos a pedir aquellos picos que superen el valor 8.
+Para analizar precisamente el pico semidiurno podemos usar `find_peaks` que provee`scipy.signal` para evitar hacerlo a ojo. Vamos a pedir aquellos picos que tengan al menos cierta diferencia con su entorno (prominencia), un buen valor para esto es el 8. Podés probar otros valores y observar el resultado.
 
 ```python
 >>> print(signal.find_peaks(np.abs(fft_sf), prominence = 8))
@@ -307,22 +307,33 @@ plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
 # me quedo solo con el último pico
+<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
+pico_sf = signal.find_peaks(np.abs(fft_sf), prominence=8)[0][-1]
+# es el pico a analizar, el de la onda de mareas
+# marco ese pico con un circulito rojo
+plt.scatter(freq_sf[pico_sf], np.abs(fft_sf)[pico_sf], facecolor='r')
+=======
 pico_sf = signal.find_peaks(np.abs(fft_sf), prominence = 8)[0][-1]
 # es el pico a analizar, el de la onda de mareas
 # marco ese pico con un circulito rojo
 plt.scatter(freq_sf[pico_sf], np.abs(fft_sf)[pico_sf], facecolor = 'r')
+>>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 plt.show()
 ```
 
-![Figura](./Figure175902_.png)
+<p align="center">
+<img src="./Figure175902_.png">
+</p>
 
-Podemos interpretar estos gráficos como diciendo que si descomponemos la curva de alturas en San Fernando como suma de sinusoidales, el sinusoide con frecuencia 1.93 tiene una magnitud considerablemente llamativa. Se trata de la frecuencia de las mareas lunares justamente.
+Estos gráficos permiten interpretar que si descomponemos la curva de alturas en San Fernando como suma de sinusoidales, el sinusoide con frecuencia 1.93 tiene una magnitud considerablemente llamativa. No es casualidad que este sea un punto distinguido: se trata de la frecuencia de las mareas lunares.
 
 Ahora viene la parte un poco más sutíl: **el análisis de las fases**. Si conocemos la fase de estas componentes en dos puertos distintos, podremos estimar el tiempo que tarda en desplazarse la marea de uno a otro.
 
-Para calcular la fase (entre -pi y pi) de la componente 350ava en el puerto de San Fernando, podemos simplemente usar `np.angle()` y pasarle el número complejo en cuestión:
+Para calcular la fase (entre -π y π) de dicha componente (la que ubicamos en la posición 350) en el puerto de San Fernando, podemos simplemente usar `np.angle()` y pasarle el número complejo en cuestión:
 
-![Vectorial](./vectorial.jpg)
+<p align="center">
+<img src="./vectorial.jpg">
+</p>
 
 ```python
 >>> ang_sf = np.angle(fft_sf)[pico_sf]
@@ -330,11 +341,20 @@ Para calcular la fase (entre -pi y pi) de la componente 350ava en el puerto de S
 1.4849
 ```
 
+<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
+
+Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfasaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freq_sf[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de
+
+
+```python
+>>> ang_sf * 24 / (2 * np.pi * freq_sf[350])
+=======
 Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfasaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freq_sf[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con ang_sf[350] corresponde a un retardo de
 
 
 ```python
 >>> ang_sf * 24 / (2*np.pi*freq_sf[350])
+>>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 2.93
 ```
 
@@ -345,14 +365,22 @@ Es decir, este sinusoide está desfasado poco menos de 3hs respecto al seno _neu
 Repitamos velozmente el procedimiento para el puerto de Buenos Aires y analicemos las diferencias.
 
 ```python
+<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
+=======
 freq_ba, fft_ba = calcular_fft(alturas_ba)
+>>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 plt.plot(freq_ba, np.abs(fft_ba))
 plt.xlabel("Frecuencia")
 plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
+<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
+#me quedo solo con el último pico
+pico_ba = signal.find_peaks(np.abs(fft_ba), prominence=8)[0][-1]
+=======
 # me quedo solo con el último pico
 pico_ba = signal.find_peaks(np.abs(fft_ba), prominence = 8)[0][-1]
+>>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 #se grafican los picos como circulitos rojos
 plt.scatter(freq_ba[pico_ba], np.abs(fft_ba)[pico_ba], facecolor='r')
 plt.title("Espectro de Potencias Bs.As.")
@@ -377,11 +405,11 @@ _Pregunta 2:_ ¿De qué otra forma se puede estimar el valor medio de un puerto?
 Por otra parte, si observamos que el espectro de potencia vemos que los picos en ambos puertos son súmamente similares.
 
 ```python
->>> print(signal.find_peaks(np.abs(fftBA), prominence=8))
+>>> print(signal.find_peaks(np.abs(fft_ba), prominence=8))
 (array([350]), {'prominences': array([12.67228046]), 'left_bases': array([279]), 'right_bases': array([1000])})
 ```
 
-Las mareas de Buenos Aires tiene una componente de máxima amplitud en la  frecuencia 1.93 (misma que San Fernando) y con una magnitud de 12.67 (bastante similar a la magnitud correspondiente en San Fernando). Resta estudiar la fase de la curva `HBA` en esta frecuencia para poder determinar con precisión la diferencia de fase entre ambos puertos para ondas de marea. Primero calculamos el ángulo de la componente correspondiente y luego lo convertimos en horas usando el factor `ang2h`:
+Las mareas de Buenos Aires tiene una componente de máxima amplitud en la  frecuencia 1.93 (misma que San Fernando) y con una magnitud de 12.67 (bastante similar a la magnitud correspondiente en San Fernando). Resta estudiar la fase de la curva de los datos de `df_ba` en esta frecuencia para poder determinar con precisión la diferencia de fase entre ambos puertos para ondas de marea. Primero calculamos el ángulo de la componente correspondiente y luego lo convertimos en horas usando el factor `ang2h`:
 
 ```python
 >>> ang_ba = np.angle(fft_ba)[pico_ba]
@@ -426,7 +454,11 @@ La siguiente función completa datos faltantes y corrige pequeños problemas en 
 def reparar(df):
     df = df.interpolate()
     df = df.resample('H').mean()
+<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
+    df = df.fillna(method='ffill')
+=======
     df = df.fillna(method = 'ffill')
+>>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
     return df
 ```
 
