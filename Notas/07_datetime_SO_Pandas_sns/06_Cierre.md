@@ -16,7 +16,7 @@ Para cerrar esta clase te pedimos dos cosas:
  
 * Que completes [este formulario](https://docs.google.com/forms/d/1LmeHVZqiEznUUD7FjhTbi6eRQFzvb8Er4dOF3mOy9oo) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
-Corrección de pares de esta semana será con el archivo `arbolado_parques_veredas.py` del [Ejercicio 7.9](../07_datetime_SO_Pandas_sns/04_Pandas.md#ejercicio-79-comparando-especies-en-parques-y-en-veredas).
+La corrección de pares de esta semana será con el archivo `arbolado_parques_veredas.py` del [Ejercicio 7.9](../07_datetime_SO_Pandas_sns/04_Pandas.md#ejercicio-79-comparando-especies-en-parques-y-en-veredas).
 
 
 

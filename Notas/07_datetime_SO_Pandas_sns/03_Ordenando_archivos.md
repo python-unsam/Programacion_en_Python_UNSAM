@@ -26,9 +26,9 @@ Escribí un programa que te permita ordenar las imágenes PNG de esta carpeta. G
 4. Los archivos que no son `png` no los modifiques.
 5. Borrá todas las subcarpetas de `Data/ordenar/` que hayan quedado vacías.
 
-Este tipo de tareas se repite con mucha frecuencia. Tener la capacidad de automatizarlas mediante un script de Python te puede ahorrar muchísimo tiempo.
+_Observación:_ Al final, tu script debería poder ejecutarse desde la línea de comandos recibiendo como parámetro el directorio a leer original y un directorio destino (que debería ser creado si no existe).
 
-Podés experimentar nuevas formas, por ejemplo, adentro de `imgs_procesadas`, crear primero carpetas que indiquen el año y dentro de cada carpeta las imagenes correspondientes a ese año.
+_Observación:_ Este tipo de tareas se repite con mucha frecuencia. Tener la capacidad de automatizarlas mediante un script de Python te puede ahorrar muchísimo tiempo.
 
 
 **Algunos puntos importantes:**

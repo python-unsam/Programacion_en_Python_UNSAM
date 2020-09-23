@@ -1,7 +1,7 @@
 [Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_OOP/00_Resumen.md)
 
 # 7. Fechas, Carpetas y Pandas
-En esta clase introducimos el módulo `datetime` para manejar datos relacionados con el tiempo (Sección 1) y un par de funciones del módulo `os` para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo (Sección 2). Luego te proponemos integrar esto para hacer un script que corra desde linea de comandos y te permita ordenar los archivos de cierto tipo (Sección 3).
+En esta clase introducimos el módulo `datetime` para manejar datos relacionados con el tiempo (Sección 1) y un par de funciones del módulo `os` para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo (Sección 2). Luego te proponemos integrar esto para hacer un script que corra desde línea de comandos y te permita ordenar los archivos de cierto tipo (Sección 3).
 
 En la segunda mitad introducimos el módulo Pandas y el tipo `DataFrame` así como algunos de sus métodos elementales. Usamos pandas para analizar dos datasets de Arbolado Porteño graficando algunos de sus datos. En esta parte tenés que comparar caracterísiticas de  árboles que crecen en los parques con otros que crecen en las veredas (Sección 4 y ejercicio de revisión por pares).
 
