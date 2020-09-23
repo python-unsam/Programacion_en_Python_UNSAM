@@ -403,7 +403,7 @@ En la Pregunta 1 estimaste el desfasaje vertical entre los ceros de escala de lo
 Ahora tenés que estimar el desfasaje temporal de las ondas de marea entre ambos puertos.
 ¿A cuántos minutos corresponde aproximadamente el tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
 
-Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.10](../07_datetime_SO_Pandas_sns/05_Series_Temporales.md#ejercicio-710) (vas a tener que redondear a horas enteras el delay temporal).
+Usá estos datos para volver a hacer el gráfico del [Ejercicio 7.10](../07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md#ejercicio-710) (vas a tener que redondear a horas enteras el delay temporal).
 
 ## Un poco más avanzados:
 
