@@ -307,10 +307,10 @@ plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
 # me quedo solo con el último pico
-picoSF = signal.find_peaks(np.abs(fft_sf), prominence = 8)[0][-1]
+pico_sf = signal.find_peaks(np.abs(fft_sf), prominence = 8)[0][-1]
 # es el pico a analizar, el de la onda de mareas
 # marco ese pico con un circulito rojo
-plt.scatter(freq_sf[picoSF], np.abs(fft_sf)[picoSF], facecolor = 'r')
+plt.scatter(freq_sf[pico_sf], np.abs(fft_sf)[pico_sf], facecolor = 'r')
 plt.show()
 ```
 
