@@ -1,16 +1,12 @@
 [Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_OOP/00_Resumen.md)
 
 # 7. Fechas, Carpetas y Pandas
-**Esta clase está en preparación.**
-**El material sufrirá cambios hasta el miércoles 23/9, cuando daremos inicio a estos temas en el curso.**
+En esta clase introducimos el módulo `datetime` para manejar datos relacionados con el tiempo (Sección 1) y un par de funciones del módulo `os` para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo (Sección 2). Luego te proponemos integrar esto para hacer un script que corra desde linea de comandos y te permita ordenar los archivos de cierto tipo (Sección 3).
 
-En esta clase introducimos el módulo `datetime` para manejar datos relacionados con el tiempo y un par de funciones del módulo `os` para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo.
+En la segunda mitad introducimos el módulo Pandas y el tipo `DataFrame` así como algunos de sus métodos elementales. Usamos pandas para analizar dos datasets de Arbolado Porteño graficando algunos de sus datos. En esta parte tenés que comparar caracterísiticas de  árboles que crecen en los parques con otros que crecen en las veredas (Sección 4 y ejercicio de revisión por pares).
 
-En la segunda mitad introducimos el módulo Pandas y el tipo `DataFrame` así como algunos de sus métodos elementales. Terminaremos realizando algunos plots sencillos desde Pandas.
+En la última parte (Sección 5), proponemos análizar ondas de mareas en el Río de la Plata como excusa para introducir el procesamiento de series temporales. Nos metemos un poco en temas específicos con una última parte optativa que incluye un breve análsis de Fourier para medir el tiempo que tarda esta onda de marea en trasladarse de un puerto a otro.
 
-No te marees, son 3 módulos (o bibliotecas) muy diferentes y populares de Python.
-
-Además, hacia el final proponemos un ejercicio de análisis de datos de mareas en el Río de la Plata usando la transformada de Fourier.
 
 * [7.1 Manejo de fechas y horas](01_Fechas.md)
 * [7.2 Manejo de archivos y carpetas](02_Archivos_y_Directorios.md)

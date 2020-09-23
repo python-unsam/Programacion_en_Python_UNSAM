@@ -1,8 +1,8 @@
 [Contenidos](../Contenidos.md) \| [Anterior (5 Ejercicios de objetos inspirados en Lotka Volterra)](05_Ejs_OOP_Volterra.md)
 
-# 8.6 Cierre
+# 8.6 Cierre de la octava clase
 
-Cierre clase
+# Cierre de clase
 
 
 En esta clase vimos las ventajas de estructurar un programa con las ideas Programación Orientada a Objetos. Vimos cómo podés definir tus propias clases y te mostramos cómo este paradigma puede aportar tanto a la organización de un programa "estático" como también para preparar programas para que sean fácilmente extensibles. 

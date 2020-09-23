@@ -17,7 +17,7 @@ Hasta ahora los programas con que estuviste trabajando usaron sólo tipos de dat
 * [8.3 Métodos especiales](03_Métodos_Especiales.md)
 * [8.4 Ejercicios de objetos](04_Ejs_OOP.md)
 * [8.5 Ejercicios de objetos inspirados en Lotka Volterra](05_Ejs_OOP_Volterra.md)
-* [8.6 Cierre](06_Cierre.md)
+* [8.6 Cierre de la octava clase](06_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_datetime_SO_Pandas_sns/00_Resumen.md) \| [Próximo (9 Matrices, Imágenes y ReEx)](../09_Imagenes_y_Objetos/00_Resumen.md)
