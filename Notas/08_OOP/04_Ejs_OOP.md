@@ -75,9 +75,11 @@ Este ejercicio está relacionado con un error muy común en Python. Escribí una
 * Un método llamado `meter_en_marsupio` que, dado un objeto cualquiera, lo agregue a la lista `contenido_marsupio`.
 * Un método `__str__` que devuelve una representación como cadena del objeto `Canguro` y de los contenidos de su marsupio.
 
-* Probá tu código creando dos objetos, `madre_canguro` y `cangurito` y guardá en el marsupio de la madre algunos objetos y al cangurito. 
-* Luego, mirá el ejemplo `CanguroMalo.py` copiado a continuación. Este ejemplo tiene un bug. Analizalo, corregilo. Entregá como respuesta un archivo `CangurosBuenos.py` conteniendo, perimero la clase definida por vos y luego una corrección de la clase definida en el ejemplo, junto con un comentario indicando dónde estaba el error y en qué constía.
-* 
+Probá tu código creando dos objetos, `madre_canguro` y `cangurito` y guardá en el marsupio de la madre algunos objetos y al cangurito. 
+
+Luego, mirá el ejemplo `CanguroMalo.py` copiado a continuación. Este ejemplo tiene un bug. Analizalo, corregilo. Entregá como respuesta un archivo `CangurosBuenos.py` conteniendo, perimero la clase definida por vos y luego una corrección de la clase definida en el ejemplo, junto con un comentario indicando dónde estaba el error y en qué constía.
+
+ 
 ```python
 # CanguroMalo.py
 """Este código continene un 
