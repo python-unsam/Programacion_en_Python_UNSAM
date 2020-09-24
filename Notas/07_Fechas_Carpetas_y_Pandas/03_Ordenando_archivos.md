@@ -11,7 +11,7 @@ Escribí un programa que dado un directorio, imprima en pantalla los nombres de 
 
 _Observación:_ Al final, tu script debería poder ejecutarse desde la línea de comandos recibiendo como parámetro el directorio a leer original. En la [Sección 6.2](../06_Plt_Especificacion_y_Documentacion/02_Modulo_principal.md#modelo-de-script-con-parámetros) dimos un modelo de script que te puede servir.
 
-Guardá el script resultante en un archivo `listar_imgs.py`. Te lo vamos a pedir y va a ser el tema de la corrección de pares de esta clase.
+Guardá el script resultante en un archivo `listar_imgs.py`. 
 
 ### Ejercicio 7.6: Ordenar el árbol de archivos (optativo)
 Escribí un programa que te permita ordenar las imágenes PNG de esta carpeta. Guardalo en un archivo `ordenar_imgs.py`.

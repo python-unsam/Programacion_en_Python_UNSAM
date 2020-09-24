@@ -7,7 +7,7 @@
 
 
 Programación orientada a objetos.
-Hasta ahora los programas con que estuviste trabajando usaron sólo tipos de datos nativos de Python. En esta sección vamos a ver los conceptos de clases y objetos. Vamos a usar la instrucción `class` para definir nuevas clases. Vamos a ir más allá y a hablar del concepto de herencia, una herramienta comunmente usada para escribir programas extensibles. Por último, vamos a referirnos algunos métodos especiales de Python.
+Hasta ahora los programas con que estuviste trabajando usaron sólo tipos de datos nativos de Python. En esta sección vamos a ver los conceptos de clases y objetos. Vamos a usar la instrucción `class` para definir nuevas clases. Vamos a ir más allá y a hablar del concepto de herencia, una herramienta comúnmente usada para escribir programas extensibles. Por último, vamos a referirnos a algunos métodos especiales de Python.
 
 
 
