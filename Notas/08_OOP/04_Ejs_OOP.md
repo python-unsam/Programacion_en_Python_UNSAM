@@ -65,7 +65,7 @@ class Cola:
         return len(self.items) == 0
 ```
 
-Guardá tu solución conteniendo la definición de la clase `Cola` en `torre_control.py` para entregar.
+Guardá tu solución (conteniendo también la definición de la clase `Cola`) en `torre_control.py` para entregar al final de la clase.
 
 
 ### Ejercicio 8.12: Canguros buenos y canguros malos
@@ -122,7 +122,7 @@ madre_canguro.meter_en_marsupio(cangurito)
 print(madre_canguro)
 
 # Al ejecutar este código todo parece funcionar correctamente.
-# Para ver el problema, imprima el contenido de cangurito
+# Para ver el problema, imprimí el contenido de cangurito
 ```
 
 ### Ejercicio 8.13: Instrumento de escritura de Oski

@@ -104,7 +104,7 @@ a ** b      a.__pow__(b)
 abs(a)      a.__abs__()
 ```
 
-Así, al definir un método `__add__(b)` en la clase `Punto` (por ejemplo) nos permitirá sumar dos instancias de esta clase usando el operador `+`.
+Así, al definir un método `__add__(b)` en la clase `Punto`, por ejemplo, nos permitirá sumar dos instancias de esta clase usando el operador `+`.
 
 ```python
 class Punto():
@@ -225,7 +225,7 @@ else:
     x = None
 ```
 
-*Nota: si `getattr()` no encuentra el atributo buscado (`x` en este ejemplo), devuelve el argumento opcional *arg* (`None` en este caso)
+*Nota*: si `getattr()` no encuentra el atributo buscado (`x` en este ejemplo), devuelve el argumento opcional *arg* (`None` en este caso)
 
 ```python
 x = getattr(obj, 'x', None)

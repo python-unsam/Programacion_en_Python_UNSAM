@@ -306,7 +306,7 @@ def informe_camion(archivo_camion, archivo_precios):
     '''
     # Leer archivos con datos
     camion = leer_camion(archivo_camion)
-    precios = read_precios(archivo_precios)
+    precios = leer_precios(archivo_precios)
 
     # Crear los datos del informe
     data_informe = crear_data_informe(camion, precios)
@@ -414,7 +414,7 @@ def informe_camion(archivo_camion, archivo_precios):
     '''
     # Leer archivos con datos
     camion = leer_camion(archivo_camion)
-    precios = read_precios(archivo_precios)
+    precios = leer_precios(archivo_precios)
 
     # Obtener los datos para un informe
     data_informe = crear_informe_data(camion, precios)
@@ -469,7 +469,7 @@ def informe_camion(archivo_camion, archivo_precios, fmt='txt'):
     '''
     # Leer archivos con datos
     camion = leer_camion(archivo_camion)
-    precios = read_precios(archivo_precios)
+    precios = leer_precios(archivo_precios)
 
     # Obtener los datos para un informe
     informe = crear_informe_data(camion, precios)
@@ -498,7 +498,7 @@ def informe_camion(archivo_camion, archivo_precios, fmt='txt'):
     '''
     # Lee archivos de datos
     camion = leer_camion(archivo_camion)
-    precios = read_precios(archivo_precios)
+    precios = leer_precios(archivo_precios)
 
     # Crea la data del informe
     informe = crear_informe_data(camion, precios)
