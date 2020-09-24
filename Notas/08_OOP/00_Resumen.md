@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md) \| [Próximo (9 Matrices, Imágenes y ReEx)](../09_Imagenes_y_Objetos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md) \| [Próximo (9 Generadores e iteradores)](../09_Generadores_e_Iteradores/00_Resumen.md)
 
 # 8. Clases y objetos
 **Esta clase está en preparación.**
@@ -20,4 +20,4 @@ Hasta ahora los programas con que estuviste trabajando usaron sólo tipos de dat
 * [8.6 Cierre de la octava clase](06_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md) \| [Próximo (9 Matrices, Imágenes y ReEx)](../09_Imagenes_y_Objetos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md) \| [Próximo (9 Generadores e iteradores)](../09_Generadores_e_Iteradores/00_Resumen.md)
