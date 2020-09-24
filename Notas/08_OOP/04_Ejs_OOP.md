@@ -124,7 +124,7 @@ madre_canguro.meter_en_marsupio(cangurito)
 print(madre_canguro)
 
 # Al ejecutar este código todo parece funcionar correctamente.
-# Para ver el problema, imprimí el contenido de cangurito
+# Para ver el problema, imprimí el contenido de cangurito.
 ```
 
 ### Ejercicio 8.13: Instrumento de escritura
