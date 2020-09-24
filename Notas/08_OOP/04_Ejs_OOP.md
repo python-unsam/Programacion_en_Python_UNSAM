@@ -138,7 +138,7 @@ Definí una clase `Papel` que contenga un atributo `texto`, un método
 
 * Definí una clase `Plumin` derivada de `InstrumentoDeEscritura`, que herede sus métodos y agregue el método `recargar()`. Los plumines se recargan en el tintero llegando siempre a 7cm3 de tinta.
 
-Para usar el papel y los instrumentos de escritura, escribí un pequeño programa, que tome dos ó tres páginas de texto (por ejemplo el Quijote tomado de la Clase 05) y lo escriba sobre un papel utilizando un instrumento por página (una página son unas 500 palabras), y que sea capaz de recargar tinta en los instrumentos y mostrar el texto finalmente escrito. Calibre los tamaños de las recargas y el consumo de tinta por letra para cada instrumento para estar obligado a cargar tinta al menos una vez con cada uno.
+Para usar el papel y los instrumentos de escritura, escribí un pequeño programa, que tome dos ó tres páginas de texto (por ejemplo [La balada del álamo Carolina](https://el-placard.blogspot.com/2011/03/dos-cuentos-de-haroldo-conti.html) de H. Conti) y lo escriba sobre un papel utilizando un instrumento por página (una página son unas 500 palabras), y que sea capaz de recargar tinta en los instrumentos y mostrar el texto finalmente escrito. Calibre los tamaños de las recargas y el consumo de tinta por letra para cada instrumento para estar obligado a cargar tinta al menos una vez con cada uno.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Métodos especiales)](03_Métodos_Especiales.md) \| [Próximo (5 Ejercicios de objetos inspirados en Lotka Volterra)](05_Ejs_OOP_Volterra.md)
