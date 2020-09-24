@@ -125,7 +125,7 @@ print(madre_canguro)
 # Para ver el problema, imprimí el contenido de cangurito
 ```
 
-### Ejercicio 8.13: Instrumento de escritura de Oski
+### Ejercicio 8.13: Instrumento de escritura
 Definí una clase `Papel` que contenga un atributo `texto`, un método
 `escribir()` que reciba una cadena para agregar al `texto`, y otro método
 `__str__` que devuelva el contenido del texto.
