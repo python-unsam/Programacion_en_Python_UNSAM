@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre)](03_Cierre.md)
 
 # 10.2 Recursión
 
@@ -19,7 +19,8 @@ Escribí una función recursiva que reciba 2 enteros, *n* y *b*, y devuelva
 `True` si *n* es potencia de *b*.
 
 Ejemplos:
-```
+
+```python
 es_potencia(8, 2) -> True
 es_potencia(64, 4) -> True
 es_potencia(70, 10) -> False
@@ -33,7 +34,8 @@ Escribí una funcion recursiva que reciba como parámetros dos cadenas *a* y
 dentro de *a*.
 
 Ejemplo:
-```
+
+```python
 posiciones_de("Un tete a tete con Tete", "te") -> [3, 5, 10, 12, 21]
 ```
 
@@ -54,7 +56,8 @@ Escribí una funcion recursiva que encuentre el mayor elemento de una lista. (si
 ### Ejercicio 10.8: Replicar
 Escribí una función recursiva para replicar los elementos de una lista
 una cantidad n de veces. Por ejemplo:
-```
+
+```python
 replicar([1, 3, 3, 7], 2) -> ([1, 1, 3, 3, 3, 3, 7, 7])
 ```
 
@@ -63,8 +66,7 @@ _Sugerencia: hacé la recursión el el largo de la lista._
 ### Ejercicio 10.9: Pascal
 El [triángulo de Pascal](https://es.wikipedia.org/wiki/Tri%C3%A1ngulo_de_Pascal) es un arreglo triangular de números que se define de la siguiente manera: Las filas se enumeran desde *n = 0*, de arriba hacia
 abajo. Los valores de cada fila se enumeran desde *k = 0* (de izquierda a
-derecha). Los valores que se encuentran en los bordes del triángulo son
-1. Cualquier otro valor se calcula sumando los dos valores contiguos de
+derecha). Los valores que se encuentran en los bordes del triángulo son todos unos. Cualquier otro valor se calcula sumando los dos valores contiguos de
 la fila de arriba.
 
 ![Pascal animado](./PascalTriangleAnimated2.gif)
@@ -143,5 +145,5 @@ hoja A0 como caso base.
 
 Guardala en el archivo `HojasISO.py`.
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre)](03_Cierre.md)
 
