@@ -20,7 +20,7 @@ Escribí un programa que te permita ordenar las imágenes PNG de esta carpeta. G
 2. Usá `os.walk()` para recorrer los archivos en la carpeta `Data/ordenar/` (y sus subcarpetas).
 3. Cuando encuentres archivos con extensión `png` los vas a *procesar*. En este caso *procesar* significa:
     * Leer la fecha que se encuentra codificada en los últimos 8 caracteres de su nombre en el formato AAAAMMDD (año en 4 dígitos, mes en 2 y día en 2).
-    * Usar la fecha obtenida para setear la fecha de última modificación y de último acceso.
+    * Usar la fecha obtenida para setear la fecha de última modificación (y de último acceso si no usás Windows).
     * Cambiarle el nombre al archivo para que no tenga más esos dígitos (ni el guión bajo).
     * Mover el archivo a la carpeta  `Data/imgs_procesadas/`.
 4. Los archivos que no son `png` no los modifiques.
