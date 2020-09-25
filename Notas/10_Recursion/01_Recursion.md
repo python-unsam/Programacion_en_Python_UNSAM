@@ -24,30 +24,30 @@ recursión, veremos cómo es que esto puede funcionar, algunas situaciones en
 las que es conveniente utilizarla y otras situaciones en las que no.
 
 
-## Una función recursiva matemática
+### Una función recursiva matemática
 
-Es muy común tener definiciones inductivas de operaciones, como por ejemplo:
+Es muy común tener definiciones inductivas de operaciones. Un caso paradigmático es del facotrial. Recordemos que el factorial de un número entero positivo n es el producto de todos los números entre 1 y n. La definición usual, inductiva, es la siguiente:
 
 ```
-0! = 1 \\
-x! = x*(x-1)! si x>0
+1! = 1 
+n! = n * (n-1)! si n>1
 ```
 
 Este tipo de definición se traduce naturalmente en una función en Python:
 
 ```python
 def factorial(n):
-    """Precondición: n entero >= 0
+    """Precondición: n entero positivo
        Devuelve: n`"""
-    if n == 0:
+    if n == 1:
         return 1
     return n * factorial(n - 1)
 ```
 
-Esta es la ejecución del factorial para `n = 0` y para `n = 3`.
+Esta es la ejecución del factorial para `n = 1` y para `n = 3`.
 
 ```python
->>> factorial(0)
+>>> factorial(1)
 1
 >>> factorial(3)
 6
@@ -61,8 +61,8 @@ definición inductiva: para calcular el factorial de `n` se debe multiplicar
 Dos piezas fundamentales para garantizar el funcionamiento de este programa
 son:
 
-* Que se defina un *caso base* (en este caso la indicación *no recursiva* de cómo calcular `factorial(0)`).
-* Que el argumento de la función respete la precondición de que `n` debe ser un entero mayor o igual que 0.
+* Que se defina un *caso base* (en este caso la indicación *no recursiva* de cómo calcular `factorial(1)`).
+* Que el argumento de la función respete la precondición de que `n` debe ser un entero mayor o igual que 1.
 
 
 No es increible que esto pueda funcionar adecuadamente en un lenguaje
@@ -76,7 +76,7 @@ de cada paso se asigna a una variable.
 
 ```python
 def factorial(n):
-    if n == 0:
+    if n == 1:
         r = 1
         return r
 
@@ -90,7 +90,7 @@ permite ponerles nombres a los resultados intermedios de cada operación
 para poder estudiar qué sucede a cada paso. Analizá con tu debugger la ejecución de `factorial(3)`.
 
 
-## Algoritmos recursivos y algoritmos iterativos*
+## Algoritmos recursivos y algoritmos iterativos
 
 Llamaremos *algoritmos recursivos* a aquellos que realizan llamadas
 recursivas para llegar al resultado, y *algoritmos iterativos* a
@@ -106,7 +106,7 @@ vista anteriormente sería:
 
 ```python
 def factorial(n):
-    """Precondición: n entero >= 0
+    """Precondición: n entero positivo
        Devuelve: n`"""
     fact = 1
     for num in range(n, 1, -1):
@@ -127,23 +127,26 @@ Es por esto que, en general, las versiones recursivas de los algoritmos
 utilizan más memoria (ya que la pila de ejecución se guarda en
 memoria) pero suelen ser más elegantes.
 
-## Un ejemplo de recursión elegante*
+### Un ejemplo de recursión elegante
 
 Consideremos ahora otro problema que puede ser resuelto de forma elegante
 mediante un algoritmo recursivo.
 
-La función `potencia(b, n)`, vista en unidades anteriores,
-realizaba `n` iteraciones para poder obtener el valor de `b^n`.
-Sin embargo, es posible optimizarla teniendo en cuenta que:
+La función `potencia(b, n)` que vimos cuando hablamos de invariantes en la Sección ?,
+realiza `n` iteraciones para poder obtener el valor de `b^n`.
+
+Sin embargo, es posible optimizarla teniendo en cuenta los siguientes hechos:
 
 ```
 b^n = b^(n/2) * b^(n/2)                si n es par, y
 b^n = b^((n-1)/2) * b^((n-1)/2) * b    si n es impar.
 ```
 
+Esta ecuaciones nos permites diseñar un algoritmo muchísimo más eficiente. Esta situación guarda cierta analogía con el problema de la búsqueda en una lista ordenada. La idea es en un paso reducir _el tamaño_ del problema a la mitad.
+
 Antes de programar cualquier función recursiva es necesario decidir cuál
-será el *caso base* y cuál el *caso recursivo*.  Para esta función,
-tomaremos `n=0` como el caso base, en el que devolveremos `1`; y el caso
+será el *caso base* y cuál el *paso recursivo*.  Para esta función,
+tomaremos `n=0` como el caso base (devolveremos `1`). El paso
 recursivo tendrá dos partes, correspondientes a los dos posibles grupos de
 valores de `n`.
 
@@ -235,13 +238,13 @@ Esto se debe a que utilizando recursión el uso de la pila de llamadas a
 funciones oculta el proceso de apilado y desapilado y permite concentrarse
 en la parte importante del algoritmo.
 
-## Un ejemplo de recursión poco eficiente
+### Un ejemplo de recursión poco eficiente
 
 Del ejemplo anterior se podría deducir que siempre es mejor utilizar algoritmos
-recursivos; sin embargo ---como ya se dijo--- cada situación debe ser analizada por separado.
+recursivos; sin embargo --como dijimos antes-- cada situación merece ser analizada por separado.
 
 Un ejemplo clásico en el cual la recursión tiene un resultado muy poco
-eficiente es el de los números de Fibonacci.  La sucesión de Fibonacci está
+eficiente es el de los números de Fibonacci. La sucesión de Fibonacci está
 definida por la siguiente relación:
 
 ```
@@ -251,7 +254,11 @@ F(n) = F(n - 1) + F(n - 2)  si n > 1
 ```
 
 Los primeros números de esta sucesión son: `0`, `1`, `1`, `2`, `3`, `5`, `8`,
-`13`, `21`, `34`, `55`.
+`13`, `21`, `34`, `55`. La sucesión tiene numerosas aplicaciones en computación y matemática y también aparece en configuraciones biológicas, como en las flores de girasoles, en la configuración de los ananás o las piñas de las coníferas, en la reproducción de conejos, etc. La siguiente imágen muestra su uso para aproximar una espiral aurea:
+
+
+![Espiral a partir de la succión de Fibonacci](./280px-Fibonacci_spiral_34.svg.png)
+
 
 Dada la definición recursiva de la sucesión, puede resultar muy tentador
 escribir una función que calcule en valor de `fib(n)` de la siguiente
@@ -302,7 +309,7 @@ caso iterativo se calcula el número de Fibonacci de forma incremental, de
 modo que para obtener el valor de `fib(n)` se harán `n-1`
 iteraciones.
 
-_Observación_: En definitiva, vemos que un algoritmo recursivo **no** es necesariamente mejor que uno iterativo, ni viceversa. En cada situación será conveniente analizar cuál algoritmo provee la solución al problema de forma más clara y eficiente. 
+_En resumen_: vimos que un algoritmo recursivo **no** es necesariamente mejor que uno iterativo, ni viceversa. En cada situación es conveniente analizar cuál algoritmo provee una solución más clara y eficiente. 
 
 
 ## Diseño de algoritmos recursivos
@@ -333,7 +340,7 @@ reiteradamente la lista hasta que la misma quede vacía.
 Si podemos hacer estas tres cosas, tendremos un algoritmo recursivo para
 nuestro problema.
 
-## Un primer diseño recursivo
+### Un primer diseño recursivo
 
 Supongamos que queremos programar una función `sumar(lista)` que
 determine en forma recursiva la suma de una secuencia `lista` de
@@ -350,11 +357,8 @@ Nuestro caso base será algo así como:
         return 0
 ```
 
-Queremos converger a que dada cualquier lista de la reducción de nuestro
-problema terminemos en el caso base. Hay muchas maneras de reducir una lista
-para terminar teniendo cero elementos pero para este caso vamos a proponer la
-más fácil: si cada llamada recursiva saca un elemento, tarde o temprano
-covergeremos a una lista vacía.
+Queremos diseñar un paso recursivo que relice _una reducción_ de manera que dada cualquier lista la aplicación sucesiva de la reducción seleccionada converja al caso base. Hay muchas maneras de reducir una lista
+para lograr esto; para este caso vamos a proponer una suy sencilla: sacar el primer elemento. Si cada llamada recursiva saca el primer elemento, tarde o temprano covergeremos a una lista vacía.
 
 Nuestra llamada recursiva podría ser algo así como:
 
@@ -401,12 +405,10 @@ def sumar(lista):
    return lista[0] + sumar(lista[1:])
 ```
 
-## Pasaje de la información
+### Recursión de cola
 
 Dentro de los problemas recursivos no siempre es inmediato establecer cómo
-se va a propagar la información entre las llamadas recursivas, es decir, la
-reducción de la solución de los subproblemas en la solución del problema
-general.
+se va a propagar la información entre las llamadas recursivas. Es decir, cómo va a interactuar la solución de el o los subproblemas en la solución del problema general.
 
 En todos los ejemplos presentados hasta el momento la información del resultado
 se propagó desde las hojas del árbol de llamadas (los casos bases) hacia las
@@ -456,7 +458,7 @@ def sumar(lista):
 tan solo reemplazando la recursión por un bucle y actualizando las
 variables según los parámetros de la llamada recursiva.
 
-## Modificación de la firma
+### Modificación de la firma
 
 La *firma* de una función es su nombre, más los
 parámetros que recibe, más los valores que devuelve. Para invocar una función
@@ -476,9 +478,10 @@ Hay casos en los que no podemos salvar un cambio en la firma.  Por ejemplo,
 supongamos que queremos diseñar una función recursiva que calcule el promedio
 de una secuencia de números.
 
-Como ya sabemos diseñar funciones recursivas intuimos que el caso base será
+Como ya sabemos diseñar funciones recursivas, intuimos que el caso base será
 cuando la lista esté vacía y que la reduciremos sacando de a un elemento por
 vez. El cuerpo de nuestra función será algo así:
+
 ```python
 def promediar(lista):
     if len(lista) == 0:
@@ -487,11 +490,8 @@ def promediar(lista):
 ```
 Ahora bien, con esto no alcanza para resolver el problema.
 
-Para calcular un promedio necesitamos computar tanto una suma como contar
-la cantidad de elementos. Las funciones van a estar computando dos valores
-cuando el resultado del problema es evidentemente uno solo. Si bien puede
-elaborarse una solución similar a la que ya ensayamos con `sumar`
-complicaría innecesariamente el código. Es preferible modificar la firma
+Para calcular un promedio necesitamos tanto calcular la suma como contar
+la cantidad de elementos. Entonces, una implementación recursiva va a estar computando dos valores cuando el resultado del problema es evidentemente uno solo. Si bien puede elaborarse una solución similar a la que ya ensayamos con `sumar` complicaría innecesariamente el código. Es preferible modificar la firma
 de la función.
 
 Implementemos el problema resolviendo primero la llamada recursiva (en una
@@ -504,6 +504,7 @@ def _promediar(lista):
     suma, cantidad = _promediar(lista[1:])
     return lista[0] + suma, cantidad + 1
 ```
+
 Puede verse que esta función cumple con las reglas de diseño de recursividad
 que describimos antes. Con lo que no cumple esta función es con la firma
 natural de la función `promediar()` que queríamos diseñar, ya que `_promediar()` devuelve dos cosas y no una.
@@ -532,10 +533,9 @@ querríamos que las mismas se reiteraran en cada iteración recursiva porque
 consumirían recursos innecesarios. Entonces las podemos resolver en la función
 wrapper, antes de empezar la recursión.
 
-Por ejemplo, en la sección~\ref{recursion_potencia* implementamos la potencia
+Por ejemplo, hace un rato implementamos la potencia
 en forma recursiva con la restricción `n \geq 0`. Pero dado que `b^n = (1/b)^(-n)` podemos aprovechar el código implementado para
-resolver para cualquier `n` entero. Podríamos modificar el código de `potencia()` para incluir este caso, pero se reiteraría la comprobación en cada recursión. Para un caso así sería más sencillo construir una función wrapper
-e incluir ahí todo lo que consideremos necesario.
+resolver para cualquier `n` entero. Podríamos modificar el código de `potencia()` para incluir este caso, pero se reiteraría la comprobación en cada nivel de la recursión. Para este caso resulta más sencillo construir una función wrapper e incluir ahí todo lo que consideremos necesario.
 Habiendo renombrado la función original como `_potencia`, nuestro wrapper sería:
 
 ```python
@@ -551,10 +551,16 @@ def potencia(b, n):
 ## Limitaciones
 
 Si creamos una función sin *caso base*, obtendremos el equivalente
-recursivo de un bucle infinito.  Sin embargo, como cada llamada recursiva
-agrega un elemento a la pila de llamadas a funciones y la memoria de
-nuestras computadoras no es infinita, el ciclo deberá terminarse cuando se
-agote la memoria disponible.
+recursivo de un bucle infinito. 
+
+Este es un bucle infinito y corre para siempre.
+```python
+i = 0
+while i < 10:
+    suma = suma + i
+```
+
+En bucle recursivo infinito, sin embargo, termina agotando la memoria. Esto se debe a que cada llamada recursiva agrega un elemento a la pila de llamadas a funciones y la memoria de nuestras computadoras no es infinita.
 
 En particular, en Python, para evitar que la memoria se termine, la pila de
 ejecución de funciones tiene un límite. Es decir, que si se ejecuta un
@@ -589,15 +595,12 @@ decir, no existen construcciones `while` ni `for`.
 
 Estos lenguajes cuentan con optimización de recursión de cola,
 una optimización para que cuando se identifique que la recursión es de cola,
-no se apile el estado de la función
-innecesariamente, evitando el consumo adicional de memoria mencionado
-anteriormente.
+no se apile el estado de la función innecesariamente, evitando el consumo adicional de memoria mencionado anteriormente.
 
 La ejecución de todas las funciones con recursión de cola vistas en esta
 unidad podrían ser optimizada por el compilador o intérprete del lenguaje.
-\end{sabias_que*
 
-## Resumen*
+## Resumen
 
 
 * A medida que se realizan llamadas a funciones, el estado cada

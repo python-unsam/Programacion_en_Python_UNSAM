@@ -9,7 +9,7 @@ Podemos modificar muchos comportamientos de Python definiendo lo que se conoce c
 Una clase puede tener definidos métodos especiales. Estos métodos tienen un significado particular para el intérprete de Python. Sus nombres empiezan y terminan en `__` (doble guión bajo). Por ejemplo `__init__`.
 
 ```python
-class Stock(object):
+class Lote(object):
     def __init__(self):
         ...
     def __repr__(self):
@@ -40,7 +40,7 @@ La función `str()` se usa para crear una representación agradable de ver:
 >>>
 ```
 
-Pero para crear una representación más informatriva para programadores, se usa la función `repr()`. 
+Pero para crear una representación más informativa para programadores, se usa la función `repr()`. 
 
 ```python
 >>> repr(d)
@@ -57,15 +57,15 @@ class Date(object):
         self.month = month
         self.day = day
 
-    # Used with `str()`
+    # Con `str()`
     def __str__(self):
         return f'{self.year}-{self.month}-{self.day}'
 
-    # Used with `repr()`
+    # Con `repr()`
     def __repr__(self):
         return f'Date({self.year},{self.month},{self.day})'
 ```
-*Nota: Hay una convención para `__repr__()` que indica que debe devolver un string que, cuando sea pasado a `eval()` vuelva a crear el objeto subayacente. Analizá el ejemplo de `datetime.date(2020, 12, 21)`.  Si no es posible crear un string que haga éso, la convención es generar una representación que sea fácil de interpretar para una persona.*
+*Nota: Hay una convención para `__repr__()` que indica que debe devolver un string que, cuando sea pasado a `eval()` vuelva a crear el objeto subayacente. Analizá el ejemplo de `datetime.date(2020, 12, 21)`. Si no es posible crear un string que haga eso, la convención es generar una representación que sea fácil de interpretar para una persona.*
 
 ```python
 class Punto():
@@ -154,14 +154,14 @@ class Secuencia:
 El proceso de invocar un método puede dividirse en dos partes:
 
 1. Búsqueda: Se usa el operator `.`
-2. Llamado : Se usan `()`
+2. Llamado: Se usan `()`
 
 ```python
->>> m = Lote('Pera',100,490.10)
+>>> m = Lote('Pera', 100, 490.10)
 >>> c = m.costo  # Búsqueda
 >>> c
 <bound method Lote.costo of <Lote object at 0x590d0>>
->>> c()         # Llamado
+>>> c()          # Llamado
 49010.0
 >>>
 ```
@@ -170,13 +170,13 @@ El proceso de invocar un método puede dividirse en dos partes:
 
 ### Métodos ligados
 
-Un método que aún no ha sido llamado por el operador de llamado a funciones `()` se conoce como *método ligado* y opera dentro de la instancia en la que fué originado.
+Un método que aún no ha sido llamado por el operador de llamado a funciones `()` se conoce como *método ligado* y opera dentro de la instancia en la que fue originado.
 
 ```python
 >>> m = Lote('Pera', 100, 490.10) 
 >>> m
 <Lote object at 0x590d0>
->>> c = m.cost
+>>> c = m.costo
 >>> c
 <bound method Lote.costo of <Lote object at 0x590d0>>
 >>> c()
@@ -236,6 +236,7 @@ x = getattr(obj, 'x', None)
 ## Ejercicios
 
 ### Ejercicio 8.9: Mejor salida para objetos
+Modificá el objeto `Lote` que definiste en `lote.py` (del [Ejercicio 8.1](../08_OOP/01_Clases.md#ejercicio-81-objetos-como-estructura-de-datos)) de modo que el método `__repr__()` genere una salida más agradable. Por ejemplo queremos un comportamiento como éste: 
 
 ```python
 >>> peras = Lote('Pera', 100, 490.1)
@@ -250,7 +251,7 @@ Fijate lo que ocurre cuando leés un camión de frutas y mirás la salida result
 >>> import informe
 >>> camion = informe.leer_camion('Data/camion.csv')
 >>> camion
-... fijate cual es la salida ...
+... fijate cuál es la salida ...
 >>>
 ```
 
@@ -271,16 +272,17 @@ cantidad = 100
 >>>
 ```
 
-Queremos que notes algo interesante: los datos de salida están completamente especificados por los nombres de los atributos listados en la variable `columnas`. No fué necesario hacer ninguna conversión ni preguntar nada al usuario para usar el nombre de un dato como nombre de una variable.  
+Queremos que notes algo interesante: los datos de salida están completamente especificados por los nombres de los atributos listados en la variable `columnas`. No fue necesario hacer ninguna conversión ni preguntar nada al usuarie para usar el nombre de un dato como nombre de una variable.  
 
+En el archivo `formato_tabla.py` (del [Ejercicio 8.6](../08_OOP/02_Herencia.md#ejercicio-86-usemos-herencia-para-cambiar-la-salida)), usá esta idea pero extendela, y creá una función `imprimir_tabla()` que imprima una tabla mostrando, de una lista de objetos de tipo arbitrario, una lista de atributos especificados por el usuarie.
 
 Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones) `imprimir_tabla()` también debería aceptar cualquier instancia de la clase `FormatoTabla` para definir el formato de la salida. La idea es que funcione más o menos así:
 
 ```python
 >>> import informe
->>> portfolio = informe.leer_camion('Data/camion.csv')
->>> from formato_tabla import crear_formato, imprimir_tabla
->>> formateador = crear_formato('txt')
+>>> camion = informe.leer_camion('Data/camion.csv')
+>>> from formato_tabla import crear_formateador, imprimir_tabla
+>>> formateador = crear_formateador('txt')
 >>> imprimir_tabla(camion, ['nombre','cajones'], formateador)
     Nombre   Cajones
 ---------- ----------
