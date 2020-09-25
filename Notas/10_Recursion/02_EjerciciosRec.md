@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre)](03_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre de la clase de Recursión)](03_Cierre.md)
 
 # 10.2 Recursión
 
@@ -145,5 +145,5 @@ hoja A0 como caso base.
 
 Guardala en el archivo `HojasISO.py`.
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre)](03_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre de la clase de Recursión)](03_Cierre.md)
 
