@@ -192,7 +192,7 @@ Mostrar los pasos del ordenamiento de la lista: `[6, 0, 3, 2, 5, 7, 4, 1]` con l
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan.
 
 ### Ejercicio 11.7: 
-Rehace el último ejercicio de la sección anterior (Ejercicio ?) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
+Rehace el último ejercicio de la sección anterior ([Ejercicio 11.4](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-114)) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
 
 ### Ejercicio 11.8: 
 Escribí una función `merge3sort` que funcione igual que el merge sort pero
