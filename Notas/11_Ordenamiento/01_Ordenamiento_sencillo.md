@@ -8,6 +8,8 @@ El problema del ordenamiento es tan fundamental que, a pesar que Python ya lo ha
 ## Ordenamiento por selección
 El método de *ordenamiento por selección* se basa en la siguiente idea:
 
+![Selección](./Selection-Sort-Animation.gif)
+
 ![Ejemplo_Seleccion](./seleccion.png)
 
 Una implementación en Python puede verse en el siguiente código.
@@ -115,6 +117,9 @@ lista que se desea ordenar y algunas variables de tamaño 1.
 ## Ordenamiento por inserción
 
 El método de *ordenamiento por inserción* se basa en la siguiente idea:
+
+![Inserción](./Insertion-sort-animation.gif)
+
 
 ![Ejemplo_insercion](./insercion.png)
 
@@ -272,7 +277,7 @@ Como en el primer paso tenemos la garantía de que el mayor elemento quedó al f
 
 Programá una fucnión `ord_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuánta comparaciones realiza esta función en una lista de largo n?
 
-Si no te sale con estas indicaciones, podés consultar Wikipedia u otras fuentes sobre [ordenamiento por burbujeo](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja). Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
+Si no te sale con estas indicaciones, podés consultar [Wikipedia](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja) u otras fuentes sobre ordenamiento por burbujeo. Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
 
 
 ### Ejercicio 11.3: 
