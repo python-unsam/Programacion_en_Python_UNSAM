@@ -2,18 +2,18 @@
 
 # 11.2 Divide y reinarás
 
-Los métodos de ordenamiento vistos en la sección anterior eran métodos
+El problema del ordenamiento es un problema fundamental y hay [muchísimos algoritmos que lo resuelven](https://www.youtube.com/watch?v=kPRA0W1kECg). Los métodos de ordenamiento vistos en la sección anterior eran métodos
 iterativos cuyo tiempo de ejecución era cuadrático.
 
-Veremos ahora el merge sort que es un algoritmo un poco más complejo conceptualmente pero menos complejo computacionalmente. El algoritmo está basado en una idea muy fecunda en el diseño de algoritmos eficientes que se denomina **divide y reinarás** (ó _divide and conquer_). 
+Veremos ahora el **merge sort** que es un algoritmo un poco más complejo conceptualmente pero menos complejo computacionalmente. El algoritmo está basado en una idea muy fecunda en el diseño de algoritmos eficientes que se denomina **divide y reinarás** (ó _divide and conquer_ en inglés). 
 
-Divide y reinarás es un paradigma de diseño de algoritmos recursivos que trabaja partiendo el problema original en subproblemas del mismo tipo pero más sencillos de resolver. Las soluciones de estos subproblemas luego se combinan para dar una solución del problema original. 
+Divide y reinarás es un paradigma de diseño de algoritmos recursivos que trabaja partiendo (dividiendo) el problema original en subproblemas del mismo tipo pero más sencillos de resolver. Las soluciones de estos subproblemas luego se combinan para obtner una solución del problema original. 
 
-La correctitud de los algoritmos de este tipo suele probarse utilizando la inducción matemática y el cálculo de su complejidad involucra la resolución de ecuaciones de recurrencia que escapan el alcance de este curso.
+La correctitud de los algoritmos de este tipo suele probarse utilizando la inducción matemática y el cálculo de su complejidad involucra la resolución de ecuaciones de recurrencia cuyos detalles escapan el alcance de este curso.
 
-## Ordenamiento por mezcla, o *Merge sort* 
+## El algoritmo *merge sort* (u odenamiento por mezcla)
 
-*Merge sort* se basa en la siguiente idea:
+El *merge sort* se basa en la siguiente idea:
 
 * Si la lista es pequeña (vacía o de tamaño 1) ya está ordenada y
 no hay nada que hacer. De lo contrario hacer lo siguiente:
@@ -188,11 +188,12 @@ Mostrar los pasos del ordenamiento de la lista: `[6, 0, 3, 2, 5, 7, 4, 1]` con l
 ### Ejercicio 11.6: 
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan.
 
-### Ejercicio 11.7: Escribí una función `merge_sort_3` que funcione igual que el merge sort pero
-en lugar de dividir los valores en dos partes iguales, los divida en tres. Debrás escribir la función `merge(lista_1, lista_2, lista_3)`. ¿Cómo te parece que se va a comportar este método con respecto al merge sort original?
+### Ejercicio 11.7: 
+Rehace el último ejercicio de la sección anterior (Ejercicio ?) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
 
 ### Ejercicio 11.8: 
-Rehace el último ejercicio de la sección anterior incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
+Escribí una función `merge3sort` que funcione igual que el merge sort pero
+en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Debrás escribir la función `merge3(lista1, lista2, lista3)`. ¿Cómo te parece que se va a comportar este método con respecto al merge sort original?
 
 
 
