@@ -5,7 +5,7 @@
 ## Cierre clase
 
 
-* El archivo `burbujeo.py` del [Ejercicio 11.1](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-111-burbujeo).
+* El archivo `burbujeo.py` del [Ejercicio 11.2](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-112-burbujeo).
 * 
 
 

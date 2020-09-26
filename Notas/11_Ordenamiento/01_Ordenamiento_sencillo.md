@@ -259,23 +259,23 @@ cortas el tiempo de ejecución es bastante bueno.
 
 ## Ejercicios
 
-###  Ejercicio:
-
+### Ejercicio 11.1: 
 Describí los pasos del ordenamiento de la lista `[0, 9, 3, 8, 5, 3, 2, 4]`
 con los algoritmos de inserción y selección.
 
-### Ejercicio 11.1: burbujeo
-El ordenamiento por burbujeo se basa en una idea bastante sencilla: Comparar dos elementos contiguos y si el orden es adecuado los deja como están, sino los intercambia. La repetición de este procedimiento (una burbuja) a lo largo de la lista (recorriéndola desde el comienzo hasta el final) garantiza llevar el mayor elemento al final de la lista, pero no garantiza que el menor elemento haya quedado en el primer lugar. De hecho, en general, el menor elemento solo avanza una posición en una recorrida de la lista. Es por esto que estas recorridas se repiten sucesivas veces (¿cuántas hace falta?) de manera de garantizar que el lista quede completamente ordenada. 
+### Ejercicio 11.2: burbujeo
+![Burbujeo](./Bubble_sort_animation.gif)
+
+El ordenamiento por burbujeo se basa en una idea bastante sencilla. El algoritmo compara dos elementos contiguos de la la lista y, si el orden es adecuado, los deja como están, si no, los intercambia. La repetición de este *paso elemental* (una burbuja) a lo largo de la lista (recorriéndola desde el comienzo hasta el final) garantiza llevar el mayor elemento al final de la lista, pero no garantiza que el menor elemento haya quedado en el primer lugar. De hecho, el menor elemento solo se mueve un paso hacia la izquierda en una recorrida completa de la lista. Es por esto que estas recorridas se repiten sucesivas veces (¿cuántas hace falta?) de manera de garantizar que el lista quede completamente ordenada. 
 
 Como en el primer paso tenemos la garantía de que el mayor elemento quedó al final de la lista, la segunda recorrida puede evitar llegar hasta esa última posición. Así, cada recorrida es más corta que la anterior. En cada recorrida se comparan todos los pares de elementos sucesivos (en el rango correspondiente) y se intercambian si no están ordenados.
 
-Programá una fucnión `ordenar_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuánta operaciones realiza está función en una lista de largo n?
+Programá una fucnión `ord_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuánta comparaciones realiza esta función en una lista de largo n?
 
 Si no te sale con estas indicaciones, podés consultar Wikipedia u otras fuentes sobre [ordenamiento por burbujeo](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja). Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
 
 
-###  Ejercicio:
-
+### Ejercicio 11.3: 
 Hacé un programa que genere una lista aleatoria de largo N y la ordene con los tres métodos (burbujeo, inserción y selección)
 
 Modificá el código de las tres funciones para que cuenten cuántas comparaciones entre elementos de la lista realiza cada una. Por ejemplo, `ord_seleccion` realiza comparaciones (entre elementos de la lista) sólo cuando llama a `buscar_max(lista, a, b)` y en ese caso realiza `b-a` comparaciones. 
@@ -284,9 +284,8 @@ _Cuidado_: usá la misma lista para los tres métodos así la compración es jus
 
 Para N=10, hacé que tu programa repita 100 veces estos conteos e imprima el promedio de comparaciones realizado por cada método.
 
-###  Ejercicio: 
-
-Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y  `comp_burbujeo`. 
+### Ejercicio 11.4: 
+Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y `comp_burbujeo`. 
 
 Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? ¿Es lineal (es decir, se ve como una recta) la complejidad en función del largo de las listas?
 

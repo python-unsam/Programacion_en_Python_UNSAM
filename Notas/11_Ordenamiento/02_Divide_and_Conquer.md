@@ -192,16 +192,16 @@ ordenar.
 
 ## Ejercicios:
 
-### Ejercicio 11.2: 
+### Ejercicio 11.5: 
 Mostrar los pasos del ordenamiento de la lista: `[6, 0, 3, 2, 5, 7, 4, 1]` con los métodos de inserción y con merge sort. ¿Cuáles son las principales diferencias entre los métodos? ¿Cuál usarías en qué casos?
 
-### Ejercicio 11.3: 
+### Ejercicio 11.6: 
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan.
 
-### Ejercicio 11.4: Escribí una función `merge_sort_3` que funcione igual que el merge sort pero
+### Ejercicio 11.7: Escribí una función `merge_sort_3` que funcione igual que el merge sort pero
 en lugar de dividir los valores en dos partes iguales, los divida en tres. Debrás escribir la función `merge(lista_1, lista_2, lista_3)`. ¿Cómo te parece que se va a comportar este método con respecto al merge sort original?
 
-### Ejercicio 11.5: 
+### Ejercicio 11.8: 
 Rehace el último ejercicio de la sección anterior incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
 
 
