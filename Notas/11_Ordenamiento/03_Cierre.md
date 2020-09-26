@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Ordenamiento mergesort)](02_Divide_and_Conquer.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Divide y reinarás)](02_Divide_and_Conquer.md)
 
 # 11.3 Cierre de la clase de Ordenamiento
 
@@ -12,5 +12,5 @@
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Ordenamiento mergesort)](02_Divide_and_Conquer.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Divide y reinarás)](02_Divide_and_Conquer.md)
 

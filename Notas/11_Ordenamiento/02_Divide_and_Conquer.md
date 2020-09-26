@@ -1,12 +1,15 @@
 [Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 Cierre de la clase de Ordenamiento)](03_Cierre.md)
 
-# 11.2 Ordenamiento mergesort
+# 11.2 Divide y reinarás
 
-Los métodos de ordenamiento vistos en la unidad anterior eran métodos
+Los métodos de ordenamiento vistos en la sección anterior eran métodos
 iterativos cuyo tiempo de ejecución era cuadrático.
 
-En esta unidad veremos un método de ordenamiento basado
-en un planteo recursivo del problema, que nos permitirán ordenar listas de forma mucho más eficiente.
+Veremos ahora el merge sort que es un algoritmo un poco más complejo conceptualmente pero menos complejo computacionalmente. El algoritmo está basado en una idea muy fecunda en el diseño de algoritmos eficientes que se denomina **divide y reinarás** (ó _divide and conquer_). 
+
+Divide y reinarás es un paradigma de diseño de algoritmos recursivos que trabaja partiendo el problema original en subproblemas del mismo tipo pero más sencillos de resolver. Las soluciones de estos subproblemas luego se combinan para dar una solución del problema original. 
+
+La correctitud de los algoritmos de este tipo suele probarse utilizando la inducción matemática y el cálculo de su complejidad involucra la resolución de ecuaciones de recurrencia que escapan el alcance de este curso.
 
 ## Ordenamiento por mezcla, o *Merge sort* 
 
@@ -27,14 +30,17 @@ deberemos ordenar recursivamente `[6, 7, -1, 0]` y
 ordenadas obtenemos la solución buscada:
 `[-1, 0, 2, 3, 5, 6, 7, 8]`.
 
-Diseñamos la función `merge_sort(lista)`:
+Veamos otro ejemplo con un gif animado:
+![mergesort](./Merge-sort-example-300px.gif)
+
+Diseñemos la función `merge_sort(lista)`:
 
 * Si lista es pequeña (vacía o de tamaño 1) ya está ordenada y
 no hay nada que hacer. Se devuelve lista original.
 * De lo contrario:
   * `medio = len(lista) // 2`
-  * `izq = merge_sort(lista[:m])`
-  * `der = merge_sort(lista[m:])`
+  * `izq = merge_sort(lista[:medio])`
+  * `der = merge_sort(lista[medio:])`
   * Se devuelve `merge(izq, der)`.
 
 Falta sólo diseñar la función `merge`: dadas dos listas ordenadas
@@ -51,17 +57,15 @@ almacenaremos el resultado.
 elementos para comparar en ambas listas.
 
 * Si el menor es el de `lista1`:
-  * Agregar el elemento `i` de `lista1` al final del
-resultado.
-  * Avanzar el índice `i`.
+  * Agregar el elemento `lista1[i]` al final de la lista `resultado`.
+  * Incrementar el índice `i`.
 * de lo contrario:
-  * Agregar el elemento `j` de `lista2` al final del
-resultado.
-  * Avanzar el índice `j`.
+  * Agregar el elemento `lista2[j]` al final de la lista `resultado`.
+  * Incrementar el índice `j`.
 
 
 * Una vez que una de las dos listas se termina, simplemente hay que
-agregar todo lo que queda en la otra al final del resultado.
+agregar todo lo que queda en la otra al final de la lista `resultado`.
 
 El código resultante del diseño de ambas funciones puede verse a continuación:
 
@@ -99,7 +103,7 @@ def merge(lista1, lista2):
             resultado.append(lista2[j])
             j += 1
 
-    # Agregar lo que falta
+    # Agregar lo que falta de una lista
     resultado += lista1[i:]
     resultado += lista2[j:]
 
@@ -110,36 +114,29 @@ print(l)
 print(merge_sort(l))
 ```
 
-_El método que hemos usado para resolver este problema se llama *divide y reinarás*, y se aplica en las situaciones en las que vale el siguiente principio_:
-
-Para obtener una solución es posible partir el problema en varios subproblemas
-de tamaño menor, resolver cada uno de esos subproblemas por separado aplicando
+El método **divide y reinarás** que hemos usado para resolver el problema de ordenar una lista puede aplicarse también en otras situaciones. Hace falta que sea posible resolver el problema partiéndolo en varios subproblemas de tamaño menor, resolver cada uno de esos subproblemas por separado aplicando
 la misma técnica (en nuestro caso ordenar por mezcla cada una de las dos
 sublistas), y finalmente juntar estas soluciones parciales en una solución
 completa del problema mayor (en nuestro caso la intercalación ordenada de las
 dos sublistas ordenadas).
 
 Como siempre sucede con las soluciones recursivas, debemos encontrar un caso
-base en el cual no se aplica la llamada recursiva (en nuestro caso la base
-sería el paso 1: Si la lista es pequeña (vacía o de tamaño 1) ya está ordenada
-y no hay nada que hacer). Además debemos asegurar que siempre se alcanza el
-caso base, y en nuestro caso aseguramos eso porque las lista original se divide
-siempre en mitades cuando su longitud es mayor que 1.
+base en el cual no se aplica la llamada recursiva (en nuestro caso: si la lista tiene largo cero o uno, ya está ordenada y no hay nada que hacer). Además debemos asegurar que siempre se alcanza el caso base, y en nuestro caso aseguramos eso porque, si no estamos en el caso base, la lista se divide en mitades decrementando su longitud.
+
+El método **divide y reinarás** es fecundo y ha dado lugar a algoritmos muy eficientes para tareas muy discímiles como multiplicar matrices, calcular la transformada de Fourier o realizar análisis sintácticos (parsear).
 
 ### ¿Cuánto cuesta el *Merge sort*?
 
-Sea `N` la longitud de la lista. Observamos lo siguiente:
+Supongamos que tenemos que ordenar una lista de l longitud  `N` . Observamos lo siguiente:
 
 * Para intercalar dos listas de longitud `N/2` hace falta recorrer
-ambas listas que en total tienen `N` elementos, por lo que es proporcional
-a `N`. Llamemos `a \cdot N` a ese tiempo.
+ambas listas que en total tienen `N` elementos. La cantidad de operaciones resulta proporcional a `N`. Llamemos `a * N` a ese tiempo.
 
 * Si llamamos `T(N)` al tiempo que tarda el algoritmo en ordenar
 una lista de longitud `N`, vemos que `T(N) = 2 * T(N/2) + a * N`.
 
 * Además, cuando la lista es pequeña, la operación es de tiempo
 constante: `T(1) = T(0) = b`.
-\end{itemize*
 
 Para simplificar la cuenta vamos a suponer que `N = 2^k`.
 
@@ -159,7 +156,7 @@ T(N) = T(2^k) = 2 * T(2^(k-1)) + a * 2^k
               = b * 2^k  + k * a * 2^k
 ```
 
-Pero si `N = 2^k` entonces `k=\log_2N`, y por lo tanto hemos demostrado
+Pero si `N = 2^k` entonces `k = log2(N)`, y por lo tanto hemos demostrado
 que:
 
 `T(N) = b * N + a * N * log2(N).`
@@ -167,28 +164,21 @@ que:
 Como lo que nos interesa es aproximar el valor, diremos (despreciando el
 término de menor orden) que
 
-`` T(N) \sim N * \log_2 N ``
+` T(N) ~ N * log2(N) `
 
-Hemos mostrado entonces
-un algoritmo que se porta mucho mejor que los que vimos en la unidad
-pasada (ya que `\log_2 N` es un número mucho más pequeño que `N`).
+Dado que `log2(N)` es un número mucho más pequeño que `N`, hemos mostrado entonces que el merge sort se porta mucho mejor (es decir, es más eficiente) que los tres métodos de ordenamiento que discutimos en la sección anterior (que eran cuadráticos).
 
 Si analizamos el espacio que consume, vemos que a cada paso la función `merge`
 genera una nueva lista cuya longitud es la suma de los tamaños de las dos
-listas, por lo que `merge_sort` duplica el espacio consumido.
+listas, por lo que `merge_sort` usa el doble de espacio que la lista de entrada.
 
-## Resumen?
+## Resumen
 
-* Los ordenamientos de selección e inserción, presentados en la unidad
-anterior son ordenamientos sencillos pero costosos en cantidad de
-intercambios o de comparaciones.  Sin embargo, es posible conseguir
-ordenamientos con mejor orden utilizando algoritmos recursivos.
+* Los métodos de ordenamiento de selección, inserción y burbujeo presentados en la sección anterior son métodos conceptualmente sencillos pero costosos en cantidad de operaciones (intercambios y/o comparaciones).  Sin embargo, es posible conseguir métodos más eficientes usando algoritmos recursivos.
 
-* El algoritmo *Merge Sort* consiste en dividir la lista a ordenar
+* El algoritmo *merge sort* consiste en dividir la lista a ordenar
 hasta que tenga 1 ó 0 elementos y luego combinar la lista de forma ordenada.
-De esta manera se logra un tiempo proporcional a `N * log N`.  Tiene como
-desventaja que siempre utiliza el doble de la memoria requerida por la lista a
-ordenar.
+De esta manera se logra un tiempo proporcional a `N * log2(N)`.
 
 ## Ejercicios:
 

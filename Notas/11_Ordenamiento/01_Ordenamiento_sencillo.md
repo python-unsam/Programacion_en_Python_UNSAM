@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Ordenamiento mergesort)](02_Divide_and_Conquer.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Divide y reinarás)](02_Divide_and_Conquer.md)
 
 # 11.1 Ordenamientos sencillos de listas
 
@@ -294,8 +294,9 @@ Para N=10, hacé que tu programa repita 100 veces estos conteos e imprima el pro
 ### Ejercicio 11.4: 
 Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y `comp_burbujeo`. 
 
-Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? ¿Es lineal (es decir, se ve como una recta) la complejidad en función del largo de las listas?
+Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? 
 
+¿Se te ocurre un algoritmo de ordenamiento que sea sustancialmente mejor que estos? Ese será el tema de la próxima sección.
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Ordenamiento mergesort)](02_Divide_and_Conquer.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Divide y reinarás)](02_Divide_and_Conquer.md)
 
