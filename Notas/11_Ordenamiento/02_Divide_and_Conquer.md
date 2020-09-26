@@ -33,6 +33,7 @@ ordenadas obtenemos la solución buscada:
 `[-1, 0, 2, 3, 5, 6, 7, 8]`.
 
 Veamos otro ejemplo con un gif animado:
+
 ![mergesort](./Merge-sort-example-300px.gif)
 
 Diseñemos la función `merge_sort(lista)`:
