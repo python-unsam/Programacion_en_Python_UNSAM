@@ -8,9 +8,11 @@ El problema del ordenamiento es tan fundamental que, a pesar que Python ya lo ha
 ## Ordenamiento por selección
 El método de *ordenamiento por selección* se basa en la siguiente idea:
 
-![Selección](./Selection-Sort-Animation.gif)
-
 ![Ejemplo_Seleccion](./seleccion.png)
+
+La siguiente animación muestra un algoritmo de ordenamiento por selección (que busca el menor en cada paso, en lugar del mayor):
+
+![Selección](./Selection-Sort-Animation.gif)
 
 Una implementación en Python puede verse en el siguiente código.
 
