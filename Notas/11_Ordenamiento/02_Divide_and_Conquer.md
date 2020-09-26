@@ -13,6 +13,8 @@ La correctitud de los algoritmos de este tipo suele probarse utilizando la induc
 
 ## El algoritmo *merge sort* (u odenamiento por mezcla)
 
+![con colores](https://img.devrant.com/devrant/rant/r_950434_EjPWY.gif)
+
 El *merge sort* se basa en la siguiente idea:
 
 * Si la lista es pequeña (vacía o de tamaño 1) ya está ordenada y
