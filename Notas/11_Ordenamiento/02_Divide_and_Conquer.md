@@ -1,13 +1,12 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 Cierre de la clase de Ordenamiento)](03_Cierre.md)
 
 # 11.2 Ordenamiento mergesort
 
 Los métodos de ordenamiento vistos en la unidad anterior eran métodos
-iterativos cuyo tiempo estaba relacionado con `N^2`.
+iterativos cuyo tiempo de ejecución era cuadrático.
 
-En esta unidad veremos dos métodos de ordenamiento basados
-en un planteo recursivo del problema, que nos permitirán obtener el
-mismo resultado de forma más eficiente.
+En esta unidad veremos un método de ordenamiento basado
+en un planteo recursivo del problema, que nos permitirán ordenar listas de forma mucho más eficiente.
 
 ## Ordenamiento por mezcla, o *Merge sort* 
 
@@ -19,7 +18,7 @@ no hay nada que hacer. De lo contrario hacer lo siguiente:
 mismo tamaño cada una.
 * Ordenar cada una de esas dos sublistas (usando
 este mismo método).
-* Una vez que se ordenaron ambas sublistas, intercalarlas de manera ordenada.
+* Una vez que se ordenaron ambas sublistas, intercalarlas (mergearlas)  de manera ordenada.
 
 Por ejemplo, si la lista original es `[6, 7, -1, 0, 5, 2, 3, 8]`
 deberemos ordenar recursivamente `[6, 7, -1, 0]` y
@@ -31,12 +30,12 @@ ordenadas obtenemos la solución buscada:
 Diseñamos la función `merge_sort(lista)`:
 
 * Si lista es pequeña (vacía o de tamaño 1) ya está ordenada y
-no hay nada que hacer. Se devuelve lista tal cual.
+no hay nada que hacer. Se devuelve lista original.
 * De lo contrario:
-* `medio = len(lista) / 2`
-* `izq = merge_sort(lista[:m])`
-* `der = merge_sort(lista[m:])`
-* Se devuelve `merge(izq, der)`.
+  * `medio = len(lista) // 2`
+  * `izq = merge_sort(lista[:m])`
+  * `der = merge_sort(lista[m:])`
+  * Se devuelve `merge(izq, der)`.
 
 Falta sólo diseñar la función `merge`: dadas dos listas ordenadas
 debe obtener una nueva lista que resulte de intercalar a ambas de manera
@@ -52,13 +51,13 @@ almacenaremos el resultado.
 elementos para comparar en ambas listas.
 
 * Si el menor es el de `lista1`:
-* Agregar el elemento `i` de `lista1` al final del
+  * Agregar el elemento `i` de `lista1` al final del
 resultado.
-* Avanzar el índice `i`.
+  * Avanzar el índice `i`.
 * de lo contrario:
-* Agregar el elemento `j` de `lista2` al final del
+  * Agregar el elemento `j` de `lista2` al final del
 resultado.
-* Avanzar el índice `j`.
+  * Avanzar el índice `j`.
 
 
 * Una vez que una de las dos listas se termina, simplemente hay que
@@ -207,5 +206,5 @@ Rehace el último ejercicio de la sección anterior incorporando el mergesort a 
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 Cierre de la clase de Ordenamiento)](03_Cierre.md)
 

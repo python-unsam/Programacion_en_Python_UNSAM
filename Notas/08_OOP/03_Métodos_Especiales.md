@@ -274,7 +274,7 @@ cantidad = 100
 
 Queremos que notes algo interesante: los datos de salida están completamente especificados por los nombres de los atributos listados en la variable `columnas`. No fue necesario hacer ninguna conversión ni preguntar nada al usuarie para usar el nombre de un dato como nombre de una variable.  
 
-En el archivo `formato_tabla.py` (del [Ejercicio 8.6](../08_OOP/02_Herencia.md#ejercicio-86-usemos-herencia-para-cambiar-la-salida)), usá esta idea pero extendela, y creá una función `imprimir_tabla()` que imprima una tabla mostrando, de una lista de objetos de tipo arbitrario, una lista de atributos especificados por el usuarie.
+En el archivo `formato_tabla.py` usá esta idea pero extendela, y creá una función `imprimir_tabla()` que imprima una tabla mostrando, de una lista de objetos de tipo arbitrario, una lista de atributos especificados por el usuarie.
 
 Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones) `imprimir_tabla()` también debería aceptar cualquier instancia de la clase `FormatoTabla` para definir el formato de la salida. La idea es que funcione más o menos así:
 
@@ -284,25 +284,25 @@ Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 5.1](
 >>> from formato_tabla import crear_formateador, imprimir_tabla
 >>> formateador = crear_formateador('txt')
 >>> imprimir_tabla(camion, ['nombre','cajones'], formateador)
-    Nombre   Cajones
----------- ----------
-      Lima        100
-   Naranja         50
-     Caqui        150
- Mandarina        200
-   Durazno         95
- Mandarina         50
-   Naranja        100
+    nombre    cajones 
+---------- ---------- 
+      Lima        100 
+   Naranja         50 
+     Caqui        150 
+ Mandarina        200 
+   Durazno         95 
+ Mandarina         50 
+   Naranja        100 
 
 >>> imprimir_tabla(camion, ['nombre','cajones','precio'], formateador)
-    Nombre   Cajones     Precio
----------- ---------- ----------
-      Lima        100       32.2
-   Naranja         50       91.1
-     Caqui        150      83.44
- Mandarina        200      51.23
-   Durazno         95      40.37
- Mandarina         50       65.1
+    nombre    cajones     precio 
+---------- ---------- ---------- 
+      Lima        100       32.2 
+   Naranja         50       91.1 
+     Caqui        150     103.44 
+ Mandarina        200      51.23 
+   Durazno         95      40.37 
+ Mandarina         50       65.1 
    Naranja        100      70.44
 >>>
 ```

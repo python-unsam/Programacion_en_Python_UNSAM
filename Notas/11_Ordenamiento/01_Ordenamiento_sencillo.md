@@ -3,15 +3,14 @@
 # 11.1 Ordenamientos sencillos de listas
 
 
-El problema del ordenamiento es tan fundamental que, a pesar que Python ya lo hace con su método `sort()` por ejemplo, nos interesa discutirlo. Vamos a empezar viendo las más sencillas de escribir
-(que en general suelen ser las más caras).
+El problema del ordenamiento es tan fundamental que, a pesar que Python ya lo hace con su método `sort()` por ejemplo, nos interesa discutirlo. Hay una diversidad de soluciones para ordenar. Vamos a empezar viendo las más sencillas de escribir (que en general suelen ser las más caras).
 
 ## Ordenamiento por selección
 El método de *ordenamiento por selección* se basa en la siguiente idea:
 
 ![Ejemplo_Seleccion](./seleccion.png)
 
-La implementación en Python puede verse en el siguiente código.
+Una implementación en Python puede verse en el siguiente código.
 
 ```python
 def ord_seleccion(lista):
@@ -82,8 +81,7 @@ DEBUG:  1 1 [1, 2, 3, 4, 5]
 ```
 
 
-Puede verse que aun cuando la lista está ordenada, se la recorre buscando
-los mayores elementos y ubicándolos en la misma posición en la que se
+Podés observar que incluso cuando la lista ya está ordenada, se la recorre buscandoc los mayores elementos y ubicándolos en la misma posición en la que se
 encuentran.
 
 ### Invariante en el ordenamiento por selección
@@ -108,7 +106,7 @@ pequeña de comparaciones (que no depende de `N`). Por lo tanto tenemos que
 `T(N) ~  c * (2 + 3 + ... + N) ~ c * N * (N+1)/2 ~ N^2`
 
 O sea que ordenar por selección una lista de tamaño `N` insume tiempo del
-orden de `N^2`.  Como ya se vio, este tiempo es independiente de si la
+orden de `N^2`.  Como ya mencionamos, este tiempo es independiente de si la
 lista estaba previamente ordenda o no.
 
 En cuanto al espacio utilizado, sólo se tiene en memoria la
@@ -204,46 +202,44 @@ correspondiente y el segmento seguirá ordenado.
 
 ### ¿Cuánto cuesta ordenar por inserción?
 
-Del Código de `ord_insercion(lista)` se puede ver que la función principal avanza por la lista de izquierda a derecha, mientras que la función `reubicar`
+Del código de `ord_insercion()` se puede ver que la función principal avanza por la lista de izquierda a derecha, mientras que la función `reubicar()`
 cambia los elementos de lugar de derecha a izquierda.
 
 Lo peor que le puede pasar a un elemento que está en la posición
 `j` es que deba ser ubicado al principio de la lista.  Y lo peor que le
 puede pasar a una lista es que todos sus elementos deban ser reubicados.
 
-Por ejemplo, en la lista \lstinline+[10, 8, 6, 2, -2, -5]+, todos los
+Por ejemplo, en la lista `[10, 8, 6, 2, -2, -5]`, todos los
 elementos deben ser reubicados al principio de la lista.
 
 En el primer paso, el segundo elemento se debe intercambiar con el primero;
 en el segundo paso, el tercer elemento se compara con el segundo y el
 primer elemento, y se ubica adelante de todo; en el tercer paso, el cuarto
 elemento se compara con el tercero, el segundo y el primer elemento, y se
-ubica adelante de todo; etc\ldots
+ubica adelante de todo; etc...
 
 ` T(N) ~  c * (2 + 3 + *s + N) ~ c * N * (N+1)/2 ~ N^2 `
 
 Es decir que ordenar por inserción una lista de tamaño `N` puede insumir
-(en el peor caso) tiempo del orden de `N^2`. En cuanto al espacio
+(en el peor caso) tiempo del orden de `N^2` (*O(N^2)*). En cuanto al espacio
 utilizado, nuevamente sólo se tiene en memoria la lista que se desea
 ordenar y algunas variables de tamaño 1.
 
 ### Inserción en una lista ordenada
 
-Sin embargo, algo interesante a notar es que cuando la lista se encuentra
-ordenada, este algoritmo no hace ningún movimiento de elementos,
-simplemente compara cada elemento con el anterior, y si es mayor sigue
+Resulta interesante observar que cuando la lista de entrada se encuentra
+ordenada, este algoritmo no hace ningún movimiento de elementos. Simplemente compara cada elemento con el anterior, y si es mayor sigue
 adelante.
 
 Es decir que para el caso de una lista de `N` elementos que se encuentra
 ordenada, el tiempo que insume el algoritmo de inserción es:
 
-`T(N) ~ N`
+`T(N) ~ N`.
 
 ## Resumen
 
 * El *ordenamiento por selección* es uno de los más sencillos, pero es
-bastante ineficiente: se basa en la idea de *buscar el máximo* en una secuencia,
-ubicarlo al final y seguir analizando la secuencia sin el último elemento.
+bastante ineficiente: se basa en la idea de *buscar el máximo* en una secuencia, ubicarlo al final y seguir analizando la secuencia sin el último elemento.
 
 Tiene como ventaja que hace una baja cantidad de intercambios (`N`), pero
 como desventaja que necesita una alta cantidad de comparaciones (`N^2`).
@@ -265,30 +261,34 @@ cortas el tiempo de ejecución es bastante bueno.
 
 ###  Ejercicio:
 
-Mostrar los pasos del ordenamiento de la lista `[0, 9, 3, 8, 5, 3, 2, 4]`
+Describí los pasos del ordenamiento de la lista `[0, 9, 3, 8, 5, 3, 2, 4]`
 con los algoritmos de inserción y selección.
 
 ### Ejercicio 11.1: burbujeo
-[te cuento la idea, implementalo.](https://www.programiz.com/dsa/bubble-sort)
+El ordenamiento por burbujeo se basa en una idea bastante sencilla: Comparar dos elementos contiguos y si el orden es adecuado los deja como están, sino los intercambia. La repetición de este procedimiento (una burbuja) a lo largo de la lista (recorriéndola desde el comienzo hasta el final) garantiza llevar el mayor elemento al final de la lista, pero no garantiza que el menor elemento haya quedado en el primer lugar. De hecho, en general, el menor elemento solo avanza una posición en una recorrida de la lista. Es por esto que estas recorridas se repiten sucesivas veces (¿cuántas hace falta?) de manera de garantizar que el lista quede completamente ordenada. 
 
-Este es el [burbujeo](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja).
+Como en el primer paso tenemos la garantía de que el mayor elemento quedó al final de la lista, la segunda recorrida puede evitar llegar hasta esa última posición. Así, cada recorrida es más corta que la anterior. En cada recorrida se comparan todos los pares de elementos sucesivos (en el rango correspondiente) y se intercambian si no están ordenados.
+
+Programá una fucnión `ordenar_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuánta operaciones realiza está función en una lista de largo n?
+
+Si no te sale con estas indicaciones, podés consultar Wikipedia u otras fuentes sobre [ordenamiento por burbujeo](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja). Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
 
 
 ###  Ejercicio:
 
-Para $N=10$, haga un programa que genere una lista aleatoria y la ordene con los tres métodos (burbujeo, inserción y selección)
+Hacé un programa que genere una lista aleatoria de largo N y la ordene con los tres métodos (burbujeo, inserción y selección)
 
 Modificá el código de las tres funciones para que cuenten cuántas comparaciones entre elementos de la lista realiza cada una. Por ejemplo, `ord_seleccion` realiza comparaciones (entre elementos de la lista) sólo cuando llama a `buscar_max(lista, a, b)` y en ese caso realiza `b-a` comparaciones. 
 
 _Cuidado_: usá la misma lista para los tres métodos así la compración es justa.
 
-Hacé que tu programa repita 100 veces estos conteos e imprima el promedio de comparaciones realizado por cada método.
+Para N=10, hacé que tu programa repita 100 veces estos conteos e imprima el promedio de comparaciones realizado por cada método.
 
 ###  Ejercicio: 
 
-Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Haga un programa que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y  `comp_burbujeo`. 
+Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y  `comp_burbujeo`. 
 
-Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? ¿Es lineal (es decir, se ve como una recta) la complejidad en el largo de las listas?
+Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? ¿Es lineal (es decir, se ve como una recta) la complejidad en función del largo de las listas?
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Ordenamiento mergesort)](02_Divide_and_Conquer.md)
