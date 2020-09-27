@@ -75,7 +75,7 @@ Las colas también se llaman estructuras FIFO (del inglés First In First Out), 
 
 <p align="center">
 <img src="./colas.png" width="400">
-</p>)
+</p>
 
 Esta es una posible implementación de la clase `Cola`:
 ```python
