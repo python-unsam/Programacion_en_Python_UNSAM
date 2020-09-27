@@ -261,7 +261,7 @@ Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista d
 ```
 
 ### Ejercicio 8.4: Usá tu clase
-Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Lote` como mostramos recién en el [Ejercicio 8.3](../08_OOP/01_Clases.md#ejercicio-83-lista-de-instancias).
+Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Lote` como mostramos recién en el [Ejercicio 8.3](../08_Clases_y_Objetos/01_Clases.md#ejercicio-83-lista-de-instancias).
 
 Cuando hayas hecho esto, cambiá un poco el código en `informe.py` y en  `costo_camion.py` de modo que funcionen con objetos `Lote` (instancias de la clase `Lote`) en lugar de diccionarios.
 

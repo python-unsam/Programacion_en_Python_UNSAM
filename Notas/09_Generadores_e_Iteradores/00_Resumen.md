@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_OOP/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)
 
 # 9. Generadores e iteradores
 **Esta clase está en preparación.**
@@ -21,4 +21,4 @@ process some real-time streaming data in an interesting way.
 * [9.4 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md)](05_Mos_generadores.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_OOP/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)

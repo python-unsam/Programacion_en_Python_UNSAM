@@ -236,7 +236,7 @@ x = getattr(obj, 'x', None)
 ## Ejercicios
 
 ### Ejercicio 8.9: Mejor salida para objetos
-Modificá el objeto `Lote` que definiste en `lote.py` (del [Ejercicio 8.1](../08_OOP/01_Clases.md#ejercicio-81-objetos-como-estructura-de-datos)) de modo que el método `__repr__()` genere una salida más agradable. Por ejemplo queremos un comportamiento como éste: 
+Modificá el objeto `Lote` que definiste en `lote.py` (del [Ejercicio 8.1](../08_Clases_y_Objetos/01_Clases.md#ejercicio-81-objetos-como-estructura-de-datos)) de modo que el método `__repr__()` genere una salida más agradable. Por ejemplo queremos un comportamiento como éste: 
 
 ```python
 >>> peras = Lote('Pera', 100, 490.1)

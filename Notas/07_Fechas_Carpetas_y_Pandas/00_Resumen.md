@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_OOP/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md)
 
 # 7. Fechas, Carpetas y Pandas
 En esta clase introducimos el módulo `datetime` para manejar datos relacionados con el tiempo (Sección 1) y un par de funciones del módulo `os` para leer directorios, procesar archivos y realizar algunas tareas relacionadas con el sistema operativo (Sección 2). Luego te proponemos integrar esto para hacer un script que corra desde línea de comandos y te permita ordenar los archivos de cierto tipo (Sección 3).
@@ -16,4 +16,4 @@ En la parte, Sección 5, te proponemos análizar ondas de mareas en el Río de l
 * [7.6 Cierre de la séptima](06_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_OOP/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Diseño, especificación, documentación y estilo.)](../06_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md)

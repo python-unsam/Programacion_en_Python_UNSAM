@@ -9,7 +9,7 @@
 * [5. Complejidad y Organización de programas](05_Organización_y_Complejidad/00_Resumen.md)
 * [6. Diseño, especificación, documentación y estilo.](06_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 * [7. Fechas, Carpetas y Pandas](07_Fechas_Carpetas_y_Pandas/00_Resumen.md)
-* [8. Clases y objetos](08_OOP/00_Resumen.md)
+* [8. Clases y objetos](08_Clases_y_Objetos/00_Resumen.md)
 * [9. Generadores e iteradores](09_Generadores_e_Iteradores/00_Resumen.md)
 * [10. Recursión](10_Recursion/00_Resumen.md)
 * [11. Ordenamiento](11_Ordenamiento/00_Resumen.md)
