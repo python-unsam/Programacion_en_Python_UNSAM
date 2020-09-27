@@ -73,7 +73,9 @@ Una **cola** es una estructura de datos. Se caracteriza por contener una secuenc
 
 Las colas también se llaman estructuras FIFO (del inglés First In First Out), debido a que el primer elemento en entrar a la cola será también el primero en salir. El nombre cola se le da por su analogía con las colas que hacemos (o hacíamos cuando podíamos salir de casa) para entrar al cine, por ejemplo.
 
-![Cola](./colas.png)
+<p align="center">
+<img src="./colas.png" width="400">
+</p>)
 
 Esta es una posible implementación de la clase `Cola`:
 ```python
@@ -138,7 +140,10 @@ La operaciones (métodos) elementales de las pilas son _apilar_ (coloca un objet
 
 En cada momento solamente se tiene acceso a la parte superior de la pila, es decir, al último objeto apilado. La operación _desapilar_ justamente permite la obtención de este elemento, que es retirado de la pila.
 
-![Pila](./pilas.png)
+<p align="center">
+<img src="./pilas.png" width="400">
+</p>)
+
 
 La **pila de llamadas** (en inglés _call stack_) de un lenguaje (por ejemplo Python), es una pila manejada por el intérprete que almacena la información sobre las subrutinas activas en cada instante. También se la conoce como pila de ejecución o pila de control y se usa para llevar registro de las funciones que se fueron llamando y el de las variables definidas en cada contexto. 
 

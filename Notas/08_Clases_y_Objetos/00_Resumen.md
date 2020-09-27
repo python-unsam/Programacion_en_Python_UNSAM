@@ -15,7 +15,7 @@ Hasta ahora los programas con que estuviste trabajando usaron sólo tipos de dat
 * [8.1 Clases](01_Clases.md)
 * [8.2 Herencia](02_Herencia.md)
 * [8.3 Métodos especiales](03_Métodos_Especiales.md)
-* [8.4 Objetos, pilas y colas](04_Ejs_OOP.md)
+* [8.4 Objetos, pilas y colas](04_Pilas_Colas.md)
 * [8.5 Ejercicios de objetos inspirados en Lotka Volterra](05_Ejs_OOP_Volterra.md)
 * [8.6 Cierre de la octava clase](06_Cierre.md)
 

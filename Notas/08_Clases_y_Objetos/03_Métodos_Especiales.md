@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](02_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](04_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](02_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](04_Pilas_Colas.md)
 
 # 8.3 Métodos especiales
 
@@ -308,5 +308,5 @@ Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 5.1](
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](02_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](04_Ejs_OOP.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](02_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](04_Pilas_Colas.md)
 
