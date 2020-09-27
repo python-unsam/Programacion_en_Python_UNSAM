@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Ejercicios de objetos inspirados en Lotka Volterra)](05_Ejs_OOP_Volterra.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Optativo teledetección)](06_Teledeteccion.md)
 
-# 8.6 Cierre de la octava clase
+# 8.7 Cierre de la octava clase
 
 # Cierre de clase
 
@@ -28,5 +28,5 @@ Entregá:
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Ejercicios de objetos inspirados en Lotka Volterra)](05_Ejs_OOP_Volterra.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Optativo teledetección)](06_Teledeteccion.md)
 

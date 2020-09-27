@@ -17,7 +17,8 @@ Hasta ahora los programas con que estuviste trabajando usaron sólo tipos de dat
 * [8.3 Métodos especiales](03_Métodos_Especiales.md)
 * [8.4 Objetos, pilas y colas](04_Pilas_Colas.md)
 * [8.5 Ejercicios de objetos inspirados en Lotka Volterra](05_Ejs_OOP_Volterra.md)
-* [8.6 Cierre de la octava clase](06_Cierre.md)
+* [8.6 Optativo teledetección](06_Teledeteccion.md)
+* [8.7 Cierre de la octava clase](07_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md) \| [Próximo (9 Generadores e iteradores)](../09_Generadores_e_Iteradores/00_Resumen.md)
