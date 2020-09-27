@@ -142,7 +142,7 @@ En cada momento solamente se tiene acceso a la parte superior de la pila, es dec
 
 <p align="center">
 <img src="./pilas.png" width="400">
-</p>)
+</p>
 
 
 La **pila de llamadas** (en inglés _call stack_) de un lenguaje (por ejemplo Python), es una pila manejada por el intérprete que almacena la información sobre las subrutinas activas en cada instante. También se la conoce como pila de ejecución o pila de control y se usa para llevar registro de las funciones que se fueron llamando y el de las variables definidas en cada contexto. 
