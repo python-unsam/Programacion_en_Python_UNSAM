@@ -2,7 +2,7 @@
 
 # 8.5 Teledetección
 
-En este ejercicio vamos a trabajar con una imagen satelital obtenida por sensores a bordo del satélite Landsat8. Es un ejercicio optativo para entregar. Si querés hacelo y guardalo en el archivo `NDVI.py`.
+En este ejercicio vamos a trabajar con una imagen satelital obtenida por sensores a bordo del satélite Landsat8. Es un ejercicio optativo para entregar. Si querés, hacelo y guardalo en el archivo `NDVI.py`.
 
 ### Ejercicio 8.14: Optativo de teledetección
 **Autora: [Mariela Rajngewerc](https://github.com/marielaraj/)**
@@ -84,6 +84,8 @@ e) Ponele una leyenda que indique el nombre de cada clase con el color asignado,
 
 ![](./img.png)
 
+Si llegaste hasta acá, no te olvides de guardar tu trabajo en el archivo `NDVI.py` y entregarlo. A continuación, un ejercicio que usa herramientas un poco más avanzadas de aprendizaje automático.
+
 ### Ejercicio 8.19: Clasificación automática
 En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador viene en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python.
 
@@ -110,6 +112,8 @@ plt.imshow(etiquetas.reshape(ndvi.shape))
 ```
 
 Probá ajustando el número de clusters (`n_clusters=5`, por ejemplo) y corriendo nuevamente el modelo. Ponele colores diferentes a las diferentes clases obtenidas.
+
+Si tarda mucho podés trabajar con un pedazo de la imágen. Por ejemplo si hacés `ndvi_clip = ndvi[1000:2000,2000:3000]` te quedás con un cuadradito que es un octavo de la imagen original y podés usarlo para probar cosas rápido. Si te convencen los resultados podés correr tu algoritmo sobre la imágen completa.
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la octava clase)](06_Cierre.md)
 
