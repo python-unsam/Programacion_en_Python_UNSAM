@@ -2,7 +2,7 @@
 
 # 8.5 Teledetección
 
-En este ejercicio vamos a trabajar con una imagen satelital obtenida por sensores a bordo del satélite Landsat8. Es un ejercicio optativo para entregar. Si querés hacelo y guardalo en el archiovo `NDVI.py`.
+En este ejercicio vamos a trabajar con una imagen satelital obtenida por sensores a bordo del satélite Landsat8. Es un ejercicio optativo para entregar. Si querés hacelo y guardalo en el archivo `NDVI.py`.
 
 ### Ejercicio 8.14: Optativo de teledetección
 **Autora: [Mariela Rajngewerc](https://github.com/marielaraj/)**
@@ -85,7 +85,7 @@ e) Ponele una leyenda que indique el nombre de cada clase con el color asignado,
 ![](./img.png)
 
 ### Ejercicio 8.19: Clasificación automática
-En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`.
+En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador viene en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python
 
 ```python
 # filtro datos ruidosos o que puedan traer problemas. 
