@@ -19,7 +19,7 @@ Entregá:
 * El archivo `lote.py` del [Ejercicio 8.9](../08_Clases_y_Objetos/03_Métodos_Especiales.md#ejercicio-89-mejor-salida-para-objetos).
 * El archivo `torre_control.py` del [Ejercicio 8.12](../08_Clases_y_Objetos/04_Pilas_Colas.md#ejercicio-812-torre-de-control).
 * El archivo `CangurosBuenos.py` del [Ejercicio 8.11](../08_Clases_y_Objetos/04_Pilas_Colas.md#ejercicio-811-canguros-buenos-y-canguros-malos).
-* El archivo `NDVI.py` del Ejercicio ? (optativo).
+* El archivo `NDVI.py` del [Ejercicio 8.14](../08_Clases_y_Objetos/05_Teledeteccion.md#ejercicio-814-optativo-de-teledetección) (optativo).
  
 
 
