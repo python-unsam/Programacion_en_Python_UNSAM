@@ -28,7 +28,7 @@ Si desean abrir los datos de la imagen original en Python deberán bajar algunas
 
 En la carpeta [clip](https://drive.google.com/file/d/1uoigo5s2xgWfbBQdUcJfOdhfYMNjZ8Ku/view?usp=sharing) encontrarán los datos que vamos a usar en los ejercicios. Cada banda del clip se encuentra en formato .npy
 
-##Ejericios:
+## Ejericios:
 
 ### Ejercicio 8.15: Ver una banda
 a) Usá [numpy](https://numpy.org/doc/stable/reference/generated/numpy.load.html) para levantar cada una de las bandas y `plt.imshow(banda)` para verla.
