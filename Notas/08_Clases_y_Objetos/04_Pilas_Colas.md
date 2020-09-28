@@ -6,7 +6,18 @@ En esta sección tendrás que resolver algunos ejercicios definiendo clases y ob
 
 ### Un ejercicio geométrico
 
-Usando la clase Punto que vimos antes, agregarle algunas cosas y luego usarla para hacer alguna figura tipo cuadrado dado por sus dos vertices con herencia o algo así. Los manuales de programación tienen siempre de estos ejemplos, no?
+Creá una clase llamada `Rectangulo` que va a estar definido por dos puntos. Para esos dos puntos, usá la clase Punto de la Sección anterior. El rectángulo es paralelo a los ejes, los puntos representan dos esquinas opuestas cualesquiera.
+La clase debe tener un método constructor para crear el rectángulo a partir de dos puntos y los siguientes métodos:
+* `base()` que dé la medida de la base del rectángulo.
+* `altura()` que dé la medida de la altura del rectángulo.
+* `area()` que dé la medida del área del rectángulo.
+* Creá métodos especiales `__str__` y `__repr__`.
+* `desplazar(desplazamiento)` que dado un desplzamiento (de tipo Punto) desplace el rectángulo en ambas coordenadas usando el método `add` de la clase Punto.
+* `rotar()` que rote el rectángulo sobre su esquina inferior derecha 90 grado a la derecha.
+
+Probá tu código:
+
+
 
 ### Ejercicio 8.11: Canguros buenos y canguros malos
 Este ejercicio está relacionado con un error muy común en Python. Escribí una definición de una clase `Canguro` que tenga:
