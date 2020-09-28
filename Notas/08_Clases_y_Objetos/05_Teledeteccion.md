@@ -28,7 +28,7 @@ Si desean abrir los datos de la imagen original en Python deberán bajar algunas
 
 En la carpeta [clip](https://drive.google.com/file/d/1uoigo5s2xgWfbBQdUcJfOdhfYMNjZ8Ku/view?usp=sharing) encontrarán los datos que vamos a usar en los ejercicios. Cada banda del clip se encuentra en formato .npy
 
-## Ejericios:
+## Ejercicios:
 
 ### Ejercicio 8.15: Ver una banda
 a) Usá [numpy](https://numpy.org/doc/stable/reference/generated/numpy.load.html) para levantar cada una de las bandas y `plt.imshow(banda)` para verla.
@@ -85,7 +85,7 @@ e) Ponele una leyenda que indique el nombre de cada clase con el color asignado,
 ![](./img.png)
 
 ### Ejercicio 8.19: Clasificación automática
-En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador viene en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python
+En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador viene en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python.
 
 ```python
 # filtro datos ruidosos o que puedan traer problemas. 
