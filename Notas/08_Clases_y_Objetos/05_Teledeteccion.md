@@ -57,8 +57,7 @@ En este ejercicio vamos a trabajar con un índice: el Índice de Vegetación de 
 
 Para calcular el NDVI se utilizan las bandas espectrales Roja e Infrarroja, el cálculo se hace mediante la siguiente fórmula:
 
-$$ \frac{INFRARROJO CERCANO-ROJO}{INFRARROJO CERCANO+ROJO} $$
-
+`(INFRARROJO_CERCANO - ROJO) / {INFRARROJO_CERCANO + ROJO}`
 
 a) Calcular el NDVI en una nueva matriz.
 
