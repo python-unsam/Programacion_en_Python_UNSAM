@@ -307,17 +307,10 @@ plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
 # me quedo solo con el último pico
-<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
-pico_sf = signal.find_peaks(np.abs(fft_sf), prominence=8)[0][-1]
-# es el pico a analizar, el de la onda de mareas
-# marco ese pico con un circulito rojo
-plt.scatter(freq_sf[pico_sf], np.abs(fft_sf)[pico_sf], facecolor='r')
-=======
 pico_sf = signal.find_peaks(np.abs(fft_sf), prominence = 8)[0][-1]
 # es el pico a analizar, el de la onda de mareas
 # marco ese pico con un circulito rojo
 plt.scatter(freq_sf[pico_sf], np.abs(fft_sf)[pico_sf], facecolor = 'r')
->>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 plt.show()
 ```
 
@@ -341,20 +334,12 @@ Para calcular la fase (entre -π y π) de dicha componente (la que ubicamos en l
 1.4849
 ```
 
-<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
 
 Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfasaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freq_sf[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con angSF[350] corresponde a un retardo de
 
 
 ```python
 >>> ang_sf * 24 / (2 * np.pi * freq_sf[350])
-=======
-Obtenemos un valor cercano a pi/2. Recordemos que 2*pi corresponde a un desfasaje de un ciclo completo de la curva. Como nuestra curva de estudio tiene una frecuencia diaria ligeramente inferior a 2 (freq_sf[350]~1.93), 2*pi corresponde a 24/1.93 horas ~ 12.44 horas. Por lo tanto la fase obtenida con ang_sf[350] corresponde a un retardo de
-
-
-```python
->>> ang_sf * 24 / (2*np.pi*freq_sf[350])
->>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 2.93
 ```
 
@@ -365,22 +350,14 @@ Es decir, este sinusoide está desfasado poco menos de 3hs respecto al seno _neu
 Repitamos velozmente el procedimiento para el puerto de Buenos Aires y analicemos las diferencias.
 
 ```python
-<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
-=======
 freq_ba, fft_ba = calcular_fft(alturas_ba)
->>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 plt.plot(freq_ba, np.abs(fft_ba))
 plt.xlabel("Frecuencia")
 plt.ylabel("Potencia (energía)")
 plt.xlim(0,4)
 plt.ylim(0,20)
-<<<<<<< HEAD:2020C2/src/07_datetime_SO_Pandas_sns/05_Series_Temporales.md
-#me quedo solo con el último pico
-pico_ba = signal.find_peaks(np.abs(fft_ba), prominence=8)[0][-1]
-=======
 # me quedo solo con el último pico
 pico_ba = signal.find_peaks(np.abs(fft_ba), prominence = 8)[0][-1]
->>>>>>> 84a84f4e695d51c7413778630f90de871001747b:2020C2/src/07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md
 #se grafican los picos como circulitos rojos
 plt.scatter(freq_ba[pico_ba], np.abs(fft_ba)[pico_ba], facecolor='r')
 plt.title("Espectro de Potencias Bs.As.")
