@@ -42,17 +42,17 @@ b) Escribí una función `crear_img_png(carpeta, banda)` que, dada una carpeta y
 Tené en cuenta lo que hiciste en el punto a) para que se vea adecadamente.
 
 
-### Ejercicio 8.16: 
+### Ejercicio 8.16: Histogramas
 Escribí ahora otra función, llamada `crear_hist_png(carpeta, banda, bins)` que, dada una carpeta, un número de banda y una cantidad de bins, muestre el histograma (con la cantidad de bins seleccionados) de los valores de dicha banda y la guarde en formato .png.
 
-### Ejercicio 8.17: 
+### Ejercicio 8.17: Máscaras binarias
 a) Usá las funciones `crear_img_png` y `crear_hist_png` que hiciste en los puntos anteriores para generar las imágenes e histogramas de cada banda.
 
 b) ¿Qué banda o bandas parecieran tener histogramas bimodales, mostrando diferentes tipos de pixels? Elijí una de esas bandas y observando el histograma, seleccioná un umbral que te permita distinguir los dos tipos de píxels. Por ejemplo, podés crear una matriz del mismo tamaño de la banda donde a cada píxel le corresponda un 1 o un 0, 1 si está por arriba del umbral y 0 si no.
 
 Graficá la imágen binaria así obtenida. ¿A qué corresponden los dos tipos de píxeles que pudiste distinguir tan fácilmente?
 
-### Ejercicio 8.18: 
+### Ejercicio 8.18: Clasificación manual
 En este ejercicio vamos a trabajar con un índice: el Índice de Vegetación de Diferencia Normalizada, también conocido como [NDVI](https://es.wikipedia.org/wiki/%C3%8Dndice_de_vegetaci%C3%B3n_de_diferencia_normalizada) por sus siglas en inglés. Este índice, basado en la intensidad de la radiación de dos bandas  del espectro electromagnético que interactúan particularmente con la vegetación, aporta información sobre la cantidad, estado y desarrollo de la misma.
 
 Para calcular el NDVI se utilizan las bandas espectrales Roja e Infrarroja, el cálculo se hace mediante la siguiente fórmula:
@@ -82,10 +82,34 @@ d) Crear un colorMap para lograr asignarle a cada clase el color sugerido en la 
 
 e) Ponele una leyenda que indique el nombre de cada clase con el color asignado, para eso te sugerimos usar la función `mpatches` que se encuentra en `matplotlib.patches`. Para que puedas orientarte, te mostramos a continuación un ejemplo de resultado esperado:
 
-
 ![](./img.png)
 
+### Ejercicio 8.19: Clasificación automática
+En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`.
 
+```python
+# filtro datos ruidosos o que puedan traer problemas. 
+# el NDVI debe estar entre -1 y 1.
+ndvi[ndvi>1]=1
+ndvi[ndvi<-1]=-1
+
+#importo el clasificador y defino una instancia para clasificar con dos etiquetas
+from sklearn.cluster import KMeans
+kmeans = KMeans(n_clusters=2)
+
+#le saco la estructura bidimensional a la matriz NDVI y la llamo datos
+datos = ndvi.reshape(-1,1) #datos es un vector con un dato de NDVI por pixel.
+
+#entreno o ajusto el el clasificador con los datos (demora!)
+kmeans.fit(datos) #ajusta el modelo
+#usa el modelo ajustado para poner etiquetas
+etiquetas = kmeans.predict(ndvi.reshape(-1,1)) 
+
+#visualizo los resultados recuperando la estructura bidimensional de la matriz
+plt.imshow(etiquetas.reshape(ndvi.shape))
+```
+
+Probá ajustando el número de clusters (`n_clusters=5`, por ejemplo) y corriendo nuevamente el modelo. Ponele colores diferentes a las diferentes clases obtenidas.
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la octava clase)](06_Cierre.md)
 
