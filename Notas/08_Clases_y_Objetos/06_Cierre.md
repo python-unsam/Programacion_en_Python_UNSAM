@@ -11,9 +11,9 @@ Una de las formas de extender el comportamiento de un programa es definir una in
 
 Otra forma muy interesante es definir clases base, abstractas, que van a ser implementadas luego, por herencia, en sus versiones definitivas. 
 
-La experiencia, ese peine que te regalan cuando ya llegó la calvicie, te va a permitir decidir (quizás taríamente) cuándo es mas conveniente una arquitectura o la otra.
+La experiencia te va a permitir decidir (quizás taríamente) cuándo es mas conveniente una arquitectura o la otra.
 
-Entregá:
+En fin, para cerrar esta clase, entregá:
 
 * El archivo `informe.py` del [Ejercicio 8.8](../08_Clases_y_Objetos/02_Herencia.md#ejercicio-88-volvamos-a-armar-todo).
 * El archivo `lote.py` del [Ejercicio 8.9](../08_Clases_y_Objetos/03_Métodos_Especiales.md#ejercicio-89-mejor-salida-para-objetos).
@@ -21,6 +21,9 @@ Entregá:
 * El archivo `CangurosBuenos.py` del [Ejercicio 8.11](../08_Clases_y_Objetos/04_Pilas_Colas.md#ejercicio-811-canguros-buenos-y-canguros-malos).
 * El archivo `NDVI.py` del [Ejercicio 8.14](../08_Clases_y_Objetos/05_Teledeteccion.md#ejercicio-814-optativo-de-teledetección) (optativo).
  
+y completá [el formulario correspondiente](www.google.com).
+
+Nos vemos!
 
 
 

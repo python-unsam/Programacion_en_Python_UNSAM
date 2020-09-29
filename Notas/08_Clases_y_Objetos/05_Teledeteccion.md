@@ -87,7 +87,7 @@ e) Ponele una leyenda que indique el nombre de cada clase con el color asignado,
 Si llegaste hasta acá, no te olvides de guardar tu trabajo en el archivo `NDVI.py` y entregarlo. A continuación, un ejercicio que usa herramientas un poco más avanzadas de aprendizaje automático.
 
 ### Ejercicio 8.19: Clasificación automática
-En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador viene en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python.
+En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador está ya implementado en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python (probalemente la más usada para esto).
 
 ```python
 # filtro datos ruidosos o que puedan traer problemas. 

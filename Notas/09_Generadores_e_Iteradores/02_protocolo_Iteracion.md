@@ -1,8 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_iteracion_a_medida.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](03_iteracion_a_medida.md)
 
-# 9.1 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md)
-
-# 6.1 El protocolo de iteración
+# 9.1 El protocolo de iteración
 
 En esta sección vemos lo que realmente sucede durante el proceso de iteración
 
@@ -254,7 +252,7 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 >>>
 ```
 
-### Ejercicio 9.3: Un recipiente adecuado
+### Ejercicio 9.3: Un iterador adecuado
 
 ```python
 class Portfolio:
@@ -311,5 +309,5 @@ Se considera "Pythonico" (buen estilo Python) al código que comparte ciertas no
 
 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md)
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_iteracion_a_medida.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](03_iteracion_a_medida.md)
 

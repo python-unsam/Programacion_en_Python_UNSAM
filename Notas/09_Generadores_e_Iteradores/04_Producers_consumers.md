@@ -1,114 +1,116 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_iteracion_a_medida.md) \| [Próximo (4 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](05_Mos_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mos_generadores.md)
 
-# 9.3 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md)
+# 9.3 Productores, consumidores, cañerías.
+\Label_secc{Productores_consumidores_cañerías}
 
-# 6.3 Producers, Consumers and Pipelines
+Los generadores son una herramienta muy útil para configurar "cañerías".
+Este concepto requiere una breve *aclaración*: Una cañería tradicional en computación ("pipeline" en inglés) es una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un de una página web)  
 
-Generators are a useful tool for setting various kinds of
-producer/consumer problems and dataflow pipelines.  This section
-discusses that.
+En esta sección hablaremos de cómo implementar estas estructuras de productores y consumidores de datos con generadores en Python.
 
-### Producer-Consumer Problems
+### Sistemas productor-consumidor
+\Label_secc{Sistemas_productor_consumidor}
 
-Generators are closely related to various forms of *producer-consumer* problems.
+El concepto de generadores está íntimamente asociado a problemas de tipo productor-consumidor en sus varias formas. Fijate esta estructura, que es típica de muchos programas:
 
 ```python
-# Producer
+# Productor
 def follow(f):
     ...
     while True:
         ...
-        yield line        # Produces value in `line` below
+        yield linea        # Produce valores para "linea"
         ...
 
-# Consumer
-for line in follow(f):    # Consumes vale from `yield` above
+# Consumidor
+for linea in follow(f):    # Consume líneas del `yield`
     ...
 ```
 
-`yield` produces values that `for` consumes.
+Los `yield` generan los datos que los `for` consumen.
 
-### Generator Pipelines
+### Pipelines con generadores
+\Label_secc{Pipelines con generadores}
 
-You can use this aspect of generators to set up processing pipelines (like Unix pipes).
+*Nota: un "pipeline" es literalmente una cañería. En conceptos de programación, esos "caños" transportan datos de un programa que los produce a uno que los consume.*
 
-*producer* &rarr; *processing* &rarr; *processing* &rarr; *consumer*
+Podés usar esta característica de los generadores para construír *pipelines* que procesen tus datos, un concepto que es muy usado en Unix (pipes) pero en Windows se usa menos.
 
-Processing pipes have an initial data producer, some set of intermediate processing stages and a final consumer.
+*productor* &rarr; *procesamiento* &rarr; *procesamiento* &rarr; *consumidor*
 
-**producer** &rarr; *processing* &rarr; *processing* &rarr; *consumer*
+Los *pipelines* de procesamiento de datos tienen un productor al comienzo, una cadena de etapas de procesamiento y un consumidor al final.
+
+**productor** &rarr; *procesamiento* &rarr; *procesamiento* &rarr; *consumidor*
 
 ```python
-def producer():
+def productor():
     ...
     yield item
     ...
 ```
 
-The producer is typically a generator. Although it could also be a list of some other sequence.
-`yield` feeds data into the pipeline.
+El productor es en general un generador, aunque tambien podría ser una lista o cualquier otra secuencia iterable.
 
-*producer* &rarr; *processing* &rarr; *processing* &rarr; **consumer**
+El `yield` alimenta al pipeline de datos.
+
+*productor* &rarr; *procesamiento* &rarr; *procesamiento* &rarr; **consumidor**
 
 ```python
-def consumer(s):
+def consumidor(s):
     for item in s:
         ...
 ```
 
-Consumer is a for-loop. It gets items and does something with them.
+El consumidor es un ciclo `for`. Obtiene los elementos `item` y los usa para algo.
 
-*producer* &rarr; **processing** &rarr; **processing** &rarr; *consumer*
+*productor* &rarr; **procesamiento** &rarr; **procesamiento** &rarr; *consumidor*
 
 ```python
-def processing(s):
+def procesamiento(s):
     for item in s:
         ...
-        yield newitem
+        yield itemnuevo
         ...
 ```
 
-Intermediate processing stages simultaneously consume and produce items.
-They might modify the data stream.
-They can also filter (discarding items).
+Las etapas intermedias de procesamiento simultáneamente consumen y producen datos, pueden alterar el flujo de datos, eliminar o modificar datos según su función.
 
-*producer* &rarr; *processing* &rarr; *processing* &rarr; *consumer*
+*productor* &rarr; *procesamiento* &rarr; *procesamiento* &rarr; *consumidor*
 
 ```python
-def producer():
+def productor():
     ...
-    yield item          # yields the item that is received by the `processing`
+    yield item          # yield devuelve un item que será recibido por `procesamiento`
     ...
 
-def processing(s):
-    for item in s:      # Comes from the `producer`
+def procesamiento(s):
+    for item in s:      # item viene del `productor`
         ...
-        yield newitem   # yields a new item
+        yield newitem   # este yield devuelve un nuevo item
         ...
 
-def consumer(s):
-    for item in s:      # Comes from the `processing`
+def consumidor(s):
+    for item in s:      # item viene de `procesamiento`
         ...
 ```
 
-Code to setup the pipeline
+Vamos a construír un pipeline con la siguiente arquitectura:
 
 ```python
-a = producer()
-b = processing(a)
-c = consumer(b)
+a = productor()
+b = procesamiento(a)
+c = consumidor(b)
 ```
 
-You will notice that data incrementally flows through the different functions.
+Como te darás cuenta, los datos van pasando de una función a la siguiente.
 
-## Exercises
+## Ejercicios
 
-For this exercise the `stocksim.py` program should still be running in the background.
-You’re going to use the `follow()` function you wrote in the previous exercise.
+Para este ejercicio, necesitás que el programa `stocksim.py` aún esté corriendo. Vas a usar la función `follow()` que escribiste en el [Ejercicio 9.7](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión)
 
-### Ejercicio 9.8: Setting up a simple pipeline
-Let's see the pipelining idea in action.  Write the following
-function:
+### Ejercicio 9.8: Configuremos un pipeline simple\Label_ej{Configuremos un pipeline simple}
+
+Escribí la siguiente función y veamos como funciona un pipeline.
 
 ```python
 >>> def filematch(lines, substr):
@@ -119,10 +121,7 @@ function:
 >>>
 ```
 
-This function is almost exactly the same as the first generator
-example in the previous exercise except that it's no longer
-opening a file--it merely operates on a sequence of lines given
-to it as an argument.  Now, try this:
+Esta función es casi idéntica al primer ejemplo de generador en el ejercicio anterior, salvo que ya no abre un archivo sino que opera directamente de una secuencia de líneas que recibe como argumento. Ahora probá lo siguiente:
 
 ```
 >>> lines = follow('Data/stocklog.csv')
@@ -130,15 +129,13 @@ to it as an argument.  Now, try this:
 >>> for line in ibm:
         print(line)
 
-... wait for output ...
+... esperá que aparezca la salida ...
 ```
 
-It might take awhile for output to appear, but eventually you
-should see some lines containing data for IBM.
+Puede pasar que tarde unos segundos en darte una salida, pero vas a ver información sobre Narajas tan pronto como sean añadidas al archivo por el primer generador.
 
 ### Ejercicio 9.9: Setting up a more complex pipeline
-Take the pipelining idea a few steps further by performing
-more actions.
+Llevemos esta idea un poco mas lejos. Probemos esto:
 
 ```
 >>> from follow import follow
@@ -155,13 +152,12 @@ more actions.
 ...
 ```
 
-Well, that's interesting.  What you're seeing here is that the output of the
-`follow()` function has been piped into the `csv.reader()` function and we're
-now getting a sequence of split rows.
+Interesante !  La salida de la función `follow()` fué usada como entrada a la función `csv.reader()` y el resultado es una secuencia de filas "parseadas" en las comas.
 
-### Ejercicio 9.10: Making more pipeline components
-Let's extend the whole idea into a larger pipeline.  In a separate file `ticker.py`,
-start by creating a function that reads a CSV file as you did above:
+### Ejercicio 9.10: Un pipeline mas largo\Label_ej{Un pipeline mas largo}
+
+Veamos si podemos construír un pipeline mas largo basado en la misma idea.
+Comenzá creando una función que lea un archivo CSV como hiciste antes en `ticker.py` :
 
 ```python
 # ticker.py
@@ -180,9 +176,9 @@ if __name__ == '__main__':
         print(row)
 ```
 
-Write a new function that selects specific columns:
+Escribí una función nueva que elija algunas columnas específicas:
 
-```
+```python
 # ticker.py
 ...
 def select_columns(rows, indices):
@@ -195,7 +191,8 @@ def parse_stock_data(lines):
     return rows
 ```
 
-Run your program again.  You should see output narrowed down like this:
+Ejecútalo de nuevo, Sam. 
+La salida ahora debería estar restringida a esto: 
 
 ```
 ['BA', '98.35', '0.16']
@@ -205,8 +202,7 @@ Run your program again.  You should see output narrowed down like this:
 ...
 ```
 
-Write generator functions that convert data types and build dictionaries.
-For example:
+Escribí funciones generadoras que conviertan el tipo de datos a diccionarios:
 
 ```python
 # ticker.py
@@ -229,7 +225,7 @@ def parse_stock_data(lines):
 ...
 ```
 
-Run your program again.  You should now a stream of dictionaries like this:
+Correlo de nuevo. Ahora la salida debería ser una serie de diccionarios:
 
 ```
 { 'name':'BA', 'price':98.35, 'change':0.16 }
@@ -239,8 +235,9 @@ Run your program again.  You should now a stream of dictionaries like this:
 ...
 ```
 
-### Ejercicio 9.11: Filtering data
-Write a function that filters data.  For example:
+### Ejercicio 9.11: Filtremos los datos\Label_ej{Filtremos los datos}
+
+Para seguir agregando procesamiento a nuestro pipeline, escribí un filtro de datos:
 
 ```python
 # ticker.py
@@ -252,7 +249,7 @@ def filter_symbols(rows, names):
             yield row
 ```
 
-Use this to filter stocks to just those in your portfolio:
+Esto se usa para dejar pasar únicamente aquéllos cajones incluídos en el camión.
 
 ```python
 import report
@@ -263,10 +260,9 @@ for row in rows:
     print(row)
 ```
 
-### Ejercicio 9.12: Putting it all together
-In the `ticker.py` program, write a function `ticker(portfile, logfile, fmt)`
-that creates a real-time stock ticker from a given portfolio, logfile,
-and table format.  For example::
+### Ejercicio 9.12: El pipeline ensamblado\Label_ej{El pipeline ensamblado}
+
+En el programa `ticker.py` escribí una función `ticker(portfile, logfile, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate:
 
 ```python
 >>> from ticker import ticker
@@ -288,16 +284,11 @@ CAT,78.05,-0.47
 ...
 ```
 
-### Discussion
+### Discusión
 
-Some lessons learned: You can create various generator functions and
-chain them together to perform processing involving data-flow
-pipelines.  In addition, you can create functions that package a
-series of pipeline stages into a single function call (for example,
-the `parse_stock_data()` function).
-
-[Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md)
+Que aprendimos hoy ? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos, los procesen modifiquen o filtren entre el primer generador y el ultimo consumidor. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 [Contents](../Contents.md) \| [Previous (6.1 Iteration Protocol)](01_Iteration_protocol.md) \| [Next (6.3 Producer/Consumer)](03_Producers_consumers.md))](03_iteracion_a_medida.md) \| [Próximo (4 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md))](05_Mos_generadores.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mos_generadores.md)
 

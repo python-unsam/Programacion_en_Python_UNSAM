@@ -1,15 +1,11 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md))](04_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md)
 
-# 9.4 [Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md)
+# 9.4 # Mas sobre generadores
 
-# 6.4 More Generators
+Esta sección introduce algunos temas adicionales relacionados con generadores, entre ellas : expresiones generadoras y el módulo `itertools`
 
-This section introduces a few additional generator related topics
-including generator expressions and the itertools module.
-
-### Generator Expressions
-
-A generator version of a list comprehension.
+### Expresiones generadoras
+Una expresión generadora es una lista por comprensión en su "versión generadora", que devuelve un elemento por vez.
 
 ```python
 >>> a = [1,2,3,4]
@@ -23,25 +19,25 @@ A generator version of a list comprehension.
 >>>
 ```
 
-Differences with List Comprehensions.
+¿Cuales son las diferencias entre expresiones generadoras y comprensión de listas? Bueno, las expresiones generadoras ... 
 
-* Does not construct a list.
-* Only useful purpose is iteration.
-* Once consumed, can't be reused.
+* No construyen una lista
+* Construídas para ser iteradas
+* Una vez consumidas, no pueden ser reutilizadas.
 
-General syntax.
+La sintaxis general es :
 
 ```python
 (<expression> for i in s if <conditional>)
 ```
 
-It can also serve as a function argument.
+Las podés usar como argumento de una función.
 
 ```python
 sum(x*x for x in a)
 ```
 
-It can be applied to any iterable.
+Las podés usar en lugar de cualquier iterable.
 
 ```python
 >>> a = [1,2,3,4]
@@ -54,9 +50,7 @@ It can be applied to any iterable.
 >>>
 ```
 
-The main use of generator expressions is in code that performs some
-calculation on a sequence, but only uses the result once.  For
-example, strip all comments from a file.
+El uso principal de las expresiones generadoras es en código que realiza un cómputo con una serie de elementos pero sólo necesita cada elemento una única vez. Ejemplo: quitar todos las líneas de un programa que sean comentarios:
 
 ```python
 f = open('somefile.txt')
@@ -66,25 +60,26 @@ for line in lines:
 f.close()
 ```
 
-With generators, the code runs faster and uses little memory. It's
-like a filter applied to a stream.
+Al usar generadores, tu código ejecuta más rápido y usa menos memoria. Se portan como un filtro en el flujo de datos por un pipeline.
 
-### Why Generators
+### Motivos para usar generadores
 
-* Many problems are much more clearly expressed in terms of iteration.
-  * Looping over a collection of items and performing some kind of operation (searching, replacing, modifying, etc.).
-  * Processing pipelines can be applied to a wide range of data processing problems.
-* Better memory efficiency.
-  * Only produce values when needed.
-  * Contrast to constructing giant lists.
-  * Can operate on streaming data
-* Generators encourage code reuse
-  * Separates the *iteration* from code that uses the iteration
-  * You can build a toolbox of interesting iteration functions and *mix-n-match*.
+* Muchos problemas se expresan mejor en términos de iteración.
+  * Recorrer una colección de items para hacer algún cómputo (buscar, reemplazar, modificar, etc.).
+  * Los pipelines de procesamiento resuelven un amplio abanico de problemas.
 
-### `itertools` module
+* Mas eficientes en el uso de memoria.
+  * Sólo producís valores cuando los necesitás.
+  * Varias ventajas sobre construír una larga lista.
+  * Pueden operar sobre datos en pipelines.  
 
-The `itertools` is a library module with various functions designed to help with iterators/generators.
+* Un generador facilita la reutilización de código.
+  * Separa la propia *iteración* del código que utiliza sus datos.
+  * Podés construír tu propio conjunto de herramientas de iteración y ensamblarlas como necesites en cada caso. 
+
+### El módulo `itertools` 
+
+El módulo `itertools` es una biblioteca con varias funciones útiles para construír generadores e interadores. 
 
 ```python
 itertools.chain(s1,s2)
@@ -99,26 +94,24 @@ itertools.tee(s, ncopies)
 itertools.izip(s1, ... , sN)
 ```
 
-All functions process data iteratively.
-They implement various kinds of iteration patterns.
+Todas estas funciones procesan datos iterativamente, e implementan distintos tipos de patrones de iteración.
 
-More information at [Generator Tricks for Systems Programmers](http://www.dabeaz.com/generators/) tutorial from PyCon '08.
+Un buen curso (en inglés, del 2014) sobre [Generadores e iteradores] es: (http://www.dabeaz.com/generators/)
 
-## Exercises
+## Ejercicios
 
-In the previous exercises, you wrote some code that followed lines being written to a log file and parsed them into a sequence of rows.
-This exercise continues to build upon that.  Make sure the `Data/stocksim.py` is still running.
+En ejercicios anteriores escribiste código que vigilaba un archivo (un log) esperando líneas nuevas escritas al final y las presentaba como una secuencia de filas. Este ejercicio continúa aquél, de modo que vas a necesitar `Data/stocksim.py` ejecutándose para esto.
 
-### Ejercicio 9.13: Generator Expressions
-Generator expressions are a generator version of a list comprehension.
-For example:
+### Ejercicio 9.13: Expresiones generdoras\Label_ej{Expresiones generadoras: uso único}
+
+Fijate este ejemplo de una expresión generadora:
 
 ```python
 >>> nums = [1, 2, 3, 4, 5]
->>> squares = (x*x for x in nums)
->>> squares
+>>> cuadrados = (x*x for x in nums)
+>>> cuadrados
 <generator object <genexpr> at 0x109207e60>
->>> for n in squares:
+>>> for n in cuadrados:
 ...     print(n)
 ...
 1
@@ -128,8 +121,7 @@ For example:
 25
 ```
 
-Unlike a list a comprehension, a generator expression can only be used once.
-Thus, if you try another for-loop, you get nothing:
+A diferencia de una definición por comprensión de listas, una expresión generadora sólo puede recorrerse una vez. Si intentás recorrerla de nuevo con otro `for`, no obtenés nada.
 
 ```python
 >>> for n in squares:
@@ -138,29 +130,25 @@ Thus, if you try another for-loop, you get nothing:
 >>>
 ```
 
-### Ejercicio 9.14: Generator Expressions in Function Arguments
-Generator expressions are sometimes placed into function arguments.
-It looks a little weird at first, but try this experiment:
+### Ejercicio 9.14: Expresiones generadoras como argumentos en funciones.
+A veces es útil (y muy claro al leerlo) si pasás una expresión generadora como argumento de una función. A primera vista parece un poco raro, pero probá esto:
 
 ```python
 >>> nums = [1,2,3,4,5]
->>> sum([x*x for x in nums])    # A list comprehension
+>>> sum([x*x for x in nums])    # una lista por comprensión
 55
->>> sum(x*x for x in nums)      # A generator expression
+>>> sum(x*x for x in nums)      # una expresión generadora
 55
 >>>
 ```
-In the above example, the second version using generators would
-use significantly less memory if a large list was being manipulated.
 
-In your `portfolio.py` file, you performed a few calculations
-involving list comprehensions.  Try replacing these with
-generator expressions.
+En ese ejemplo, la segunda versión (que usa un generador) usaría mucha menos memoria que construír toda la lista simultáneamente, si la lista fuera grande.
 
-### Ejercicio 9.15: Code simplification
-Generators expressions are often a useful replacement for
-small generator functions.  For example, instead of writing a
-function like this:
+En tu archivo `camión.py` lograste hacer algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
+
+### Ejercicio 9.15: Código simple\Label_ej{Código simple}
+
+Las expresiones generadoras son a menudo un buen reemplazo para pequeñas funciones generadoras. Por ejemplo, en lugar de escribir una función como esta:
 
 ```python
 def filter_symbols(rows, names):
@@ -169,18 +157,16 @@ def filter_symbols(rows, names):
             yield row
 ```
 
-You could write something like this:
+La podrías reemplazar con una expresión así:
 
 ```python
 rows = (row for row in rows if row['name'] in names)
 ```
 
-Modify the `ticker.py` program to use generator expressions
-as appropriate.
+Entonces: modifcá el programa `ticker.py` para que use funciones generadoras.
 
 
-[Contents](../Contents.md) \| [Previous (6.3 Producer/Consumer)](03_Producers_consumers.md) \| [Next (7 Advanced Topics)](../07_Advanced_Topics/00_Overview.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 [Contents](../Contents.md) \| [Previous (6.2 Customizing Iteration)](02_Customizing_iteration.md) \| [Next (6.4 Generator Expressions)](04_More_generators.md))](04_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md)
 

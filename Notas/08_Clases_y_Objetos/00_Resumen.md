@@ -1,13 +1,13 @@
 [Contenidos](../Contenidos.md) \| [Anterior (7 Fechas, Carpetas y Pandas)](../07_Fechas_Carpetas_y_Pandas/00_Resumen.md) \| [Próximo (9 Generadores e iteradores)](../09_Generadores_e_Iteradores/00_Resumen.md)
 
 # 8. Clases y objetos
-**Esta clase está en preparación.**
-**El material sufrirá cambios hasta el miércoles 30/9, cuando daremos inicio a estos temas en el curso.**
+En esta sección vamos a ver los conceptos de clases y objetos. Hasta ahora los programas que escribimos usaron sólo tipos de datos nativos de Python, con la instrucción `class` vamos a definir nuevas clases. Vamos a ir más allá y a hablar del concepto de herencia, una herramienta comúnmente usada para escribir programas extensibles. Por último, vamos a referirnos a algunos *métodos especiales* de los objetos de Python.
 
+En los ejercicios vamos a ver los conceptos de pilas y colas. En particular, la *pila de llamadas* nos prepara el camino para poder estudiar en un par de clases el concepto de recursión.
 
+Cerramos esta clase con un ejercicio optativo que involucra conceptos de teledetección y de aprendizaje automático.
 
-Programación orientada a objetos.
-Hasta ahora los programas con que estuviste trabajando usaron sólo tipos de datos nativos de Python. En esta sección vamos a ver los conceptos de clases y objetos. Vamos a usar la instrucción `class` para definir nuevas clases. Vamos a ir más allá y a hablar del concepto de herencia, una herramienta comúnmente usada para escribir programas extensibles. Por último, vamos a referirnos a algunos métodos especiales de Python.
+El ejercicio para la revisión de pares de esta semana es el \ref_ej{torre_control} sobre la torre de control.
 
 
 
