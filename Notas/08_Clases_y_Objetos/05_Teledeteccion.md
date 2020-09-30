@@ -39,7 +39,7 @@ _Sugerencia_: Con `plt.hist(banda.flatten(),bins=100)` vas a ver un histograma d
 
 b) Escribí una función `crear_img_png(carpeta, banda)` que, dada una carpeta y un número de banda, muestre la imagen de dicha banda y la guarde en formato .png. Asegurate de incorporar un `colorbar` al lado de la imágen.
 
-Tené en cuenta lo que hiciste en el punto a) para que se vea adecadamente.
+Tené en cuenta lo que hiciste en el punto a) para que se vea adecuadamente.
 
 
 ### Ejercicio 8.16: Histogramas
@@ -48,16 +48,16 @@ Escribí ahora otra función, llamada `crear_hist_png(carpeta, banda, bins)` que
 ### Ejercicio 8.17: Máscaras binarias
 a) Usá las funciones `crear_img_png` y `crear_hist_png` que hiciste en los puntos anteriores para generar las imágenes e histogramas de cada banda.
 
-b) ¿Qué banda o bandas parecieran tener histogramas bimodales, mostrando diferentes tipos de pixels? Elijí una de esas bandas y observando el histograma, seleccioná un umbral que te permita distinguir los dos tipos de píxels. Por ejemplo, podés crear una matriz del mismo tamaño de la banda donde a cada píxel le corresponda un 1 o un 0, 1 si está por arriba del umbral y 0 si no.
+b) ¿Qué banda o bandas parecieran tener histogramas bimodales, mostrando diferentes tipos de pixels? Elegí una de esas bandas y, observando el histograma, seleccioná un umbral que te permita distinguir los dos tipos de píxels. Por ejemplo, podés crear una matriz del mismo tamaño de la banda donde a cada píxel le corresponda un 1 o un 0, 1 si está por arriba del umbral y 0 si no.
 
 Graficá la imágen binaria así obtenida. ¿A qué corresponden los dos tipos de píxeles que pudiste distinguir tan fácilmente?
 
 ### Ejercicio 8.18: Clasificación manual
 En este ejercicio vamos a trabajar con un índice: el Índice de Vegetación de Diferencia Normalizada, también conocido como [NDVI](https://es.wikipedia.org/wiki/%C3%8Dndice_de_vegetaci%C3%B3n_de_diferencia_normalizada) por sus siglas en inglés. Este índice, basado en la intensidad de la radiación de dos bandas  del espectro electromagnético que interactúan particularmente con la vegetación, aporta información sobre la cantidad, estado y desarrollo de la misma.
 
-Para calcular el NDVI se utilizan las bandas espectrales Roja e Infrarroja, el cálculo se hace mediante la siguiente fórmula:
+Para calcular el NDVI se utilizan las bandas espectrales Roja e Infrarroja y el cálculo se hace mediante la siguiente fórmula:
 
-`(INFRARROJO_CERCANO - ROJO) / {INFRARROJO_CERCANO + ROJO}`
+`(INFRARROJO_CERCANO - ROJO) / (INFRARROJO_CERCANO + ROJO)`
 
 a) Calcular el NDVI en una nueva matriz.
 
@@ -87,7 +87,7 @@ e) Ponele una leyenda que indique el nombre de cada clase con el color asignado,
 Si llegaste hasta acá, no te olvides de guardar tu trabajo en el archivo `NDVI.py` y entregarlo. A continuación, un ejercicio que usa herramientas un poco más avanzadas de aprendizaje automático.
 
 ### Ejercicio 8.19: Clasificación automática
-En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador está ya implementado en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python (probalemente la más usada para esto).
+En el ejercicio anterior definimos a mano los umbrales que distinguen las clases. Es posible hacer esto de forma automática. Para eso se usan técnicas de clustering. El siguiente código muestra un ejemplo con un clasificador muy sencillo: `kmeans`. Este clasificador está ya implementado en la biblioteca [sklearn](https://scikit-learn.org/stable/) que es una biblioteca dedicada al aprendizaje automático en python (probablemente la más usada para esto).
 
 ```python
 # filtro datos ruidosos o que puedan traer problemas. 

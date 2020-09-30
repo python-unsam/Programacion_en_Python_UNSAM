@@ -11,7 +11,7 @@ Una de las formas de extender el comportamiento de un programa es definir una in
 
 Otra forma muy interesante es definir clases base, abstractas, que van a ser implementadas luego, por herencia, en sus versiones definitivas. 
 
-La experiencia te va a permitir decidir (quizás taríamente) cuándo es mas conveniente una arquitectura o la otra.
+La experiencia te va a permitir decidir (quizás tardíamente) cuándo es mas conveniente una arquitectura o la otra.
 
 En fin, para cerrar esta clase, entregá:
 
@@ -24,13 +24,6 @@ En fin, para cerrar esta clase, entregá:
 y completá [el formulario correspondiente](www.google.com).
 
 Nos vemos!
-
-
-
-
-
-
-
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Teledetección)](05_Teledeteccion.md)
 

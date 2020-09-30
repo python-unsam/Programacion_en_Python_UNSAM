@@ -12,8 +12,8 @@ La clase debe tener un método constructor para crear el rectángulo a partir de
 * `altura()` que dé la medida de la altura del rectángulo.
 * `area()` que dé la medida del área del rectángulo.
 * Creá métodos especiales `__str__` y `__repr__`.
-* `desplazar(desplazamiento)` que dado un desplzamiento (de tipo Punto) desplace el rectángulo en ambas coordenadas usando el método `add` de la clase Punto.
-* `rotar()` que rote el rectángulo sobre su esquina inferior derecha 90 grado a la derecha.
+* `desplazar(desplazamiento)` que dado un desplazamiento (de tipo Punto) desplace el rectángulo en ambas coordenadas usando el método `add` de la clase Punto.
+* `rotar()` que rote el rectángulo sobre su esquina inferior derecha 90 grados a la derecha.
 
 Probá tu código:
 
@@ -119,7 +119,7 @@ class Cola:
 ```
 
 ### Ejercicio 8.12: Torre de Control
-Usándo un par de objetos de la clase Cola, escribí una nueva clase llamada `TorreDeControl` que modele el trabajo de una torre de control de un aeropuerto con una pista de aterrizaje. Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. La clase debe funcionar conforme al siguiente ejemplo:
+Usando un par de objetos de la clase Cola, escribí una nueva clase llamada `TorreDeControl` que modele el trabajo de una torre de control de un aeropuerto con una pista de aterrizaje. Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. La clase debe funcionar conforme al siguiente ejemplo:
 
 ```python
 >>> torre = TorreDeControl()
@@ -143,11 +143,11 @@ Guardá tu solución (conteniendo también la definición de la clase `Cola`) en
 
 ### Pilas
 
-Una **pila** (_stack_ en inglés) es una estructura de datos. Se trata de una lista ordenada que permite almacenar y recuperar datos, con un modo de acceso de tipo LIFO (del inglés Last In, First Out, «último en entrar, primero en salir»). Funcionan al de manera opuesta que las colas que mencionamos antes. 
+Una **pila** (_stack_ en inglés) es una estructura de datos. Se trata de una lista ordenada que permite almacenar y recuperar datos, con un modo de acceso de tipo LIFO (del inglés Last In, First Out, «último en entrar, primero en salir»). Funcionan de manera opuesta que las colas que mencionamos antes. 
 
 Las pilas y colas son estructuras de datos que se aplican en multitud de contextos debido a su simplicidad y capacidad de modelar diferentes procesos.
 
-La operaciones (métodos) elementales de las pilas son _apilar_ (coloca un objeto en la pila) y _desapilar_ (retira el último elemento apilado). En inglés se llaman _push_ y _pop_ y son análogos al _encolar y el _desencolar_ de la colas. 
+La operaciones (métodos) elementales de las pilas son _apilar_ (coloca un objeto en la pila) y _desapilar_ (retira el último elemento apilado). En inglés se llaman _push_ y _pop_ y son análogos al _encolar_ y el _desencolar_ de la colas. 
 
 En cada momento solamente se tiene acceso a la parte superior de la pila, es decir, al último objeto apilado. La operación _desapilar_ justamente permite la obtención de este elemento, que es retirado de la pila.
 
@@ -184,7 +184,7 @@ En f, x vale 50
 En g, después de llamar a f, x vale 10. 
 ```
 
-Para poder volver a recuperar el valor 10 para `x` en `g()` luego de llamar a `f()` manejó adecuadamente la pila de llamadas. Podemos pensar que en la ejecución de `g()`, justo antes de llamar a `f()` había un _estado_ que podría ser resumido en `estado = {función: 'g', próxima_línea_a_ejecutar: 4, variables: {x: 10, b: 45}}`. Luego se ejecuta la cuarta línea de código. El intéreprete incrementa `próxima_línea_a_ejecutar` y, antes de llamar a `f()`  apila el `estado` en la pila de llamadas. Al llamar a `f()` el nuevo estado pasa a ser `estado = {función: 'f', próxima_línea_a_ejecutar: 1, variables = {}}`. El intéreprete ejecuta las tres líneas de código de `f`, incrementando la variable `próxima_línea_a_ejecutar` en cada paso, y agregando `x:50` y luego `a:20` el estado de las variables. Por lo tanto, termina la ejecución de `f` en el `estado = {función: 'f', próxima_línea_a_ejecutar: 4, variables = {x: 50, a: 20}}`. Como ya no hay más código que ejecutar de `f()` el intérprete **desapila**  un estado y continúa con la ejecución usando `estado = {función: 'g', próxima_línea_a_ejecutar: 5, variables: {x: 10, b: 45}}`, y por lo tanto imprime:
+Para poder volver a recuperar el valor 10 para `x` en `g()` luego de llamar a `f()` se manejó adecuadamente la pila de llamadas. Podemos pensar que en la ejecución de `g()`, justo antes de llamar a `f()` había un _estado_ que podría ser resumido en `estado = {función: 'g', próxima_línea_a_ejecutar: 4, variables: {x: 10, b: 45}}`. Luego se ejecuta la cuarta línea de código. El intérprete incrementa `próxima_línea_a_ejecutar` y, antes de llamar a `f()`,  apila el `estado` en la pila de llamadas. Al llamar a `f()`, el nuevo estado pasa a ser `estado = {función: 'f', próxima_línea_a_ejecutar: 1, variables = {}}`. El intéreprete ejecuta las tres líneas de código de `f`, incrementando la variable `próxima_línea_a_ejecutar` en cada paso, y agregando `x:50` y luego `a:20` el estado de las variables. Por lo tanto, termina la ejecución de `f` en el `estado = {función: 'f', próxima_línea_a_ejecutar: 4, variables = {x: 50, a: 20}}`. Como ya no hay más código que ejecutar de `f()` el intérprete **desapila**  un estado y continúa con la ejecución usando `estado = {función: 'g', próxima_línea_a_ejecutar: 5, variables: {x: 10, b: 45}}`, y por lo tanto imprime:
 ```
 En g, después de llamar a f, x vale 10. 
 ```

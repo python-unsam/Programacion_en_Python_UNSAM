@@ -152,7 +152,7 @@ class Jugador:
         self.mover(-dist, 0) # Sí. Llama al método `mover` definido antes.
 ```
 
-Si necesitás referite a un dato o un método de una clase tenés que hacer una referencia explícita (agregando el `self`), sino te estás refiriendo a 
+Si necesitás referirte a un dato o un método de una clase tenés que hacer una referencia explícita (agregando el `self`), sino te estás refiriendo a 
 otra cosa como en el ejemplo anterior.
 
 ## Ejercicios
