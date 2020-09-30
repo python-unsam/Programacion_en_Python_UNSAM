@@ -20,10 +20,11 @@ En fin, para cerrar esta clase, entregá:
 * El archivo `torre_control.py` del [Ejercicio 8.12](../08_Clases_y_Objetos/04_Pilas_Colas.md#ejercicio-812-torre-de-control).
 * El archivo `canguros_buenos.py` del [Ejercicio 8.11](../08_Clases_y_Objetos/04_Pilas_Colas.md#ejercicio-811-canguros-buenos-y-canguros-malos).
 * El archivo `NDVI.py` del [Ejercicio 8.14](../08_Clases_y_Objetos/05_Teledeteccion.md#ejercicio-814-optativo-de-teledetección) (optativo).
- 
-y completá [el formulario correspondiente](www.google.com).
 
-Nos vemos!
+Además te pedimos que completes [este formulario](https://docs.google.com/forms/d/13FKe29wNTl7yfVQk4wW6k90vrrEwDlH79b3WUB95DiU) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
+
+¡Nos vemos!
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Teledetección)](05_Teledeteccion.md)
 
