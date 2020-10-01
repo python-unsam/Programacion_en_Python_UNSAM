@@ -267,13 +267,13 @@ class FormatoTabla:
         '''
         Crea el encabezado de la tabla.
         '''
-    raise NotImplementedError()
+        raise NotImplementedError()
 
     def fila(self, rowdata):
         '''
         Crea una única fila de datos de la tabla.
         '''
-    raise NotImplementedError()
+        raise NotImplementedError()
 ```
 
 Por ahora la clase no hace nada, pero sirve como una especie de especificación de diseño para otras clases que vamos a definir. Una clase como ésta es a menudo llamada "clase base abstracta".
