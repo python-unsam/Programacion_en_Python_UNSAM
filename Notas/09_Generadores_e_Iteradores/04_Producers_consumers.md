@@ -1,7 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mos_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mas_generadores.md)
 
 # 9.3 Productores, consumidores, cañerías.
-\Label_secc{Productores_consumidores_cañerías}
 
 Los generadores son una herramienta muy útil para configurar "cañerías".
 Este concepto requiere una breve *aclaración*: Una cañería tradicional en computación ("pipeline" en inglés) es una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un de una página web)  
@@ -9,7 +8,6 @@ Este concepto requiere una breve *aclaración*: Una cañería tradicional en com
 En esta sección hablaremos de cómo implementar estas estructuras de productores y consumidores de datos con generadores en Python.
 
 ### Sistemas productor-consumidor
-\Label_secc{Sistemas_productor_consumidor}
 
 El concepto de generadores está íntimamente asociado a problemas de tipo productor-consumidor en sus varias formas. Fijate esta estructura, que es típica de muchos programas:
 
@@ -30,7 +28,6 @@ for linea in follow(f):    # Consume líneas del `yield`
 Los `yield` generan los datos que los `for` consumen.
 
 ### Pipelines con generadores
-\Label_secc{Pipelines con generadores}
 
 *Nota: un "pipeline" es literalmente una cañería. En conceptos de programación, esos "caños" transportan datos de un programa que los produce a uno que los consume.*
 
@@ -108,8 +105,7 @@ Como te darás cuenta, los datos van pasando de una función a la siguiente.
 
 Para este ejercicio, necesitás que el programa `stocksim.py` aún esté corriendo. Vas a usar la función `follow()` que escribiste en el [Ejercicio 9.7](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión)
 
-### Ejercicio 9.8: Configuremos un pipeline simple\Label_ej{Configuremos un pipeline simple}
-
+### Ejercicio 9.8: Configuremos un pipeline simple
 Escribí la siguiente función y veamos como funciona un pipeline.
 
 ```python
@@ -134,7 +130,7 @@ Esta función es casi idéntica al primer ejemplo de generador en el ejercicio a
 
 Puede pasar que tarde unos segundos en darte una salida, pero vas a ver información sobre Narajas tan pronto como sean añadidas al archivo por el primer generador.
 
-### Ejercicio 9.9: Setting up a more complex pipeline
+### Ejercicio 9.9: Un pipeline más en serio
 Llevemos esta idea un poco mas lejos. Probemos esto:
 
 ```
@@ -154,8 +150,7 @@ Llevemos esta idea un poco mas lejos. Probemos esto:
 
 Interesante !  La salida de la función `follow()` fué usada como entrada a la función `csv.reader()` y el resultado es una secuencia de filas "parseadas" en las comas.
 
-### Ejercicio 9.10: Un pipeline mas largo\Label_ej{Un pipeline mas largo}
-
+### Ejercicio 9.10: Un pipeline mas largo
 Veamos si podemos construír un pipeline mas largo basado en la misma idea.
 Comenzá creando una función que lea un archivo CSV como hiciste antes en `ticker.py` :
 
@@ -235,8 +230,7 @@ Correlo de nuevo. Ahora la salida debería ser una serie de diccionarios:
 ...
 ```
 
-### Ejercicio 9.11: Filtremos los datos\Label_ej{Filtremos los datos}
-
+### Ejercicio 9.11: Filtremos los datos
 Para seguir agregando procesamiento a nuestro pipeline, escribí un filtro de datos:
 
 ```python
@@ -260,8 +254,7 @@ for row in rows:
     print(row)
 ```
 
-### Ejercicio 9.12: El pipeline ensamblado\Label_ej{El pipeline ensamblado}
-
+### Ejercicio 9.12: El pipeline ensamblado
 En el programa `ticker.py` escribí una función `ticker(portfile, logfile, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate:
 
 ```python
@@ -290,5 +283,5 @@ Que aprendimos hoy ? Si creás varias funciones generadoras y las ponés "en ser
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mos_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mas_generadores.md)
 

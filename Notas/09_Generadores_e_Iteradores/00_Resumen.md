@@ -14,7 +14,8 @@ Una de las características mas poderosas de Python es la capacidad de redefinir
 * [9.1 El protocolo de iteración](02_protocolo_Iteracion.md)
 * [9.2 Iteración a medida](03_iteracion_a_medida.md)
 * [9.3 Productores, consumidores, cañerías.](04_Producers_consumers.md)
-* [9.4 # Mas sobre generadores](05_Mos_generadores.md)
+* [9.4 # Mas sobre generadores](05_Mas_generadores.md)
+* [9.5 Cierre de la novena clase](06_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)

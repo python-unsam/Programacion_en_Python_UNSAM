@@ -26,7 +26,7 @@ for x in f: # Iterar sobre las líneas de un archivo ASCII
     ...
 ```
 
-Y podemos hacer éso porque existe un protocolo que todo objeto que permita iterar sobre él debe cumplir. 
+Y podemos hacer éso porque existe un protocolo que debe cumplir todo objeto que permita iterar sobre él. 
 
 ### El protocolo de iteración
 
@@ -51,7 +51,7 @@ while True:
 
 Todo objeto compatible con un ciclo `for` implementa, a bajo nivel, este protocolo de iteración.
 
-Un ejemplo: Iteracióin manual sobre una lista.
+Un ejemplo: Iteración manual sobre una lista.
 
 ```python
 >>> x = [1,2,3]
@@ -71,9 +71,9 @@ File "<stdin>", line 1, in ? StopIteration
 ```
 Donde el *traceback* acusa una excepción de tipo *StopIteration* en la línea de comandos (stdin). Además notá que en la tercera línea, al preguntar por `it` python responde <es un objeto de tipo listiterator (iterador de listas) alojado en 590b0 hexadecimal> .
 
-### Compatible con iteración
+### Iterable
 
-Es necesario entender un poco sobre los mecanismos de iteradores si querés permitir iteración sobre objetos que vos definas. Un ejemplo: construyamos un contenedor:
+Es necesario entender los mecanismos de iteradores si querés permitir iteración sobre objetos que vos definas, es decir, hacerlos *iterables*. Construyamos un contenedor:
 
 ```python
 class Camion:
@@ -90,10 +90,8 @@ for c in cam:
 ```
 
 ## Exercises
-\Label_secc{Ejercicios_Iteradores}
 
-### Ejercicio 9.1: Iteration Illustrated\Label_ej{Iteradores_demostracion}
-
+### Ejercicio 9.1: Iteradores, una demostración
 Construí la siguiente lista:
 
 ```python
@@ -141,12 +139,8 @@ La función nativa `next()` es un "atajo" al método `__next__()` de un iterador
 
 Llamá a `next(f)` hasta que llegues al final del archivo, y fijate qué sucede.
 
-### Ejercicio 9.2: Supporting Iteration\Label_ej{Compatible con iteración}
-
-[oski] : # (Ojo que esto lleva el mismo nombre que una seccion mas arriba, en el original está así y lo mantuve. Espero que el compilador de Rafa no se maree)
-
-
-[oski]: # (Dudo si no llamar a esto camion_iterable.py para que no se confundan con otros archivos [versiones anteriores])
+### Ejercicio 9.2: Supporting Iteration
+Como decíamos en la sección [Sección 9.1](../09_Generadores_e_Iteradores/02_protocolo_Iteracion.md#iterable), cuando definas tus propios objetos, especialmente si éstos son "envoltorios" para listas u otros iterables, vas a querer que se pueda iterar sobre ellos. Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
 
 ```python
 # camion.py
@@ -253,6 +247,7 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 ```
 
 ### Ejercicio 9.3: Un iterador adecuado
+Cuando hagas clases que sean recipientes ó contenedores de estructuras de datos vas a necesitar que hagan algo mas que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en Sección ?. Aquí hay algunos:
 
 ```python
 class Portfolio:

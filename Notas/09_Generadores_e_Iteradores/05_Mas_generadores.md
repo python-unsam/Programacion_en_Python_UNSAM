@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md) \| [Próximo (5 Cierre de la novena clase)](06_Cierre.md)
 
 # 9.4 # Mas sobre generadores
 
@@ -102,8 +102,7 @@ Un buen curso (en inglés, del 2014) sobre [Generadores e iteradores] es: (http:
 
 En ejercicios anteriores escribiste código que vigilaba un archivo (un log) esperando líneas nuevas escritas al final y las presentaba como una secuencia de filas. Este ejercicio continúa aquél, de modo que vas a necesitar `Data/stocksim.py` ejecutándose para esto.
 
-### Ejercicio 9.13: Expresiones generdoras\Label_ej{Expresiones generadoras: uso único}
-
+### Ejercicio 9.13: Expresiones generadoras
 Fijate este ejemplo de una expresión generadora:
 
 ```python
@@ -146,8 +145,7 @@ En ese ejemplo, la segunda versión (que usa un generador) usaría mucha menos m
 
 En tu archivo `camión.py` lograste hacer algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
 
-### Ejercicio 9.15: Código simple\Label_ej{Código simple}
-
+### Ejercicio 9.15: Código simple
 Las expresiones generadoras son a menudo un buen reemplazo para pequeñas funciones generadoras. Por ejemplo, en lugar de escribir una función como esta:
 
 ```python
@@ -168,5 +166,5 @@ Entonces: modifcá el programa `ticker.py` para que use funciones generadoras.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md) \| [Próximo (5 Cierre de la novena clase)](06_Cierre.md)
 

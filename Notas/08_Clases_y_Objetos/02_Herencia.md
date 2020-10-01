@@ -291,10 +291,10 @@ def imprimir_informe(data_informe, formateador):
     Imprime una tabla prolija desde una lista de tuplas
     con (nombre, cajones, precio, diferencia) 
     '''
-    formateador.headings(['Nombre', 'Cantidad', 'Precio', 'Cambio'])
+    formateador.encabezado(['Nombre', 'Cantidad', 'Precio', 'Cambio'])
     for nombre, cajones, precio, cambio in data_informe:
         rowdata = [ nombre, str(cajones), f'{precio:0.2f}', f'{cambio:0.2f}' ]
-        formateador.row(rowdata)
+        formateador.fila(rowdata)
 ```
 
 Como agregaste un argumento a `imprimir_informe()`, hay que modificar también `informe_camion()`. Cambialo para que cree un objeto `formateador` de este modo:
