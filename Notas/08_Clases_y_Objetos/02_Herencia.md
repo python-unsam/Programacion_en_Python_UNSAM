@@ -154,7 +154,7 @@ class Rectangulo(FiguraGeom):
 
 Imaginate por ejemplo su uso en una jerarquía lógica, o taxonómica, en la que las clases tienen una relación natural tal que hace intuitivo derivar una de otra. 
 
-Una aplicación más común, y tal vez más práctica, consiste en escribir código que es reutilizable y/o extensible. Podríamos definir una clase base para una interfase de transferencia de datos y permitir que cada fabricante de equipo de adquisición de datos implemente los detalles de comunicación con cada interfase en particular.
+Una aplicación más común, y tal vez más práctica, consiste en escribir código que es reutilizable y/o extensible. Podríamos definir una clase base para una interfaz de transferencia de datos y permitir que cada fabricante de equipo de adquisición de datos implemente los detalles de comunicación con cada interfaz en particular.
 
 ```python
 class Procesador_de_datos(TCPHandler):
@@ -218,7 +218,7 @@ La clase `Hijo` hereda características de ambos padres. Algunos detalles son un
 
 ## Ejercicios
 
-El concepto de herencia es especialmente útil cuando estás escribiendo código que va a ser extendido o adaptado, ya sea en bibliotecas o grandes sistemas configurables, pero también en pequeños paquetes de procesamiento de datos que pueden adquirir datos de diversas fuentes. Como ya dijimos antes, uno puede escribir las relaciones y comportamientos fundamentales y dejar los detalles de implementación de cada interfase para cuando sean necesarios.
+El concepto de herencia es especialmente útil cuando estás escribiendo código que va a ser extendido o adaptado, ya sea en bibliotecas o grandes sistemas configurables, pero también en pequeños paquetes de procesamiento de datos que pueden adquirir datos de diversas fuentes. Como ya dijimos antes, uno puede escribir las relaciones y comportamientos fundamentales y dejar los detalles de implementación de cada interfaz para cuando sean necesarios.
 
 Para verlo mejor volvamos a la función `imprimir_informe()` del [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones), que figura en el programa `informe.py`. Tenía más o menos este aspecto:
 
@@ -469,7 +469,7 @@ Para testear tu código, modificá el programa principal de modo que use un obje
 ### Ejercicio 8.7: Polimorfismo en acción
 Una de las grandes ventajas de la programación orientada a objetos es que podés cambiar un objeto por otro compatible y tu programa va a funcionar sin necesidad de adaptar el código que usa esos objetos.
 
-Si escribiste un programa diseñado para usar un objeto de la clase `FormatoTabla`, va a funcionar sin importar *qué* objeto de esa clase uses. A este comportamiento particular se lo llama polimorfismo. Está relacionado con la capacidad de usar la misma interfase con diferentes objetos de la misma clase, haciendo que el programa como un todo se porte distinto.
+Si escribiste un programa diseñado para usar un objeto de la clase `FormatoTabla`, va a funcionar sin importar *qué* objeto de esa clase uses. A este comportamiento particular se lo llama polimorfismo. Está relacionado con la capacidad de usar la misma interfaz con diferentes objetos de la misma clase, haciendo que el programa como un todo se porte distinto.
 
 Ahora bien, un potencial problema es cómo diseñar tu programa de manera que el usuarie final pueda elegir el formato. Usar los nombres de las clases de formateadores no resultaría cómodo. Una solución posible es considerar un condicional:
 
@@ -549,27 +549,27 @@ Modificá el programa principal y usá `sys.argv()` para poder definir un format
 
 ```bash
 bash $ python3 informe.py Data/camion.csv Data/precios.csv csv
-Name,Cajones,Precio,Cambio
-Lima,100,9.22,-22.98
-Naranja,50,106.28,15.18
-Caqui,150,35.46,-47.98
-Mandarina,200,20.89,-30.34
-Durazno,95,13.48,-26.89
-Mandarina,50,20.89,-44.21
-Naranja,100,106.28,35.84
-bash $
+Nombre,Cajones,Precio,Cambio
+Lima,100,32.20,8.02
+Naranja,50,91.10,15.18
+Caqui,150,103.44,2.02
+Mandarina,200,51.23,29.66
+Durazno,95,40.37,33.11
+Mandarina,50,65.10,15.79
+Naranja,100,70.44,35.84
+
 ```
 
 Esta versión de `informe.py` preparala para entregarla.
 
 ### Discusión
 
-El caso que vimos es un ejemplo de uno de los usos más comunes de herencia en programación orientada a objetos: escribir programas extensibles. Un sistema puede definir una interfase mediante una superclase base, y pedirte que escribas tus propias implementaciones derivadas de esa clase. Si escribís los métodos específicos para tu caso particular podés adaptar la función de un sistema general para resolver tu problema. 
+El caso que vimos es un ejemplo de uno de los usos más comunes de herencia en programación orientada a objetos: escribir programas extensibles. Un sistema puede definir una interfaz mediante una superclase base, y pedirte que escribas tus propias implementaciones derivadas de esa clase. Si escribís los métodos específicos para tu caso particular podés adaptar la función de un sistema general para resolver tu problema. 
 
 Otro concepto, un poco más interesante, es el de crear tus propias abstracciones. En los ejercicios de esta parte definimos *nuestra propia clase* para crear variaciones en el formato de un informe.
 Tal vez estés pensando "¡Debería usar una biblioteca para crear formatos ya escrita por otre!". Bueno, no. Está bueno que puedas *tanto* crear tu propia clase *como* usar una biblioteca ya escrita. El hecho de usar tu propia clase te da flexibilidad.
 
-Siempre que tu programa adhiera a la interfase de objetos definida por tu clase, podés cambiar la implementación interna en los objetos que escribas para que funcionen del modo que elijas. Podés escribir todo el código vos o usar bibliotecas ya escritas, no importa. Cuando encuentres algo mejor, cambiás tu implementación para que llame al nuevo código. Si la interfase que hiciste está bien escrita, no vas a necesitar modificar el programa que usa las diferentes implementaciones. Simplemente funcionan si cumplen los contratos de la interfase. Es algo muy útil y es uno de los motivos por los que usar herencia puede resolverte los problemas de extensibilidad y diversidad a futuro.
+Siempre que tu programa adhiera a la interfaz de objetos definida por tu clase, podés cambiar la implementación interna en los objetos que escribas para que funcionen del modo que elijas. Podés escribir todo el código vos o usar bibliotecas ya escritas, no importa. Cuando encuentres algo mejor, cambiás tu implementación para que llame al nuevo código. Si la interfaz que hiciste está bien escrita, no vas a necesitar modificar el programa que usa las diferentes implementaciones. Simplemente funcionan si cumplen los contratos de la interfaz. Es algo muy útil y es uno de los motivos por los que usar herencia puede resolverte los problemas de extensibilidad y diversidad a futuro.
 
 Dicho esto, es cierto que diseñar un programa en el paradigma orientado a objetos puede resultar algo muy difícil. Si vas a encarar proyectos grandes con esta herramienta, consultá libros sobre patrones de diseño en POO. De todos modos, haber entendido lo que acabamos de hacer te permite llegar bastante lejos.
 
