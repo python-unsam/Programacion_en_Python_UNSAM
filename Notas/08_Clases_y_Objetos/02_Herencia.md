@@ -375,7 +375,7 @@ def informe_camion(archivo_camion, archivo_precios):
     precios = leer_precios(archivo_precios)
 
     # Obtener los datos para un informe
-    informe = hacer_informe(camion, precios)
+    data_informe = hacer_informe(camion, precios)
 
     # Imprimir
     formateador = formato_tabla.FormatoTablaTXT()
@@ -487,7 +487,7 @@ def informe_camion(archivo_camion, archivo_precios, fmt = 'txt'):
     precios = leer_precios(archivo_precios)
 
     # Obtener los datos para un informe
-    informe = hacer_informe(camion, precios)
+    data_informe = hacer_informe(camion, precios)
 
     # Elige formato
     if fmt == 'txt':
@@ -519,11 +519,11 @@ def informe_camion(archivo_camion, archivo_precios, fmt = 'txt'):
     precios = leer_precios(archivo_precios)
 
     # Crea la data del informe
-    informe = hacer_informe(camion, precios)
+    data_informe = hacer_informe(camion, precios)
 
     # Imprime el informe
     formateador = formato_tabla.crear_formateador(fmt)
-    imprimir_informe(informe, formateador)
+    imprimir_informe(data_informe, formateador)
 ```
 
 Acordate de testear todas las ramas posibles del código para asegurarte de que está funcionando. Llamalo y pedile crear salidas en todos los formatos (podés ver el HTML con tu browser).
