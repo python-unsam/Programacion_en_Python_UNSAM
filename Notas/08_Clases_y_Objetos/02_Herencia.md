@@ -451,7 +451,7 @@ Mandarina,50,65.10,15.79
 Naranja,100,70.44,35.84
 ```
 
-Usando las mismas ideas creá un objeto llamado `FormatoTablaHTML` que produzca un tabla de la siguiente forma:
+Usando las mismas ideas creá la clase `FormatoTablaHTML` que produzca un tabla de la siguiente forma:
 
 ```
 <tr><th>Nombre</th><th>Cajones</th><th>Precio</th><th>Cambio</th></tr>
