@@ -136,7 +136,8 @@ El próximo ejemplo es de un caso aún más especial.
 ### Ejercicio 9.5: Monitoreo de datos en tiempo real.
 Un generador puede ser una forma interesante de vigilar datos a medida que son producidos. En esta sección vamos a probar esa idea. Para empezar, hacé lo siguiente.
 
-El programa `Data/sim_mercado.py` es un generador de datos de precios. Al ejecutarlo, el programa escribe datos en un archivo llamado `Data/mercadolog.csv` contínuamente hasta que es detenido. Corre durante varias horas y una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `sim_mercado.py`, desde unix:
+Vas a necesitar dos archivos del repositorio de la materia: `sim_mercado.py` y `mcentral.csv` 
+El programa `Data/sim_mercado.py` es un generador de datos de precios que toma como referencia a `Data/mcentral.csv` . Al ejecutarlo, el programa escribe datos en un archivo llamado `Data/mercadolog.csv` contínuamente hasta que es detenido. Ejecuta indefinidamente y una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `sim_mercado.py`, ó desde unix.:
 
 ```bash
 bash % python3 sim_mercado.py
@@ -164,7 +165,7 @@ while True:
     fields = line.split(',')
     nombre = fields[0].strip('"')
     precio = float(fields[1])
-    volumen = int(fields[8])
+    volumen = int(fields[2])
     if volumen > 1000:
         print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
@@ -195,7 +196,7 @@ if __name__ == '__main__':
         fields = line.split(',')
         nombre = fields[0].strip('"')
         precio = float(fields[1])
-        volumen = int(fields[8])
+        volumen = int(fields[2])
         if volumen > 1000:
             print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
@@ -213,7 +214,7 @@ if __name__ == '__main__':
         fields = line.split(',')
         nombre = fields[0].strip('"')
         precio = float(fields[1])
-        volumen = int(fields[8])
+        volumen = int(fields[2])
         
         if nombre in camion:    
             print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')

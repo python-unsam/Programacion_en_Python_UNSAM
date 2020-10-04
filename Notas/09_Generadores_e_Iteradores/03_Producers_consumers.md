@@ -139,10 +139,11 @@ Llevemos esta idea un poco más lejos. Probemos esto:
 >>> for fila in filas:
         print(fila)
 
-['BA', '98.35', '6/11/2007', '09:41.07', '0.16', '98.25', '98.35', '98.31', '158148']
-['AA', '39.63', '6/11/2007', '09:41.07', '-0.03', '39.67', '39.63', '39.31', '270224']
-['XOM', '82.45', '6/11/2007', '09:41.07', '-0.23', '82.68', '82.64', '82.41', '748062']
-['PG', '62.95', '6/11/2007', '09:41.08', '-0.12', '62.80', '62.97', '62.61', '454327']
+...   
+['Rabanito', ' 249.37', ' 357']
+['Batata', ' 15.75', ' 1040']
+['Rabanito', ' 211.31', ' 324']
+['Zuccini', ' 83.12', ' 612']
 ...
 ```
 
@@ -150,7 +151,9 @@ Interesante !  La salida de la función `vigilar()` fué usada como entrada a la
 
 ### Ejercicio 9.10: Un pipeline más largo
 Veamos si podemos construír un pipeline más largo basado en la misma idea.
-Comenzá creando una función que lea un archivo CSV como hiciste antes en `ticker.py` :
+
+Creá un archivo nuevo llamado `ticker.py`, te lo vamos a pedir al final de la clase.
+Comenzá creando una función que lea un archivo CSV como hiciste antes:
 
 ```python
 # ticker.py
@@ -180,7 +183,7 @@ def elegir_columnas(rows, indices):
 ...
 def parsear_datos(lines):
     rows = csv.reader(lines)
-    rows = elegir_columnas(rows, [0, 1, 4])
+    rows = elegir_columnas(rows, [0, 2])
     return rows
 ```
 
@@ -188,10 +191,10 @@ Ejecútalo de nuevo, Sam.
 La salida ahora debería estar restringida a esto: 
 
 ```
-['BA', '98.35', '0.16']
-['AA', '39.63', '-0.03']
-['XOM', '82.45','-0.23']
-['PG', '62.95', '-0.12']
+['Brócoli', ' 388']
+['Ajo', ' 120']
+['Caqui', ' 108']
+['Mandarina', ' 1170']
 ...
 ```
 
@@ -205,15 +208,15 @@ def cambiar_tipo(rows, types):
     for row in rows:
         yield [func(val) for func, val in zip(types, row)]
 
-def make_dicts(rows, headers):
+def hace_dicts(rows, headers):
     for row in rows:
         yield dict(zip(headers, row))
-...
+
 def parsear_datos(lines):
     rows = csv.reader(lines)
-    rows = elegir_columnas(rows, [0, 1, 4])
-    rows = convert_types(rows, [str, float, float])
-    rows = make_dicts(rows, ['name', 'price', 'change'])
+    rows = elegir_columnas(rows, [0, 1, 2])
+    rows = cambiar_tipo(rows, [str, float, float])
+    rows = hace_dicts(rows, ['nombre', 'precio', 'volumen'])
     return rows
 ...
 ```
@@ -221,10 +224,10 @@ def parsear_datos(lines):
 Correlo de nuevo. Ahora la salida debería ser una serie de diccionarios:
 
 ```
-{ 'name':'BA', 'price':98.35, 'change':0.16 }
-{ 'name':'AA', 'price':39.63, 'change':-0.03 }
-{ 'name':'XOM', 'price':82.45, 'change': -0.23 }
-{ 'name':'PG', 'price':62.95, 'change':-0.12 }
+{'nombre': 'Frutilla', 'precio': 276.81, 'volumen': 249.0}
+{'nombre': 'Morrón', 'precio': 2988.42, 'volumen': 702.0}
+{'nombre': 'Morrón', 'precio': 3108.63, 'volumen': 498.0}
+{'nombre': 'Naranja', 'precio': 11.5, 'volumen': 870.0}
 ...
 ```
 
@@ -235,21 +238,23 @@ Para seguir agregando procesamiento a nuestro pipeline, escribí un filtro de da
 # ticker.py
 ...
 
-def filter_symbols(rows, names):
-    for row in rows:
-        if row['name'] in names:
-            yield row
+def filtrar_datos(filas, nombres):
+    for fila in filas:
+        if fila['nombre'] in nombres:
+            yield fila
 ```
 
-Esto se usa para dejar pasar únicamente aquéllos cajones incluídos en el camión.
+Esto se usa para dejar pasar únicamente aquéllos lotes incluídos en el camión. Probálo.
 
 ```python
-import report
-portfolio = report.read_portfolio('Data/portfolio.csv')
-rows = parse_stock_data(follow('Data/stocklog.csv'))
-rows = filter_symbols(rows, portfolio)
-for row in rows:
-    print(row)
+
+import informe
+camion = informe.leer_camion('Data/camion.csv')
+filas = parsear_datos(vigilar('Data/mercadolog.csv'))
+filas = filtrar_datos (filas, camion)
+for fila in filas:
+    print(fila)
+
 ```
 
 ### Ejercicio 9.12: El pipeline ensamblado
@@ -258,26 +263,28 @@ En el programa `ticker.py` escribí una función `ticker(portfile, logfile, fmt)
 ```python
 >>> from ticker import ticker
 >>> ticker('Data/portfolio.csv', 'Data/stocklog.csv', 'txt')
-      Name      Price     Change
+    Nombre     Precio    Volumen
 ---------- ---------- ----------
-        GE      37.14      -0.18
-      MSFT      29.96      -0.09
-       CAT      78.03      -0.49
-        AA      39.34      -0.32
+     Caqui     796.73         96
+ Mandarina      12.12       1120
+      Lima    2659.37        222
+   Naranja      11.70       1040
+   Durazno     281.76        704        
 ...
 
 >>> ticker('Data/portfolio.csv', 'Data/stocklog.csv', 'csv')
-Name,Price,Change
-IBM,102.79,-0.28
-CAT,78.04,-0.48
-AA,39.35,-0.31
-CAT,78.05,-0.47
+Nombre,Precio,Volumen
+Mandarina,14.19,1140
+Naranja,9.37,1150
+Durazno,280.56,872
+Lima,2624.94,232
+
 ...
 ```
 
 ### Discusión
 
-¿Qué aprendimos hoy? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos, los procesen modifiquen o filtren entre el primer generador y el ultimo consumidor. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
+¿Qué aprendimos hoy? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos, los procesen modifiquen o filtren entre el primer generador y el ultimo consumidor. Además viste lo fácil que es cambiar el comportamiento del programa cuando tenés interfases bien definidas. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
 
 
 

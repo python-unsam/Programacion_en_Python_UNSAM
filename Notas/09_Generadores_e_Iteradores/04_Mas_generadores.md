@@ -150,10 +150,10 @@ En tu archivo `camion.py` lograste hacer algunos cálculos usando comprensión d
 Las expresiones generadoras son a menudo un buen reemplazo para pequeñas funciones generadoras. Por ejemplo, en lugar de escribir una función como esta:
 
 ```python
-def filter_symbols(rows, names):
-    for row in rows:
-        if row['name'] in names:
-            yield row
+def filtrar_datos(filas, nombres):
+    for fila in filas:
+        if fila['nombre'] in nombres:
+            yield fila
 ```
 
 La podrías reemplazar con una expresión así:
@@ -163,6 +163,7 @@ rows = (row for row in rows if row['name'] in names)
 ```
 
 Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este último para que use funciones generadoras. Preparalos para entregar porque te los pedimos al terminar la clase, junto con ejercicios anteriores.
+
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
