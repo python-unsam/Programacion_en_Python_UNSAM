@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](03_iteracion_a_medida.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](02_iteracion_a_medida.md)
 
 # 9.1 El protocolo de iteración
 
@@ -140,7 +140,7 @@ La función nativade python `next()` es un "atajo" al método `__next__()` de un
 Llamá a `next(f)` hasta que llegues al final del archivo, y fijate qué sucede.
 
 ### Ejercicio 9.2: Supporting Iteration
-Como decíamos en la sección [Sección 9.1](../09_Generadores_e_Iteradores/02_protocolo_Iteracion.md#iterable), cuando definas tus propios objetos, especialmente si éstos son "envoltorios" para listas u otros iterables, vas a querer que se pueda iterar sobre ellos. Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
+Como decíamos en la sección [Sección 9.1](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#iterable), cuando definas tus propios objetos, especialmente si éstos son "envoltorios" para listas u otros iterables, vas a querer que se pueda iterar sobre ellos. Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
 
 ```python
 # camion.py
@@ -302,5 +302,5 @@ Se considera "Pythonico" (buen estilo Python) al código que comparte ciertas no
 
 [Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md)
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](03_iteracion_a_medida.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](02_iteracion_a_medida.md)
 

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md) \| [Próximo (5 Cierre de la novena clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
 
 # 9.4 # Mas sobre generadores
 
@@ -166,5 +166,5 @@ Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este �
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md) \| [Próximo (5 Cierre de la novena clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
 

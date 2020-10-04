@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mas_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](04_Mas_generadores.md)
 
 # 9.3 Productores, consumidores, cañerías.
 
@@ -101,7 +101,7 @@ Como te darás cuenta, los datos van pasando de una función a la siguiente.
 
 ## Ejercicios
 
-Para este ejercicio, necesitás que el programa `sim_mercado.py` aún esté corriendo. Vas a usar la función `vigilar()` que escribiste en el [Ejercicio 9.7](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión)
+Para este ejercicio, necesitás que el programa `sim_mercado.py` aún esté corriendo. Vas a usar la función `vigilar()` que escribiste en el [Ejercicio 9.7](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión)
 
 ### Ejercicio 9.8: Configuremos un pipeline simple
 Escribí la siguiente función y veamos como funciona un pipeline.
@@ -281,5 +281,5 @@ Que aprendimos hoy ? Si creás varias funciones generadoras y las ponés "en ser
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](05_Mas_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](04_Mas_generadores.md)
 

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](02_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md)
 
 # 9.2 Iteración a medida
 
@@ -176,9 +176,9 @@ Cuando ejecutes el programa vas a ver un indicador de precios en el mercado en t
 Observación: La forma en que usamos el método `readline()` en este ejemplo es un poco rara, no es la forma en que se suele usar (detro de un ciclo `for` para recorrer el contenido de un archivo). En este caso la estamos usando para mirar constantemente el fin de archivo para obtener los últimos datos que se hayan agregado (`readline()` devuelve ó bien el último dato o bien una cadena vacía) 
 
 ### Ejercicio 9.6: Uso de un generador para producir datos
-Si analizás un poco el código en el ejercicio [Ejercicio 9.5](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) vas a notar que la primera parte del programa "produce" datos (los obtiene del archivo) y la segunda los procesa y los imprime , es decir "consume" datos. Una característica importante de las funciones generadoras es que podés mover todo el código a una función reutilizable. Fijate en esto...
+Si analizás un poco el código en el ejercicio [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) vas a notar que la primera parte del programa "produce" datos (los obtiene del archivo) y la segunda los procesa y los imprime , es decir "consume" datos. Una característica importante de las funciones generadoras es que podés mover todo el código a una función reutilizable. Fijate en esto...
  
-Modificá el código del [Ejercicio 9.5](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) de modo que la lectura del archivo esté resuelta por una única función generadora `vigilar()` a la que se le pasa un nombre de archivo como parámetro. Hacelo de modo que el siguiente código funcione:
+Modificá el código del [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) de modo que la lectura del archivo esté resuelta por una única función generadora `vigilar()` a la que se le pasa un nombre de archivo como parámetro. Hacelo de modo que el siguiente código funcione:
 
 ```python
 >>> for line in vigilar('Data/mercadolog.csv'):
@@ -219,7 +219,7 @@ if __name__ == '__main__':
             print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
 
-Observación: para que esto funcione, tu clase `Camion` tiene que haber implementado el operador `in`. Controlá que tu solución al ejercicio [Ejercicio 9.3](../09_Generadores_e_Iteradores/02_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) implemente el operador `__contains__()`.
+Observación: para que esto funcione, tu clase `Camion` tiene que haber implementado el operador `in`. Controlá que tu solución al ejercicio [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) implemente el operador `__contains__()`.
 
 ### Discusión
 
@@ -228,5 +228,5 @@ Hay que mencionar que acaba de suceder algo muy potente: Moviste tu patrón de i
 No está muy bueno ?
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](02_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md)
 
