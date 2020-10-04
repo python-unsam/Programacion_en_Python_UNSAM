@@ -44,7 +44,7 @@ _iter = obj.__iter__()        # Buscar el objeto iterador
 while True:
     try:
         x = _iter.__next__()  # Dame el siguiente item
-    except StopIteration:     # No hay mas items
+    except opIteration:     # No hay mas items
         break
     # instrucciones ...
 ```
@@ -245,7 +245,7 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 ```
 
 ### Ejercicio 9.3: Un iterador adecuado
-Cuando hagas clases que sean recipientes ó contenedores de estructuras de datos vas a necesitar que hagan algo mas que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en Sección ?. Aquí hay algunos:
+Cuando hagas clases que sean recipientes ó contenedores de estructuras de datos vas a necesitar que hagan algo mas que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en [Sección 8.3](../08_Clases_y_Objetos/03_Métodos_Especiales.md#métodos-especiales-para-convertir-a-strings). Aquí hay algunos:
 
 ```python
 class Camion:

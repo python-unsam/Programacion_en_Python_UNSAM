@@ -20,6 +20,7 @@ Hay decenas de métodos especiales pero sólo vamos a tratar algunos ejemplos es
 
 ### Métodos especiales para convertir a strings
 
+
 Los objetos tienen dos representaciones de tipo cadena.
 
 ```python
