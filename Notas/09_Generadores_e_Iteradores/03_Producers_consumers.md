@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](04_Mas_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 Más sobre generadores)](04_Mas_generadores.md)
 
 # 9.3 Productores, consumidores, cañerías.
 
@@ -129,7 +129,7 @@ Esta función es casi idéntica al primer ejemplo de generador en el ejercicio a
 Puede pasar que tarde unos segundos en darte una salida, pero vas a ver información sobre narajas tan pronto como sean añadidas al archivo por el primer generador.
 
 ### Ejercicio 9.9: Un pipeline más en serio
-Llevemos esta idea un poco mas lejos. Probemos esto:
+Llevemos esta idea un poco más lejos. Probemos esto:
 
 ```python
 >>> from vigilante import vigilar
@@ -148,8 +148,8 @@ Llevemos esta idea un poco mas lejos. Probemos esto:
 
 Interesante !  La salida de la función `vigilar()` fué usada como entrada a la función `csv.reader()` (que habíamos usado para leer un archivo del disco) y el resultado es una secuencia de filas "parseadas" en las comas. 
 
-### Ejercicio 9.10: Un pipeline mas largo
-Veamos si podemos construír un pipeline mas largo basado en la misma idea.
+### Ejercicio 9.10: Un pipeline más largo
+Veamos si podemos construír un pipeline más largo basado en la misma idea.
 Comenzá creando una función que lea un archivo CSV como hiciste antes en `ticker.py` :
 
 ```python
@@ -277,9 +277,9 @@ CAT,78.05,-0.47
 
 ### Discusión
 
-Que aprendimos hoy ? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos, los procesen modifiquen o filtren entre el primer generador y el ultimo consumidor. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
+¿Qué aprendimos hoy? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos, los procesen modifiquen o filtren entre el primer generador y el ultimo consumidor. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 # Mas sobre generadores)](04_Mas_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 Más sobre generadores)](04_Mas_generadores.md)
 

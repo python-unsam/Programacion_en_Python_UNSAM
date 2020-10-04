@@ -2,7 +2,7 @@
 
 # 9.1 El protocolo de iteración
 
-En esta sección vemos lo que realmente sucede durante el proceso de iteración
+En esta sección vemos lo que realmente sucede durante el proceso de iteración.
 
 ### Iteration Everywhere
 
@@ -30,14 +30,14 @@ Y podemos hacer éso porque existe un protocolo que debe cumplir todo objeto que
 
 ### El protocolo de iteración
 
-Tomemos la instrucción `for` para analizar
+Tomemos la instrucción `for` para analizar.
 
 ```python
 for x in obj:
     # instrucciones
 ```
 
-Cómo funciona realmente ésto ?
+¿Cómo funciona realmente ésto?
 
 ```python
 _iter = obj.__iter__()        # Buscar el objeto iterador
@@ -296,11 +296,9 @@ False
 >>>
 ```
 
-Un comentario importante sobre todo esto: 
-Se considera "Pythonico" (buen estilo Python) al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que éstos cumplen con las buenas costumbres de ser iterables, indexables (indizables ??) y que admiten otras operaciones que naturalmente se espera *a priori* que vayan a cumplir - justamente por el simple hecho de ser objetos contenedores.
+**Un comentario importante sobre todo esto:** 
+Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que éstos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se espera *a priori* que vayan a cumplir - justamente por el simple hecho de ser objetos contenedores.
 
-
-[Contents](../Contents.md) \| [Previous (5.2 Encapsulation)](../05_Object_model/02_Classes_encapsulation.md) \| [Next (6.2 Customizing Iteration)](02_Customizing_iteration.md)
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](02_iteracion_a_medida.md)
 

@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
 
-# 9.4 # Mas sobre generadores
+# 9.4 Más sobre generadores
 
 Esta sección introduce algunos temas adicionales relacionados con generadores, entre ellas : expresiones generadoras y el módulo `itertools`
 
@@ -163,7 +163,6 @@ rows = (row for row in rows if row['name'] in names)
 ```
 
 Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este último para que use funciones generadoras. Preparalos para entregar porque te los pedimos al terminar la clase, junto con ejercicios anteriores.
-
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)

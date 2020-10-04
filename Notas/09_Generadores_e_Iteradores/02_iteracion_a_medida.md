@@ -131,7 +131,7 @@ nombre,cantidad,precio
 
 Esta idea es muy interesante: podés armar una función que encapsule todo el procesamiento de datos y después recorrerla con un ciclo `for` para que te entregue los datos uno a uno.
 
-El próximo ejemplo es de un caso aún mas especial.
+El próximo ejemplo es de un caso aún más especial.
 
 ### Ejercicio 9.5: Monitoreo de datos en tiempo real.
 Un generador puede ser una forma interesante de vigilar datos a medida que son producidos. En esta sección vamos a probar esa idea. Para empezar, hacé lo siguiente.
@@ -223,9 +223,7 @@ Observación: para que esto funcione, tu clase `Camion` tiene que haber implemen
 
 ### Discusión
 
-Hay que mencionar que acaba de suceder algo muy potente: Moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `vigilar()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo la podrías usar para mirar el historial (logs) en un servidor ó de un debugger, o de otras fuentes contínuas de datos.
-
-No está muy bueno ?
+Lo que acaba de suceder es algo con mucho potencial: moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `vigilar()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo, la podrías usar para mirar el log (historial) de un servidor ó de un debugger, o de otras fuentes contínuas de datos. ¿No está bueno?
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md)
