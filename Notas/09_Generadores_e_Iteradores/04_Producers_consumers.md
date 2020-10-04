@@ -3,7 +3,7 @@
 # 9.3 Productores, consumidores, cañerías.
 
 Los generadores son una herramienta muy útil para configurar "cañerías".
-Este concepto requiere una breve *aclaración*: Una cañería tradicional en computación ("pipeline" en inglés) es una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un de una página web)  
+Este concepto requiere una breve *aclaración*: Una cañería tradicional en computación ("pipeline" en inglés) consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un de una página web). Construíste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
 
 En esta sección hablaremos de cómo implementar estas estructuras de productores y consumidores de datos con generadores en Python.
 
@@ -13,23 +13,21 @@ El concepto de generadores está íntimamente asociado a problemas de tipo produ
 
 ```python
 # Productor
-def follow(f):
+def vigilante(f):
     ...
     while True:
         ...
-        yield linea        # Produce valores para "linea"
+        yield linea        # Produce/obtiene valores para "linea"
         ...
 
 # Consumidor
-for linea in follow(f):    # Consume líneas del `yield`
+for linea in vigilar(f):    # Consume líneas del `yield`
     ...
 ```
 
 Los `yield` generan los datos que los `for` consumen.
 
 ### Pipelines con generadores
-
-*Nota: un "pipeline" es literalmente una cañería. En conceptos de programación, esos "caños" transportan datos de un programa que los produce a uno que los consume.*
 
 Podés usar esta característica de los generadores para construír *pipelines* que procesen tus datos, un concepto que es muy usado en Unix (pipes) pero en Windows se usa menos.
 
@@ -103,7 +101,7 @@ Como te darás cuenta, los datos van pasando de una función a la siguiente.
 
 ## Ejercicios
 
-Para este ejercicio, necesitás que el programa `stocksim.py` aún esté corriendo. Vas a usar la función `follow()` que escribiste en el [Ejercicio 9.7](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión)
+Para este ejercicio, necesitás que el programa `sim_mercado.py` aún esté corriendo. Vas a usar la función `vigilar()` que escribiste en el [Ejercicio 9.7](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión)
 
 ### Ejercicio 9.8: Configuremos un pipeline simple
 Escribí la siguiente función y veamos como funciona un pipeline.
@@ -119,27 +117,27 @@ Escribí la siguiente función y veamos como funciona un pipeline.
 
 Esta función es casi idéntica al primer ejemplo de generador en el ejercicio anterior, salvo que ya no abre un archivo sino que opera directamente de una secuencia de líneas que recibe como argumento. Ahora probá lo siguiente:
 
-```
->>> lines = follow('Data/stocklog.csv')
->>> ibm = filematch(lines, 'IBM')
->>> for line in ibm:
+```python
+>>> lines = vigilar('Data/stocklog.csv')
+>>> naranjas = filematch(lines, 'Naranja')
+>>> for line in naranjas:
         print(line)
 
 ... esperá que aparezca la salida ...
 ```
 
-Puede pasar que tarde unos segundos en darte una salida, pero vas a ver información sobre Narajas tan pronto como sean añadidas al archivo por el primer generador.
+Puede pasar que tarde unos segundos en darte una salida, pero vas a ver información sobre narajas tan pronto como sean añadidas al archivo por el primer generador.
 
 ### Ejercicio 9.9: Un pipeline más en serio
 Llevemos esta idea un poco mas lejos. Probemos esto:
 
-```
->>> from follow import follow
+```python
+>>> from vigilante import vigilar
 >>> import csv
->>> lines = follow('Data/stocklog.csv')
->>> rows = csv.reader(lines)
->>> for row in rows:
-        print(row)
+>>> lineas = vigilar('Data/mercadolog.csv')
+>>> filas = csv.reader(lineas)
+>>> for fila in filas:
+        print(fila)
 
 ['BA', '98.35', '6/11/2007', '09:41.07', '0.16', '98.25', '98.35', '98.31', '158148']
 ['AA', '39.63', '6/11/2007', '09:41.07', '-0.03', '39.67', '39.63', '39.31', '270224']
@@ -148,7 +146,7 @@ Llevemos esta idea un poco mas lejos. Probemos esto:
 ...
 ```
 
-Interesante !  La salida de la función `follow()` fué usada como entrada a la función `csv.reader()` y el resultado es una secuencia de filas "parseadas" en las comas.
+Interesante !  La salida de la función `vigilar()` fué usada como entrada a la función `csv.reader()` (que habíamos usado para leer un archivo del disco) y el resultado es una secuencia de filas "parseadas" en las comas. 
 
 ### Ejercicio 9.10: Un pipeline mas largo
 Veamos si podemos construír un pipeline mas largo basado en la misma idea.
@@ -157,16 +155,16 @@ Comenzá creando una función que lea un archivo CSV como hiciste antes en `tick
 ```python
 # ticker.py
 
-from follow import follow
+from vigilante import vigilar
 import csv
 
-def parse_stock_data(lines):
+def parsear_datos(lines):
     rows = csv.reader(lines)
     return rows
 
 if __name__ == '__main__':
-    lines = follow('Data/stocklog.csv')
-    rows = parse_stock_data(lines)
+    lines = vigilar('Data/mercadolog.csv')
+    rows = parsear_datos(lines)
     for row in rows:
         print(row)
 ```
@@ -176,13 +174,13 @@ Escribí una función nueva que elija algunas columnas específicas:
 ```python
 # ticker.py
 ...
-def select_columns(rows, indices):
+def elegir_columnas(rows, indices):
     for row in rows:
         yield [row[index] for index in indices]
 ...
-def parse_stock_data(lines):
+def parsear_datos(lines):
     rows = csv.reader(lines)
-    rows = select_columns(rows, [0, 1, 4])
+    rows = elegir_columnas(rows, [0, 1, 4])
     return rows
 ```
 
@@ -203,7 +201,7 @@ Escribí funciones generadoras que conviertan el tipo de datos a diccionarios:
 # ticker.py
 ...
 
-def convert_types(rows, types):
+def cambiar_tipo(rows, types):
     for row in rows:
         yield [func(val) for func, val in zip(types, row)]
 
@@ -211,9 +209,9 @@ def make_dicts(rows, headers):
     for row in rows:
         yield dict(zip(headers, row))
 ...
-def parse_stock_data(lines):
+def parsear_datos(lines):
     rows = csv.reader(lines)
-    rows = select_columns(rows, [0, 1, 4])
+    rows = elegir_columnas(rows, [0, 1, 4])
     rows = convert_types(rows, [str, float, float])
     rows = make_dicts(rows, ['name', 'price', 'change'])
     return rows

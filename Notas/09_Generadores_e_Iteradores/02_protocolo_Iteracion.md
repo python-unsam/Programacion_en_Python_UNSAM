@@ -73,7 +73,7 @@ Donde el *traceback* acusa una excepción de tipo *StopIteration* en la línea d
 
 ### Iterable
 
-Es necesario entender los mecanismos de iteradores si querés permitir iteración sobre objetos que vos definas, es decir, hacerlos *iterables*. Construyamos un contenedor:
+Es necesario que entiendas los mecanismos de iteradores si querés permitir iteración sobre objetos que vos definas, es decir, hacerlos *iterables*. Construyamos un contenedor iterable:
 
 ```python
 class Camion:
@@ -121,7 +121,7 @@ StopIteration
 >>>
 ```
 
-La función nativa `next()` es un "atajo" al método `__next__()` de un iterador. Probá de usarlo a mano sobre un archivo:
+La función nativade python `next()` es un "atajo" al método `__next__()` de un iterador. Probá de usarlo a mano sobre un archivo:
 
 ```python
 >>> f = open('Data/portfolio.csv')
@@ -151,10 +151,10 @@ class Camion:
         self._lotes = lotes
 
     @property
-    def total_cost(self):
-        return sum([l.costo for l in self._lotes])
+    def precio_total(self):
+        return sum([l.costo() for l in self._lotes])
 
-    def tabulate_shares(self):
+    def contar_cajones(self):
         from collections import Counter
         cantidad_total = Counter()
         for l in self._lotes:
@@ -162,30 +162,29 @@ class Camion:
         return cantidad_total
 ```
 
-La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como (en este ejemplo) la propiedad de calcular el costo total del camión. Modificá la función leer_camion() en `informe.py` de modo que cree una instancia de `Camion`, como se muestra:
+La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como (en este ejemplo) la propiedad de calcular el costo total del camión. Vamos a usar lo que hiciste en el [Ejercicio 8.1](../08_Clases_y_Objetos/01_Clases.md#ejercicio-81-objetos-como-estructura-de-datos). Modificá la función leer_camion() en `informe.py` de modo que cree una instancia de `Camion`, como se muestra:
 
 
-[oski]: # (from cajones import cajon ?? quiero chequear ...)
 ```python
-# report.py
+# informe.py
 ...
 
 import fileparse
-from stock import Stock
-from portfolio import Portfolio
+from lote import Lote
+from camion import Camion
 
-def read_portfolio(filename):
+def leer_camion(filename):
     '''
-    Read a stock portfolio file into a list of dictionaries with keys
-    name, shares, and price.
+    Lee un archivo con el contenido de un camión 
+    y lo devuelve como un objeto Camion.
     '''
     with open(filename) as file:
-        portdicts = fileparse.parse_csv(file,
-                                        select=['name','shares','price'],
+        camiondicts = fileparse.parse_csv(file,
+                                        select=['nombre','cajones','precio'],
                                         types=[str,int,float])
 
-    portfolio = [ Stock(d['name'], d['shares'], d['price']) for d in portdicts ]
-    return Portfolio(portfolio)
+    camion = [ Lote(d['nombre'], d['cajones'], d['precio']) for d in camiondicts ]
+    return Camion(camion)
 ...
 ```
 
@@ -202,22 +201,21 @@ La forma de arreglar este programa roto es modificar la clase `Camion` y hacerla
 ```python
 class Camion:
 
-    def __init__(self, holdings):
-        self._lotes = _lotes
+    def __init__(self, lotes):
+        self._lotes = lotes
 
     def __iter__(self):
         return self._lotes.__iter__()
 
     @property
-    #def precio_total(self):
-    def total_cost(self):
-        return sum([lote.cantidad*lote.precio for lote in self._lotes])
+    def precio_total(self):
+        return sum([l.costo() for l in self._lotes])
 
-    def tabulate_shares(self):
+    def contar_cajones(self):
         from collections import Counter
         cantidad_total = Counter()
         for lote in self._lotes:
-            cantidad_total[lote.name] += lote.cantidad
+            cantidad_total[lote.nombre] += lote.cajones
         return cantidad_total
 ```
 
@@ -250,8 +248,8 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 Cuando hagas clases que sean recipientes ó contenedores de estructuras de datos vas a necesitar que hagan algo mas que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en Sección ?. Aquí hay algunos:
 
 ```python
-class Portfolio:
-    def __init__(self, holdings):
+class Camion:
+    def __init__(self, lotes):
         self._lotes = lotes
 
     def __iter__(self):
@@ -263,7 +261,7 @@ class Portfolio:
     def __getitem__(self, index):
         return self._lotes[index]
 
-    def __contains__(self, name):
+    def __contains__(self, nombre):
         return any([lote.nombre == nombre for lote in self._lotes])
 
     @property
@@ -274,7 +272,7 @@ class Portfolio:
         from collections import Counter
         cantidad_total = Counter()
         for lote in self._lotes:
-            cantidad_total[lote.name] += lote.cantidad
+            cantidad_total[lote.nombre] += lote.cantidad
         return cantidad_total
 ```
 
@@ -286,11 +284,11 @@ Por último, probemos esta nueva estructura:
 >>> len(camion)
 7
 >>> camion[0]
-Cajon('Lima', 100, 32.2)
+Lote('Lima', 100, 32.2)
 >>> camion[1]
-Cajon('Naranja', 50, 91.1)
+Lote('Naranja', 50, 91.1)
 >>> camion[0:3]
-[Cajon('Lima', 100, 32.2), Cajon('Naranja', 50, 91.1), Cajon('Caqui', 150, 83.44)]
+[Lote('Lima', 100, 32.2), Lote('Naranja', 50, 91.1), Lote('Caqui', 150, 83.44)]
 >>> 'Naranja' in camion
 True
 >>> 'Manzana' in camion

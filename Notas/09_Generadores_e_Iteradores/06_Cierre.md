@@ -13,11 +13,13 @@ Por último, viste la ventaja de crear pipelines: estructuras de procesamiento d
 Aunque no la uses de inmediato, cuando estés cómode con esta arquitectura te va a cambiar la vida (un poquito).
 
 Para cerrar esta clase, prepará:
-
+ 
 * El archivo `camion.py` del [Ejercicio 9.3](../09_Generadores_e_Iteradores/02_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado).
+* El archivo 'informe.py' (última versión) 
 * El archivo `vigilante.py` del [Ejercicio 9.7](../09_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión).
-* El archivo `torre_control.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/04_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado).
-* El archivo `ticker.py` del [Ejercicio 9.15](../09_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-915-código-simple).
+(opcional ?) * El archivo `camion.py` del [Ejercicio 9.14](../09_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-914-expresiones-generadoras-como-argumentos-en-funciones)
+* El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/04_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado).
+(opcional ?) * El archivo `ticker_simple.py` del [Ejercicio 9.15](../09_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-915-código-simple).
 
 Además te pedimos  que completes [este formulario](https://docs.google.com/) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 

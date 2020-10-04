@@ -113,7 +113,7 @@ Por ejemplo, probá este generador que busca un archivo y entrega las líneas qu
 >>> for line in open('Data/camion.csv'):
         print(line, end='')
 
-nombre,cajones,precio
+nombre,cantidad,precio
 "Lima",100,32.20
 "Naranja",50,91.10
 "Limon",150,83.44
@@ -136,15 +136,15 @@ El próximo ejemplo es de un caso aún mas especial.
 ### Ejercicio 9.5: Monitoreo de datos en tiempo real.
 Un generador puede ser una forma interesante de vigilar datos a medida que son producidos. En esta sección vamos a probar esa idea. Para empezar, hacé lo siguiente.
 
-El programa `Data/stocksim.py` es un generador de datos de precios. Al ejecutarlo, el programa escribe datos en un archivo llamado `Data/stocklog.csv` contínuamente hasta que es detenido. Corre durante varias horas y una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `stocksim.py`, desde unix:
+El programa `Data/sim_mercado.py` es un generador de datos de precios. Al ejecutarlo, el programa escribe datos en un archivo llamado `Data/mercadolog.csv` contínuamente hasta que es detenido. Corre durante varias horas y una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `sim_mercado.py`, desde unix:
 
 ```bash
-bash % python3 stocksim.py
+bash % python3 sim_mercado.py
 ```
 
 Después, olvidate de él. Dejálo ahí, corriendo.
 
-Usando otra consola, mirá el contenido de `Data/stocklog.csv`. Vas a ver que cada tanto se agrega una nueva línea al archivo. 
+Usando otra consola, mirá el contenido de `Data/mercadolog.csv`. Vas a ver que cada tanto se agrega una nueva línea al archivo. 
 
 Ahora que el programa generador de datos está en ejecución, escribamos un programa que abra el archivo, vaya al final, y espere nuevos datos. Para esto creá un programa llamado `vigilante.py` que contenga el siguiente código.
 
@@ -153,7 +153,7 @@ Ahora que el programa generador de datos está en ejecución, escribamos un prog
 import os
 import time
 
-f = open('Data/stocklog.csv')
+f = open('Data/mercadolog.csv')
 f.seek(0, os.SEEK_END)   # Mover el índice 0 posiciones desde el EOF
 
 while True:
@@ -162,27 +162,27 @@ while True:
         time.sleep(0.1)   # Esperar un rato y volver a probar
         continue
     fields = line.split(',')
-    name = fields[0].strip('"')
-    price = float(fields[1])
-    change = float(fields[4])
-    if change < 0:
-        print(f'{name:>10s} {price:>10.2f} {change:>10.2f}')
+    nombre = fields[0].strip('"')
+    precio = float(fields[1])
+    volumen = int(fields[8])
+    if volumen > 1000:
+        print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
 
 *Nota: EOF = End Of File (fin de archivo)*
 
-Cuando ejecutes el programa vas a ver un indicador de precios en tiempo real. 
+Cuando ejecutes el programa vas a ver un indicador de precios en el mercado en tiempo real, con indicación de que producto se trata, cual es su precio, y cual es el volumen de la operación (en cantidad de producto). 
 
 Observación: La forma en que usamos el método `readline()` en este ejemplo es un poco rara, no es la forma en que se suele usar (detro de un ciclo `for` para recorrer el contenido de un archivo). En este caso la estamos usando para mirar constantemente el fin de archivo para obtener los últimos datos que se hayan agregado (`readline()` devuelve ó bien el último dato o bien una cadena vacía) 
 
 ### Ejercicio 9.6: Uso de un generador para producir datos
 Si analizás un poco el código en el ejercicio Ejercicio ? vas a notar que la primera parte del programa "produce" datos (los obtiene del archivo) y la segunda los procesa y los imprime , es decir "consume" datos. Una característica importante de las funciones generadoras es que podés mover todo el código a una función reutilizable. Fijate en esto...
  
-Modificá el código del Ejercicio ? de modo que la lectura del archivo esté resuelta por una función generadora `seguir()` a la que se le pasa un nombre de archivo como parámetro. Hacelo de modo que el siguiente código funcione:
+Modificá el código del Ejercicio ? de modo que la lectura del archivo esté resuelta por una única función generadora `vigilar()` a la que se le pasa un nombre de archivo como parámetro. Hacelo de modo que el siguiente código funcione:
 
 ```python
->>> for line in follow('Data/stocklog.csv'):
-          print(line, end='')
+>>> for line in vigilar('Data/mercadolog.csv'):
+          print(line)
 
 ... Acá deberías ver las líneas impresas ...
 ```
@@ -191,40 +191,41 @@ Modificá el programa `vigilante.py` de modo que tenga esta pinta:
 
 ```python
 if __name__ == '__main__':
-    for line in follow('Data/stocklog.csv'):
+    for line in vigilar('Data/mercadolog.csv'):
         fields = line.split(',')
-        name = fields[0].strip('"')
-        price = float(fields[1])
-        change = float(fields[4])
-        if change < 0:
-            print(f'{name:>10s} {price:>10.2f} {change:>10.2f}')
+        nombre = fields[0].strip('"')
+        precio = float(fields[1])
+        volumen = int(fields[8])
+        if volumen > 1000:
+            print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
 
 ### Ejercicio 9.7: Cambios de precio de un camión
-Modificá el programa `follow.py` para que sólo informe las líneas que tienen precios de fruta incluída en un camión, e ignore el resto de los productos. Por ejemplo: 
+Modificá el programa `vigilante.py` para que sólo informe las líneas que tienen precios de lotes incluídos en un camión, e ignore el resto de los productos. Por ejemplo: 
 
 ```python
 if __name__ == '__main__':
-    import report
-
-    portfolio = report.read_portfolio('Data/portfolio.csv')
-
-    for line in follow('Data/stocklog.csv'):
+    import informe
+    
+    camion = informe.leer_camion ('Data/camion.csv')
+    
+    for line in vigilar('Data/mercadolog.csv'):  
         fields = line.split(',')
-        name = fields[0].strip('"')
-        price = float(fields[1])
-        change = float(fields[4])
-        if name in portfolio:
-            print(f'{name:>10s} {price:>10.2f} {change:>10.2f}')
+        nombre = fields[0].strip('"')
+        precio = float(fields[1])
+        volumen = int(fields[8])
+        
+        if nombre in camion:    
+            print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
 
-Observación: para que esto funcione, tu clase `Portfolio` tiene que haber implementado el operador `in`. Controlá que tu solución al ejercicio [Ejercicio 9.3](../09_Generadores_e_Iteradores/02_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) implemente el operador `__contains__()`.
+Observación: para que esto funcione, tu clase `Camion` tiene que haber implementado el operador `in`. Controlá que tu solución al ejercicio [Ejercicio 9.3](../09_Generadores_e_Iteradores/02_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) implemente el operador `__contains__()`.
 
 ### Discusión
 
-Hay que mencionar que acaba de suceder algo muy potente: Moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `follow()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo la podrias usar para mirar historial (logs) en un servidor ó de un debugger, o de otras fuentes contínuas de datos.
+Hay que mencionar que acaba de suceder algo muy potente: Moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `vigilar()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo la podrías usar para mirar el historial (logs) en un servidor ó de un debugger, o de otras fuentes contínuas de datos.
 
-No está bueno ?
+No está muy bueno ?
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](02_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](04_Producers_consumers.md)

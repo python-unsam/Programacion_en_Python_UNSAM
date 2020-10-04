@@ -30,6 +30,7 @@ La sintaxis general es :
 ```python
 (<expression> for i in s if <conditional>)
 ```
+Que puede leerse como .... el valor es <expression> para cada elemento `i` perteneciente a `s` siempre y cuando <conditional> se cumpla.
 
 Las podés usar como argumento de una función.
 
@@ -50,10 +51,10 @@ Las podés usar en lugar de cualquier iterable.
 >>>
 ```
 
-El uso principal de las expresiones generadoras es en código que realiza un cómputo con una serie de elementos pero sólo necesita cada elemento una única vez. Ejemplo: quitar todos las líneas de un programa que sean comentarios:
+El uso principal de las expresiones generadoras es en código que realiza un cómputo con una serie de elementos pero sólo necesita cada elemento una única vez. Ejemplo: quitar todas las líneas de un programa que sean comentarios:
 
 ```python
-f = open('somefile.txt')
+f = open('unarchivo.txt')
 lines = (line for line in f if not line.startswith('#'))
 for line in lines:
     ...
@@ -74,7 +75,7 @@ Al usar generadores, tu código ejecuta más rápido y usa menos memoria. Se por
   * Pueden operar sobre datos en pipelines.  
 
 * Un generador facilita la reutilización de código.
-  * Separa la propia *iteración* del código que utiliza sus datos.
+  * Separa la propia *iteración* del código que utiliza sus resultados.
   * Podés construír tu propio conjunto de herramientas de iteración y ensamblarlas como necesites en cada caso. 
 
 ### El módulo `itertools` 
@@ -141,9 +142,9 @@ A veces es útil (y muy claro al leerlo) si pasás una expresión generadora com
 >>>
 ```
 
-En ese ejemplo, la segunda versión (que usa un generador) usaría mucha menos memoria que construír toda la lista simultáneamente, si la lista fuera grande.
+En ese ejemplo, la segunda versión (que usa un generador) requeriría mucha menos memoria que si construyera toda la lista simultáneamente, si la lista fuera grande.
 
-En tu archivo `camión.py` lograste hacer algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
+En tu archivo `camion.py` lograste hacer algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
 
 ### Ejercicio 9.15: Código simple
 Las expresiones generadoras son a menudo un buen reemplazo para pequeñas funciones generadoras. Por ejemplo, en lugar de escribir una función como esta:
@@ -161,8 +162,7 @@ La podrías reemplazar con una expresión así:
 rows = (row for row in rows if row['name'] in names)
 ```
 
-Entonces: modifcá el programa `ticker.py` para que use funciones generadoras.
-
+Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este último para que use funciones generadoras. Preparalos para entregar porque te los pedimos al terminar la clase, junto con ejercicios anteriores.
 
 
 
