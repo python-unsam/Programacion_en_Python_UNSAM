@@ -26,6 +26,7 @@ OJO:
 * El archivo `camion.py` del [Ejercicio 9.14](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-914-expresiones-generadoras-como-argumentos-en-funciones).
 * Optativo: El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado).
 (opcional ?) * El archivo `ticker_simple.py` del [Ejercicio 9.15](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-915-código-simple).
+* Optativo: El archivo `simulacion.py` del [Ejercicio 9.16](../09_Generadores_e_Iteradores/05_Simulacion.md#ejercicio-916-simular)
 
 Además te pedimos  que completes [este formulario](https://docs.google.com/) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
