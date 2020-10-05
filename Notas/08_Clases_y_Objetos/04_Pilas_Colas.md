@@ -25,23 +25,23 @@ Probá tu código:
 >>> rect1 = Rectanculo(ul,lr)
 >>> rect2 = Rectanculo(ll,ur)
 >>> rect1.base()
-2
+1
 >>> rect1.base()
+1
+>>> rect2.altura()
 2
 >>> rect2.altura()
-1
->>> rect2.altura()
-1
+2
 >>> rect1.rotar()
 >>> rect2.rotar()
 >>> rect1.base()
-1
+2
 >>> rect2.base()
-1
+2
 >>> rect1.altura()
-2
+1
 >>> rect2.altura()
-2
+1
 ```
 
 
