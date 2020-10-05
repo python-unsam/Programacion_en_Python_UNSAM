@@ -2,9 +2,9 @@
 
 # 9.1 El protocolo de iteración
 
-En esta sección vemos lo que realmente sucede durante el proceso de iteración.
+En esta sección vemos lo que realmente sucede en Python durante una proceso de iteración.
 
-### Iteration Everywhere
+### Iteraciones por doquier
 
 Podemos iterar sobre una gran diversidad de objetos.
 
@@ -13,7 +13,7 @@ a = 'hola a todes'
 for c in a: # Iterar las letras en a 
     ...
 
-b = { 'nombre': 'Rafa', 'password':'foo'}
+b = { 'nombre': 'Elsa', 'password':'foo'}
 for k in b: # Iterar para cada clave de diccionario
     ...
 
@@ -26,18 +26,18 @@ for x in f: # Iterar sobre las líneas de un archivo ASCII
     ...
 ```
 
-Y podemos hacer éso porque existe un protocolo que debe cumplir todo objeto que permita iterar sobre él. 
+Podemos iterar sobre todos estos objetos porque cunplen con un *protocolo* que permite, justamente, iterar.  Veamos algo sobre este protocolo:
 
 ### El protocolo de iteración
 
-Tomemos la instrucción `for` para analizar.
+Analicemos la instrucción `for`.
 
 ```python
 for x in obj:
     # instrucciones
 ```
 
-¿Cómo funciona realmente ésto?
+¿Cómo funciona realmente ésto? Mediante un protocolo de iteración que puede resumirse así:
 
 ```python
 _iter = obj.__iter__()        # Buscar el objeto iterador
@@ -69,11 +69,11 @@ Traceback (most recent call last):
 File "<stdin>", line 1, in ? StopIteration
 >>>
 ```
-Donde el *traceback* acusa una excepción de tipo *StopIteration* en la línea de comandos (stdin). Además notá que en la tercera línea, al preguntar por `it` python responde <es un objeto de tipo listiterator (iterador de listas) alojado en 590b0 hexadecimal> .
+Fijate que al agotar los elementos, el *traceback* acusa una excepción de tipo *StopIteration*. Fijate también que en la tercera línea, al preguntar por `it`, python responde <es un objeto de tipo listiterator (iterador de listas) alojado en 590b0 hexadecimal> .
 
 ### Iterable
 
-Es necesario que entiendas los mecanismos de iteradores si querés permitir iteración sobre objetos que vos definas, es decir, hacerlos *iterables*. Construyamos un contenedor iterable:
+Es necesario que entiendas los mecanismos de iteradores si querés permitir iteración sobre objetos que vos definas, es decir, hacerlos *iterables*. El siguiente ejemplo construye un contenedor iterable, simplemente basado en una lista:
 
 ```python
 class Camion:
@@ -89,16 +89,16 @@ for c in camion:
     ...
 ```
 
-## Exercises
+## Ejercicios
 
-### Ejercicio 9.1: Iteradores, una demostración
+### Ejercicio 9.1: Iteradores, un ejemplo
 Construí la siguiente lista:
 
 ```python
 a = [1,9,4,25,16]
 ```
 
-Ahora iterá sobre esa lista *a mano*: Llamá al método `__iter__()` para obtener un objeto iterador y llama al método  `__next__()`  para obtener sucesivamente cada uno de los elementos.
+Y ahora iterá sobre esa lista *a mano*: Llamá al método `__iter__()` para obtener un objeto iterador y llama al método  `__next__()`  para obtener sucesivamente cada uno de los elementos.
 
 ```python
 >>> i = a.__iter__()
@@ -124,22 +124,22 @@ StopIteration
 La función nativa de Python `next()` es un "atajo" al método `__next__()` de un iterador. Probá usarlo a mano sobre un archivo:
 
 ```python
->>> f = open('Data/portfolio.csv')
+>>> f = open('Data/camion.csv')
 >>> f.__iter__()    # Notar que esto apunta al método...
                     # ...que accede al archivo mismo.
 <_io.TextIOWrapper name='Data/portfolio.csv' mode='r' encoding='UTF-8'>
 >>> next(f)
-'nombre,cantidad,precio\n'
+'nombre,cajones,precio\n'
 >>> next(f)
-'"Lima",100,32.20\n'
+'Lima,100,32.20\n'
 >>> next(f)
-'"Naranja",50,91.10\n'
+'Naranja,50,91.10\n'
 >>>
 ```
 
 Llamá a `next(f)` hasta que llegues al final del archivo, y fijate qué sucede.
 
-### Ejercicio 9.2: Supporting Iteration
+### Ejercicio 9.2: Iteración sobre objetos
 Como decíamos en la sección [Sección 9.1](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#iterable), cuando definas tus propios objetos, especialmente si éstos son "envoltorios" para listas u otros iterables, vas a querer que se pueda iterar sobre ellos. Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
 
 ```python

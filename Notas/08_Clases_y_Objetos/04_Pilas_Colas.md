@@ -18,8 +18,8 @@ La clase debe tener un método constructor para crear el rectángulo a partir de
 Probá tu código:
 
 ```python
->>> ul = Punto(0,1)
->>> lr = Punto(0,2)
+>>> ul = Punto(0,2)
+>>> lr = Punto(1,0)
 >>> ll = Punto(0,0)
 >>> ur = Punto(1,2)
 >>> rect1 = Rectangulo(ul,lr)
