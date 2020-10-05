@@ -257,7 +257,7 @@ for fila in filas:
 ```
 
 ### Ejercicio 9.12: El pipeline ensamblado
-En el programa `ticker.py` escribí una función `ticker(camion_file, log_file, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate:
+En el programa `ticker.py` (esta versión te vamos a pedir que la entregues) escribí una función `ticker(camion_file, log_file, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate:
 
 ```python
 >>> from ticker import ticker

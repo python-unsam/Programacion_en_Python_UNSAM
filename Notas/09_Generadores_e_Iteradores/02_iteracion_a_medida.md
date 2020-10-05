@@ -199,6 +199,8 @@ if __name__ == '__main__':
             print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
 
+Guradá esta versión de `vigilante.py` para entregar al final de la clase.
+
 ### Ejercicio 9.7: Cambios de precio de un camión
 Modificá el programa `vigilante.py` para que sólo informe las líneas que tienen precios de lotes incluídos en un camión, e ignore el resto de los productos. Por ejemplo: 
 

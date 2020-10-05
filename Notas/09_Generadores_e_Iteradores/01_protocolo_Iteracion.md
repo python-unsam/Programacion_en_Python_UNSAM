@@ -217,7 +217,9 @@ class Camion:
         return cantidad_total
 ```
 
-Después de haber hecho este cambio tu `informe.py` debería estar funcionando de nuevo. Ya que estás en éso, cambiá también el programa `costo_camion.py` para que use objetos que sean instancias de la clase  `Camion`, por ejemplo así:
+Después de haber hecho este cambio tu `informe.py` debería estar funcionando de nuevo. Guardá esta versión de `informe.py` para entregar al final de la clase (en el próximo ejercicio te pediremos tabién `camion.py`).
+
+Y ya que estás, cambiá también el programa `costo_camion.py` para que use objetos que sean instancias de la clase  `Camion`, por ejemplo así:
 
 ```python
 # costo_camion.py
@@ -292,6 +294,8 @@ True
 False
 >>>
 ```
+
+Guardá tu versión de `camion.py` con estos cambios para entregar.
 
 **Un comentario importante sobre todo esto:** 
 Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que éstos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se espera *a priori* que vayan a cumplir - justamente por el simple hecho de ser objetos contenedores.

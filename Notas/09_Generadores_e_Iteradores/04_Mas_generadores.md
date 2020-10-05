@@ -144,7 +144,7 @@ A veces es útil (y muy claro al leerlo) si pasás una expresión generadora com
 
 En ese ejemplo, la segunda versión (que usa un generador) requeriría mucha menos memoria que si construyera toda la lista simultáneamente (si la lista fuera grande).
 
-En tu archivo `camion.py` hiciste algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
+En tu archivo `camion.py` hiciste algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras (podés entregar esta nueva versión del archivo o la anterior al final de la clase).
 
 ### Ejercicio 9.15: Código simple
 Las expresiones generadoras son a menudo un buen reemplazo para pequeñas funciones generadoras. Por ejemplo, en lugar de escribir una función como esta:
@@ -162,7 +162,7 @@ La podrías reemplazar con una expresión así:
 rows = (row for row in rows if row['name'] in names)
 ```
 
-Modificá este último para que use expresiones generadoras en lugar de funciones generadoras. Al final de la clase podés entregar el `ticker.py` anterior o este nuevo, indistintamente.
+Modificá este último para que use expresiones generadoras en lugar de funciones generadoras. Al final de la clase podés entregar el `ticker.py` anterior o este nuevo (¡mejor el nuevo!).
 
 
 
