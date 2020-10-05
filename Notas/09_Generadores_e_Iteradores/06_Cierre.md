@@ -14,13 +14,12 @@ Aunque no la uses de inmediato, cuando estés cómode con esta arquitectura te v
 
 Para cerrar esta clase, prepará:
  
+* El archivo `informe.py` del [Ejercicio 9.2](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-92-iteración-sobre-objetos).
 * El archivo `camion.py` del [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) (o [Ejercicio 9.14](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-914-expresiones-generadoras-como-argumentos-en-funciones)).
-* El archivo 'informe.py' del [Ejercicio 9.2](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-92-iteración-sobre-objetos)
 * El archivo `vigilante.py` del [Ejercicio 9.7](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión).
 * El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado) (o del [Ejercicio 9.15](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-915-código-simple)).
 
 Y opcionalmente los siguientes:
-* Optativo: El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado).
 * Optativo: El archivo `simulacion.py` del [Ejercicio 9.16](../09_Generadores_e_Iteradores/05_Simulacion.md#ejercicio-916-simular)
 
 Además te pedimos  que completes [este formulario](https://docs.google.com/forms/d/176NfxPBJ7yqvl2MV79QQAezE8bvGbo4WxD5kVIR0OeY) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
