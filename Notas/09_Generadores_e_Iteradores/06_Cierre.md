@@ -19,8 +19,7 @@ Para cerrar esta clase, prepará:
 * El archivo `vigilante.py` del [Ejercicio 9.7](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión).
 * El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado) (o del [Ejercicio 9.15](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-915-código-simple)).
 
-Y opcionalmente los siguientes:
-* Optativo: El archivo `simulacion.py` del [Ejercicio 9.16](../09_Generadores_e_Iteradores/05_Simulacion.md#ejercicio-916-simular)
+Y, opcionalmente, el archivo `simulacion.py` del [Ejercicio 9.16](../09_Generadores_e_Iteradores/05_Simulacion.md#ejercicio-916-simular)
 
 Además te pedimos  que completes [este formulario](https://docs.google.com/forms/d/176NfxPBJ7yqvl2MV79QQAezE8bvGbo4WxD5kVIR0OeY) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
