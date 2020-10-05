@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
 
 # 9.4 Más sobre generadores
 
-Esta sección introduce algunos temas adicionales relacionados con generadores, entre ellas : expresiones generadoras y el módulo `itertools`
+Esta sección introduce algunos temas adicionales relacionados con generadores, entre ellas: expresiones generadoras y el módulo `itertools`
 
 ### Expresiones generadoras
 Una expresión generadora es una lista por comprensión en su "versión generadora", que devuelve un elemento por vez.
@@ -22,10 +22,10 @@ Una expresión generadora es una lista por comprensión en su "versión generado
 ¿Cuales son las diferencias entre expresiones generadoras y comprensión de listas? Bueno, las expresiones generadoras ... 
 
 * No construyen una lista
-* Construídas para ser iteradas
+* Son construídas para ser iteradas
 * Una vez consumidas, no pueden ser reutilizadas.
 
-La sintaxis general es :
+La sintaxis general es:
 
 ```python
 (<expression> for i in s if <conditional>)
@@ -69,7 +69,7 @@ Al usar generadores, tu código ejecuta más rápido y usa menos memoria. Se por
   * Recorrer una colección de items para hacer algún cómputo (buscar, reemplazar, modificar, etc.).
   * Los pipelines de procesamiento resuelven un amplio abanico de problemas.
 
-* Mas eficientes en el uso de memoria.
+* Son más eficientes en el uso de memoria.
   * Sólo producís valores cuando los necesitás.
   * Varias ventajas sobre construír una larga lista.
   * Pueden operar sobre datos en pipelines.  
@@ -97,7 +97,7 @@ itertools.izip(s1, ... , sN)
 
 Todas estas funciones procesan datos iterativamente, e implementan distintos tipos de patrones de iteración.
 
-Un buen curso (en inglés, del 2014) sobre [Generadores e iteradores] es: (http://www.dabeaz.com/generators/)
+Si querés profundizar más en estos conceptos, te recomendamos el curso que escribió Beazley hace unos años sobre [Generadores e iteradores](http://www.dabeaz.com/generators/). 
 
 ## Ejercicios
 
@@ -166,5 +166,5 @@ Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este �
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
 

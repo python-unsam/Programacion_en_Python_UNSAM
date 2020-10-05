@@ -1,9 +1,8 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 Más sobre generadores)](04_Mas_generadores.md)
 
-# 9.3 Productores, consumidores, cañerías.
+# 9.3 Productores, consumidores y cañerías.
 
-Los generadores son una herramienta muy útil para configurar "cañerías".
-Este concepto requiere una breve *aclaración*: Una cañería tradicional en computación ("pipeline" en inglés) consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un log de una página web). Construíste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
+Los generadores son una herramienta muy útil para configurar pipelines (cañerías). Este concepto requiere una breve *aclaración*: Un pipelinet radicional en computación consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa se ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un log de una página web). Construíste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
 
 En esta sección hablaremos de cómo implementar estas estructuras de productores y consumidores de datos con generadores en Python.
 
@@ -147,7 +146,7 @@ Llevemos esta idea un poco más lejos. Probemos esto:
 ...
 ```
 
-Interesante !  La salida de la función `vigilar()` fué usada como entrada a la función `csv.reader()` (que habíamos usado para leer un archivo del disco) y el resultado es una secuencia de filas "parseadas" en las comas. 
+¡Interesante!  La salida de la función `vigilar()` fué usada como entrada a la función `csv.reader()` (que habíamos usado para leer un archivo del disco) y el resultado es una secuencia de filas "parseadas", separadas por las comas. 
 
 ### Ejercicio 9.10: Un pipeline más largo
 Veamos si podemos construír un pipeline más largo basado en la misma idea.
@@ -258,11 +257,11 @@ for fila in filas:
 ```
 
 ### Ejercicio 9.12: El pipeline ensamblado
-En el programa `ticker.py` escribí una función `ticker(portfile, logfile, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate:
+En el programa `ticker.py` escribí una función `ticker(camion_file, log_file, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate:
 
 ```python
 >>> from ticker import ticker
->>> ticker('Data/portfolio.csv', 'Data/stocklog.csv', 'txt')
+>>> ticker('Data/camion.csv', 'Data/mercadolog.csv', 'txt')
     Nombre     Precio    Volumen
 ---------- ---------- ----------
      Caqui     796.73         96
@@ -272,7 +271,7 @@ En el programa `ticker.py` escribí una función `ticker(portfile, logfile, fmt)
    Durazno     281.76        704        
 ...
 
->>> ticker('Data/portfolio.csv', 'Data/stocklog.csv', 'csv')
+>>> ticker('Data/cmaion.csv', 'Data/mercadolog.csv', 'csv')
 Nombre,Precio,Volumen
 Mandarina,14.19,1140
 Naranja,9.37,1150
@@ -284,9 +283,7 @@ Lima,2624.94,232
 
 ### Discusión
 
-¿Qué aprendimos hoy? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos, los procesen modifiquen o filtren entre el primer generador y el ultimo consumidor. Además viste lo fácil que es cambiar el comportamiento del programa cuando tenés interfases bien definidas. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
-
-
+¿Qué aprendimos hoy? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos: los procesen, modifiquen o filtren entre el primer generador y el último consumidor. Además viste lo fácil que es cambiar el comportamiento del programa cuando tenés interfases bien definidas. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 Más sobre generadores)](04_Mas_generadores.md)
 

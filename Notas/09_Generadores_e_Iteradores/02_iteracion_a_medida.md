@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md)
 
 # 9.2 Iteración a medida
 
@@ -135,7 +135,7 @@ El próximo ejemplo es de un caso aún más especial.
 ### Ejercicio 9.5: Monitoreo de datos en tiempo real.
 Un generador puede ser una forma interesante de vigilar datos a medida que son producidos. En esta sección vamos a probar esa idea. Para empezar, hacé lo siguiente.
 
-Vas a necesitar dos archivos del repositorio de la materia: [sim_mercado.py](./sim_mercado.py) y [mcentral.csv](./mcentral.csv). El programa `sim_mercado.py` es un generador de datos de precios que toma como referencia a `Data/mcentral.csv`. Al ejecutarlo, el programa escribe datos en un archivo llamado `Data/mercadolog.csv` contínuamente hasta que es detenido. Ejecuta indefinidamente y una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `sim_mercado.py`, ó desde unix.:
+Vas a necesitar dos archivos del repositorio de la materia: [sim_mercado.py](./sim_mercado.py) y [mcentral.csv](./mcentral.csv). El programa `sim_mercado.py` es un generador de datos de precios que toma como referencia a `Data/mcentral.csv`. Al ejecutarlo, el programa escribe datos (con una componente aleatoria) en un archivo llamado `Data/mercadolog.csv` contínuamente hasta que es detenido. Se ejecuta indefinidamente: una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `sim_mercado.py`, ó desde unix:
 
 ```bash
 bash % python3 sim_mercado.py
@@ -158,8 +158,8 @@ f.seek(0, os.SEEK_END)   # Mover el índice 0 posiciones desde el EOF
 while True:
     line = f.readline()
     if line == '':
-        time.sleep(0.5)   # Esperar un rato y volver a probar
-        continue
+        time.sleep(0.5)   # Esperar un rato y
+        continue          # vuelve al comienzo del while
     fields = line.split(',')
     nombre = fields[0].strip('"')
     precio = float(fields[1])
@@ -170,12 +170,12 @@ while True:
 
 *Nota: EOF = End Of File (fin de archivo)*
 
-Cuando ejecutes el programa vas a ver un indicador de precios en el mercado en tiempo real, con indicación de que producto se trata, cual es su precio, y cual es el volumen de la operación (en cantidad de producto). 
+Cuando ejecutes el programa vas a ver un indicador de precios en el mercado en tiempo real, con indicación de qué producto se trata, cuál es su precio, y cuál es el volumen de la operación (en cantidad de cajones). 
 
-Observación: La forma en que usamos el método `readline()` en este ejemplo es un poco rara, no es la forma en que se suele usar (detro de un ciclo `for` para recorrer el contenido de un archivo). En este caso la estamos usando para mirar constantemente el fin de archivo para obtener los últimos datos que se hayan agregado (`readline()` devuelve ó bien el último dato o bien una cadena vacía) 
+*Observación:** La forma en que usamos el método `readline()` en este ejemplo es un poco rara, no es la forma en que se suele usar (detro de un ciclo `for` para recorrer el contenido de un archivo). En este caso la estamos usando para mirar constantemente el fin de archivo para obtener los últimos datos que se hayan agregado (`readline()` devuelve ó bien el último dato o bien una cadena vacía).
 
 ### Ejercicio 9.6: Uso de un generador para producir datos
-Si analizás un poco el código en el ejercicio [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) vas a notar que la primera parte del programa "produce" datos (los obtiene del archivo) y la segunda los procesa y los imprime , es decir "consume" datos. Una característica importante de las funciones generadoras es que podés mover todo el código a una función reutilizable. Fijate en esto...
+Si analizás un poco el código del [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) vas a notar que la primera parte del programa "produce" datos (los obtiene del archivo) y la segunda los procesa y los imprime, es decir "consume" datos. Una característica importante de las funciones generadoras es que podés mover todo el código a una función reutilizable. Probalo vos.
  
 Modificá el código del [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) de modo que la lectura del archivo esté resuelta por una única función generadora `vigilar()` a la que se le pasa un nombre de archivo como parámetro. Hacelo de modo que el siguiente código funcione:
 
@@ -225,5 +225,5 @@ Observación: para que esto funcione, tu clase `Camion` tiene que haber implemen
 Lo que acaba de suceder es algo con mucho potencial: moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `vigilar()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo, la podrías usar para mirar el log (historial) de un servidor ó de un debugger, o de otras fuentes contínuas de datos. ¿No está bueno?
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores, cañerías.)](03_Producers_consumers.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md)
 

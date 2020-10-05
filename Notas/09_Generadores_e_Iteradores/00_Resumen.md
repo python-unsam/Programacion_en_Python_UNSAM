@@ -15,7 +15,7 @@ Terminamos la clase con un ejercicio optativo que combina dos temas importantes:
 
 * [9.1 El protocolo de iteración](01_protocolo_Iteracion.md)
 * [9.2 Iteración a medida](02_iteracion_a_medida.md)
-* [9.3 Productores, consumidores, cañerías.](03_Producers_consumers.md)
+* [9.3 Productores, consumidores y cañerías.](03_Producers_consumers.md)
 * [9.4 Más sobre generadores](04_Mas_generadores.md)
 * [9.5 En esta sección viene el ejercicio optativo que están armando Mati y José](05_Simulacion.md)
 * [9.6 Cierre de la novena clase](06_Cierre.md)

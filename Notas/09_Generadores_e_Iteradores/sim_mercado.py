@@ -44,7 +44,7 @@ def escribir_log(filename, prod):
         time.sleep(1)   
         continue
 
-productos = leer_valores('mcentral.csv') # ('Data/mcentral.csv')
-escribir_log('mercadolog.csv', productos) # ('Data/mercadolog.csv')
+productos = leer_valores('Data/mcentral.csv')
+escribir_log('Data/mercadolog.csv', productos) 
 
 
