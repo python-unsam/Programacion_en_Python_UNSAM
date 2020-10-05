@@ -140,7 +140,7 @@ La función nativa de Python `next()` es un "atajo" al método `__next__()` de u
 Llamá a `next(f)` hasta que llegues al final del archivo, y fijate qué sucede.
 
 ### Ejercicio 9.2: Iteración sobre objetos
-Como decíamos en la sección [Sección 9.1](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#iterable), cuando definas tus propios objetos, especialmente si éstos son "envoltorios" para listas u otros iterables, vas a querer que se pueda iterar sobre ellos. Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
+Como decíamos en la sección [Sección 9.1](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#iterable), cuando definas tus propios objetos, especialmente si éstos son "envoltorios" (wrappers) para listas u otros iterables, vas a querer que se pueda iterar sobre ellos. Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
 
 ```python
 # camion.py
@@ -150,7 +150,6 @@ class Camion:
     def __init__(self, lotes):
         self._lotes = lotes
 
-    @property
     def precio_total(self):
         return sum([l.costo() for l in self._lotes])
 
@@ -207,7 +206,6 @@ class Camion:
     def __iter__(self):
         return self._lotes.__iter__()
 
-    @property
     def precio_total(self):
         return sum([l.costo() for l in self._lotes])
 
@@ -231,7 +229,7 @@ def costo_camion(filename):
     Computa el precio total (cantidad * precio) de un archivo camion
     '''
     camion = informe.leer_camion(filename)
-    return camion.precio_total
+    return camion.precio_total()
 ...
 ```
 
@@ -264,7 +262,6 @@ class Camion:
     def __contains__(self, nombre):
         return any([lote.nombre == nombre for lote in self._lotes])
 
-    @property
     def precio_total(self):
         return sum([l.costo() for l in self._lotes])
 

@@ -179,7 +179,7 @@ import matplotlib.pyplot as plt
 # Levanto las dos series
 df=pd.read_csv('Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
 # Me quedo con un fregmento
-dh=df['12-25-2014':].copy()
+dh=df['10-01-2014':].copy()
 
 # Selecciono los intervalos que voy a usar para desplazar SF
 shifts = np.arange(-12,13)
@@ -193,13 +193,13 @@ plt.plot(shifts, corrs)
 ```
 
 ### Ejercicio 7.11: Interpolación
-Este ejemplo muestra cómo interplolar la serie de manera de poder usar desplazamientos menores a una hora.
+Este ejemplo muestra una manera de interplolar la serie de manera de poder usar desplazamientos menores a una hora.
 
 ```python
 # Cada cuarto de hora
 df=pd.read_csv('Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
 dh =df['10-01-2014':].copy() #ultimo trimestre
-freq_horaria = 60 # 4 para 15min, 60 para 1min
+freq_horaria = 4 # 4 para 15min, 60 para 1min
 cant_horas = 24
 N = cant_horas * freq_horaria
 #resampleo cada tantos minutos
@@ -217,6 +217,9 @@ for i, sh in enumerate(ishifts):
 # y grafico
 plt.plot(shifts, corrs)
 ```
+
+El comando `np.argmax(corrs)` se puede usar para devolver la coordenada de la máxima correlación. Esa posición del vector `shifts` indicará a cuántas horas corresponde ese desplazamiento. Si lo corremos con esta interpolación cada 15 minutos propuesta en el código, obtendremos que la onda tarda una hora en llegar a San Fernando. Usando una interpolación más fina, ¿podés estimar el desfazaje en minutos? A nosotros nos dio 57 minutos.
+
 
 ## Parte optativa
 
