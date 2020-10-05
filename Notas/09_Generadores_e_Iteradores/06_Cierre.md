@@ -15,7 +15,7 @@ Aunque no la uses de inmediato, cuando te la apropies, esta arquitectura puede c
 Para cerrar esta clase, prepará:
  
 * El archivo `informe.py` del [Ejercicio 9.2](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-92-iteración-sobre-objetos).
-* El archivo `camion.py` del [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) (o [Ejercicio 9.14](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-914-expresiones-generadoras-como-argumentos-en-funciones)).
+* El archivo `camion.py` del [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) (o [Ejercicio 9.14](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-914-expresiones-generadoras-como-argumentos-en-funciones)) que va a jugar en la revisión de pares.
 * El archivo `vigilante.py` del [Ejercicio 9.7](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión).
 * El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado) (o del [Ejercicio 9.15](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-915-código-simple)).
 * Y, opcionalmente, el archivo `simulacion.py` del [Ejercicio 9.16](../09_Generadores_e_Iteradores/05_Simulacion.md#ejercicio-916-simular).

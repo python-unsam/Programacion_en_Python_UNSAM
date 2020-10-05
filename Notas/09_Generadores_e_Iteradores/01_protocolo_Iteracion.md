@@ -295,7 +295,7 @@ False
 >>>
 ```
 
-Guardá tu versión de `camion.py` con estos cambios para entregar.
+Guardá tu versión de `camion.py` con estos cambios para entregar y para la revisión de pares.
 
 **Un comentario importante sobre todo esto:** 
 Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que éstos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se espera *a priori* que vayan a cumplir - justamente por el simple hecho de ser objetos contenedores.
