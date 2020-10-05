@@ -265,7 +265,9 @@ Para evitar esto, repetí 100 veces lo siguiente y calculá el promedio de los s
         b) Entrenamiento de ambos modelos (knn y clf) con el conjunto train resultante.
         c) Evaluación de ambos clasifcadores (score) con el conjunto test resultante.
         
-Imprimí el promedio de los scores obtenidos.
+Imprimí el promedio de los scores obtenidos y guardá el código en el archivo `comparacion.py` para entregar.
+
+
 
 
 
