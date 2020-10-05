@@ -22,8 +22,8 @@ Probá tu código:
 >>> lr = Punto(0,2)
 >>> ll = Punto(0,0)
 >>> ur = Punto(1,2)
->>> rect1 = Rectanculo(ul,lr)
->>> rect2 = Rectanculo(ll,ur)
+>>> rect1 = Rectangulo(ul,lr)
+>>> rect2 = Rectangulo(ll,ur)
 >>> rect1.base()
 1
 >>> rect1.base()

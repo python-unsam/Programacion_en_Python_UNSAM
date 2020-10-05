@@ -4,9 +4,9 @@
 
 # Cierre de clase
 
-En esta clase te mostramos dos conceptos muy interesantes de Python: generadores e iteradores. Viste cómo es el mecanismo de iteración: es como dialogar con objeto. Además conocés los métodos que necesitás implementar para que un objeto que creaste sea iterable. 
+En esta clase aprendiste sobre generadores e iteradores, dos conceptos muy interesantes de Python. Viste que el mecanismo de iteración es una forma de dialogar con objeto. Además, aprendiste los métodos que necesitás implementar para que un objeto que creaste sea iterable. 
 
-Discutimos además las ventajas de construír un programa con estos conceptos. Los programas resultan mas versátiles, modulares, y ligeros. Similar al concepto de comprension de listas, podes usar la sintaxis de comprension para construír un iterable: una expresión sobre la cual podés iterar sin necesidad de almacenar todos los elementos posibles en una lista ni escribir una funcion para calcularlos.
+Discutimos también las ventajas de construír un programa con estos conceptos. Los programas resultan mas versátiles, modulares, y ligeros. Como con el concepto de comprension de listas, podés usar la sintaxis de comprensión para construír un iterable: una expresión sobre la cual podés iterar sin necesidad de almacenar todos los elementos posibles en una lista ni escribir una función para calcularlos.
 
 Por último, viste la ventaja de crear pipelines: estructuras de procesamiento de datos configurables en vuelo, altamente modulares.  
 
@@ -14,13 +14,16 @@ Aunque no la uses de inmediato, cuando estés cómode con esta arquitectura te v
 
 Para cerrar esta clase, prepará:
  
-* El archivo `camion.py` del [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado).
+* El archivo `camion.py` del [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) o [Ejercicio 9.14](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-914-expresiones-generadoras-como-argumentos-en-funciones).
 * El archivo 'informe.py' del [Ejercicio 9.2](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-92-supporting-iteration)
 * El archivo `vigilante.py` del [Ejercicio 9.7](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-97-cambios-de-precio-de-un-camión).
 * El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado).
-(opcional ?) * El archivo `ticker_simple.py` del [Ejercicio 9.15](../09_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-915-código-simple).
 
-Además te pedimos  que completes [este formulario](https://docs.google.com/) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
+Y opcionalmente los siguientes:
+* Optativo: El archivo `ticker.py` del [Ejercicio 9.12](../09_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-912-el-pipeline-ensamblado).
+* Optativo: El archivo `simulacion.py` del [Ejercicio 9.16](../09_Generadores_e_Iteradores/05_Simulacion.md#ejercicio-916-simular)
+
+Además te pedimos  que completes [este formulario](https://docs.google.com/forms/d/176NfxPBJ7yqvl2MV79QQAezE8bvGbo4WxD5kVIR0OeY) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
 ¡Nos vemos!
 

@@ -147,7 +147,7 @@ Después, olvidate de él. Dejálo ahí, corriendo.
 
 Usando otra consola, mirá el contenido de `Data/mercadolog.csv`. Vas a ver que cada tanto se agrega una nueva línea al archivo. 
 
-Ahora que el programa generador de datos está en ejecución, escribamos un programa que abra el archivo, vaya al final, y espere nuevos datos. Para esto creá un programa llamado `vigilante.py` que contenga el siguiente código.
+Ahora que el programa generador de datos está en ejecución, escribamos un programa que abra el archivo, vaya al final, y espere nuevos datos. Para esto creá un programa llamado `vigilante.py` (es uno de los ejercicios a entregar) que contenga el siguiente código. 
 
 ```python
 # vigilante.py
@@ -160,7 +160,7 @@ f.seek(0, os.SEEK_END)   # Mover el índice 0 posiciones desde el EOF
 while True:
     line = f.readline()
     if line == '':
-        time.sleep(0.1)   # Esperar un rato y volver a probar
+        time.sleep(0.5)   # Esperar un rato y volver a probar
         continue
     fields = line.split(',')
     nombre = fields[0].strip('"')

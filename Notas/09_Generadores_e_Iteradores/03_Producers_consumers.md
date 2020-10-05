@@ -3,7 +3,7 @@
 # 9.3 Productores, consumidores, cañerías.
 
 Los generadores son una herramienta muy útil para configurar "cañerías".
-Este concepto requiere una breve *aclaración*: Una cañería tradicional en computación ("pipeline" en inglés) consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un de una página web). Construíste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
+Este concepto requiere una breve *aclaración*: Una cañería tradicional en computación ("pipeline" en inglés) consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un log de una página web). Construíste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
 
 En esta sección hablaremos de cómo implementar estas estructuras de productores y consumidores de datos con generadores en Python.
 
@@ -13,7 +13,7 @@ El concepto de generadores está íntimamente asociado a problemas de tipo produ
 
 ```python
 # Productor
-def vigilante(f):
+def vigilar(f):
     ...
     while True:
         ...

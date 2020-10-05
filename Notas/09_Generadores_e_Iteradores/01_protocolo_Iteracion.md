@@ -44,7 +44,7 @@ _iter = obj.__iter__()        # Buscar el objeto iterador
 while True:
     try:
         x = _iter.__next__()  # Dame el siguiente item
-    except opIteration:     # No hay mas items
+    except StopIteration:     # No hay mas items
         break
     # instrucciones ...
 ```
@@ -84,8 +84,8 @@ class Camion:
         return self.lotes.__iter__()
     ...
 
-cam = Camion()
-for c in cam:
+camion = Camion()
+for c in camion:
     ...
 ```
 
@@ -121,7 +121,7 @@ StopIteration
 >>>
 ```
 
-La función nativade python `next()` es un "atajo" al método `__next__()` de un iterador. Probá de usarlo a mano sobre un archivo:
+La función nativa de Python `next()` es un "atajo" al método `__next__()` de un iterador. Probá usarlo a mano sobre un archivo:
 
 ```python
 >>> f = open('Data/portfolio.csv')
@@ -162,7 +162,7 @@ class Camion:
         return cantidad_total
 ```
 
-La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como (en este ejemplo) la propiedad de calcular el costo total del camión. Vamos a usar lo que hiciste en el [Ejercicio 8.1](../08_Clases_y_Objetos/01_Clases.md#ejercicio-81-objetos-como-estructura-de-datos). Modificá la función leer_camion() en `informe.py` de modo que cree una instancia de `Camion`, como se muestra:
+La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como (en este ejemplo) la propiedad de calcular el costo total del camión. Vamos a usar lo que hiciste en el [Ejercicio 8.1](../08_Clases_y_Objetos/01_Clases.md#ejercicio-81-objetos-como-estructura-de-datos). Modificá la función `leer_camion()` en `informe.py` de modo que cree una instancia de `Camion`, como se muestra:
 
 
 ```python
@@ -265,14 +265,14 @@ class Camion:
         return any([lote.nombre == nombre for lote in self._lotes])
 
     @property
-    def total_cost(self):
-        return sum([lote.cantidad*lote.precio for lote in self._lotes])
+    def precio_total(self):
+        return sum([l.costo() for l in self._lotes])
 
-    def tabulate_shares(self):
+    def contar_cajones(self):
         from collections import Counter
         cantidad_total = Counter()
-        for lote in self._lotes:
-            cantidad_total[lote.nombre] += lote.cantidad
+        for l in self._lotes:
+            cantidad_total[l.nombre] += l.cajones
         return cantidad_total
 ```
 

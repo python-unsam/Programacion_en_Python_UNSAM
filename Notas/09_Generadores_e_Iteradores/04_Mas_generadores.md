@@ -162,7 +162,7 @@ La podrías reemplazar con una expresión así:
 rows = (row for row in rows if row['name'] in names)
 ```
 
-Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este último para que use funciones generadoras. Preparalos para entregar porque te los pedimos al terminar la clase, junto con ejercicios anteriores.
+Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este último para que use funciones generadoras. Te vamos a pedir `ticker.py` al terminar la clase, junto con ejercicios anteriores y te avisamos que resguardes la primera versión.
 
 
 
