@@ -101,7 +101,7 @@ Si querés profundizar más en estos conceptos, te recomendamos el curso que esc
 
 ## Ejercicios
 
-En ejercicios anteriores escribiste código que vigilaba un archivo (un log) esperando líneas nuevas escritas al final y las presentaba como una secuencia de filas. Este ejercicio continúa aquél, de modo que vas a necesitar `Data/stocksim.py` ejecutándose para esto.
+En ejercicios anteriores escribiste código que vigilaba un archivo log esperando líneas nuevas escritas al final y las presentaba como una secuencia de filas. Este ejercicio continúa aquél, de modo que vas a necesitar que `sim_mercado.py` esté ejecutándose. Acordate de pararlo cuando termines... agrega una línea por segundo y eventualmente te va a llenar tu disco rígido.
 
 ### Ejercicio 9.13: Expresiones generadoras
 Fijate este ejemplo de una expresión generadora:
@@ -142,9 +142,9 @@ A veces es útil (y muy claro al leerlo) si pasás una expresión generadora com
 >>>
 ```
 
-En ese ejemplo, la segunda versión (que usa un generador) requeriría mucha menos memoria que si construyera toda la lista simultáneamente, si la lista fuera grande.
+En ese ejemplo, la segunda versión (que usa un generador) requeriría mucha menos memoria que si construyera toda la lista simultáneamente (si la lista fuera grande).
 
-En tu archivo `camion.py` lograste hacer algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
+En tu archivo `camion.py` hiciste algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
 
 ### Ejercicio 9.15: Código simple
 Las expresiones generadoras son a menudo un buen reemplazo para pequeñas funciones generadoras. Por ejemplo, en lugar de escribir una función como esta:
@@ -162,7 +162,7 @@ La podrías reemplazar con una expresión así:
 rows = (row for row in rows if row['name'] in names)
 ```
 
-Entonces: copiá el programa `ticker.py` a `ticker_simple.py` y modificá este último para que use funciones generadoras. Te vamos a pedir `ticker.py` al terminar la clase, junto con ejercicios anteriores y te avisamos que resguardes la primera versión.
+Modificá este último para que use expresiones generadoras en lugar de funciones generadoras. Al final de la clase podés entregar el `ticker.py` anterior o este nuevo, indistintamente.
 
 
 
