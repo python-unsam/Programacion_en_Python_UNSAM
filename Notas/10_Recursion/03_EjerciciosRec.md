@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 Diseño de algoritmos recursivos)](02_Diseno_Recursivo.md) \| [Próximo (4 Regresión Lineal)](04_RegresionLineal.md)
 
-# 10.3 Recursión
+# 10.3 Práctica de Recursión
 
 ## Ejercicios
 

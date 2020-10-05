@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 Cierre de la clase de Ordenamiento)](03_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 # Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
 
 # 11.2 Divide y reinarás
 
@@ -200,5 +200,5 @@ en lugar de dividir la lista de entrada en dos partes, la divida en tres partes.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 Cierre de la clase de Ordenamiento)](03_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 # Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
 

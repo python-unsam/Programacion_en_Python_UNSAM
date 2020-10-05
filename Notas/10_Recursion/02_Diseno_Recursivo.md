@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Recursión)](03_EjerciciosRec.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Práctica de Recursión)](03_EjerciciosRec.md)
 
 # 10.2 Diseño de algoritmos recursivos
 
@@ -310,5 +310,5 @@ implementar una función *wrapper*, por ejemplo para adaptar
 la firma de la función, validar parámetros, inicializar datos o manejar excepciones.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Recursión)](03_EjerciciosRec.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Práctica de Recursión)](03_EjerciciosRec.md)
 
