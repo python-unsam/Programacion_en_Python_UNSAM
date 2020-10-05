@@ -10,7 +10,7 @@ Discutimos también las ventajas de construír un programa con estos conceptos. 
 
 Por último, viste la ventaja de crear pipelines: estructuras de procesamiento de datos configurables en vuelo, altamente modulares.  
 
-Aunque no la uses de inmediato, cuando estés cómode con esta arquitectura te va a cambiar la vida (un poquito).
+Aunque no la uses de inmediato, cuando te la apropies, esta arquitectura puede cambiarte (un poquito) la vida.
 
 Para cerrar esta clase, prepará:
  
