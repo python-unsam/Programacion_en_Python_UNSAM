@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre de la clase de Recursión)](03_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Diseño de algoritmos recursivos)](02_Diseno_Recursivo.md) \| [Próximo (4 Regresión Lineal)](04_RegresionLineal.md)
 
-# 10.2 Recursión
+# 10.3 Recursión
 
 ## Ejercicios
 
@@ -145,5 +145,5 @@ hoja A0 como caso base.
 
 Guardala en el archivo `HojasISO.py`.
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Cierre de la clase de Recursión)](03_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Diseño de algoritmos recursivos)](02_Diseno_Recursivo.md) \| [Próximo (4 Regresión Lineal)](04_RegresionLineal.md)
 
