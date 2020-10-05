@@ -13,7 +13,7 @@ Ordenar una lista de números es una de las tareas fundamentales que realiza un 
 
 * [11.1 Ordenamientos sencillos de listas](01_Ordenamiento_sencillo.md)
 * [11.2 Divide y reinarás](02_Divide_and_Conquer.md)
-* [11.3 # Algoritmos de clasificación supervisada](03_introduccion_al_AA.md)
+* [11.3 Algoritmos de clasificación supervisada](03_introduccion_al_AA.md)
 * [11.4 Cierre de la clase de Ordenamiento](04_Cierre.md)
 
 

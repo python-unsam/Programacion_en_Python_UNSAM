@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 # Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
 
 # 11.4 Cierre de la clase de Ordenamiento
 
@@ -12,5 +12,5 @@
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 # Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
 
