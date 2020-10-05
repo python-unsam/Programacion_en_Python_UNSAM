@@ -168,7 +168,7 @@ Guardá tu código en el archivo `mareas_a_mano.py` para entregar.
 
 ### Correlación con desplazamientos
 
-El siguiente código calcula y grafica el coeficiente de correlación *r* de Pearson entre la serie de alturas en Buenos Aires y la de San Fernando desplazada temporalmente.
+El siguiente código calcula y grafica el [coeficiente de correlación *r* de Pearson](https://es.wikipedia.org/wiki/Coeficiente_de_correlaci%C3%B3n_de_Pearson) entre la serie de alturas en Buenos Aires y la de San Fernando desplazada temporalmente.
 
 ```python
 import numpy as np
