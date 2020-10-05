@@ -12,7 +12,7 @@ Para cerrar esta clase te pedimos dos cosas:
 
   Te proponemos además dos optativos:
   1. El archivo  `ordenar_imgs.py` del [Ejercicio 7.6](../07_Fechas_Carpetas_y_Pandas/03_Ordenando_archivos.md#ejercicio-76-ordenar-el-árbol-de-archivos-optativo).
-  2. El archivo  `mareas_fft.py` del [Ejercicio 7.12](../07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md#ejercicio-712-otros-puertos).
+  2. El archivo  `mareas_fft.py` del [Ejercicio 7.13](../07_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md#ejercicio-713-otros-puertos).
  
 * Que completes [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSemmZDujpZOz8oqprqIRnDVu0T9bThW13dOhYqg4t-xKuIxQg/viewform?usp=sf_link) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 

@@ -17,6 +17,32 @@ La clase debe tener un método constructor para crear el rectángulo a partir de
 
 Probá tu código:
 
+```python
+>>> ul = Punto(0,1)
+>>> lr = Punto(0,2)
+>>> ll = Punto(0,0)
+>>> ur = Punto(1,2)
+>>> rect1 = Rectanculo(ul,lr)
+>>> rect2 = Rectanculo(ll,ur)
+>>> rect1.base()
+2
+>>> rect1.base()
+2
+>>> rect2.altura()
+1
+>>> rect2.altura()
+1
+>>> rect1.rotar()
+>>> rect2.rotar()
+>>> rect1.base()
+1
+>>> rect2.base()
+1
+>>> rect1.altura()
+2
+>>> rect2.altura()
+2
+```
 
 
 ### Ejercicio 8.11: Canguros buenos y canguros malos
