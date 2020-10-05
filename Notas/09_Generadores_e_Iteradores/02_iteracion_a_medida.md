@@ -2,11 +2,11 @@
 
 # 9.2 Iteración a medida
 
-Acá vemos como usar una función generadora para obtener el iterador que necesites.
+En esta sección introducimos el concepto de función generadora. Estas funciones te permiten obtener el iterador que necesites.
 
 ### Un problema de iteración 
 
-Suponé que querés crear su secuencia particular de iteración, una cuenta regresiva, por decir algo.
+Suponé que querés crear una secuencia particular de iteración: una cuenta regresiva, por decir algo.
 
 ```python
 >>> for x in regresiva(10):
@@ -93,13 +93,12 @@ File "<stdin>", line 1, in ? StopIteration
 >>>
 ```
 
-*Observación: Una función generadora implementa el mismo protocolo de bajo nivel que los  `for` usan sobre listas, tuplas, diccionarios, archivos, etc.*
+*Observación:** Una función generadora implementa el mismo protocolo de bajo nivel que los  `for` usan sobre listas, tuplas, diccionarios, archivos, etc. ¡Por eso es tan sencillo usar los generadores para iterar!
 
 ## Ejercicios
 
-### Ejercicio 9.4: Un generador simplelabel_ej{Un generador simple}
-
-Si te encontrás con la necesidad de obtener una iteración particular, siempre pensá en funciones generadoras. Son fáciles de escribir: hacé una función que implemente la lógica de iteración deseada y use `yield` para entregar valores.
+### Ejercicio 9.4: Un generador simple
+Si te encontrás con la necesidad de obtener una iteración particular, pensá en usar funciones generadoras. Son fáciles de escribir: simplemente hacé una función que implemente la lógica de iteración deseada y use `yield` para entregar valores.
 
 Por ejemplo, probá este generador que busca un archivo y entrega las líneas que incluyen cierto substring.
 
@@ -136,8 +135,7 @@ El próximo ejemplo es de un caso aún más especial.
 ### Ejercicio 9.5: Monitoreo de datos en tiempo real.
 Un generador puede ser una forma interesante de vigilar datos a medida que son producidos. En esta sección vamos a probar esa idea. Para empezar, hacé lo siguiente.
 
-Vas a necesitar dos archivos del repositorio de la materia: `sim_mercado.py` y `mcentral.csv` 
-El programa `Data/sim_mercado.py` es un generador de datos de precios que toma como referencia a `Data/mcentral.csv` . Al ejecutarlo, el programa escribe datos en un archivo llamado `Data/mercadolog.csv` contínuamente hasta que es detenido. Ejecuta indefinidamente y una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `sim_mercado.py`, ó desde unix.:
+Vas a necesitar dos archivos del repositorio de la materia: [sim_mercado.py](./sim_mercado.py) y [mcentral.csv](./mcentral.csv). El programa `sim_mercado.py` es un generador de datos de precios que toma como referencia a `Data/mcentral.csv`. Al ejecutarlo, el programa escribe datos en un archivo llamado `Data/mercadolog.csv` contínuamente hasta que es detenido. Ejecuta indefinidamente y una vez que inicies su ejecución podés dejarlo correr y olvidarte de él. Abrí una consola del sistema operativo nueva y ejecutá el programa. Si estás en Windows, dale un doble click al ícono de `sim_mercado.py`, ó desde unix.:
 
 ```bash
 bash % python3 sim_mercado.py
