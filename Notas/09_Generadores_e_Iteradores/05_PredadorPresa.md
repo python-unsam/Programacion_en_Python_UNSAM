@@ -10,25 +10,25 @@ Esta ejercicio tiene como objetivo implementar una versión diferente: intentare
 
 Se trata de un ejercicio optativo para entregar. La idea es recrear un mundo que imaginaremos como un valle rodeado de montañas en el que existen depredadores (que llamaremos Leones) y presas (que llamaremos Antílopes). Este valle será bidimensional, y lo representaremos por medio de una grilla rectangular que llamaremos tablero.
 
-El modelo inicial con el que trabajaremos tiene definidas 3 etapas que determinan un ciclo:
+El modelo inicial con el que trabajaremos tiene definidas 3 etapas que deter
+minan un ciclo:
 
-  - *Etapa de movimiento*, en esta etapa cada animal se desplaza a alguna posición vecina desocupada (si es que existe, sino permanece en el lugar). La decisión de a cuál desplazarse será responsabilidad del animal, que sabiendo las posibles elegirá una al azar.
+- **Etapa de movimiento**: en esta etapa cada animal se desplaza a alguna posición vecina desocupada (si es que existe, sino permanece en el lugar). La decisión de a cuál desplazarse será responsabilidad del animal, que sabiendo las disponibles elegirá una al azar.
 
-  - *Etapa de alimentación*, en este caso, dependerá de cada animal. Los antílopes comerán pasto en su lugar, mientras que los leones buscarán un antílope en las posiciones vecinas, de existir se lo comerán. Esta acción de un león se verá reflejada en el tablero con su desplazamiento a la posición del antílope, el cual ya no será más parte de nuestro mundo.
+- **Etapa de alimentación**: en esta etapa los animales se alimentan. Los antílopes comerán pasto en su lugar, mientras que los leones buscarán un antílope en las posiciones vecinas y de existir se lo comerán. Esta acción de un león se verá reflejada en el tablero con su desplazamiento a la posición del antílope, el cual ya no será más parte de nuestro mundo.
 
-- *Etapa de reproducción*, cada animal buscará en sus posiciones vecinas alguien de su misma especie, de encontrarlo y además existir una posición vacía, se incluirá un nuevo animal (de la misma especie) en el tablero. Nuevamente la elección de pareja y el lugar del nuevo animal serán al azar. Este modelo inicial no prevee el atributo sexo, ni un límite entre la cantidad reproducciones en las que puede participar un animal.
+- **Etapa de reproducción**: cada animal buscará en sus posiciones vecinas alguien de su misma especie. Si lo encuentra y además hay una posición vacía en el tablero se incluirá un nuevo animal (de la misma especie) en el tablero. Nuevamente la elección de la pareja y del lugar del nuevo animal serán aleatorias. Este modelo inicial no prevee el atributo sexo, ni un límite entre la cantidad reproducciones en las que puede participar un animal por etapa.
 
-Al finalizar una etapa, todos los animales "envejecen" en 1 unidad, si alguno alcanzó la edad máxima de su especie se considera que ya puede retirarselo del mundo (es decir, se muere), sucede lo mismo si al pasar una etapa alcanza el límite de etapas sin alimentarse, en cuyo caso muere de hambre.
+Al finalizar una etapa, todos los animales "envejecen" en 1 unidad, si alguno alcanzó la edad máxima de su especie se considera que ya puede retirárselo del mundo (es decir, se muere). Sucede lo mismo si al pasar una etapa alcanza el límite de etapas sin alimentarse, en cuyo caso muere de hambre.
 
 ## Clases del modelo inicial:
 
-* [Tablero](includes/tablero.md)
-* [Animal, León, Antílope](includes/animal.md)
-* [Mundo](includes/mundo.md)
+* [Tablero](./includes/tablero.md)
+* [Animal, León, Antílope](./includes/animal.md)
+* [Mundo](./includes/mundo.md)
 
 
-## Ejercicio
-
+### Ejercicio 9.17: 
 Para empezar a explorar el modelo, se deberá completar todos los métodos que estén indicados con `pass`.
 
 Agregar además cualquier método que consideres necesario para obtener información, o modelar algún comportamiento.

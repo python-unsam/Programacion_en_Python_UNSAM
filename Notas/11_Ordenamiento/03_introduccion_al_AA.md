@@ -249,7 +249,7 @@ Observar que en este último fragmento de código el split en test y train es al
 ## Ejercicios:
 
 ### Ejercicio 11.10: 
-Leé sobre los [clasificadores basados en arboles de decisión](https://es.wikipedia.org/wiki/Aprendizaje_basado_en_%C3%A1rboles_de_decisi%C3%B3n) y luego usá el objeto clasificador `clf` (definido a continuación) como se usó `knn` en el ejemplo anterior (es decir, entrená el clasificador sobre el conjunto train y evaluálo sobre el conjunto test). Tanto `knn` como `clf` son clasificadores y heredan los métodos "fit", "predict" y "score" de forma que su uso es casi idéntico. Ventajas del polimorfismo que hablamos antes (ver Sección ?). ¿Qué clasificador dió mejores resultados?
+Leé sobre los [clasificadores basados en arboles de decisión](https://es.wikipedia.org/wiki/Aprendizaje_basado_en_%C3%A1rboles_de_decisi%C3%B3n) y luego usá el objeto clasificador `clf` (definido a continuación) como se usó `knn` en el ejemplo anterior (es decir, entrená el clasificador sobre el conjunto train y evaluálo sobre el conjunto test). Tanto `knn` como `clf` son clasificadores y heredan los métodos "fit", "predict" y "score" de forma que su uso es casi idéntico. Ventajas del polimorfismo que hablamos antes (ver [Ejercicio 8.7](../08_Clases_y_Objetos/02_Herencia.md#ejercicio-87-polimorfismo-en-acción)). ¿Qué clasificador dió mejores resultados?
 
 
 ```python
