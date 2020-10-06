@@ -2,12 +2,12 @@
 
 # 9.5 Predador Presa
 
-Los modelos de depredación y competencia forman parte de la batería de herramientas clásicas del ecólogo. Vito Volterra en Italia y Alfred Lotka en Estados Unidos fueron los precursores en este tema y crearon modelos que, con diversas modificaciones y mejoras, seguimos usando hoy en día.
+Los [modelos de depredación y competencia](https://es.wikipedia.org/wiki/Ecuaciones_Lotka%E2%80%93Volterra) forman parte de la batería de herramientas clásicas del ecólogo. Vito Volterra en Italia y Alfred Lotka en Estados Unidos fueron los precursores en este tema y crearon modelos que, con diversas modificaciones y mejoras, seguimos usando hoy en día.
 El modelo de Volterra para depredación comienza suponiendo la existencia de dos poblaciones de animales, una de las cuales (el depredador) se alimenta de la otra (la presa). Se supone que las dos poblaciones están formadas por individuos idénticos, mezclados en el espacio.
 
-La gran mayoría de los modelos usualmente estudiados tienen solamente en cuenta la dinámica temporal, desatendiendo la dinámica espacial. Este ejercicio tiene como objetivo implementar una versión diferente: intentaremos analizar ambos aspectos: se trata de un modelo espacio-temporal.
+La gran mayoría de los modelos usualmente estudiados tienen solamente en cuenta la dinámica temporal, desatendiendo la dinámica espacial. Con la excusa de implementar una versión espacio-temporal de este modelo, proponemos un ejercicio guiado que usa fuertemente programación orientada a objetos.
 
-Lo que sigue es un ejercicio optativo para entregar. El ejercicio está muy guiado y toda la estructura del modelo está basada en objetos. La idea es recrear un mundo que imaginaremos como un valle rodeado de montañas en el que existen depredadores (que llamaremos Leones) y presas (que llamaremos Antílopes). Este valle será bidimensional, y lo representaremos por medio de una grilla rectangular que llamaremos tablero.
+Lo que sigue es un ejercicio optativo. Como decíamos, el ejercicio está muy guiado y toda la estructura del modelo está basada en objetos. La idea es recrear un mundo que imaginaremos como un valle rodeado de montañas en el que existen depredadores (que llamaremos Leones) y presas (que llamaremos Antílopes). Este valle será bidimensional, y lo representaremos por medio de una grilla rectangular que llamaremos tablero.
 
 El modelo inicial con el que trabajaremos tiene definidas 4 etapas que determinan un ciclo:
 
@@ -21,13 +21,13 @@ El modelo inicial con el que trabajaremos tiene definidas 4 etapas que determina
 
 # Clases del modelo inicial:
 
-El modelo inicial te lo podés bajar de [acá](./modelo.zip). Ya tiene definidas la clase `Animal` de la que heredan dos nuevas clases: `León` y `Antílope`. También tiene definida una clase `Tablero`. Todas estas clases se integran en una clase `Mundo`. Vamos a ver una por una estas clases y te indricaremos algunos métodos faltantes que tendrás que implementar vos.
+El modelo inicial te lo podés bajar de [acá](./modelo.zip). Ya tiene definidas la clase `Animal` de la que heredan dos nuevas clases: `León` y `Antílope`. También tiene definida una clase `Tablero`. Todas estas clases se integran en una clase `Mundo`. Vamos a ver una por una estas clases y te indicaremos algunos métodos faltantes que tendrás que implementar vos y otros que te proponemos mejorar.
 
 ## Animales
 
 Esta clase está definida en el archivo `animal.py`.
 
-La clase Animal será una clase abstracta, de la cual heredarán la clase León y la clase Antílope. Los métodos y atributos comunes que representen a un animal deberán estar en esta clase.
+La clase `Animal` será una clase abstracta, de la cual heredarán la clase León y la clase Antílope. Los métodos y atributos comunes que representen a un animal deberán estar en esta clase.
 
 ### Constructor
 
