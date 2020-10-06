@@ -495,7 +495,7 @@ A continuación una lista no exhaustiva de las extensiones posibles al modelo, p
 
       - La probabilidad es variable dependiendo de la edad del León, siendo muy baja cuando es cachorro, alta cuando es adulto, y baja de nuevo en su vejez.
 
-      - La probabilidad es variable dependiendo de la edad del León, igual al anterror, y la edad del Antílope, siendo la probabilidad de que escape muy baja cuando es cachorro, alta cuando es adulto, y baja de nuevo en su vejez. Una forma de calcular esto es: ![\begin{align*}
+      - La probabilidad es variable dependiendo de la edad del León, igual al anterior, y la edad del Antílope, siendo la probabilidad de que escape muy baja cuando es cachorro, alta cuando es adulto, y baja de nuevo en su vejez. Una forma de calcular esto es: ![\begin{align*}
 p_{comer} = p_{leon}(edadLeon) \times (1 - p_{antilope}(edadAntilope))
 \end{align*}
 ](https://render.githubusercontent.com/render/math?math=%5Cdisplaystyle+%5Cbegin%7Balign%2A%7D%0Ap_%7Bcomer%7D+%3D+p_%7Bleon%7D%28edadLeon%29+%5Ctimes+%281+-+p_%7Bantilope%7D%28edadAntilope%29%29%0A%5Cend%7Balign%2A%7D%0A)
