@@ -22,9 +22,9 @@ El modelo inicial con el que trabajaremos tiene definidas 4 etapas que determina
 
 ## Clases del modelo inicial:
 
-* [Tablero](./includes/tablero.md)
-* [Animal, León, Antílope](./includes/animal.md)
-* [Mundo](./includes/mundo.md)
+* [Tablero](./includes/tablero.MD)
+* [Animal, León, Antílope](./includes/animal.MD)
+* [Mundo](./includes/mundo.MD)
 
 
 ### Ejercicio 9.17: 
