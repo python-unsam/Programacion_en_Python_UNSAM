@@ -285,5 +285,7 @@ Lima,2624.94,232
 
 ¿Qué aprendimos hoy? Si creás varias funciones generadoras y las ponés "en serie" (una recibe los datos de la anterior) podés crear pipelines que controlen el flujo de datos: los procesen, modifiquen o filtren entre el primer generador y el último consumidor. Además viste lo fácil que es cambiar el comportamiento del programa cuando tenés interfases bien definidas. Por supuesto, podés empaquetar un conjunto de etapas de procesamiento en una función sola, si tiene sentido hacerlo.
 
+
+
 [Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 Más sobre generadores)](04_Mas_generadores.md)
 

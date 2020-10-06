@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 Predador Presa)](05_PredadorPresa.md)
 
 # 9.4 Más sobre generadores
 
@@ -164,7 +164,10 @@ rows = (row for row in rows if row['name'] in names)
 
 Modificá este último para que use expresiones generadoras en lugar de funciones generadoras. Al final de la clase podés entregar el `ticker.py` anterior o este nuevo (¡mejor el nuevo!).
 
+### Ejercicio 9.16: Volviendo a ordenar imágenes
+Te proponemos aquí que retomes el [Ejercicio 7.5](../07_Fechas_Carpetas_y_Pandas/03_Ordenando_archivos.md#ejercicio-75-recorrer-el-árbol-de-archivos) que tenés guardado en el archivo `listar_imgs.py`. Usá los datos que te proporciona `os.walk` y una expresión generadora para filtrar las imágenes png (con sus directorios correspondientes). Este filtro debería generar pares `(directorio, archivo.png)`
 
+Más aún, opcionalmente, diseñá un generador que dada la secuencia filtrada (directorios y archivos png), genere ternas consistentes de: `('vijo_dir/viejo_nombre', 'nuevo_dir/nuevo_nombre', fecha_a_setear)` de manera que pueda ser fácilmente usada por una función para completar las tareas del [Ejercicio 7.6](../07_Fechas_Carpetas_y_Pandas/03_Ordenando_archivos.md#ejercicio-76-ordenar-el-árbol-de-archivos-optativo).
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 En esta sección viene el ejercicio optativo que están armando Mati y José)](05_Simulacion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 Predador Presa)](05_PredadorPresa.md)
 
