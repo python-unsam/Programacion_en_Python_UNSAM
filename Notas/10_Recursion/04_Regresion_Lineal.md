@@ -4,7 +4,7 @@
 
 En esta sección vamos a trabajar con **regresión lineal**. No es una clase con todos los fundamentos del tema, sino un acercamiento práctico a las técnicas y sus formas de uso en Python. Para un desarrollo más profundo te recomendamos por ejemplo las notas de [Andrew Ng](http://cs229.stanford.edu/notes/cs229-notes1.pdf).
 
-## Regresión lineal simple.
+## Regresión lineal simple
 
 Supongamos que queremos modelar la relación entre dos variables reales mediante un modelo lineal. Y que vamos a ajustar los parámetros de ese modelos a partir de ciertos valores conocidos (mediciones, digamos). Es decir que vamos a estar pensando que las variables tienen una relación lineal, `Y = a*X + b`, donde `X` es la variable *explicativa* (sus componentes se denominan *independientes* o *regresores*), e `Y` es la variable *a explicar* (también denominada *dependiente* o *regresando*).
 
@@ -39,14 +39,20 @@ Vamos a elegir como mejor recta a la que minimice los residuos. Más precisament
 
 ![rectas](./rectas.png)
 
-Analíticamente, buscamos `a, b` tales que se minimice la siguiente suma de cuadrados:
+Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadrados:
 
 ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
 
+Recordá que vimos que calcular el promedio de estos errores en numpy es muy sencillo en la Sección ?. Usar cudrados mínimos tiene múltiples motivaciones en las que no podemos entrar acá. Solo mencionaresmos dos hechos relacionados con su frecuente elección. 
+
+- Por un lado, minimizar el error cuadrático medio puede resolverse derivando la fórumla del error. Los que sepan algo de análisis matemático, recordarán que la derivada nos permite encontrar mínimos y que la derivada de una función cudrática es una función lineal. Por lo tanto, encontrar la recta que mejor ajusta los datos se reduce a buscar el cero de una derivada que en el fondo se reduce a resolver un sistema lineal, algo que sabemos hacer muy bien y muy rápido.
+- Otro argumento muy fuerte, de naturaleza estadística en este caso, es que si uno considera que los residuos son por ejemplo errores de medición y que tienen una distribución normal (una gaussiana), entonces puede mostrarque que la recta que da el método de los cuadrados mínimos es _la recta de máxima verosimilitud_. 
+
+Estas cosas se explican muy bien en el apunte de Ng que citamos antes.
 
 ### Ejemplo
 
-Para los datos que graficamos antes, ésta es la _mejor recta_, es decir, el ajuste lineal de los datos.
+Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que minimiza la suma de los cuadrados de los residuos. Vamos a decir que esta recta es **el ajuste lineal de los datos**.
 
 ![reg_simple](./reg_simple.png)
 
