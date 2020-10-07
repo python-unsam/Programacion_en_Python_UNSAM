@@ -2,7 +2,7 @@
 
 # 9.3 Productores, consumidores y cañerías.
 
-Los generadores son una herramienta muy útil para configurar pipelines (cañerías). Este concepto requiere una breve *aclaración*: Un pipelinet radicional en computación consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa se ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un log de una página web). Construíste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
+Los generadores son una herramienta muy útil para configurar pipelines (cañerías). Este concepto requiere una breve *aclaración*: Un pipeline tradicional en computación consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa se ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un log de una página web). Construiste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
 
 En esta sección hablaremos de cómo implementar estas estructuras de productores y consumidores de datos con generadores en Python.
 
@@ -125,7 +125,7 @@ Esta función es casi idéntica al primer ejemplo de generador en el ejercicio a
 ... esperá que aparezca la salida ...
 ```
 
-Puede pasar que tarde unos segundos en darte una salida, pero vas a ver información sobre narajas tan pronto como sean añadidas al archivo por el primer generador.
+Puede pasar que tarde unos segundos en darte una salida, pero vas a ver información sobre naranjas tan pronto como sean añadidas al archivo por el primer generador.
 
 ### Ejercicio 9.9: Un pipeline más en serio
 Llevemos esta idea un poco más lejos. Probemos esto:
@@ -243,7 +243,7 @@ def filtrar_datos(filas, nombres):
             yield fila
 ```
 
-Esto se usa para dejar pasar únicamente aquéllos lotes incluídos en el camión. Probálo.
+Esto se usa para dejar pasar únicamente aquéllos lotes incluídos en el camión. Probalo.
 
 ```python
 

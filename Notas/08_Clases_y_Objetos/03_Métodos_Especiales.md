@@ -269,7 +269,7 @@ Guardá el archivo `lote.py` para entregar.
         print(colname, '=', getattr(c, colname))
 
 nombre = Peras
-cantidad = 100
+cajones = 100
 >>>
 ```
 

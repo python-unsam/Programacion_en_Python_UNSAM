@@ -11,13 +11,13 @@ Lo que sigue es un ejercicio optativo. Como decíamos, el ejercicio está muy gu
 
 El modelo inicial con el que trabajaremos tiene definidas 4 etapas que determinan un ciclo:
 
-- **Etapa de movimiento**: en esta etapa cada animal se desplaza a alguna posición vecina desocupada (si es que existe, sino permanece en el lugar). La decisión de a cuál desplazarse será responsabilidad del animal, que sabiendo las disponibles elegirá una al azar.
+- **Etapa de movimiento**: en esta etapa cada animal se desplaza a alguna posición vecina desocupada (si es que existe, sino permanece en el lugar). La decisión de a cuál desplazarse será responsabilidad del animal, que, sabiendo las disponibles, elegirá una al azar.
 
-- **Etapa de alimentación**: en esta etapa los animales se alimentan. Los antílopes comerán pasto en su lugar, mientras que los leones buscarán un antílope en las posiciones vecinas y de existir se lo comerán. Esta acción de un león se verá reflejada en el tablero con su desplazamiento a la posición del antílope, el cual ya no será más parte de nuestro mundo.
+- **Etapa de alimentación**: en esta etapa los animales se alimentan. Los antílopes comerán pasto en su lugar, mientras que los leones buscarán un antílope en las posiciones vecinas y, de existir, se lo comerán. Esta acción de un león se verá reflejada en el tablero con su desplazamiento a la posición del antílope, el cual ya no será más parte de nuestro mundo.
 
 - **Etapa de reproducción**: cada animal buscará en sus posiciones vecinas alguien de su misma especie. Si lo encuentra y además hay una posición vacía en el tablero se incluirá un nuevo animal (de la misma especie) en el tablero. Nuevamente la elección de la pareja y del lugar del nuevo animal serán aleatorias. Este modelo inicial no prevee el atributo sexo, ni un límite entre la cantidad reproducciones en las que puede participar un animal por etapa.
 
-- **Cierre de ciclo**: en la última etapa de un ciclo todos los animales "envejecen" en 1 unidad, aquellos que se reprodujeron y siguen sen edad reproductiva vuelven a ser fértiles. Si alguno alcanzó la edad máxima de su especie se considera que ya puede retirárselo del mundo (es decir, se muere). Sucede lo mismo si al pasar una etapa alcanza el límite de etapas sin alimentarse, en cuyo caso muere de hambre.
+- **Cierre de ciclo**: en la última etapa de un ciclo todos los animales "envejecen" en 1 unidad, aquellos que se reprodujeron y siguen en edad reproductiva vuelven a ser fértiles. Si alguno alcanzó la edad máxima de su especie se considera que ya puede retirárselo del mundo (es decir, se muere). Sucede lo mismo si, al pasar una etapa, alcanza el límite de etapas sin alimentarse, en cuyo caso muere de hambre.
 
 # Clases del modelo inicial:
 
@@ -187,9 +187,9 @@ else:
     print(f'El león no come')
 ```
 
-Fijate que el método alimentarse no mata al antílope, solo devuelve su poasición. *Alguien más* deberá ocuparse de retirarlo del mundo.
+Fijate que el método alimentarse no mata al antílope, solo devuelve su posición. *Alguien más* deberá ocuparse de retirarlo del mundo.
 
-Si corrés este código varias veces, vas a ver que el León obtiene energía máxima al comer, pero sigue comeindo. Implementá adecuadamente el método `tiene_hambre()` de la clase `Animal` de manera que solo tenga hambre cuando su energía baje. Volvé a probar el código. El león debería comer solo cuando pase al menos un ciclo desde la última vez que comió.
+Si corrés este código varias veces, vas a ver que el León obtiene energía máxima al comer, pero sigue comiendo. Implementá adecuadamente el método `tiene_hambre()` de la clase `Animal` de manera que solo tenga hambre cuando su energía baje. Volvé a probar el código. El león debería comer solo cuando pase al menos un ciclo desde la última vez que comió.
 
 
 ### Ejemplo: Un León y una Leona
@@ -204,7 +204,7 @@ M.puede_reproducir()
 ```
 Repetí hasta que `L` y `M` sean reproductores.
 
-Luego ponelos cerca. Digamos que `M` tiene como vecinos a los dos antílopes y al león `L` de antes. Supongamos que las crias pueden ocupar algunos lugares libres en nuestro mundo (aun no definido):
+Luego ponelos cerca. Digamos que `M` tiene como vecinos a los dos antílopes y al león `L` de antes. Supongamos que las crias pueden ocupar algunos lugares libres en nuestro mundo (aún no definido):
 
 ```python
 vecinos = [L]
@@ -357,7 +357,7 @@ Se pueden definir como adyacentes sólo las que compartan un borde, o las que es
 
 ## El mundo
 
-El mundo será el encargado de hacer un tablero que usará de soporte, llenarlo de animales y ordenarlos a estos que se comporten de cierta forma en cada etapa que se implemente.
+El mundo será el encargado de hacer un tablero que usará de soporte, llenarlo de animales y ordenarlos para que se comporten de cierta forma en cada etapa que se implemente.
 
 ### Constructor
 
@@ -391,7 +391,7 @@ El constructor delega la tarea de llenar el tablero al método `llenar_mundo`:
 
 ### Modelado de la dinámica
 
-La etapa de movimiento, para cada posición ocupada del tablero, se le indican cuales son sus vecinos libres y se lo manda a moverse, en caso de que el animal responda con una posición, se lo mueve a la posición indicada
+En la etapa de movimiento, para cada posición ocupada del tablero, se indican cuales son sus vecinos libres y se lo manda a moverse, en caso de que el animal responda con una posición, se lo mueve a la posición indicada.
 
 ```python
     def etapa_movimiento(self):
@@ -405,7 +405,7 @@ La etapa de movimiento, para cada posición ocupada del tablero, se le indican c
                 self.tablero.mover(p, nueva_posicion)
 ```
 
-En la etapa de alimentación, es similar a la anterior, salvo que se le indican cuales son sus vecinos ocupados y se los manda a alimentarse, en caso de que el animal responda con una posición, se lo mueve a la posición indicada.
+En la etapa de alimentación, es similar a la anterior, salvo que se indican cuales son sus vecinos ocupados y se los manda a alimentarse, en caso de que el animal responda con una posición, se lo mueve a la posición indicada.
 
 ```python
     def etapa_alimentacion(self):
@@ -475,9 +475,9 @@ Implementá el método `etapa_reproduccion` en la clase `Mundo`.
 Implementá la lógica necesaria para que los animales pueden reproducirse únicamente una vez por año (ya sean los que inician la reproducción o los que son compañeres).
 
 ### Ejercicio 9.19: Alcanzando la madurez
-Implementá la lógica necesaria para que un animal sólo puede reproducirse cuando ya tiene 2 años cumplidos
+Implementá la lógica necesaria para que un animal sólo puede reproducirse cuando ya tiene 2 años cumplidos.
 
-Si llegaste hasta acá, por favor guará todos junto en un solo archivo `simulacion.py` y entregalo al finalizar la clase.
+Si llegaste hasta acá, por favor guardá todo junto en un solo archivo `simulacion.py` y entregalo al finalizar la clase.
 
 Una vez realizado esto hay diversas opciones para usarlo y expandirlo.
 
@@ -485,9 +485,9 @@ Una vez realizado esto hay diversas opciones para usarlo y expandirlo.
 
 A continuación una lista no exhaustiva de las extensiones posibles al modelo, podés incorporar algunas, o todas:
 
-  - Ningún animal se alimenta más de una vez en una etapa. Modifića el método `tiene_hambre()` de la clase `Animal` para que no siempre tenga hambre
+  - Ningún animal se alimenta más de una vez en una etapa. Modifića el método `tiene_hambre()` de la clase `Animal` para que no siempre tenga hambre.
 
-  - Si un animal se alimenta en una etapa, no necesita alimentarse más por un turno entero
+  - Si un animal se alimenta en una etapa, no necesita alimentarse más por un turno entero.
 
   - Cuando un León ataca un Antílope, no siempre se lo come, a veces el Antílope logra escapar. Modelar esto con 3 posibles escenarios:
 

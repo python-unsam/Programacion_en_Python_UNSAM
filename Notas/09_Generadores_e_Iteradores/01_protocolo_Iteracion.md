@@ -217,9 +217,9 @@ class Camion:
         return cantidad_total
 ```
 
-Después de haber hecho este cambio tu `informe.py` debería estar funcionando de nuevo. Guardá esta versión de `informe.py` para entregar al final de la clase (en el próximo ejercicio te pediremos tabién `camion.py`).
+Después de haber hecho este cambio, tu `informe.py` debería estar funcionando de nuevo. Guardá esta versión de `informe.py` para entregar al final de la clase (en el próximo ejercicio te pediremos también `camion.py`).
 
-Y ya que estás, cambiá también el programa `costo_camion.py` para que use objetos que sean instancias de la clase  `Camion`, por ejemplo así:
+Y ya que estás, cambiá el programa `costo_camion.py` para que use objetos que sean instancias de la clase  `Camion`, por ejemplo así:
 
 ```python
 # costo_camion.py
@@ -298,7 +298,7 @@ False
 Guardá tu versión de `camion.py` con estos cambios para entregar y para la revisión de pares.
 
 **Un comentario importante sobre todo esto:** 
-Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que éstos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se espera *a priori* que vayan a cumplir - justamente por el simple hecho de ser objetos contenedores.
+Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que estos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se esperan *a priori* que vayan a cumplir, justamente por el simple hecho de ser objetos contenedores.
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](02_iteracion_a_medida.md)

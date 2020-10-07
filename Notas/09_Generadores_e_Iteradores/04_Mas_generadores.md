@@ -80,7 +80,7 @@ Al usar generadores, tu código ejecuta más rápido y usa menos memoria. Se por
 
 ### El módulo `itertools` 
 
-El módulo `itertools` es una biblioteca con varias funciones útiles para construír generadores e interadores. 
+El módulo `itertools` es una biblioteca con varias funciones útiles para construír generadores e iteradores. 
 
 ```python
 itertools.chain(s1,s2)
@@ -101,7 +101,7 @@ Si querés profundizar más en estos conceptos, te recomendamos el curso que esc
 
 ## Ejercicios
 
-En ejercicios anteriores escribiste código que vigilaba un archivo log esperando líneas nuevas escritas al final y las presentaba como una secuencia de filas. Este ejercicio continúa aquél, de modo que vas a necesitar que `sim_mercado.py` esté ejecutándose. Acordate de pararlo cuando termines... agrega una línea por segundo y eventualmente te va a llenar tu disco rígido.
+En ejercicios anteriores escribiste código que vigilaba un archivo log esperando líneas nuevas escritas al final y las presentaba como una secuencia de filas. Este ejercicio continua aquel, de modo que vas a necesitar que `sim_mercado.py` esté ejecutándose. Acordate de pararlo cuando termines... agrega una línea por segundo y eventualmente te va a llenar tu disco rígido.
 
 ### Ejercicio 9.13: Expresiones generadoras
 Fijate este ejemplo de una expresión generadora:
@@ -167,7 +167,7 @@ Modificá este último para que use expresiones generadoras en lugar de funcione
 ### Ejercicio 9.16: Volviendo a ordenar imágenes
 Te proponemos aquí que retomes el [Ejercicio 7.5](../07_Fechas_Carpetas_y_Pandas/03_Ordenando_archivos.md#ejercicio-75-recorrer-el-árbol-de-archivos) que tenés guardado en el archivo `listar_imgs.py`. Usá los datos que te proporciona `os.walk` y una expresión generadora para filtrar las imágenes png (con sus directorios correspondientes). Este filtro debería generar pares `(directorio, archivo.png)`
 
-Más aún, opcionalmente, diseñá un generador que dada la secuencia filtrada (directorios y archivos png), genere ternas consistentes de: `('viejo_dir/viejo_nombre', 'nuevo_dir/nuevo_nombre', fecha_a_setear)` de manera que pueda ser fácilmente usada por una función para completar las tareas del [Ejercicio 7.6](../07_Fechas_Carpetas_y_Pandas/03_Ordenando_archivos.md#ejercicio-76-ordenar-el-árbol-de-archivos-optativo).
+Más aún, opcionalmente diseñá un generador que, dada la secuencia filtrada (directorios y archivos png), genere ternas consistentes de: `('viejo_dir/viejo_nombre', 'nuevo_dir/nuevo_nombre', fecha_a_setear)` de manera que pueda ser fácilmente usada por una función para completar las tareas del [Ejercicio 7.6](../07_Fechas_Carpetas_y_Pandas/03_Ordenando_archivos.md#ejercicio-76-ordenar-el-árbol-de-archivos-optativo).
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 Predador Presa)](05_PredadorPresa.md)
 

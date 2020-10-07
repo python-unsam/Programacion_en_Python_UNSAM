@@ -300,7 +300,7 @@ Sin embargo, los datos pueden aparearse con los tipos especificados en `types`. 
 >>>
 ```
 
-Probá converir uno de los valores:
+Probá convertir uno de los valores:
 
 ```python
 >>> types[1](row[1])     # Es equivalente a int(row[1])
@@ -349,7 +349,7 @@ Esta lista zipeada es útil si querés realizar conversiones de todos los valore
 >>>
 ```
 
-Asegurate de entender lo que está pasando en el código de arriba. En el ciclo la variable `func` va tomando los valores del las funciones de conversión de tipos (`str`, `int`, `float`) y la variable `val` va tomando los valores de los datos en la fila: `'Lima'`, `'100'`, `'32.2'`.  La expresión `func(val)` convierte los tipos de cada dato.
+Asegurate de entender lo que está pasando en el código de arriba. En el ciclo la variable `func` va tomando los valores de las funciones de conversión de tipos (`str`, `int`, `float`) y la variable `val` va tomando los valores de los datos en la fila: `'Lima'`, `'100'`, `'32.2'`.  La expresión `func(val)` convierte los tipos de cada dato.
 
 El código de arriba puede comprimirse en una sola instrucción usando comprensión de listas.
 

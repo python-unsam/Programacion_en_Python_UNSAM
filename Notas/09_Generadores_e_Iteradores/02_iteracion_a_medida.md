@@ -93,7 +93,7 @@ File "<stdin>", line 1, in ? StopIteration
 >>>
 ```
 
-*Observación:** Una función generadora implementa el mismo protocolo de bajo nivel que los  `for` usan sobre listas, tuplas, diccionarios, archivos, etc. ¡Por eso es tan sencillo usar los generadores para iterar!
+*Observación:* Una función generadora implementa el mismo protocolo de bajo nivel que los  `for` usan sobre listas, tuplas, diccionarios, archivos, etc. ¡Por eso es tan sencillo usar los generadores para iterar!
 
 ## Ejercicios
 
@@ -172,7 +172,7 @@ while True:
 
 Cuando ejecutes el programa vas a ver un indicador de precios en el mercado en tiempo real, con indicación de qué producto se trata, cuál es su precio, y cuál es el volumen de la operación (en cantidad de cajones). 
 
-*Observación:** La forma en que usamos el método `readline()` en este ejemplo es un poco rara, no es la forma en que se suele usar (detro de un ciclo `for` para recorrer el contenido de un archivo). En este caso la estamos usando para mirar constantemente el fin de archivo para obtener los últimos datos que se hayan agregado (`readline()` devuelve ó bien el último dato o bien una cadena vacía).
+*Observación:* La forma en que usamos el método `readline()` en este ejemplo es un poco rara, no es la forma en que se suele usar (dentro de un ciclo `for` para recorrer el contenido de un archivo). En este caso la estamos usando para mirar constantemente el fin de archivo para obtener los últimos datos que se hayan agregado (`readline()` devuelve ó bien el último dato o bien una cadena vacía).
 
 ### Ejercicio 9.6: Uso de un generador para producir datos
 Si analizás un poco el código del [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) vas a notar que la primera parte del programa "produce" datos (los obtiene del archivo) y la segunda los procesa y los imprime, es decir "consume" datos. Una característica importante de las funciones generadoras es que podés mover todo el código a una función reutilizable. Probalo vos.
@@ -220,11 +220,11 @@ if __name__ == '__main__':
             print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
 
-Observación: para que esto funcione, tu clase `Camion` tiene que haber implementado el operador `in`. Controlá que tu solución al ejercicio [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) implemente el operador `__contains__()`.
+*Observación:* para que esto funcione, tu clase `Camion` tiene que haber implementado el operador `in`. Controlá que tu solución al ejercicio [Ejercicio 9.3](../09_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-93-un-iterador-adecuado) implemente el operador `__contains__()`.
 
 ### Discusión
 
-Lo que acaba de suceder es algo con mucho potencial: moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `vigilar()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo, la podrías usar para mirar el log (historial) de un servidor ó de un debugger, o de otras fuentes contínuas de datos. ¿No está bueno?
+Lo que acaba de suceder es algo con mucho potencial: moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `vigilar()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo, la podrías usar para mirar el log (historial) de un servidor ó de un debugger, o de otras fuentes continuas de datos. ¿No está bueno?
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 El protocolo de iteración)](01_protocolo_Iteracion.md) \| [Próximo (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md)
