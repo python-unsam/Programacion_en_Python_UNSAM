@@ -43,7 +43,7 @@ Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadra
 
 ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
 
-Recordá que vimos que calcular el promedio de estos errores en numpy es muy sencillo en la Sección ?. Usar cudrados mínimos tiene múltiples motivaciones en las que no podemos entrar acá. Solo mencionaresmos dos hechos relacionados con su frecuente elección. 
+Recordá que vimos que calcular el promedio de estos errores en numpy es muy sencillo en la [Sección 4.3](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas). Usar cudrados mínimos tiene múltiples motivaciones en las que no podemos entrar acá. Solo mencionaresmos dos hechos relacionados con su frecuente elección. 
 
 - Por un lado, minimizar el error cuadrático medio puede resolverse derivando la fórumla del error. Los que sepan algo de análisis matemático, recordarán que la derivada nos permite encontrar mínimos y que la derivada de una función cudrática es una función lineal. Por lo tanto, encontrar la recta que mejor ajusta los datos se reduce a buscar el cero de una derivada que en el fondo se reduce a resolver un sistema lineal, algo que sabemos hacer muy bien y muy rápido.
 - Otro argumento muy fuerte, de naturaleza estadística en este caso, es que si uno considera que los residuos son por ejemplo errores de medición y que tienen una distribución normal (una gaussiana), entonces puede mostrarque que la recta que da el método de los cuadrados mínimos es _la recta de máxima verosimilitud_. 
