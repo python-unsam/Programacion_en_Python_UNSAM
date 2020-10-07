@@ -6,14 +6,14 @@ En esta sección vamos a trabajar con **regresión lineal**. No es una clase con
 
 ## Regresión lineal simple.
 
-Supongamos que queremos modelar la relación entre dos variables reales mediante un modelo lineal. Y que vamos a ajustar los parámetros de ese modelos a partir de ciertos valores conocidos (mediciones, digamos). Es decir que vamos a estar pensando que las variables tienen una relación lineal, `Y = a*X+b`, donde `X` es la variable *explicativa* (sus componentes se denominan *independientes* o *regresores*), e `Y` es la variable *a explicar* (también denominada *dependiente* o *regresando*).
+Supongamos que queremos modelar la relación entre dos variables reales mediante un modelo lineal. Y que vamos a ajustar los parámetros de ese modelos a partir de ciertos valores conocidos (mediciones, digamos). Es decir que vamos a estar pensando que las variables tienen una relación lineal, `Y = a*X + b`, donde `X` es la variable *explicativa* (sus componentes se denominan *independientes* o *regresores*), e `Y` es la variable *a explicar* (también denominada *dependiente* o *regresando*).
 
 A partir de un conjunto de datos de tipo `(x,y)`, planteamos el modelo `Y = a*X + b`.
 
 En general el modelo no va a ser exacto, es decir, no se va a complir que `y_i = a*x_i + b` para los valores `(x_i,y_i)`, salvo que justamente estén sobre una línea recta.
 Vamos a tener que `y_i = a*x_i + b + r_i` donde, los valores `r_i`, llamados _residuos_, representan las diferencias entre los valores de la recta en cada valor de `x` que tenemos y los valores de `y` asociados.
 
-El problema de regresión lineal consiste en elegir los parámetros `a, b` de para la recta (pendiente y ordenada al origen), de manera que la recta sea la que *mejor* se adapte a los datos disponibles.
+El problema de regresión lineal consiste en elegir los parámetros `a, b` de para la recta (es decir, su pendiente y ordenada al origen), de manera que la recta sea la que *mejor* se adapte a los datos disponibles.
 
 
 ```python
@@ -41,7 +41,7 @@ Vamos a elegir como mejor recta a la que minimice los residuos. Más precisament
 
 Analíticamente, buscamos `a, b` tales que se minimice la siguiente suma de cuadrados:
 
-`\Sigma_{i=1}^n (a*x_i + b - y_i)^2 `
+![formula](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a*x_i%20+%20b%20-%20y_i)^2)
 
 
 ### Ejemplo
