@@ -273,9 +273,9 @@ cantidad = 100
 >>>
 ```
 
-Queremos que notes algo interesante: los datos de salida están completamente especificados por los nombres de los atributos listados en la variable `columnas`. No fue necesario hacer ninguna conversión ni preguntar nada al usuarie para usar el nombre de un dato como nombre de una variable.  
+Queremos que observes algo interesante: los datos de salida están completamente especificados por los nombres de los atributos listados en la variable `columnas`. Estamos usando el contenido de una variable ('nombre' y 'cajones') como nombres de otras variables, o de atributos de un objeto. No es usual. 
 
-En el archivo `formato_tabla.py` usá esta idea pero extendela, y creá una función `imprimir_tabla()` que imprima una tabla mostrando, de una lista de objetos de tipo arbitrario, una lista de atributos especificados por el usuarie.
+Si te dan ganas, en el archivo `formato_tabla.py` usá esta idea pero extendela, y creá una función `imprimir_tabla()` que imprima una tabla mostrando, de una lista de objetos de tipo arbitrario, una lista de atributos especificados por le usuarie.
 
 Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 5.1](../05_Organización_y_Complejidad/01_Scripts.md#ejercicio-51-estructurar-un-programa-como-una-colección-de-funciones) `imprimir_tabla()` también debería aceptar cualquier instancia de la clase `FormatoTabla` para definir el formato de la salida. La idea es que funcione más o menos así:
 

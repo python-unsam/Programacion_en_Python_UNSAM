@@ -143,7 +143,7 @@ L = Leon()
 L.energia
 L.edad
 L.es_leon()
-L.es_antílope()
+L.es_antilope()
 L.pasar_un_ciclo()
 L.energia
 L.edad
@@ -174,7 +174,7 @@ A1 = Antilope()
 A2 = Antilope()
 A1.energia
 A1.edad
-A1.es_antílope()
+A1.es_antilope()
 ```
 
 Y hacé que el León, que ya tiene hambre, se coma alguno de los dos antílopes (aleatoriamente):
