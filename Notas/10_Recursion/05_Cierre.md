@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 # Regresión lineal)](04_Regresion_Lineal.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Regresión lineal)](04_Regresion_Lineal.md)
 
 # 10.5 Cierre de la clase de Recursión
 
@@ -13,5 +13,5 @@ En esta clase vimos el concepto de recursión y lo ejercitaste.
 * El archivo `HojasISO.py` del [Ejercicio 10.13](../10_Recursion/03_EjerciciosRec.md#ejercicio-1013-hojas-iso-y-recursión).
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 # Regresión lineal)](04_Regresion_Lineal.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Regresión lineal)](04_Regresion_Lineal.md)
 

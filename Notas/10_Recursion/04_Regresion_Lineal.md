@@ -1,11 +1,11 @@
 [Contenidos](../Contenidos.md) \| [Anterior (3 Práctica de Recursión)](03_EjerciciosRec.md) \| [Próximo (5 Cierre de la clase de Recursión)](05_Cierre.md)
 
-# 10.4 # Regresión lineal
+# 10.4 Regresión lineal
 
 En esta sección vamos a trabajar con **regresión lineal**.
 Ver notas de [Andrew Ng](http://cs229.stanford.edu/notes/cs229-notes1.pdf).
 
-### Planteo - Regresión lineal simple.
+## Regresión lineal simple.
 
 Supongamos que queremos modelar linealmente la relación entre dos variables reales, a partir de ciertos valores conocidos. Es decir que vamos a estar pensando que las variables tienen una relación lineal, `Y = a*X+b`, donde `X` es la variable *predictora* o *explicativa* `X`, e `Y` es la variable *a explicar* o *predicha*.
 
@@ -255,7 +255,7 @@ El modelo tiene también un método *predict* que, a partir de un valor de la va
 96.165
 ```
 
-### Regresión Lineal Múltiple
+## Regresión Lineal Múltiple
 
 La regresión lineal múltiple tiene un planteo similar, pero con más variables explicativas. El modelo es el siguiente.
 
