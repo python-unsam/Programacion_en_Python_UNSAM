@@ -1,10 +1,7 @@
 [Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)
 
 # 9. Generadores e iteradores
-**Esta clase está en preparación.**
-**El material sufrirá cambios hasta el miércoles 7/10, cuando daremos inicio a estos temas en el curso.**
-
-Programar es básicamente escribir asignaciones de variables, condicionales y ciclos. Aunque no de cualquier forma.
+Programar es básicamente escribir condicionales, ciclos y asignaciones de variables. Aunque no de cualquier forma.
 
 Los ciclos, ya sean ciclos `while` o iteraciones `for` son una de las estructuras más ubicuas en cualquier lenguaje. Los programas hacen muchas iteraciones para procesar listas, leer archivos, buscar en bases de datos y demás. 
 
