@@ -41,7 +41,7 @@ Vamos a elegir como mejor recta a la que minimice los residuos. Más precisament
 
 Analíticamente, buscamos `a, b` tales que se minimice la siguiente suma de cuadrados:
 
-![formula](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a*x_i%20+%20b%20-%20y_i)^2)
+![formula](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a*x_i%20\+%20b%20-%20y_i)^2)
 
 
 ### Ejemplo
