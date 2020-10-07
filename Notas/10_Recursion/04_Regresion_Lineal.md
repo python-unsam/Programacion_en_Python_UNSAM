@@ -43,12 +43,12 @@ Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadra
 
 ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
 
-Recordá que vimos que calcular el promedio de estos errores en numpy es muy sencillo en la [Sección 4.3](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas). Usar cudrados mínimos tiene múltiples motivaciones en las que no podemos entrar acá. Solo mencionaresmos dos hechos relacionados con su frecuente elección. 
+Recordá que vimos que calcular el promedio de estos errores en numpy es muy sencillo en la [Sección 4.3](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas). Usar cudrados mínimos tiene múltiples motivaciones que no podemos detallar adecuadamente acá. Solo mencionaremos dos hechos importantes relacionados con su frecuente elección:
 
 - Por un lado, minimizar el error cuadrático medio puede resolverse derivando la fórumla del error. Los que sepan algo de análisis matemático, recordarán que la derivada nos permite encontrar mínimos y que la derivada de una función cudrática es una función lineal. Por lo tanto, encontrar la recta que mejor ajusta los datos se reduce a buscar el cero de una derivada que en el fondo se reduce a resolver un sistema lineal, algo que sabemos hacer muy bien y muy rápido.
 - Otro argumento muy fuerte, de naturaleza estadística en este caso, es que si uno considera que los residuos son por ejemplo errores de medición y que tienen una distribución normal (una gaussiana), entonces puede mostrarque que la recta que da el método de los cuadrados mínimos es _la recta de máxima verosimilitud_. 
 
-Estas cosas se explican muy bien en el apunte de Ng que citamos antes.
+Estas cosas se explican muy bien en el apunte de Andrew Ng que citamos antes.
 
 ### Ejemplo
 
@@ -63,7 +63,9 @@ Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que
 Como buscamos el mínimo de la expresión ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
  podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. De esta manera se obtienen las siguientes fórmulas para el ajuste:
 
+###OJO!
 ```python
+### aca podés definir una función que te devuelva
 a = sum(((var_x - var_x.mean())*(var_y-var_y.mean()))) / sum(((var_x-var_x.mean())**2))
 b = var_y.mean() - a*var_x.mean()
 ```
@@ -71,13 +73,19 @@ b = var_y.mean() - a*var_x.mean()
 
 Veamos un ejemplo generado con datos sintéticos. Generamos 50 datos para la variable `u`, y determinamos a la variable `v` con una relación lineal más un error normal.
 
+###OJO!
 ```python
 import random
 
+#comenzaría definiendo N=50 y usaría ese N en ambas fórmulas, mas que un 50 en una y len() en la otra
+#aca usaría una distribución uniforme más que una discreta
 var_u = np.array(random.choices(range(500), k = 50))
+#hay una forma con np que me gusta mas: numpy.random.normal(loc=0.0, scale=1.0, size=None) quedaría
+# var_r = random.normal(0, 25, N)
 var_r = np.array([random.normalvariate(0,25) for i in range(len(var_u))])
 var_v = 1.3*var_u + 5 + var_r
 
+#ojo con los espacios. Antes de la coma NO, luego dela coma SI.
 g = plt.scatter(x = var_u , y = var_v)
 plt.title('gráfico de dispersión de los datos')
 plt.xlim([-2,520])
@@ -90,10 +98,13 @@ plt.show()
 
 Ahora ajustamos con las fórmulas que vimos antes:
 
+###OJO!
 ```python
+#llamá a la función de antes.
 a = sum(((var_u - var_u.mean())*(var_v-var_v.mean()))) / sum(((var_u-var_u.mean())**2))
 b = var_v.mean() - a*var_u.mean()
 
+#para graficar una recta, usá dos punto y no toda una grilla
 grilla_u = np.linspace(start=0, stop=500, num=1000)
 grilla_v = grilla_u*a + b
 g = plt.scatter(x = var_u , y = var_v)
@@ -112,7 +123,7 @@ plt.show()
 ![reg_simple_sint](./reg_simple_sint.png)
 
 ### Ejercicio 10.14: Alquiler y superficie
-Consdieramos datos de precios de alquiler mensual de departamentos (en miles de pesos), y sus superficies (en metros cuadrados). Queremos ajustar un modelo que prediga el precio de alquiler a partir de la superficie.
+Consdieramos datos de precios (en miles de pesos) de alquiler mensual de departamentos en el barrio de Caballito, CABA, y sus superficies (en metros cuadrados). Queremos ajustar un modelo que prediga el precio de alquiler a partir de la superficie para este barrio.
 
 ```python
 alquiler = [35.0, 29.6, 37.4, 21.0]
@@ -139,6 +150,9 @@ errores = data_deptos.alquiler - (beta_0 + beta_1*data_deptos.superficie)
 print(errores)
 print("Suma de errores:", (errores**2).sum())
 ```
+
+###OJO!
+A medida que tenés más datos, el error crece. Mejor para esto usar el MSE (mean).
 
 ### Ejemplo
 
@@ -213,6 +227,8 @@ plt.show()
 
 Y si queremos cuantificar el error en este modelo:
 
+###OJO!
+IDEM, mejor usar MSE.
 ```pyhon
 errores = y - ((x**2)*ap + bp)
 print("Suma de errores al cuadrado:", (errores**2).sum())
@@ -220,7 +236,9 @@ print("Suma de errores al cuadrado:", (errores**2).sum())
 
 ### Scikit-Learn
 
-La librería Scikit-Learn tiene herramientas muy útiles para el análisis de datos. En particular para regresión lineal tiene el módulo *linear_model*. En este ejemplo mostramos cómo se usa.
+La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos. En particular para regresión lineal tiene el módulo *linear_model*. En el siguiente ejemplo mostramos cómo puede usarse.
+
+Fijate que, al igual que el modelo de clustering que usamos en el ejercicio de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo con nuevos datos.
 
 ```python
 from sklearn import linear_model
@@ -295,11 +313,15 @@ print("Suma de errores:", (errores**2).sum())
 ```
 
 ### Ejercicio 10.15: 
-Queremos estimar el peso específico de un metal (es decir, peso divido volumen, en unidades de kg/m³). Para esto, disponemos de barras de dicho metal, con base de 1cm² y largos diversos, y de una balanza que tiene pequeños errores de medición (desconocidos). Vamos a estimar el peso específico _R_ del metal de la siguiente manera.
+Queremos estimar el peso específico de un metal (es decir, peso divido volumen, en unidades de g/cm³). Para esto, disponemos de barras de dicho metal, con base de 1cm² y largos diversos, y de una balanza que tiene pequeños errores de medición (desconocidos). Vamos a estimar el peso específico _R_ del metal de la siguiente manera.
 
-Sabemos que el volumen de una barra de largo `l` es `l`cm³, o sea `l/1000000` en metros cúbicos, así que su peso es `R*l/1000000`, y queremos estimar `R`. Utilizando la balanza, tendremos los pesos aproximados de distintas barras, con ciertos errores de medición. Si ajustamos un modelo lineal a los datos de volumen y peso aproximado, y predecimos el largo para una barra de volumen 1m³, vamos a tener una buena aproximación para `R`.
+Sabemos que el volumen de una barra de largo `m` es `m`cm³ por lo que su peso debería ser `R*m`. Nosotres queremos estimar `R`. Utilizando la balanza, tendremos los pesos aproximados de distintas barras, con ciertos errores de medición. Si ajustamos un modelo lineal a los datos de volumen y peso aproximado vamos a tener una buena aproximación para `R` (la pendiente de la recta).
 
-R = 7200 por cada m³
+
+Supongamos que el peso específico de nuestro metal es R = 7.2g/cm³.
+
+###OJO!
+long es palabra reservada de Python
 
 ```python
 #longitudes = [10.2, 25.6, 7.2, 15.2, 12.9] # en cm
