@@ -41,7 +41,7 @@ Vamos a elegir como mejor recta a la que minimice los residuos. Más precisament
 
 Analíticamente, buscamos `a, b` tales que se minimice la siguiente suma de cuadrados:
 
-![formula](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a*x_i%20\+%20b%20-%20y_i)^2)
+![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
 
 
 ### Ejemplo
@@ -54,7 +54,8 @@ Para los datos que graficamos antes, ésta es la _mejor recta_, es decir, el aju
 
 #### Una opción: derivando
 
-Como buscamos el mínimo de la expresión `\Sigma_{i=1}^n (a*x_i + b - y_i)^2 ` podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. De esta manera se obtienen las siguientes fórmulas para el ajuste:
+Como buscamos el mínimo de la expresión ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
+ podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. De esta manera se obtienen las siguientes fórmulas para el ajuste:
 
 ```python
 a = sum(((var_x - var_x.mean())*(var_y-var_y.mean()))) / sum(((var_x-var_x.mean())**2))
