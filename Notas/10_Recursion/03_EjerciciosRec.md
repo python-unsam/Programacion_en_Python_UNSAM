@@ -72,7 +72,7 @@ la fila de arriba.
 ![Pascal animado](./PascalTriangleAnimated2.gif)
 
 Escribí la función recursiva `pascal(n, k)` que calcula el valor que se
-encuentra en la fila `n` y la columna `k`. 
+encuentra en la fila `n` y la columna `k`. Guardá tu función en el archivo `larenga.py` para entregar.
 
 Ejemplo:
 ```python
