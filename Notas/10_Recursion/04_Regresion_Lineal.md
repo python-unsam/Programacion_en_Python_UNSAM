@@ -8,9 +8,9 @@ En esta sección vamos a trabajar con **regresión lineal**. No es una clase con
 
 Supongamos que queremos modelar la relación entre dos variables reales mediante un modelo lineal. Y que vamos a ajustar los parámetros de ese modelos a partir de ciertos valores conocidos (mediciones, digamos). Es decir que vamos a estar pensando que las variables tienen una relación lineal, `Y = a*X + b`, donde `X` es la variable *explicativa* (sus componentes se denominan *independientes* o *regresores*), e `Y` es la variable *a explicar* (también denominada *dependiente* o *regresando*).
 
-A partir de un conjunto de datos de tipo `(x,y)`, planteamos el modelo `Y = a*X + b`.
+A partir de un conjunto de datos de tipo `(x, y)`, planteamos el modelo `Y = a*X + b`.
 
-En general el modelo no va a ser exacto, es decir, no se va a complir que `y_i = a*x_i + b` para los valores `(x_i,y_i)`, salvo que justamente estén sobre una línea recta.
+En general el modelo no va a ser exacto, es decir, no se va a complir que `y_i = a*x_i + b` para los valores `(x_i, y_i)`, salvo que justamente estén sobre una línea recta.
 Vamos a tener que `y_i = a*x_i + b + r_i` donde, los valores `r_i`, llamados _residuos_, representan las diferencias entre los valores de la recta en cada valor de `x` que tenemos y los valores de `y` asociados.
 
 El problema de regresión lineal consiste en elegir los parámetros `a, b` de para la recta (es decir, su pendiente y ordenada al origen), de manera que la recta sea la que *mejor* se adapte a los datos disponibles.
@@ -20,15 +20,14 @@ El problema de regresión lineal consiste en elegir los parámetros `a, b` de pa
 import numpy as np
 import matplotlib.pyplot as plt
 
-var_x = np.array([55.0, 38, 68, 70, 53, 46, 11, 16, 20, 4])
-var_y = np.array([173.0, 118, 214, 220, 167, 145, 41, 53, 65, 15])
-g = plt.scatter(x = var_x , y = var_y)
+x = np.array([55.0, 38, 68, 70, 53, 46, 11, 16, 20, 4])
+y = np.array([153.0, 98, 214, 220, 167, 145, 41, 63, 65, 25])
+g = plt.scatter(x = x, y = y)
 plt.title('scatterplot de los datos')
-plt.savefig('ej0')
 plt.show()
 
 ```
-![scatter](./scatter.png)
+![ej0_scatter](./ej0_scatter.png)
 
 
 ¿Qué quiere decir *mejor*? Vamos a considerar el criterio de cuadrados mínimos.
@@ -37,7 +36,7 @@ plt.show()
 
 Vamos a elegir como mejor recta a la que minimice los residuos. Más precisamente, vamos a elegir la recta de manera tal que la suma de los cuadrados de los residuos sea mínima.
 
-![rectas](./rectas.png)
+![ej0_posiblesrectas](./ej0_posiblesrectas.png)
 
 Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadrados:
 
@@ -46,7 +45,7 @@ Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadra
 Recordá que vimos que calcular el promedio de estos errores en numpy es muy sencillo en la [Sección 4.3](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas). Usar cudrados mínimos tiene múltiples motivaciones que no podemos detallar adecuadamente acá. Solo mencionaremos dos hechos importantes relacionados con su frecuente elección:
 
 - Por un lado, minimizar el error cuadrático medio puede resolverse derivando la fórumla del error. Los que sepan algo de análisis matemático, recordarán que la derivada nos permite encontrar mínimos y que la derivada de una función cudrática es una función lineal. Por lo tanto, encontrar la recta que mejor ajusta los datos se reduce a buscar el cero de una derivada que en el fondo se reduce a resolver un sistema lineal, algo que sabemos hacer muy bien y muy rápido.
-- Otro argumento muy fuerte, de naturaleza estadística en este caso, es que si uno considera que los residuos son por ejemplo errores de medición y que tienen una distribución normal (una gaussiana), entonces puede mostrarque que la recta que da el método de los cuadrados mínimos es _la recta de máxima verosimilitud_. 
+- Otro argumento muy fuerte, de naturaleza estadística en este caso, es que si uno considera que los residuos son por ejemplo errores de medición y que tienen una distribución normal (una gaussiana), entonces puede mostrarse que la recta que da el método de los cuadrados mínimos es _la recta de máxima verosimilitud_.
 
 Estas cosas se explican muy bien en el apunte de Andrew Ng que citamos antes.
 
@@ -54,7 +53,7 @@ Estas cosas se explican muy bien en el apunte de Andrew Ng que citamos antes.
 
 Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que minimiza la suma de los cuadrados de los residuos. Vamos a decir que esta recta es **el ajuste lineal de los datos**.
 
-![reg_simple](./reg_simple.png)
+![ej0_ajuste](./ej0_ajuste.png)
 
 ¿Cómo se encuentran estos coeficientes?
 
@@ -63,221 +62,167 @@ Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que
 Como buscamos el mínimo de la expresión ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
  podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. De esta manera se obtienen las siguientes fórmulas para el ajuste:
 
-###OJO!
 ```python
-### aca podés definir una función que te devuelva
-a = sum(((var_x - var_x.mean())*(var_y-var_y.mean()))) / sum(((var_x-var_x.mean())**2))
-b = var_y.mean() - a*var_x.mean()
+def ajuste_lineal_simple(x,y):
+    a = sum(((x - x.mean())*(y-y.mean()))) / sum(((x-x.mean())**2))
+    b = y.mean() - a*x.mean()
+    return a, b
 ```
 ### Ejemplo
 
-Veamos un ejemplo generado con datos sintéticos. Generamos 50 datos para la variable `u`, y determinamos a la variable `v` con una relación lineal más un error normal.
+Veamos un ejemplo generado con datos sintéticos. Generamos 50 datos para la variable `x`, y determinamos a la variable `y` con una relación lineal más un error normal.
 
-###OJO!
 ```python
-import random
+import numpy as np
 
-#comenzaría definiendo N=50 y usaría ese N en ambas fórmulas, mas que un 50 en una y len() en la otra
-#aca usaría una distribución uniforme más que una discreta
-var_u = np.array(random.choices(range(500), k = 50))
-#hay una forma con np que me gusta mas: numpy.random.normal(loc=0.0, scale=1.0, size=None) quedaría
-# var_r = random.normal(0, 25, N)
-var_r = np.array([random.normalvariate(0,25) for i in range(len(var_u))])
-var_v = 1.3*var_u + 5 + var_r
+N = 50
+minx = 0
+maxx = 500
+x = np.random.uniform(minx, maxx, N)
+e = np.random.normal(0, 25, N)
+y = 1.3*x + e
 
-#ojo con los espacios. Antes de la coma NO, luego dela coma SI.
-g = plt.scatter(x = var_u , y = var_v)
+g = plt.scatter(x = x, y = y)
 plt.title('gráfico de dispersión de los datos')
-plt.xlim([-2,520])
-plt.ylim([-2,710])
-plt.xlabel('var_u')
-plt.ylabel('var_v')
+plt.xlabel('x')
+plt.ylabel('y')
 plt.show()
 ```
-![scatter_sint](./scatter_sint.png)
+![ejsint_scatter](./ejsint_scatter.png)
 
 Ahora ajustamos con las fórmulas que vimos antes:
 
-###OJO!
 ```python
-#llamá a la función de antes.
-a = sum(((var_u - var_u.mean())*(var_v-var_v.mean()))) / sum(((var_u-var_u.mean())**2))
-b = var_v.mean() - a*var_u.mean()
+a, b = ajuste_lineal_simple(x, y)
 
-#para graficar una recta, usá dos punto y no toda una grilla
-grilla_u = np.linspace(start=0, stop=500, num=1000)
-grilla_v = grilla_u*a + b
-g = plt.scatter(x = var_u , y = var_v)
+grilla_x = np.linspace(start = minx, stop = maxx, num = 1000)
+grilla_y = grilla_u*a + b
+
+g = plt.scatter(x = x, y = y)
 plt.title('ajuste lineal')
 plt.plot(grilla_u, grilla_v, c = 'green')
-plt.xlim([-2,520])
-plt.ylim([-2,710])
-
-plt.xlabel('var_u')
-plt.ylabel('var_v')
+plt.xlabel('x')
+plt.ylabel('x')
 
 plt.show()
-
 ```
 
-![reg_simple_sint](./reg_simple_sint.png)
+![ejsint_ajuste](./ejsint_ajuste.png)
 
 ### Ejercicio 10.14: Alquiler y superficie
 Consdieramos datos de precios (en miles de pesos) de alquiler mensual de departamentos en el barrio de Caballito, CABA, y sus superficies (en metros cuadrados). Queremos ajustar un modelo que prediga el precio de alquiler a partir de la superficie para este barrio.
 
+ + Usando la función que definimos antes, ajustá los datos con una recta.
+ + Graficá los datos junto con la resta del ajuste.
+
 ```python
-alquiler = [35.0, 29.6, 37.4, 21.0]
-superficie = [150.0, 120.0, 170.0, 80.0]
-deptos = {"alquiler": alquiler, "superficie": superficie}
-data_deptos = pd.DataFrame(deptos)
-data_deptos.plot(kind="scatter", x="superficie", y="alquiler")
-x = data_deptos.superficie
-y = data_deptos.alquiler
-beta_1 = ((x - x.mean())*(y-y.mean())).sum() / ((x-x.mean())**2).sum()
-beta_0 = y.mean() - beta_1*x.mean()
-grilla_x = np.linspace(start=0, stop=250, num=1000)
-y = beta_0 + beta_1*grilla_x
-data_deptos.plot(kind="scatter", x="superficie", y="alquiler")
-plt.plot(grilla_x,y)
+superficie = np.array([150.0, 120.0, 170.0, 80.0])
+alquiler = np.array([35.0, 29.6, 37.4, 21.0])
 ```
-![ejalquiler](./ejalquiler.png)
 
-
-Una forma de cuantificar cuán bien ajusta la recta, podemos considerar la suma de los errores cuadráticos.
+Una forma de cuantificar cuán bien ajusta la recta es considerar el promedio de los errores cuadráticos, llamado *error cuadrático medio*.
 
 ```python
-errores = data_deptos.alquiler - (beta_0 + beta_1*data_deptos.superficie)
+errores = alquiler - (a*superficie + b)
 print(errores)
-print("Suma de errores:", (errores**2).sum())
+print("ECM:", (errores**2).mean())
 ```
+ + Calculá el error cuadrático medio del ajuste que hiciste recién.
 
-###OJO!
-A medida que tenés más datos, el error crece. Mejor para esto usar el MSE (mean).
 
 ### Ejemplo
 
 Veamos qué pasa si los datos guardan en realidad una relación cuadrática.
 
 ```python
-x = np.random.uniform(size=100, low=0, high=10)
-y = 2 + 0.3*x**2 + np.random.normal(size=100, loc=0.0, scale=1.0)
+N = 50
+x = np.random.uniform(size = N, low = 0, high = 10)
+y = 2 + x + 2*x**2 + np.random.normal(size = N, loc = 0.0, scale = 12.0)
 plt.scatter(x,y)
-plt.xlim([-0.5,10.5])
-plt.ylim([-2,36])
-
-plt.xlabel('x')
-plt.ylabel('y')
-
+plt.title('scatterplot de los datos')
 plt.show()
-
 ```
-![datos_cuadr](./datos_cuadr.png)
+![ejcuad_scatter](./ejcuad_scatter.png)
 
 Y ajutamos un modelo lineal a estos datos.
 
 ```python
-a = sum(((x - y.mean())*(y-y.mean()))) / sum(((x-x.mean())**2))
-b = y.mean() - a*x.mean()
+a, b = ajuste_lineal_simple(x, y)
 
-grilla_x = np.linspace(start=0, stop=10, num=1000)
+grilla_x = np.linspace(start = 0, stop = 10, num = 1000)
 grilla_y = grilla_x*a + b
 g = plt.scatter(x = x , y = y)
 plt.title('ajuste lineal')
 plt.plot(grilla_x, grilla_y, c = 'green')
-plt.xlim([-0.5,10.5])
-plt.ylim([-2,36])
-
-plt.xlabel('x')
-plt.ylabel('y')
-
 plt.show()
 ```
 
-![ajuste_datos_cuadr](./ajuste_datos_cuadr.png)
+![ejcuad_ajustelineal](./ejcuad_ajustelineal.png)
 
+Veamos cuánto vale el error cuadrático medio.
 
 ```pyhon
 errores = y - (x*a + b)
-print("Suma de errores al cuadrado:", (errores**2).sum())
+print("ECM", (errores**2).mean())
 ```
 
 Un modelo alternativo es usar como variable explicativa `x^2` en vez de `x`.
 
 ```python
 xc = x**2
-ap = sum(((xc - y.mean())*(y-y.mean()))) / sum(((xc-xc.mean())**2))
-bp = y.mean() - ap*xc.mean()
-y_pred = (grilla_x**2)*ap + bp
+ap, bp = ajuste_lineal_simple(xc, y)
+grilla_y_p = (grilla_x**2)*ap + bp
 plt.scatter(x,y)
 plt.plot(grilla_x, grilla_y, c = 'green')
-
-plt.plot(grilla_x, y_pred, c = 'red')
-
-plt.xlim([-0.5,10.5])
-plt.ylim([-2,36])
-
-plt.xlabel('x')
-plt.ylabel('y')
-
+plt.plot(grilla_x, grilla_y_p, c = 'red')
+plt.title('ajuste lineal con x^2')
 plt.show()
 ```
 
-![ejcuadratico](./ejcuadratico.png)
+![ejcuad_ajusteconx2](./ejcuad_ajusteconx2.png)
 
 
 Y si queremos cuantificar el error en este modelo:
 
-###OJO!
-IDEM, mejor usar MSE.
 ```pyhon
 errores = y - ((x**2)*ap + bp)
-print("Suma de errores al cuadrado:", (errores**2).sum())
+print("MSE:", (errores**2).mean())
 ```
 
 ### Scikit-Learn
 
 La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos. En particular para regresión lineal tiene el módulo *linear_model*. En el siguiente ejemplo mostramos cómo puede usarse.
 
-Fijate que, al igual que el modelo de clustering que usamos en el ejercicio de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo con nuevos datos.
+Fijate que, al igual que el modelo de clustering que usamos en el Ejercicio ? de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
+
+Acá analizamos el primer ejemplo que hicimos, usando el módulo `linear_model`.
 
 ```python
 from sklearn import linear_model
 import pandas as pd
 
-var_x = [55.0, 38, 68, 70, 53, 46, 11, 16, 20, 4]
-var_y = [173.0, 118, 214, 220, 167, 145, 41, 53, 65, 15]
-datosxy = pd.DataFrame({'x': var_x, 'y': var_y})
+x = np.array([55.0, 38, 68, 70, 53, 46, 11, 16, 20, 4]) # mismos datos x, y
+y = np.array([153.0, 98, 214, 220, 167, 145, 41, 63, 65, 25])
+datosxy = pd.DataFrame({'x': x, 'y': y}) # paso los datos a un dataframe
 
 ajus = linear_model.LinearRegression() # llamo al modelo de regresión lineal
 ajus.fit(datosxy.x.to_frame(), datosxy.y) # ajusto el modelo
 
-a = ajus.coef_[0][0] # el método coef_ devuelve un array con los coeficientes
-b = ajus.intercept_[0] # intercept devuelve la ordenada al origen
-
-grilla_x = np.linspace(start=0, stop=70, num=1000)
+grilla_x = np.linspace(start = 0, stop = 70, num = 1000)
 grilla_x_df = pd.DataFrame(grilla_x)
 grilla_y = ajus.predict(grilla_x_df)
 
 g = plt.scatter(x = var_x , y = var_y)
-plt.title('ajuste lineal')
+plt.title('ajuste lineal usando sklearn')
 plt.plot(grilla_x, grilla_y, c = 'green')
-
-plt.xlabel('x')
-plt.ylabel('y')
-
 plt.show()
 ```
 
-![sklej1](./sklej1.png)
+![ejsk1_ajuste](./ejsk1_ajuste.png)
 
-El modelo tiene también un método *predict* que, a partir de un valor de la variable explicativa devuelve la predicción de la variable explicada según el ajuste que se hizo.
+Tuvimos que aplicar el método `to_frame()` a la serie DataFrame `datosxy.x` porque al llamar a una columna de un DataFrame obtenemos una serie, pero el input del ajuste debe ser un DataFrame.
 
-```python
->>> ajus.predict([[10]])[0][0] # predicción para 10
-34.597
->>> ajus.predict([[30]])[0][0] # predicción para 30
-96.165
-```
+Usamos el método `predict()` para obtener los valores de `y` de la recta.
 
 ## Regresión Lineal Múltiple
 
@@ -290,26 +235,21 @@ La regresión lineal múltiple tiene un planteo similar, pero con más variables
 Trabajamos nuevamente con los departamentos, ahora también conociendo su antigüedad, y la tomamos como otra variable explicativa.
 
 ```python
-alquiler = [35.0, 29.6, 37.4, 21.0]
-superficie = [150.0, 120.0, 170.0, 80.0]
+superficie = np.array([150.0, 120.0, 170.0, 80.0])
+alquiler = np.array([35.0, 29.6, 37.4, 21.0])
 antigüedad = [50.0, 5.0, 25.0, 70.0]
-deptos = {'alquiler': alquiler, 'superficie': superficie, 'antigüedad': antigüedad}
-data_deptos = pd.DataFrame(deptos)
 
-
+data_deptos = pd.DataFrame({'alquiler': alquiler, 'superficie': superficie, 'antigüedad': antigüedad})
 
 X = pd.concat([data_deptos.superficie,data_deptos.antigüedad], axis = 1)
 y = data_deptos.alquiler
+
 ajuste_deptos = linear_model.LinearRegression()
 ajuste_deptos.fit(X,y)
 
-ajuste_deptos.predict(X)
-plt.scatter(y, ajuste_deptos.predict(X))
-
-
 errores = data_deptos.alquiler - (ajuste_deptos.predict(X))
 print(errores)
-print("Suma de errores:", (errores**2).sum())
+print("ECM:", (errores**2).mean())
 ```
 
 ### Ejercicio 10.15: 
@@ -320,8 +260,7 @@ Sabemos que el volumen de una barra de largo `m` es `m`cm³ por lo que su peso d
 
 Supongamos que el peso específico de nuestro metal es R = 7.2g/cm³.
 
-###OJO!
-long es palabra reservada de Python
+
 
 ```python
 #longitudes = [10.2, 25.6, 7.2, 15.2, 12.9] # en cm

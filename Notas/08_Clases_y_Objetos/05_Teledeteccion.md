@@ -36,10 +36,16 @@ a) Usá [numpy](https://numpy.org/doc/stable/reference/generated/numpy.load.html
 
 _Sugerencia_: Con `plt.hist(banda.flatten(),bins=100)` vas a ver un histograma de los valores en la matriz `banda`. Podés usarlo para guiarte en la búsqueda del rango que tiene sentido usar como vmin y vmax.
 
+b) Probá usando percentiles para fijar el rango. Algo como 
 
-b) Escribí una función `crear_img_png(carpeta, banda)` que, dada una carpeta y un número de banda, muestre la imagen de dicha banda y la guarde en formato .png. Asegurate de incorporar un `colorbar` al lado de la imágen.
+```python
+vmin = np.percentile(data.flatten(), q)
+vmax = np.percentile(data.flatten(), 100-q)
+```
 
-Tené en cuenta lo que hiciste en el punto a) para que se vea adecuadamente.
+c) Escribí una función `crear_img_png(carpeta, banda)` que, dada una carpeta y un número de banda, muestre la imagen de dicha banda y la guarde en formato .png. Asegurate de incorporar un `colorbar` al lado de la imágen.
+
+Tené en cuenta lo que hiciste en los puntos anteriores para que se vea adecuadamente.
 
 
 ### Ejercicio 8.16: Histogramas
