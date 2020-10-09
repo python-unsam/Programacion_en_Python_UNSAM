@@ -117,7 +117,7 @@ Escribí la siguiente función y veamos como funciona un pipeline.
 Esta función es casi idéntica al primer ejemplo de generador en el ejercicio anterior, salvo que ya no abre un archivo sino que opera directamente de una secuencia de líneas que recibe como argumento. Ahora probá lo siguiente:
 
 ```python
->>> lines = vigilar('Data/stocklog.csv')
+>>> lines = vigilar('Data/mercadolog.csv')
 >>> naranjas = filematch(lines, 'Naranja')
 >>> for line in naranjas:
         print(line)
