@@ -193,7 +193,7 @@ print("MSE:", (errores**2).mean())
 
 La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos. En particular para regresión lineal tiene el módulo *linear_model*. En el siguiente ejemplo mostramos cómo puede usarse.
 
-Fijate que, al igual que el modelo de clustering que usamos en el Ejercicio ? de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
+Fijate que, al igual que el modelo de clustering que usamos en el [Ejercicio 8.19](../08_Clases_y_Objetos/05_Teledeteccion.md#ejercicio-819-clasificación-automática) de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
 
 Acá analizamos el primer ejemplo que hicimos, usando el módulo `linear_model`.
 
@@ -252,67 +252,68 @@ print(errores)
 print("ECM:", (errores**2).mean())
 ```
 
-### Ejercicio 10.15: 
+### OJO
+###Meter ejemplo polinomial ACA con el mismo ejemplo cuadrático, teniendo encuenta ahora ambas x y x²
+
+### Ejercicio 10.15: Peso específico
 Queremos estimar el peso específico de un metal (es decir, peso divido volumen, en unidades de g/cm³). Para esto, disponemos de barras de dicho metal, con base de 1cm² y largos diversos, y de una balanza que tiene pequeños errores de medición (desconocidos). Vamos a estimar el peso específico _R_ del metal de la siguiente manera.
 
 Sabemos que el volumen de una barra de largo `m` es `m`cm³ por lo que su peso debería ser `R*m`. Nosotres queremos estimar `R`. Utilizando la balanza, tendremos los pesos aproximados de distintas barras, con ciertos errores de medición. Si ajustamos un modelo lineal a los datos de volumen y peso aproximado vamos a tener una buena aproximación para `R` (la pendiente de la recta).
 
+Los datos de longitudes y pesos se encuentran en el archivo [disponible acá]('https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv').
 
-Supongamos que el peso específico de nuestro metal es R = 7.2g/cm³.
-
-
+ + Cargá los datos directamente con el enlace usando el siguiente código.
 
 ```python
-#longitudes = [10.2, 25.6, 7.2, 15.2, 12.9] # en cm
-longitudes = [14.8, 11.1, 29.3, 10.6, 28.7, 10.4, 22.1, 24.2, 29.8, 7.1, 18.2, 11.0, 29.9, 7.9, 13.2, 26.6, 6.6, 21.8, 19.1, 13.0, 5.4, 11.3, 10.9, 12.1, 28.5, 10.5, 5.2, 21.6, 21.2, 26.9, 11.9, 13.4, 25.7, 14.6, 21.1, 22.6, 24.4, 7.1, 15.7, 9.8, 28.7, 28.0, 8.6, 15.1, 6.7, 23.7, 27.1, 12.0, 19.8, 12.9, 23.2, 26.8, 21.8, 5.3, 29.6, 19.5, 7.8, 8.4, 26.8, 24.4, 5.3, 6.2, 28.3, 16.0, 26.2, 8.1, 26.9, 11.8, 24.6, 25.6, 28.6, 8.6, 16.3, 25.2, 5.7, 21.7, 16.0, 17.6, 11.8, 16.3, 27.4, 20.3, 21.4, 13.6, 29.1, 26.6, 15.3, 25.0, 16.5, 28.5, 15.8, 15.0, 16.2, 13.0, 13.4, 11.5, 10.1, 27.0, 23.1, 15.8]
+import requests
+import io
 
-pesos = [round(long*7200/1000000+random.normalvariate(0,0.002),2) for long in longitudes] # en kg
-pesos = [0.09, 0.08, 0.2, 0.06, 0.2, 0.09, 0.16, 0.21, 0.22, 0.09, 0.12, 0.05, 0.2, 0.04, 0.1, 0.21, 0.04, 0.14, 0.17, 0.07, 0.0, 0.05, 0.09, 0.11, 0.22, 0.07, 0.03, 0.14, 0.15, 0.2, 0.09, 0.11, 0.22, 0.06, 0.15, 0.15, 0.16, 0.05, 0.1, 0.12, 0.22, 0.17, 0.04, 0.12, 0.03, 0.18, 0.21, 0.08, 0.16, 0.1, 0.16, 0.22, 0.16, 0.01, 0.21, 0.13, 0.09, 0.09, 0.21, 0.15, 0.04, 0.05, 0.19, 0.13, 0.21, 0.04, 0.22, 0.11, 0.17, 0.16, 0.22, 0.08, 0.12, 0.22, 0.02, 0.14, 0.1, 0.14, 0.05, 0.13, 0.19, 0.16, 0.14, 0.08, 0.19, 0.18, 0.1, 0.19, 0.16, 0.21, 0.12, 0.12, 0.11, 0.1, 0.11, 0.07, 0.08, 0.16, 0.18, 0.1]
-
-pesos_posta = [round(long*7200/1000000,2) for long in longitudes] # en kg
-
-data_pesos = pd.DataFrame({'longitudes': longitudes, 'pesos': pesos})
-ajuste_pesos = linear_model.LinearRegression()
-ajuste_pesos.fit(data_pesos.longitudes.to_frame(), data_pesos.pesos)
-ajuste_pesos.fit(data_pesos.longitudes.to_frame(), pesos_posta)
-
-ajuste_pesos.predict([[1]])
-ajuste_pesos.intercept_
-
-::::AJUSTAR LOS NUMERITOS::::
-
-
+enlace = 'https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv'
+r = requests.get(enlace).content
+data_lyp = pd.read_csv(io.StringIO(r.decode('utf-8')))
 ```
+
+ + Hacé una regresión lineal simple con `sklearn`, con variable explicativa `longitud` y variable explicada `peso`.
+
+ + Estimá el peso específico del metal prediciendo peso de una barra de volumen 1.
+
+ + Graficá los datos junto con la recta del ajuste, y calculá el error cuadrático medio.
+
+ + Guardá el código en un archivo `peso_especifico.py`.
+
 
 ### Ejercicio 10.16: Altura y diámetro de árboles.
-Considerá los datos de arbolado porteño que tenés en el archivo 'Data/arbolado-en-espacios-verdes.csv'. Cargalos en un DataFrame `data_arbolado_p`. Seleccioná los datos correspondientes a Jacarandás y realizá un ajuste lineal para explicar la altura de un Jacarandá a partir de su diámetro. Graficá el scatterplot de los datos junto con la recta de regresión lineal. Guardá el código de este ejercicio en un archivo `ajuste_arboles.py`.
-
-```
-import seaborn as sns
-data_arbolado_p = pd.read_csv('Data/arbolado-en-espacios-verdes.csv')
-
-data_arbolado_p.columns
-datos_jac_p = data_arbolado_p[data_arbolado_p['nombre_com'] == 'Jacarandá']
-
-ajuste_jac = linear_model.LinearRegression()
-ajuste_jac.fit(datos_jac_p['diametro'].to_frame(), datos_jac_p['altura_tot'])
-
-plt.scatter(x = datos_jac_p['diametro'], y = datos_jac_p['altura_tot'])
+Queremos comparar las formas de distintas especies de árboles en los parques de Buenos Aires. Vamos a trabajar nuevamente con el archivo de arbolado porteño en parques que tenés en el archivo 'Data/arbolado-en-espacios-verdes.csv'.
 
 
-grilla = np.linspace(0,160,1000)
-grilla_df = pd.DataFrame(grilla)
-grilla_pred = ajuste_jac.predict(grilla_df)
+ + Cargá los datos en un DataFrame `data_arbolado_parques`.
 
-sns.scatterplot(x = datos_jac_p['diametro'], y = datos_jac_p['altura_tot'])
-sns.lineplot(x = grilla, y = grilla_pred, color = 'green')
-```
+ + Seleccioná los datos correspondientes a las especies: Jacarandá, Palo Borracho Rosado, Eucaliptus y Ceibo.
+
+ + Para cada especie seleccionada, realizá un ajuste lineal de la altura dependiendo del diámetro.
+
+ + Graficá para cada especie el scatterplot de los datos junto con la recta de regresión lineal.
+
+ + Guardá el código de este ejercicio en un archivo `ajuste_arboles.py`.
 
 
+*Observación: Como podrás ver en los sctterplots, para árboles más anchos hay mayor variabilidad de alturas. Esto implica que el modelo va a ser más sensible a datos de árboles anchos, que a datos de árboles chicos. Esta caraceterística se llama _heterocedasticidad_ y muchas veces es un problema para realizar una regresión lineal. En este caso lo estamos aplicando igual, y no nos trae problemas porque contamos con una gran cantidad de datos.*
 
-*Observación: Como podrás ver en el gráfico, para árboles más anchos hay mayor variabilidad de alturas. Esto implica que el modelo va a ser más sensible a datos de árboles anchos, que a datos de árboles chicos. Esta caraceterística se llama **heterocedasticidad** y muchas veces es un problema para realizar una regresión lineal. En este caso lo estamos aplicando igual, y no nos trae problemas porque contamos con una gran cantidad de datos.*
+### Ejercicio 10.17: Gráficos de ajuste lineal con Seaborn
+ + Seleccioná los datos correspondientes a las especies: Jacarandá, Palo Borracho Rosado, Eucaliptus y Ceibo, todas en un mismo DataFrame, usando el siguiente filtro.
 
-Se puede corregir este problema estimando las varianzas y ajustando con pesos. SEGUIR ESTA IDEA SI PODEMOS
+ ```Python
+ filtro = data_arbolado_parques['nombre_com'].isin(esp_selec)
+ ```
+
+ + Explorá el comando `sns.regplot()`, que grafica la regresión lineal, sin pasar por scikit learn. El parámetro `order` te permite hacer ajustes polinomiales.
+
+ + Para facilitar la comparación que hiciste en el ejercicio anterior, graficá todos los ajustes juntos usando:
+
+ ```python
+ g = sns.FacetGrid(datos_selec_p, col = 'nombre_com')
+ g.map(sns.regplot, 'diametro', 'altura_tot')
+ ```
 
 ### Sobreajuste (_Overfitting_)
 
