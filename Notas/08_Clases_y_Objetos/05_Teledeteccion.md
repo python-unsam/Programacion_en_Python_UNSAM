@@ -121,5 +121,35 @@ Probá ajustando el número de clusters (`n_clusters=5`, por ejemplo) y corriend
 
 Si tarda mucho podés trabajar con un pedazo de la imágen. Por ejemplo si hacés `ndvi_clip = ndvi[1000:2000,2000:3000]` te quedás con un cuadradito que es un octavo de la imagen original y podés usarlo para probar cosas rápido. Si te convencen los resultados podés correr tu algoritmo sobre la imágen completa.
 
+### Sugerencia: Código para colorbars
+
+Revisar este código para el cmap:
+
+```python
+from matplotlib import colors
+# Creo colores
+cmap = colors.ListedColormap(['black', 'y',
+                              'yellowgreen', 'green', 'darkgreen'])
+# Defino los limites de cada color
+limites = [0, 1, 2, 3, 4]
+norm = colors.BoundaryNorm(limites, cmap.N)
+# Genero el grafico con colores
+plt.imshow(clases_ndvi, cmap=cmap, norm=norm)
+```
+
+
+Y este para las leyendas:
+```python
+import matplotlib.patches as mpatches
+# Genero leyenda y grafico con leyenda
+texts = ['Sin vegetacion', 'Area desnuda', 'Vegetacion baja',
+         'Vegetacion moderada', 'Vegetacion densa']
+patches = [mpatches.Patch(color=cmap(i), label="{:s}".format(texts[i]) ) for i in range(len(texts))]
+plt.legend(handles=patches, bbox_to_anchor=(0.2,1.3), loc='center', ncol=1 )
+plt.imshow(clases_ndvi, cmap=cmap, norm=norm)
+plt.show()```
+
+
+
 [Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la octava clase)](06_Cierre.md)
 

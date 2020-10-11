@@ -38,13 +38,13 @@ Este tipo de definición se traduce naturalmente en una función en Python:
 ```python
 def factorial(n):
     """Precondición: n entero positivo
-       Devuelve: n`"""
+       Devuelve: n!"""
     if n == 1:
         return 1
     return n * factorial(n - 1)
 ```
 
-Esta es la ejecución del factorial para `n = 1` y para `n = 3`.
+Ésta es la ejecución del factorial para `n = 1` y para `n = 3`.
 
 ```python
 >>> factorial(1)
@@ -65,7 +65,7 @@ son:
 * Que el argumento de la función respete la precondición de que `n` debe ser un entero mayor o igual que 1.
 
 
-No es increible que esto pueda funcionar adecuadamente en un lenguaje
+No es increíble que esto pueda funcionar adecuadamente en un lenguaje
 de programación.
 
 
@@ -107,7 +107,7 @@ vista anteriormente sería:
 ```python
 def factorial(n):
     """Precondición: n entero positivo
-       Devuelve: n`"""
+       Devuelve: n!"""
     fact = 1
     for num in range(n, 1, -1):
         fact *= num
@@ -142,7 +142,7 @@ b^n = b^(n/2) * b^(n/2)                si n es par, y
 b^n = b^((n-1)/2) * b^((n-1)/2) * b    si n es impar.
 ```
 
-Esta ecuaciones nos permites diseñar un algoritmo muchísimo más eficiente. Esta situación guarda cierta analogía con el problema de la búsqueda en una lista ordenada. La idea es en un paso reducir _el tamaño_ del problema a la mitad.
+Estas ecuaciones nos permiten diseñar un algoritmo muchísimo más eficiente. Esta situación guarda cierta analogía con el problema de la búsqueda en una lista ordenada. La idea es en un paso reducir _el tamaño_ del problema a la mitad.
 
 Antes de programar cualquier función recursiva es necesario decidir cuál
 será el *caso base* y cuál el *paso recursivo*.  Para esta función,
@@ -254,7 +254,7 @@ F(n) = F(n - 1) + F(n - 2)  si n > 1
 ```
 
 Los primeros números de esta sucesión son: `0`, `1`, `1`, `2`, `3`, `5`, `8`,
-`13`, `21`, `34`, `55`. La sucesión tiene numerosas aplicaciones en computación y matemática y también aparece en configuraciones biológicas, como en las flores de girasoles, en la configuración de los ananás o las piñas de las coníferas, en la reproducción de conejos, etc. La siguiente imágen muestra su uso para aproximar una espiral aurea:
+`13`, `21`, `34`, `55`. La sucesión tiene numerosas aplicaciones en computación y matemática y también aparece en configuraciones biológicas, como en las flores de girasoles, en la configuración de los ananás o las piñas de las coníferas, en la reproducción de conejos, etc. La siguiente imagen muestra su uso para aproximar una espiral áurea:
 
 
 ![Espiral a partir de la succión de Fibonacci](./280px-Fibonacci_spiral_34.svg.png)
