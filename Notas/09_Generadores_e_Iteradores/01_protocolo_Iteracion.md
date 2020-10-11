@@ -26,7 +26,7 @@ for x in f: # Iterar sobre las líneas de un archivo ASCII
     ...
 ```
 
-Podemos iterar sobre todos estos objetos porque cunplen con un *protocolo* que permite, justamente, iterar.  Veamos algo sobre este protocolo:
+Podemos iterar sobre todos estos objetos porque cumplen con un *protocolo* que permite, justamente, iterar.  Veamos algo sobre este protocolo:
 
 ### El protocolo de iteración
 

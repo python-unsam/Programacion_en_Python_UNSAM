@@ -281,9 +281,9 @@ Para preparar los datos a usar como regresores (en este caso múltiple serán `x
 X = np.concatenate((x.reshape(-1,1),xc.reshape(-1,1)),axis=1)
 ```
 
-Si te fijás el array `X` tiene un shape de `(50, 2)`, que se corresponde a cincuenta datos con dos atributos.
+Si te fijás, el array `X` tiene un shape de `(50, 2)`. Esto se corresponde a cincuenta datos con dos atributos.
 
-* Usá un objeto `lm = linear_model.LinearRegression()` para comparar los ajustes obtenidos usando `x` como unica variable regresora, `xc` (los cuadrados) com única variable regresora o ambas en un modelo múltiple. Imrimí para cada un o delos tres casos, el error cuadrático medio y los coeficientes (ordenada al orígen y coeficientes de los regresores) obtenidos. ¿Qué modelo ajusta mejor? ¿Cuál da coeficientes más similares a los originales?
+* Usá un objeto `lm = linear_model.LinearRegression()` para comparar los ajustes obtenidos usando `x` como unica variable regresora, `xc` (los cuadrados) com única variable regresora o ambas en un modelo múltiple. Imprimí para cada un o de los tres modelos, el error cuadrático medio y los coeficientes (ordenada al orígen y coeficientes de los regresores) obtenidos. ¿Qué modelo ajusta mejor? ¿Cuál da coeficientes más similares a los originales?
 * Graficá los datos originales y los tres ajustes en un solo gráfico indicando adecuadamente los nombres de los modelos.
 
 
