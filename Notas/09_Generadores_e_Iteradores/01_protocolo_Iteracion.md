@@ -157,7 +157,7 @@ class Camion:
         from collections import Counter
         cantidad_total = Counter()
         for l in self._lotes:
-            cantidad_total[l.nombre] += l.cantidad
+            cantidad_total[l.nombre] += l.cajones
         return cantidad_total
 ```
 
