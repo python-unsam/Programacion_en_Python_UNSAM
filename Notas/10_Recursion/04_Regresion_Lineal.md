@@ -41,12 +41,14 @@ Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadra
 
 ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
 
-Recordá que vimos que calcular el promedio de estos errores en numpy es muy sencillo en la [Sección 4.3](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas). Usar cudrados mínimos tiene múltiples motivaciones que no podemos detallar adecuadamente acá. Solo mencionaremos dos hechos importantes relacionados con su frecuente elección:
+Usar cudrados mínimos tiene múltiples motivaciones que no podemos detallar adecuadamente acá. Solo mencionaremos dos hechos importantes relacionados con su frecuente elección:
 
 - Por un lado, minimizar el error cuadrático medio puede resolverse derivando la fórumla del error. Los que sepan algo de análisis matemático, recordarán que la derivada nos permite encontrar mínimos y que la derivada de una función cudrática es una función lineal. Por lo tanto, encontrar la recta que mejor ajusta los datos se reduce a buscar el cero de una derivada que en el fondo se reduce a resolver un sistema lineal, algo que sabemos hacer muy bien y muy rápido. Si en lugar de minimar la suma de los cuadrados de los residuos planteáramos, por ejemplo, minimizar la suma de los valores absolutos de los residuos no podríamos encotrar la recta que mejor ajusta tan fácilmente.
 - Otro argumento muy fuerte, de naturaleza estadística en este caso, es que si uno considera que los residuos son por ejemplo errores de medición y que tienen una distribución normal (una gaussiana), entonces puede mostrarse que la recta que da el método de los cuadrados mínimos es _la recta de máxima verosimilitud_.
 
 Estas cosas se explican muy bien en [el apunte de Andrew Ng](http://cs229.stanford.edu/notes/cs229-notes1.pdf) que citamos antes.
+
+Recordá que en la [Sección 4.3](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas) vimos que calcular el promedio de estos errores cuadráticos es muy sencillo en numpy. También podés usar la función `mean_squared_error` del módulo `sklearn.metrics` que trae muchas métricas muy útiles.
 
 ### Ejemplo
 
@@ -197,7 +199,7 @@ errores = y - ((x**2)*ap + bp)
 print("MSE:", (errores**2).mean())
 ```
 
-Vermos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
+Veremos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
 
 ### Scikit-Learn
 
@@ -264,7 +266,35 @@ Usando los atributos `intercept_` y `ajuste_deptos.coef_` escribí a mano la fó
 - A mayor antigüedad, ¿aumenta o disminuye el precio?
 - ¿Cuánto vale la ordenada al origen del modelo?
 
-### Ejercicio 10.15: Modelo cuadrático
+### Ejercicio 10.15: Peso específico
+Queremos estimar el peso específico de un metal (es decir, peso divido volumen, en unidades de g/cm³). Para esto, disponemos de barras de dicho metal, con base de 1cm² y largos diversos, y de una balanza que tiene pequeños errores de medición (desconocidos). Vamos a estimar el peso específico _R_ del metal de la siguiente manera:
+
+Sabemos que el volumen de una barra de largo `m` es `m`cm³, por lo que su peso debería ser `R*m`. Queremos estimar `R`. Utilizando la balanza, tendremos los pesos aproximados de distintas barras, con ciertos errores de medición. Si ajustamos un modelo lineal a los datos de volumen y peso aproximado vamos a tener una buena aproximación para `R` (la pendiente de la recta).
+
+Los datos de longitudes y pesos se encuentran en el archivo [disponible acá]('https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv').
+
+* Cargá los datos directamente con el enlace usando el siguiente código.
+
+```python
+import requests
+import io
+
+enlace = 'https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv'
+r = requests.get(enlace).content
+data_lyp = pd.read_csv(io.StringIO(r.decode('utf-8')))
+```
+
+* Hacé una regresión lineal simple con `sklearn`, con variable explicativa `longitud` y variable explicada `peso`. 
+
+* Estimá el peso específico del metal mirando el coeficiente obtenido.
+
+* Graficá los datos junto con la recta del ajuste, y calculá el error cuadrático medio.
+
+* Guardá el código en un archivo `peso_especifico.py`.
+
+*Cuidado:* por cómo planteamos el problema, estamos ajustando una recta con ordenada al origen igual a cero. Para esto tendrás que usar el parámetro `fit_intercept = False` en la declaración de tu modelo.
+
+### Ejercicio 10.16: Modelo cuadrático
 Volvamos ahora al ejemplo cuadrático de antes. La relación entre `x` (`indep_vars`) e `y` (`dep_vars`) estaba dada por `y = 2 + 3*x + 2*x**2 + r`. Ya tratamos de ajustar regresiones simples tipo `y = a*x + b` y `y = a*x^2 + b`. Ajustemos ahora una regresión lilean múltiple, usando como regresores a `x` y a `x^2`. 
 
 Nos gustaría no generar datos aleatorios nuevamente sino usar los anteriores, ya generados, para poder comparar (los errores cuadráticos medios de) los tres modelos.
@@ -283,40 +313,81 @@ X = np.concatenate((x.reshape(-1,1),xc.reshape(-1,1)),axis=1)
 
 Si te fijás, el array `X` tiene un shape de `(50, 2)`. Esto se corresponde a cincuenta datos con dos atributos.
 
-* Usá un objeto `lm = linear_model.LinearRegression()` para comparar los ajustes obtenidos usando `x` como unica variable regresora, `xc` (los cuadrados) com única variable regresora o ambas en un modelo múltiple. Imprimí para cada un o de los tres modelos, el error cuadrático medio y los coeficientes (ordenada al orígen y coeficientes de los regresores) obtenidos. ¿Qué modelo ajusta mejor? ¿Cuál da coeficientes más similares a los originales?
+* Usá un objeto `lm = linear_model.LinearRegression()` para comparar los ajustes obtenidos usando `x` como unica variable regresora, `xc` (los cuadrados) com única variable regresora o ambas en un modelo múltiple. Imprimí para cada un o de los tres modelos, el error cuadrático medio y los coeficientes (ordenada al orígen y coeficientes de los regresores) obtenidos. ¿Qué modelo ajusta mejor? ¿Cuál da coeficientes más similares a los originales? ¿Qué pasaría si usáramos un modelo de grado tres o cuatro?
 * Graficá los datos originales y los tres ajustes en un solo gráfico indicando adecuadamente los nombres de los modelos.
 
+## Parte optativa:
 
-### Ejercicio 10.16: Peso específico
-Queremos estimar el peso específico de un metal (es decir, peso divido volumen, en unidades de g/cm³). Para esto, disponemos de barras de dicho metal, con base de 1cm² y largos diversos, y de una balanza que tiene pequeños errores de medición (desconocidos). Vamos a estimar el peso específico _R_ del metal de la siguiente manera:
+Ahora vamos a profundizar en algunos conceptos y a ver maneras alternativas de hacer las cosas. Lo que sigue es optativo.
 
-Sabemos que el volumen de una barra de largo `m` es `m`cm³, por lo que su peso debería ser `R*m`. Queremos estimar `R`. Utilizando la balanza, tendremos los pesos aproximados de distintas barras, con ciertos errores de medición. Si ajustamos un modelo lineal a los datos de volumen y peso aproximado vamos a tener una buena aproximación para `R` (la pendiente de la recta).
+### Navaja de Ockham
 
-Los datos de longitudes y pesos se encuentran en el archivo [disponible acá]('https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv').
+Al agregar covariables (regresores) a un modelo, el ajuste tiende a mejorar. Si ajusto un modelo con variables `x1, x2, x3` para explicar una variable `y` no puedo obtener un peor ajuste que si lo ajusto usando solo las variables `x1` y `x2` ya que todo modelo con las dos variables es un caso particular del modelo con las tres (simplemente hay que poner el coeficiente de la tercera variable igual a cero). Por eso, en general, al agregar variables a u modelo, su error cuadrático disminuye. Sin embargo un modelo con mejor ajuste no es _necesariamente_ mejor. 
 
- + Cargá los datos directamente con el enlace usando el siguiente código.
+El principio metodológico conocido como la [navaja de Ockham](https://es.wikipedia.org/wiki/Navaja_de_Ockham) nos indica que de un conjunto de variables explicativas debe seleccionarse la combinación más reducida y simple posible. 
 
-```python
-import requests
-import io
+Esto ayuda a evitar fenómenos como el sobreajuste que causa [problemas muy serios y a veces graciosos](https://twitter.com/electricfuture5/status/1309688641157906433).
 
-enlace = 'https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv'
-r = requests.get(enlace).content
-data_lyp = pd.read_csv(io.StringIO(r.decode('utf-8')))
+### Ejercicio 10.17: Modelos polinomiales para una relación cuadrática
+Vimos en el [Ejercicio 10.16](../10_Recursion/04_Regresion_Lineal.md#ejercicio-1016-modelo-cuadrático) que los datos de ese ejercicio se ajustan mejor con una regresión múltiple (usando `x` y `x^2`) que una regresión simple (basada un una sola variable). Te proponemos ahora que te fijes qué ocurre si seguimos aumentando el grado de las potencias de `x` que admitimos en la regresión múltiple (es decir, usar `x`, `x^2`,..., etc. hasta `x^n`). ¿Sigue bajando el error cuadrático medio? ¿Pueden considerarse _mejores_ los modelos obtenidos?
+
+Para `n` entre 1 y 8 realizá un ajuste con un polinomio de grado `n` (que tiene `n+1` parámetros por la ordenada al orígen) e imprimí una salida como esta:
+
+```
+-------------------------
+Grado del polinomio: 1
+Cantidad de parámetros: 2
+ECM: 201.194
+------------------------
+Grado del polinomio: 2
+Cantidad de parámetros: 3
+ECM: 36.325
+...
+...
 ```
 
- + Hacé una regresión lineal simple con `sklearn`, con variable explicativa `longitud` y variable explicada `peso`. 
+Te recomendamos usar la siguiente función `pot()` para generar las primeras potencias de `x`:
 
- + Estimá el peso específico del metal mirando el coeficiente obtenido.
+```python
+def pot(x,n):
+    X=x.reshape(-1,1)
+    for i in range(n-1):
+        X=np.concatenate((X,(x**(i+2)).reshape(-1,1)),axis=1)
+    return X
+```
 
- + Graficá los datos junto con la recta del ajuste, y calculá el error cuadrático medio.
+### Ejercicio 10.18: selección de modelos
+El [criterio de información de Akaike](https://es.wikipedia.org/wiki/Criterio_de_informaci%C3%B3n_de_Akaike) es una medida de la calidad relativa de un modelo estadístico, para un conjunto dado de datos. Como tal, el AIC proporciona un medio para la comparación de modelos. AIC maneja un trade-off entre la bondad de ajuste del modelo y la complejidad del mismo (medido en cantidad de parámetros). En el caso de la regresión lineal múltiple, puede computarse con la siguiente función:
 
- + Guardá el código en un archivo `peso_especifico.py`.
+```python
+def AIC(k, ecm, num_params):
+    '''Calcula el AIC de una regresión lineal múltiple de 'num_params' parámetros, ajustada sobre una muestra de 'k' elementos, y que da lugar a un error cuadrático medio 'ecm'.'''
+    aic = k * np.log(ecm) + 2 * num_params
+    return aic
+```
 
-*Cuidado:* por cómo planteamos el problema, estamos ajustando una recta con ordenada al origen igual a cero. Para esto tendrás que usar el parámetro `fit_intercept = False` en la declaración de tu modelo.
+Agregá al código del ejercicio anterior el cómputo del AIC para cada modelo. 
+
+```
+-------------------------
+Grado del polinomio: 1
+Cantidad de parámetros: 2
+ECM: 201.194
+AIC: 269.213
+------------------------
+Grado del polinomio: 2
+Cantidad de parámetros: 3
+ECM: 36.325
+AIC: 185.626
+...
+...
+```
+
+Cuando complejizamos el modelo mejorando el error cuadrático medio, pero sin disminuir el AIC es probable que el modelo se esté [sobreajustando](https://es.wikipedia.org/wiki/Sobreajuste) a los datos de entrenamiento.
+Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Cuál modelo queda seleccionado?
 
 
-### Ejercicio 10.17: Altura y diámetro de árboles.
+### Ejercicio 10.19: Altura y diámetro de árboles.
 Queremos comparar las formas de las siguientes especies de árboles en los parques de Buenos Aires:
 
 - Jacarandá,
@@ -341,7 +412,7 @@ Para explicarlo con un ejemplos: imaginá que tenemos tres pares de datos (_DAP_
 
 En este caso contamos con una gran cantidad de datos y podemos aplicar de todas formas la regresión en el marco de un análsis exploratorio de los datos.
 
-### Ejercicio 10.18: Gráficos de ajuste lineal con Seaborn
+### Ejercicio 10.20: Gráficos de ajuste lineal con Seaborn
  + Seleccioná los datos correspondientes a las especies: Jacarandá, Palo borracho rosado, Eucalipto y Ceibo, todas en un mismo DataFrame, usando el siguiente filtro.
 
  ```Python
