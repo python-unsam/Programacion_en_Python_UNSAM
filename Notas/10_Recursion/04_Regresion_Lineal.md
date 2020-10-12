@@ -398,9 +398,7 @@ AIC: 185.626
 ```
 
 Cuando complejizamos el modelo mejorando el error cuadrático medio, pero sin disminuir el AIC es probable que el modelo se esté [sobreajustando](https://es.wikipedia.org/wiki/Sobreajuste) a los datos de entrenamiento.
-Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Qué modelo queda seleccionado?
-
-Guardá tu código comentado adecuadamente en el archivo `seleccióm:modelos.py` para entregar.
+Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Qué modelo queda seleccionado? Respodé esta pregunta usando el comando [`np.argmin()`](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html) para encontrar el grado del polinomio que minimiza el AIC y comentá adecudamente tu código. Guardalo en el archivo `seleccióm:modelos.py` para entregar.
 
 ### Ejercicio 10.19: Altura y diámetro de árboles.
 Queremos comparar las formas de las siguientes especies de árboles en los parques de Buenos Aires:
