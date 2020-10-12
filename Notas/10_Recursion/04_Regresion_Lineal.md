@@ -58,7 +58,7 @@ Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que
 
 ¿Cómo se encuentran estos coeficientes?
 
-#### Una opción: derivando
+### Una opción: derivando
 
 Como buscamos el mínimo de la expresión ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
  podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. El único cero que va a tener la derivada se corresponde con un mínimo porque la recta se puede ajusta *tan mal como uno quiera*. De esta manera se obtienen las siguientes fórmulas para el ajuste:
