@@ -271,7 +271,7 @@ En el programa `ticker.py` (esta versión te vamos a pedir que la entregues) esc
    Durazno     281.76        704        
 ...
 
->>> ticker('Data/cmaion.csv', 'Data/mercadolog.csv', 'csv')
+>>> ticker('Data/camion.csv', 'Data/mercadolog.csv', 'csv')
 Nombre,Precio,Volumen
 Mandarina,14.19,1140
 Naranja,9.37,1150

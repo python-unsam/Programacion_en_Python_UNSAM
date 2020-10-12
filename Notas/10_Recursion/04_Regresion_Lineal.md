@@ -131,9 +131,9 @@ print("ECM:", (errores**2).mean())
  + Calculá el error cuadrático medio del ajuste que hiciste recién.
 
 
-### Ejemplo
+### Ejemplo: relación cuadrática
 
-Veamos qué pasa si los datos guardan en realidad una relación cuadrática. Genermos aletoriamente variables independientes y dependientes.
+Veamos qué pasa si los datos guardan en realidad una relación cuadrática. Generemos aletoriamente variables independientes y dependientes con este tipo de relación.
 
 ```python
 np.random.seed(3141) #semilla para fijar la aleatoriedad
@@ -176,7 +176,9 @@ errores = y - (x*a + b)
 print("ECM", (errores**2).mean())
 ```
 
-Un modelo alternativo es usar como variable explicativa `x^2` en vez de `x`.
+### Ejemplo: precómputo de atributos adecuados
+
+Un modelo alternativo es usar como variable explicativa `x^2` en vez de `x`. El cómputo de `x^2` se realiza en un paso previo y el modelo sigue siendo lineal.
 
 ```python
 xc = x**2
@@ -199,7 +201,7 @@ errores = y - ((x**2)*ap + bp)
 print("MSE:", (errores**2).mean())
 ```
 
-Veremos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
+Al usar `x^2` en luagr de `x` mejora sustancialmente la bondad de ajuste del modelo. Veremos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
 
 ### Scikit-Learn
 
@@ -331,7 +333,7 @@ Esto ayuda a evitar fenómenos como el sobreajuste que causa [problemas muy seri
 ### Ejercicio 10.17: Modelos polinomiales para una relación cuadrática
 Vimos en el [Ejercicio 10.16](../10_Recursion/04_Regresion_Lineal.md#ejercicio-1016-modelo-cuadrático) que los datos de ese ejercicio se ajustan mejor con una regresión múltiple (usando `x` y `x^2`) que una regresión simple (basada un una sola variable). Te proponemos ahora que te fijes qué ocurre si seguimos aumentando el grado de las potencias de `x` que admitimos en la regresión múltiple (es decir, usar `x`, `x^2`,..., etc. hasta `x^n`). ¿Sigue bajando el error cuadrático medio? ¿Pueden considerarse _mejores_ los modelos obtenidos?
 
-Para `n` entre 1 y 8 realizá un ajuste con un polinomio de grado `n` (que tiene `n+1` parámetros por la ordenada al orígen) e imprimí una salida como esta:
+Para `n` entre 1 y 8 realizá un ajuste con un polinomio de grado `n` (que tiene `n+1` parámetros, por la ordenada al orígen) e imprimí una salida como esta:
 
 ```
 -------------------------
@@ -386,6 +388,7 @@ AIC: 185.626
 Cuando complejizamos el modelo mejorando el error cuadrático medio, pero sin disminuir el AIC es probable que el modelo se esté [sobreajustando](https://es.wikipedia.org/wiki/Sobreajuste) a los datos de entrenamiento.
 Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Cuál modelo queda seleccionado?
 
+Cúal es el AIC del modelo que 
 
 ### Ejercicio 10.19: Altura y diámetro de árboles.
 Queremos comparar las formas de las siguientes especies de árboles en los parques de Buenos Aires:
@@ -408,7 +411,7 @@ Vamos a trabajar nuevamente con el archivo de arbolado porteño en parques que t
 
 *Observación*: Como podés ver en los scatterplots, para árboles más anchos hay mayor variabilidad de alturas que para árboles angostos. Esto implica que el modelo va a ser más sensible a datos de árboles anchos que a datos de árboles angostos. Esta caraceterística se llama _heterocedasticidad_ y muchas veces es un problema para usar regresiones lineales. Por ejemplo no es posible aplicar directamente tests de hipótesis a los resultados obtenidos. 
 
-Para explicarlo con un ejemplos: imaginá que tenemos tres pares de datos (_DAP_ y _altura_ para un árbol angosto, para un árbol mediano y para un árbol muy ancho) y supongamos que hay una relación lineal _real_ que es la que estamos buscando estimar a partir de los datos. La altura del arbol angosto va a variar unos pocos centímetros respecto a este modelo ideal mientras que la altura del árbol ancho puede variar muchos metros. Esto hace que el _residuo_ del árbol grueso respecto al modelo ideal sea mucho mayor que el residuo del árbol angosto y, por lo tanto, que su infuencia en los coeficientes estimados sea mayor también. Esto viola una de las hipótesis de la regresión lineal (la *homosedasticidad*) que dice todos los residuos tienen la *misma* distribución.
+Para explicarlo con un ejemplos: imaginá que tenemos tres pares de datos (_DAP_ y _altura_ para un árbol angosto, para un árbol mediano y para un árbol muy ancho) y supongamos que hay una relación lineal _real_ que es la que estamos buscando estimar a partir de los datos. La altura del arbol angosto va a variar unos pocos centímetros respecto a este modelo ideal mientras que la altura del árbol ancho puede variar muchos metros. Esto hace que el _residuo_ del árbol grueso respecto al modelo ideal sea mucho mayor que el residuo del árbol angosto y, por lo tanto, que su infuencia en los coeficientes estimados sea mayor también (recordemos que estamso minimizando la suma de estos residuos al cuadrado). Esto viola una de las hipótesis de la regresión lineal (la *homosedasticidad*) que dice todos los residuos tienen la *misma* distribución.
 
 En este caso contamos con una gran cantidad de datos y podemos aplicar de todas formas la regresión en el marco de un análsis exploratorio de los datos.
 
