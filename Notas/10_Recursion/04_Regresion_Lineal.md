@@ -216,7 +216,7 @@ Al usar `x^2` en luagr de `x` mejora sustancialmente la bondad de ajuste del mod
 
 La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos y el desarrollo de modelos de aprendizaje automático (aunque se mantiene relativamente alejada de la inferencia estadística). En particular, para regresión lineal tiene el módulo `linear_model`, y en el siguiente ejemplo mostramos cómo puede usarse. Para les que estén habituades al lenguaje R, quizas les conviene usar la biblioteca [stastmodels](https://www.statsmodels.org/stable/regression.html) que tiene un funcionamiento más cercano.
 
-Vamos a trabajar con `sklearn`, en parte, por que al igual que el modelo de clustering que usamos en el Ejercicio ? de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
+Al igual que el modelo de clustering que usamos en el [Ejercicio 8.19](../08_Clases_y_Objetos/05_Teledeteccion.md#ejercicio-819-clasificación-automática) de teledetección, el objeto de tipo `LinearRegression` de `sklearn.liearmodel` también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
 
 Acá rehacemos el primer ejemplo que dimos ([Sección 10.4](../10_Recursion/04_Regresion_Lineal.md#ejemplo)), usando pandas y el módulo `linear_model`.
 
