@@ -50,7 +50,7 @@ Estas cosas se explican muy bien en [el apunte de Andrew Ng](http://cs229.stanfo
 
 Recordá que en la [Sección 4.3](../04_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas) vimos que calcular el promedio de estos errores cuadráticos es muy sencillo en numpy. También podés usar la función `mean_squared_error` del módulo `sklearn.metrics` que trae muchas métricas muy útiles.
 
-### Ejemplo
+### Ejemplo: el modelo de cuadrados mínimos
 
 Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que minimiza la suma de los cuadrados de los residuos. Vamos a decir que esta recta es **el ajuste lineal de los datos**.
 
@@ -69,7 +69,7 @@ def ajuste_lineal_simple(x,y):
     b = y.mean() - a*x.mean()
     return a, b
 ```
-### Ejemplo
+### Ejemplo: datos sintéticos
 
 Veamos un ejemplo generado con datos sintéticos. Generamos 50 datos para la variable `x`, y determinamos a la variable `y` con una relación lineal más un error normal.
 
@@ -110,8 +110,8 @@ plt.show()
 
 ![ejsint_ajuste](./ejsint_ajuste.png)
 
-### Ejercicio 10.14: Alquiler y superficie
-Consdieramos datos de precios (en miles de pesos) de alquiler mensual de departamentos en el barrio de Caballito, CABA, y sus superficies (en metros cuadrados). Queremos modelar el precio de alquiler a partir de la superficie para este barrio.
+### Ejercicio 10.14: superficie ~ precio_alquiler
+Consdieramos datos de precios (en miles de pesos) de alquiler mensual de departamentos en el barrio de Caballito, CABA, y sus superficies (en metros cuadrados). Queremos modelar el precio de alquiler a partir de la superficie para este barrio. A veces este mdoelo se nota con *superficie ~ precio_alquiler*.
 
  + Usando la función que definimos antes, ajustá los datos con una recta.
  + Graficá los datos junto con la resta del ajuste.
@@ -154,7 +154,7 @@ plt.show()
 ```
 ![ejcuad_scatter](./ejcuad_scatter.png)
 
-Y ajutamos un modelo lineal a estos datos.
+Y ajutemos un modelo lineal (notado: *x ~ y*) a estos datos.
 
 ```python
 a, b = ajuste_lineal_simple(x, y)
@@ -208,7 +208,7 @@ mse = (residuos**2).mean() #error cuadrático medio
 print("MSE:", mse)
 ```
 
-Al usar `x^2` en luagr de `x` mejora sustancialmente la bondad de ajuste del modelo. Veremos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
+Al usar `x^2` en luagr de `x` mejora sustancialmente la bondad de ajuste del modelo (notado: *x^2 ~ y*). Veremos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
 
 **Raíz del error cuadrático medio**: Una alternativa al error cuadrático medio es su raíz cuadrada, conocida como _root mean squared error_ (RMSE). La ventaja de esta medida de la bondad de ajuste de un modelo a los datos radica en que ésta se expresa en las misma unidades que la variable a explicar, y, mientras que el MSE se expresa en _unidades al cuadrado_. Siendo la raíz una función monótona, minimizar una métrica o la otra es equivalente.
 
@@ -218,7 +218,7 @@ La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramienta
 
 Al igual que el modelo de clustering que usamos en el [Ejercicio 8.19](../08_Clases_y_Objetos/05_Teledeteccion.md#ejercicio-819-clasificación-automática) de teledetección, el objeto de tipo `LinearRegression` de `sklearn.liearmodel` también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
 
-Acá rehacemos el primer ejemplo que dimos ([Sección 10.4](../10_Recursion/04_Regresion_Lineal.md#ejemplo)), usando pandas y el módulo `linear_model`.
+Acá rehacemos el primer ejemplo que dimos ([Sección 10.4](../10_Recursion/04_Regresion_Lineal.md#ejemplo-el-modelo-de-cuadrados-mínimos)), usando pandas y el módulo `linear_model`.
 
 ```python
 import pandas as pd
@@ -251,9 +251,9 @@ La regresión lineal múltiple tiene un planteo similar, pero con más variables
 
 `y = \b_0 + \sum_{j=1}^k \b_j x_j`
 
-### Ejemplo
+### Ejemplo: superficie y antigüedad
 
-Trabajamos nuevamente con los departamentos, ahora también conociendo su antigüedad, y la tomamos como otra variable explicativa.
+Trabajamos nuevamente con los departamentos, ahora también conociendo su antigüedad, y la tomamos como otra variable explicativa. Ajutaremos un modelo que tenga en cuenta ambas variable, y lo notaremos: *superficie + antigüedad ~ precio_alquiler*
 
 ```python
 superficie = np.array([150.0, 120.0, 170.0, 80.0])
@@ -295,7 +295,7 @@ r = requests.get(enlace).content
 data_lyp = pd.read_csv(io.StringIO(r.decode('utf-8')))
 ```
 
-* Hacé una regresión lineal simple con `sklearn`, con variable explicativa `longitud` y variable explicada `peso`. 
+* Hacé una regresión lineal simple con `sklearn`, con variable explicativa `longitud` y variable explicada `peso` (*peso ~ longitud*).
 
 * Estimá el peso específico del metal mirando el coeficiente obtenido.
 
@@ -324,7 +324,7 @@ X = np.concatenate((x.reshape(-1,1),xc.reshape(-1,1)),axis=1)
 
 Si te fijás, el array `X` tiene un shape de `(50, 2)`. Esto se corresponde a cincuenta datos con dos atributos.
 
-* Usá un objeto `lm = linear_model.LinearRegression()` para comparar los ajustes obtenidos usando `x` como unica variable regresora, `xc` (los cuadrados) com única variable regresora o ambas en un modelo múltiple. Imprimí para cada un o de los tres modelos, el error cuadrático medio y los coeficientes (ordenada al orígen y coeficientes de los regresores) obtenidos. ¿Qué modelo ajusta mejor? ¿Cuál da coeficientes más similares a los originales? ¿Qué pasaría si usáramos un modelo de grado tres o cuatro?
+* Usá un objeto `lm = linear_model.LinearRegression()` para comparar los ajustes obtenidos usando `x` como unica variable regresora, `xc` (los cuadrados) com única variable regresora o ambas en un modelo múltiple (/notado: *x + x^2 ~ y*). Imprimí para cada un o de los tres modelos, el error cuadrático medio y los coeficientes (ordenada al orígen y coeficientes de los regresores) obtenidos. ¿Qué modelo ajusta mejor? ¿Cuál da coeficientes más similares a los originales? ¿Qué pasaría si usáramos un modelo de grado tres o cuatro?
 * Graficá los datos originales y los tres ajustes en un solo gráfico indicando adecuadamente los nombres de los modelos.
 
 
@@ -365,7 +365,11 @@ def pot(x,n):
 ```
 
 ### Ejercicio 10.18: selección de modelos
-El [criterio de información de Akaike](https://es.wikipedia.org/wiki/Criterio_de_informaci%C3%B3n_de_Akaike) es una medida de la calidad relativa de un modelo estadístico, para un conjunto dado de datos. Como tal, el AIC proporciona un medio para la comparación de modelos. AIC maneja un trade-off entre la bondad de ajuste del modelo y la complejidad del mismo (medido en cantidad de parámetros). En el caso de la regresión lineal múltiple, puede computarse con la siguiente función:
+El [criterio de información de Akaike](https://es.wikipedia.org/wiki/Criterio_de_informaci%C3%B3n_de_Akaike) es una medida de la calidad relativa de un modelo estadístico, para un conjunto dado de datos. Como tal, el AIC proporciona un medio para la comparación de modelos. AIC maneja un trade-off entre la bondad de ajuste del modelo y la complejidad del mismo (medido en cantidad de parámetros). 
+
+![AIC](./AIC.png)
+
+En el caso de la regresión lineal múltiple, puede computarse con la siguiente función:
 
 ```python
 def AIC(k, ecm, num_params):
