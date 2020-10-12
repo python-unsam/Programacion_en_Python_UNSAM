@@ -61,7 +61,7 @@ Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que
 ### Ajuste del modelo de cuadrados mínimos
 
 Como buscamos el mínimo de la expresión ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
- podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. No es una cuenta díficil. El único cero que va a tener la derivada se corresponde con un mínimo porque la recta se puede ajusta *tan mal como uno quiera*. De esta manera se obtienen las siguientes fórmulas para el ajuste:
+ podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. No es una cuenta díficil. El único cero que va a tener la derivada se corresponde con un mínimo (porque la recta se puede ajustar *tan mal como uno quiera*). De esta manera se obtienen las siguientes fórmulas para el ajuste:
 
 ```python
 def ajuste_lineal_simple(x,y):
@@ -210,11 +210,11 @@ print("MSE:", mse)
 
 Al usar `x^2` en luagr de `x` mejora sustancialmente la bondad de ajuste del modelo. Veremos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
 
-**Raíz del error cuadrático medio**: Una alternativa al error cuadrático medio es su raíz cuadrada, conocida como _root meas squared error_ (RMSE). La ventaja de esta medida de la bondad de ajuste de un modelo a los datos tiene radica en que ésta se expresa en las misma unidades que la variable a explicar, y, mientras que el MSE se expresa en _unidades al cuadrado_. Siendo la raíz una función monótona, minimizar una métrica o la otra es equivalente.
+**Raíz del error cuadrático medio**: Una alternativa al error cuadrático medio es su raíz cuadrada, conocida como _root mean squared error_ (RMSE). La ventaja de esta medida de la bondad de ajuste de un modelo a los datos radica en que ésta se expresa en las misma unidades que la variable a explicar, y, mientras que el MSE se expresa en _unidades al cuadrado_. Siendo la raíz una función monótona, minimizar una métrica o la otra es equivalente.
 
 ### Scikit-Learn
 
-La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos y el desarrollo de modelos de aprendizaje automático (aunque se mantiene relativamente alejado de la inferencia estadística). En particular, para regresión lineal tiene el módulo *linear_model*. En el siguiente ejemplo mostramos cómo puede usarse. Para les que estén habituados al lenguaje R, quizas les conviene usar la biblioteca [stastmodels](https://www.statsmodels.org/stable/regression.html) que tiene un funcionamiento más cercano.
+La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos y el desarrollo de modelos de aprendizaje automático (aunque se mantiene relativamente alejada de la inferencia estadística). En particular, para regresión lineal tiene el módulo `linear_model`, y en el siguiente ejemplo mostramos cómo puede usarse. Para les que estén habituades al lenguaje R, quizas les conviene usar la biblioteca [stastmodels](https://www.statsmodels.org/stable/regression.html) que tiene un funcionamiento más cercano.
 
 Vamos a trabajar con `sklearn`, en parte, por que al igual que el modelo de clustering que usamos en el Ejercicio ? de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
 
