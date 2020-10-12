@@ -130,6 +130,8 @@ print("ECM:", (errores**2).mean())
 ```
  + Calculá el error cuadrático medio del ajuste que hiciste recién.
 
+Guardá tu código en el archivo `alquiler.py` para entregar.
+
 
 ### Ejemplo: relación cuadrática
 
@@ -396,9 +398,9 @@ AIC: 185.626
 ```
 
 Cuando complejizamos el modelo mejorando el error cuadrático medio, pero sin disminuir el AIC es probable que el modelo se esté [sobreajustando](https://es.wikipedia.org/wiki/Sobreajuste) a los datos de entrenamiento.
-Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Cuál modelo queda seleccionado?
+Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Qué modelo queda seleccionado?
 
-Cúal es el AIC del modelo que 
+Guardá tu código comentado adecuadamente en el archivo `seleccióm:modelos.py` para entregar.
 
 ### Ejercicio 10.19: Altura y diámetro de árboles.
 Queremos comparar las formas de las siguientes especies de árboles en los parques de Buenos Aires:
