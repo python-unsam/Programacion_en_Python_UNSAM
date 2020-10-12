@@ -1,11 +1,9 @@
 [Contenidos](../Contenidos.md) \| [Anterior (9 Generadores e iteradores)](../09_Generadores_e_Iteradores/00_Resumen.md) \| [Próximo (11 Ordenamiento)](../11_Ordenamiento/00_Resumen.md)
 
-# 10. Recursión
-**Esta clase está en preparación.**
-**El material sufrirá cambios hasta el miércoles 14/10, cuando daremos inicio a estos temas en el curso.**
+# 10. Recursión y regresión
+En esta clase discutimos el concepto de recursión, proponemos algunas bases para el diseño de algiritmos recursivos y elaboramos con varios algunos ejemplos, algunos un tanto esotéricos.
 
-Aquí debe ir un resumen de los temas que se tratan.
-
+En otro orden de cosas, en la última sección damos un acercamiento práctico a las técnicas  de **regresión lineal** y dejamos la posibilidad de profundizar más en el tema con referencias y ejercicios optativos. 
 
 * [10.1 Intro a la Recursión](01_Recursion.md)
 * [10.2 Diseño de algoritmos recursivos](02_Diseno_Recursivo.md)

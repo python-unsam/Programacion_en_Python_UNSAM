@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (10 Recursión)](../10_Recursion/00_Resumen.md) \| [Próximo (12 Optativos)](../12_Optativos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (10 Recursión y regresión)](../10_Recursion/00_Resumen.md) \| [Próximo (12 Optativos)](../12_Optativos/00_Resumen.md)
 
 # 11. Ordenamiento
 **Esta clase está en preparación.**
@@ -17,4 +17,4 @@ Ordenar una lista de números es una de las tareas fundamentales que realiza un 
 * [11.4 Cierre de la clase de Ordenamiento](04_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (10 Recursión)](../10_Recursion/00_Resumen.md) \| [Próximo (12 Optativos)](../12_Optativos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (10 Recursión y regresión)](../10_Recursion/00_Resumen.md) \| [Próximo (12 Optativos)](../12_Optativos/00_Resumen.md)

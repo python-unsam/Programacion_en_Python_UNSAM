@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión y regresión)](../10_Recursion/00_Resumen.md)
 
 # 9. Generadores e iteradores
 Programar es básicamente escribir condicionales, ciclos y asignaciones de variables. Aunque no de cualquier forma.
@@ -18,4 +18,4 @@ Terminamos la clase con un ejercicio optativo que combina dos temas importantes:
 * [9.6 Cierre de la novena clase](06_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión)](../10_Recursion/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (8 Clases y objetos)](../08_Clases_y_Objetos/00_Resumen.md) \| [Próximo (10 Recursión y regresión)](../10_Recursion/00_Resumen.md)
