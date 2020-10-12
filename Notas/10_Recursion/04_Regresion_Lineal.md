@@ -176,9 +176,14 @@ errores = y - (x*a + b)
 print("ECM", (errores**2).mean())
 ```
 
+
+## Parte optativa:
+
+Ahora vamos a profundizar en algunos conceptos y a ver maneras alternativas de hacer las cosas. Lo que sigue es optativo.
+
 ### Ejemplo: precómputo de atributos adecuados
 
-Un modelo alternativo es usar como variable explicativa `x^2` en vez de `x`. El cómputo de `x^2` se realiza en un paso previo y el modelo sigue siendo lineal.
+Es natural pensar que aproximar una parábola con un modelo lineal no es lo más sensato. Un modelo alternativo es usar como variable explicativa `x^2` en vez de `x`. El cómputo de `xc = x^2` se realiza en un paso previo de forma que el modelo sigue siendo lineal (ahora lineal en `x^2`). Eso significa que el formalismo matemático para encontrar los coeficientes del nuevo modelo es el mismo que antes.
 
 ```python
 xc = x**2
@@ -197,17 +202,21 @@ plt.show()
 Y si queremos cuantificar el error en este modelo:
 
 ```pyhon
-errores = y - ((x**2)*ap + bp)
-print("MSE:", (errores**2).mean())
+yhat = (x**2)*ap + bp # valore estimados
+residuos = y - yhat   # diferencia entre real y estimado
+mse = (residuos**2).mean() #error cuadrático medio
+print("MSE:", mse)
 ```
 
 Al usar `x^2` en luagr de `x` mejora sustancialmente la bondad de ajuste del modelo. Veremos próximamente que podemos usar ambas `x` y `x^2` como vartiables explicativas y obtener un ajuste aún mejor de los datos.
 
+**Raíz del error cuadrático medio**: Una alternativa al error cuadrático medio es su raíz cuadrada, conocida como _root meas squared error_ (RMSE). La ventaja de esta medida de la bondad de ajuste de un modelo a los datos tiene radica en que ésta se expresa en las misma unidades que la variable a explicar, y, mientras que el MSE se expresa en _unidades al cuadrado_. Siendo la raíz una función monótona, minimizar una métrica o la otra es equivalente.
+
 ### Scikit-Learn
 
-La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos y el desarrollo de modelos de aprendizaje automático. En particular, para regresión lineal tiene el módulo *linear_model*. En el siguiente ejemplo mostramos cómo puede usarse.
+La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos y el desarrollo de modelos de aprendizaje automático (aunque se mantiene relativamente alejado de la inferencia estadística). En particular, para regresión lineal tiene el módulo *linear_model*. En el siguiente ejemplo mostramos cómo puede usarse. Para les que estén habituados al lenguaje R, quizas les conviene usar la biblioteca [stastmodels](https://www.statsmodels.org/stable/regression.html) que tiene un funcionamiento más cercano.
 
-Fijate que, al igual que el modelo de clustering que usamos en el Ejercicio ? de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
+Vamos a trabajar con `sklearn`, en parte, por que al igual que el modelo de clustering que usamos en el Ejercicio ? de teledetección, el modelo lineal también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
 
 Acá rehacemos el primer ejemplo que dimos ([Sección 10.4](../10_Recursion/04_Regresion_Lineal.md#ejemplo)), usando pandas y el módulo `linear_model`.
 
@@ -318,9 +327,6 @@ Si te fijás, el array `X` tiene un shape de `(50, 2)`. Esto se corresponde a ci
 * Usá un objeto `lm = linear_model.LinearRegression()` para comparar los ajustes obtenidos usando `x` como unica variable regresora, `xc` (los cuadrados) com única variable regresora o ambas en un modelo múltiple. Imprimí para cada un o de los tres modelos, el error cuadrático medio y los coeficientes (ordenada al orígen y coeficientes de los regresores) obtenidos. ¿Qué modelo ajusta mejor? ¿Cuál da coeficientes más similares a los originales? ¿Qué pasaría si usáramos un modelo de grado tres o cuatro?
 * Graficá los datos originales y los tres ajustes en un solo gráfico indicando adecuadamente los nombres de los modelos.
 
-## Parte optativa:
-
-Ahora vamos a profundizar en algunos conceptos y a ver maneras alternativas de hacer las cosas. Lo que sigue es optativo.
 
 ### Navaja de Ockham
 
