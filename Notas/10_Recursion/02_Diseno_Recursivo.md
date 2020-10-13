@@ -219,7 +219,7 @@ def promediar(lista):
 
 Notar que si bien la función visible `promediar` no es recursiva, sí lo
 es la función `_promediar` que es la que realiza el trabajo, por
-lo que el conjunto se considera recursivo. Observá que estamos definiendo la función `_promediar` **dentro** de la función `promediar` de manera que no resulte visible desde afuera.
+lo que el conjunto se considera recursivo. Observá que estamos definiendo la función `_promediar` **dentro** de la función `promediar` de manera que no resulte visible desde afuera (no la podés llamar desde afuera, así como hay *variables locales* ésta es una *función local*).
 
 Además de para adaptar la firma de la función recursiva, las funciones wrapper
 se suelen utilizar para simplificar el código de las funciones recursivas. Por
