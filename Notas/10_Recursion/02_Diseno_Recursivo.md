@@ -12,9 +12,9 @@ resolver estos tres problemas:
 nuestro problema. Como regla general tratamos de pensar como caso base a
 las condiciones sobre las cuales es más fácil resolver nuestro problema.
 Por ejemplo, si estruviéramos trabajando sobre listas o cadenas probablemente
-sepamos la respuesta a nuestro problema si tuviéramos una secuencia vacía,
-o si estuviéramos trabajando sobre conjuntos de elementos probablemente la
-respuesta fuera evidente cuando tengamos un solo elemento.
+sepamos la respuesta a nuestro problema en el caso de una secuencia vacía;
+si estuviéramos trabajando sobre conjuntos de elementos probablemente la
+respuesta sea evidente para los conjuntos de un solo elemento.
 2. **Caso recursivo** o caso general: Este es el caso que va a efectuar
 la llamada recursiva. La idea de este caso es reducir el problema a un
 problema más sencillo, del cual se hará cargo la llamada recursiva, y luego
@@ -46,7 +46,7 @@ Nuestro caso base será algo así como:
 ```
 
 Queremos diseñar un paso recursivo que relice _una reducción_ de manera que dada cualquier lista la aplicación sucesiva de la reducción seleccionada converja al caso base. Hay muchas maneras de reducir una lista
-para lograr esto; para este caso vamos a proponer una suy sencilla: sacar el primer elemento. Si cada llamada recursiva saca el primer elemento, tarde o temprano covergeremos a una lista vacía.
+para lograr esto; para este caso vamos a proponer una muy sencilla: sacar el primer elemento. Si cada llamada recursiva saca el primer elemento, tarde o temprano covergeremos a una lista vacía.
 
 Nuestra llamada recursiva podría ser algo así como:
 
@@ -199,20 +199,27 @@ natural de la función `promediar()` que queríamos diseñar, ya que `_promediar
 
 Esto no invalida nuestra solución, pero la misma está incompleta. Lo que
 debemos hacer es implementar una función *wrapper* (envoltorio) que lo
-que haga es operar como *cara visible* para el usuario de la función que
+que haga es operar como *cara visible* para le usuarie de la función que
 hace realmente el trabajo. A esta función sí la vamos a llamar `promediar`, ya
 que va a cumplir con la firma deseada:
 
 ```python
 def promediar(lista):
    """Devuelve el promedio de los elementos de una lista de números."""
+
+   def _promediar(lista):
+       if len(lista) == 0:
+           return 0, 0
+       suma, cantidad = _promediar(lista[1:])
+       return lista[0] + suma, cantidad + 1
+
    suma, cantidad = _promediar(lista)
    return suma / cantidad
 ```
 
 Notar que si bien la función visible `promediar` no es recursiva, sí lo
 es la función `_promediar` que es la que realiza el trabajo, por
-lo que el conjunto se considera recursivo.
+lo que el conjunto se considera recursivo. Observá que estamos definiendo la función `_promediar` **dentro** de la función `promediar` de manera que no resulte visible desde afuera.
 
 Además de para adaptar la firma de la función recursiva, las funciones wrapper
 se suelen utilizar para simplificar el código de las funciones recursivas. Por
@@ -221,8 +228,7 @@ querríamos que las mismas se reiteraran en cada iteración recursiva porque
 consumirían recursos innecesarios. Entonces las podemos resolver en la función
 wrapper, antes de empezar la recursión.
 
-Por ejemplo, hace un rato implementamos la potencia
-en forma recursiva con la restricción `n \geq 0`. Pero dado que `b^n = (1/b)^(-n)` podemos aprovechar el código implementado para
+Por ejemplo, hace un rato implementamos la potencia en forma recursiva con la restricción `n >= 0`. Pero dado que `b^n = (1/b)^(-n)` podemos aprovechar el código implementado para
 resolver para cualquier `n` entero. Podríamos modificar el código de `potencia()` para incluir este caso, pero se reiteraría la comprobación en cada nivel de la recursión. Para este caso resulta más sencillo construir una función wrapper e incluir ahí todo lo que consideremos necesario.
 Habiendo renombrado la función original como `_potencia`, nuestro wrapper sería:
 
@@ -241,14 +247,14 @@ def potencia(b, n):
 Si creamos una función sin *caso base*, obtendremos el equivalente
 recursivo de un bucle infinito. 
 
-Este es un bucle infinito y corre para siempre.
+Éste es un bucle infinito y corre para siempre.
 ```python
 i = 0
 while i < 10:
     suma = suma + i
 ```
 
-En bucle recursivo infinito, sin embargo, termina agotando la memoria. Esto se debe a que cada llamada recursiva agrega un elemento a la pila de llamadas a funciones y la memoria de nuestras computadoras no es infinita.
+El bucle recursivo infinito, sin embargo, termina agotando la memoria. Esto se debe a que cada llamada recursiva agrega un elemento a la pila de llamadas a funciones y la memoria de nuestras computadoras no es infinita.
 
 En particular, en Python, para evitar que la memoria se termine, la pila de
 ejecución de funciones tiene un límite. Es decir, que si se ejecuta un
@@ -286,12 +292,12 @@ una optimización para que cuando se identifique que la recursión es de cola,
 no se apile el estado de la función innecesariamente, evitando el consumo adicional de memoria mencionado anteriormente.
 
 La ejecución de todas las funciones con recursión de cola vistas en esta
-unidad podrían ser optimizada por el compilador o intérprete del lenguaje.
+unidad podría ser optimizada por el compilador o intérprete del lenguaje.
 
 ## Resumen
 
 
-* A medida que se realizan llamadas a funciones, el estado cada
+* A medida que se realizan llamadas a funciones, el estado de cada
 función se almacena en la *pila de ejecución*.
 * Esto permite que sea posible que una función se llame a sí misma,
 pero que las variables dentro de la función tomen distintos valores.

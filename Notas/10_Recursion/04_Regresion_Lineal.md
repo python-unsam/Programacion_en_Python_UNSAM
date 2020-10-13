@@ -336,7 +336,7 @@ Al agregar covariables (regresores) a un modelo, el ajuste tiende a mejorar. Si 
 
 El principio metodológico conocido como la [navaja de Ockham](https://es.wikipedia.org/wiki/Navaja_de_Ockham) nos indica que de un conjunto de variables explicativas debe seleccionarse la combinación más reducida y simple posible. 
 
-Esto ayuda a evitar fenómenos como el sobreajuste que causa [problemas muy serios y a veces graciosos](https://twitter.com/electricfuture5/status/1309688641157906433).
+Esto ayuda a evitar fenómenos como el **sobreajuste** que causa [problemas muy serios y a veces graciosos](https://twitter.com/electricfuture5/status/1309688641157906433).
 
 ### Ejercicio 10.17: Modelos polinomiales para una relación cuadrática
 Vimos en el [Ejercicio 10.16](../10_Recursion/04_Regresion_Lineal.md#ejercicio-1016-modelo-cuadrático) que los datos de ese ejercicio se ajustan mejor con una regresión múltiple (usando `x` y `x^2`) que una regresión simple (basada un una sola variable). Te proponemos ahora que te fijes qué ocurre si seguimos aumentando el grado de las potencias de `x` que admitimos en la regresión múltiple (es decir, usar `x`, `x^2`,..., etc. hasta `x^n`). ¿Sigue bajando el error cuadrático medio? ¿Pueden considerarse _mejores_ los modelos obtenidos?
@@ -398,9 +398,26 @@ AIC: 185.626
 ```
 
 Cuando complejizamos el modelo mejorando el error cuadrático medio, pero sin disminuir el AIC es probable que el modelo se esté [sobreajustando](https://es.wikipedia.org/wiki/Sobreajuste) a los datos de entrenamiento.
-Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Qué modelo queda seleccionado? Respodé esta pregunta usando el comando [`np.argmin()`](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html) para encontrar el grado del polinomio que minimiza el AIC y comentá adecudamente tu código. Guardalo en el archivo `seleccióm:modelos.py` para entregar.
 
-### Ejercicio 10.19: Altura y diámetro de árboles.
+Si seleccionamos el modelo ya no por su bondad de ajuste (ECM) sino buscando el mínimo AIC ¿Qué modelo queda seleccionado? Respodé esta pregunta usando el comando [`np.argmin()`](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html) para encontrar el grado del polinomio que minimiza el AIC y comentá adecudamente tu código. Guardalo en el archivo `selección_modelos.py` para entregar.
+
+### Ejercicio 10.19: datos para la evaluación
+Otra alternativa para comparar modelos es evaluarlos en un conjunto de datos diferente al que usamos para entrenarlos. La próxima clase vamos a ver que `sklearn` tiene funciones que permiten partir automáticamente los datos en conjuntos de *entrenamiento* y *evalaución*. Por ahora supongamos que nos dan los siguientes datos frescos:
+
+```python
+N=50
+#genero datos para evaluar 
+x_test = np.random.uniform(size = N, low = 0, high = 10) 
+r_test = np.random.normal(size = N, loc = 0.0, scale = 8.0) # residuos
+y_test = 2 + 3*x_test + 2*x_test**2 + r_test # misma relación cuadrática
+```
+
+Evaluá los modelos que armaste antes usando el ECM sobre estos datos frescos. ¿Qué modelo da un mejor ajuste?
+
+Estas técnicas de selección de modelos usando datos de entrenamiento y evaluación separados o usando el criterio de información de Akaike tratan de evitar usar modelos que se sobreajusten a los datos de entrenamiento. Este fenómeno, conocido como *overfitting*, puede causar problemas muy serios.
+
+
+### Ejercicio 10.20: Altura y diámetro de árboles.
 Queremos comparar las formas de las siguientes especies de árboles en los parques de Buenos Aires:
 
 - Jacarandá,
@@ -425,7 +442,7 @@ Para explicarlo con un ejemplos: imaginá que tenemos tres pares de datos (_DAP_
 
 En este caso contamos con una gran cantidad de datos y podemos aplicar de todas formas la regresión en el marco de un análsis exploratorio de los datos.
 
-### Ejercicio 10.20: Gráficos de ajuste lineal con Seaborn
+### Ejercicio 10.21: Gráficos de ajuste lineal con Seaborn
  + Seleccioná los datos correspondientes a las especies: Jacarandá, Palo borracho rosado, Eucalipto y Ceibo, todas en un mismo DataFrame, usando el siguiente filtro.
 
  ```Python

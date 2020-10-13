@@ -6,8 +6,11 @@
 
 
 ### Ejercicio 10.2: Números triangulares
-Escribí una función recursiva que calcule recursivamente el n-ésimo número
+Escribí una función que calcule recursivamente el n-ésimo número
 triangular (es decir, el número *1 + 2 + 3 + ... + n*).
+
+Fijate que este ejercicio es un caso particular de la función `sumar_enteros(desde, hasta)` que implementaste en el [Ejercicio 6.6](../06_Plt_Especificacion_y_Documentacion/04_Especificacion_y_Documentacion.md#ejercicio-66-sumas). La implementación que hiciste en el primer inciso de ese ejercicio es una forma de reemplazar la recursión por un ciclo. La implementación que hiciste en el segundo inciso es mucho más eficiente.
+
 
 ### Ejercicio 10.3: Dígitos
 Escribí una función recursiva que reciba un número positivo, n, y devuelva
@@ -24,8 +27,8 @@ Ejemplos:
 es_potencia(8, 2) -> True
 es_potencia(64, 4) -> True
 es_potencia(70, 10) -> False
+es_potencia(1, 2) -> True
 ```
-
 
 
 ### Ejercicio 10.5: Subcadenas
@@ -36,13 +39,11 @@ dentro de *a*.
 Ejemplo:
 
 ```python
-posiciones_de("Un tete a tete con Tete", "te") -> [3, 5, 10, 12, 21]
+posiciones_de('Un tete a tete con Tete', 'te') -> [3, 5, 10, 12, 21]
 ```
 
-
-
 ### Ejercicio 10.6: Paridad
-Escribí dos funciones mutualmente recursivas ``par(n)` e `impar(n)` que
+Escribí dos funciones mutualmente recursivas `par(n)` e `impar(n)` que
 determinen la paridad del numero natural dado, usando solo que:
 
 * 1 es impar.
@@ -50,7 +51,7 @@ determinen la paridad del numero natural dado, usando solo que:
 
 
 ### Ejercicio 10.7: Máximo
-Escribí una funcion recursiva que encuentre el mayor elemento de una lista. (sin usar `max()`).
+Escribí una funcion recursiva que encuentre el mayor elemento de una lista (sin usar `max()`).
 
 
 ### Ejercicio 10.8: Replicar
@@ -61,7 +62,7 @@ una cantidad n de veces. Por ejemplo:
 replicar([1, 3, 3, 7], 2) -> ([1, 1, 3, 3, 3, 3, 7, 7])
 ```
 
-_Sugerencia: hacé la recursión el el largo de la lista._
+_Sugerencia: hacé la recursión en el largo de la lista._
 
 ### Ejercicio 10.9: Pascal
 El [triángulo de Pascal](https://es.wikipedia.org/wiki/Tri%C3%A1ngulo_de_Pascal) es un arreglo triangular de números que se define de la siguiente manera: Las filas se enumeran desde *n = 0*, de arriba hacia
@@ -84,7 +85,7 @@ Ejemplo:
 
 ### Ejercicio 10.10: Combinatorios
 
-Escribí una función recursiva que reciba un conjunto de caracteres únicos,
+Escribí una función recursiva que reciba una lista de caracteres únicos,
 y un número *k*, e imprima todas las posibles cadenas de longitud *k* formadas
 con los caracteres dados (permitiendo caracteres repetidos).
 
@@ -119,7 +120,7 @@ def busqueda(L, e):
 
 _Observación_: La función `busqueda()` **envuelve** a la función `busqueda_binaria()`. Es un **wrapper** (envoltorio).
 
-Guardá tu solución en el archivo `BBinRec.py`.
+Guardá tu solución en el archivo `bbin_rec.py`.
 
 ### Ejercicio 10.12: Envolviendo a Fibonacci
 Como vimos, la implementación recursiva inmediata del cálculo del número de Fibonacci (F(n) = F(n-1) + F_(n-2), F(0) = 0, F(1)= 1) es ineficiente porque muchas de las ramas calculan reiteradamente los mismos valores.
@@ -130,10 +131,10 @@ los valores ya computados y no computarlos más de una vez.
 
 _Observación_: Será necesario implementar una función *wrapper* (es decir, una función que envuelva a otra) como en el ejercicio anterior para cumplir con la firma de la función pedida.
 
-Guardala en el archivo `FibonacciEnvuelto.py`.
+Guardala en el archivo `fibonacci_envuelto.py`.
 
 ### Ejercicio 10.13: Hojas ISO y recursión
-La norma ISO 216 especifica tamaños de papel. Es el estándar que define el popular tamaño de papel A4 (210mm de ancho y 297mm de largo). Las hojas A0 miden 841mm de ancho y 1189mm de largo. A partir de la A0 las siguientes medidas, digamos la A(N+1), se definen doblando al medio la hoja A(N). Siempre se miden en milı́metros con números enteros: entonces la hoja A1 mide 594mm
+La norma ISO 216 especifica tamaños de papel. Es el estándar que define el popular tamaño de papel A4 (210mm de ancho y 297mm de largo). Las hojas A0 miden 841mm de ancho y 1189mm de largo. A partir de la A0 las siguientes medidas, digamos la A(N+1), se definen doblando al medio la hoja A(N). Siempre se miden en milímetros con números enteros: entonces la hoja A1 mide 594mm
 de ancho (y no 594.5) por 841mm de largo. 
 
 ![Hojas](./AN.png)
@@ -143,7 +144,7 @@ que cero, devuelva el ancho y el largo de la hoja A(N) calculada
 recursivamente a partir de las medidas de la hoja A(N−1), usando la
 hoja A0 como caso base.
 
-Guardala en el archivo `HojasISO.py`.
+Guardala en el archivo `hojas_ISO.py`.
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Diseño de algoritmos recursivos)](02_Diseno_Recursivo.md) \| [Próximo (4 Regresión lineal)](04_Regresion_Lineal.md)
 
