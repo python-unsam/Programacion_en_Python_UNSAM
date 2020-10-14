@@ -5,10 +5,10 @@
 Hasta el momento vimos que hay muchas funciones matemáticas que se definen
 o que pueden desarrollarse de forma recursiva, pero puede aplicarse recursividad a muchos problemas que no sean explicitamente recursivos. Diseñar un algoritmo recursivo es un proceso sistematizable.
 
-En general en el proceso para plantear un algoritmo recursivo necesitamos
+En general, en el proceso para plantear un algoritmo recursivo, necesitamos
 resolver estos tres problemas:
 
-1. **Caso base:** Necesitamos definir uno o más casos bases de acuerdo a
+1. **Caso base:** Necesitamos definir uno o más casos base de acuerdo a
 nuestro problema. Como regla general tratamos de pensar como caso base a
 las condiciones sobre las cuales es más fácil resolver nuestro problema.
 Por ejemplo, si estruviéramos trabajando sobre listas o cadenas probablemente
@@ -20,7 +20,7 @@ la llamada recursiva. La idea de este caso es reducir el problema a un
 problema más sencillo, del cual se hará cargo la llamada recursiva, y luego
 poder ensamblar la solución al problema original. Ampliaremos esto más adelante.
 3. **Convergencia:** Necesitamos que la reducción que se haga en el caso
-recursivo converja hacia los casos bases, de modo que la recursión alguna
+recursivo converja hacia los casos base, de modo que la recursión alguna
 vez termine. Esto es, si dijimos que el caso base se resolvía cuando teníamos
 una lista vacía, las operaciones del caso recursivo tienen que reducir
 reiteradamente la lista hasta que la misma quede vacía.
@@ -45,7 +45,7 @@ Nuestro caso base será algo así como:
         return 0
 ```
 
-Queremos diseñar un paso recursivo que relice _una reducción_ de manera que dada cualquier lista la aplicación sucesiva de la reducción seleccionada converja al caso base. Hay muchas maneras de reducir una lista
+Queremos diseñar un paso recursivo que realice _una reducción_ de manera que dada cualquier lista, la aplicación sucesiva de la reducción seleccionada converja al caso base. Hay muchas maneras de reducir una lista
 para lograr esto; para este caso vamos a proponer una muy sencilla: sacar el primer elemento. Si cada llamada recursiva saca el primer elemento, tarde o temprano covergeremos a una lista vacía.
 
 Nuestra llamada recursiva podría ser algo así como:
@@ -76,8 +76,8 @@ def sumar(lista):
 Podemos ver que si tuviéramos implementada `sumar2` entonces
 `sumar` funcionaría bien. Volvamos ahora a recursividad: Si sabemos
 resolver el caso general en función a la solución del caso simplificado de la
-llamada recursiva, si existen casos bases que cortan la recursión y si además
-la recursión converge hacia los casos bases tenemos resuelto el problema
+llamada recursiva, si existen casos base que corten la recursión y si además
+la recursión converge hacia los casos base tenemos resuelto el problema
 completo. La función que asumimos que funcionaba *es la misma* que
 acabamos de implementar.
 
@@ -100,7 +100,7 @@ Dentro de los problemas recursivos no siempre es inmediato establecer cómo
 se va a propagar la información entre las llamadas recursivas. Es decir, cómo va a interactuar la solución de el o los subproblemas en la solución del problema general.
 
 En todos los ejemplos presentados hasta el momento la información del resultado
-se propagó desde las hojas del árbol de llamadas (los casos bases) hacia las
+se propagó desde las hojas del árbol de llamadas (los casos base) hacia las
 funciones invocantes (mediante la instrucción `return`). Por ejemplo, para
 resolver el resultado de Fibonacci `F(5)` se utilizan únicamente los resultados
 computados por `F(4)` y `F(3)`, y no se recibe ningún dato adicional de la función invocante (más allá del parámetro `n=5`).

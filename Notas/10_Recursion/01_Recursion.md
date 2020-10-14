@@ -12,7 +12,7 @@ esta propiedad, que se llama *recursión*, permite en muchos casos
 encontrar soluciones muy elegantes para determinados problemas.
 
 En materias de matemática se estudian los razonamientos por inducción para
-probar propiedades de números enteros, la recursión no es más que una
+probar propiedades de números enteros y la recursión no es más que una
 generalización de la inducción a más estructuras: las listas, las cadenas
 de caracteres, las funciones, etc.
 
@@ -26,7 +26,7 @@ las que es conveniente utilizarla y otras situaciones en las que no.
 
 ### Una función recursiva matemática
 
-Es muy común tener definiciones inductivas de operaciones. Un caso paradigmático es del facotrial. Recordemos que el factorial de un número entero positivo n es el producto de todos los números entre 1 y n. La definición usual, inductiva, es la siguiente:
+Es muy común tener definiciones inductivas de operaciones. Un caso paradigmático es la del factorial. Recordemos que el factorial de un número entero positivo n es el producto de todos los números entre 1 y n. La definición usual, inductiva, es la siguiente:
 
 ```
 1! = 1 
@@ -142,7 +142,7 @@ b^n = b^(n/2) * b^(n/2)                si n es par, y
 b^n = b^((n-1)/2) * b^((n-1)/2) * b    si n es impar.
 ```
 
-Estas ecuaciones nos permiten diseñar un algoritmo muchísimo más eficiente. Esta situación guarda cierta analogía con el problema de la búsqueda en una lista ordenada. La idea es en un paso reducir _el tamaño_ del problema a la mitad.
+Estas ecuaciones nos permiten diseñar un algoritmo muchísimo más eficiente. Esta situación guarda cierta analogía con el problema de la búsqueda en una lista ordenada. La idea es, en un paso, reducir _el tamaño_ del problema a la mitad.
 
 Antes de programar cualquier función recursiva es necesario decidir cuál
 será el *caso base* y cuál el *paso recursivo*.  Para esta función,
