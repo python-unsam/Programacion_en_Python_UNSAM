@@ -88,9 +88,10 @@ Finalmente nuestra primera función recursiva quedaría:
 ```python
 def sumar(lista):
    """Devuelve la suma de los elementos en la lista."""
-   if len(lista) == 0:
-       return 0
-   return lista[0] + sumar(lista[1:])
+   res = 0
+   if len(lista) != 0:
+       res = lista[0] + sumar(lista[1:])
+   return res
 ```
 
 ### Recursión de cola
@@ -109,11 +110,12 @@ puede tener ventajas adicionales.
 
 Por ejemplo, podríamos reescribir la función `sumar()` de esta forma:
 ```python
-def sumar(lista, suma=0):
+def sumar(lista, suma = 0):
     """Devuelve la suma de los elementos en la lista."""
-    if len(lista) == 0:
-        return suma
-    return sumar(lista[1:], lista[0] + suma)
+    res = suma
+    if len(lista) != 0:
+        res = sumar(lista[1:], lista[0] + suma)
+    return res
 ```
 
 Puede observarse que en esta implementación en vez de *esperar* a que se
@@ -137,10 +139,9 @@ la pila de ejecución. El código anterior puede reescribirse como
 def sumar(lista):
     """Devuelve la suma de los elementos en la lista."""
     suma = 0
-    while True:
-        if len(lista) == 0:
-            return suma
+    while lista:
         lista, suma = lista[1:], lista[0] + suma
+    return suma
 ```
 
 tan solo reemplazando la recursión por un bucle y actualizando las
@@ -172,9 +173,11 @@ vez. El cuerpo de nuestra función será algo así:
 
 ```python
 def promediar(lista):
-    if len(lista) == 0:
-        return ???
-    promediar(lista[1:]) ???
+    if len(lista) == 1:
+        res = lista[0]
+    else:
+        res = promediar(lista[1:]) ???
+    return res
 ```
 Ahora bien, con esto no alcanza para resolver el problema.
 
@@ -183,19 +186,22 @@ la cantidad de elementos. Entonces, una implementación recursiva va a estar com
 de la función.
 
 Implementemos el problema resolviendo primero la llamada recursiva (en una
-función diferente que llamaremos `_promediar()`) y luego ensamblando:
+función diferente que llamaremos `promediar_aux()`) y luego ensamblando:
 
 ```python
-def _promediar(lista):
-    if len(lista) == 0:
-        return 0, 0
-    suma, cantidad = _promediar(lista[1:])
-    return lista[0] + suma, cantidad + 1
+def promediar_aux(lista):
+    suma = lista[0]
+    cantidad = 1    
+    if len(lista) > 1:
+        suma_resto, cantidad_resto = promediar_aux(lista[1:])
+        suma += suma_resto
+        cantidad += cantidad_resto
+    return suma, cantidad
 ```
 
 Puede verse que esta función cumple con las reglas de diseño de recursividad
 que describimos antes. Con lo que no cumple esta función es con la firma
-natural de la función `promediar()` que queríamos diseñar, ya que `_promediar()` devuelve dos cosas y no una.
+natural de la función `promediar()` que queríamos diseñar, ya que `promediar_aux()` devuelve dos cosas y no una.
 
 Esto no invalida nuestra solución, pero la misma está incompleta. Lo que
 debemos hacer es implementar una función *wrapper* (envoltorio) que lo
@@ -205,21 +211,24 @@ que va a cumplir con la firma deseada:
 
 ```python
 def promediar(lista):
-   """Devuelve el promedio de los elementos de una lista de números."""
+    """Devuelve el promedio de los elementos de una lista de números."""
 
-   def _promediar(lista):
-       if len(lista) == 0:
-           return 0, 0
-       suma, cantidad = _promediar(lista[1:])
-       return lista[0] + suma, cantidad + 1
+    def promediar_aux(lista):
+        suma = lista[0]
+        cantidad = 1    
+        if len(lista) > 1:
+            suma_resto, cantidad_resto = promediar_aux(lista[1:])
+            suma += suma_resto
+            cantidad += cantidad_resto
+        return suma, cantidad
 
-   suma, cantidad = _promediar(lista)
-   return suma / cantidad
+    suma, cantidad = promediar_aux(lista)
+    return suma / cantidad
 ```
 
 Notar que si bien la función visible `promediar` no es recursiva, sí lo
-es la función `_promediar` que es la que realiza el trabajo, por
-lo que el conjunto se considera recursivo. Observá que estamos definiendo la función `_promediar` **dentro** de la función `promediar` de manera que no resulte visible desde afuera (no la podés llamar desde afuera, así como hay *variables locales* ésta es una *función local*).
+es la función `promediar_aux` que es la que realiza el trabajo, por
+lo que el conjunto se considera recursivo. Observá que estamos definiendo la función `promediar_aux` **dentro** de la función `promediar` de manera que no resulte visible desde afuera (no la podés llamar desde afuera, así como hay *variables locales* ésta es una *función local*).
 
 Además de para adaptar la firma de la función recursiva, las funciones wrapper
 se suelen utilizar para simplificar el código de las funciones recursivas. Por

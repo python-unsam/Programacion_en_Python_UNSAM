@@ -98,27 +98,21 @@ aa ab ac ba bb bc ca cb cc
 
 
 ### Ejercicio 10.11: Búsqueda binaria
-Escribí una función recursiva que implemente la búsqueda binaria de un elemento *e* en una lista ordenada *L*. Para esto completá el siguiente código:
+Escribí una función recursiva que implemente la búsqueda binaria de un elemento `e` en una lista ordenada `lista`. Para esto completá el siguiente código:
 
 ```python
-def busqueda(L, e):
-    '''Pre: L es una lista con los elementos en orden ascendente.
-    Post: Devuelve True si e esta en L y False si no'''
-
-    def busqueda_binaria(L, e, low, high):
-        #Función recursiva que va achicando high - low
-        if high == low:
-            return L[low] == e
-        mid = (low + high)//2
-        #AQUI COMPLETAR
-
-    if len(L) == 0:
-        return False
+def bbinaria_rec(lista, e):
+    if len(lista) == 0:
+        res = False
+    elif len(lista) == 1:
+        res = lista[0] == e
     else:
-        return busqueda_binaria(L, e, 0, len(L) - 1)
-```
+        medio = len(lista)//2
 
-_Observación_: La función `busqueda()` **envuelve** a la función `busqueda_binaria()`. Es un **wrapper** (envoltorio).
+        # completar
+
+    return res
+```
 
 Guardá tu solución en el archivo `bbin_rec.py`.
 
@@ -129,7 +123,31 @@ Escribí una función `fibonacci(n)` que calcule el *n*-ésimo número
 de Fibonacci de forma recursiva pero que utilice un diccionario para almacenar
 los valores ya computados y no computarlos más de una vez.
 
-_Observación_: Será necesario implementar una función *wrapper* (es decir, una función que envuelva a otra) como en el ejercicio anterior para cumplir con la firma de la función pedida.
+_Observación_: Será necesario implementar una función *wrapper* (es decir, una función que envuelva a otra) para cumplir con la firma de la función pedida. Podés trabajar en un script en blanco o completar el siguiente código.
+
+```python
+def fibonacci(n):
+    """
+    Toma un entero positivo n y
+    devuelve el n-ésimo número de Fibonacci
+    donde F(0) = 0 y F(1) = 1.
+    """
+    def fibonacci_aux(n, dict_fibo):
+        """
+        Calcula el n-ésimo número de Fibonacci de forma recursiva
+        utilizando un diccionario para almacenar los valores ya computados.
+        dict_fibo es un diccionario que guarda en la clave 'k' el valor de F(k)
+        """
+        if n in dict_fibo.keys():
+            F = dict_fibo[n]
+        else:
+            ?? # completar
+        return ?? # completar
+    
+    dict_fibo = {0:0, 1:1} 
+    F, dict_fibo = fibonacci_aux(n, dict_fibo)
+    return F 
+```
 
 Guardala en el archivo `fibonacci_envuelto.py`.
 
