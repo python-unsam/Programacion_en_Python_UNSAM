@@ -268,9 +268,13 @@ forma:
 def fib(n):
     """Precondición: n >= 0.
        Devuelve: el número de Fibonacci número n."""
-    if n == 0 or n == 1:
-        return 1
-    return fib(n - 1) + fib(n - 2)
+    if n == 0:
+        res = 0
+    elif n == 1:
+        res = 1
+    else:
+        res = fib(n - 1) + fib(n - 2)
+    return res
 ```
 
 Si bien esta implementación es muy sencilla y elegante, también es extremadamente poco eficiente: para calcular `fib(n - 1)` es necesario calcular

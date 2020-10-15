@@ -98,7 +98,7 @@ aa ab ac ba bb bc ca cb cc
 
 
 ### Ejercicio 10.11: Búsqueda binaria
-Escribí una función recursiva que implemente la búsqueda binaria de un elemento `e` en una lista ordenada `lista`. Para esto completá el siguiente código:
+Escribí una función recursiva que implemente la búsqueda binaria de un elemento `e` en una lista ordenada `lista`. La función debe devolver simplemente `True` o `False` indicando si el elemento está o no en a lista. Para esto completá el siguiente código:
 
 ```python
 def bbinaria_rec(lista, e):
