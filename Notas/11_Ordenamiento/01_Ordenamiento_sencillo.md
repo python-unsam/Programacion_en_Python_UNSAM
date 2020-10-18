@@ -3,7 +3,7 @@
 # 11.1 Ordenamientos sencillos de listas
 
 
-El problema del ordenamiento es tan fundamental que, a pesar que Python ya lo hace con su método `sort()` por ejemplo, nos interesa discutirlo. Hay una diversidad de soluciones para ordenar. Vamos a empezar viendo las más sencillas de escribir (que en general suelen ser las más caras).
+El problema del ordenamiento es tan fundamental que, a pesar de que Python ya lo hace con su método `sort()` por ejemplo, nos interesa discutirlo. Hay una diversidad de soluciones para ordenar listas. Vamos a empezar viendo las más sencillas de escribir (que en general suelen ser las más caras).
 
 ## Ordenamiento por selección
 El método de *ordenamiento por selección* se basa en la siguiente idea:
@@ -85,7 +85,7 @@ DEBUG:  1 1 [1, 2, 3, 4, 5]
 ```
 
 
-Podés observar que incluso cuando la lista ya está ordenada, se la recorre buscandoc los mayores elementos y ubicándolos en la misma posición en la que se
+Podés observar que incluso cuando la lista ya está ordenada, se la recorre buscando los mayores elementos y ubicándolos en la misma posición en la que se
 encuentran.
 
 ### Invariante en el ordenamiento por selección
@@ -126,7 +126,7 @@ El método de *ordenamiento por inserción* se basa en la siguiente idea:
 ![Ejemplo_insercion](./insercion.png)
 
 Una posible implementación en Python de este algoritmo se incluye en el
-Código~\ref{ord_insercion*.
+siguiente código\ref{ord_insercion}.
 
 ```python
 def ord_insercion(lista):
@@ -277,7 +277,7 @@ El ordenamiento por burbujeo se basa en una idea bastante sencilla. El algoritmo
 
 Como en el primer paso tenemos la garantía de que el mayor elemento quedó al final de la lista, la segunda recorrida puede evitar llegar hasta esa última posición. Así, cada recorrida es más corta que la anterior. En cada recorrida se comparan todos los pares de elementos sucesivos (en el rango correspondiente) y se intercambian si no están ordenados.
 
-Programá una fucnión `ord_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuánta comparaciones realiza esta función en una lista de largo n?
+Programá una función `ord_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuántas comparaciones realiza esta función en una lista de largo n?
 
 Si no te sale con estas indicaciones, podés consultar [Wikipedia](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja) u otras fuentes sobre ordenamiento por burbujeo. Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
 
@@ -292,9 +292,11 @@ _Cuidado_: usá la misma lista para los tres métodos así la compración es jus
 Para N=10, hacé que tu programa repita 100 veces estos conteos e imprima el promedio de comparaciones realizado por cada método.
 
 ### Ejercicio 11.4: 
-Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y `comp_burbujeo`. 
+Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa `comp.py` que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y `comp_burbujeo`. 
 
 Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? 
+
+Guardá `comp.py` para seguir trabajando sobre él y para entregarlo.
 
 ¿Se te ocurre un algoritmo de ordenamiento que sea sustancialmente mejor que estos? Ese será el tema de la próxima sección.
 

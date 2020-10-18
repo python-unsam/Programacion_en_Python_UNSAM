@@ -172,7 +172,7 @@ Cuando `len(lista)` no es una potencia de 2 el razonamiento es menos
 prolijo, pero también vale que este programa realiza aproximadamente
 `log2(len(lista))` comparaciones. Concluimos entonces que:
 
-### Comparción entre ambos métodos
+### Comparación entre ambos métodos
 
 Veamos un ejemplo para entender cuánto más eficiente es la búsqueda binaria.
 Supongamos que tenemos una lista con un millón de elementos.

@@ -5,7 +5,7 @@
 En esta sección veremos un algoritmo de clasificación. Un problema de clasificación es un problema en el que tenemos algunas clases fijas (en nuestro ejemplo serán tres tipos de flores) y algunos atributos (medidas de los pétalos y sépalos, en nuestro ejemplo) a partir de los cuales queremos _inferir_ la clase. Típicamente el algoritmo de clasificación se _entrena_ con alguna parte de los datos para que _aprenda_ y luego se _evalúa_ cuán bien aprendió con el resto de los datos. Para esto hace falta tener un conjunto de datos _etiquetados_ (es decir, con la clase bien definida). Luego, si funciona bien, el algoritmo podrá usarse para etiquetar nuevos datos de los que no se conoce la clase.
 
 
-En esta sección nos concentraremos en el entrenamiento y la evaluación de los algoritmo.
+En esta sección nos concentraremos en el entrenamiento y la evaluación de los algoritmos.
 
 Trabajaremos con la librería sklearn de python que está diseñada para realizar tareas de aprendizaje automático. La misma trae algunos conjuntos de datos de ejemplo. Trabajaremos con el clásico ejemplo de **Clasificación de Especies de flores Iris** según medidas del pétalo y el sépalo.
 
@@ -19,9 +19,9 @@ from sklearn.datasets import load_iris
 iris_dataset = load_iris()
 ```
 
-Este dataset trae una serie de datos medidos de los pétalos y sépalos de 150 flores Iris y su clasificación en tres especies (setosa, versicolor y virginica). La idea es usar algunos de los datos de flores para entrenar un algoritmo y si podemos decir la especie de las otras flores usando solo sus medidas.
+Este dataset trae una serie de datos medidos de los pétalos y sépalos de 150 flores Iris y su clasificación en tres especies (setosa, versicolor y virginica). La idea es usar algunos de los datos de flores para entrenar un algoritmo y si podemos deducir la especie de las otras flores (no clasificadas) usando solo sus medidas.
 
-El dataset es un diccionario con diferentes datos. Esencialmente en "data" tiene un array con las medidas de ancho y largo de petalo y sepalo (atribuos, o "features" en inglés) de 150 flores  y en "target" tiene un numero (0, 1 o 2) que representa la especie de estas flores. Veamos un poco la estructura de estos datos. El diccionario tiene las siguientes claves:
+El dataset es un diccionario con diferentes datos. Esencialmente en "data" tiene un array con las medidas de ancho y largo de pétalo y sépalo (atributos, o "features" en inglés) de 150 flores  y en "target" tiene un numero (0, 1 ó 2) que representa la especie de estas flores. Veamos un poco la estructura de estos datos. El diccionario tiene las siguientes claves:
 
 ```python
 >>> print("Claves del diccionario iris_dataset:\n", iris_dataset.keys())
@@ -83,7 +83,7 @@ Como dijimos antes, vamos a entrenar un algoritmo y luego a evaluar su capacidad
 - una parte de los datos (training) será de entrenamiento del algoritmo y
 - otra parte (testing) será usada para la evaluación.
 
-La librería sklearn trae funciones que hacen esta separación (split) de forma aleatoria, como se ve a continuación (en este caso fijamos una semilla con random_state=0, luego lo sacaremos). Obviamente separamos tanto los atributos (features) como su clase (target). En este caso usaremos 75% para entrenar y 25% de los dados para evaluar.
+La librería sklearn trae funciones que hacen esta separación (split) de forma aleatoria, como se ve a continuación (en este caso fijamos una semilla con random_state=0, luego la sacaremos). Obviamente separamos tanto los atributos (features) como su clase (target). En este caso usaremos el 75% de los datos para entrenar y el 25% restante para evaluar.
 
 
 ```python
@@ -104,9 +104,9 @@ X_train, X_test, y_train, y_test = train_test_split(
     y_test shape: (38,)
 ```
 
-## Viasualización de los datos de entranamiento
+## Viasualización de los datos de entrenamiento
 
-Hagamos primero unos gráficos para ver los datos y entender las correlaciones entre los atributos, usando un color diferente para cada especie de flor.
+Hagamos primero unos gráficos exploratorios para ver los datos y entender las correlaciones entre los atributos, usando un color diferente para cada especie de flor.
 
 
 ```python
@@ -121,8 +121,10 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
 
 ![png](./output_27_1.png)
 
-### Ejercicio 11.9: seaborn
-Repetí  este gráfico pero usando seaborn en lugar de pandas para graficar.
+Notamos que una de las especies se distingue mas fácilmente de las otras dos, mientras que las otras presentan cierta superposición. 
+
+### Ejercicio 11.10: seaborn
+Repetí este gráfico pero usando seaborn en lugar de pandas para graficar.
 
 
 ## Modelar
@@ -130,9 +132,9 @@ Repetí  este gráfico pero usando seaborn en lugar de pandas para graficar.
 Ahora vamos a construir nuestro primer modelo. Usaremos un algoritmo sencillo que se llama de "vecinos más cercanos" (_K-nearest neighbors_ en inglés, ver [wikipedia](https://es.wikipedia.org/wiki/K_vecinos_m%C3%A1s_pr%C3%B3ximos)). Lo entrenaremos con los datos de entrenamiento y al consultarle por un nuevo dato (de los de testing) lo que hará el algoritmo es buscar al dato de entrenamiento más cercano en el espacio de atributos y asignarle al nuevo dato la especie de esa flor. En otras palabras: cuando le preguntemos por la especie de una flor nueva va a contestarnos con la especie de la flor "más cercana" en el especio de atributos (ancho y largo del pétalo y el cépalo).
 
 
-De esta forma el espacio de atributos queda dividido en regiones a las que se les asignará cada especie. En el siguiente gráfico puede verse una partición de un espacio de dos atributos y tres clases considerando un vecino más cercano (k=1) y entrenado con los datos del gráfico:
+De esta forma el espacio de atributos queda dividido en regiones a las que se asignará cada especie. En el siguiente gráfico puede verse una partición de un espacio de dos atributos y tres clases considerando un vecino más cercano (k=1) y entrenado con los datos del gráfico:
 
-![areas_knn](./images/Map1NN.png)
+![areas_knn](./Map1NN.png)
 
 A un nuevo punto en este plano el clasificador así entrenado le asignará la clase correspondiente al color de fondo, que coincide con la clase del vecino más cercano.
 
@@ -172,7 +174,7 @@ plt.scatter(X_new[:,1],X_new[:,3],c='red')
 ![png](./output_36_1.png)
 
 
-Acá se ve que el punto rojo esta cerca de la clase "setosa". Utilicemos ahora el algoritmo knn entrenado para que nos prediga la clase del punto `X_new`:
+Acá se ve que el punto rojo esta cerca de la clase "setosa". Utilicemos ahora el algoritmo knn entrenado para clasificar el punto `X_new`:
 
 
 ```python
@@ -248,8 +250,8 @@ Observar que en este último fragmento de código el split en test y train es al
 
 ## Ejercicios:
 
-### Ejercicio 11.10: 
-Leé sobre los [clasificadores basados en arboles de decisión](https://es.wikipedia.org/wiki/Aprendizaje_basado_en_%C3%A1rboles_de_decisi%C3%B3n) y luego usá el objeto clasificador `clf` (definido a continuación) como se usó `knn` en el ejemplo anterior (es decir, entrená el clasificador sobre el conjunto train y evaluálo sobre el conjunto test). Tanto `knn` como `clf` son clasificadores y heredan los métodos "fit", "predict" y "score" de forma que su uso es casi idéntico. Ventajas del polimorfismo que hablamos antes (ver [Ejercicio 8.7](../08_Clases_y_Objetos/02_Herencia.md#ejercicio-87-polimorfismo-en-acción)). ¿Qué clasificador dió mejores resultados?
+### Ejercicio 11.11: 
+Leé sobre los [clasificadores basados en arboles de decisión](https://es.wikipedia.org/wiki/Aprendizaje_basado_en_%C3%A1rboles_de_decisi%C3%B3n) y luego usá el objeto clasificador `clf` (definido a continuación) como se usó `knn` en el ejemplo anterior (es decir, entrená el clasificador sobre el conjunto train y evaluálo sobre el conjunto test). Tanto `knn` como `clf` son clasificadores y heredan los métodos "fit", "predict" y "score" de forma que su uso es casi idéntico. Ventajas del polimorfismo, del que hablamos antes (ver [Ejercicio 8.7](../08_Clases_y_Objetos/02_Herencia.md#ejercicio-87-polimorfismo-en-acción)). ¿Qué clasificador dió mejores resultados?
 
 
 ```python
@@ -257,7 +259,7 @@ from sklearn.tree import DecisionTreeClassifier
 clf = DecisionTreeClassifier()
 ```
 
-### Ejercicio 11.11: 
+### Ejercicio 11.12: 
 La comparación anterior de los dos clasificadores puede resultar injusta ya que está basada en *una* partición del conjunto de datos es test y train que podría darle ventaja a uno u otro clasificador, arbitrariamente. 
     
 Para evitar esto, repetí 100 veces lo siguiente y calculá el promedio de los scores:

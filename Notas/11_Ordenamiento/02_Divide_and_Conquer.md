@@ -126,7 +126,7 @@ dos sublistas ordenadas).
 Como siempre sucede con las soluciones recursivas, debemos encontrar un caso
 base en el cual no se aplica la llamada recursiva (en nuestro caso: si la lista tiene largo cero o uno, ya está ordenada y no hay nada que hacer). Además debemos asegurar que siempre se alcanza el caso base, y en nuestro caso aseguramos eso porque, si no estamos en el caso base, la lista se divide en mitades decrementando su longitud.
 
-El método **divide y reinarás** es fecundo y ha dado lugar a algoritmos muy eficientes para tareas muy discímiles como multiplicar matrices, calcular la transformada de Fourier o realizar análisis sintácticos (parsear).
+El método **divide y reinarás** es fecundo y ha dado lugar a algoritmos muy eficientes para tareas muy disímiles como multiplicar matrices, calcular la transformada de Fourier o realizar análisis sintácticos (parsear).
 
 ### ¿Cuánto cuesta el *Merge sort*?
 
@@ -192,11 +192,78 @@ Mostrar los pasos del ordenamiento de la lista: `[6, 0, 3, 2, 5, 7, 4, 1]` con l
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan.
 
 ### Ejercicio 11.7: 
-Rehace el último ejercicio de la sección anterior ([Ejercicio 11.4](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-114)) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
+Rehacé el último ejercicio de la sección anterior ([Ejercicio 11.4](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-114)) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
+
+## El módulo `timeit`
+
+Hay casos en que contar la cantidad de operaciones que un algoritmo realiza se vuelve muy engorroso. Una alternativa simple aunque menos exacta es medir su tiempo de ejecución para problemas de distintos tamaños y estimar el orden del algoritmo a partir del cambio en el tiempo de ejecución al cambiar el tamaño del problema. 
+
+Existe un [módulo llamado `timeit`](https://docs.python.org/3/library/timeit.html) que permite medir tiempos de ejecución de código Python.
+
+El comando `timeit()` del modulo `timeit` devuelve, en segundos, el tiempo de ejecución total para el comando y número de repeticiones especificadas. El código a ejecutar y la cantidad de ejecuciones se pasan como parámetros. En esta sección , vamos a usarlo para comparar algoritmos de ordenamiento.
+
+En el siguiente ejemplo se le pide a Python una demora de 1 segundo (sleep(1)) y se le pide a timeit() que devuelva el tiempo de ejecución de ese comando, ejecutado una sola vez). Probálo varias veces:
+
+```python
+In [1]: import time
+In [2]: import timeit as tt
+In [3]: tt.timeit('time.sleep(1)',number=1)
+Out[3]: 0.9997157999999899
+```
+
+Notarás que el tiempo de ejecución está muy cerca del esperado (1 segundo), pero no es exactamente ese valor y además hay cierta variacion entre repeticiones. 
+
+Ahora evaluemos la siguiente expresión, que concatena en un string los primeros 100 números enteros. Ejecutála por lo menos diez veces y mirá como varía la salida:
+
+```python
+In [4]: tt.timeit('"-".join(str(n) for n in range(100))', number=1)
+Out[4]: 6.670000296551734e-05
+```
+
+Si medimos un proceso que tarda poco tiempo como en el último ejemplo, obtendremos resultados con una variabilidad de magnitud similar a la duración del proceso. Si queremos comparar duraciones relativas es mejor medir procesos largos o, si se trata de un proceso corto, repetirlo muchas veces. Usando `timeit()` podemos hacer esto cambiando el parametro `number`.
+
+Probá lo siguiente:
+
+```python
+In [5]: tt.timeit('"-".join(str(n) for n in range(100))', number=10000)
+Out[5]: 0.3018611848820001
+```
+
+Ahora comparemos la duración de ese código python con la duración de otras expresiones que dan el mismo resultado. Ejecutá cada una varias veces:
+
+```python
+In [6]: timeit.timeit('"-".join(str(n) for n in range(100))', number=10000)
+Out[6]: 0.3018611848820001
+In [7]: timeit.timeit('"-".join([str(n) for n in range(100)])', number=10000)
+Out[7]: 0.2727368790656328
+In [8]: timeit.timeit('"-".join(map(str, range(100)))', number=10000)
+Out[8]: 0.23702679807320237
+```
 
 ### Ejercicio 11.8: 
+Usá `timeit()` para comparar los algoritmos de búsqueda que vimos hasta ahora. 
+Prepará un programa que contenga los métodos de búsqueda del [Ejercicio 11.7](../11_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-117) y usá `timeit()` para tomar los tiempos de ejecución para 5 listas de 50, 100, 150, 200 y 256 elementos. La forma de usar `timeit()` dentro de un módulo o la consola de python es:
+
+```python
+print('inserción')
+l = [3, 2, -1, 5, 0, 2]
+print(tt.timeit('ord_insercion(l)',number=100000,globals=globals()))
+
+#rehacemos la lista que quedó ordenada
+l = [3, 2, -1, 5, 0, 2]
+print('selección')
+print(tt.timeit('ord_seleccion(l)',number=100000,globals=globals()))
+
+#...etc
+``` 
+
+El parámetro `globals=globals()` permite a `timeit()` acceder a las variables y funciones definidas en el namespace global en que se está ejecutando.  
+
+Elegí un número de repeticiones (`number`) que resulte en tiempos de ejecución algo mayores a 0.2 s para la lista mas corta y el algoritmo mas rápido.  Manteniendo el mismo para todos los algoritmos, y todas las longitudes de la lista a ordenar, para poder comparar los datos. Graficá los datos de tiempos de ejecución en función de longitudes de la lista. Coinciden las curvas con lo que habías predicho estimando el número de operaciones ?
+
+### Ejercicio 11.9: 
 Escribí una función `merge3sort` que funcione igual que el merge sort pero
-en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Debrás escribir la función `merge3(lista1, lista2, lista3)`. ¿Cómo te parece que se va a comportar este método con respecto al merge sort original?
+en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3(lista1, lista2, lista3)`. ¿Cómo te parece que se va a comportar este método con respecto al merge sort original? Querés medirlo con `timeit()` ?
 
 
 
