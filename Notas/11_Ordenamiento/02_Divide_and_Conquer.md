@@ -259,6 +259,8 @@ print(tt.timeit('ord_seleccion(l)',number=100000,globals=globals()))
 
 El parámetro `globals=globals()` permite a `timeit()` acceder a las variables y funciones definidas en el namespace global en que se está ejecutando.  
 
+Eliminá de las funciones a medir todo código no escencial, en particular los prints para debug. Consumen tiempo y no son parte del algoritmo.
+
 Elegí un número de repeticiones (`number`) que resulte en tiempos de ejecución algo mayores a 0.2 s para la lista mas corta y el algoritmo mas rápido.  Manteniendo el mismo para todos los algoritmos, y todas las longitudes de la lista a ordenar, para poder comparar los datos. Graficá los datos de tiempos de ejecución en función de longitudes de la lista. Coinciden las curvas con lo que habías predicho estimando el número de operaciones ?
 
 ### Ejercicio 11.9: 

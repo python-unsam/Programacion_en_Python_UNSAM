@@ -58,26 +58,26 @@ reduciendo el segmento a analizar.
 La función `buscar_max()` busca el mayor elemento de un segmento de
 la lista y devuelve su posición.
 
-A continuación, algunas una ejecuciones de prueba de ese código:
+A continuación, algunas ejecuciones de prueba de ese código:
 
 ```python
->>> l = [3, 2, -1, 5, 0, 2]
->>> ord_seleccion(l)
+>>> lista = [3, 2, -1, 5, 0, 2]
+>>> ord_seleccion(lista)
 DEBUG:  3 5 [3, 2, -1, 2, 0, 5]
 DEBUG:  0 4 [0, 2, -1, 2, 3, 5]
 DEBUG:  1 3 [0, 2, -1, 2, 3, 5]
 DEBUG:  1 2 [0, -1, 2, 2, 3, 5]
 DEBUG:  0 1 [-1, 0, 2, 2, 3, 5]
->>> l
+>>> lista
 [-1, 0, 2, 2, 3, 5]
->>> l = []
->>> ord_seleccion(l)
+>>> lista = []
+>>> ord_seleccion(lista)
 >>> l = [1]
->>> ord_seleccion(l)
->>> l
+>>> ord_seleccion(lista)
+>>> lista
 [1]
->>> l = [1, 2, 3, 4, 5]
->>> ord_seleccion(l)
+>>> lista = [1, 2, 3, 4, 5]
+>>> ord_seleccion(lista)
 DEBUG:  4 4 [1, 2, 3, 4, 5]
 DEBUG:  3 3 [1, 2, 3, 4, 5]
 DEBUG:  2 2 [1, 2, 3, 4, 5]
@@ -94,8 +94,7 @@ Todo ordenamiento tiene un invariante que permite asegurarse de que cada
 paso que se toma va en la dirección de obtener una lista ordenada.
 
 En el caso del ordenamiento por selección, el invariante es que los
-elementos desde `n + 1` hasta el final de la lista están ordenados y
-son mayores que los elementos de `0` a `n`; es decir
+elementos en las posiciones desde `n + 1` hasta el final de la lista están ordenados y son mayores que los elementos ubicados de `0` a `n`; es decir
 que ya están en su posición definitiva.
 
 ### ¿Cuánto cuesta ordenar por selección?
@@ -126,7 +125,7 @@ El método de *ordenamiento por inserción* se basa en la siguiente idea:
 ![Ejemplo_insercion](./insercion.png)
 
 Una posible implementación en Python de este algoritmo se incluye en el
-siguiente código\ref{ord_insercion}.
+siguiente código:
 
 ```python
 def ord_insercion(lista):
@@ -174,35 +173,35 @@ insertar reemplaza al valor que se encontraba allí anteriormente.
 En las siguientes ejecuciones puede verse que funciona correctamente.
 
 ```python
->>> l=[3, 2, -1, 5, 0, 2]
->>> ord_insercion(l)
+>>> lista = [3, 2, -1, 5, 0, 2]
+>>> ord_insercion(lista)
 DEBUG:  [2, 3, -1, 5, 0, 2]
 DEBUG:  [-1, 2, 3, 5, 0, 2]
 DEBUG:  [-1, 2, 3, 5, 0, 2]
 DEBUG:  [-1, 0, 2, 3, 5, 2]
 DEBUG:  [-1, 0, 2, 2, 3, 5]
->>> l
+>>> lista
 [-1, 0, 2, 2, 3, 5]
->>> l = []
->>> ord_insercion(l)
->>> l = [1]
->>> ord_insercion(l)
->>> l
+>>> lista = []
+>>> ord_insercion(lista)
+>>> lista = [1]
+>>> ord_insercion(lista)
+>>> lista
 [1]
->>> l=[1, 2, 3, 4, 5, 6]
->>> ord_insercion(l)
+>>> lista = [1, 2, 3, 4, 5, 6]
+>>> ord_insercion(lista)
 DEBUG:  [1, 2, 3, 4, 5, 6]
 DEBUG:  [1, 2, 3, 4, 5, 6]
 DEBUG:  [1, 2, 3, 4, 5, 6]
 DEBUG:  [1, 2, 3, 4, 5, 6]
 DEBUG:  [1, 2, 3, 4, 5, 6]
->>> l
+>>> lista
 [1, 2, 3, 4, 5, 6]
 ```
 
 ### Invariante del ordenamiento por inserción
 
-En el ordenamiento por inserción, en cada paso se considera que los
+En el ordenamiento por inserción, en cada paso se satisface que los
 elementos que se encuentran en el segmento de `0` a `i` están ordenados, de
 manera que agregar un nuevo elemento implica colocarlo en la posición
 correspondiente y el segmento seguirá ordenado.
@@ -279,24 +278,33 @@ Como en el primer paso tenemos la garantía de que el mayor elemento quedó al f
 
 Programá una función `ord_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuántas comparaciones realiza esta función en una lista de largo n?
 
+Probá tu código con las siguientes listas.
+
+```python
+lista_1 = [1, 2, -3, 8, 1, 5]
+lista_2 = [1, 2, 3, 4, 5]
+lista_3 = [0, 9, 3, 8, 5, 3, 2, 4]
+lista_4 = [10, 8, 6, 2, -2, -5]
+```
+
 Si no te sale con estas indicaciones, podés consultar [Wikipedia](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja) u otras fuentes sobre ordenamiento por burbujeo. Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
 
 
 ### Ejercicio 11.3: 
-Hacé un programa que genere una lista aleatoria de largo N y la ordene con los tres métodos (burbujeo, inserción y selección)
+Hacé un programa que genere una lista aleatoria de largo N con números enteros del 1 al 1000 y la ordene con los tres métodos (burbujeo, inserción y selección).
 
 Modificá el código de las tres funciones para que cuenten cuántas comparaciones entre elementos de la lista realiza cada una. Por ejemplo, `ord_seleccion` realiza comparaciones (entre elementos de la lista) sólo cuando llama a `buscar_max(lista, a, b)` y en ese caso realiza `b-a` comparaciones. 
 
 _Cuidado_: usá la misma lista para los tres métodos así la compración es justa.
 
-Para N=10, hacé que tu programa repita 100 veces estos conteos e imprima el promedio de comparaciones realizado por cada método.
+Para N = 10, hacé que tu programa repita 100 veces estos conteos e imprima el promedio de comparaciones realizado por cada método.
 
 ### Ejercicio 11.4: 
-Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa `comp.py` que para `N` entre 1 y 256 genere un vector de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comp_seleccion`, `comp_insercion` y `comp_burbujeo`. 
+Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa `comparaciones.py` que para `N` entre 1 y 256 genere una lista de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comparaciones_seleccion`, `comparaciones_insercion` y `comparaciones_burbujeo`. 
 
 Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? 
 
-Guardá `comp.py` para seguir trabajando sobre él y para entregarlo.
+Guardá `comparaciones.py` para seguir trabajando sobre él y para entregarlo.
 
 ¿Se te ocurre un algoritmo de ordenamiento que sea sustancialmente mejor que estos? Ese será el tema de la próxima sección.
 
