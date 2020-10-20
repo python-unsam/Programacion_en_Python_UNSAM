@@ -25,7 +25,8 @@ El dataset es un diccionario con diferentes datos. Esencialmente en "data" tiene
 
 ```python
 >>> print("Claves del diccionario iris_dataset:\n", iris_dataset.keys())
-     dict_keys(['data', 'target', 'target_names', 'DESCR', 'feature_names', 'filename'])
+Claves del diccionario iris_dataset:
+ dict_keys(['data', 'target', 'frame', 'target_names', 'DESCR', 'feature_names', 'filename'])
 ```
 
 Las flores se clasifican en tres:
@@ -43,7 +44,7 @@ Y los atributos son cuatro por cada flor:
      ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
 ```
 
-Son 150 flores etiquetadas, con cuatro atributos cada una, en un array de numpy.  Las etiquetas son 0, 1 y 2 y se guardan también en un array:
+Son 150 flores etiquetadas, con cuatro atributos cada una, en un array de numpy. Las etiquetas son 0, 1 y 2 y se guardan también en un array:
 
 ```python
 >>> print("Type of data:", type(iris_dataset['data']))
