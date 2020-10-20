@@ -124,8 +124,7 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
 Notamos que una de las especies se distingue mas fácilmente de las otras dos, mientras que las otras presentan cierta superposición. 
 
 ### Ejercicio 11.9: seaborn
-Repetí este gráfico pero usando seaborn en lugar de pandas para graficar.
-
+Repetí este gráfico pero usando seaborn en lugar de pandas para graficar, y guardá el código correspondiente en un archivo `iris_seaborn.py` para entregarlo.
 
 ## Modelar
 
