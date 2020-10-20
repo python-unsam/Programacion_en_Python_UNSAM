@@ -128,7 +128,9 @@ Sección ? para la sucesión de Fibonacci. Esta vez, como queremos mostrar no s�
 
 Acá mostramos el árbol de recursión de `merge_sort([3, 1, 0, 4, 2])`.
 
-![arbol_recursión](./arbol_recursion.jpg)
+<p align="center">
+<img src="./arbol_recursion.jpg" width="300">
+</p>
 
 
 ### ¿Cuánto cuesta el *Merge sort*?
@@ -312,6 +314,8 @@ para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 
 + Asegurate de evaluar todos los métodos de ordenamiento con las mismas listas (siempre usá copias para no reordenar listas ya ordenadas) y guardar esta información para poder mostrarla o usarla.
 
 + Graficá los datos de tiempos de ejecución en función de longitudes de la lista. ¿Coinciden las curvas con lo que habías predicho estimando el número de operaciones?
+
++ Guardá el archivo `time_ordenamiento.py` para entregarlo.
 
 
 ### Ejercicio 11.8: 
