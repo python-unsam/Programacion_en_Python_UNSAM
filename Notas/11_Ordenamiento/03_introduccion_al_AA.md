@@ -123,7 +123,7 @@ pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
 
 Notamos que una de las especies se distingue mas fácilmente de las otras dos, mientras que las otras presentan cierta superposición. 
 
-### Ejercicio 11.10: seaborn
+### Ejercicio 11.9: seaborn
 Repetí este gráfico pero usando seaborn en lugar de pandas para graficar.
 
 
@@ -250,7 +250,7 @@ Observar que en este último fragmento de código el split en test y train es al
 
 ## Ejercicios:
 
-### Ejercicio 11.11: 
+### Ejercicio 11.10: 
 Leé sobre los [clasificadores basados en arboles de decisión](https://es.wikipedia.org/wiki/Aprendizaje_basado_en_%C3%A1rboles_de_decisi%C3%B3n) y luego usá el objeto clasificador `clf` (definido a continuación) como se usó `knn` en el ejemplo anterior (es decir, entrená el clasificador sobre el conjunto train y evaluálo sobre el conjunto test). Tanto `knn` como `clf` son clasificadores y heredan los métodos "fit", "predict" y "score" de forma que su uso es casi idéntico. Ventajas del polimorfismo, del que hablamos antes (ver [Ejercicio 8.7](../08_Clases_y_Objetos/02_Herencia.md#ejercicio-87-polimorfismo-en-acción)). ¿Qué clasificador dió mejores resultados?
 
 
@@ -259,7 +259,7 @@ from sklearn.tree import DecisionTreeClassifier
 clf = DecisionTreeClassifier()
 ```
 
-### Ejercicio 11.12: 
+### Ejercicio 11.11: 
 La comparación anterior de los dos clasificadores puede resultar injusta ya que está basada en *una* partición del conjunto de datos es test y train que podría darle ventaja a uno u otro clasificador, arbitrariamente. 
     
 Para evitar esto, repetí 100 veces lo siguiente y calculá el promedio de los scores:
@@ -267,7 +267,7 @@ Para evitar esto, repetí 100 veces lo siguiente y calculá el promedio de los s
         b) Entrenamiento de ambos modelos (knn y clf) con el conjunto train resultante.
         c) Evaluación de ambos clasifcadores (score) con el conjunto test resultante.
         
-Imprimí el promedio de los scores obtenidos y guardá el código en el archivo `comparacion.py` para entregar.
+Imprimí el promedio de los scores obtenidos y guardá el código en el archivo `clasificadores.py` para entregar.
 
 
 

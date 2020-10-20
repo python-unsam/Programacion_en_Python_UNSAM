@@ -287,24 +287,27 @@ lista_3 = [0, 9, 3, 8, 5, 3, 2, 4]
 lista_4 = [10, 8, 6, 2, -2, -5]
 ```
 
-Si no te sale con estas indicaciones, podés consultar [Wikipedia](https://es.wikipedia.org/wiki/Ordenamiento_de_burbuja) u otras fuentes sobre ordenamiento por burbujeo. Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
+Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
 
 
 ### Ejercicio 11.3: 
-Hacé un programa que genere una lista aleatoria de largo N con números enteros del 1 al 1000 y la ordene con los tres métodos (burbujeo, inserción y selección).
+Hacé una función `generar_lista(N)` que genere una lista aleatoria de largo N con números enteros del 1 al 1000 (puede haber repeticiones).
 
 Modificá el código de las tres funciones para que cuenten cuántas comparaciones entre elementos de la lista realiza cada una. Por ejemplo, `ord_seleccion` realiza comparaciones (entre elementos de la lista) sólo cuando llama a `buscar_max(lista, a, b)` y en ese caso realiza `b-a` comparaciones. 
 
-_Cuidado_: usá la misma lista para los tres métodos así la compración es justa.
+Realizá un experimento que genere una lista de largo `N` y la ordene con los tres métodos (burbujeo, inserción y selección).
 
-Para N = 10, hacé que tu programa repita 100 veces estos conteos e imprima el promedio de comparaciones realizado por cada método.
+Para N = 10, realizá k = 100 repeticiones del siguiente experimento. Generar una lista de largo `N`, ordenarlas con los tres métodos y guardar la cantidad de operaciones. Al final, debe imprimir el promedio de comparaciones realizado por cada método.
+
+_Cuidado_: usá las mismas listas para los tres métodos así la compración es justa.
+
 
 ### Ejercicio 11.4: 
-Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa `comparaciones.py` que para `N` entre 1 y 256 genere una lista de largo `N` ordenado aleatoriamente como antes, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comparaciones_seleccion`, `comparaciones_insercion` y `comparaciones_burbujeo`. 
+Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa `comparaciones_ordenamiento.py` que para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 al 1000, calcule el promedio de comparaciones realizado por cada método y guarde estos resultados en tres vectores de largo 256: `comparaciones_seleccion`, `comparaciones_insercion` y `comparaciones_burbujeo`. 
 
-Graficá estos tres vectores. ¿Cómo dirías que crece la complejidad de estos métodos? 
+Graficá estos tres vectores. Si las curvas se superpone, graficá una de ellas con línea punteada para poder verlas bien. ¿Cómo dirías que crece la complejidad de estos métodos? ¿Para cuáles depende de la lista y para cuáles solamente depende del largo de la misma?
 
-Guardá `comparaciones.py` para seguir trabajando sobre él y para entregarlo.
+Guardá `comparaciones_ordenamiento.py` para seguir trabajando sobre él y para entregarlo.
 
 ¿Se te ocurre un algoritmo de ordenamiento que sea sustancialmente mejor que estos? Ese será el tema de la próxima sección.
 
