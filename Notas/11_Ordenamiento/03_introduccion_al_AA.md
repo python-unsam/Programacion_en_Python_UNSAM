@@ -76,6 +76,27 @@ Son 150 flores etiquetadas, con cuatro atributos cada una, en un array de numpy.
      2 2]
 ```
 
+## Visualización de los datos
+
+Hagamos primero unos gráficos exploratorios para ver los datos y entender las correlaciones entre los atributos, usando un color diferente para cada especie de flor.
+
+```python
+import pandas as pd
+# creamos un dataframe de los datos de flores
+# etiquetamos las columnas usando las cadenas de iris_dataset.feature_names
+iris_dataframe = pd.DataFrame(iris_dataset['data'], columns = iris_dataset.feature_names)
+# agregamos las variedades
+iris_dataframe['target'] = iris_dataset['target']
+# y hacemos una matriz de gráficos de dispersión, asignando colores según la especie
+pd.plotting.scatter_matrix(iris_dataframe, c = , iris_dataset['target'], figsize = (15, 15), marker = 'o', hist_kwds = {'bins': 20}, s = 60, alpha = .8)
+```
+
+![png](./output_27_1.png)
+
+Notamos que una de las especies se distingue mas fácilmente de las otras dos, mientras que las otras presentan cierta superposición. 
+
+### Ejercicio 11.9: seaborn
+Repetí este gráfico pero usando seaborn en lugar de pandas para graficar, y guardá el código correspondiente en un archivo `iris_seaborn.py` para entregarlo.
 
 ## Training y testing
 
@@ -84,13 +105,13 @@ Como dijimos antes, vamos a entrenar un algoritmo y luego a evaluar su capacidad
 - una parte de los datos (training) será de entrenamiento del algoritmo y
 - otra parte (testing) será usada para la evaluación.
 
-La librería sklearn trae funciones que hacen esta separación (split) de forma aleatoria, como se ve a continuación (en este caso fijamos una semilla con random_state=0, luego la sacaremos). Obviamente separamos tanto los atributos (features) como su clase (target). En este caso usaremos el 75% de los datos para entrenar y el 25% restante para evaluar.
+La librería sklearn trae funciones que hacen esta separación (split) de forma aleatoria, como se ve a continuación (en este caso fijamos una semilla con `random_state = 0`, luego la sacaremos). Obviamente separamos tanto los atributos (features) como su clase (target). En este caso usaremos el 75% de los datos para entrenar y el 25% restante para evaluar.
 
 
 ```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(
-    iris_dataset['data'], iris_dataset['target'], random_state=0)
+    iris_dataset['data'], iris_dataset['target'], random_state = 0)
 ```
 
 ```python
@@ -104,28 +125,6 @@ X_train, X_test, y_train, y_test = train_test_split(
     X_test shape: (38, 4)
     y_test shape: (38,)
 ```
-
-## Viasualización de los datos de entrenamiento
-
-Hagamos primero unos gráficos exploratorios para ver los datos y entender las correlaciones entre los atributos, usando un color diferente para cada especie de flor.
-
-
-```python
-# create dataframe from data in X_train
-# label the columns using the strings in iris_dataset.feature_names
-iris_dataframe = pd.DataFrame(X_train, columns=iris_dataset.feature_names)
-# create a scatter matrix from the dataframe, color by y_train
-pd.plotting.scatter_matrix(iris_dataframe, c=y_train, figsize=(15, 15),
-                           marker='o', hist_kwds={'bins': 20}, s=60,
-                           alpha=.8)
-```
-
-![png](./output_27_1.png)
-
-Notamos que una de las especies se distingue mas fácilmente de las otras dos, mientras que las otras presentan cierta superposición. 
-
-### Ejercicio 11.9: seaborn
-Repetí este gráfico pero usando seaborn en lugar de pandas para graficar, y guardá el código correspondiente en un archivo `iris_seaborn.py` para entregarlo.
 
 ## Modelar
 

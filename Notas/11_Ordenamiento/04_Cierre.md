@@ -4,7 +4,6 @@
 
 ## Cierre clase
 
-
 * El archivo `burbujeo.py` del [Ejercicio 11.2](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-112-burbujeo).
 * El archivo `comparaciones_ordenamiento.py` del [Ejercicio 11.6](../11_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-116).
 * El archivo `time_ordenamiento.py` del [Ejercicio 11.7](../11_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-117).
