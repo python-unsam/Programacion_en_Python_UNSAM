@@ -194,7 +194,7 @@ De esta manera se logra un tiempo proporcional a `N * log2(N)`.
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan, como mostramos más arriba para la lista `[3, 1, 0, 4, 2]`.
 
 ### Ejercicio 11.7: 
-Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 11.5](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-115-comparar-métodos-gráficamente)) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
+Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 11.5](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-115-comparar-métodos-gráficamente)) incorporando el merge sort a la comparación y al gráfico. Describí con tus palabras qué observas.
 
 Guardá el archivo `comparaciones_ordenamiento.py` con estas modificaciones, para entregarlo.
 
@@ -304,7 +304,7 @@ La idea de este ejercicio es, nuevamente, comparar los algoritmos de ordenamient
 
 + Juntá en el archivo `time_ordenamiento.py` los métodos de búsqueda del [Ejercicio 11.7](../11_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-117).
 
-+ Antes de empezar el experimento, eliminá de las funciones a medir todo código no escencial, en particular los prints para debug. Consumen tiempo y no son parte del algoritmo. También eliminá las cuentas de comparaciones, que ahora no son necesarias.
++ Antes de empezar el experimento, eliminá de las funciones a medir todo código no esencial, en particular los prints para debug. Consumen tiempo y no son parte del algoritmo. También eliminá las cuentas de comparaciones, que ahora no son necesarias.
 
 + Escribí un experimento que, tal como hiciste en el [Ejercicio 11.5](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-115-comparar-métodos-gráficamente),
 para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 al 1000, calcule el tiempo que tarda cada método en ordenar la lista y guarde estos resultados en vectores de largo 256.
@@ -319,7 +319,7 @@ para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 
 
 
 ### Ejercicio 11.9: 
-Opcional: Escribí una función `merge3sort` que funcione igual que el merge sort pero en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3(lista1, lista2, lista3)`.
+Opcional: Escribí una función `merge3sort` que funcione igual que el merge sort pero en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3sort(lista1, lista2, lista3)`.
 
 Probá tu función en las siguientes listas:
 

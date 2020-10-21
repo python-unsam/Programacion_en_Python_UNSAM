@@ -110,7 +110,7 @@ pequeña de comparaciones (que no depende de `N`). Por lo tanto tenemos que
 
 O sea que ordenar por selección una lista de tamaño `N` insume tiempo del
 orden de `N^2`.  Como ya mencionamos, este tiempo es independiente de si la
-lista estaba previamente ordenda o no.
+lista estaba previamente ordenada o no.
 
 En cuanto al espacio utilizado, sólo se tiene en memoria la
 lista que se desea ordenar y algunas variables de tamaño 1.

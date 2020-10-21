@@ -96,7 +96,7 @@ Notamos que una de las especies se distingue más fácilmente de las otras dos, 
 ### Ejercicio 11.10: Seaborn
 Repetí el gráfico anterior pero usando seaborn en lugar de pandas para graficar, y guardá el código correspondiente en un archivo `iris_seaborn.py` para entregarlo.
 
-*Sugrenecia:* Usando `iris_dataframe['target'] = iris_dataset['target']`, agregá al DataFrame el atributo `target` de cada flor para poder hacer un `sns.pairplot()` seteando `hue` sobre las especies de iris.
+*Sugerencia:* Usando `iris_dataframe['target'] = iris_dataset['target']`, agregá al DataFrame el atributo `target` de cada flor para poder hacer un `sns.pairplot()` seteando `hue` sobre las especies de iris.
 
 
 ## Training y testing
@@ -129,7 +129,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ## Modelar
 
-Ahora vamos a construir nuestro primer modelo. Usaremos un algoritmo sencillo que se llama de "vecinos más cercanos" (_K-nearest neighbors_ en inglés, ver [wikipedia](https://es.wikipedia.org/wiki/K_vecinos_m%C3%A1s_pr%C3%B3ximos)). Lo entrenaremos con los datos de entrenamiento y al consultarle por un nuevo dato (de los de testing) lo que hará el algoritmo es buscar al dato de entrenamiento más cercano en el espacio de atributos y asignarle al nuevo dato la especie de esa flor. En otras palabras: cuando le preguntemos por la especie de una flor nueva va a contestarnos con la especie de la flor "más cercana" en el especio de atributos (ancho y largo del pétalo y el cépalo).
+Ahora vamos a construir nuestro primer modelo. Usaremos un algoritmo sencillo que se llama de "vecinos más cercanos" (_K-nearest neighbors_ en inglés, ver [wikipedia](https://es.wikipedia.org/wiki/K_vecinos_m%C3%A1s_pr%C3%B3ximos)). Lo entrenaremos con los datos de entrenamiento y al consultarle por un nuevo dato (de los de testing) lo que hará el algoritmo es buscar al dato de entrenamiento más cercano en el espacio de atributos y asignarle al nuevo dato la especie de esa flor. En otras palabras: cuando le preguntemos por la especie de una flor nueva va a contestarnos con la especie de la flor "más cercana" en el espacio de atributos (ancho y largo del pétalo y el sépalo).
 
 De esta forma el espacio de atributos queda dividido en regiones a las que se asignará cada especie. En el siguiente gráfico puede verse una partición de un espacio de dos atributos y tres clases considerando un vecino más cercano (k=1) y entrenado con los datos del gráfico:
 
@@ -160,7 +160,7 @@ Listo, tenemos el clasificador entrenado. Ahora lo podemos usar para predecir la
     X_new.shape: (1, 4)
 ```
 
-Plotiemos este nuevo punto en rojo y veamos su relación a los datos de entrenamiento en dos de los atributos.
+Grafiquemos este nuevo punto en rojo y veamos su relación con los datos de entrenamiento en dos de los atributos.
 
 
 ```python
@@ -257,7 +257,7 @@ clf = DecisionTreeClassifier()
 ```
 
 ### Ejercicio 11.12: 
-La comparación anterior de los dos clasificadores puede resultar injusta ya que está basada en *una* partición del conjunto de datos es test y train que podría darle ventaja a uno u otro clasificador, arbitrariamente. 
+La comparación anterior de los dos clasificadores puede resultar injusta ya que está basada en *una* partición del conjunto de datos en test y train que podría darle ventaja a uno u otro clasificador, arbitrariamente. 
     
 Para evitar esto, repetí 100 veces lo siguiente y calculá el promedio de los scores:
         a) Partición del conjunto original en test y train aleatoriamente (sin fijar la semilla).
