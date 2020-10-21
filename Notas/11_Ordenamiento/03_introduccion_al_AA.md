@@ -129,7 +129,7 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 ## Modelar
 
-Ahora vamos a construir nuestro primer modelo. Usaremos un algoritmo sencillo que se llama de "vecinos más cercanos" (_K-nearest neighbors_ en inglés, ver [wikipedia](https://es.wikipedia.org/wiki/K_vecinos_m%C3%A1s_pr%C3%B3ximos)). Lo entrenaremos con los datos de entrenamiento y al consultarle por un nuevo dato (de los de testing) lo que hará el algoritmo es buscar al dato de entrenamiento más cercano en el espacio de atributos y asignarle al nuevo dato la especie de esa flor. En otras palabras: cuando le preguntemos por la especie de una flor nueva va a contestarnos con la especie de la flor "más cercana" en el espacio de atributos (ancho y largo del pétalo y el sépalo).
+Ahora vamos a construir nuestro primer modelo. Usaremos un algoritmo sencillo que se llama de "vecinos más cercanos" (K-nearest neighbors_ en inglés, ver [wikipedia](https://es.wikipedia.org/wiki/K_vecinos_m%C3%A1s_pr%C3%B3ximos)). Lo entrenaremos con los datos de entrenamiento y al consultarle por un nuevo dato (de los de testing) lo que hará el algoritmo es buscar al dato de entrenamiento más cercano en el espacio de atributos y asignarle al nuevo dato la especie de esa flor. En otras palabras: cuando le preguntemos por la especie de una flor nueva va a contestarnos con la especie de la flor "más cercana" en el espacio de atributos (ancho y largo del pétalo y el sépalo).
 
 De esta forma el espacio de atributos queda dividido en regiones a las que se asignará cada especie. En el siguiente gráfico puede verse una partición de un espacio de dos atributos y tres clases considerando un vecino más cercano (k=1) y entrenado con los datos del gráfico:
 
@@ -268,7 +268,7 @@ Para evitar esto, repetí 100 veces lo siguiente y calculá el promedio de los s
         c) Evaluación de ambos clasifcadores (score) con el conjunto test resultante.
         
 
-¿Te animás a agregar también un clasificador de [_Random Forest_]?(https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+¿Te animás a agregar también un clasificador de [_Random Forest_](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)?
 
 Imprimí el promedio de los scores obtenidos y guardá el código en el archivo `clasificadores.py` para entregar.
 
