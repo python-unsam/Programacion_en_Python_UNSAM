@@ -148,13 +148,13 @@ knn = KNeighborsClassifier(n_neighbors = 1)
 Y la entrenamos con los datos de entrenamiento
 
 ```python
->>> knn.fit(X_train, y_train)
-    KNeighborsClassifier(algorithm = 'auto', leaf_size = 30, metric = 'minkowski', metric_params = None, n_jobs = None, n_neighbors = 1, p = 2, weights='uniform')
+knn.fit(X_train, y_train)
 ```
 
 Listo, tenemos el clasificador entrenado. Ahora lo podemos usar para predecir la clase de una nueva flor a partir de sus cuatro medidas:
 
 ```python
+>>> import numpy as np
 >>> X_new = np.array([[5, 2.9, 1, 0.2]])
 >>> print("X_new.shape:", X_new.shape)
     X_new.shape: (1, 4)
@@ -162,10 +162,10 @@ Listo, tenemos el clasificador entrenado. Ahora lo podemos usar para predecir la
 
 Grafiquemos este nuevo punto en rojo y veamos su relación con los datos de entrenamiento en dos de los atributos.
 
-
 ```python
-plt.scatter(X_train[:,1],X_train[:,3],c=y_train)
-plt.scatter(X_new[:,1],X_new[:,3],c='red')
+import matplotlib.pyplot as plt
+plt.scatter(X_train[:, 1], X_train[:, 3], c = y_train)
+plt.scatter(X_new[:, 1], X_new[:, 3], c = 'red')
 ```
 
 ![png](./output_36_1.png)
@@ -227,22 +227,22 @@ O, directamente, usando el método `score` que ya viene en el clasificador:
 
 Lo que hicimos hasta ahora fue:
 
-    1) Separar los datos en dos conjuntos: test y train.
-    2) definir un clasificador knn y entrenarlo con los datos de training.
-    3) evaluar el clasificador con los datos de testing.
+    1) Separar los datos en dos conjuntos: train y test.
+    2) Sefinir un clasificador knn y entrenarlo con los datos de training.
+    3) Evaluar el clasificador con los datos de testing.
 
 
 ```python
 X_train, X_test, y_train, y_test = train_test_split(
     iris_dataset['data'], iris_dataset['target'])
 
-knn = KNeighborsClassifier(n_neighbors=1)
+knn = KNeighborsClassifier(n_neighbors = 1)
 knn.fit(X_train, y_train)
 
 print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
 ```
 
-Observar que en este último fragmento de código el split en test y train es aleatorio, y va a dar resultados (scores) diferentes cada vez que lo corramos
+Observá que en este último fragmento de código el split en test y train es aleatorio, y va a dar resultados (scores) diferentes cada vez que lo corramos.
 
 
 ## Ejercicios:
@@ -260,12 +260,17 @@ clf = DecisionTreeClassifier()
 La comparación anterior de los dos clasificadores puede resultar injusta ya que está basada en *una* partición del conjunto de datos en test y train que podría darle ventaja a uno u otro clasificador, arbitrariamente. 
     
 Para evitar esto, repetí 100 veces lo siguiente y calculá el promedio de los scores:
+
         a) Partición del conjunto original en test y train aleatoriamente (sin fijar la semilla).
+        
         b) Entrenamiento de ambos modelos (knn y clf) con el conjunto train resultante.
+        
         c) Evaluación de ambos clasifcadores (score) con el conjunto test resultante.
         
-Imprimí el promedio de los scores obtenidos y guardá el código en el archivo `clasificadores.py` para entregar.
 
+¿Te animás a agregar también un clasificador de [_Random Forest_]?(https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+
+Imprimí el promedio de los scores obtenidos y guardá el código en el archivo `clasificadores.py` para entregar.
 
 
 

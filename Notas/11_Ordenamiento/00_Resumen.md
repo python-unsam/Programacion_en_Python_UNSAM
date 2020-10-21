@@ -1,8 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (10 Recursión y regresión)](../10_Recursion/00_Resumen.md) \| [Próximo (12 Optativos)](../12_Optativos/00_Resumen.md)
 
 # 11. Ordenamiento
-**Esta clase está en preparación.**
-**El material sufrirá cambios hasta el miércoles 21/10, cuando daremos inicio a estos temas en el curso.**
 
 Ordenar una lista de números es una de las tareas fundamentales que realiza un **ordenador** (también llamado computadora). Los algoritmos conceptualmente más sencillos tienen una complejidad computacional (en el peor caso) que crece de forma cuadrática (n^2) con la longitud, n, de la lista a ordenar.  Veremos en detalle dos algoritmos sencillos: el algoritmo de selección y el de inserción y luego *divide and conquer* que lleva a la idea de merge sort...
 
