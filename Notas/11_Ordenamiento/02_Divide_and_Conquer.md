@@ -190,11 +190,11 @@ De esta manera se logra un tiempo proporcional a `N * log2(N)`.
 
 ## Ejercicios:
 
-### Ejercicio 11.5: 
+### Ejercicio 11.6: 
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan, como mostramos más arriba para la lista `[3, 1, 0, 4, 2]`.
 
-### Ejercicio 11.6: 
-Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 11.4](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-114)) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
+### Ejercicio 11.7: 
+Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 11.5](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-115-comparar-métodos-gráficamente)) incorporando el mergesort a la comparación y al gráfico. Describí con tus palabras qué observas.
 
 Guardá el archivo `comparaciones_ordenamiento.py` con estas modificaciones, para entregarlo.
 
@@ -299,14 +299,14 @@ plt.plot(tiempos_seleccion)
 
 ![experimento_timeit_seleccion](./experimento_timeit_seleccion.jpg)
 
-### Ejercicio 11.7: 
+### Ejercicio 11.8: 
 La idea de este ejercicio es, nuevamente, comparar los algoritmos de ordenamiento que vimos hasta ahora pero usando `timeit()` en lugar de contando a mano la cantidad de operaciones.
 
-+ Juntá en el archivo `time_ordenamiento.py` los métodos de búsqueda del [Ejercicio 11.6](../11_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-116).
++ Juntá en el archivo `time_ordenamiento.py` los métodos de búsqueda del [Ejercicio 11.7](../11_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-117).
 
 + Antes de empezar el experimento, eliminá de las funciones a medir todo código no escencial, en particular los prints para debug. Consumen tiempo y no son parte del algoritmo. También eliminá las cuentas de comparaciones, que ahora no son necesarias.
 
-+ Escribí un experimento que, tal como hiciste en el [Ejercicio 11.4](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-114),
++ Escribí un experimento que, tal como hiciste en el [Ejercicio 11.5](../11_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-115-comparar-métodos-gráficamente),
 para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 al 1000, calcule el tiempo que tarda cada método en ordenar la lista y guarde estos resultados en vectores de largo 256.
 
 + En este caso, vas a tener que generar y guardar todas las listas a ser utilizadas antes de correr el experimento, para poder usar las mismas para evaluar cada método. Definí para eso una función `generar_listas(Nmax)` que genere una lista de listas, una de cada longitud entre 1 y `Nmax`, con valores aleatorios entre 1 y 1000.
@@ -318,7 +318,7 @@ para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 
 + Guardá el archivo `time_ordenamiento.py` para entregarlo.
 
 
-### Ejercicio 11.8: 
+### Ejercicio 11.9: 
 Opcional: Escribí una función `merge3sort` que funcione igual que el merge sort pero en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3(lista1, lista2, lista3)`.
 
 Probá tu función en las siguientes listas:
