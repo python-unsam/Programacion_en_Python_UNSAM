@@ -13,7 +13,6 @@
 * [9. Generadores e iteradores](09_Generadores_e_Iteradores/00_Resumen.md)
 * [10. Recursión y regresión](10_Recursion/00_Resumen.md)
 * [11. Ordenamiento](11_Ordenamiento/00_Resumen.md)
-* [12. Optativos](12_Optativos/00_Resumen.md)
 
 
 Este es un curso que se estará dictando en la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto [IAI](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/) durante el segundo cuatrimestre del 2020.
