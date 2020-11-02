@@ -290,6 +290,8 @@ lista_5 = [2, 5, 1, 0]
 
 Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
 
+_Extra:_ ¿Podés escribir una versión recursiva de este algoritmo?
+
 ### Ejercicio 11.3: ordernar a mano
 Elegí dos listas de las 5 del ejercicio anterior y ordenalas a mano (con papel y lápiz) con los 3 métodos: selección, inserción y burbujeo.
 
