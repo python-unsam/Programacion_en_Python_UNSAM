@@ -10,15 +10,15 @@ Podemos iterar sobre una gran diversidad de objetos.
 
 ```python
 a = 'hola a todes'
-for c in a: # Iterar las letras en a 
+for c in a: # Iterar sobre las letras en a
     ...
 
-b = { 'nombre': 'Elsa', 'password':'foo'}
-for k in b: # Iterar para cada clave de diccionario
+b = {'nombre': 'Elsa', 'password':'foo'}
+for k in b: # Iterar sobre las claves de diccionario
     ...
 
-c = [1,2,3,4]
-for i in c: # Iterar sobre los items en una lista ó tupla
+c = [1, 2, 3, 4]
+for i in c: # Iterar sobre los items en una lista o tupla
     ...
 
 f = open('foo.txt')
@@ -26,7 +26,7 @@ for x in f: # Iterar sobre las líneas de un archivo ASCII
     ...
 ```
 
-Podemos iterar sobre todos estos objetos porque cumplen con un *protocolo* que permite, justamente, iterar.  Veamos algo sobre este protocolo:
+Podemos iterar sobre todos estos objetos porque cumplen con un *protocolo* que permite, justamente, iterar. Veamos algo sobre este protocolo:
 
 ### El protocolo de iteración
 
@@ -95,10 +95,10 @@ for c in camion:
 Construí la siguiente lista:
 
 ```python
-a = [1,9,4,25,16]
+a = [1, 9, 4, 25, 16]
 ```
 
-Y ahora iterá sobre esa lista *a mano*: Llamá al método `__iter__()` para obtener un objeto iterador y llama al método  `__next__()`  para obtener sucesivamente cada uno de los elementos.
+Y ahora iterá sobre esa lista *a mano*: Llamá al método `__iter__()` para obtener un objeto iterador y llama al método  `__next__()` para obtener sucesivamente cada uno de los elementos.
 
 ```python
 >>> i = a.__iter__()
@@ -127,7 +127,7 @@ La función nativa de Python `next()` es un "atajo" al método `__next__()` de u
 >>> f = open('Data/camion.csv')
 >>> f.__iter__()    # Notar que esto apunta al método...
                     # ...que accede al archivo mismo.
-<_io.TextIOWrapper name='Data/portfolio.csv' mode='r' encoding='UTF-8'>
+<_io.TextIOWrapper name='Data/camion.csv' mode='r' encoding='UTF-8'>
 >>> next(f)
 'nombre,cajones,precio\n'
 >>> next(f)
@@ -174,7 +174,7 @@ from camion import Camion
 
 def leer_camion(filename):
     '''
-    Lee un archivo con el contenido de un camión 
+    Lee un archivo con el contenido de un camión
     y lo devuelve como un objeto Camion.
     '''
     with open(filename) as file:
@@ -182,7 +182,7 @@ def leer_camion(filename):
                                         select=['nombre','cajones','precio'],
                                         types=[str,int,float])
 
-    camion = [ Lote(d['nombre'], d['cajones'], d['precio']) for d in camiondicts ]
+    camion = [Lote(d['nombre'], d['cajones'], d['precio']) for d in camiondicts]
     return Camion(camion)
 ...
 ```
@@ -245,7 +245,7 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 ```
 
 ### Ejercicio 9.3: Un iterador adecuado
-Cuando hagas clases que sean recipientes ó contenedores de estructuras de datos vas a necesitar que hagan algo más que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en la [Sección 8.3](../08_Clases_y_Objetos/03_Métodos_Especiales.md#métodos-especiales-para-convertir-a-strings). Aquí hay algunos:
+Cuando hagas clases que sean recipientes o contenedores de estructuras de datos vas a necesitar que hagan algo más que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en la [Sección 8.3](../08_Clases_y_Objetos/03_Métodos_Especiales.md#métodos-especiales-para-convertir-a-strings). Aquí hay algunos:
 
 ```python
 class Camion:
@@ -287,7 +287,9 @@ Lote('Lima', 100, 32.2)
 >>> camion[1]
 Lote('Naranja', 50, 91.1)
 >>> camion[0:3]
-[Lote('Lima', 100, 32.2), Lote('Naranja', 50, 91.1), Lote('Caqui', 150, 83.44)]
+[Lote('Lima', 100, 32.2),
+ Lote('Naranja', 50, 91.1),
+ Lote('Caqui', 150, 103.44)]
 >>> 'Naranja' in camion
 True
 >>> 'Manzana' in camion
@@ -297,8 +299,8 @@ False
 
 Guardá tu versión de `camion.py` con estos cambios para entregar y para la revisión de pares.
 
-**Un comentario importante sobre todo esto:** 
-Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que estos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se esperan *a priori* que vayan a cumplir, justamente por el simple hecho de ser objetos contenedores.
+**Un comentario importante sobre todo esto:**
+Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que éstos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se espera *a priori* que vayan a cumplir, justamente por el simple hecho de ser objetos contenedores.
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](02_iteracion_a_medida.md)

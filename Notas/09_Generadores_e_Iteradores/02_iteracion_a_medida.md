@@ -4,7 +4,7 @@
 
 En esta sección introducimos el concepto de función generadora. Estas funciones te permiten obtener el iterador que necesites.
 
-### Un problema de iteración 
+### Un problema de iteración
 
 Suponé que querés crear una secuencia particular de iteración: una cuenta regresiva, por decir algo.
 
@@ -27,7 +27,7 @@ def regresiva(n):
         yield n
         n -= 1
 ```
-*Nota: "yield" se traduce como "rendir" ó "entregar"*
+*Nota: "yield" se traduce como "rendir" ó "entregar".*
 
 Por ejemplo:
 
@@ -43,7 +43,7 @@ Un generador es *cualquier* función que usa el commando `yield`.
 
 El comportamiento de los generadores es algo diferente al del resto de las funciones.
 
-Al llamar a un generador creás un objeto generador, pero su función no se ejecuta de inmediato. 
+Al llamar a un generador creás un objeto generador, pero su función no se ejecuta de inmediato.
 
 ```python
 def regresiva(n):
@@ -82,7 +82,7 @@ Lo que hace `yield` es notable: produce un valor, y luego suspende la ejecución
 >>> x.__next__()
 8
 ```
-Cuando finalmente se llega al final de la función, la iteración da un error. 
+Cuando finalmente se llega al final de la función, la iteración da un error.
 
 ```python
 >>> x.__next__()
@@ -112,19 +112,19 @@ Por ejemplo, probá este generador que busca un archivo y entrega las líneas qu
 >>> for line in open('Data/camion.csv'):
         print(line, end='')
 
-nombre,cantidad,precio
-"Lima",100,32.20
-"Naranja",50,91.10
-"Limon",150,83.44
-"Mandarina",200,51.23
-"Durazno",95,40.37
-"Mandarina",50,65.10
-"Naranja",100,70.44
+nombre,cajones,precio
+Lima,100,32.2
+Naranja,50,91.1
+Caqui,150,103.44
+Mandarina,200,51.23
+Durazno,95,40.37
+Mandarina,50,65.1
+Naranja,100,70.44
 >>> for line in filematch('Data/camion.csv', 'Naranja'):
         print(line, end='')
 
-"Naranja",50,91.10
-"Naranja",100,70.44
+Naranja,50,91.1
+Naranja,100,70.44
 >>>
 ```
 
@@ -143,9 +143,9 @@ bash % python3 sim_mercado.py
 
 Después, olvidate de él. Dejálo ahí, corriendo.
 
-Usando otra consola, mirá el contenido de `Data/mercadolog.csv`. Vas a ver que cada tanto se agrega una nueva línea al archivo. 
+Usando otra consola, mirá el contenido de `Data/mercadolog.csv`. Vas a ver que cada tanto se agrega una nueva línea al archivo.
 
-Ahora que el programa generador de datos está en ejecución, escribamos un programa que abra el archivo, vaya al final, y espere nuevos datos. Para esto creá un programa llamado `vigilante.py` (es uno de los ejercicios a entregar) que contenga el siguiente código. 
+Ahora que el programa generador de datos está en ejecución, escribamos un programa que abra el archivo, vaya al final, y espere nuevos datos. Para esto creá un programa llamado `vigilante.py` (es uno de los ejercicios a entregar) que contenga el siguiente código.
 
 ```python
 # vigilante.py
@@ -170,13 +170,13 @@ while True:
 
 *Nota: EOF = End Of File (fin de archivo)*
 
-Cuando ejecutes el programa vas a ver un indicador de precios en el mercado en tiempo real, con indicación de qué producto se trata, cuál es su precio, y cuál es el volumen de la operación (en cantidad de cajones). 
+Cuando ejecutes el programa vas a ver un indicador de precios en el mercado en tiempo real, con indicación de qué producto se trata, cuál es su precio, y cuál es el volumen de la operación (en cantidad de cajones).
 
 *Observación:* La forma en que usamos el método `readline()` en este ejemplo es un poco rara, no es la forma en que se suele usar (dentro de un ciclo `for` para recorrer el contenido de un archivo). En este caso la estamos usando para mirar constantemente el fin de archivo para obtener los últimos datos que se hayan agregado (`readline()` devuelve ó bien el último dato o bien una cadena vacía).
 
 ### Ejercicio 9.6: Uso de un generador para producir datos
 Si analizás un poco el código del [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) vas a notar que la primera parte del programa "produce" datos (los obtiene del archivo) y la segunda los procesa y los imprime, es decir "consume" datos. Una característica importante de las funciones generadoras es que podés mover todo el código a una función reutilizable. Probalo vos.
- 
+
 Modificá el código del [Ejercicio 9.5](../09_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-95-monitoreo-de-datos-en-tiempo-real) de modo que la lectura del archivo esté resuelta por una única función generadora `vigilar()` a la que se le pasa un nombre de archivo como parámetro. Hacelo de modo que el siguiente código funcione:
 
 ```python
@@ -202,20 +202,20 @@ if __name__ == '__main__':
 Guradá esta versión de `vigilante.py` para entregar al final de la clase.
 
 ### Ejercicio 9.7: Cambios de precio de un camión
-Modificá el programa `vigilante.py` para que sólo informe las líneas que tienen precios de lotes incluídos en un camión, e ignore el resto de los productos. Por ejemplo: 
+Modificá el programa `vigilante.py` para que sólo informe las líneas que tienen precios de lotes incluídos en un camión, e ignore el resto de los productos. Por ejemplo:
 
 ```python
 if __name__ == '__main__':
     import informe
-    
+
     camion = informe.leer_camion ('Data/camion.csv')
-    
+
     for line in vigilar('Data/mercadolog.csv'):  
         fields = line.split(',')
         nombre = fields[0].strip('"')
         precio = float(fields[1])
         volumen = int(fields[2])
-        
+
         if nombre in camion:    
             print(f'{nombre:>10s} {precio:>10.2f} {volumen:>10d}')
 ```
