@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Secuencias)](05_Secuencias.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la segunda clase)](05_CierreClase.md)
 
 # 2.4 Contenedores
 
@@ -390,5 +390,5 @@ Supongamos que los precios en `camion.csv` son los precios pagados al productor 
 Ahora vamos calcular el balance del negocio: juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y completa el programa para que con los precios del camión ([Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios)) y los de venta en el negocio ([Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores)) calcule lo que costó el camión, lo que se recaudo con la venta, y la diferencia. ¿Hubo ganancia o pérdida? El programa debe imprimir por pantalla un balance con estos datos.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Secuencias)](05_Secuencias.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la segunda clase)](05_CierreClase.md)
 
