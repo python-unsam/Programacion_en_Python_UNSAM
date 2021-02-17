@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Trabajando con datos)](../03_Mas_Datos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Trabajando con más datos)](../03_Mas_Datos/00_Resumen.md)
 
 # 2. Trabajando con datos
 Para escribir programas útiles, necesitamos aprender a trabajar con datos. En esta clase introducimos las estructuras de datos elementales de Python que nos faltan: tuplas, conjuntos y diccionarios y profundizamos un poco más en las listas y sus usos.
@@ -12,4 +12,4 @@ Recordá que, aunque no termines todos, completar el formulario del final de cad
 * [2.5 Cierre de la segunda clase](05_CierreClase.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Trabajando con datos)](../03_Mas_Datos/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción a Python)](../01_Introduccion/00_Resumen.md) \| [Próximo (3 Trabajando con más datos)](../03_Mas_Datos/00_Resumen.md)

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Trabajando con datos)](../03_Mas_Datos/00_Resumen.md) \| [Próximo (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Trabajando con más datos)](../03_Mas_Datos/00_Resumen.md) \| [Próximo (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md)
 
 # 4. Algoritmos sobre listas y comprensión de listas
 En esta clase empezamos a usar un IDE (Spyder), discutimos los tipos de errores que pueden aparecer en un programa. Introducimos algunas técnicas primitivas para buscar bugs y les proponemos una serie de ejercicios donde tienen que escribir algoritmos que operen sobre listas. Luego introducimos la _comprensión de listas_, un concepto muy hermoso y pythonesco. Cerramos la clase con una discusión sobre el concepto de objeto que subyace al lenguaje y algunos ejercicios para repasar lo conceptos con el dataset de la clase pasada.
@@ -14,4 +14,4 @@ En esta clase empezamos a usar un IDE (Spyder), discutimos los tipos de errores 
 * [4.7 Cierre de la tercera clase](07_Cierre.md)
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Trabajando con datos)](../03_Mas_Datos/00_Resumen.md) \| [Próximo (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Trabajando con más datos)](../03_Mas_Datos/00_Resumen.md) \| [Próximo (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md)

@@ -4,7 +4,7 @@
 
 * [1. Introducción a Python](01_Introduccion/00_Resumen.md)
 * [2. Trabajando con datos](02_Datos/00_Resumen.md)
-* [3. Trabajando con datos](03_Mas_Datos/00_Resumen.md)
+* [3. Trabajando con más datos](03_Mas_Datos/00_Resumen.md)
 * [4. Algoritmos sobre listas y comprensión de listas](04_Listas_y_Listas/00_Resumen.md)
 * [5. Aleatoridad](05_Random_Plt_Dbg/00_Resumen.md)
 * [6. Complejidad y Organización de programas](06_Organización_y_Complejidad/00_Resumen.md)

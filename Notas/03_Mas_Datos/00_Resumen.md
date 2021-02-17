@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (2 Trabajando con datos)](../02_Datos/00_Resumen.md) \| [Próximo (4 Algoritmos sobre listas y comprensión de listas)](../04_Listas_y_Listas/00_Resumen.md)
 
-# 3. Trabajando con datos
+# 3. Trabajando con más datos
 
 Para escribir programas útiles, necesitamos aprender a trabajar con datos. En esta clase vas a escribir un programa que lee un archivo de datos en formato csv y realiza un cálculo simple. Vas a aprender a estructurar tu código creando funciones.
 
