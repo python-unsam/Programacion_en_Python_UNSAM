@@ -54,7 +54,7 @@ horas semanales de dedicación, durante cuatro meses.
 El curso lo dictan dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
 Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
-Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Adems, probablemente contemos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado.
+Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, probablemente contemos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado.
 
 ## Preinscripción
 La preinscripción está abierta hasta el miércoles 24 de febrero de 2021. En los días siguientes haremos la inscripción definitiva. El curso comienza el miércoles 10 de marzo a las 14hs. Para preinscribirte completá [este formulario](https://forms.gle/kjaXnBcJCL4d9a8t7).
