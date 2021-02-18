@@ -16,17 +16,16 @@ para poder **programar algoritmos** y comprender los métodos
 desarrollados por otres. Está orientado a preparar a le estudiante para
 profundizar en temas de **análisis y visualización de datos, aprendizaje automático, modelado matemático y desarrollo de scripts**.
 
-El curso comienza el 10 de marzo y se dicta semanalmente los días miércoles 14hs hasta fin de junio 2021. 
-El material escrito lo iremos subiendo semanalmente a este repositorio y las clases (miércoles de 14 a 16hs) quedarán grabadas de manera que el curso completo (salvo los paricales) se puede hacer de manera asincrónica.
+El curso comienza el 10 de marzo y se dicta semanalmente los días miércoles de 14hs de 16hs hasta fin de junio 2021. 
+El material escrito lo iremos subiendo semanalmente a este repositorio y las clases sincrónicas de los miércoles quedarán grabadas de manera que el curso completo (salvo los paricales) se puede hacer de manera asincrónica.
 
-Es un curso gratuito y la preinscripción está abierta hasta el martes 23 de febrero de 2021.
+Es un curso gratuito y la preinscripción está abierta hasta el miércoles 24 de febrero de 2021.
 
 
 ## Audiencia. ¿Para quién está pensado?
 El curso está orientado a estudiantes de grado y posgrado e investigadores con algunos
-conocimientos previos de programación. 
-
-Este curso está orientado a personas con alguna experiencia previa en programación, aunque no asumimos ningún conocimiento del lenguaje Python. Es un curso intenso y desafiante, que invita a pensar y a desarrollar algoritmos.
+conocimientos previos de programación, aunque no asumimos ningún conocimiento del lenguaje Python. 
+Es un curso intenso y desafiante, que invita a pensar y a desarrollar algoritmos.
 
 
 ## Contenidos
@@ -36,7 +35,7 @@ Python y algunos conceptos del diseño de algoritmos. El curso está orientado a
 ## Requerimientos
 Para hacer este curso solo hace falta tener instalado el Python 3.6
 (o uno más nuevo), comprometerse a leer las clases y a hacer los 
-ejercicios de las guias semanales, lo que demandará alrededor de 15 horas de
+ejercicios de las guías semanales, lo que demandará alrededor de 15 horas de
 dedicación semanal (en algunos casos menos, en algunos casos más, dependiendo del estudiante). 
 Pedimos tener alguna experiencia previa programando,
 aunque sea poca. Este no es un curso de introducción a la informática.
@@ -55,7 +54,7 @@ horas semanales de dedicación, durante cuatro meses.
 El curso lo dictan dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
 Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
-Dr. en Computación y trabaja en temas ambientales.
+Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban).
 
 ## Preinscripción
-La preinscripción está abierta hasta el martes 23 de febrero de 2021. En los das siguientes haremos la inscripción definitiva. El curso comienza el miércoles 10 de marzo 14hs. Para preinscribirte completá [este formulario](https://google.com).
+La preinscripción está abierta hasta el miércoles 24 de febrero de 2021. En los días siguientes haremos la inscripción definitiva. El curso comienza el miércoles 10 de marzo a las 14hs. Para preinscribirte completá [este formulario](https://forms.gle/kjaXnBcJCL4d9a8t7).
