@@ -63,7 +63,7 @@ tip: Usá el guión bajo (underscore, \_) para referirte al resultado del últim
 ### Ejercicio 1.2: Obtener ayuda
 Usá el comando `help()` para obtener ayuda sobre la función  `abs()`. Luego, usá el `help()` para obtener la ayuda sobre la función `round()`. Tipeá `help()` sólo para entrar en la ayuda en modo  interactivo.
 
-El `help()` no funciona con los comandos básicos de Python como`for`, `if`, `while`, etc. Si tipeás `help(for)` vas a obtener un error. Podés probar usando comillas como en  `help("for")`, en algunos entornos funciona bien. Si no, siempre podés hacer una búsqueda en internet. 
+El `help()` no funciona con los comandos básicos de Python como `for`, `if`, `while`, etc. Si tipeás `help(for)` vas a obtener un error. Podés probar usando comillas como en  `help("for")`, en algunos entornos funciona bien. Si no, siempre podés hacer una búsqueda en internet. 
 
 La documentación oficial en inglés de Python se encuentra en <http://docs.python.org>. Por ejemplo, encontrá ahí la documentación sobre la función `abs()` (ayuda: está dentro de "library reference" y relacionado a las "built-in functions").
 
