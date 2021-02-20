@@ -1,4 +1,4 @@
-# Consultas y Grupo de Slack
+# Grupo de Slack - Información y Consultas
 
 La forma de recibir información y hacer consultas en este curso es por medio del [grupo de mensajería Slack](https://join.slack.com/t/python-unsam-2021c1/shared_invite/zt-mgpaq6fb-7UxVugBXjNc8YfWA_xJi1g).
 
