@@ -72,7 +72,7 @@ Este curso está estructurado como una serie de páginas web tradicionales en la
 
 Es importante que tipées los comandos a mano. Para usar copy-paste quizás mejor ni hacerlos. Parte del objetivo de los ejercicios es entrenar tus manos, tus ojos y tu cabeza en leer, escribir y mirar código tal como dice [Zed Shaw en su libro](https://learntocodetogether.com/learn-python-the-hard-way-free-ebook-download/). Usar copy-paste excesivamente es como hacerte trampa a vos misme. Es como tratar de aprender a tocar la guitarra escuchando discos: es probable que no aprendas nunca.
 
-Si en algún momento necesitás hacer "copy-paste" de fragmentos de código, seleccioná el código que viene luego del símbolo `>>>` y hasta la siguiente linea en blanco o el siguiente `>>>` (el que aparezca primero). Seleccioná "copy" en el navegador (Ctrl-C), andá al intérprete de Python y poné "paste" (Ctrl-V o Crtl-shift-V) para pegarlo. Para ejecutar el código es posible que tengas que apretar "Enter" luego de pegarlo.
+Si, de todas formas, en algún momento necesitás hacer "copy-paste" de fragmentos de código, seleccioná el código que viene luego del símbolo `>>>` y hasta la siguiente linea en blanco o el siguiente `>>>` (el que aparezca primero). Seleccioná "copy" en el navegador (Ctrl-C), andá al intérprete de Python y poné "paste" (Ctrl-V o Crtl-shift-V) para pegarlo. Para ejecutar el código es posible que tengas que apretar "Enter" luego de pegarlo.
 
 Usá copy-paste para ejecutar los siguientes comandos:
 
@@ -93,7 +93,7 @@ Usá copy-paste para ejecutar los siguientes comandos:
 >>>
 ```
 
-Advertencia: No es posible pegar más de un comando de Python (comandos que aparecen luego del símbolo `>>>`) por vez en el entorno básico de Python.
+Advertencia: Cuando tenés algo como el código de arriba, no es posible copiar y pegar en el entorno básico de Python más de un comando por vez. El símbolo `>>>` lo impide.
 
 
 
