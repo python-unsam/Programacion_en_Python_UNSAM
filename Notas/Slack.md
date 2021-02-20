@@ -1,6 +1,6 @@
-# Consultas y Grupo de Slack
+    # Consultas y Grupo de Slack
 
-La forma de hacer consultas en este curso es por medio del [grupo de mensajería Slack](https://join.slack.com/t/python--unsam/shared_invite/zt-fkzwu21z-HSvy~tajpu6Wy3HHw9iKkQ).
+La forma de hacer consultas en este curso es por medio del [grupo de mensajería Slack](https://join.slack.com/t/python-unsam-2021c1/shared_invite/zt-mgpaq6fb-7UxVugBXjNc8YfWA_xJi1g).
 
 Por favor, no nos manden correos a <python@unsam.edu.ar>. Esa casilla la usamos solamente para enviar información pero no la leemos.
 
@@ -12,16 +12,26 @@ Las consultas más importantes serán respondidas en la clase del miércoles sig
 
 El slack en su versión gratuita tiene un límite de 10k mensajes y luego comienza a borrar los más viejos. Es por eso que les pedimos que sean particularmente responsables con lo que envían. Un mensaje con un solo emoji puede borrar un mensaje anterior con una resolución de un ejercicio. Usemos el slack libremente para preguntar y responder sobre el curso pero evitemos los mensajes superfluos o de otros temas. Traten de no escribir muchos mensajes cortos para hacer o responder una consulta, sino un mensaje con todo lo que tengan para decir sobre ese tema.
 
+Fomentamos también la creación de grupos de consultas entre estudiantes para despejar las dudas más comunes (WhatsApp, Discord, Telegram, etc).
+
+Ante una duda, el orden que sugerimos es el siguiente:
+1. tratar de despejarla usando las notas del curso,
+2. mirar la documentación oficial de python,
+3. consultar en los grupos de estudiantes o foros,
+4. si nada de eso la resolvió, postear la duda en el Slack.
+
+En particular, aprender a preguntar en los foros es una parte fundamental de aprender a programar.
+
 
 ## Clases de consulta de los miércoles
 
-Todos los miércoles por la tarde daremos una clase breve (de menos de dos horas). Cuando una pregunta quede sin respuesta en el slack o nos parezca interesante profundizar en el tema lo tomaremos para desarrolar al comienzo de la clase siguiente. 
+Todos los miércoles por la tarde daremos clase. Cuando una pregunta quede sin respuesta en el slack o nos parezca interesante profundizar en el tema lo tomaremos para desarrolar al comienzo de la clase siguiente. 
 
-Las clases comenzarán con un cierre del tema anterior y la realización de algún ejercicio que merezca una aclaración. Luego daremos una introducción al tema siguiente y responderemos consultas online.
+Las clases comenzarán con un cierre del tema anterior y la realización de algún ejercicio que merezca una aclaración. Luego daremos una introducción a los temas de la semana siguiente.
 
 # Documentación y foros
 
-Además del grupo del curso, les dejamos estos recursos muy útiles con documentación y foros de programación donde encontrarán muchas respuestas fácilmente.
+Les dejamos links a estos recursos muy útiles con documentación y foros de programación donde encontrarán muchas respuestas fácilmente.
 
 ## Documentación de referencia y manuales
 
@@ -33,8 +43,8 @@ Además del grupo del curso, les dejamos estos recursos muy útiles con document
 
 ## Foros y Google
 
-Las consultas online son parte de la forma de programar contemporánea. Es usual hacer cut-and-paste en google con los errores que no sabemos resolver para buscar ayuda. ¡Y funciona muy bien!
+Las consultas online son parte de la forma de programar contemporánea. Es usual hacer copy-paste en google con los errores que no sabemos resolver para buscar ayuda. ¡Y funciona muy bien!
 
 Hay foros que suelen ser de mucha ayuda. En particular, [Stackoverflow](https://stackoverflow.com/) es una gran fuente de conocimiento sobre programación en Python y [su versión en español](https://es.stackoverflow.com/), aunque menos concurrida, también puede ser de utilidad.
 
-Si no encuentran aquí la forma de sacarse una duda, recurran al [grupo de consultas Slack del curso](https://join.slack.com/t/python--unsam/shared_invite/zt-gec59g9y-YCvNs84BkR5r70KC52s17Q).
+Si no encuentran aquí o en los grupos pequeños la forma de sacarse una duda, recurran al grupo de consultas Slack del curso.
