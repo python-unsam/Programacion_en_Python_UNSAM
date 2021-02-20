@@ -49,7 +49,7 @@ Veamos en mayor detalle cómo funciona este REPL:
 - `>>>` es el símbolo del intérprete para comenzar un nuevo comando.
 - `...` es el símbolo del intérprete para continuar con un comando comenzado antes. Dejá una línea en blanco para terminar lo que ya ingresaste.
 
-El símbolo `...` puede mostrarse o no dependiendo de tu entorno. En este curso lo mostraremos como líneas en blanco para facilitar el copy-paste de fragmentos de código.
+El símbolo `...` puede mostrarse o no dependiendo de tu entorno. En este curso lo mostraremos como líneas en blanco para facilitar el copy-paste de fragmentos de código (del que ya dijimos, ¡no hay que abusar!).
 
 Antes vimos que el guión bajo `_` guarda el último resultado.
 
@@ -74,7 +74,7 @@ Los programas se guardan en archivos `.py`.
 print('hello world')
 ```
 
-Podés crear estos archivos con tu editor de texto favorito. Más adelante vamos a proponerles usar el `spyder` que es un entorno de desarrollo integrado (IDE) que permite tener en la pantalla un editor y un intérprete al mismo tiempo, entre otras cosas. Pero por ahora usemos el block de notas, o el gedit para seguir con estos ejemplos.
+Podés crear estos archivos con tu editor de texto favorito. Más adelante vamos a proponerles usar el `spyder` que es un entorno de desarrollo integrado (IDE) que permite tener en la pantalla un editor y un intérprete al mismo tiempo, entre otras cosas. Pero por ahora usemos el block de notas, el gedit o tu editor favorito para seguir estos ejemplos.
 
 ### Ejecutar programas
 
@@ -322,7 +322,7 @@ print('Hola')
 print('Mi nombre es', 'Juana')
 ```
 
-This prints:
+Esto imprime:
 
 ```code
 Hola
@@ -351,7 +351,7 @@ name = input('Ingresá tu nombre:')
 print('Tu nombre es', name)
 ```
 
-`input` imprime el texto que le pases como parámetro y espera una respuesta. Es útil para programas pequeños, ejercitarse o para debuguear un código. Casi no se lo usa en programas reales.
+`input` imprime el texto que le pases como parámetro y espera una respuesta. Es útil para programas pequeños, para hacer ejercicios o para debuguear un código. Casi no se lo usa en programas reales.
 
 ### El comando pass
 
@@ -398,7 +398,7 @@ Traceback (most recent call last):
 NameError: name 'dias' is not defined
 ```
 
-Aprender a leer y entender los mensajes de error es una parte fundamental de programar en Python. Si tu programa *crashea* (se rompe, da error) la última línea del mensaje de error indica el motivo. Sobre eso, vas a ver un fragmento de código, un nombre de archivo y un número de línea que identifican el problema.
+Aprender a leer y entender los mensajes de error es una parte fundamental de programar en Python. Si tu programa *crashea* (se rompe, da error) la última línea del mensaje de error indica el motivo. Un poco más arriba vas a ver un fragmento de código, un nombre de archivo y un número de línea que identifican el problema.
 
 * ¿En qué linea está el error?
 * ¿Cuál es el error?
@@ -411,7 +411,7 @@ Este es el primer conjunto de ejercicios en el que vas a tener que crear un arch
 
 Una pelota de goma es arrojada desde una altura de 100 metros y cada vez que toca el piso salta 3/5 de la altura desde la que cayó. Escribí un programa `rebotes.py` que imprima una tabla mostrando las alturas que alcanza en cada uno de sus primeros diez rebotes.
 
-Tu programa debería hacer una tabla que se parezca a esta:
+Tu programa debería generar una tabla que se parezca a esta:
 
 ```code
 1 60.0
