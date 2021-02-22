@@ -2,7 +2,7 @@
 
 # 1.3 Números
 
-Esta sección introduce los cálculos matemáticos.
+Esta sección introduce las operaciones matemáticas elementales.
 
 ### Tipos de números
 
@@ -15,7 +15,7 @@ Python tiene 4 tipos de números:
 
 ### Booleanos (bool)
 
-Las variables booleanas se llaman así en honor al lógico inglés George Bool. Pueden tomar dos valores: `True` y `False` (verdadero y falso).
+Las variables booleanas se llaman así en honor al lógico inglés [George Boole](https://es.wikipedia.org/wiki/George_Boole). Pueden tomar dos valores: `True` y `False` (verdadero y falso).
 
 ```python
 a = True
@@ -210,7 +210,7 @@ Probalo.
 >>>
 ```
 
-*Cuidado: el separador decimal en Python es el punto, como en inglés, y no la coma del castellano. Así, el comando `float(3,141592)` da un "ValueError".*
+*Cuidado: el separador decimal en Python es el punto, como en inglés, y no la coma del castellano. Por eso el comando `float(3,141592)` da un `ValueError`.*
 
 ## Ejercicios
 

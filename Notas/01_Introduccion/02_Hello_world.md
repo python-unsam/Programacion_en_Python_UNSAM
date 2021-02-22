@@ -226,7 +226,7 @@ while num_billetes * grosor_billete <= altura_obelisco:
 print('Cantidad de días', dia)
 ```
 
-Los comandos indentados debajo del `while` se van a a ejecutar mientras que la expresión luego del  `while` sea verdadera (`true`).
+Los comandos indentados debajo del `while` se van a a ejecutar mientras que la expresión luego del  `while` sea verdadera (`True`).
 
 ### Indentación
 
