@@ -114,10 +114,10 @@ b = 4e5 # 4 x 10**5 o 400,000
 c = -1.345e-10
 ```
 
-Los números de tipo floats son representados en la máquina como números de doble precisión usando la representación nativa del microprocesador [IEEE 754](https://es.wikipedia.org/wiki/IEEE_754).
-Es el mismo tipo que los `double` en el lenguaje C (para los que conozcan).
+Los números de tipo floats son representados en la máquina como números de doble precisión usando la representación nativa del microprocesador que sigue el estándar [IEEE 754](https://es.wikipedia.org/wiki/IEEE_754).
+Para los que los conozcan: es el mismo tipo que los `double` en el lenguaje C.
 
-> Almacenan hasta 17 digitos con un
+> Un `float` almacenan hasta 17 digitos con un
 > exponente entre -308 to 308
 
 Cuidado que la aritmética de los números de punto flotante no es exacta.
