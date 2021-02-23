@@ -214,7 +214,7 @@ Probalo.
 
 ## Ejercicios
 
-Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Ejercicios`. Buscá el archivo `hipoteca.py` y hacé los ejercicios en ese archivo, usando un editor de texto. Ejecutalo desde la línea de comandos.
+Recordatorio: Asumimos que estás trabajando en el subdirectorio `ejercicios_python/Clase01/`. Buscá el archivo `hipoteca.py` y hacé los ejercicios en ese archivo, usando un editor de texto. Ejecutalo desde la línea de comandos.
 
 ### Ejercicio 1.7: La hipoteca de David
 David solicitó un crédito a 30 años para comprar una vivienda, con una tasa fija nominal anual del 5%. Pidió $500000 al banco y acordó un pago mensual fijo de $2684,11.
@@ -280,7 +280,7 @@ Meses:  310
 ### Ejercicio 1.11: Bonus
 Ya que estamos, corregí el código anterior de forma que el pago del último mes se ajuste a lo adeudado.
 
-Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `Ejercicios`. Vamos a volver a trabajar con él.
+Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `ejercicios_python/Clase01`. Vamos a volver a trabajar con él.
 
 ### Ejercicio 1.12: Un misterio
 Las funciones `int()` y `float()` pueden usarse para convertir números. Por ejemplo,
@@ -302,7 +302,7 @@ True
 ```
 
 ### Ejercicio 1.13: El volúmen de una esfera
-En tu directorio de trabajo, escribí un programa llamado `esfera.py` que le pida al usuario que ingrese por teclado el radio *r* de una esfera y calcule e imprima el volumen de la misma. *Sugerencia: recordar que el volúmen de una esfera es 4/3 πr^3*.
+En tu directorio de trabajo de esta clase, escribí un programa llamado `esfera.py` que le pida al usuario que ingrese por teclado el radio *r* de una esfera y calcule e imprima el volumen de la misma. *Sugerencia: recordar que el volúmen de una esfera es 4/3 πr^3*.
 
 Finalmente, ejecutá el programa desde la línea de comandos para responder ¿cuál es el volumen de una esfera de radio 6? Debería darte `904.7786842338603`.
 
