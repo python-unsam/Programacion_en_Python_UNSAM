@@ -214,7 +214,7 @@ Probalo.
 
 ## Ejercicios
 
-Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Ejercicios`. Buscá el archivo `hipoteca.py` y hacé los ejercicios con un editor de texto en ese archivo. Ejecutalo desde la línea de comandos.
+Recordatorio: Asumimos que estás trabajando en el subdirectorio `/Ejercicios`. Buscá el archivo `hipoteca.py` y hacé los ejercicios en ese archivo, usando un editor de texto. Ejecutalo desde la línea de comandos.
 
 ### Ejercicio 1.7: La hipoteca de David
 David solicitó un crédito a 30 años para comprar una vivienda, con una tasa fija nominal anual del 5%. Pidió $500000 al banco y acordó un pago mensual fijo de $2684,11.
