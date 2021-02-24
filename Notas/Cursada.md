@@ -45,7 +45,7 @@ En el repositorio van a encontrar un archivo comprimido [Ejercicios.zip](./Ejer
 
 Cada semana vamos a pedirles que, antes de la clase siguiente, entreguen algunos ejercicios de la guía semanal y que completen un breve formulario sobre qué pudieron hacer y qué no, qué fue claro y qué requiere profundizar.
 
-Por otra parte, habrá dos exámenes parciales sobre los contenidos dictados: uno a la mitad y el otro al final del curso. Les estudiantes de posgrado deberán rendir también un exámen final.
+Por otra parte, habrá dos exámenes parciales sobre los contenidos dictados: uno a la mitad y el otro al final del curso. Les estudiantes de posgrado deberán rendir también un examen final.
 
 
 ## Créditos para grado y posgrado
@@ -113,7 +113,7 @@ El siguiente texto de Tim Peters se conoce como **El zen de Python** y explica a
 # Más info
 
 Otros links importantes antes de comenzar a leer las notas:
-* [Instalación de Python](./Instalacion.md)
-* [Documentación, foros, grupo de consultas](./Slack.md)
+* [Instalación de Python](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso)
+* [Documentación, foros, grupo de consultas](./Slack.md#grupo-de-slack---información-y-consultas)
 
-[Contenidos](Contenidos.md)
+[Contenidos](Contenidos.md#curso-de-programación-en-python)

@@ -40,8 +40,8 @@ Finalmente, queremos agradecer muy especialmente el apoyo de Manuela Cerdeiro y 
 Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones preliminares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por el grupo de Slack en el Canal de `errores_y_sugerencias`.
 
 ## El curso
-En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md)!
+En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md#curso-de-programación-en-python)!
 
 Otros links importantes antes de comenzar a leer las notas:
-* [Condiciones de cursada](./Cursada.md)
-* [Instalación de Python](./Instalacion.md)
+* [Condiciones de cursada](./Cursada.md#condiciones-de-cursada)
+* [Instalación de Python](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso)
