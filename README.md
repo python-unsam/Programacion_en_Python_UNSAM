@@ -57,4 +57,4 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, probablemente contemos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado.
 
 ## Preinscripción
-La preinscripción está abierta hasta el miércoles 24 de febrero de 2021. En los días siguientes haremos la inscripción definitiva. El curso comienza el miércoles 10 de marzo a las 14hs. Para preinscribirte completá [este formulario](https://forms.gle/kjaXnBcJCL4d9a8t7).
+La preinscripción al curso que comienza el miércoles 10 de marzo a las 14hs ya cerro. Para que te informemos de futuras adiciones completá [este formulario](https://forms.gle/qfdKoUyyKYqEL6Zp6).
