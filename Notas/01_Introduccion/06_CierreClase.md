@@ -18,7 +18,7 @@ Por favor, usá siempre la misma dirección de mail con la que te inscribiste al
 
 Observación: Si el enunciado de un ejercicio te pide que lo corras con un input particular, por favor poné la salida que obtuviste como comentario en tu código. 
 
-Por último te recordamos que si te quedaron dudas, querés discutir algún tema de interés o pedirnos a los docentes que resolvamos un ejercicio particular para la próxima clase, podés hacelo en el [grupo de Slack](../Slack.md).
+Por último te recordamos que es fundamental para mantenerte al tanto de las novedades del curso así como para hacer consultas a los docentes que te sumes al [grupo de Slack](../Slack.md) de la materia.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Listas)](05_Listas.md)

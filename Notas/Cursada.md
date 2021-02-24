@@ -59,6 +59,12 @@ El curso con exámenes parciales incluidos se va a desarrollar entre el miércol
 
 Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md).
 
+## Identificación
+La dirección de email con la que te inscribiste al curso es la que te va a identificar a lo largo del mismo. Si usás más de una dirección tené cuidado de no confundirlas ya que no registraremos adecuadamente tus entregas.
+
+## Plagio
+Por favor, leé el [código de honor](../Codigo.md) del curso en el que hablamos de las reglas que rigen en este curso para evitar el plagio así como otros aspectos importantes sobre qué se puede compartir y qué no.
+
 
 ## PEP 20 - Simple es mejor que complejo
 
