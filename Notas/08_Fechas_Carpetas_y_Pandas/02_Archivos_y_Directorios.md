@@ -31,7 +31,7 @@ Es importante ver que la salida dependerá del sistema operativo que estés usan
 Podés cambiar de directorio usando la función `chdir()` (_change directory_). Los directorios pueden ser relativos o absolutos (en sistemas operativos basados en Unix '.' es el directorio actual, '..' es el anterior, '/' es el directorio raíz).
 
 ```python
->>> os.chdir('./Data')              # entro en Data, subdirectorio del actual
+>>> os.chdir('../Data')              # entro en ../Data
 >>> print(os.getcwd())
 /home/usuario/ejercicios_python/Data
 >>> os.chdir('..')                  # subo un nivel

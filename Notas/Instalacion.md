@@ -14,9 +14,7 @@ Algunes pueden querer hacer este curso usando el entorno de las Jupyter Notebook
 
 El curso está alojado en un repositorio github. Lo vamos modificando a medida que pasa el tiempo. Por eso no les recomendamos no clonarlo. Preferimos que lo hagas en todo caso hacia el final del curso, cuando los contenidos estén más estables. Por ese mismo motivo no te recomendamos adelantarte mucho en los contenidos. Por más que subamos clases por adelantado, las estaremos cambiando frecuentemente. 
 
-Sí te recomendamos bajarte y descomprimir el archivo [Ejercicios.zip](./Ejercicios.zip). Este archivo tiene una carpeta `/Ejercicios` donde esperamos que hagan los ejercicios del curso y un subdirectorio `/Ejercicios/Data` con algunos archivos de datos que usaremos en los ejemplos y ejercicios. Lo ideal es que te bajes esto a tu máquina y crees tus programas `.py` en la carpeta `/Ejercicios`.
-
-Además, en el repo habrá un directorio `/Soluciones` que tendrá soluciones completas a algunos ejercicios seleccionados. Miralos libremente si necesitás una ayuda, pero tené en cuenta que para sacarle jugo al curso lo ideal es que intentes escribir tu propia solución primero.
+Sí te recomendamos bajarte y descomprimir el archivo [Ejercicios.zip](./Ejercicios.zip). Este archivo contiene una carpeta `/ejercicios_python` y un subdirectorio por clase donde esperamos que hagan los ejercicios del curso, además de otro subdirectorio `/ejercicios_python/Data` con algunos archivos de datos que usaremos en los ejemplos y ejercicios. Lo ideal es que te bajes esto a tu máquina y crees tus programas `.py` en las subcarpetas de `/ejercicios_python` correspondientes a cada clase.
 
 ## La instalación 
 

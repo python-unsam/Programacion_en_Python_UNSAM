@@ -41,7 +41,7 @@ Cada miércoles antes de las 14hs les enviaremos por el grupo de Slack el link p
 
 
 ## Ejercicios, exámenes y aprobación
-En el repositorio van a encontrar un archivo comprimido [Ejercicios.zip](./Ejercicios.zip). Les pedimos que lo descarguen, lo descompriman en sus computadoras y tengan a mano esta carpeta a la hora de hacer los ejercicios. Tiene algunos archivos `.py` de ejemplo y tiene un subdirectorio `Ejercicios/Data/` con algunos archivos de datos tipo CSV que usaremos en el curso. 
+En el repositorio van a encontrar un archivo comprimido [Ejercicios.zip](./Ejercicios.zip). Les pedimos que lo descarguen, lo descompriman en sus computadoras y tengan a mano esta carpeta a la hora de hacer los ejercicios. Tiene algunos archivos `.py` de ejemplo y tiene un subdirectorio `ejercicios_python/Data/` con algunos archivos de datos tipo CSV que usaremos en el curso. 
 
 Cada semana vamos a pedirles que, antes de la clase siguiente, entreguen algunos ejercicios de la guía semanal y que completen un breve formulario sobre qué pudieron hacer y qué no, qué fue claro y qué requiere profundizar.
 

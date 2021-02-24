@@ -280,7 +280,7 @@ Meses:  310
 ### Ejercicio 1.11: Bonus
 Ya que estamos, corregí el código anterior de forma que el pago del último mes se ajuste a lo adeudado.
 
-Asegurate de guardar el archivo  `hipoteca.py` en esta última versión en tu directorio `ejercicios_python/Clase01`. Vamos a volver a trabajar con él.
+Asegurate de guardar en el archivo  `hipoteca.py` esta última versión en tu directorio `ejercicios_python/Clase01/`. Vamos a volver a trabajar con él.
 
 ### Ejercicio 1.12: Un misterio
 Las funciones `int()` y `float()` pueden usarse para convertir números. Por ejemplo,

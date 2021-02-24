@@ -16,7 +16,7 @@ Pandas permite leer diversos formatos de tablas de datos directamente. Probá el
 import pandas as pd
 import os
 
-directorio = 'Data'
+directorio = '../Data'
 archivo = 'arbolado-en-espacios-verdes.csv'
 fname = os.path.join(directorio,archivo)
 df = pd.read_csv(fname)
