@@ -10,7 +10,7 @@ Para hacer este curso solo hace falta tener instalado el Python 3.6 o más nuevo
 
 
 ## Dedicación y duración
-Este es un curso cuatrimestral de grado y posgrado. Tiene diferentes modalidades, algunas sincrónicas y otras asincrónicas. Las clases las tendrán que leer de los apuntes que se van a encontrar aquí mismo, en el repositorio de la materia. Estos apuntes contienen ejercicios que tendrán que entregar semnalmente. Tendremos encuentros semanales on-line para explicaciones y consultas. Hay también un [grupo de para consultas](./Slack.md) y debates entre estudiantes en tiempo real. Por nuestra experiencia previa, el curso demanda unas 15 horas (+/- 5hs) semanales de dedicación durante los cuatro meses. Algunes los completan usando menos de 6hs semanales, otres llegan a necesitar 25.
+Este es un curso cuatrimestral de grado y posgrado. Tiene diferentes modalidades, algunas sincrónicas y otras asincrónicas. Las clases las tendrán que leer de los apuntes que se van a encontrar aquí mismo, en el repositorio de la materia. Estos apuntes contienen ejercicios que tendrán que entregar semnalmente. Tendremos encuentros semanales on-line para explicaciones y consultas. Hay también un [grupo de consultas](./Slack.md#grupo-de-slack---información-y-consultas) y debates entre estudiantes en tiempo real. Por nuestra experiencia previa, el curso demanda unas 15 horas (+/- 5hs) semanales de dedicación durante los cuatro meses. Algunes los completan usando menos de 6hs semanales, otres llegan a necesitar 25.
 
 
 ## Contexto
