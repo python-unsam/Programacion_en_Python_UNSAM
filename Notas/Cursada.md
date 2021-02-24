@@ -35,7 +35,7 @@ El contenido será dictado principalmente de forma asincrónica, por medio de ap
 
 La parte sincrónica durará unas dos horas semanales y tendrá lugar los miércoles a las 14hs por videoconferencia / streaming. En estas clases presenciales discutiremos los ejericicos de la semana anterior y presentaremos brevemente los temas de la semana siguiente.
 
-Habrá también un grupo de discusión y consultas en [Slack](./Slack.md) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios. Será nuestro canal de comunicación. Por favor, súmense.
+Habrá también un grupo de discusión y consultas en [Slack](./Slack.md#grupo-de-slack---información-y-consultas) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios. Será nuestro canal de comunicación. Por favor, súmense.
 
 Cada miércoles antes de las 14hs les enviaremos por el grupo de Slack el link para sumarse a la videoconferencia o streaming de la clase e indicaciones sobre el material. Las clases quedan grabadas de forma que si no pueden participar en el momento tienen la opción de verlas luego. 
 
@@ -57,7 +57,7 @@ La materia es oficialmente de grado y posgrado y, en caso de aprobación, les en
 ## Cronograma
 El curso con exámenes parciales incluidos se va a desarrollar entre el miércoles 10 de marzo y el miércoles 23 de junio del 2021. 
 
-Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md).
+Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso).
 
 ## Identificación
 La dirección de email de inscripción al curso es la que te va a identificar a lo largo del mismo. Si usás más de una dirección tené cuidado de no confundirlas ya que no registraremos adecuadamente tus entregas. ¡Esto es muy importante!
