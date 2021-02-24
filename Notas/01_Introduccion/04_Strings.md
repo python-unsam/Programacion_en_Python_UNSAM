@@ -51,7 +51,7 @@ Las cadenas se representan en Python asociando a cada caracter un número entero
 
 ### Indexación de cadenas
 
-Las cadenas funcionan como vectores, permitiendo el acceso a los caracteres individuales. El índice comienza a contar en cero. Los índices negativos se usan para especificar una posición respecto al final de la cadena.
+Las cadenas funcionan como los vectores multidemensionales en matemática, permitiendo el acceso a los caracteres individuales. El índice comienza a contar en cero. Los índices negativos se usan para especificar una posición respecto al final de la cadena.
 
 ```python
 a = 'Hello world'
@@ -371,10 +371,10 @@ Una limitación de las operaciones básicas de cadenas es que no ofrecen ningún
 >>>
 ```
 
-Para más información sobre el módulo `re`, mirá la [documentación oficial en inglés](https://docs.python.org/3/library/re.html) o algún [tutorial en castellano](https://rico-schmidt.name/pymotw-3/re/index.html).
+Para más información sobre el módulo `re`, mirá la [documentación oficial en inglés](https://docs.python.org/3/library/re.html) o algún [tutorial en castellano](https://rico-schmidt.name/pymotw-3/re/index.html). Es un tema que escapa al contenido del curso pero que te recomendamos que mires en detalle en algún momento. Aunque no justo ahora. Sigamos...
 
 
-### Commentario
+### Comentario
 
 A medida que empezás a usar Python es usual que quieras saber qué otras operaciones admiten los objetos con los que estás trabajando. Por ejemplo. ¿cómo podés averiguar qué operaciones se pueden hacer con una cadena?
 

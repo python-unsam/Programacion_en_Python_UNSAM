@@ -2,8 +2,6 @@
 
 Este es un curso de programación en Python que se dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/). El material del curso está basado en experiencias de otros docentes (ver la sección Agradecimientos).
 
-La preinscripción se cerró el viernes 17 de julio. Si te interesa que te avisemos cuando se dicte nuevamente, completá [este formulario](https://forms.gle/9mMAxRKyQF5SCLuE6).
-
 ## ¿De qué es el curso?
 
 Este es un curso cuatrimestral de algoritmos y Python. Tiene muchos ejercicios y está en desarrollo.
