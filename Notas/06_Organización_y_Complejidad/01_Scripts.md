@@ -250,7 +250,7 @@ Volvé a tu programa `tabla_informe.py` y modificalo de modo que todas las opera
 Juntá la última parte de tu programa en una única función `informe_camion(nombre_archivo_camion, nombre_archivo_precios)`. Deberías obtener una función que al llamarla como sigue, imprima el informe:
 
 ```python
-informe_camion('Data/camion.csv', 'Data/precios.csv')
+informe_camion('../Data/camion.csv', '../Data/precios.csv')
 ```
 
 En su versión final tu programa será una serie de definiciones de funciones seguidos por un único llamado a la funcion `informe_camion()` (la cual ejecuta todos los pasos que constituyen tu programa).
@@ -258,13 +258,13 @@ En su versión final tu programa será una serie de definiciones de funciones se
 Cuando tu programa es una única función, es muy simple ejecutarlo con diferentes entradas. Por ejemplo, después de ejecutar tu programa probá estos comandos en modo interactivo:
 
 ```python
->>> informe_camion('Data/camion2.csv', 'Data/precios.csv')
+>>> informe_camion('../Data/camion2.csv', '../Data/precios.csv')
 ... mirá el resultado ...
 
->>> files = ['Data/camion.csv', 'Data/camion2.csv']
+>>> files = ['../Data/camion.csv', '../Data/camion2.csv']
 >>> for name in files:
         print(f'{name:-^43s}')
-        informe_camion(name, 'Data/precios.csv')
+        informe_camion(name, '../Data/precios.csv')
         print()
 
 ... mirá el resultado ...

@@ -250,7 +250,7 @@ Fijate lo que ocurre cuando leés un camión de frutas y mirás la salida result
 
 ```python
 >>> import informe
->>> camion = informe.leer_camion('Data/camion.csv')
+>>> camion = informe.leer_camion('../Data/camion.csv')
 >>> camion
 ... fijate cuál es la salida ...
 >>>
@@ -281,7 +281,7 @@ Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 6.1](
 
 ```python
 >>> import informe
->>> camion = informe.leer_camion('Data/camion.csv')
+>>> camion = informe.leer_camion('../Data/camion.csv')
 >>> from formato_tabla import crear_formateador, imprimir_tabla
 >>> formateador = crear_formateador('txt')
 >>> imprimir_tabla(camion, ['nombre','cajones'], formateador)

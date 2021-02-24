@@ -253,7 +253,7 @@ También deberías poder ejecutarlo del siguiente modo dentro del intérprete in
 
 ```python
 >>> import informe
->>> informe.main(['informe.py', 'Data/camion.csv', 'Data/precios.csv'])
+>>> informe.main(['informe.py', '../Data/camion.csv', '../Data/precios.csv'])
 
     Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
@@ -272,7 +272,7 @@ Análogamente, modificá el archivo `costo_camion.py` para que incluya una funci
 
 ```python
 >>> import costo_camion
->>> costo_camion.main(['costo_camion.py', 'Data/camion.csv'])
+>>> costo_camion.main(['costo_camion.py', '../Data/camion.csv'])
 Total cost: 47671.15
 >>>
 ```

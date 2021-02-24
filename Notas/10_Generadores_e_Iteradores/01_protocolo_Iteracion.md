@@ -124,10 +124,10 @@ StopIteration
 La función nativa de Python `next()` es un "atajo" al método `__next__()` de un iterador. Probá usarlo a mano sobre un archivo:
 
 ```python
->>> f = open('Data/camion.csv')
+>>> f = open('../Data/camion.csv')
 >>> f.__iter__()    # Notar que esto apunta al método...
                     # ...que accede al archivo mismo.
-<_io.TextIOWrapper name='Data/camion.csv' mode='r' encoding='UTF-8'>
+<_io.TextIOWrapper name='../Data/camion.csv' mode='r' encoding='UTF-8'>
 >>> next(f)
 'nombre,cajones,precio\n'
 >>> next(f)
@@ -191,7 +191,7 @@ Ahora intentá correr el programa `informe.py`. No hay forma. `informe.py` inten
 
 ```python
 >>> import informe
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
+>>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
 ... muere ...
 ```
 
@@ -239,7 +239,7 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 
 ```python
 >>> import costo_camion
->>> costo_camion.costo_camion('Data/camion.csv')
+>>> costo_camion.costo_camion('../Data/camion.csv')
 47671.15
 >>>
 ```
@@ -279,7 +279,7 @@ Por último, probemos esta nueva estructura:
 
 ```python
 >>> import informe
->>> camion = informe.leer_camion('Data/camion.csv')
+>>> camion = informe.leer_camion('../Data/camion.csv')
 >>> len(camion)
 7
 >>> camion[0]

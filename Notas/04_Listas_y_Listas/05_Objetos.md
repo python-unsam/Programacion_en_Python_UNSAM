@@ -271,7 +271,7 @@ Ahora, leé una fila de datos del archivo anterior:
 
 ```python
 >>> import csv
->>> f = open('Data/camion.csv')
+>>> f = open('../Data/camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> row = next(rows)
@@ -387,7 +387,7 @@ Usando las técnicas de este ejercicio, vas a poder escribir instrucciones que c
 Para ilustrar esto, supongamos que leés un archivo de datos de la siguiente forma:
 
 ```python
->>> f = open('Data/dowstocks.csv')
+>>> f = open('../Data/dowstocks.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> row = next(rows)

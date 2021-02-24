@@ -247,7 +247,7 @@ Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista d
 
 ```python
 >>> import fileparse
->>> with open('Data/camion.csv') as lineas:
+>>> with open('../Data/camion.csv') as lineas:
 ...     camion_dicts = fileparse.parse_csv(lineas, select = ['nombre', 'cajones', 'precio'], types = [str, int, float])
 ...
 >>> camion = [ lote.Lote(d['nombre'], d['cajones'], d['precio']) for d in camion_dicts]
@@ -271,10 +271,10 @@ Hecho esto, deberías poder ejecutar tus funciones como antes:
 
 ```python
 >>> import costo_camion
->>> costo_camion.costo_camion('Data/camion.csv')
+>>> costo_camion.costo_camion('../Data/camion.csv')
 47671.15
 >>> import informe
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
+>>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
    Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
       Lima        100      $32.2       8.02

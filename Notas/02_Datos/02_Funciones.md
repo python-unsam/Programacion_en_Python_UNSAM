@@ -148,7 +148,7 @@ def costo_camion(nombre_archivo):
     # Tu código
     ...
 
-costo = costo_camion('Data/camion.csv')
+costo = costo_camion('../Data/camion.csv')
 print('Costo total:', costo)
 ```
 
@@ -161,7 +161,7 @@ bash $ python3 -i costo_camion.py
 Esto va a ejecutar el código en el programa y dejar abierto el intérprete interactivo.
 
 ```python
->>> costo_camion('Data/camion.csv')
+>>> costo_camion('../Data/camion.csv')
 47671.15
 >>>
 ```
@@ -193,7 +193,7 @@ for nombre in ['Pedro','Juan','Caballero']:
 Vamos a usar estas ideas aplicadas al procesamiento de un archivo CSV. ¿Qué pasa si intentás usar la función `costo_camion()` con un archivo que tiene datos faltantes?
 
 ```python
->>> costo_camion('Data/missing.csv')
+>>> costo_camion('../Data/missing.csv')
 Traceback (most recent call last):
     File "<stdin>", line 1, in <módulo>
     File "costo_camion.py", line 11, in costo_camion
@@ -213,7 +213,7 @@ Python viene con una gran biblioteca estándar de funciones útiles. En este cas
 
 ```python
 >>> import csv
->>> f = open('Data/camion.csv')
+>>> f = open('../Data/camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> headers
@@ -239,7 +239,7 @@ Modificá tu programa `costo_camion.py` para que use el módulo `csv` para leer 
 
 ### Ejercicio 2.8: Ejecución desde la línea de comandos con parámetros
 
-En el programa `costo_camion.py`, el nombre del archivo de entrada `'Data/camion.csv'` fue escrito en el código.
+En el programa `costo_camion.py`, el nombre del archivo de entrada `'../Data/camion.csv'` fue escrito en el código.
 
 ```python
 # costo_camion.py
@@ -250,7 +250,7 @@ def costo_camion(nombre_archivo):
     # Tu código
     ...
 
-cost = costo_camion('Data/camion.csv')
+cost = costo_camion('../Data/camion.csv')
 print('Total cost:', cost)
 ```
 
@@ -271,7 +271,7 @@ def costo_camion(nombre_archivo):
 if len(sys.argv) == 2:
     nombre_archivo = sys.argv[1]
 else:
-    nombre_archivo = 'Data/camion.csv'
+    nombre_archivo = '../Data/camion.csv'
 
 costo = costo_camion(nombre_archivo)
 print('Costo total:', costo)
@@ -292,7 +292,7 @@ bash $ python3 camion_commandline.py Data/missing.csv
 Costo total: 30381.15
 bash $
 ```
-Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` porque lo indicamos con la línea `nombre_archivo = 'Data/camion.csv'`.
+Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` porque lo indicamos con la línea `nombre_archivo = '../Data/camion.csv'`.
 
 Guardá el archivo `camion_commandline.py` para entregar al final de la clase.
 

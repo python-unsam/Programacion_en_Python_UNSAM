@@ -378,7 +378,7 @@ Guardar una serie o un DataFrame en el disco es algo realmente sencillo. Probá,
 ## Incorporando el Arbolado lineal
 
 ### Ejercicio 8.7: Lectura y selección
-Vamos a trabajar ahora con el archivo ['arbolado-publico-lineal-2017-2018.csv'](https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal). Descargalo y guardalo en tu directorio 'Data/'.
+Vamos a trabajar ahora con el archivo ['arbolado-publico-lineal-2017-2018.csv'](https://data.buenosaires.gob.ar/dataset/arbolado-publico-lineal). Descargalo y guardalo en tu directorio '../Data/'.
 
 Levantalo y armá un DataFrame `df_lineal` que tenga solamente las siguiente columnas:
 

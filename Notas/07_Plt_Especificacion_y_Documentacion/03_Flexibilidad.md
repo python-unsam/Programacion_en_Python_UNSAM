@@ -101,7 +101,7 @@ Las bibliotecas de código suelen ser más útiles si son flexibles. No restrinj
 
 ```python
 >>> import fileparse
->>> camion = fileparse.parse_csv('Data/camion.csv', types=[str,int,float])
+>>> camion = fileparse.parse_csv('../Data/camion.csv', types=[str,int,float])
 >>>
 ```
 
@@ -111,7 +111,7 @@ Actualmente la función solicita el nombre de un archivo, pero podés hacer el c
 ```python
 >>> import fileparse
 >>> import gzip
->>> with gzip.open('Data/camion.csv.gz', 'rt') as file:
+>>> with gzip.open('../Data/camion.csv.gz', 'rt') as file:
 ...      camion = fileparse.parse_csv(file, types=[str,int,float])
 ...
 >>> lines = ['name,cajones,precio', 'Lima,100,34.23', 'Naranja,50,91.1', 'Mburucuya,75,45.1']
@@ -122,7 +122,7 @@ Actualmente la función solicita el nombre de un archivo, pero podés hacer el c
 Y ahora que pasa si le pasás un nombre de archivo como antes ?
 
 ```python
->>> camion = fileparse.parse_csv('Data/camion.csv', types=[str,int,float])
+>>> camion = fileparse.parse_csv('../Data/camion.csv', types=[str,int,float])
 >>> camion
 ... mirá la salida (debería ser un lío) ...
 >>>

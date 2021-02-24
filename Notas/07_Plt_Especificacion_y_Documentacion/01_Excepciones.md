@@ -281,7 +281,7 @@ La función `parse_csv()` que escribiste en el [Ejercicio 6.6](../06_Organizaci�
 Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers = False` sean pasados juntos. Y que resulte: 
 
 ```python
->>> parse_csv('Data/precios.csv', select = ['name','precio'], has_headers = False)
+>>> parse_csv('../Data/precios.csv', select = ['name','precio'], has_headers = False)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 9, in parse_csv
@@ -302,7 +302,7 @@ El motivo principal para agregar controles de calidad sobre los parámetros de e
 La función `parse_csv()` que escribiste está destinada a procesar un archivo completo. Pero en una situacion real, es posible que los archivos CSV de entrada estén "rotos", ausentes, o que su contenido no se adecúe al formato esperado. Probá esto:  
 
 ```python
->>> camion = parse_csv('Data/missing.csv', types = [str, int, float])
+>>> camion = parse_csv('../Data/missing.csv', types = [str, int, float])
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 36, in parse_csv
@@ -317,7 +317,7 @@ Modificá la función `parse_csv()` de modo que atrape todas las excepciones de 
 Este mensaje deberá incluír el número de fila que causó el problema y el motivo por el cual falló la conversión. Para probar tu nueva función, intentá procesar `Data/missing.csv`. Debería darte algo así:  
 
 ```python
->>> camion = parse_csv('Data/missing.csv', types = [str, int, float])
+>>> camion = parse_csv('../Data/missing.csv', types = [str, int, float])
 Row 4: No pude convertir ['Mandarina', '', '51.23']
 Row 4: Motivo: invalid literal for int() with base 10: ''
 Row 7: No pude convertir ['Naranja', '', '70.44']
@@ -341,7 +341,7 @@ Trabajá siempre con las últimas versiones de tus archivos. En esta clase vamos
 Modificá `parse_csv()` de modo que le usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes.Por ejemplo:
 
 ```python
->>> camion = parse_csv('Data/missing.csv', types = [str,int,float], silence_errors = True)
+>>> camion = parse_csv('../Data/missing.csv', types = [str,int,float], silence_errors = True)
 >>> camion
 [{'cajones': 100, 'nombre': 'Lima', 'precio': 32.2},
  {'cajones': 50, 'nombre': 'Naranja', 'precio': 91.1},

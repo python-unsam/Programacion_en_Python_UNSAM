@@ -427,7 +427,7 @@ Queremos comparar las formas de las siguientes especies de árboles en los parqu
 - Eucalipto, y
 - Ceibo.
 
-Vamos a trabajar nuevamente con el archivo de arbolado porteño en parques que tenés en el archivo 'Data/arbolado-en-espacios-verdes.csv'.
+Vamos a trabajar nuevamente con el archivo de arbolado porteño en parques que tenés en el archivo '../Data/arbolado-en-espacios-verdes.csv'.
 
 + Cargá los datos en un DataFrame `data_arbolado_parques`.
 

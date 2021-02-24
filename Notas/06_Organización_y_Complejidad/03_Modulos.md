@@ -191,10 +191,10 @@ Ahora probá importar tu módulo `fileparse` y pedile `help`.
 Intentá usar el módulo para leer datos de un archivo:
 
 ```python
->>> camion = fileparse.parse_csv('Data/camion.csv',select=['nombre','cajones','precio'], types=[str,int,float])
+>>> camion = fileparse.parse_csv('../Data/camion.csv',select=['nombre','cajones','precio'], types=[str,int,float])
 >>> camion
 ... mirá la salida ...
->>> lista_precios = fileparse.parse_csv('Data/precios.csv',types=[str,float], has_headers=False)
+>>> lista_precios = fileparse.parse_csv('../Data/precios.csv',types=[str,float], has_headers=False)
 >>> lista_precios
 ... mirá la salida ...
 >>> precios = dict(lista_precios)
@@ -209,7 +209,7 @@ Importá sólo la función para evitar escribir el nombre del módulo:
 
 ```python
 >>> from fileparse import parse_csv
->>> camion = parse_csv('Data/camion.csv', select=['nombre','cajones','precio'], types=[str,int,float])
+>>> camion = parse_csv('../Data/camion.csv', select=['nombre','cajones','precio'], types=[str,int,float])
 >>> camion
 ... fijate la salida ...
 >>>
@@ -241,7 +241,7 @@ En [Ejercicio 2.5](../02_Datos/02_Funciones.md#ejercicio-25-transformar-un-scrip
 
 ```python
 >>> import costo_camion
->>> costo_camion.costo_camion('Data/camion.csv')
+>>> costo_camion.costo_camion('../Data/camion.csv')
 47671.15
 >>>
 ```

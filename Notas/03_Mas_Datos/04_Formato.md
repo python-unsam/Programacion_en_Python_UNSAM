@@ -172,8 +172,8 @@ que recibe una lista de cajones y un diccionario con precios como input y devuel
 Agregá esta función a tu archivo `tabla_informe.py`. Debería funcionar como se muestra en el siguiente ejemplo:
 
 ```python
->>> camion = leer_camion('Data/camion.csv')
->>> precios = leer_precios('Data/precios.csv')
+>>> camion = leer_camion('../Data/camion.csv')
+>>> precios = leer_precios('../Data/precios.csv')
 >>> informe = hacer_informe(camion, precios)
 >>> for r in informe:
         print(r)

@@ -117,7 +117,7 @@ Escribí la siguiente función y veamos como funciona un pipeline.
 Esta función es casi idéntica al primer ejemplo de generador en el ejercicio anterior, salvo que ya no abre un archivo sino que opera directamente de una secuencia de líneas que recibe como argumento. Ahora probá lo siguiente:
 
 ```python
->>> lines = vigilar('Data/mercadolog.csv')
+>>> lines = vigilar('../Data/mercadolog.csv')
 >>> naranjas = filematch(lines, 'Naranja')
 >>> for line in naranjas:
         print(line)
@@ -133,7 +133,7 @@ Llevemos esta idea un poco más lejos. Probemos esto:
 ```python
 >>> from vigilante import vigilar
 >>> import csv
->>> lineas = vigilar('Data/mercadolog.csv')
+>>> lineas = vigilar('../Data/mercadolog.csv')
 >>> filas = csv.reader(lineas)
 >>> for fila in filas:
         print(fila)
@@ -165,7 +165,7 @@ def parsear_datos(lines):
     return rows
 
 if __name__ == '__main__':
-    lines = vigilar('Data/mercadolog.csv')
+    lines = vigilar('../Data/mercadolog.csv')
     rows = parsear_datos(lines)
     for row in rows:
         print(row)
@@ -248,8 +248,8 @@ Esto se usa para dejar pasar únicamente aquéllos lotes incluídos en el camió
 ```python
 
 import informe
-camion = informe.leer_camion('Data/camion.csv')
-filas = parsear_datos(vigilar('Data/mercadolog.csv'))
+camion = informe.leer_camion('../Data/camion.csv')
+filas = parsear_datos(vigilar('../Data/mercadolog.csv'))
 filas = filtrar_datos (filas, camion)
 for fila in filas:
     print(fila)
@@ -261,7 +261,7 @@ En el programa `ticker.py` (esta versión te vamos a pedir que la entregues) esc
 
 ```python
 >>> from ticker import ticker
->>> ticker('Data/camion.csv', 'Data/mercadolog.csv', 'txt')
+>>> ticker('../Data/camion.csv', '../Data/mercadolog.csv', 'txt')
     Nombre     Precio    Volumen
 ---------- ---------- ----------
      Caqui     796.73         96
@@ -271,7 +271,7 @@ En el programa `ticker.py` (esta versión te vamos a pedir que la entregues) esc
    Durazno     281.76        704        
 ...
 
->>> ticker('Data/camion.csv', 'Data/mercadolog.csv', 'csv')
+>>> ticker('../Data/camion.csv', '../Data/mercadolog.csv', 'csv')
 Nombre,Precio,Volumen
 Mandarina,14.19,1140
 Naranja,9.37,1150

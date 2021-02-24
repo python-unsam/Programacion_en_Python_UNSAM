@@ -338,7 +338,7 @@ Recordá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de 
 modificá tu programa `costo_camion.py` de forma que imprima un aviso (warning) cada vez que encuentre una fila incorrecta.
 
 ```python
->>> cost = costo_camion('Data/missing.csv')
+>>> cost = costo_camion('../Data/missing.csv')
 Fila 4: No pude interpretar: ['Mandarina', '', '51.23']
 Fila 7: No pude interpretar: ['Naranja', '', '70.44']
 >>>
@@ -359,7 +359,7 @@ for n_fila, fila in enumerate(filas, start=1):
 En el archivo `Data/camion.csv`, la primera línea tiene los encabezados de las columnas. En los códigos anteriores la descartamos.
 
 ```python
->>> f = open('Data/camion.csv')
+>>> f = open('../Data/camion.csv')
 >>> filas = csv.reader(f)
 >>> encabezados = next(filas)
 >>> encabezados
@@ -425,7 +425,7 @@ nombre,fecha,hora,cajones,precio
 ```
 
 ```python
->>> costo_camion('Data/fecha_camion.csv')
+>>> costo_camion('../Data/fecha_camion.csv')
 47671.15
 >>>
 ```

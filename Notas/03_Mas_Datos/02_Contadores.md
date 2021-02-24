@@ -49,7 +49,7 @@ O podés cargarlo en el Spyder y correrlo.
 Vamos a usar un contador (objeto `Counter`) para contar cajones de frutas. Probalo:
 
 ```python
->>> camion = leer_camion('Data/camion.csv')
+>>> camion = leer_camion('../Data/camion.csv')
 >>> from collections import Counter
 >>> tenencias = Counter()
 >>> for s in camion:
@@ -84,7 +84,7 @@ Podés listar las tres frutas con mayores tenencias:
 Carguemos los datos de otro camión con cajones de fruta en un nuevo contador:
 
 ```python
->>> camion2 = leer_camion('Data/camion2.csv')
+>>> camion2 = leer_camion('../Data/camion2.csv')
 >>> tenencias2 = Counter()
 >>> for s in camion2:
           tenencias2[s['nombre']] += s['cajones']

@@ -51,7 +51,7 @@ Un ejemplo de cómo cargar registros desde un archivo.
 ```python
 registros = []  # Empezamos con una lista vacía
 
-with open('Data/camion.csv', 'rt') as f:
+with open('../Data/camion.csv', 'rt') as f:
     next(f) # Saltear el encabezado
     for line in f:
         row = line.split(',')
@@ -100,7 +100,7 @@ Un ejemplo de cómo armar un diccionario a partir del contenido de un archivo.
 ```python
 precios = {}  # Empezamos con un diccionario vacío
 
-with open('Data/precios.csv', 'rt') as f:
+with open('../Data/precios.csv', 'rt') as f:
     for line in f:
         row = line.split(',')
         precios[row[0]] = float(row[1])
@@ -238,7 +238,7 @@ Experimentá con tu función interactivamente (acordate de que primero tenés qu
 *Ayuda: Usá `-i` para ejecutar un archivo en la terminal y quedar en el intérprete*
 
 ```python
->>> camion = leer_camion('Data/camion.csv')
+>>> camion = leer_camion('../Data/camion.csv')
 >>> camion
 [('Lima', 100, 32.2), ('Naranja', 50, 91.1), ('Limon', 150, 83.44), ('Mandarina', 200, 51.23),('Durazno', 95, 40.37), ('Mandarina', 50, 65.1), ('Naranja', 100, 70.44)]
 >>>
@@ -279,7 +279,7 @@ Tomá la función que escribiste en el ejercicio anterior y modificala para repr
 Experimentá con esta función nueva igual que en el ejercicio anterior.
 
 ```python
->>> camion = leer_camion('Data/camion.csv')
+>>> camion = leer_camion('../Data/camion.csv')
 >>> camion
 [{'nombre': 'Lima', 'cajones': 100, 'precio': 32.2}, {'nombre': 'Naranja', 'cajones': 50, 'precio': 91.1}, {'nombre': 'Limon', 'cajones': 150, 'precio': 83.44}, {'nombre': 'Mandarina', 'cajones': 200, 'precio': 51.23}, {'nombre': 'Durazno', 'cajones': 95, 'precio': 40.37}, {'nombre': 'Mandarina', 'cajones': 50, 'precio': 65.1}, {'nombre': 'Naranja', 'cajones': 100, 'precio': 70.44}]
 >>> camion[0]
@@ -354,7 +354,7 @@ Usá el módulo `csv` igual que antes.
 
 ```python
 >>> import csv
->>> f = open('Data/precios.csv', 'r')
+>>> f = open('../Data/precios.csv', 'r')
 >>> rows = csv.reader(f)
 >>> for row in rows:
         print(row)
@@ -376,7 +376,7 @@ Para pensar: ¿Sería mejor prevenir estos problemas con el comando `if` en vez 
 Una vez que hayas escrito tu función `leer_precios()`, testeala interactivamente para asegurarte de que funciona bien:
 
 ```python
->>> precios = leer_precios('Data/precios.csv')
+>>> precios = leer_precios('../Data/precios.csv')
 >>> precios['Naranja']
 106.28
 >>> precios['Mandarina']

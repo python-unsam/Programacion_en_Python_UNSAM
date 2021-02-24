@@ -170,7 +170,7 @@ Anteriormente escribiste un programa que leía el archivo
 
 ```python
 >>> import csv
->>> f = open('Data/camion.csv')
+>>> f = open('../Data/camion.csv')
 >>> filas = csv.reader(f)
 >>> next(filas)
 ['nombre', 'cajones', 'precio']

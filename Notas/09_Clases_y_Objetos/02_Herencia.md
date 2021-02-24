@@ -238,7 +238,7 @@ Al ejecutar tu programa `informe` la salida es algo parecido a esto:
 
 ```python
 >>> import informe
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
+>>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
     Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
       Lima        100      $32.2       8.02
@@ -328,7 +328,7 @@ Ejecutá este código:
 ```python
 >>> ================================ RESTART ================================
 >>> import informe
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
+>>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
 ... crashes ...
 ```
 
@@ -387,7 +387,7 @@ Este código debería dar la misma salida que antes:
 ```python
 >>> ========================REINICIAR INTERPRETE========================
 >>> import informe
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
+>>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
     Nombre   Cantidad     Precio     Cambio 
 ---------- ---------- ---------- ---------- 
       Lima        100      32.20       8.02 
@@ -440,7 +440,7 @@ Ahora la salida debería tener este aspecto:
 ```python
 >>> ========================REINICIAR INTERPRETE========================
 >>> import informe
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv')
+>>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
 Nombre,Cantidad,Precio,Cambio
 Lima,100,32.20,8.02
 Naranja,50,91.10,15.18
@@ -532,7 +532,7 @@ Acordate de testear todas las ramas posibles del código para asegurarte de que 
 Modificá tu programa `informe.py` de modo que la función `informe_camion()` acepte un parámetro opcional que especifique el formato de salida deseado. Por ejemplo:
 
 ```python
->>> informe.informe_camion('Data/camion.csv', 'Data/precios.csv', fmt = 'txt')
+>>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv', fmt = 'txt')
     Nombre    Cajones     Precio     Cambio 
 ---------- ---------- ---------- ---------- 
       Lima        100      32.20       8.02 

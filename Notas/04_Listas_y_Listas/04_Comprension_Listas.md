@@ -113,7 +113,7 @@ Observá que estás creando nuevas listas con los datos adecuadamente transforma
 Calculá el costo total de la carga del camión en un solo comando.
 
 ```python
->>> camion = leer_camion('Data/camion.csv')
+>>> camion = leer_camion('../Data/camion.csv')
 >>> costo = sum([ s['cajones'] * s['precio'] for s in camion ])
 >>> costo
 47671.15
@@ -123,7 +123,7 @@ Calculá el costo total de la carga del camión en un solo comando.
 Luego, leyendo la variable `precios`, calculá también el valor en el mercado de la carga del camión usando una sola línea de código.
 
 ```python
->>> precios = leer_precios('Data/precios.csv')
+>>> precios = leer_precios('../Data/precios.csv')
 >>> valor = sum([ s['cajones'] * precios[s['nombre']] for s in camion ])
 >>> valor
 62986.1
@@ -242,7 +242,7 @@ Primero, leamos el encabezado (header) del archivo CSV:
 
 ```python
 >>> import csv
->>> f = open('Data/fecha_camion.csv')
+>>> f = open('../Data/fecha_camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> headers

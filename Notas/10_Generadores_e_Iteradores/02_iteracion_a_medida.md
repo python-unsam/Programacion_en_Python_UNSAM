@@ -109,7 +109,7 @@ Por ejemplo, probá este generador que busca un archivo y entrega las líneas qu
                 if substr in line:
                     yield line
 
->>> for line in open('Data/camion.csv'):
+>>> for line in open('../Data/camion.csv'):
         print(line, end='')
 
 nombre,cajones,precio
@@ -120,7 +120,7 @@ Mandarina,200,51.23
 Durazno,95,40.37
 Mandarina,50,65.1
 Naranja,100,70.44
->>> for line in filematch('Data/camion.csv', 'Naranja'):
+>>> for line in filematch('../Data/camion.csv', 'Naranja'):
         print(line, end='')
 
 Naranja,50,91.1
@@ -152,7 +152,7 @@ Ahora que el programa generador de datos está en ejecución, escribamos un prog
 import os
 import time
 
-f = open('Data/mercadolog.csv')
+f = open('../Data/mercadolog.csv')
 f.seek(0, os.SEEK_END)   # Mover el índice 0 posiciones desde el EOF
 
 while True:
@@ -180,7 +180,7 @@ Si analizás un poco el código del [Ejercicio 10.5](../10_Generadores_e_Iterado
 Modificá el código del [Ejercicio 10.5](../10_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-105-monitoreo-de-datos-en-tiempo-real) de modo que la lectura del archivo esté resuelta por una única función generadora `vigilar()` a la que se le pasa un nombre de archivo como parámetro. Hacelo de modo que el siguiente código funcione:
 
 ```python
->>> for line in vigilar('Data/mercadolog.csv'):
+>>> for line in vigilar('../Data/mercadolog.csv'):
           print(line)
 
 ... Acá deberías ver las líneas impresas ...
@@ -190,7 +190,7 @@ Modificá el programa `vigilante.py` de modo que tenga esta pinta:
 
 ```python
 if __name__ == '__main__':
-    for line in vigilar('Data/mercadolog.csv'):
+    for line in vigilar('../Data/mercadolog.csv'):
         fields = line.split(',')
         nombre = fields[0].strip('"')
         precio = float(fields[1])
@@ -208,9 +208,9 @@ Modificá el programa `vigilante.py` para que sólo informe las líneas que tien
 if __name__ == '__main__':
     import informe
 
-    camion = informe.leer_camion ('Data/camion.csv')
+    camion = informe.leer_camion ('../Data/camion.csv')
 
-    for line in vigilar('Data/mercadolog.csv'):  
+    for line in vigilar('../Data/mercadolog.csv'):  
         fields = line.split(',')
         nombre = fields[0].strip('"')
         precio = float(fields[1])

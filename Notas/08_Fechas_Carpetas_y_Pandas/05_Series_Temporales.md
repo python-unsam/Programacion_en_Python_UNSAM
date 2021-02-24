@@ -16,7 +16,7 @@ Para comenzar, copiate [el archivo](./OBS_SHN_SF-BA.csv) con datos de mareas en 
 ```python
 import pandas as pd
 
-df = pd.read_csv('Data/OBS_SHN_SF-BA.csv')
+df = pd.read_csv('../Data/OBS_SHN_SF-BA.csv')
 ```
 
 Observá los datos:
@@ -46,7 +46,7 @@ Para esto tenemos que decirle a la función `read_csv` dos cosas:
 
 
 ```python
-df = pd.read_csv('Data/OBS_SHN_SF-BA.csv', index_col=['Time'], parse_dates=True)
+df = pd.read_csv('../Data/OBS_SHN_SF-BA.csv', index_col=['Time'], parse_dates=True)
 ```
 
 Observá la diferencia:
@@ -177,7 +177,7 @@ from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 
 # Levanto las dos series
-df=pd.read_csv('Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
+df=pd.read_csv('../Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
 # Me quedo con un fregmento
 dh=df['10-01-2014':].copy()
 
@@ -197,7 +197,7 @@ Este ejemplo muestra una manera de interplolar la serie de manera de poder usar 
 
 ```python
 # Cada cuarto de hora
-df=pd.read_csv('Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
+df=pd.read_csv('../Data/OBS_SHN_SF-BA.csv',index_col=['Time'],parse_dates=True)
 dh =df['10-01-2014':].copy() #ultimo trimestre
 freq_horaria = 4 # 4 para 15min, 60 para 1min
 cant_horas = 24

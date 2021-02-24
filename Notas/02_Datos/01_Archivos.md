@@ -100,7 +100,7 @@ Estos ejercicios usan el archivo `Data/camion.csv`.  El archivo contiene una lis
 Primero, tratá de leer el archivo entero de una en una larga cadena:
 
 ```python
->>> with open('Data/camion.csv', 'rt') as f:
+>>> with open('../Data/camion.csv', 'rt') as f:
         data = f.read()
 
 >>> data
@@ -124,7 +124,7 @@ Leer un archivo entero y cargarlo en memoria todo de una vez parece simple, pero
 Para leer una archivo línea por línea, usá un ciclo for como éste:
 
 ```python
->>> with open('Data/camion.csv', 'rt') as f:
+>>> with open('../Data/camion.csv', 'rt') as f:
         for line in f:
             print(line, end='')
 
@@ -140,7 +140,7 @@ En ese código, las líneas son leídas una por una hasta el final del archivo, 
 En ciertas ocasiones, puede pasar que quieras leer una sola línea de texto (por ejemplo, querés saltearte la primera línea del archivo que contiene los nombres de las columnas).
 
 ```python
->>> f = open('Data/camion.csv', 'rt')
+>>> f = open('../Data/camion.csv', 'rt')
 >>> headers = next(f)
 >>> headers
 'nombre,cajones,precio\n'
@@ -159,7 +159,7 @@ El comando `next()` devuelve la siguiente línea de texto en el archivo. Sin emb
 Una vez que estés leyendo un archivo línea a línea, podés hacer otras operaciones, como separar los datos dentro de una línea con el método `split()`. Por ejemplo, probá esto:
 
 ```python
->>> f = open('Data/camion.csv', 'rt')
+>>> f = open('../Data/camion.csv', 'rt')
 >>> headers = next(f).split(',')
 >>> headers
 ['nombre', 'cajones', 'precio\n']
@@ -197,7 +197,7 @@ Probalo:
 
 ```python
 >>> import gzip
->>> with gzip.open('Data/camion.csv.gz', 'rt') as f:
+>>> with gzip.open('../Data/camion.csv.gz', 'rt') as f:
     for line in f:
         print(line, end='')
 
