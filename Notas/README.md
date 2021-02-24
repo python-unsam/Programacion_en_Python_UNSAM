@@ -1,6 +1,6 @@
 # ¡Bienvenides!
 
-Este es un curso de programación en Python que se dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/). El material del curso está basado en experiencias previas nuestra y de otros docentes (ver la sección Agradecimientos).
+Este es un curso de programación en Python que se dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/). El material del curso está basado en experiencias previas nuestras y de otros docentes (ver la sección Agradecimientos).
 
 ## ¿De qué es el curso?
 

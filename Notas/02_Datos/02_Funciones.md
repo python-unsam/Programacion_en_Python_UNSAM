@@ -239,7 +239,7 @@ Modificá tu programa `costo_camion.py` para que use el módulo `csv` para leer 
 
 ### Ejercicio 2.8: Ejecución desde la línea de comandos con parámetros
 
-En el programa `costo_camion.py`, el nombre del archivo de entrada `'Data/camion.csv'` fue escrito en el código.
+En el programa `costo_camion.py`, el nombre del archivo de entrada `'../Data/camion.csv'` fue escrito en el código.
 
 ```python
 # costo_camion.py
@@ -250,7 +250,7 @@ def costo_camion(nombre_archivo):
     # Tu código
     ...
 
-costo = costo_camion('Data/camion.csv')
+costo = costo_camion('../Data/camion.csv')
 print('Costo total:', costo)
 ```
 
@@ -271,7 +271,7 @@ def costo_camion(nombre_archivo):
 if len(sys.argv) == 2:
     nombre_archivo = sys.argv[1]
 else:
-    nombre_archivo = 'Data/camion.csv'
+    nombre_archivo = '../Data/camion.csv'
 
 costo = costo_camion(nombre_archivo)
 print('Costo total:', costo)
@@ -280,19 +280,19 @@ print('Costo total:', costo)
 `sys.argv` es una lista que contiene los argumentos que le pasamos al script al momento de llamarlo desde la línea de comandos (si es que le pasamos alguno). Por ejemplo, desde una terminal de Unix (en Windows es similar), para correr nuestro programa y que procese el mismo archivo podríamos escribir:
 
 ```bash
-bash $ python3 camion_commandline.py Data/camion.csv
+bash $ python3 camion_commandline.py ../Data/camion.csv
 Costo total: 47671.15
 bash $
 ```
 
 O con el archivo `missing.csv`:
 ```bash
-bash $ python3 camion_commandline.py Data/missing.csv
+bash $ python3 camion_commandline.py ../Data/missing.csv
 ...
 Costo total: 30381.15
 bash $
 ```
-Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` porque lo indicamos con la línea `nombre_archivo = 'Data/camion.csv'`.
+Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` porque lo indicamos con la línea `nombre_archivo = '../Data/camion.csv'`.
 
 Guardá el archivo `camion_commandline.py` para entregar al final de la clase.
 
