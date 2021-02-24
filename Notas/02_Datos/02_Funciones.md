@@ -148,7 +148,7 @@ def costo_camion(nombre_archivo):
     # Tu código
     ...
 
-costo = costo_camion('../Data/camion.csv')
+costo = costo_camion('Data/camion.csv')
 print('Costo total:', costo)
 ```
 
@@ -161,7 +161,7 @@ bash $ python3 -i costo_camion.py
 Esto va a ejecutar el código en el programa y dejar abierto el intérprete interactivo.
 
 ```python
->>> costo_camion('../Data/camion.csv')
+>>> costo_camion('Data/camion.csv')
 47671.15
 >>>
 ```
@@ -193,7 +193,7 @@ for nombre in ['Pedro','Juan','Caballero']:
 Vamos a usar estas ideas aplicadas al procesamiento de un archivo CSV. ¿Qué pasa si intentás usar la función `costo_camion()` con un archivo que tiene datos faltantes?
 
 ```python
->>> costo_camion('../Data/missing.csv')
+>>> costo_camion('Data/missing.csv')
 Traceback (most recent call last):
     File "<stdin>", line 1, in <módulo>
     File "costo_camion.py", line 11, in costo_camion
@@ -204,7 +204,7 @@ ValueError: invalid literal for int() with base 10: ''
 
 El programa termina con un error. A esta altura tenés que tomar una decisión. Para que el programa funcione podés editar el archivo CSV de entrada de manera de corregirlo (borrando líneas o adecuando la información) o podés modificar el código para que maneje las líneas *incorrectas* de  alguna manera.
 
-Modificá el programa `costo_camion.py` para que atrape la excepción, imprima un mensaje de aviso (warning) y continúe procesando el resto del archivo.
+Modificá el programa `costo_camion.py` para que atrape la excepción con un bloque `try - except`, imprima un mensaje de aviso (warning) y continúe procesando el resto del archivo.
 
 Vamos a profundizar en la administración  de errores en las próximas clases.
 
@@ -213,7 +213,7 @@ Python viene con una gran biblioteca estándar de funciones útiles. En este cas
 
 ```python
 >>> import csv
->>> f = open('../Data/camion.csv')
+>>> f = open('Data/camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> headers
@@ -221,12 +221,12 @@ Python viene con una gran biblioteca estándar de funciones útiles. En este cas
 >>> for row in rows:
         print(row)
 
-['Lima', '100', '32.20']
-['Naranja', '50', '91.10']
-['Caqui', '150', '83.44']
+['Lima', '100', '32.2']
+['Naranja', '50', '91.1']
+['Caqui', '150', '103.44']
 ['Mandarina', '200', '51.23']
 ['Durazno', '95', '40.37']
-['Mandarina', '50', '65.10']
+['Mandarina', '50', '65.1']
 ['Naranja', '100', '70.44']
 >>> f.close()
 >>>
@@ -239,7 +239,7 @@ Modificá tu programa `costo_camion.py` para que use el módulo `csv` para leer 
 
 ### Ejercicio 2.8: Ejecución desde la línea de comandos con parámetros
 
-En el programa `costo_camion.py`, el nombre del archivo de entrada `'../Data/camion.csv'` fue escrito en el código.
+En el programa `costo_camion.py`, el nombre del archivo de entrada `'Data/camion.csv'` fue escrito en el código.
 
 ```python
 # costo_camion.py
@@ -250,8 +250,8 @@ def costo_camion(nombre_archivo):
     # Tu código
     ...
 
-cost = costo_camion('../Data/camion.csv')
-print('Total cost:', cost)
+costo = costo_camion('Data/camion.csv')
+print('Costo total:', costo)
 ```
 
 Esto está bien para ejercitar, pero en un programa real probablemente no harías eso ya que querrías una mayor flexibilidad. Una posibilidad es pasarle al programa el nombre del archivo que querés procesar como un parámetro cuando lo llamás desde la línea de comandos.
@@ -271,7 +271,7 @@ def costo_camion(nombre_archivo):
 if len(sys.argv) == 2:
     nombre_archivo = sys.argv[1]
 else:
-    nombre_archivo = '../Data/camion.csv'
+    nombre_archivo = 'Data/camion.csv'
 
 costo = costo_camion(nombre_archivo)
 print('Costo total:', costo)
@@ -292,9 +292,10 @@ bash $ python3 camion_commandline.py Data/missing.csv
 Costo total: 30381.15
 bash $
 ```
-Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` porque lo indicamos con la línea `nombre_archivo = '../Data/camion.csv'`.
+Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` porque lo indicamos con la línea `nombre_archivo = 'Data/camion.csv'`.
 
 Guardá el archivo `camion_commandline.py` para entregar al final de la clase.
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_Archivos.md) \| [Próximo (3 Tipos y estructuras de datos)](03_TiposDatos.md)
 

@@ -9,7 +9,7 @@ La mayoría de los programas usa alguna fuente de datos. En esta sección discut
 Con estos comandos podés abrir dos archivos, una para lectura y otro para escritura:
 
 ```python
-f = open('foo.txt', 'rt')     # Abrir para lectura ('r'' de read, 't' de text)
+f = open('foo.txt', 'rt')     # Abrir para lectura ('r' de read, 't' de text)
 g = open('bar.txt', 'wt')     # Abrir para escritura ('w' de write, 't' de text)
 ```
 
@@ -100,7 +100,7 @@ Estos ejercicios usan el archivo `Data/camion.csv`.  El archivo contiene una lis
 Primero, tratá de leer el archivo entero de una en una larga cadena:
 
 ```python
->>> with open('../Data/camion.csv', 'rt') as f:
+>>> with open('Data/camion.csv', 'rt') as f:
         data = f.read()
 
 >>> data
@@ -124,9 +124,9 @@ Leer un archivo entero y cargarlo en memoria todo de una vez parece simple, pero
 Para leer una archivo línea por línea, usá un ciclo for como éste:
 
 ```python
->>> with open('../Data/camion.csv', 'rt') as f:
+>>> with open('Data/camion.csv', 'rt') as f:
         for line in f:
-            print(line, end='')
+            print(line, end = '')
 
 nombre,cajones,precio
 "Lima",100,32.20
@@ -140,12 +140,12 @@ En ese código, las líneas son leídas una por una hasta el final del archivo, 
 En ciertas ocasiones, puede pasar que quieras leer una sola línea de texto (por ejemplo, querés saltearte la primera línea del archivo que contiene los nombres de las columnas).
 
 ```python
->>> f = open('../Data/camion.csv', 'rt')
+>>> f = open('Data/camion.csv', 'rt')
 >>> headers = next(f)
 >>> headers
 'nombre,cajones,precio\n'
 >>> for line in f:
-    print(line, end='')
+    print(line, end = '')
 
 "Lima",100,32.20
 "Naranja",50,91.10
@@ -159,7 +159,7 @@ El comando `next()` devuelve la siguiente línea de texto en el archivo. Sin emb
 Una vez que estés leyendo un archivo línea a línea, podés hacer otras operaciones, como separar los datos dentro de una línea con el método `split()`. Por ejemplo, probá esto:
 
 ```python
->>> f = open('../Data/camion.csv', 'rt')
+>>> f = open('Data/camion.csv', 'rt')
 >>> headers = next(f).split(',')
 >>> headers
 ['nombre', 'cajones', 'precio\n']
@@ -197,9 +197,9 @@ Probalo:
 
 ```python
 >>> import gzip
->>> with gzip.open('../Data/camion.csv.gz', 'rt') as f:
+>>> with gzip.open('Data/camion.csv.gz', 'rt') as f:
     for line in f:
-        print(line, end='')
+        print(line, end = '')
 
 ... mirá la salida ...
 >>>
@@ -210,6 +210,8 @@ Probalo:
 ### Comentario: ¿No deberíamos estar usando Pandas para esto?
 
 Es frecuente que les estudiantes que conocen un poco más de Python rápidamente señalen que hay módulos como [Pandas](https://pandas.pydata.org) que tienen, entre muchas otras funcionalidades, la posibilidad de leer archivos CSV en una sola instrucción. Es verdad, y funcionan muy bien. Sin embargo, este no es un curso sobre Pandas. Si bien más adelante veremos algo de esta biblioteca, lo que nos interesa en este momento es aprender a manejar archivos directamente. Estamos trabajando con archivos CSV porque es un formato sencillo que es muy útil conocer, pero es principalmente una excusa para mostrar cómo Python maneja archivos de texto. En resumen, cuando tengas que trabajar con datos, definitivamente usá Pandas. Pero para aprender a manejar archivos vamos a seguir usando las funciones básicas de Python.
+
+
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_Funciones.md)
