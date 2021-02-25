@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la octava clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
 
 # 9.5 Teledetección
 
@@ -151,5 +151,5 @@ plt.show()
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la octava clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
 

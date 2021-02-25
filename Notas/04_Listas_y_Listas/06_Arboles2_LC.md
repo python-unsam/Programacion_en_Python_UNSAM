@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Objetos)](05_Objetos.md) \| [Próximo (7 Cierre de la tercera clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](05_Objetos.md) \| [Próximo (6 Cierre de la clase)](07_Cierre.md)
 
-# 4.6 Arbolado porteño y comprensión de listas
+# 4.5 Arbolado porteño y comprensión de listas
 
 Seguimos aquí con el arbolado porteño. Vamos a plantear algunos ejercicios para hacer con la técnica de comprensión de listas introducida recientemente.
 
@@ -11,7 +11,7 @@ Seguimos trabajando con el archivo CSV de "[Arbolado en espacios verdes](https:/
 
 
 ### Ejercicio 4.18: Lectura de todos los árboles
-Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 3.7](../03_Mas_Datos/03_Arboles1.md#ejercicio-37-lectura-de-los-árboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles en el archivo. La función debe devolver una lista conteniendo un diccionario por cada árbol con todos los datos.
+Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 3.7](../03_Datos/04_Arboles1.md#ejercicio-37-lectura-de-los-árboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles en el archivo. La función debe devolver una lista conteniendo un diccionario por cada árbol con todos los datos.
 
 Vamos a llamar `arboleda` a esta lista.
 
@@ -22,7 +22,7 @@ Usando comprensión de listas y la variable `arboleda` podés por ejemplo armar 
 H=[float(arbol['altura_tot']) for arbol in arboleda]
 ```
 
-Usá los filtros (recordá la [Sección 4.4](../04_Listas_y_Listas/04_Comprension_Listas.md#filtros)) para armar la lista de alturas de los Jacarandás solamente.
+Usá los filtros (recordá la [Sección 4.3](../04_Listas_y_Listas/04_Comprension_Listas.md#filtros)) para armar la lista de alturas de los Jacarandás solamente.
 
 ### Ejercicio 4.20: Lista de altos y diámetros de Jacarandá
 En el ejercicio anterior usaste una sola linea para seleccionar las alturas de los Jacarandás en parques porteños. Ahora te proponemos que armes una nueva lista que tenga pares (tuplas de longitud 2) conteniendo no solo el alto sino también el diámetro de cada Jacarandá en la lista.
@@ -57,5 +57,5 @@ Acordate de guardar los ejercicios de esta sección en el archivo `arboles.py`.
 
 _Extra: casi todes usan un `for` para crear este diccionario. ¿Lo podés hacer usando una **comprensión de diccionarios**? Te recordamos la sintaxis: `diccionario = { clave: valor for clave in claves }`_
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Objetos)](05_Objetos.md) \| [Próximo (7 Cierre de la tercera clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](05_Objetos.md) \| [Próximo (6 Cierre de la clase)](07_Cierre.md)
 

@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](05_Complejidad.md) \| [Próximo (7 Cierre de la quinta clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](05_Complejidad.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 
 # 6.6 Gráficos de complejidad
 
@@ -133,5 +133,5 @@ En este Ejercicio vamos a rehacer los gráficos del ejemplo anterior, pero prime
 El código de este ejercicio guardalo en `plot_bbin_vs_bsec.py`.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](05_Complejidad.md) \| [Próximo (7 Cierre de la quinta clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](05_Complejidad.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 

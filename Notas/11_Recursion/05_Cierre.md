@@ -2,9 +2,7 @@
 
 # 11.5 Cierre de la clase de Recursión y Regresión
 
-En esta clase vimos el concepto de recursión y lo ejercitaste. También estudiamos un poquito (o no tan poco) sobre el ajuste y uso de regresiones lineales en Python. Ya estamos cerrando este curso. La próxima clase será la última. Como cierre de la clase de hoy te pedimos que entregues los siguientes archivos:
-
-## Cierre de la clase
+En esta clase vimos el concepto de recursión y lo ejercitaste. También estudiamos un poquito (o no tan poco) sobre el ajuste y uso de regresiones lineales en Python. Ya estamos cerrando este curso. La próxima clase será la última. En la clase de hoy te pedimos que entregues los siguientes archivos:
 
 * El archivo `larenga.py` del [Ejercicio 11.9](../11_Recursion/03_EjerciciosRec.md#ejercicio-119-pascal).
 * El archivo `bbin_rec.py` del [Ejercicio 11.11](../11_Recursion/03_EjerciciosRec.md#ejercicio-1111-búsqueda-binaria).

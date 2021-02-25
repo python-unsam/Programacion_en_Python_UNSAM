@@ -15,7 +15,7 @@ En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e
 * [6.4 Búsqueda binaria](04_BusqBinaria.md)
 * [6.5 Complejidad de algoritmos](05_Complejidad.md)
 * [6.6 Gráficos de complejidad](06_gráficos_de_complejidad.md)
-* [6.7 Cierre de la quinta clase](07_Cierre.md)
+* [6.7 Cierre de la clase](07_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (7 Diseño, especificación, documentación y estilo.)](../07_Plt_Especificacion_y_Documentacion/00_Resumen.md)

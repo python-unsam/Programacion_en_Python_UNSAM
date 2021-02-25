@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 
-# 4.5 Objetos
+# 4.4 Objetos
 
 
 En esta sección introducimos algunos conceptos sobre el modelo de objeto interno de Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y verificación de tipos.
@@ -419,5 +419,5 @@ Bonus: ¿Cómo modificarías este ejemplo para transformar la fecha (`date`) en 
 
 Es importante que entiendas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 

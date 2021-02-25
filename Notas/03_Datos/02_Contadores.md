@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Secuencias)](01_Secuencias.md) \| [Próximo (3 Arbolado porteño)](03_Arboles1.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Secuencias)](01_Secuencias.md) \| [Próximo (3 Entorno de desarrollo integrado)](03_IDE.md)
 
 # 3.2 Contadores del módulo _collections_
 
@@ -114,5 +114,5 @@ Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El m�
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Secuencias)](01_Secuencias.md) \| [Próximo (3 Arbolado porteño)](03_Arboles1.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Secuencias)](01_Secuencias.md) \| [Próximo (3 Entorno de desarrollo integrado)](03_IDE.md)
 

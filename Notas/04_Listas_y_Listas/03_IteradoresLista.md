@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Bugs.md) \| [Próximo (4 Comprensión de listas)](04_Comprension_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](02_Bugs.md) \| [Próximo (3 Comprensión de listas)](04_Comprension_Listas.md)
 
-# 4.3 Listas y búsqueda lineal
+# 4.2 Listas y búsqueda lineal
 
 En esta sección seguiremos usando Python, pero nos concentraremos en la parte algorítmica. Vas a escribir funciones sencillas (y no tanto) que realicen operaciones de bajo nivel sobre listas.
 
@@ -101,7 +101,7 @@ Nos interesa estudiar formas alternativas de programar la búsqueda usando opera
 Consideremos la siguiente solución: iterar sobre los índices y elementos de una lista de manera de comparar el elemento `e` buscado con cada uno de los elementos de la lista y devolver la posición donde lo encontremos, en caso de encontrarlo. Si llegamos al final de la lista sin haber salido antes de la función es porque el valor de `e` no está en la lista, y en ese caso
 devolvemos -1.
 
-En esta solución lo ideal es usar `enumerate` (ver la [Sección 3.1](../03_Mas_Datos/01_Secuencias.md#la-función-enumerate)) ya que dentro de la iteración necesitamos tener acceso tanto al valor del elemento (para ver si es igual al buscado) como a su índice (es el valor que tenemos que devolver).
+En esta solución lo ideal es usar `enumerate` (ver la [Sección 3.1](../03_Datos/01_Secuencias.md#la-función-enumerate)) ya que dentro de la iteración necesitamos tener acceso tanto al valor del elemento (para ver si es igual al buscado) como a su índice (es el valor que tenemos que devolver).
 
 Primero hagámoslo sin usarlo y luego lo agregamos para entender su ventaja. En ambos casos necesitamos una variable `i` que cuente en cada momento en qué posición de la lista estamos. Si no usamos `enumerate`, debemos inicializar `i` en 0 antes de entrar en el ciclo e incrementarla en 1 en cada paso.
 
@@ -258,5 +258,5 @@ Por ejemplo:
 ![Propagación](./fosforos.jpg) Propagación análoga a la del Ejercicio
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Errores)](02_Bugs.md) \| [Próximo (4 Comprensión de listas)](04_Comprension_Listas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](02_Bugs.md) \| [Próximo (3 Comprensión de listas)](04_Comprension_Listas.md)
 

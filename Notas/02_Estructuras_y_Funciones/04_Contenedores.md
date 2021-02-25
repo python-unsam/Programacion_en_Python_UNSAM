@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la segunda clase)](05_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la clase)](05_CierreClase.md)
 
 # 2.4 Contenedores
 
@@ -106,7 +106,7 @@ with open('../Data/precios.csv', 'rt') as f:
         precios[row[0]] = float(row[1])
 ```
 
-Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Usando lo que ya vimos, en el [Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) vas a tener que modificar el código para resolver el problema.
+Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Usando lo que ya vimos, en el [Ejercicio 2.14](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) vas a tener que modificar el código para resolver el problema.
 
 ### Búsquedas en un diccionario
 
@@ -190,7 +190,7 @@ s1 - s2                 # Diferencia de conjuntos
 En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `ejercicios_python/informe.py`.
 
 ### Ejercicio 2.12: Lista de tuplas
-El archivo `Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.5](../02_Datos/02_Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
+El archivo `Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.5](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
 La función debería verse parecida a ésta:
 
@@ -387,8 +387,8 @@ Una vez que hayas escrito tu función `leer_precios()`, testeala interactivament
 ### Ejercicio 2.15: Balances
 Supongamos que los precios en `camion.csv` son los precios pagados al productor de frutas mientras que los precios en `precios.csv` son los precios de venta en el lugar de descarga del camión.
 
-Ahora vamos calcular el balance del negocio: juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y completa el programa para que con los precios del camión ([Ejercicio 2.13](../02_Datos/04_Contenedores.md#ejercicio-213-lista-de-diccionarios)) y los de venta en el negocio ([Ejercicio 2.14](../02_Datos/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores)) calcule lo que costó el camión, lo que se recaudo con la venta, y la diferencia. ¿Hubo ganancia o pérdida? El programa debe imprimir por pantalla un balance con estos datos.
+Ahora vamos calcular el balance del negocio: juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y completa el programa para que con los precios del camión ([Ejercicio 2.13](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-213-lista-de-diccionarios)) y los de venta en el negocio ([Ejercicio 2.14](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores)) calcule lo que costó el camión, lo que se recaudo con la venta, y la diferencia. ¿Hubo ganancia o pérdida? El programa debe imprimir por pantalla un balance con estos datos.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la segunda clase)](05_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la clase)](05_CierreClase.md)
 

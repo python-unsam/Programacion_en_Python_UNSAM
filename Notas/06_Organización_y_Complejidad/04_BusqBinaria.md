@@ -13,7 +13,7 @@ Si la lista está ordenada, hay una modificación muy simple que podemos hacer s
 
 ### Ejercicio 6.10: Búsqueda lineal sobre listas ordenadas.
 
-Modificá la función `busqueda_lineal(lista, e)`  de la [Sección 4.3](../04_Listas_y_Listas/03_IteradoresLista.md#búsqueda-lineal) para el caso de listas ordenadas, de forma que la función pare cuando encuentre un elemento mayor a `e`. Llamá a tu nueva función `busqueda_lineal_lordenada(lista,e)` y guardala en el archivo `busqueda_en_listas.py`.
+Modificá la función `busqueda_lineal(lista, e)`  de la [Sección 4.2](../04_Listas_y_Listas/03_IteradoresLista.md#búsqueda-lineal) para el caso de listas ordenadas, de forma que la función pare cuando encuentre un elemento mayor a `e`. Llamá a tu nueva función `busqueda_lineal_lordenada(lista,e)` y guardala en el archivo `busqueda_en_listas.py`.
 
 En el peor caso, ¿cuál es nuestra nueva hipótesis sobre comportamiento del
 algoritmo? ¿Es realmente más eficiente?

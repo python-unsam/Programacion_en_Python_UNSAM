@@ -18,7 +18,7 @@ A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Ce
 * [5.3 NumPy](03_NumPy_Arrays.md)
 * [5.4 El album de Figuritas](04_Figuritas.md)
 * [5.5 Gráficos del Arbolado porteño](05_Arboles3_plt.md)
-* [5.6 Cierre de la cuarta clase](06_Cierre.md)
+* [5.6 Cierre de la clase](06_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (4 Algoritmos sobre listas y comprensión de listas)](../04_Listas_y_Listas/00_Resumen.md) \| [Próximo (6 Complejidad y Organización de programas)](../06_Organización_y_Complejidad/00_Resumen.md)

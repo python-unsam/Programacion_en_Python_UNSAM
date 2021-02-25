@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 
-# 4.7 Cierre de la tercera clase
+# 4.6 Cierre de la clase
 
-En esta tercera clase vimos algo más sobre errores, el manejo de lista y la creación de listas por comprensión. Para cerrar esta clase te pedimos dos cosas:
+En esta clase vimos algo más sobre errores, el manejo de lista y la creación de listas por comprensión. Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
  1. El archivo `solucion_de_errores.py` del [Ejercicio 4.1](../04_Listas_y_Listas/02_Bugs.md#ejercicio-41-semántica) y siguientes.
  2. El archivo `busqueda_en_listas.py` del [Ejercicio 4.6](../04_Listas_y_Listas/03_IteradoresLista.md#ejercicio-46-búsquedas-de-un-elemento) y el [Ejercicio 4.7](../04_Listas_y_Listas/03_IteradoresLista.md#ejercicio-47-búsqueda-de-máximo-y-mínimo).
@@ -14,5 +14,5 @@ En esta tercera clase vimos algo más sobre errores, el manejo de lista y la cre
 
 ¡Gracias! Nos vemos en la próxima clase.
 
-[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
 

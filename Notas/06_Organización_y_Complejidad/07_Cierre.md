@@ -1,8 +1,8 @@
 [Contenidos](../Contenidos.md) \| [Anterior (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
 
-# 6.7 Cierre de la quinta clase
+# 6.7 Cierre de la clase
 
-En esta quinta clase trabajamos con funciones y creamos módulos. También aprendimos algunas nociones de complejidad de algoritmos, estudiamos la búsqueda binaria y  comparamos su performance con la de la búsqueda secuencial..
+En esta clase trabajamos con funciones y creamos módulos. También aprendimos algunas nociones de complejidad de algoritmos, estudiamos la búsqueda binaria y  comparamos su performance con la de la búsqueda secuencial..
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:

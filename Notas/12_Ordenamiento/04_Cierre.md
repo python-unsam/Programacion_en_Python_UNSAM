@@ -2,7 +2,7 @@
 
 # 12.4 Cierre de la clase de Ordenamiento
 
-## Cierre clase
+En la clase de hoy te pedimos que entregues los siguientes archivos:
 
 * El archivo `burbujeo.py` del [Ejercicio 12.2](../12_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-122-burbujeo).
 * El archivo `comparaciones_ordenamiento.py` del [Ejercicio 12.7](../12_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-127).
@@ -12,7 +12,7 @@
 
 Como de costumbre, completá por favor [el formulario](https://docs.google.com/forms/d/1s6zFYwZxgGih7auaLAtdanbzlNIxu14S0G5sGx2jVfg) asociado a la clase y adjuntá los archivos correspondientes.
 
-Gracias !
+Gracias!
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
 

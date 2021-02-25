@@ -209,7 +209,7 @@ Dicho esto, hay que decir también que usar variables globales se considera una 
 
 ### Pasaje de argumentos
 
-Cuando llamás a una función, los argumentos son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales (ver [Sección 4.5](../04_Listas_y_Listas/05_Objetos.md#45-objetos)). Si le pasás tipos mutables, como listas o diccionarios, la función *sí* los puede modificar.
+Cuando llamás a una función, los argumentos son los nombres que refieren a los valores que le pasás. Estos valores no son copias de los originales (ver [Sección 4.4](../04_Listas_y_Listas/05_Objetos.md#44-objetos)). Si le pasás tipos mutables, como listas o diccionarios, la función *sí* los puede modificar.
 
 ```python
 def foo(items):

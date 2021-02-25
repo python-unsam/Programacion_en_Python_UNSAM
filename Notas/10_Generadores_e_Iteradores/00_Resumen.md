@@ -15,7 +15,7 @@ Terminamos la clase con un ejercicio optativo que combina dos temas importantes:
 * [10.3 Productores, consumidores y cañerías.](03_Producers_consumers.md)
 * [10.4 Más sobre generadores](04_Mas_generadores.md)
 * [10.5 Predador Presa](05_PredadorPresa.md)
-* [10.6 Cierre de la novena clase](06_Cierre.md)
+* [10.6 Cierre de la clase](06_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (9 Clases y objetos)](../09_Clases_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión y regresión)](../11_Recursion/00_Resumen.md)

@@ -7,7 +7,7 @@ Por eso insistimos con algunos temas de estilo, documentación, especificiación
 
 Finalmente, daremos un poco más sistemáticamente algunos conceptos de la biblioteca `matplotlib`, incluyendo el manejo de figuras y subplots.
 
-Ésta es la última clase antes del primer parcial. El miércoles 16/9 acordate de estar atente de 14 a 16hs que tomaremos el parcial on-line. Sabemos que hay gente que no está haciendo la materia por los créditos, sino para aprender los contenidos. Les pedimos que igual rindan los exámenes y soliciten el certificado final de aprobación. Para nosotros es importante que los que hayan seguido el curso figuren formalmente para que esta expericiencia pueda tener continuidad en el tiempo.
+Ésta es la última clase antes del primer parcial. El miércoles dentro de dos semanas acordate de estar atente de 14 a 16hs que tomaremos el parcial on-line. Sabemos que hay gente que no está haciendo la materia por los créditos, sino para aprender los contenidos. Les pedimos que igual rindan los exámenes y soliciten el certificado final de aprobación. Para nosotros es importante que los que hayan seguido el curso figuren formalmente para que esta expericiencia pueda tener continuidad en el tiempo.
 
 
 
@@ -21,7 +21,7 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 * [7.4 Contratos: Especificación y Documentación](04_Especificacion_y_Documentacion.md)
 * [7.5 Estilos de codeo](05_Estilo.md)
 * [7.6 La biblioteca matplotlib](06_Matplotlib.md)
-* [7.7 Cierre de la sexta clase](07_Cierre.md)
+* [7.7 Cierre de la clase](07_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad y Organización de programas)](../06_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (8 Fechas, Carpetas y Pandas)](../08_Fechas_Carpetas_y_Pandas/00_Resumen.md)

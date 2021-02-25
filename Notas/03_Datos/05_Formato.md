@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Arbolado porteño)](03_Arboles1.md) \| [Próximo (5 Cierre de la segunda clase)](05_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Arbolado porteño)](04_Arboles1.md) \| [Próximo (6 Cierre de la clase)](06_CierreClase.md)
 
-# 3.4 Impresión con formato
+# 3.5 Impresión con formato
 
 En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. No es indispensable para el curso. Si te alcanza el tiempo está semana leela, sino no te preocupes podés volver a mirar acá en el futuro, cuando lo necesites.
 
@@ -150,7 +150,7 @@ A pesar de que suelen usarse dentro de un `print`, el formato de cadenas no est�
 ```
 
 ### Ejercicio 3.15: Recolectar datos
-En el [Ejercicio 2.15](../02_Datos/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. Dejá ese archivo para entregar al final de la clase y copiá su contenido en un archivo `tabla_informe.py`. En este ejercicio, vas a comenzar a modificarlo para producir una tabla como ésta:
+En el [Ejercicio 2.15](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-215-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. Dejá ese archivo para entregar al final de la clase y copiá su contenido en un archivo `tabla_informe.py`. En este ejercicio, vas a comenzar a modificarlo para producir una tabla como ésta:
 
 ```
  Nombre     Cajones     Precio     Cambio
@@ -296,5 +296,5 @@ multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicaci�
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Arbolado porteño)](03_Arboles1.md) \| [Próximo (5 Cierre de la segunda clase)](05_CierreClase.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Arbolado porteño)](04_Arboles1.md) \| [Próximo (6 Cierre de la clase)](06_CierreClase.md)
 

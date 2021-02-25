@@ -1,8 +1,8 @@
 [Contenidos](../Contenidos.md) \| [Anterior (6 La biblioteca matplotlib)](06_Matplotlib.md)
 
-# 7.7 Cierre de la sexta clase
+# 7.7 Cierre de la clase
 
-En esta sexta clase vimos cómo se hace una administración eficiente de errores, cómo atrapar excepciones, cómo lanzarlas, y cuándo conviene hacer o no hacer estas cosas.
+En esta clase vimos cómo se hace una administración eficiente de errores, cómo atrapar excepciones, cómo lanzarlas, y cuándo conviene hacer o no hacer estas cosas.
 
 Vimos que un archivo `.py` correctamente escrito puede usarse como un módulo, como un programa en sí mismo, o como ambas cosas dependiendo del caso, y mostramos que aunque uno esté escribiendo una pequeña función para solucionar un pequeño problema, es bueno pensar en grande y no imponer restricciones innecesarias.
 

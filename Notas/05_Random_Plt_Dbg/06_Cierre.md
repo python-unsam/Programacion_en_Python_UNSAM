@@ -1,8 +1,8 @@
 [Contenidos](../Contenidos.md) \| [Anterior (5 Gráficos del Arbolado porteño)](05_Arboles3_plt.md)
 
-# 5.6 Cierre de la cuarta clase
+# 5.6 Cierre de la clase
 
-En esta cuarta clase trabajamos con la generación de números (pseudo)aleatorios, el uso de la biblioteca NumPy y algunos ejemplos de aplicación de estos conceptos. También aprendimos a hacer algunos gráficos elementales en Python.
+En esta clase trabajamos con la generación de números (pseudo)aleatorios, el uso de la biblioteca NumPy y algunos ejemplos de aplicación de estos conceptos. También aprendimos a hacer algunos gráficos elementales en Python.
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:

@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (5 Series temporales)](05_Series_Temporales.md)
 
-# 8.6 Cierre de la séptima
+# 8.6 Cierre de la clase
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
