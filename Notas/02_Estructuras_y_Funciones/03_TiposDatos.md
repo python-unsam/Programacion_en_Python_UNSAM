@@ -176,7 +176,7 @@ Anteriormente escribiste un programa que leía el archivo
 ['nombre', 'cajones', 'precio']
 >>> fila = next(filas)
 >>> fila
-['Lima', '100', '32.20']
+['Lima', '100', '32.2']
 >>>
 ```
 
@@ -370,6 +370,12 @@ Si tenés tuplas como en `items` podés crear un diccionario usando la función 
 >>> d
 {'nombre': 'Manzanas', 'cajones': 100, 'precio': 490.1, 'fecha': (13, 8, 2020)}
 ```
+
+
+### Ejercicio 2.12: Diccionario geringoso.
+Construí una función que, a partir de una lista de palabras, devuelva un diccionario geringoso. Las claves del diccionario deben las palabras de la lista y los valores deben ser sus traducciones al geringoso (como en el ejercicio [Ejercicio 1.18](../01_Introduccion/04_Strings.md#ejercicio-118-geringoso-rústico)). 
+Probá tu función para la lista `['banana', 'manzana', 'mandarina']`.
+Guardá este ejercicio en un archivo `diccionario_geringoso.py` para entregar al final de la clase.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Contenedores)](04_Contenedores.md)

@@ -87,7 +87,7 @@ with open('outfile', 'wt') as out:
 
 ## Ejercicios
 
-Estos ejercicios usan el archivo `Data/camion.csv`.  El archivo contiene una lista de líneas con información sobre los cajones de fruta cargados en un camion. Suponemos que estás trabajando en el directorio `ejercicios_python/` del curso. Si no estás segure, podés pedirle al Python que te diga dónde está trabajando con este comando:
+Estos ejercicios usan el archivo `Data/camion.csv`.  El archivo contiene una lista de líneas con información sobre los cajones de fruta cargados en un camión. Suponemos que estás trabajando en el directorio `ejercicios_python/` del curso. Si no estás segure, podés pedirle al Python que te diga dónde está trabajando con este comando:
 
 ```python
 >>> import os
@@ -129,8 +129,8 @@ Para leer una archivo línea por línea, usá un ciclo for como éste:
             print(line, end = '')
 
 nombre,cajones,precio
-"Lima",100,32.20
-"Naranja",50,91.10
+"Lima",100,32.2
+"Naranja",50,91.1
 ...
 >>>
 ```

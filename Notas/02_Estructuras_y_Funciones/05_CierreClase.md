@@ -9,12 +9,16 @@ Te recordamos que leas el [código de honor](../Codigo.md) del curso en el que h
 
 Para cerrar esta clase te pedimos dos cosas:
 * Que recopiles las soluciones de los siguientes ejercicios:
-    1. El archivo `camion_commandline.py` del [Ejercicio 2.8](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-28-ejecución-desde-la-línea-de-comandos-con-parámetros).
-    
+    1. El archivo `camion_commandline.py` del [Ejercicio 2.8](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-28-ejecución-desde-la-línea-de-comandos-con-parámetros). (quizás sacarlo)
+    2. El archivo `costo_camion.py` (alguno por ej 2.7)
+    3. 2.15 el informe
+    4. uno a agregar después del 2.2 con manejo de archivos
+    5. uno a agregar con una funcion + diccionarios o tuplas, despues del 2.10
+
 
 * Que completes [este formulario](https://docs.google.com/forms/d/1t_rhPa-VFILPWzXLBttyfN-a4fZSiAwa_k8pU0FVEF4) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
  
-Esperamos que entregues como mínimo tres archivos de los cinco o más que te pedimos. 
+Esperamos que entregues como mínimo tres archivos de los que te pedimos. 
 
 Acordate, usá siempre la misma dirección de mail con la que te inscribiste al curso así podemos llevar registro de tus entregas. 
 

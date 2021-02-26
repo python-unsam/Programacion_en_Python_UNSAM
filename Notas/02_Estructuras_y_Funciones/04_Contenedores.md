@@ -106,7 +106,7 @@ with open('../Data/precios.csv', 'rt') as f:
         precios[row[0]] = float(row[1])
 ```
 
-Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Usando lo que ya vimos, en el [Ejercicio 2.14](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores) vas a tener que modificar el código para resolver el problema.
+Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Usando lo que ya vimos, en el [Ejercicio 2.15](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-215-diccionarios-como-contenedores) vas a tener que modificar el código para resolver el problema.
 
 ### Búsquedas en un diccionario
 
@@ -189,7 +189,7 @@ s1 - s2                 # Diferencia de conjuntos
 
 En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `ejercicios_python/informe.py`.
 
-### Ejercicio 2.12: Lista de tuplas
+### Ejercicio 2.13: Lista de tuplas
 El archivo `Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.5](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-25-transformar-un-script-en-una-función) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
 La función debería verse parecida a ésta:
@@ -273,7 +273,7 @@ También podés reescribir el último ciclo for usando un comando como éste:
 
 *Observación: la instrucción `+=` es una abreviación. Poner `a += b` es equivalente a poner `a = a + b`*
 
-### Ejercicio 2.13: Lista de diccionarios
+### Ejercicio 2.14: Lista de diccionarios
 Tomá la función que escribiste en el ejercicio anterior y modificala para representar cada cajón del camión con un diccionario en vez de una tupla. En este diccionario usá los campos "nombre", "cajones" y "precio" para representar las diferentes columnas del archivo de entrada.
 
 Experimentá con esta función nueva igual que en el ejercicio anterior.
@@ -314,7 +314,7 @@ Mirar diccionarios y listas muy grandes puede ser un lío. Para limpiar el outpu
 >>>
 ```
 
-### Ejercicio 2.14: Diccionarios como contenedores
+### Ejercicio 2.15: Diccionarios como contenedores
 Los diccionarios son útiles si querés buscar elementos usando índices que no sean números enteros. En la terminal de Python, jugá con un diccionario:
 
 ```python
@@ -335,17 +335,17 @@ False
 El archivo `Data/precios.csv` contiene una serie de líneas con precios de venta de cajones en el mercado al que va el camión. El archivo se ve así:
 
 ```csv
-"Lima",9.22
+"Lima",40.22
 "Uva",24.85
 "Ciruela",44.85
 "Cereza",11.27
-"Frutilla",3.72
+"Frutilla",53.72
 ...
 ```
 
 Escribí una función `leer_precios(nombre_archivo)` que a partir de un conjunto de precios como éste arme un diccionario donde las claves sean los nombres de frutas y verduras, y los valores sean los precios por cajón.
 
-Para hacerlo, empezá con un diccionario vacío y andá agregándole valores igual que como hiciste antes, pero ahora esos valores los vas leyendo del archivo.
+Para hacerlo, empezá con un diccionario vacío y andá agregándole valores igual a como hiciste antes, pero ahora esos valores los vas leyendo del archivo.
 
 Vamos a usar esta estructura de datos para buscar rápidamente los precios de las frutas y verduras.
 
@@ -360,7 +360,7 @@ Usá el módulo `csv` igual que antes.
         print(row)
 
 
-['Lima', '9.22']
+['Lima', '40.22']
 ['Uva', '24.85']
 ...
 []
@@ -384,10 +384,10 @@ Una vez que hayas escrito tu función `leer_precios()`, testeala interactivament
 >>>
 ```
 
-### Ejercicio 2.15: Balances
+### Ejercicio 2.16: Balances
 Supongamos que los precios en `camion.csv` son los precios pagados al productor de frutas mientras que los precios en `precios.csv` son los precios de venta en el lugar de descarga del camión.
 
-Ahora vamos calcular el balance del negocio: juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y completa el programa para que con los precios del camión ([Ejercicio 2.13](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-213-lista-de-diccionarios)) y los de venta en el negocio ([Ejercicio 2.14](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-214-diccionarios-como-contenedores)) calcule lo que costó el camión, lo que se recaudo con la venta, y la diferencia. ¿Hubo ganancia o pérdida? El programa debe imprimir por pantalla un balance con estos datos.
+Ahora vamos calcular el balance del negocio: juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y completá el programa para que con los precios del camión ([Ejercicio 2.14](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-214-lista-de-diccionarios)) y los de venta en el negocio ([Ejercicio 2.15](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-215-diccionarios-como-contenedores)) calcule lo que costó el camión, lo que se recaudó con la venta, y la diferencia. ¿Hubo ganancia o pérdida? El programa debe imprimir por pantalla un balance con estos datos.
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la clase)](05_CierreClase.md)

@@ -1,6 +1,6 @@
 [Contenidos](../Contenidos.md) \| [Anterior (5 Listas)](05_Listas.md)
 
-# 1.6 Cierre de la primer clase
+# 1.6 Cierre de la clase
 
 En esta clase aprendimos a correr el intérprete de Python desde la línea de comandos para usarlo como una calculadora. Aprendimos a editar programas con un editor de texto y a correrlos en la terminal. Vimos diferentes tipos de datos: números enteros, números de punto flotante, cadenas y listas.
 

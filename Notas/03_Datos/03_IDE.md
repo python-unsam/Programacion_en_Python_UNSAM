@@ -13,7 +13,7 @@ Esta es una imagen de una captura de pantalla del Spyder:
 
 En la captura se puede ver que por defecto el Spyder viene estructurado con tres ventanas. Un editor de código ocupa la mitad izquierda de la ventana, mientras que la mitad derecha se divide en una terminal (o consola) interactiva de Python en la mitad inferior y un inspector de variables en la mitad superior. El Spyder nos permite correr línea por línea el código del editor (tecla `F9`) y ver el estado de las variables en el inspector de variables, o ejecutarlo completo (tecla `F5`). También nos permite debuguear el código con facilidad (botones azules de la barra superior).
 
-Les recomendamos que le dediquen un tiempo a probar sus últimos ejercicios en este entorno. Verán que es muy cómodo. Pueden mirar un [breve tutorial](https://www.youtube.com/watch?v=0fxURPC1YFs) donde no sólo les enseñan el uso de la tecla `F5`, sino también una introducción al uso del debugger (le dice depurador) que veremos en la próxima clase.
+Les recomendamos que le dediquen un tiempo a probar sus últimos ejercicios en este entorno. Verán que es muy cómodo. Pueden mirar un [breve tutorial](https://www.youtube.com/watch?v=0fxURPC1YFs) donde no sólo les enseñan el uso de la tecla `F5`, sino también una introducción al uso del debugger (le dice depurador) que veremos más adelante en este curso.
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Contadores del módulo _collections_)](02_Contadores.md) \| [Próximo (4 Arbolado porteño)](04_Arboles1.md)
 

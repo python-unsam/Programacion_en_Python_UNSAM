@@ -8,7 +8,7 @@ El objetivo de este primera clase es introducir algunos conceptos básicos de Py
 * [1.3 Números](03_Numeros.md)
 * [1.4 Cadenas](04_Strings.md)
 * [1.5 Listas](05_Listas.md)
-* [1.6 Cierre de la primer clase](06_CierreClase.md)
+* [1.6 Cierre de la clase](06_CierreClase.md)
 
 
 [Contenidos](../Contenidos.md) \| [Próximo (2 Estructuras y funciones)](../02_Estructuras_y_Funciones/00_Resumen.md)
