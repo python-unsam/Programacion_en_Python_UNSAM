@@ -434,7 +434,7 @@ Si lo hiciste bien, vas a descubrir que tu programa aún funciona a pesar de que
 
 El cambio que hicimos acá es sutil, pero importante. En lugar de tener *hardcodeado* un formato fijo, la nueva versión de la función `costo_camion()` puede sacar la información de interés de cualquier archivo CSV. En la medida en que el archivo tenga las columnas requeridas, el código va a funcionar.
 
-Modificá el programa `informe.py` que escribiste antes (ver [Ejercicio 2.16](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-216-balances)) para que use esta técnica para elegir las columnas a partir de sus encabezados.
+Modificá el programa `informe.py` que escribiste antes (ver [Ejercicio 2.18](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-218-balances)) para que use esta técnica para elegir las columnas a partir de sus encabezados.
 
 Probá correr el programa `informe.py` sobre el archivo  `Data/fecha_camion.csv`
 y fijate si da la misma salida que antes.

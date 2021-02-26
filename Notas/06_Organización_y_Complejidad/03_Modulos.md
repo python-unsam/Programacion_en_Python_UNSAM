@@ -237,7 +237,7 @@ Guiate por el ejemplo interactivo que dimos un poco más arriba.
 Al final, deberías obtener exactamente el mismo resultado que al principio.
 
 ### Ejercicio 6.9: Un poco más allá
-En [Ejercicio 2.5](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-25-transformar-un-script-en-una-función) escribiste el programa `costo_camion.py` que lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo.
+En [Ejercicio 2.6](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-26-transformar-un-script-en-una-función) escribiste el programa `costo_camion.py` que lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo.
 
 ```python
 >>> import costo_camion
