@@ -5,12 +5,12 @@ En esta clase discutimos los tipos de errores que pueden aparecer en un programa
 
 **Recordá:** aunque no termines todos los ejercicios, completá el formulario del final de la clase y subí los que hayas podido hacer **ANTES** del día miércoles siguiente a las 14hs. Esto es parte de las condiciones de aprobación de la materia: todes podemos tener una semana complicada, pero en general esperamos que entregues la mayoría de los ejercicios.
 
-* [4.1 Errores](02_Bugs.md)
-* [4.2 Listas y búsqueda lineal](03_IteradoresLista.md)
-* [4.3 Comprensión de listas](04_Comprension_Listas.md)
-* [4.4 Objetos](05_Objetos.md)
-* [4.5 Arbolado porteño y comprensión de listas](06_Arboles2_LC.md)
-* [4.6 Cierre de la clase](07_Cierre.md)
+* [4.1 Errores](01_Bugs.md)
+* [4.2 Listas y búsqueda lineal](02_IteradoresLista.md)
+* [4.3 Comprensión de listas](03_Comprension_Listas.md)
+* [4.4 Objetos](04_Objetos.md)
+* [4.5 Arbolado porteño y comprensión de listas](05_Arboles2_LC.md)
+* [4.6 Cierre de la clase](06_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 Trabajando con datos)](../03_Datos/00_Resumen.md) \| [Próximo (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md)

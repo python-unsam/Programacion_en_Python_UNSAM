@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](03_IteradoresLista.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
 
 # 4.1 Errores
 
@@ -219,8 +219,8 @@ camion = leer_camion('../Data/camion.csv')
 pprint(camion)
 ```
 
-_Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy difícil, podés mirar un poco de la teoría relacionada con esto un par de secciones más adelante ([Sección 4.4](../04_Listas_y_Listas/05_Objetos.md#ejemplo-de-asignación))._
+_Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy difícil, podés mirar un poco de la teoría relacionada con esto un par de secciones más adelante ([Sección 4.4](../04_Listas_y_Listas/04_Objetos.md#ejemplo-de-asignación))._
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](03_IteradoresLista.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
 

@@ -4,7 +4,7 @@
 
 Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
 
-Vimos en la  [Sección 4.1](../04_Listas_y_Listas/02_Bugs.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
+Vimos en la  [Sección 4.1](../04_Listas_y_Listas/01_Bugs.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
 
 
 ## Testear es genial, debuggear es horrible.
@@ -95,7 +95,7 @@ Step Return | ejecuta hasta salir de la función
 Continue | retoma la ejecución normal
 Stop | detiene el programa
 
-Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 4.1](../04_Listas_y_Listas/02_Bugs.md#ejercicio-41-semántica) para que veas la utilidad del debugger:
+Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 4.1](../04_Listas_y_Listas/01_Bugs.md#ejercicio-41-semántica) para que veas la utilidad del debugger:
 
 
 ```python
@@ -174,7 +174,7 @@ print(f'Entrada {l}, Salida: {m}')
 Deberías observar que la función modifica el valor de la lista de entrada. Eso no debería ocurrir: una función nunca debería modificar los parámetros salvo que sea lo esperado.  Usá el debugger y el explorador de variables para determinar cuál es el primer **paso clave** en el que se modifica el valor de esta variable.
 
 ### Ejercicio 5.2: Más debugger
-Siguiendo con los ejemplos del [Ejercicio 4.1](../04_Listas_y_Listas/02_Bugs.md#ejercicio-41-semántica), usá el debugger para analizar el siguiente código:
+Siguiendo con los ejemplos del [Ejercicio 4.1](../04_Listas_y_Listas/01_Bugs.md#ejercicio-41-semántica), usá el debugger para analizar el siguiente código:
 
 ```python
 import csv
@@ -201,7 +201,7 @@ Observá en particular lo que ocurre al leer la segunda fila de datos del archiv
 
 ## Análisis de alternativas para *propagar*
 
-Los siguientes tres ejercicios proponen diferentes soluciones al [Ejercicio 4.9](../04_Listas_y_Listas/03_IteradoresLista.md#ejercicio-49-propagación) de propagación del fuego. Vamos a analizar sus diferencias y comenzar a pensar en su eficiencia. Algunas soluciones tienen errores que deberás corregir oportunamente. ¡Usá el debugger de Python!
+Los siguientes tres ejercicios proponen diferentes soluciones al [Ejercicio 4.9](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-49-propagación) de propagación del fuego. Vamos a analizar sus diferencias y comenzar a pensar en su eficiencia. Algunas soluciones tienen errores que deberás corregir oportunamente. ¡Usá el debugger de Python!
 
 _Observación: Cuando te pidamos que cuentes cuántas operaciones hace una función, no nos va a importar el detalle de las constantes. Por ejemplo: si una función para una entrada de largo n hace n+2 operaciones y otra hace 3*n+5 nos va a importar que ambas hacen una cantidad **lineal** de operaciones en el tamaño de la entrada, pero no las constantes 2, 3 y 5 que figuran en cada caso. Diremos que la cantidad de operaciones es *O(n)* (se lee 'o de n'). En cambio, sí vamos a hacer una diferencia si una función hace n y otra hace n^2 operaciones (una va a tener complejidad *O(n)* y la otra O(n^2)*). Volveremos sobre estos temas más adelante._
 

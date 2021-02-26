@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](05_Objetos.md) \| [Próximo (6 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](04_Objetos.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
 
 # 4.5 Arbolado porteño y comprensión de listas
 
@@ -22,7 +22,7 @@ Usando comprensión de listas y la variable `arboleda` podés por ejemplo armar 
 H=[float(arbol['altura_tot']) for arbol in arboleda]
 ```
 
-Usá los filtros (recordá la [Sección 4.3](../04_Listas_y_Listas/04_Comprension_Listas.md#filtros)) para armar la lista de alturas de los Jacarandás solamente.
+Usá los filtros (recordá la [Sección 4.3](../04_Listas_y_Listas/03_Comprension_Listas.md#filtros)) para armar la lista de alturas de los Jacarandás solamente.
 
 ### Ejercicio 4.20: Lista de altos y diámetros de Jacarandá
 En el ejercicio anterior usaste una sola linea para seleccionar las alturas de los Jacarandás en parques porteños. Ahora te proponemos que armes una nueva lista que tenga pares (tuplas de longitud 2) conteniendo no solo el alto sino también el diámetro de cada Jacarandá en la lista.
@@ -49,7 +49,7 @@ especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
 ```
 
 Te pedimos que armes un diccionario en el que estas `especies` sean las claves y los valores asociados sean los datos que generaste en el ejercicio anterior.
-Más aún, organizá tu código dentro de una función `medidas_de_especies(especies,arboleda)` que recibe una lista de nombres de especies y una lista como la del [Ejercicio 4.18](../04_Listas_y_Listas/06_Arboles2_LC.md#ejercicio-418-lectura-de-todos-los-árboles) y devuelve un diccionario cuyas claves son estas `especies` y sus valores asociados sean las medidas generadas en el ejercicio anterior.
+Más aún, organizá tu código dentro de una función `medidas_de_especies(especies,arboleda)` que recibe una lista de nombres de especies y una lista como la del [Ejercicio 4.18](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-418-lectura-de-todos-los-árboles) y devuelve un diccionario cuyas claves son estas `especies` y sus valores asociados sean las medidas generadas en el ejercicio anterior.
 
 Vamos a usar esta función la semana próxima. A modo de control, si llamás a la función con las tres especies del ejemplo como parámetro (`['Eucalipto', 'Palo borracho rosado', 'Jacarandá']`) y la `arboleda` entera, deberías recibir un diccionario con tres entradas (una por especie), cada una con una lista asociada conteniendo 4112, 3150 y 3255 pares de números (altos y diámetros), respectivamente.
 
@@ -57,5 +57,5 @@ Acordate de guardar los ejercicios de esta sección en el archivo `arboles.py`.
 
 _Extra: casi todes usan un `for` para crear este diccionario. ¿Lo podés hacer usando una **comprensión de diccionarios**? Te recordamos la sintaxis: `diccionario = { clave: valor for clave in claves }`_
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](05_Objetos.md) \| [Próximo (6 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](04_Objetos.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
 

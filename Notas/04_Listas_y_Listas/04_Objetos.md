@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](03_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](05_Arboles2_LC.md)
 
 # 4.4 Objetos
 
@@ -48,7 +48,7 @@ Esto significa que al modificar un valor modificamos *todas* las referencias.
 
 Observá cómo un cambio en la lista original desencadena cambios en todas las demás variables (ouch!). Esto es porque no se hizo ninguna copia. Todos son punteros a la misma cosa.
 
-Esto es lo mismo que pasaba en el [Ejercicio 4.5](../04_Listas_y_Listas/02_Bugs.md#ejercicio-45-pisando-memoria).
+Esto es lo mismo que pasaba en el [Ejercicio 4.5](../04_Listas_y_Listas/01_Bugs.md#ejercicio-45-pisando-memoria).
 
 
 ### Reasignar valores
@@ -419,5 +419,5 @@ Bonus: ¿Cómo modificarías este ejemplo para transformar la fecha (`date`) en 
 
 Es importante que entiendas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](04_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](06_Arboles2_LC.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](03_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](05_Arboles2_LC.md)
 
