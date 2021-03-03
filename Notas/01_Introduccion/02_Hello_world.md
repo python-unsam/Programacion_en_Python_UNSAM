@@ -18,13 +18,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>
 ```
 
-Les programadores no suelen tener problemas en usar el intérprete de esta forma, aunque no es la más cómoda para principiantes. Más adelante vamos a porponerles usar entornos de desarrollo más sofisticados, pero por el momento quedémosnos con la incomodidad que nos va a enseñar cosas útiles.
+Les programadores no suelen tener problemas en usar el intérprete de esta forma, aunque no es la más cómoda para principiantes. Más adelante vamos a proponerles usar entornos de desarrollo más sofisticados, pero por el momento quedémosnos con la incomodidad que nos va a enseñar cosas útiles.
 
 ### Modo interactivo
 
 Cuando ejecutás Python, entrás al modo *interactivo* en el que podés experimentar.
 
-Si escribís un comando, se va a ejecutar inmediatamente. No hay ningún ciclo de edición-compilación-ejecución-debug en esto, como en otros lenguajes.
+Si escribís un comando, se va a ejecutar inmediatamente. No hay ningún ciclo de edición-compilación-ejecución-debug en Python, como hay en otros lenguajes.
 
 ```python
 >>> print('hello world')
@@ -74,7 +74,7 @@ Los programas se guardan en archivos `.py`.
 print('hello world')
 ```
 
-Podés crear estos archivos con tu editor de texto favorito. Más adelante vamos a proponerles usar el `spyder` que es un entorno de desarrollo integrado (IDE) que permite tener en la pantalla un editor y un intérprete al mismo tiempo, entre otras cosas. Pero por ahora usemos el block de notas, el gedit o tu editor favorito para seguir estos ejemplos.
+Podés crear estos archivos con tu editor de texto favorito. Más adelante vamos a proponerles usar el `spyder` que es un entorno de desarrollo integrado (IDE por «Integrated Development Environment», entorno de desarrollo integrado) que permite tener en la pantalla un editor y un intérprete al mismo tiempo, entre otras cosas. Pero por ahora usemos el block de notas, el gedit o tu editor favorito para seguir estos ejemplos.
 
 ### Ejecutar programas
 
@@ -113,7 +113,7 @@ Acá va una solución:
 
 ```python
 # obelisco.py
-grosor_billete = 0.11 * 0.001 # 0.11 mm escrito en metros
+grosor_billete = 0.11 * 0.001  # grosor de un billete en metros
 altura_obelisco = 67.5         # altura en metros
 num_billetes = 1
 dia = 1
@@ -189,9 +189,9 @@ altura2 = 442 # válido
 El tipo de las variables no debe ser declarado como en otros lenguajes. El tipo es asociado con el valor del lado derecho.
 
 ```python
-height = 442           # Entero
-height = 442.0         # Punto flotante
-height = 'Really tall' # Cadena de caracteres
+altura = 442           # Entero
+altura = 442.0         # Punto flotante
+altura = 'Muy, muy alto' # Cadena de caracteres
 ```
 
 Decimos que Python tiene tipado dinámico. El tipo percibido por el intérprete puede cambiar a lo largo de la ejecución dependiendo del valor asignado a la variable.
@@ -201,9 +201,9 @@ Decimos que Python tiene tipado dinámico. El tipo percibido por el intérprete 
 Mayúsculas y minúsculas son diferentes para Python. Por ejemplo, todas las siguientes variables son diferentes.
 
 ```python
-name = 'David'
-Name = 'Diego'
-NAME = 'Rosita'
+nombre = 'David'
+Nombre = 'Diego'
+NOMBRE = 'Rosita'
 ```
 
 Los comandos de Python siempre se escriben con minúsculas.
@@ -280,7 +280,7 @@ else:
     print('Gana b')
 ```
 
-Podés verificar múltiples condiciones agregando condiciones extras con `elif`.
+Podés verificar condiciones mutuamente excluyentes agregando condiciones extras con `elif`.
 
 ```python
 if a > b:
@@ -311,8 +311,8 @@ print(x) # imprime el texto '100'
 Si le pasás más de un valor al `print` los separa con espacios.
 
 ```python
-name = 'Juana'
-print('Mi nombre es', name) # Imprime el texto 'Mi nombre es Juana'
+nombre = 'Juana'
+print('Mi nombre es', nombre) # Imprime el texto 'Mi nombre es Juana'
 ```
 
 `print()` siempre termina la línea impresa pasando a la siguiente.
@@ -347,8 +347,8 @@ Hola Mi nombre es Juana
 Para leer un valor ingresado por el usuario, usá la función `input()`:
 
 ```python
-name = input('Ingresá tu nombre:')
-print('Tu nombre es', name)
+nombre = input('Ingresá tu nombre:')
+print('Tu nombre es', nombre)
 ```
 
 `input` imprime el texto que le pases como parámetro y espera una respuesta. Es útil para programas pequeños, para hacer ejercicios o para debuguear un código. Casi no se lo usa en programas reales.
@@ -364,7 +364,7 @@ else:
     print('No ganó a')
 ```
 
-Este comando no hace nada. Sirve para guardar el lugar para comando que querramos agregar luego.
+Este comando no hace nada. Sirve para guardar el lugar para un comando que querramos agregar luego.
 
 ## Ejercicios
 

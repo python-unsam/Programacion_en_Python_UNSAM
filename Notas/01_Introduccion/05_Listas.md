@@ -39,7 +39,7 @@ t = ['a', 'b']
 s + t           # [1, 2, 3, 'a', 'b']
 ```
 
-Las listas se indexan con número enteros, comenzando en 0.
+Las listas se indexan con números enteros, comenzando en 0.
 
 ```python
 nombres = [ 'Rosita', 'Manuel', 'Luciana' ]
