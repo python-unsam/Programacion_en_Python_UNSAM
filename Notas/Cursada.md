@@ -6,7 +6,7 @@ Esta página tiene información importante sobre cómo se desarrollará el curso
 ## Prerrequisitos
 Este curso está orientado a estudiantes de ingeniería y de disciplinas científicas que quieran aprender Python y utilizarlo para análisis de datos, aprendizaje automático, modelado matemático, o scripting. Está orientado a personas con alguna experiencia previa en programación, aunque no asumimos ningún conocimiento del lenguaje Python. Es un curso intenso y desafiante, que invita a pensar y a desarrollar algoritmos eficientes.
 
-Para hacer este curso solo hace falta tener instalado el Python 3.6 o más nuevo y tiempo para leer las clases y hacer los ejercicios (son de entrega obligatoria semanal).
+Para hacer este curso solo hace falta tener instalado el Python 3.6 o uno más nuevo y tiempo para leer las clases y hacer los ejercicios (son de entrega obligatoria semanal).
 
 
 ## Dedicación y duración
@@ -25,7 +25,7 @@ Dr. en Química y trabaja en neurofisiología. También contamos con una JTP (Ma
 ## Contenidos, enfoque y organización de los temas
 El curso involucra contenidos prácticos específicos del lenguaje Python así como también un poco más teóricos sobre algoritmos, organización de programas y estructuras de datos. Además de los contenidos mínimos del curso, las clases de la segunda mitad tendrán ejercicios optativos para profundizar en algunos temas más avanzados.
 
-Los clases deben ser hechas en forma secuencial, comenzando con la primera. Los ejercicios en muchos casos construyen sobre ejercicios hechos en clases anteriores. Es fundamental que sean ordenades y guarden sus ejercicios resueltos ya que los necesitarán en las clases siguientes.
+Los clases deben ser hechas en forma secuencial, comenzando con la primera. Los ejercicios en muchos casos se construyen sobre ejercicios hechos en clases anteriores. Es fundamental que sean ordenades y guarden sus ejercicios resueltos ya que los necesitarán en las clases siguientes.
 
 ## Clases
 
@@ -33,7 +33,7 @@ Las clases tendrán una componente asincrónica y otra sincrónica.
 
 El contenido será dictado principalmente de forma asincrónica, por medio de apuntes, guías de ejercicios de entrega semanal y a través de una plataforma de consultas.
 
-La parte sincrónica durará unas dos horas semanales y tendrá lugar los miércoles a las 14hs por videoconferencia / streaming. En estas clases presenciales discutiremos los ejericicos de la semana anterior y presentaremos brevemente los temas de la semana siguiente.
+La parte sincrónica durará unas dos horas semanales y tendrá lugar los miércoles a las 14hs por videoconferencia / streaming. En estas clases presenciales discutiremos los ejercicios de la semana anterior y presentaremos brevemente los temas de la semana siguiente.
 
 Habrá también un grupo de discusión y consultas en [Slack](./Slack.md#grupo-de-slack---información-y-consultas) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios. Será nuestro canal de comunicación. Por favor, súmense.
 
@@ -51,7 +51,7 @@ Por otra parte, habrá dos exámenes parciales sobre los contenidos dictados: un
 ## Créditos para grado y posgrado
 Es una pregunta frecuente si la materia da créditos en tal o cuál universidad. En la inmensa mayoría de los casos sí, pero cada universidad tiene sus propias reglas de acreditación. Averigüen antes si les van a acreditar el curso. No podemos adaptarnos a los requerimientos de cada uno.
 
-La materia es oficialmente de grado y posgrado y, en caso de aprobación, les entregaremos un certificado de aprobación oficial confeccionado por la secretaría de alumnos de la ECyT-UNSAM. La decisión sobre los créditos no es nuestra sino de las diferentes universidades o comisiones doctorales. En el grupo de Slack pueden encontrar el programa de la materia que especifica su carga horaria, contenidos así como las condiciones de aprobación e información sobre los docentes. Con esta información deberían poder averiguar ustedes mismos sobre la aceptación del curso y el otorgamiento de créditos en sus respectivas unidades académicas.
+La materia es oficialmente de grado y posgrado y, en caso de aprobación, les entregaremos un certificado de aprobación oficial confeccionado por la secretaría de alumnos de la ECyT-UNSAM. La decisión sobre los créditos no es nuestra sino de las diferentes universidades o comisiones doctorales. En el grupo de Slack pueden encontrar el programa de la materia que especifica su carga horaria, contenidos así como las condiciones de aprobación e información sobre los docentes. Con esta información deberían poder averiguar ustedes mismes sobre la aceptación del curso y el otorgamiento de créditos en sus respectivas unidades académicas.
 
 
 ## Cronograma

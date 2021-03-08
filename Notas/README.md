@@ -8,7 +8,7 @@ Este es un curso cuatrimestral de algoritmos y Python. Tiene muchos ejercicios y
 
 ## Audiencia. ¿Para quién está pensado?
 
-Este curso está orientado a estudiantes ingenierías y de disciplinas científicas tanto de grado como de posgrado que quieran aprender Python y utilizarlo para análisis de datos, modelado matemático, o scripting. Está orientado a personas con alguna experiencia previa en programación, aunque no asumimos ningún conocimiento del lenguaje Python. Es un curso intenso y desafiante, que invita a pensar y a desarrollar algoritmos eficientes.
+Este curso está orientado a estudiantes de ingenierías y de disciplinas científicas (exactas, naturales y sociales) tanto de grado como de posgrado que quieran aprender Python y utilizarlo para análisis de datos, modelado matemático, o scripting. Está orientado a personas con alguna experiencia previa en programación, aunque no asumimos ningún conocimiento del lenguaje Python. Es un curso intenso y desafiante, que invita a pensar y a desarrollar algoritmos eficientes.
 
 ## Objetivo
 
@@ -16,7 +16,7 @@ El objetivo de este curso es enseñar los fundamentos del lenguaje Python orient
 
 ## Requerimientos
 
-Para hacer este curso hace falta tener una computadora con conextión a internet donde instalar el Python 3.6 o más nuevo y tiempo para leer las clases y hacer los ejercicios (son de entrega obligatoria semanal). Estimamos que entre clases, consultas y ejercitación van a dedicar unas quince horas semanales durante los cuatro meses de cursada. 
+Para hacer este curso hace falta tener una computadora con conexión a internet donde instalar el Python 3.6 o uno más nuevo y tiempo para leer las clases y hacer los ejercicios (son de entrega obligatoria semanal). Estimamos que entre clases, consultas y ejercitación van a dedicar unas quince horas semanales durante los cuatro meses de cursada. 
 
 ## Lo que este curso no es
 
