@@ -17,7 +17,7 @@ desarrollados por otres. Está orientado a preparar a le estudiante para
 profundizar en temas de **análisis y visualización de datos, aprendizaje automático, modelado matemático y desarrollo de scripts**.
 
 El curso comienza el 10 de marzo y se dicta semanalmente los días miércoles de 14hs de 16hs hasta fin de junio 2021. 
-El material escrito lo iremos subiendo semanalmente a este repositorio y las clases sincrónicas de los miércoles quedarán grabadas de manera que el curso completo (salvo los paricales) se puede hacer de manera asincrónica.
+El material escrito lo iremos subiendo semanalmente a este repositorio y las clases sincrónicas de los miércoles quedarán grabadas de manera que el curso completo (salvo los parciales) se puede hacer de manera asincrónica.
 
 Es un curso gratuito y la preinscripción está abierta hasta el miércoles 24 de febrero de 2021.
 
@@ -57,4 +57,4 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, probablemente contemos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado.
 
 ## Preinscripción
-La preinscripción al curso que comienza el miércoles 10 de marzo a las 14hs ya cerro. Para que te informemos de futuras adiciones completá [este formulario](https://forms.gle/qfdKoUyyKYqEL6Zp6).
+La preinscripción al curso que comienza el miércoles 10 de marzo a las 14hs ya cerró. Para que te informemos de futuras adiciones completá [este formulario](https://forms.gle/qfdKoUyyKYqEL6Zp6).
