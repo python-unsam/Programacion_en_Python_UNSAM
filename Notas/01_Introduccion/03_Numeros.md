@@ -250,7 +250,7 @@ Aclaración: aunque puede parecer sencillo, este ejercicio requiere que agregues
 ### Ejercicio 1.9: Calculadora de adelantos
 ¿Cuánto pagaría David si agrega $1000 por mes durante cuatro años, comenzando en el sexto año de la hipoteca (es decir, luego de 5 años)?
 
-Modificá tu programa de forma que la información sobre pagos extras sea incorporada de manera versatil. Agregá las siguientes variables antes del ciclo, para definir el comienzo, fin y monto de los pagos extras:
+Modificá tu programa de forma que la información sobre pagos extras sea incorporada de manera versátil. Agregá las siguientes variables antes del ciclo, para definir el comienzo, fin y monto de los pagos extras:
 
 ```python
 pago_extra_mes_comienzo = 61
@@ -301,10 +301,11 @@ True
 >>>
 ```
 
-### Ejercicio 1.13: El volúmen de una esfera
+### Ejercicio 1.13: El volumen de una esfera
 En tu directorio de trabajo de esta clase, escribí un programa llamado `esfera.py` que le pida al usuario que ingrese por teclado el radio *r* de una esfera y calcule e imprima el volumen de la misma. *Sugerencia: recordar que el volúmen de una esfera es 4/3 πr^3*.
 
 Finalmente, ejecutá el programa desde la línea de comandos para responder ¿cuál es el volumen de una esfera de radio 6? Debería darte `904.7786842338603`.
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (2 Un primer programa)](02_Hello_world.md) \| [Próximo (4 Cadenas)](04_Strings.md)
 

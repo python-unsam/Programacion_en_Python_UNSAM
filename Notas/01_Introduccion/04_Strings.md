@@ -51,7 +51,7 @@ Las cadenas se representan en Python asociando a cada caracter un número entero
 
 ### Indexación de cadenas
 
-Las cadenas funcionan como los vectores multidemensionales en matemática, permitiendo el acceso a los caracteres individuales. El índice comienza a contar en cero. Los índices negativos se usan para especificar una posición respecto al final de la cadena.
+Las cadenas funcionan como los vectores multidimensionales en matemática, permitiendo el acceso a los caracteres individuales. El índice comienza a contar en cero. Los índices negativos se usan para especificar una posición respecto al final de la cadena.
 
 ```python
 a = 'Hello world'
@@ -258,7 +258,7 @@ Agregá 'Melón'` al principio de la cadena:
 >>>
 ```
 
-Podría parecer en estos ejemplos que la cadena original está siendo modificada, contradiciendo la regla de que las cadenas son de sólo lectura. No es así. Las operaciones sobre cadenas crean una nueva cadena cada vez. Cuando la variable `frutas` es reasignada, apunta a la cadena recientemente creada. Luego, la cadena vieja es destruída dado que ya no está siendo usada.
+Podría parecer en estos ejemplos que la cadena original está siendo modificada, contradiciendo la regla de que las cadenas son de sólo lectura. No es así. Las operaciones sobre cadenas crean una nueva cadena cada vez. Cuando la variable `frutas` es reasignada, apunta a la cadena recientemente creada. Luego, la cadena vieja es destruida dado que ya no está siendo usada.
 
 ### Ejercicio 1.16: Testeo de pertenencia (test de subcadena)
 Experimentá con el operador `in` para buscar subcadenas. En el intérprete interactivo probá estas operaciones:
@@ -371,7 +371,7 @@ Una limitación de las operaciones básicas de cadenas es que no ofrecen ningún
 >>>
 ```
 
-Para más información sobre el módulo `re`, mirá la [documentación oficial en inglés](https://docs.python.org/3/library/re.html) o algún [tutorial en castellano](https://rico-schmidt.name/pymotw-3/re/index.html). Es un tema que escapa al contenido del curso pero que te recomendamos que mires en detalle en algún momento. Aunque no justo ahora. Sigamos...
+Para más información sobre el módulo `re`, mirá la [documentación oficial en inglés](https://docs.python.org/3/library/re.html) o algún [tutorial en castellano](https://rico-schmidt.name/pymotw-3/re/index.html). Es un tema que escapa al contenido del curso pero te recomendamos que mires en detalle en algún momento. Aunque no justo ahora. Sigamos...
 
 
 ### Comentario
