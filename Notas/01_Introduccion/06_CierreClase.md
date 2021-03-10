@@ -12,7 +12,7 @@ Para cerrar esta clase te pedimos dos cosas:
     2. [Ejercicio 1.11](../01_Introduccion/03_Numeros.md#ejercicio-111-bonus) Bonus de Hipoteca (`hipoteca.py`)
     3. [Ejercicio 1.13](../01_Introduccion/03_Numeros.md#ejercicio-113-el-volumen-de-una-esfera) Volumen de la esfera (`esfera.py`)
     4. [Ejercicio 1.18](../01_Introduccion/04_Strings.md#ejercicio-118-geringoso-rústico) Geringoso (`geringoso.py`)
-* Que completes [este formulario](https://docs.google.com/forms/d/1GGijTsgAvaRtZR8MPDq3_rGC5U0K52lHhxQ-ixYDCVc) usando como identificación tu dirección de mail. Al terminar vas a obtener un link para enviarnos tus ejercicios y te vamos a preguntar si querés participar de la revisión de ejercicios por pares (peer-review). En ese caso te vamos a mandar para que corrijas un par de ejercicios y vas a a recibir un par de correcciones.
+* Que completes [este formulario](https://docs.google.com/forms/d/13YRNhZ43Ujzi3jcq6YaoF0GNq4dVAx2l4M5CqkJMXFA) usando como identificación tu dirección de mail. Al terminar vas a obtener un link para enviarnos tus ejercicios y te vamos a preguntar si querés participar de la revisión de ejercicios por pares (peer-review). En ese caso te vamos a mandar para que corrijas un par de ejercicios y vas a a recibir un par de correcciones.
   
 Por favor, usá siempre la misma dirección de mail con la que te inscribiste al curso así podemos llevar registro de tus entregas.
 
