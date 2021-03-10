@@ -145,7 +145,7 @@ En ciertas ocasiones, puede pasar que quieras leer una sola línea de texto (por
 >>> headers
 'nombre,cajones,precio\n'
 >>> for line in f:
-    print(line, end = '')
+        print(line, end = '')
 
 "Lima",100,32.20
 "Naranja",50,91.10
@@ -164,8 +164,8 @@ Una vez que estés leyendo un archivo línea a línea, podés hacer otras operac
 >>> headers
 ['nombre', 'cajones', 'precio\n']
 >>> for line in f:
-    row = line.split(',')
-    print(row)
+        row = line.split(',')
+        print(row)
 
 ['"Lima"', '100', '32.20\n']
 ['"Naranja"', '50', '91.10\n']
