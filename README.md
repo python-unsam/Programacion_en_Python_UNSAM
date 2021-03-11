@@ -2,7 +2,11 @@
 
 En el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/), 
 la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) vuelve a dictar 
+<<<<<<< HEAD
 en 2021 el curso de programación en Python..
+=======
+en 2021 el curso de programación en Python.
+>>>>>>> df0652e8d6cfeb1e6785f8ad4ab2b4e07c14cddd
 
 ![image info](./Python_cloud.jpg)
 
