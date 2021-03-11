@@ -49,7 +49,7 @@ with open(nombre_archivo, 'rt') as file:
 
 Esto cierra automáticamente el archivo cuando se termina de ejecutar el bloque indentado.
 
-_Observación: En algunos sistemas operativos es probable que le tengas que especificar el_ enocoding _agregando `encoding='utf8'` como parámetro al comando `open`._
+_Observación: En algunos sistemas operativos es probable que le tengas que especificar el_ encoding _agregando `encoding='utf8'` como parámetro al comando `open`._
 
 ### Comandos usuales para leer un archivo
 
