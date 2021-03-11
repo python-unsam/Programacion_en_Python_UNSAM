@@ -64,7 +64,7 @@ Para poder entender qué pasó (debuguear), el mensaje describe cuál fue el pro
 ### Atrapar y administrar excepciones
 
 Las excepciones pueden ser atrapadas y administradas.
-Para atrapar una excepción, se usan los comandos `try - except`.
+Para atrapar una excepción, se usan los comandos `try - except`. Podés probar el siguiente fragmento de código pegándolo en un archivo [foo.py](https://es.wikipedia.org/wiki/Foo) :
 
 ```python
 numero_valido=False
