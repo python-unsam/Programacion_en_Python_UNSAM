@@ -13,6 +13,8 @@ f = open('foo.txt', 'rt')     # Abrir para lectura ('r' de read, 't' de text)
 g = open('bar.txt', 'wt')     # Abrir para escritura ('w' de write, 't' de text)
 ```
 
+_Observación: los nombres [foo, bar, foobar](https://es.wikipedia.org/wiki/Foo) son genéricos que se usan usualmente para aludir a un nombre que se ignora, son los análogos informáticos a fulano, mengano y zutano._
+
 Para leer el archivo completo, o una parte:
 
 ```python
@@ -47,7 +49,7 @@ with open(nombre_archivo, 'rt') as file:
 
 Esto cierra automáticamente el archivo cuando se termina de ejecutar el bloque indentado.
 
-_Observación: En algunos sistemas operativos es probable que le tangas que espcificar el_ enocoding _agregando `encoding='utf8'` como parámetro al comando `open`._
+_Observación: En algunos sistemas operativos es probable que le tengas que especificar el_ enocoding _agregando `encoding='utf8'` como parámetro al comando `open`._
 
 ### Comandos usuales para leer un archivo
 
@@ -220,8 +222,8 @@ Probalo:
 ```python
 >>> import gzip
 >>> with gzip.open('../Data/camion.csv.gz', 'rt') as f:
-    for line in f:
-        print(line, end = '')
+        for line in f:
+            print(line, end = '')
 
 ... mirá la salida ...
 >>>

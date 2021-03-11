@@ -175,7 +175,7 @@ A partir de lo que hiciste en el [Ejercicio 2.3](../02_Estructuras_y_Funciones/0
 
 ```python
 >>> buscar_precio('Frambuesa')
-El precio de la Frambuesa es: 34.35
+El precio de un cajón de Frambuesa es: 34.35
 >>> buscar_precio('Kale')
 Kale no figura en el listado de precios.
 ```
@@ -202,7 +202,7 @@ for nombre in ['Pedro','Juan','Caballero']:
         edad = preguntar_edad(nombre)
         print(f'{nombre} tiene {edad} años.')
     except ValueError:
-        print(f'{nombre} no ingesó una edad válida.')
+        print(f'{nombre} no ingresó una edad válida.')
 ```
 
 Vamos a usar estas ideas aplicadas al procesamiento de un archivo CSV. ¿Qué pasa si intentás usar la función `costo_camion()` con un archivo que tiene datos faltantes?

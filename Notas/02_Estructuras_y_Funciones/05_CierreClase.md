@@ -4,7 +4,7 @@
 
 En esta clase comenzamos a trabajar con funciones y estructuras de datos.
 
-Te recordamos que leas el [código de honor](../Codigo.md) del curso en el que hablamos de las reglas que rigen en este curso para evitar el plagio así como otros aspectos importantes sobre qué se puede compartir y qué no. Al enviar tus archivos entendemos que leíste y estas de acuerdo con este texto. En caso contrario no envíes tus archivos y contactate con los docentes.
+Te recordamos que leas el [código de honor](../Codigo.md) del curso en el que hablamos de las reglas que rigen en este curso para evitar el plagio así como otros aspectos importantes sobre qué se puede compartir y qué no. Al enviar tus archivos entendemos que leíste y estás de acuerdo con este texto. En caso contrario no envíes tus archivos y contactate con les docentes.
 
 
 Para cerrar esta clase te pedimos dos cosas:

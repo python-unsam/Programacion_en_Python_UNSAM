@@ -171,7 +171,7 @@ Los conjuntos también son útiles para eliminar duplicados.
 nombres = ['Naranja', 'Manzana', 'Pera', 'Naranja', 'Pera', 'Banana']
 
 unicos = set(nombres)
-# unicos = set(['Naranja', 'Manzana', 'Pera', 'Naranja', 'Pera', 'Banana'])
+# unicos = {'Manzana', 'Banana', 'Naranja', 'Pera'}
 ```
 
 Más operaciones en conjuntos:
@@ -200,7 +200,7 @@ import csv
 ...
 
 def costo_camion(nombre_archivo):
-    '''Computa el precio total del camion (cajones*precio) de un archivo'''
+    '''Computa el precio total del camion (cajones * precio) de un archivo'''
     total = 0.0
 
     with open(nombre_archivo, 'rt') as f:
