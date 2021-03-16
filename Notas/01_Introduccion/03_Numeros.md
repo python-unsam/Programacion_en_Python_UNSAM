@@ -146,7 +146,7 @@ x ** y     Potencia
 abs(x)     Valor absoluto
 ```
 
-Estas son las mismas operaciones que con los enteros. Otra operaciones usuales se encuentran en el módulo `math`.
+Estas son las mismas operaciones que con los enteros. Otras operaciones usuales se encuentran en el módulo `math`.
 
 ```python
 import math
