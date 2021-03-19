@@ -13,7 +13,7 @@ Para cerrar esta clase te pedimos dos cosas:
     1. El archivo `buscar_precios.py` del [Ejercicio 2.7](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-27-buscar-precios).
     2. El archivo `costo_camion.py` del [Ejercicio 2.9](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-29-funciones-de-la-biblioteca).
     3. El archivo `camion_commandline.py` del [Ejercicio 2.10](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-210-ejecución-desde-la-línea-de-comandos-con-parámetros).
-    4. El archivo `diccionario_geringoso` del [Ejercicio 2.14](../02_Estructuras_y_Funciones/03_TiposDatos.md#ejercicio-214-diccionario-geringoso).
+    4. El archivo `diccionario_geringoso.py` del [Ejercicio 2.14](../02_Estructuras_y_Funciones/03_TiposDatos.md#ejercicio-214-diccionario-geringoso).
     5. El archivo `informe.py` del [Ejercicio 2.18](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-218-balances).
 
 
