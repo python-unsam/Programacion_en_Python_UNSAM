@@ -2,7 +2,7 @@
 
 # 3.5 Impresión con formato
 
-En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. No es indispensable para el curso. Si te alcanza el tiempo está semana leela, sino no te preocupes podés volver a mirar acá en el futuro, cuando lo necesites.
+En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. 
 
 Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
 
@@ -63,7 +63,7 @@ Los modificadores permiten ajustar el ancho a imprimir o la precisión decimal (
 
 ### Formato a diccionarios
 
-Pores usar el método `format_map()` para aplicarle un formato a los valores de un diccionario:
+Podés usar el método `format_map()` para aplicarle un formato a los valores de un diccionario:
 
 ```python
 >>> s = {
@@ -105,7 +105,7 @@ También podés usar el operador  `%`.
 '3.14'
 ```
 
-Esto requiere un solo ítem, o una tupla a la derecha. Los códigos están tambien inspirados en el `printf()` de C. Tiene la dificultad de que hay que contar posiciones y todas las variables van juntas al final.
+Esto requiere un solo ítem, o una tupla a la derecha. Los códigos están también inspirados en el `printf()` de C. Tiene la dificultad de que hay que contar posiciones y todas las variables van juntas al final.
 
 ## Ejercicios
 

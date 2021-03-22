@@ -15,9 +15,9 @@ Para cerrar esta clase te pedimos dos cosas:
     4. El archivo `tablamult.py` del [Ejercicio 3.19](../03_Datos/05_Formato.md#ejercicio-319-tablas-de-multiplicar).
     
 
-* Que completes [este formulario](https://docs.google.com/forms/d/1t_rhPa-VFILPWzXLBttyfN-a4fZSiAwa_k8pU0FVEF4) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/19zpbCFLl2jigepmsaSUoitWge8qpRL1Xg8tqynj1pnI) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
  
-Esperamos que entregues como mínimo tres archivos de los cinco o más que te pedimos. 
+Esperamos en esta clase que entregues los cuatro ejercicios que te pedimos. 
 
 Acordate, usá siempre la misma dirección de mail con la que te inscribiste al curso así podemos llevar registro de tus entregas. 
 

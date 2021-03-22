@@ -38,7 +38,7 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 ### Ejercicio 3.7: Lectura de los árboles de un parque
 Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información del parque especificado. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
 
-_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 3.4](../03_Datos/01_Secuencias.md#ejercicio-34-la-función-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modifica esta función para que ese dato sea del tipo adecuado para operar._
+_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 3.4](../03_Datos/01_Secuencias.md#ejercicio-34-la-función-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modificá esta función para que ese dato sea del tipo adecuado para operar._
 
 _Observación: La columna que indica el nombre del parque en el que se encuentra el árbol se llama `'espacio_ve'` en el archivo CSV._
 
@@ -83,7 +83,7 @@ Medida | General Paz | Los Andes | Centenario
 max  |16.0 |25.0  | 18.0
 prom |10.2 |10.54 | 8.96
 
-### Ejercicio 3.11: Inclinación promedio por especie de una lista
+### Ejercicio 3.11: Inclinaciones por especie de una lista
 Escribí una función `obtener_inclinaciones(lista_arboles, especie)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie.
 
 ### Ejercicio 3.12: Especie con el ejemplar más inclinado
@@ -94,7 +94,7 @@ Correlo para los tres parques mencionados anteriormente.
 **Resultados.** Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados.
 
 
-### Ejercicio 3.13: Especie con más inclinada en promedio
+### Ejercicio 3.13: Especie más inclinada en promedio
 Volvé a combinar las funciones anteriores para escribir la función `especie_promedio_mas_inclinada(lista_arboles)` que, dada una lista de árboles devuelva la especie que en promedio tiene la mayor inclinación y el promedio calculado..
 
 **Resultados.** Deberías obtener, por ejemplo, que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
