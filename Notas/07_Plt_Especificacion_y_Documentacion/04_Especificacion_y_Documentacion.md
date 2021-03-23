@@ -176,7 +176,7 @@ Notar que al especificar un problema con pre y poscondición estamos definiendo 
 
 ### Aseveraciones
 
-Retomamos acá el concepto de aseveración que introdujimos en la [Sección 5.1](../05_Random_Plt_Dbg/01_Debugger.md#aseveraciones-assert). Tanto las precondiciones como las poscondiciones pueden pensarse como *aseveraciones* (en inglés *assertions*). Es decir, afirmaciones realizadas en un momento particular de la ejecución sobre el estado computacional. Si una aseveración llegara a ser falsa, se levanta una excepción interrumpiendo la normal ejecución del programa.
+Retomamos acá el concepto de aseveración que introdujimos en la [Sección 4.1](../04_Listas_y_Listas/01_Debugger.md#aseveraciones-assert). Tanto las precondiciones como las poscondiciones pueden pensarse como *aseveraciones* (en inglés *assertions*). Es decir, afirmaciones realizadas en un momento particular de la ejecución sobre el estado computacional. Si una aseveración llegara a ser falsa, se levanta una excepción interrumpiendo la normal ejecución del programa.
 
 En algunos casos puede ser útil incorporar estas afirmaciones desde el código, y para eso podemos utilizar la instrucción `assert`. Esta instrucción recibe una condición a verificar (o sea, una expresión booleana). Si la condición es `True`, la instrucción no hace nada; en caso contrario se produce un error.
 

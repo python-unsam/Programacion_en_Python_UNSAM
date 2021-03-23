@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Contadores del módulo _collections_)](02_Contadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](01_Bugs.md) \| [Próximo (3 Contadores del módulo _collections_)](03_Contadores.md)
 
-# 3.1 Secuencias
+# 3.2 Secuencias
 
 ### Tipo de secuencias
 
@@ -266,7 +266,7 @@ d = dict(zip(columnas, valores))
 
 ## Ejercicios
 
-### Ejercicio 3.1: Contar
+### Ejercicio 3.6: Contar
 Probá algunos ejemplos elementales de conteo:
 
 ```python
@@ -285,7 +285,7 @@ Probá algunos ejemplos elementales de conteo:
 >>>
 ```
 
-### Ejercicio 3.2: Más operaciones con secuencias
+### Ejercicio 3.7: Más operaciones con secuencias
 Interactivamente experimentá con algunas operaciones de reducción de secuencias.
 
 ```python
@@ -333,7 +333,7 @@ A veces los comandos for, len(), y range() son combinados para recorrer listas:
 
 Sin embargo, Python tiene mejores alternativas para esto. Te recomendamos familiarizarte con ellas y usarlas: por su simpleza producen código más legible y reducen la posibilidad de un bug en el código. Simplemente usá un ciclo `for` normal si querés iterar sobre los elementos de la variable `data`.  Y usá `enumerate()` si necesitás tener el índice por algún motivo.
 
-### Ejercicio 3.3: Un ejemplo práctico de enumerate()
+### Ejercicio 3.8: Un ejemplo práctico de enumerate()
 Recordá que el archivo  `Data/missing.csv` contiene datos sobre los cajones de un camión, pero tiene algunas filas que faltan. Usando `enumerate()`,
 modificá tu programa `costo_camion.py` de forma que imprima un aviso (warning) cada vez que encuentre una fila incorrecta.
 
@@ -355,7 +355,7 @@ for n_fila, fila in enumerate(filas, start=1):
         print(f'Fila {n_fila}: No pude interpretar: {fila}')
 ```
 
-### Ejercicio 3.4: La función zip()
+### Ejercicio 3.9: La función zip()
 En el archivo `Data/camion.csv`, la primera línea tiene los encabezados de las columnas. En los códigos anteriores la descartamos.
 
 ```python
@@ -439,7 +439,7 @@ Modificá el programa `informe.py` que escribiste antes (ver [Ejercicio 2.18](..
 Probá correr el programa `informe.py` sobre el archivo  `Data/fecha_camion.csv`
 y fijate si da la misma salida que antes.
 
-### Ejercicio 3.5: Invertir un diccionario
+### Ejercicio 3.10: Invertir un diccionario
 Un diccionario es una función que mapea claves en valores. Por ejemplo, un diccionario de precios de cajones de frutas.
 
 ```python
@@ -508,5 +508,5 @@ También, tené en cuenta que `zip()` se detiene cuando la más corta de las ent
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Contadores del módulo _collections_)](02_Contadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](01_Bugs.md) \| [Próximo (3 Contadores del módulo _collections_)](03_Contadores.md)
 

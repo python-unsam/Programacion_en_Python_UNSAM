@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Secuencias)](02_Secuencias.md)
 
-# 4.1 Errores
+# 3.1 Errores
 
 ## Tres tipos de errores:
 
@@ -131,7 +131,7 @@ En el archivo `solucion_de_errores.py` separá las correcciones de los distintos
 ```
 
 
-### Ejercicio 4.1: Semántica
+### Ejercicio 3.1: Semántica
 ¿Anda bien en todos los casos de prueba?
 ```python
 def tiene_a(expresion):
@@ -149,7 +149,7 @@ tiene_a('abracadabra')
 tiene_a('La novela 1984 de George Orwell')
 ```
 
-### Ejercicio 4.2: Sintaxis
+### Ejercicio 3.2: Sintaxis
 ¿Anda bien en todos los casos de prueba?
 ```python
 def tiene_a(expresion)
@@ -165,7 +165,7 @@ tiene_a('UNSAM 2020')
 tiene_a('La novela 1984 de George Orwell')
 ```
 
-### Ejercicio 4.3: Tipos
+### Ejercicio 3.3: Tipos
 ¿Anda bien en todos los casos de prueba?
 ```python
 def tiene_uno(expresion):
@@ -184,7 +184,7 @@ tiene_uno('La novela 1984 de George Orwell')
 tiene_uno(1984)
 ```
 
-### Ejercicio 4.4: Alcances
+### Ejercicio 3.4: Alcances
 La siguiente suma no da lo que debería:
 ```python
 def suma(a,b):
@@ -196,7 +196,7 @@ c = suma(a,b)
 print(f"La suma da {a} + {b} = {c}")
 ```
 
-### Ejercicio 4.5: Pisando memoria
+### Ejercicio 3.5: Pisando memoria
 El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como corresponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
 ```python
 import csv
@@ -222,5 +222,5 @@ pprint(camion)
 _Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy difícil, podés mirar un poco de la teoría relacionada con esto un par de secciones más adelante ([Sección 4.4](../04_Listas_y_Listas/04_Objetos.md#ejemplo-de-asignación))._
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Secuencias)](02_Secuencias.md)
 

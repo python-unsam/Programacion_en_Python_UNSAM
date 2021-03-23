@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Contadores del módulo _collections_)](02_Contadores.md) \| [Próximo (4 Arbolado porteño)](04_Arboles1.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Contadores del módulo _collections_)](03_Contadores.md) \| [Próximo (5 Impresión con formato)](05_Formato.md)
 
-# 3.3 Entorno de desarrollo integrado
+# 3.4 Entorno de desarrollo integrado
 
 A partir de aquí te vamos a proponer trabajar principalmente dentro de un entorno de desarrollo integrado (IDE, por sus siglas en inglés).
 
@@ -15,5 +15,5 @@ En la captura se puede ver que por defecto el Spyder viene estructurado con tres
 
 Les recomendamos que le dediquen un tiempo a probar sus últimos ejercicios en este entorno. Verán que es muy cómodo. Pueden mirar un [breve tutorial](https://www.youtube.com/watch?v=0fxURPC1YFs) donde no sólo les enseñan el uso de la tecla `F5`, sino también una introducción al uso del debugger (le dice depurador) que veremos más adelante en este curso.
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Contadores del módulo _collections_)](02_Contadores.md) \| [Próximo (4 Arbolado porteño)](04_Arboles1.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Contadores del módulo _collections_)](03_Contadores.md) \| [Próximo (5 Impresión con formato)](05_Formato.md)
 

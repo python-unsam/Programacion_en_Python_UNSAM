@@ -1,10 +1,10 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Random)](02_Random.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
 
-# 5.1 Debuggear programas
+# 4.1 Debuggear programas
 
 Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
 
-Vimos en la  [Sección 4.1](../04_Listas_y_Listas/01_Bugs.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
+Vimos en la  [Sección 3.1](../03_Datos/01_Bugs.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resovlerlos a mano. En esta sección vamos a introducir la herramientas *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
 
 
 ## Testear es genial, debuggear es horrible.
@@ -95,7 +95,7 @@ Step Return | ejecuta hasta salir de la función
 Continue | retoma la ejecución normal
 Stop | detiene el programa
 
-Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 4.1](../04_Listas_y_Listas/01_Bugs.md#ejercicio-41-semántica) para que veas la utilidad del debugger:
+Vamos a volver a analizar el siguiente código, similar al del [Ejercicio 3.1](../03_Datos/01_Bugs.md#ejercicio-31-semántica) para que veas la utilidad del debugger:
 
 
 ```python
@@ -153,7 +153,7 @@ En todo caso, lo que observamos en esta ejecución de `tiene_a()` es que salimos
 
 ## Ejercicios
 
-### Ejercicio 5.1: Debugger
+### Ejercicio 4.1: Debugger
 Ingresá y corré el siguiente código en tu IDE:
 
 ```python
@@ -173,8 +173,8 @@ print(f'Entrada {l}, Salida: {m}')
 
 Deberías observar que la función modifica el valor de la lista de entrada. Eso no debería ocurrir: una función nunca debería modificar los parámetros salvo que sea lo esperado.  Usá el debugger y el explorador de variables para determinar cuál es el primer **paso clave** en el que se modifica el valor de esta variable.
 
-### Ejercicio 5.2: Más debugger
-Siguiendo con los ejemplos del [Ejercicio 4.1](../04_Listas_y_Listas/01_Bugs.md#ejercicio-41-semántica), usá el debugger para analizar el siguiente código:
+### Ejercicio 4.2: Más debugger
+Siguiendo con los ejemplos del [Ejercicio 3.1](../03_Datos/01_Bugs.md#ejercicio-31-semántica), usá el debugger para analizar el siguiente código:
 
 ```python
 import csv
@@ -206,7 +206,7 @@ Los siguientes tres ejercicios proponen diferentes soluciones al [Ejercicio 4.9]
 _Observación: Cuando te pidamos que cuentes cuántas operaciones hace una función, no nos va a importar el detalle de las constantes. Por ejemplo: si una función para una entrada de largo n hace n+2 operaciones y otra hace 3*n+5 nos va a importar que ambas hacen una cantidad **lineal** de operaciones en el tamaño de la entrada, pero no las constantes 2, 3 y 5 que figuran en cada caso. Diremos que la cantidad de operaciones es *O(n)* (se lee 'o de n'). En cambio, sí vamos a hacer una diferencia si una función hace n y otra hace n^2 operaciones (una va a tener complejidad *O(n)* y la otra O(n^2)*). Volveremos sobre estos temas más adelante._
 
 
-### Ejercicio 5.3: Propagar por vecinos
+### Ejercicio 4.3: Propagar por vecinos
 El siguiente código propaga el fuego de cáda fósforo encendido a sus vecinos inmediatos (si son fósforos nuevos) a lo largo de toda la lista. Y repite esta operación mientras sea necesario. ¿Te animás a estimar cuántas operaciones puede tener que hacer, en el peor caso?
 
 ```python
@@ -247,7 +247,7 @@ propagar([1,0,0,0,0])
     * Entonces, ¿cuántas operaciones hace como máximo esta versión de `propagar` en una lista de largo n? ¿Es un algoritmo de complejidad lineal o cuadrática?
 
 
-### Ejercicio 5.4: Propagar por como el auto fantástico
+### Ejercicio 4.4: Propagar por como el auto fantástico
 
 El siguiente código propaga el fuego inspirado en las luces del [auto fantástico](https://www.youtube.com/watch?v=oNeQi8-PXAU).
 
@@ -284,7 +284,7 @@ print("Estado propagado: ",lp)
 5. Sabiendo que invertir una lista (`[::-1]`) requiere una cantidad lineal de operaciones en la longitud de la lista ¿Cuántas operaciones hace como máximo `propagar` en una lista de largo n?
 
 
-### Ejercicio 5.5: Propagar con cadenas
+### Ejercicio 4.5: Propagar con cadenas
 Esta versión usa métodos de _cadenas_ para resolver el problema separando los fósforos en _grupos sin fósforos quemados_ y analizando cada grupo. Sin embargo algo falla...
 
 ```python
@@ -323,10 +323,10 @@ print("Estado propagado: ",lp)
 **Preguntas:**
 1. ¿Porqué se acorta la lista? 
 2. ¿Podés corregir el error agregando un solo caracter al código?
-3. ¿Te parece que este algoritmo es cuadrático como el [Ejercicio 5.3](../05_Random_Plt_Dbg/01_Debugger.md#ejercicio-53-propagar-por-vecinos)
-o lineal como el [Ejercicio 5.4](../05_Random_Plt_Dbg/01_Debugger.md#ejercicio-54-propagar-por-como-el-auto-fantástico)?
+3. ¿Te parece que este algoritmo es cuadrático como el [Ejercicio 4.3](../04_Listas_y_Listas/01_Debugger.md#ejercicio-43-propagar-por-vecinos)
+o lineal como el [Ejercicio 4.4](../04_Listas_y_Listas/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico)?
 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Random)](02_Random.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
 

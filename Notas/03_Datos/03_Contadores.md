@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Secuencias)](01_Secuencias.md) \| [Próximo (3 Entorno de desarrollo integrado)](03_IDE.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Secuencias)](02_Secuencias.md) \| [Próximo (4 Entorno de desarrollo integrado)](04_IDE.md)
 
-# 3.2 Contadores del módulo _collections_
+# 3.3 Contadores del módulo _collections_
 
 El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección introducimos brevemente los contadores, que son solo una de las clases incluidas en este módulo.
 
@@ -45,7 +45,7 @@ bash % python3 -i informe.py
 O podés cargarlo en el Spyder y correrlo.
 
 
-### Ejercicio 3.6: Contadores
+### Ejercicio 3.11: Contadores
 Vamos a usar un contador (objeto `Counter`) para contar cajones de frutas. Probalo:
 
 ```python
@@ -114,5 +114,5 @@ Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El m�
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Secuencias)](01_Secuencias.md) \| [Próximo (3 Entorno de desarrollo integrado)](03_IDE.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Secuencias)](02_Secuencias.md) \| [Próximo (4 Entorno de desarrollo integrado)](04_IDE.md)
 

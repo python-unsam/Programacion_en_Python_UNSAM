@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Entorno de desarrollo integrado)](03_IDE.md) \| [Próximo (5 Impresión con formato)](05_Formato.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la clase)](07_CierreClase.md)
 
-# 3.4 Arbolado porteño
+# 3.6 Arbolado porteño
 
 En esta sección haremos algunos ejercicios que integran los conceptos aprendidos en las clases anteriores. Vamos a manejar archivos, diccionarios, listas, contadores y el comando `zip`, entre otras cosas. Entregá lo que puedas hacer. 
 
@@ -35,22 +35,22 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 |coord_y             | Número flotante (float) |Coordenadas para localización |
 
 
-### Ejercicio 3.7: Lectura de los árboles de un parque
+### Ejercicio 3.18: Lectura de los árboles de un parque
 Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información del parque especificado. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
 
-_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 3.4](../03_Datos/01_Secuencias.md#ejercicio-34-la-función-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modificá esta función para que ese dato sea del tipo adecuado para operar._
+_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 3.9](../03_Datos/02_Secuencias.md#ejercicio-39-la-función-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modificá esta función para que ese dato sea del tipo adecuado para operar._
 
 _Observación: La columna que indica el nombre del parque en el que se encuentra el árbol se llama `'espacio_ve'` en el archivo CSV._
 
 Probá con el parque "GENERAL PAZ" para tener un ejemplo de trabajo, debería darte una lista con 690 árboles.
 
-### Ejercicio 3.8: Determinar las especies en un parque
+### Ejercicio 3.19: Determinar las especies en un parque
 Escribí una función `especies(lista_arboles)` que tome una lista de árboles como la generada en el ejercicio anterior y devuelva el conjunto de especies (la columna `'nombre_com'` del archivo) que figuran en la lista.
 
 _Sugerencia: Usá el comando `set` como en la [Sección 2.4](../02_Estructuras_y_Funciones/04_Contenedores.md#conjuntos)._
 
-### Ejercicio 3.9: Contar ejemplares por especie
-Usando contadores como en el [Ejercicio 3.6](../03_Datos/02_Contadores.md#ejercicio-36-contadores), escribí una función `contar_ejemplares(lista_arboles)` que, dada una lista como la que generada con `leer_parque()`, devuelva un diccionario en el que las especies (recordá, es la columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
+### Ejercicio 3.20: Contar ejemplares por especie
+Usando contadores como en el [Ejercicio 3.11](../03_Datos/03_Contadores.md#ejercicio-311-contadores), escribí una función `contar_ejemplares(lista_arboles)` que, dada una lista como la que generada con `leer_parque()`, devuelva un diccionario en el que las especies (recordá, es la columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
 
 Luego, combiná esta función con `leer_parque()` y con el método `most_common()` para informar las cinco especies más frecuentes en cada uno de los siguientes parques:
 
@@ -69,7 +69,7 @@ Palo borracho rosado: 44 |Palo borracho rosado: 18|Palo borracho rosado: 41
 Fenix: 40|Lapacho: 12|Fresno americano: 38
 
 
-### Ejercicio 3.10: Alturas de una especie en una lista
+### Ejercicio 3.21: Alturas de una especie en una lista
 Escribí una función `obtener_alturas(lista_arboles, especie)` que, dada una lista de árboles como la anterior y una especie de árbol (un valor de la columna `'nombre_com'` del archivo), devuelva una lista con las alturas (columna `'altura_tot'`) de los ejemplares de esa especie en la lista.
 
 _Observación: Acá sí, fijate de devolver las alturas como números (de punto flotante) y no como cadenas de caracteres. Podés hacer esto modificando `leer_parque`_.
@@ -83,10 +83,10 @@ Medida | General Paz | Los Andes | Centenario
 max  |16.0 |25.0  | 18.0
 prom |10.2 |10.54 | 8.96
 
-### Ejercicio 3.11: Inclinaciones por especie de una lista
+### Ejercicio 3.22: Inclinaciones por especie de una lista
 Escribí una función `obtener_inclinaciones(lista_arboles, especie)` que, dada una especie de árbol y una lista de árboles como la anterior, devuelva una lista con las inclinaciones (columna `'inclinacio'`) de los ejemplares de esa especie.
 
-### Ejercicio 3.12: Especie con el ejemplar más inclinado
+### Ejercicio 3.23: Especie con el ejemplar más inclinado
 Combinando la función `especies()` con `obtener_inclinaciones()` escribí una función `especimen_mas_inclinado(lista_arboles)` que, dada una lista de árboles devuelva la especie que tiene el ejemplar más inclinado y su inclinación.
 
 Correlo para los tres parques mencionados anteriormente.
@@ -94,7 +94,7 @@ Correlo para los tres parques mencionados anteriormente.
 **Resultados.** Deberías obtener, por ejemplo, que en el Parque Centenario hay un _Falso Guayabo_ inclinado 80 grados.
 
 
-### Ejercicio 3.13: Especie más inclinada en promedio
+### Ejercicio 3.24: Especie más inclinada en promedio
 Volvé a combinar las funciones anteriores para escribir la función `especie_promedio_mas_inclinada(lista_arboles)` que, dada una lista de árboles devuelva la especie que en promedio tiene la mayor inclinación y el promedio calculado..
 
 **Resultados.** Deberías obtener, por ejemplo, que los _Álamos Plateados_ del Parque Los Andes tiene un promedio de inclinación de 25 grados.
@@ -104,5 +104,5 @@ Volvé a combinar las funciones anteriores para escribir la función `especie_pr
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Entorno de desarrollo integrado)](03_IDE.md) \| [Próximo (5 Impresión con formato)](05_Formato.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la clase)](07_CierreClase.md)
 
