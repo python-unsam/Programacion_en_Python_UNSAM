@@ -154,13 +154,13 @@ Para saltear un elemento y moverse al siguiente, usá el comando `continue`.
 
 ```python
 for line in lines:
-    if line == '\n':    # Salteo las líneas en blanco
+    if line == '\n':    # Salteo las instrucciones que procesan líneas
         continue
-    # Más instrucciones
+    # Instrucciones que procesan líneas
     ...
 ```
 
-Ésta es útil cuando el elemento actual no es de interés o es necesario ignorarlo en el procesamiento.
+Éste es útil cuando el elemento encontrado no es de interés o es necesario ignorarlo en el procesamiento.
 
 ### Ciclos sobre enteros
 
