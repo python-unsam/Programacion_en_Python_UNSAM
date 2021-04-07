@@ -173,23 +173,23 @@ En resumen: Si la lista crece, la cantidad de comparaciones para encontrar un va
 ### Ejercicio 4.6: Búsquedas de un elemento
 Creá el archivo `busqueda_en_listas.py` para guardar tu código de este ejercicio y el siguiente.
 
-En este primer ejercicio tenés que escribir una función `buscar_u_elemento()` que reciba una lista y un elemento y devuelva la posición de la última aparición de ese elemento en la lista (o -1 si el elemento no pertenece a la lista).
+En este primer ejercicio tenés que escribir una función `buscar_un_elemento()` que reciba una lista y un elemento y devuelva la posición de la última aparición de ese elemento en la lista (o -1 si el elemento no pertenece a la lista).
 
 Probá tu función con algunos ejemplos:
 
 ```pyton 
->>> buscar_u_elemento([1,2,3,2,3,4],1)
+>>> buscar_un_elemento([1,2,3,2,3,4],1)
 0
->>> buscar_u_elemento([1,2,3,2,3,4],2)
+>>> buscar_un_elemento([1,2,3,2,3,4],2)
 3
->>> buscar_u_elemento([1,2,3,2,3,4],3)
+>>> buscar_un_elemento([1,2,3,2,3,4],3)
 4
->>> buscar_u_elemento([1,2,3,2,3,4],5)
+>>> buscar_un_elemento([1,2,3,2,3,4],5)
 -1
 
 ```
 
-Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()` que reciba una lista y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista. Probá también esta función con algunos ejemplos.
+Agregale a tu programa `busqueda_en_listas.py` una función `buscar_un_elemento()` que reciba una lista y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista. Probá también esta función con algunos ejemplos.
 
 ### Ejercicio 4.7: Búsqueda de máximo y mínimo
 Agregale a tu archivo `busqueda_en_listas.py` una función `maximo()` que busque el valor máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te proponemos que completes el siguiente código:
@@ -255,7 +255,7 @@ Por ejemplo:
 [ 1, 1, 1, 1, 1, 1]
 ```
 
-![Propagación](./fosforos.jpg) Propagación análoga a la del Ejercicio
+![Propagación](./fosforos.jpg) Propagación análoga a la del [Ejercicio 4.9](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-49-propagación)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas)](01_Debugger.md) \| [Próximo (3 Comprensión de listas)](03_Comprension_Listas.md)

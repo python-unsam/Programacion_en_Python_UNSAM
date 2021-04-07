@@ -2,7 +2,7 @@
 
 # 4.3 Comprensión de listas
 
-Una tarea que realizamos una y otra vez es procesar los elementos de una lista. En esta sección introducimos la definición de listas por compresión que es una herramienta potente para hacer exactamente eso.
+Una tarea que realizamos una y otra vez es procesar los elementos de una lista. En esta sección introducimos la definición de listas por comprensión que es una herramienta potente para hacer exactamente éso.
 
 ### Crear listas nuevas
 
@@ -235,7 +235,7 @@ Otro ejemplo útil podría ser generar un diccionario de precios de venta de aqu
 ```
 
 
-### Ejercicio 4.14: Extraer datos de una arhcivo CSV
+### Ejercicio 4.14: Extraer datos de un archivo CSV
 Saber usar combinaciones de comprensión de listas, diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. Acá te mostramos un ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
 
 Primero, leamos el encabezado (header) del archivo CSV:
@@ -294,7 +294,7 @@ No es trivial este comando. El comando es sintácticamente muy compacto, pero es
 
 ### Comentario
 
-La comprensión de listas se usa frecuentemente Python. Es una forma eficiente de transformar, filtrar o juntar datos. Tiene una sintaxis potente pero tratá de no pasarte con su uso: mantené cada comando tan simple como sea posible. Está perfecto descomponer un solo comando complejo en muchos pasos. Concretamente: compartir el último ejemplo con personas desprevenidas puede no ser lo ideal.  
+La comprensión de listas se usa frecuentemente en Python. Es una forma eficiente de transformar, filtrar o juntar datos. Tiene una sintaxis potente pero tratá de no pasarte con su uso: mantené cada comando tan simple como sea posible. Está perfecto descomponer un solo comando complejo en muchos pasos. Concretamente: compartir el último ejemplo con personas desprevenidas puede no ser lo ideal.  
 
 Dicho esto, saber manipular datos rápidamente es una habilidad increíblemente útil. Hay numerosas situaciones donde puede que tengas que resolver algún tipo de problema excepcional (en el sentido de raro o único) para importar, extraer o exportar datos. La comprensión de listas te puede ahorrar muchísimo tiempo en esas tareas.
 

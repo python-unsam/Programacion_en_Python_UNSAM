@@ -47,7 +47,7 @@ print(f'Podemos estimar la probabilidad de sacar generala servida mediante {prob
 ¿Por qué varían más los resultados obtenidos con `N = 100000` que con `N = 1000000`? ¿Cada cuántas tiradas en promedio podrías decir que sale una generala servida? ¿Cómo se puede calcular la probabilidad de forma exacta?
 
 ### Ejercicio 5.2: Generala no necesariamente servida
-Si uno juega con las reglas originales (se puede volver a tirar algunos de los cinco dados hasta dos veces, llegando hasta a tres tiradas en total) siguiendo una estrategia que intente obtener generala (siempre guardar los dados que más se repiten y tirar nuevamente los demás) es más probable otener una generala que si sólo consideramos la generala servida. Escribí un programa que estime la probabilidad de obtener una generala en las tres tiradas de una mano y guardalo en un archivo `generala.py`.
+Si uno juega con las reglas originales (se puede volver a tirar algunos de los cinco dados hasta dos veces, llegando hasta a tres tiradas en total) siguiendo una estrategia que intente obtener generala (siempre guardar los dados que más se repiten y tirar nuevamente los demás) es más probable obtener una generala que si sólo consideramos la generala servida. Escribí un programa que estime la probabilidad de obtener una generala en las tres tiradas de una mano y guardalo en un archivo `generala.py`.
 
 _Extra:_ Hay gente que, si en la primera tirada le salen todos dados diferentes, los mete al cubilete y tira los cinco nuevamente. Otras personas, eligen uno de esos dados diferentes, lo guardan, y tiran sólo los cuatro restantes. ¿Podés determinar, por medio de simulaciones, si hay una de estas estrategias que sea mejor que la otra?
 
@@ -91,7 +91,7 @@ Estos son experimentos *con reposición* en el sentido de que si en el primer da
 
 Si queremos modelar un juego con un mazo de naipes, es natural modelarlo sin reposición. Cuando le damos tres cartas a un jugador la segunda carta no puede ser igual a la primera y la tercera será diferente de las dos anteriores.
 
-En un mazo de naipes españolas, cada carta tiene un palo y un valor. El mazo tiene 40 naipes. Los palos son oro, copa, espada y basto y los valores van del 1 al 7 y de del 10 al 12. Usaremos una comprensión doble de listas para generar los naipes (todas las combinaciones posibles de valores y palos).
+En un mazo de naipes españoles, cada carta tiene un palo y un valor. El mazo tiene 40 naipes. Los palos son oro, copa, espada y basto y los valores van del 1 al 7 y de del 10 al 12. Usaremos una comprensión doble de listas para generar los naipes (todas las combinaciones posibles de valores y palos).
 
 ```python
 valores = [1, 2, 3, 4, 5, 6, 7, 10, 11, 12]
@@ -183,7 +183,7 @@ Hagamos algún ejercicio sencillo antes de terminar. Supongamos que una persona 
 
 Imprimí los valores obtenidos en las mediciones de temperatura simuladas y luego, como resumen, cuatro líneas indicando el valor máximo, el mínimo, el promedio y la mediana de estas `n` mediciones. Guardá tu programa en el archivo `termometro.py`.
 
-_Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de Python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles]?_
+_Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de Python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles](https://es.wikipedia.org/wiki/Cuartil)?_
 
 
 

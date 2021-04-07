@@ -3,7 +3,7 @@
 # 4.4 Objetos
 
 
-En esta sección introducimos algunos conceptos sobre el modelo de objeto interno de Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y verificación de tipos.
+En esta sección introducimos algunos conceptos sobre el modelo interno de objeto en Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y verificación de tipos.
 
 ### Asignaciones
 

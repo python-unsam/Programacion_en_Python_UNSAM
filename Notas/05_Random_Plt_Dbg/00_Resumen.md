@@ -8,7 +8,7 @@ Presentamos una versión libre de un ejercicio lindísimo del curso `Exactas Pro
 
 Introducimos los `arrays` de la biblioteca `numpy` en una sección un poco técnica pero importante para el futuro. 
 
-A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Cerramos introducuiendo los scatterplots que permiten visualizar dos variables en simultaneo y facilitan el análisis exploratorio de datos.
+A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Cerramos introduciendo los scatterplots que permiten visualizar dos variables en simultáneo y facilitan el análisis exploratorio de datos.
 
 
 

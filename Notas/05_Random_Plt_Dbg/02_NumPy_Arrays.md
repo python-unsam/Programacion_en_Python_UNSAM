@@ -58,7 +58,7 @@ Podemos acceder a los elementos de un arreglo usando corchetes. Acordate que los
 >>> print(a[0]) # si tiene múltiples dimensiones, esto me da una "rebanada" de una dimensión menos
 [1 2 3 4]
 >>> print(a[2]) # otra rebanada
-[ 9, 10, 11, 12])
+[ 9, 10, 11, 12]
 >>> print(a[2][3]) # accedo al cuarto elemento del tercer vector de a
 12
 >>> print(a[2,3]) # o, equivalentemente, accedo al elemento en la tercera fila y cuarta columna de a
@@ -73,7 +73,7 @@ Ocasionalmente vas a ver que alguien se refiere a un arreglo como un  “ndarray
 
 Un arreglo es usualmente un contenedor de tamaño fijo de elementos del mismo tipo. Su forma (shape) es una tupla de enteros no negativos que especifica el tamaño del arreglo en cada dimensión. Un arreglo tiene tantas dimensiones como coordenadas en la tupla.
 
-En numpy, las dimensiones se llaman **axes** (ejes). Esto significa que si tenés una arreglo bidimensional que se ve así:
+En numpy, las dimensiones se llaman **axes** (ejes). Esto significa que si tenés un arreglo bidimensional que se ve así:
 
 ```
 [[0., 0., 0.],
@@ -100,7 +100,7 @@ Vamos a representar la creación con este gráfico:
 
 _Ojo, estas visualizaciones son simplificaciones para representar lo que esta pasando y darte un entendimiento básico de los conceptos y mecanismos de numpy. Los arreglos y sus operaciones tienen aspectos más complejos que los que quedan capturados en estos dibujitos._
 
-Además de crear una arreglo a partir de una secuencia de elementos, podés crear un arreglo lleno de `0`’s:
+Además de crear un arreglo a partir de una secuencia de elementos, podés crear un arreglo lleno de `0`’s:
 
 ```python
 >>> np.zeros(2)
@@ -726,8 +726,7 @@ Es frecuente que querramos inicializar los valores de una matriz. numpy ofrece l
 array([1., 1., 1.])
 >>> np.zeros(3)
 array([0., 0., 0.])
->>> rng = np.random.default_rng(0)
->>> rng.random(3)
+>>> np.random.random(3)
 array([0.63696169, 0.26978671, 0.04097352]) # puede variar
 ```
 
@@ -745,7 +744,7 @@ array([[1., 1.],
 array([[0., 0.],
  [0., 0.],
  [0., 0.]])
->>> rng.random((3, 2))
+>>> np.random.random((3, 2))
 array([[0.01652764, 0.81327024],
  [0.91275558, 0.60663578],
  [0.72949656, 0.54362499]])  # puede variar
