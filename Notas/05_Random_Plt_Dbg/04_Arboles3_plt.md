@@ -16,7 +16,7 @@ Tu código debería verse similar a este:
 ```python
 import os
 import matplotlib.pyplot as plt
-os.path.join('Data', 'arbolado-en-espacios-verdes.csv')
+os.path.join('..', 'Data', 'arbolado-en-espacios-verdes.csv')
 arboleda = leer_arboles(nombre_archivo)
 altos = [comprensión de listas]
 plt.hist(altos,bins=...)
@@ -61,7 +61,7 @@ Comenzando con éste código, hacé tres gráficos como en el ejercicio anterior
 import os
 import matplotlib.pyplot as plt
 
-os.path.join('Data', 'arbolado-en-espacios-verdes.csv')
+os.path.join('..', 'Data', 'arbolado-en-espacios-verdes.csv')
 arboleda = leer_arboles(nombre_archivo)
 especies = ['Eucalipto', 'Palo borracho rosado', 'Jacarandá']
 medidas = medidas_de_especies(especies, arboleda)
@@ -78,6 +78,7 @@ plt.ylim(0,100)
 Acordate siempre de ponerle título a las figuras y nombres y unidades a los ejes. Guardá los últimos tres ejercicios dentro de tres funciones diferentes en tu archivo `arboles.py`. Te pediremos que lo entregues en la próxima página.
 
 _Extra:_ ¿podés hacer un solo gráfico que muestre dos de estas tres especies en diferentes colores y resulte claro? ¿Y las tres especies?
+
 
 [Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas)](03_Figuritas.md) \| [Próximo (5 Cierre de la clase)](05_Cierre.md)
 
