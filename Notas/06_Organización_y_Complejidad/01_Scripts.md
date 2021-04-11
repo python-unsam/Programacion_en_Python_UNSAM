@@ -2,9 +2,7 @@
 
 # 6.1 Scripting
 
-[oski]: # (Esto es un comentario que no se vé en el render MarkDown.)
-
-En esta sección profundizaremos en el proceso de crear scripts en Python.
+En esta sección profundizaremos en el proceso de crear scripts en Python. Esta y las próximasa secciones tiene un [video](https://youtu.be/spjiuud3dQ4) asociado que podés ver antes de leer este texto.
 
 ### ¿Qué es un script?
 
@@ -146,7 +144,7 @@ Lo ideal es que una función sea una *caja negra*. Una función debería operar 
 
 ### Doc-strings
 
-Es buena costumbre incluír documentación en forma de doc-strings. Un doc-string ó "texto de documentación" es texto ubicado en la línea inmediata después del nombre de la función. El doc-string provee información a quien lee la función, pero también se integra con la función `help()`, IDEs y otras herramientas de programación y documentación.     
+Es buena costumbre incluir documentación en forma de doc-strings. Un doc-string ó "texto de documentación" es texto ubicado en la línea inmediata después del nombre de la función. El doc-string provee información a quien lee la función, pero también se integra con la función `help()`, IDEs y otras herramientas de programación y documentación.     
 
 ```python
 def leer_precios(nombre_archivo):
@@ -162,7 +160,7 @@ def leer_precios(nombre_archivo):
     return precios
 ```
 
-Un doc-string debe ser conciso e indicar qué hace la función. Si es necesario, podés incluír un ejemplo corto de uso y una descripción de los argumentos.
+Un doc-string debe ser conciso e indicar qué hace la función. Si es necesario, podés incluir un ejemplo corto de uso y una descripción de los argumentos.
 
 Veremos también la clase que viene que es posible incluir en el doc-string una descripción de lo que se espera que cumplan los parámetros y lo que garantizamos que cumpla la salida (como un contrato).
 

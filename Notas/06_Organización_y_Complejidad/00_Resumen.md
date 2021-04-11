@@ -6,6 +6,11 @@ Hasta aquí aprendimos algunas cosas básicas de Python y escribimos nuestros pr
 
 En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e introducimos la búsqueda binaria, un algoritmo mucho más eficiente para buscar un elemento en un vector. Discutimos algunos conceptos de la teoría de la complejidad y finalmente haremos unos gráficos para comparar visualmente la cantidad de operaciones que realizan dos métodos de búsqueda. 
 
+A continuación dejamos unos links a unos videos sobre un par de ejercicios de la clase anterior:
+
+1. Ejercicio \ref_ej{ej_generala_ns} sobre la probabilidad de obtener una generala no servida resuelto por [Matias](https://youtu.be/D_mipwwZjhM) y por [Rafael](https://youtu.be/c2SO3-iSd04).
+2. Ejercicio \ref_ej{ej_figusA} del [álbum de Figuritas](https://youtu.be/lSVNxPoRLJA)
+
 
 
 

@@ -120,7 +120,7 @@ plt.legend()
 
 En la próxima clase estudiaremos en detalle la librería `matplotlib` que ya empezamos a usar la clase pasada. Por ahora solo agregamos la función `plot(x, y)` a la que se le pasan dos vectores (o listas) `x` e `y` y realiza una gráfico de líneas uniendo los puntos con esas coordenadas. El parámetro `label` permite ponerle un nombre a la curva que se muestra luego con la función `plt.legend()`.
 
-Este gráfico parece medio sonzo, pero en el próximo ejercicio va a ir tomando color.
+Este gráfico parece medio sonso, pero en el próximo ejercicio va a ir tomando color.
 
 ### Ejercicio 6.17: Búsqueda binaria vs. búsqueda secuencial
 En este Ejercicio vamos a rehacer los gráficos del ejemplo anterior, pero primero cambiando el algoritmo de búsqueda y luego comparando ambos algoritmos.

@@ -184,7 +184,7 @@ comparaciones, o sea ¡no más que 20 comparaciones!.
 *Conclusión*: Si una lista está previamente ordenada, podemos utilizar el
 algoritmo de búsqueda binaria, cuyo comportamiento es proporcional al
 *logaritmo* de la cantidad de elementos de la lista, y por lo tanto
-muchísimo más eficiente que la búsqueda lineal, espcialmente si la lista es larga.
+muchísimo más eficiente que la búsqueda lineal, especialmente si la lista es larga.
 
 ### Ejercicio 6.11: Búsqueda binaria
 Modificando la función `busqueda_binaria(lista, x)` adecuadamente, definí una función `donde_insertar(lista, x)` de forma que reciba una lista ordenada y un elemento y devuelva la posición de ese elemento en la lista (si se encuentra en la lista) o la posición donde se podría insertar el elemento para que la lista permanezca ordenada (si no está en la lista).
