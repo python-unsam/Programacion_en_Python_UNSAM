@@ -8,7 +8,7 @@ En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e
 
 A continuación dejamos unos links a unos videos sobre un par de ejercicios de la clase anterior:
 
-1. Ejercicio \ref_ej{ej_generala_ns} sobre la probabilidad de obtener una generala no servida resuelto por [Matias](https://youtu.be/D_mipwwZjhM) y por [Rafael](https://youtu.be/c2SO3-iSd04).
+1. Ejercicio \ref_ej{ej_generala_ns} sobre la probabilidad de obtener una generala no servida resuelto por [Matias](https://youtu.be/D_mipwwZjhM) y por [Rafael](https://youtu.be/c2SO3-iSd04). BLA \ref_ej{ej_graficar_busquedas}
 2. Ejercicio \ref_ej{ej_figusA} del [álbum de Figuritas](https://youtu.be/lSVNxPoRLJA)
 
 
