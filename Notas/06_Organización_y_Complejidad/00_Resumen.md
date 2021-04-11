@@ -6,21 +6,17 @@ Hasta aquí aprendimos algunas cosas básicas de Python y escribimos nuestros pr
 
 En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e introducimos la búsqueda binaria, un algoritmo mucho más eficiente para buscar un elemento en un vector. Discutimos algunos conceptos de la teoría de la complejidad y finalmente haremos unos gráficos para comparar visualmente la cantidad de operaciones que realizan dos métodos de búsqueda. 
 
-A continuación dejamos unos links a unos videos sobre un par de ejercicios de la clase anterior:
-
-1. Ejercicio \ref_ej{ej_generala_ns} sobre la probabilidad de obtener una generala no servida resuelto por [Matias](https://youtu.be/D_mipwwZjhM) y por [Rafael](https://youtu.be/c2SO3-iSd04). BLA \ref_ej{ej_graficar_busquedas}
-2. Ejercicio \ref_ej{ej_figusA} del [álbum de Figuritas](https://youtu.be/lSVNxPoRLJA)
 
 
 
-
-* [6.1 Scripting](01_Scripts.md)
-* [6.2 Funciones](02_Funciones.md)
-* [6.3 Módulos](03_Modulos.md)
-* [6.4 Búsqueda binaria](04_BusqBinaria.md)
-* [6.5 Complejidad de algoritmos](05_Complejidad.md)
-* [6.6 Gráficos de complejidad](06_gráficos_de_complejidad.md)
-* [6.7 Cierre de la clase](07_Cierre.md)
+* [6.1 Repaso de la clase anterior](01_Repaso.md)
+* [6.2 Scripting](02_Scripts.md)
+* [6.3 Funciones](03_Funciones.md)
+* [6.4 Módulos](04_Modulos.md)
+* [6.5 Búsqueda binaria](05_BusqBinaria.md)
+* [6.6 Complejidad de algoritmos](06_Complejidad.md)
+* [6.7 Gráficos de complejidad](07_gráficos_de_complejidad.md)
+* [6.8 Cierre de la clase](08_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md) \| [Próximo (7 Diseño, especificación, documentación y estilo.)](../07_Plt_Especificacion_y_Documentacion/00_Resumen.md)

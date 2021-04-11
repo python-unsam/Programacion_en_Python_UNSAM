@@ -276,7 +276,7 @@ Una estructura como ésa resulta en un manejo seguro de los recursos disponibles
 
 ### Lancemos excepciones
 
-La función `parse_csv()` que escribiste en el [Ejercicio 6.6](../06_Organización_y_Complejidad/02_Funciones.md#ejercicio-66-trabajando-sin-encabezados) admite seleccionar algunas columnas por el usuario, pero eso sólo funciona si el archivo de entrada tiene encabezados.
+La función `parse_csv()` que escribiste en el [Ejercicio 6.6](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-66-trabajando-sin-encabezados) admite seleccionar algunas columnas por el usuario, pero eso sólo funciona si el archivo de entrada tiene encabezados.
 
 Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers = False` sean pasados juntos. Y que resulte: 
 

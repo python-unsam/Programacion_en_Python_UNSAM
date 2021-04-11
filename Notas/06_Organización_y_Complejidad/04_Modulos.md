@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Búsqueda binaria)](04_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Funciones)](03_Funciones.md) \| [Próximo (5 Búsqueda binaria)](05_BusqBinaria.md)
 
-# 6.3 Módulos
+# 6.4 Módulos
 
 En esta sección vamos a introducir conceptos que nos permiten crear módulos y trabajar con programas cuyas partes están repartidas en múltiples archivos. 
 
@@ -157,7 +157,7 @@ Dado que existe la lista de módulos cargados `sys.modules`, un pedido de cargar
 Para estos ejercicios que involucran módulos, es de suma importancia que te asegures de que estás ejecutando Python en el directorio adecuado.
 
 ### Ejercicio 6.7: Importar módulos
-En el [Ejercicio 6.3](../06_Organización_y_Complejidad/02_Funciones.md#ejercicio-63-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver cómo usar esa función en otros programas. 
+En el [Ejercicio 6.3](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-63-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver cómo usar esa función en otros programas. 
 
 Empezá por asegurarte que el directorio de trabajo es `ejercicios_python/` y que en el mismo tengas tus ejercicios anteriores (como `hipoteca.py` y el archivo `fileparse.py` con la función `parse_csv()` que armaste antes). Los vamos a importar.
 
@@ -216,7 +216,7 @@ Importá sólo la función para evitar escribir el nombre del módulo:
 ```
 
 ### Ejercicio 6.8: Usemos tu módulo
-En el [Ejercicio 6.1](../06_Organización_y_Complejidad/01_Scripts.md#ejercicio-61-estructurar-un-programa-como-una-colección-de-funciones)
+En el [Ejercicio 6.1](../06_Organización_y_Complejidad/02_Scripts.md#ejercicio-61-estructurar-un-programa-como-una-colección-de-funciones)
 escribiste un programa `informe_funciones.py` que produce un informe como éste:
 
 ```
@@ -254,5 +254,5 @@ Al terminar este ejercicio tenés tres programas.
 `fileparse.py` contiene una función para parsear datos de archivos CSV en general, `parse_csv()`. Por otra parte, `informe_funciones.py` que produce un bello informe, y que contiene las funciones `leer_camion()` y `leer_precios()`. Finalmente, `costo_camion.py` calcula el costo de un camión, pero usando la función `leer_camion()` que fue escrita para el programa que genera el informe.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Búsqueda binaria)](04_BusqBinaria.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Funciones)](03_Funciones.md) \| [Próximo (5 Búsqueda binaria)](05_BusqBinaria.md)
 

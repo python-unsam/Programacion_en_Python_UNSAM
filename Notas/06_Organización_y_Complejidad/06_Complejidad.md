@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](04_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Búsqueda binaria)](05_BusqBinaria.md) \| [Próximo (7 Gráficos de complejidad)](07_gráficos_de_complejidad.md)
 
-# 6.5 Complejidad de algoritmos
+# 6.6 Complejidad de algoritmos
 
 ### Resumen de algoritmos de Búsqueda
 
@@ -70,7 +70,7 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 ### Ejercicio 6.12: Insertar un elemento en una lista
 Uno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
-Usando lo que hiciste en el [Ejercicio 6.11](../06_Organización_y_Complejidad/04_BusqBinaria.md#ejercicio-611-búsqueda-binaria), agregale al archivo `bbin.py` una función `insertar(lista, x)` que reciba una lista ordenada y un elemento. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En este segundo caso, también debe devolver su posición.
+Usando lo que hiciste en el [Ejercicio 6.11](../06_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-611-búsqueda-binaria), agregale al archivo `bbin.py` una función `insertar(lista, x)` que reciba una lista ordenada y un elemento. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En este segundo caso, también debe devolver su posición.
 
 ### Ejercicio 6.13: Cálcular la complejidad de dos resoluciones de `propagar`
 Ahora que tenés algunas herramientas teóricas más, volvé a leer las dos versiones de `propagar` del [Ejercicio 4.3](../04_Listas_y_Listas/01_Debugger.md#ejercicio-43-propagar-por-vecinos) y el [Ejercicio 4.4](../04_Listas_y_Listas/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico) y compará sus complejidades.
@@ -114,5 +114,5 @@ Por último, escribí una funcion `listar_secuencias(n)` que devuelva una lista 
 ¿Te parece que `listar_secuencias(n)` es una función lineal, cuadrática, logarítmica o exponencial en `n`? ¿Por qué?
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Búsqueda binaria)](04_BusqBinaria.md) \| [Próximo (6 Gráficos de complejidad)](06_gráficos_de_complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Búsqueda binaria)](05_BusqBinaria.md) \| [Próximo (7 Gráficos de complejidad)](07_gráficos_de_complejidad.md)
 

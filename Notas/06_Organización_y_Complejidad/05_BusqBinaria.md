@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](05_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Módulos)](04_Modulos.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
 
-# 6.4 Búsqueda binaria
+# 6.5 Búsqueda binaria
 
 Hace un par de clases vimos la búsqueda secuencial de un elemento en una lista.
 Si la lista está previamente ordenada,
@@ -195,5 +195,5 @@ Guarda tu modificación en un archivo `bbin.py`.
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Módulos)](03_Modulos.md) \| [Próximo (5 Complejidad de algoritmos)](05_Complejidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Módulos)](04_Modulos.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
 

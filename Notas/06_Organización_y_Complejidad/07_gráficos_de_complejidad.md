@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](05_Complejidad.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (8 Cierre de la clase)](08_Cierre.md)
 
-# 6.6 Gráficos de complejidad
+# 6.7 Gráficos de complejidad
 
 ## Contar la cantidad de operaciones de un algoritmo
 
@@ -40,7 +40,7 @@ def busqueda_secuencial_(lista, x):
 Si querés acceder a la posición podés usar `busqueda_secuencial_(lista, x)[0]` y para acceder a la cantidad de comparaciones que hizo `busqueda_secuencial_(lista, x)[1]`.
 
 ### Ejercicio 6.16: Contar comparaciones en la búsqueda binaria
-Modificá el código de búsqueda binaria (`busqueda_binaria(lista, x)`) introducido en la [Sección 6.4](../06_Organización_y_Complejidad/04_BusqBinaria.md#búsqueda-binaria), de forma que devuelva (además de la posición del elemento en la lista) la cantidad de comparaciones que realizó el algoritmo para encontrarlo o decidir que no está.
+Modificá el código de búsqueda binaria (`busqueda_binaria(lista, x)`) introducido en la [Sección 6.5](../06_Organización_y_Complejidad/05_BusqBinaria.md#búsqueda-binaria), de forma que devuelva (además de la posición del elemento en la lista) la cantidad de comparaciones que realizó el algoritmo para encontrarlo o decidir que no está.
 
 ## Gráficar la cantidad de comparaciones promedio
 
@@ -133,5 +133,5 @@ En este Ejercicio vamos a rehacer los gráficos del ejemplo anterior, pero prime
 El código de este ejercicio guardalo en `plot_bbin_vs_bsec.py`.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Complejidad de algoritmos)](05_Complejidad.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad de algoritmos)](06_Complejidad.md) \| [Próximo (8 Cierre de la clase)](08_Cierre.md)
 
