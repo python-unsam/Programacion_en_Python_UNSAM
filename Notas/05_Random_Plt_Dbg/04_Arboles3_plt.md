@@ -9,7 +9,7 @@ En esta sección retomamos el dataset del arbolado porteño (arbolado-en-espacio
 Seguiremos trabajando en el archivo `arboles.py`. Nos basaremos en el trabajo hecho con comprensión de listas la clase pasada. Los siguientes tres ejercicios hacelos dentro de tres funciones diferentes, guardalas y entregá el archivo `arboles.py` con estos agregados.
 
 ### Ejercicio 5.24: Histograma de altos de Jacarandás
-Usando tu trabajo en el [Ejercicio 4.19](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-419-lista-de-altos-de-jacarandá), generá un histograma con las alturas de los Jacarandás en el dataset.
+Usando tu trabajo en el [Ejercicio 4.16](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-416-lista-de-altos-de-jacarandá), generá un histograma con las alturas de los Jacarandás en el dataset.
 
 Tu código debería verse similar a este:
 
@@ -29,7 +29,7 @@ En este ejercicio introducimos un nuevo tipo de gráfico: _el gráfico de disper
 
 En este caso vamos a graficar un punto en el plano (x,y) por cada árbol en el dataset (o para cada arbol de cierta especie). El punto correspondiente a un árbol con diámetro *d* y altura *h* será ubicado en la posición *x=d* y *y=h*. Este tipo de gráfico permite visualizar relaciones o tendencias entre las variables y es muy útil en el análisis exploratorio de datos.
 
-Usando como base tu trabajo del [Ejercicio 4.20](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-420-lista-de-altos-y-diámetros-de-jacarandá), vas a generar un scatterplot para visualizar la relación entre diámetro y alto de los Jacarandás del dataset.
+Usando como base tu trabajo del [Ejercicio 4.17](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-417-lista-de-altos-y-diámetros-de-jacarandá), vas a generar un scatterplot para visualizar la relación entre diámetro y alto de los Jacarandás del dataset.
 
 Si ya tenés una lista o un vector *d* con diámetros y otra *h* con altos, es sencillo hacer un primer scatterplot:
 
@@ -53,7 +53,7 @@ plt.title("Relación diámetro-alto para Jacarandás")
 ```
 
 ### Ejercicio 5.26: Scatterplot para diferentes especies
-Ahora vamos a usar la función `medidas_de_especies()` definida en el [Ejercicio 4.21](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-421-diccionario-con-medidas).
+Ahora vamos a usar la función `medidas_de_especies()` definida en el [Ejercicio 4.18](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-418-diccionario-con-medidas).
 
 Comenzando con éste código, hacé tres gráficos como en el ejercicio anterior, uno por cada especie.
 

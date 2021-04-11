@@ -9,7 +9,7 @@ A continuación dejamos unos links a unos videos sobre un par de ejercicios de l
 
 ## Análisis de alternativas para *propagar*
 
-Los siguientes tres ejercicios proponen diferentes soluciones al [Ejercicio 4.9](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-49-propagación) de propagación del fuego. Vamos a analizar sus diferencias y comenzar a pensar en su eficiencia. Algunas soluciones tienen errores que deberás corregir oportunamente. ¡Usá el debugger de Python!
+Los siguientes tres ejercicios proponen diferentes soluciones al [Ejercicio 4.6](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-46-propagación) de propagación del fuego. Vamos a analizar sus diferencias y comenzar a pensar en su eficiencia. Algunas soluciones tienen errores que deberás corregir oportunamente. ¡Usá el debugger de Python!
 
 _Observación: Cuando te pidamos que cuentes cuántas operaciones hace una función, no nos va a importar el detalle de las constantes. Por ejemplo: si una función para una entrada de largo n hace n+2 operaciones y otra hace 3*n+5 nos va a importar que ambas hacen una cantidad **lineal** de operaciones en el tamaño de la entrada, pero no las constantes 2, 3 y 5 que figuran en cada caso. Diremos que la cantidad de operaciones es *O(n)* (se lee 'o de n'). En cambio, sí vamos a hacer una diferencia si una función hace n y otra hace n^2 operaciones (una va a tener complejidad *O(n)* y la otra O(n^2)*). Volveremos sobre estos temas más adelante._
 
@@ -130,8 +130,8 @@ print("Estado propagado: ",lp)
 **Preguntas:**
 1. ¿Porqué se acorta la lista? 
 2. ¿Podés corregir el error agregando un solo caracter al código?
-3. ¿Te parece que este algoritmo es cuadrático como el [Ejercicio 4.3](../04_Listas_y_Listas/01_Debugger.md#ejercicio-43-propagar-por-vecinos)
-o lineal como el [Ejercicio 4.4](../04_Listas_y_Listas/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico)?
+3. ¿Te parece que este algoritmo es cuadrático como el [Ejercicio 6.1](../06_Organización_y_Complejidad/01_Repaso.md#ejercicio-61-propagar-por-vecinos)
+o lineal como el [Ejercicio 6.2](../06_Organización_y_Complejidad/01_Repaso.md#ejercicio-62-propagar-por-como-el-auto-fantástico)?
 
 
 

@@ -93,7 +93,7 @@ Corré tu programa `informe.py` de forma de tener los datos sobre cajones cargad
 
 Luego, tratá de escribir los comandos adecuados para realizar las operaciones descriptas abajo. Estas operaciones son reducciones, transformaciones y consultas sobre la carga del camión.
 
-### Ejercicio 4.10: Comprensión de listas
+### Ejercicio 4.7: Comprensión de listas
 Probá un par de comprensión de listas para familiarizarte con la sintaxis.
 
 ```python
@@ -109,7 +109,7 @@ Probá un par de comprensión de listas para familiarizarte con la sintaxis.
 
 Observá que estás creando nuevas listas con los datos adecuadamente transformados o filtrados.
 
-### Ejercicio 4.11: Reducción de secuencias
+### Ejercicio 4.8: Reducción de secuencias
 Calculá el costo total de la carga del camión en un solo comando.
 
 ```python
@@ -147,7 +147,7 @@ La función `sum()` luego realiza una reducción del resultado
 
 Con este conocimiento algunos ya empiezan su startup de big-data.
 
-### Ejercicio 4.12: Consultas de datos
+### Ejercicio 4.9: Consultas de datos
 Probá los siguientes ejemplos de consultas (queries) de datos.
 
 Primero, generá una lista con la info de todas las frutas que tienen más de 100 cajones en el camión.
@@ -185,7 +185,7 @@ O una con la info de las frutas que costaron más de $10000.
 Esta forma de escribir resulta análoga a las consultas a una base de datos con 
 SQL.
 
-### Ejercicio 4.13: Extracción de datos
+### Ejercicio 4.10: Extracción de datos
 Usando un comprensión de listas, construí una lista de tuplas `(nombre, cajones)` que indiquen la cantidad de cajones de cada fruta tomando los datos de `camion`.
 
 ```python
@@ -235,7 +235,7 @@ Otro ejemplo útil podría ser generar un diccionario de precios de venta de aqu
 ```
 
 
-### Ejercicio 4.14: Extraer datos de un archivo CSV
+### Ejercicio 4.11: Extraer datos de un archivo CSV
 Saber usar combinaciones de comprensión de listas, diccionarios y conjuntos resulta útil para procesar datos en diferentes contextos. Aunque puede volverse medio críptico si no estás habituade. Acá te mostramos un ejemplo de cómo extraer columnas seleccionadas de un archivo CSV que tiene esas características. No es dificil cuando lo entendés, pero está muy concentrado todo.
 
 Primero, leamos el encabezado (header) del archivo CSV:

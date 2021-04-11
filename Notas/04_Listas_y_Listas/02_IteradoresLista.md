@@ -170,7 +170,7 @@ En resumen: Si la lista crece, la cantidad de comparaciones para encontrar un va
 ## Ejercicios
 
 
-### Ejercicio 4.6: Búsquedas de un elemento
+### Ejercicio 4.3: Búsquedas de un elemento
 Creá el archivo `busqueda_en_listas.py` para guardar tu código de este ejercicio y el siguiente.
 
 En este primer ejercicio tenés que escribir una función `buscar_u_elemento()` que reciba una lista y un elemento y devuelva la posición de la última aparición de ese elemento en la lista (o -1 si el elemento no pertenece a la lista).
@@ -191,7 +191,7 @@ Probá tu función con algunos ejemplos:
 
 Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()` que reciba una lista y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista. Probá también esta función con algunos ejemplos.
 
-### Ejercicio 4.7: Búsqueda de máximo y mínimo
+### Ejercicio 4.4: Búsqueda de máximo y mínimo
 Agregale a tu archivo `busqueda_en_listas.py` una función `maximo()` que busque el valor máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te proponemos que completes el siguiente código:
 
 ```python
@@ -225,7 +225,7 @@ Si te dan ganas, agregá una función `minimo()` al archivo.
 
 ## Ejercitación con iteradores y listas
 
-### Ejercicio 4.8: Invertir una lista
+### Ejercicio 4.5: Invertir una lista
 Escribí una función `invertir_lista(lista)` que dada una lista devuelva otra que tenga los mismos elementos pero en el orden inverso. Es decir, el que era el primer elemento de la lista de entrada deberá ser el último de la lista de salida y análogamente con los demás elementos.
 
 ```python
@@ -240,7 +240,7 @@ Guardá la función en el archivo `invlista.py` y probala con las siguientes lis
 1. `[1, 2, 3, 4, 5]`
 2. `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
-### Ejercicio 4.9: Propagación
+### Ejercicio 4.6: Propagación
 Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).
 Representaremos esta situación con una lista *L* con un elemento por fósforo, que en cada posición tiene un 0 (nuevo), un 1 (encendido) o un -1 (carbonizado). 
 El fuego se propaga inmediatamente de un fósforo encendido a cualquier fósforo nuevo que tenga a su lado. Los fósforos carbonizados no se encienden nuevamente.
@@ -255,7 +255,7 @@ Por ejemplo:
 [ 1, 1, 1, 1, 1, 1]
 ```
 
-![Propagación](./fosforos.jpg) Propagación análoga a la del [Ejercicio 4.9](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-49-propagación)
+![Propagación](./fosforos.jpg) Propagación análoga a la del [Ejercicio 4.6](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-46-propagación)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas)](01_Debugger.md) \| [Próximo (3 Comprensión de listas)](03_Comprension_Listas.md)
