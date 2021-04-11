@@ -57,8 +57,7 @@ propagar([1,0,0,0,0])
 
 ### Ejercicio 6.2: Propagar por como el auto fantástico
 
-El siguiente código propaga el fuego inspirado en las luces del [auto fantástico](https://www.youtube.com/watch?v=oNeQi8-PXAU).
-
+El siguiente código propaga el fuego inspirado en las luces del [auto fantástico](https://youtu.be/oNeQi8-PXAU?t=11).
 ```python
 def propagar_a_derecha(l):
     n = len(l)

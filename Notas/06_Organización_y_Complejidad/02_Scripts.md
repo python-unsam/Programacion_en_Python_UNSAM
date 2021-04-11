@@ -212,7 +212,7 @@ def leer_camion(nombre_archivo):
         for row in rows:
             record = dict(zip(headers, row))
             cajon = {
-                'name' : record['name'],
+                'nombre' : record['nombre'],
                 'cajones' : int(record['cajones']),
                 'precio' : float(record['precio'])
             }
