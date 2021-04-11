@@ -39,7 +39,7 @@ def busqueda_secuencial_(lista, x):
 
 Si querés acceder a la posición podés usar `busqueda_secuencial_(lista, x)[0]` y para acceder a la cantidad de comparaciones que hizo `busqueda_secuencial_(lista, x)[1]`.
 
-### Ejercicio 6.16: Contar comparaciones en la búsqueda binaria
+### Ejercicio 6.19: Contar comparaciones en la búsqueda binaria
 Modificá el código de búsqueda binaria (`busqueda_binaria(lista, x)`) introducido en la [Sección 6.5](../06_Organización_y_Complejidad/05_BusqBinaria.md#búsqueda-binaria), de forma que devuelva (además de la posición del elemento en la lista) la cantidad de comparaciones que realizó el algoritmo para encontrarlo o decidir que no está.
 
 ## Gráficar la cantidad de comparaciones promedio
@@ -122,7 +122,7 @@ En la próxima clase estudiaremos en detalle la librería `matplotlib` que ya em
 
 Este gráfico parece medio sonso, pero en el próximo ejercicio va a ir tomando color.
 
-### Ejercicio 6.17: Búsqueda binaria vs. búsqueda secuencial
+### Ejercicio 6.20: Búsqueda binaria vs. búsqueda secuencial
 En este Ejercicio vamos a rehacer los gráficos del ejemplo anterior, pero primero cambiando el algoritmo de búsqueda y luego comparando ambos algoritmos.
 
 1. Usando `experimento_secuencial_promedio(lista, m, k)` como base, escribí una función `experimento_binario_promedio(lista, m, k)` que cuente la cantidad de comparaciones que realiza en promedio (entre `k` experimentos elementales) la búsqueda binaria sobre la lista pasada como parámetro.

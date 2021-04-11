@@ -11,7 +11,7 @@ Si la lista está previamente ordenada,
 
 Si la lista está ordenada, hay una modificación muy simple que podemos hacer sobre el algoritmo de búsqueda lineal: si estamos buscando el elemento `e` en una lista que está ordenada de menor a mayor, en cuanto encontremos algún elemento mayor a `e` podemos estar seguros de que `e` no está en la lista, por lo que no es necesario continuar recorriendo el resto.
 
-### Ejercicio 6.10: Búsqueda lineal sobre listas ordenadas.
+### Ejercicio 6.13: Búsqueda lineal sobre listas ordenadas.
 
 Modificá la función `busqueda_lineal(lista, e)`  de la [Sección 4.2](../04_Listas_y_Listas/02_IteradoresLista.md#búsqueda-lineal) para el caso de listas ordenadas, de forma que la función pare cuando encuentre un elemento mayor a `e`. Llamá a tu nueva función `busqueda_lineal_lordenada(lista,e)` y guardala en el archivo `busqueda_en_listas.py`.
 
@@ -186,7 +186,7 @@ algoritmo de búsqueda binaria, cuyo comportamiento es proporcional al
 *logaritmo* de la cantidad de elementos de la lista, y por lo tanto
 muchísimo más eficiente que la búsqueda lineal, especialmente si la lista es larga.
 
-### Ejercicio 6.11: Búsqueda binaria
+### Ejercicio 6.14: Búsqueda binaria
 Modificando la función `busqueda_binaria(lista, x)` adecuadamente, definí una función `donde_insertar(lista, x)` de forma que reciba una lista ordenada y un elemento y devuelva la posición de ese elemento en la lista (si se encuentra en la lista) o la posición donde se podría insertar el elemento para que la lista permanezca ordenada (si no está en la lista).
 
 Por ejemplo: el elemento `3` podría insertarse en la posición 2 en la lista `[0,2,4,6]` para mantenerla ordenada. Por lo tanto, el llamado `donde_insertar([0,2,4,6], 3)` deberá devolver `2`, al igual que el llamado `donde_insertar([0,2,4,6], 4)`.

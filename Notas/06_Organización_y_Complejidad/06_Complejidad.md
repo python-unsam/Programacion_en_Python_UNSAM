@@ -67,13 +67,13 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 
 ## Ejercicios:
 
-### Ejercicio 6.12: Insertar un elemento en una lista
+### Ejercicio 6.15: Insertar un elemento en una lista
 Uno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
-Usando lo que hiciste en el [Ejercicio 6.11](../06_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-611-búsqueda-binaria), agregale al archivo `bbin.py` una función `insertar(lista, x)` que reciba una lista ordenada y un elemento. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En este segundo caso, también debe devolver su posición.
+Usando lo que hiciste en el [Ejercicio 6.14](../06_Organización_y_Complejidad/05_BusqBinaria.md#ejercicio-614-búsqueda-binaria), agregale al archivo `bbin.py` una función `insertar(lista, x)` que reciba una lista ordenada y un elemento. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En este segundo caso, también debe devolver su posición.
 
-### Ejercicio 6.13: Cálcular la complejidad de dos resoluciones de `propagar`
-Ahora que tenés algunas herramientas teóricas más, volvé a leer las dos versiones de `propagar` del [Ejercicio 4.3](../04_Listas_y_Listas/01_Debugger.md#ejercicio-43-propagar-por-vecinos) y el [Ejercicio 4.4](../04_Listas_y_Listas/01_Debugger.md#ejercicio-44-propagar-por-como-el-auto-fantástico) y compará sus complejidades.
+### Ejercicio 6.16: Cálcular la complejidad de dos resoluciones de `propagar`
+Ahora que tenés algunas herramientas teóricas más, volvé a leer las dos versiones de `propagar` del [Ejercicio 6.1](../06_Organización_y_Complejidad/01_Repaso.md#ejercicio-61-propagar-por-vecinos) y el [Ejercicio 6.2](../06_Organización_y_Complejidad/01_Repaso.md#ejercicio-62-propagar-por-como-el-auto-fantástico) y compará sus complejidades.
 
 ### Secuencias binarias
 
@@ -103,10 +103,10 @@ def incrementar(s):
     return s
 ```
 
-### Ejercicio 6.14: Complejidad de `incrementar()`
+### Ejercicio 6.17: Complejidad de `incrementar()`
 Si tomamos `n = len(s)` podemos tratar de medir la complejidad de la función `incrementar()` en términos de la longitud `n` de la secuencia. ¿Te parece que `incrementar()` es una función lineal, cuadrática, logarítmica o exponencial? ¿Por qué?
 
-### Ejercicio 6.15: Un ejemplo más complejo
+### Ejercicio 6.18: Un ejemplo más complejo
 Por último, escribí una funcion `listar_secuencias(n)` que devuelva una lista con  **todas** las secuencias binarias de longitud `n` comenzando con la primera (`[0]*n`) y usando en cada paso la función `incrementar()` definida más arriba. ¿Cuántas listas hay de longitud `n`? ¿Y de longitud `n+1`?
 
 ¿Podés correr `listar_secuencias(15)`? ¿Y `listar_secuencias(20)`? ¿Hasta cúanto llegas a correr en un tiempo razonable? 

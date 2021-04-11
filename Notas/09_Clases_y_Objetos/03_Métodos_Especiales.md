@@ -277,7 +277,7 @@ Queremos que observes algo interesante: los datos de salida están completamente
 
 Si te dan ganas, en el archivo `formato_tabla.py` usá esta idea pero extendela, y creá una función `imprimir_tabla()` que imprima una tabla mostrando, de una lista de objetos de tipo arbitrario, una lista de atributos especificados por le usuarie.
 
-Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 6.1](../06_Organización_y_Complejidad/02_Scripts.md#ejercicio-61-estructurar-un-programa-como-una-colección-de-funciones) `imprimir_tabla()` también debería aceptar cualquier instancia de la clase `FormatoTabla` para definir el formato de la salida. La idea es que funcione más o menos así:
+Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 6.4](../06_Organización_y_Complejidad/02_Scripts.md#ejercicio-64-estructurar-un-programa-como-una-colección-de-funciones) `imprimir_tabla()` también debería aceptar cualquier instancia de la clase `FormatoTabla` para definir el formato de la salida. La idea es que funcione más o menos así:
 
 ```python
 >>> import informe

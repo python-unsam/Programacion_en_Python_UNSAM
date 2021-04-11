@@ -156,10 +156,10 @@ Dado que existe la lista de módulos cargados `sys.modules`, un pedido de cargar
 
 Para estos ejercicios que involucran módulos, es de suma importancia que te asegures de que estás ejecutando Python en el directorio adecuado.
 
-### Ejercicio 6.7: Importar módulos
-En el [Ejercicio 6.3](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-63-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver cómo usar esa función en otros programas. 
+### Ejercicio 6.10: Importar módulos
+En el [Ejercicio 6.6](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-66-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver cómo usar esa función en otros programas. 
 
-Empezá por asegurarte que el directorio de trabajo es `ejercicios_python/` y que en el mismo tengas tus ejercicios anteriores (como `hipoteca.py` y el archivo `fileparse.py` con la función `parse_csv()` que armaste antes). Los vamos a importar.
+Empezá por copiarte los archivos `rebotes.py`, `hipoteca.py`, `informe.py` y `fileparse.py` a la carpeta de ejercicios de esta clase. Los vamos a importar.
 
 Con el directorio de trabajo adecuado (puede que tengas que reiniciar tu intérprete para que tome efecto un cambio), intentá importar los programas que escribiste antes. Con sólo importarlos deberías ver su salida exactamente como cuando los terminaste de escribir.
 
@@ -191,17 +191,17 @@ Ahora probá importar tu módulo `fileparse` y pedile `help`.
 Intentá usar el módulo para leer datos de un archivo:
 
 ```python
->>> camion = fileparse.parse_csv('../Data/camion.csv',select=['nombre','cajones','precio'], types=[str,int,float])
+>>> camion = fileparse.parse_csv('../Data/camion.csv', select = ['nombre', 'cajones', 'precio'], types = [str, int, float])
 >>> camion
 ... mirá la salida ...
->>> lista_precios = fileparse.parse_csv('../Data/precios.csv',types=[str,float], has_headers=False)
+>>> lista_precios = fileparse.parse_csv('../Data/precios.csv', types = [str, float], has_headers = False)
 >>> lista_precios
 ... mirá la salida ...
 >>> precios = dict(lista_precios)
 >>> precios
 ... fijate la salida ...
 >>> precios['Naranja']
-106.11
+106.28
 >>>
 ```
 
@@ -209,14 +209,14 @@ Importá sólo la función para evitar escribir el nombre del módulo:
 
 ```python
 >>> from fileparse import parse_csv
->>> camion = parse_csv('../Data/camion.csv', select=['nombre','cajones','precio'], types=[str,int,float])
+>>> camion = parse_csv('../Data/camion.csv', select = ['nombre', 'cajones', 'precio'], types = [str, int, float])
 >>> camion
 ... fijate la salida ...
 >>>
 ```
 
-### Ejercicio 6.8: Usemos tu módulo
-En el [Ejercicio 6.1](../06_Organización_y_Complejidad/02_Scripts.md#ejercicio-61-estructurar-un-programa-como-una-colección-de-funciones)
+### Ejercicio 6.11: Usemos tu módulo
+En el [Ejercicio 6.4](../06_Organización_y_Complejidad/02_Scripts.md#ejercicio-64-estructurar-un-programa-como-una-colección-de-funciones)
 escribiste un programa `informe_funciones.py` que produce un informe como éste:
 
 ```
@@ -236,7 +236,7 @@ Retomá ese programa (si lo perdiste, te dejamos una versión para que la leas y
 Guiate por el ejemplo interactivo que dimos un poco más arriba.
 Al final, deberías obtener exactamente el mismo resultado que al principio.
 
-### Ejercicio 6.9: Un poco más allá
+### Ejercicio 6.12: Un poco más allá
 En [Ejercicio 2.6](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-26-transformar-un-script-en-una-función) escribiste el programa `costo_camion.py` que lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo.
 
 ```python

@@ -262,7 +262,7 @@ Comenzá este ejercicio creando un nuevo archivo llamado `ejercicios_python/file
 
 _Nota:_ En inglés *to parse* significa analizar gramaticalmente (por ejemplo una frase), separándola en sus partes constitutivas. Es un término muy usado en ciencias de la computación que no tiene una traducción compacta al castellano. Mucha gente usa el anglicismo *parsear* para referirse a esta actividad.
 
-### Ejercicio 6.3: Parsear un archivo CSV
+### Ejercicio 6.6: Parsear un archivo CSV
 Vamos a empezar por el problema simple de leer un archivo CSV para guardar los datos que contiene en una lista de diccionarios. En el archivo `fileparse.py` definí la siguiente función:
 
 ```python
@@ -304,7 +304,7 @@ Probémoslo en tu IDE o con `python3 -i fileparse.py`.
 
 La función hace lo que queríamos, pero no podemos usar los resultados para hacer cálculos porque todos los datos recuperados son de tipo cadena (*string*). Ya vamos a solucionar esto. Por ahora sigamos extendiendo sus funciones.
 
-### Ejercicio 6.4: Selector de Columnas
+### Ejercicio 6.7: Selector de Columnas
 La mayoría de los casos, uno no está interesado en todos los datos que contiene el archivo CSV, sino sólo en algunas columnas.
 Modifiquemos la función `parse_csv` de modo que permita al usuario elegir (opcionalmente) algunas columnas del siguiente modo:
 
@@ -321,7 +321,7 @@ Modifiquemos la función `parse_csv` de modo que permita al usuario elegir (opci
 >>>
 ```
 
-Vimos un ejemplo de un selector de columnas en el [Ejercicio 4.14](../04_Listas_y_Listas/03_Comprension_Listas.md#ejercicio-414-extraer-datos-de-un-archivo-csv).
+Vimos un ejemplo de un selector de columnas en el [Ejercicio 4.11](../04_Listas_y_Listas/03_Comprension_Listas.md#ejercicio-411-extraer-datos-de-un-archivo-csv).
 De todos modos, ésta es otra forma de resolverlo:
 
 ```python
@@ -399,7 +399,7 @@ Al leer una línea de datos del archivo, usás los índices para filtrarla y res
 >>>
 ```
 
-### Ejercicio 6.5: Conversión de tipo
+### Ejercicio 6.8: Conversión de tipo
 Modificá la función `parse_csv()` de modo que permita, opcionalmente,  convertir el tipo de los datos recuperados antes de devolverlos.
 
 ```python
@@ -413,7 +413,7 @@ Modificá la función `parse_csv()` de modo que permita, opcionalmente,  convert
 >>>
 ```
 
-Ya vimos esto en el [Ejercicio 4.15](../04_Listas_y_Listas/04_Objetos.md#ejercicio-415-datos-de-primera-clase). Vas a necesitar insertar la siguiente porción de código en tu implementación:
+Ya vimos esto en el [Ejercicio 4.12](../04_Listas_y_Listas/04_Objetos.md#ejercicio-412-datos-de-primera-clase). Vas a necesitar insertar la siguiente porción de código en tu implementación:
 
 ```python
 ...
@@ -421,7 +421,7 @@ if types:
     fila = [func(val) for func, val in zip(types, fila) ]
 ...
 ```
-### Ejercicio 6.6: Trabajando sin encabezados
+### Ejercicio 6.9: Trabajando sin encabezados
 Algunos archivos CSV no tiene información de los encabezados.
 Por ejemplo, el archivo `precios.csv` se ve así:
 

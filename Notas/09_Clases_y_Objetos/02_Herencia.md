@@ -220,7 +220,7 @@ La clase `Hijo` hereda características de ambos padres. Algunos detalles son un
 
 El concepto de herencia es especialmente útil cuando estás escribiendo código que va a ser extendido o adaptado, ya sea en bibliotecas o grandes sistemas configurables, pero también en pequeños paquetes de procesamiento de datos que pueden adquirir datos de diversas fuentes. Como ya dijimos antes, uno puede escribir las relaciones y comportamientos fundamentales y dejar los detalles de implementación de cada interfaz para cuando sean necesarios.
 
-Para verlo mejor volvamos a la función `imprimir_informe()` del [Ejercicio 6.1](../06_Organización_y_Complejidad/02_Scripts.md#ejercicio-61-estructurar-un-programa-como-una-colección-de-funciones), que figura en el programa `informe.py`. Tenía más o menos este aspecto:
+Para verlo mejor volvamos a la función `imprimir_informe()` del [Ejercicio 6.4](../06_Organización_y_Complejidad/02_Scripts.md#ejercicio-64-estructurar-un-programa-como-una-colección-de-funciones), que figura en el programa `informe.py`. Tenía más o menos este aspecto:
 
 ```python
 def imprimir_informe(data_informe):

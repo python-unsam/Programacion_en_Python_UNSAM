@@ -237,7 +237,7 @@ Con un gran poder viene siempre una gran responsabilidad. Que puedas no signific
 
 En estos ejercicios mostramos algo de la potencia que tiene el hecho de que todos los objetos sean de la misma jerarquía.
 
-### Ejercicio 4.15: Datos de primera clase
+### Ejercicio 4.12: Datos de primera clase
 En el archivo `Data/camion.csv`, leímos datos organizados en columnas que se ven así:
 
 ```csv
@@ -360,7 +360,7 @@ El código de arriba puede comprimirse en una sola instrucción usando comprensi
 >>>
 ```
 
-### Ejercicio 4.16: Diccionarios
+### Ejercicio 4.13: Diccionarios
 ¿Te acordás que la función `dict()` te permite hacer fácilmente un diccionario si tenés una secuencia de tuplas con claves y valores? Hagamos un diccionario usando el encabezado de las columnas:
 
 ```python
@@ -381,7 +381,7 @@ Si estás en sintonía con la comprensión de listas podés escribir una sola l�
 >>>
 ```
 
-### Ejercicio 4.17: Fijando ideas
+### Ejercicio 4.14: Fijando ideas
 Usando las técnicas de este ejercicio, vas a poder escribir instrucciones que conviertan fácilmente campos como los de nuestro archivo en un diccionario de Python.
 
 Para ilustrar esto, supongamos que leés un archivo de datos de la siguiente forma:

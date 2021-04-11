@@ -9,7 +9,7 @@ En la segunda mitad retomamos nuestra discusión sobre algoritmos de búsqueda e
 
 
 
-* [6.1 Repaso de la clase anterior](01_Repaso.md)
+* [6.1 Repaso de temas pasados](01_Repaso.md)
 * [6.2 Scripting](02_Scripts.md)
 * [6.3 Funciones](03_Funciones.md)
 * [6.4 Módulos](04_Modulos.md)

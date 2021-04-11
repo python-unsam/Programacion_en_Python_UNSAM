@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de la clase anterior)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
 
 # 6.2 Scripting
 
@@ -199,8 +199,10 @@ import csv
 
 def leer_camion(nombre_archivo):
     '''
-    Read a cajon camion file into a list of dictionaries with keys
-    name, cajones, and precio.
+    Lee un archivo de lotes en un camión 
+    y lo devuelve como lista de diccionarios con claves
+    nombre, cajones, precio.
+
     '''
     camion = []
     with open(nombre_archivo) as f:
@@ -236,14 +238,14 @@ for row in informe:
 
 En el siguiente ejercicio vamos a volver a ese programa y organizarlo mejor usando funciones.
 
-### Ejercicio 6.1: Estructurar un programa como una colección de funciones
+### Ejercicio 6.4: Estructurar un programa como una colección de funciones
 Volvé a tu programa `tabla_informe.py` y modificalo de modo que todas las operaciones principales, incluyendo cálculos e impresión, sean llevados a cabo por una colección de funciones. Guarda la nueva versión en un archivo `informe_funciones.py`. Más específicamente:
 
 * Creá una función `imprimir_informe(informe)` que imprima el informe.
 * Cambiá la última parte del programa de modo que consista sólo en una serie de llamados a funciones, sin ningún cómputo.
 
 
-### Ejercicio 6.2: Crear una función de alto nivel para la ejecución del programa.
+### Ejercicio 6.5: Crear una función de alto nivel para la ejecución del programa.
 
 Juntá la última parte de tu programa en una única función `informe_camion(nombre_archivo_camion, nombre_archivo_precios)`. Deberías obtener una función que al llamarla como sigue, imprima el informe:
 
@@ -276,5 +278,5 @@ En Python es muy fácil escribir código en forma de un script relativamente poc
 En algún momento, si ese script crece, vas a desear haber sido un poco más organizado desde el comienzo. Tratá de organizar tu código en funciones simples. Es un buen principio es que cada función haga una sola cosa sencilla y concreta, que tenga una sola responsabilidad.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de la clase anterior)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
 
