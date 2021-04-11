@@ -170,14 +170,14 @@ realiza aproximadamente `log2(len(lista))` comparaciones.
 
 Cuando `len(lista)` no es una potencia de 2 el razonamiento es menos
 prolijo, pero también vale que este programa realiza aproximadamente
-`log2(len(lista))` comparaciones. Concluimos entonces que:
+`log2(len(lista))` comparaciones.
 
 ### Comparación entre ambos métodos
 
 Veamos un ejemplo para entender cuánto más eficiente es la búsqueda binaria.
 Supongamos que tenemos una lista con un millón de elementos.
 
-1. El algoritmo de búsqueda lineal hará una cantidad de operaciones proporcional a un millón; es decir que en el peor caso hará 1,000,000 comparaciones, y en un caso promedio, 500,000 comparaciones.
+1. El algoritmo de búsqueda lineal hará, en el peor caso, un millón de comparaciones. Este caso se da si el elemento buscado no está en la lista o está en la última posición. Como se ve la cantidad de operaciones es proporcional al largo de la lista. Si el elemento buscado está en la lista el algoritmo realizará, en promedio, 500,000 comparaciones.
 2. El algoritmo de búsqueda binaria hará como máximo *log2(1,000,000)*
 comparaciones, o sea ¡no más que 20 comparaciones!.
 

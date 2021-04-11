@@ -31,9 +31,9 @@ particulares podrá ser útil tener en cuenta, además, el **caso promedio**.
 En las ciencias de la computación, el análisis de algoritmos es el proceso que permite determinar  la complejidad de un algoritmo. Esta complejidad está típicamente medida en unidades de tiempo, o, análogamente, en la cantidad de operaciones que realiza el procesador antes de dar la respuesta. Esto permite comparar la eficiencia de diferentes algoritmos. Optimizar la eficiencia de los algoritmos es central en la tarea de un buen programador. Un algoritmo
 ineficiente puede no servir para nada. Esto es obvio en algoritmos que corren en tiempo real (imaginemos un algoritmo que conduce un vehículo y tarda demasiado en detectar a un peatón), pero también es importante en otros algoritmos. 
 
-Escribir programas eficientes no es una tarea sencilla. Muchas veces, las soluciones más directas no son las más eficientes. Los algoritmos más eficientes suelen aprovechar sutilezas que no son simples de comprender de un vistazo. En muchos casos los programadores deben incrementar la complejidad conceptual de un algoritmo para disminuír la complejidad computacional.
+Escribir programas eficientes no es una tarea sencilla. Muchas veces, las soluciones más directas no son las más eficientes. Los algoritmos más eficientes suelen aprovechar sutilezas que no son simples de comprender de un vistazo. En muchos casos les programadores deben incrementar la complejidad conceptual de un algoritmo para disminuír la complejidad computacional.
 
-Por ejemplo, buscar la posición de un número en una lista clave recorriendo la lista lugar a lugar (búsqueda secuencial) demanda una canatidad de operaciones proporcional a la longitud de la lista (por cada elemento de la lista hacemos algunas operaciones fijas: comparar el elemento contra la clave, incrementar un contador, etc). Solemos decir que el algoritmo de búsqueda secuencial tiene un complejidad lineal en la longitud de la lista (ya que toma un tiempo `f(n)`, donde `f` es una función lineal en n, la cantidad de elementos de la lista). No vamos a preocuparnos aquí si `f (n) = 3 · n + 5` ó `f (n) = 2 · n + 18`. No nos importan las constantes: simplemente diremos que f (n) es lineal en n. En la literatura esto se escribe `f(n) = O(n)` y se lee *'la función f tiene orden n'*, o *'f es un O de n'*.
+Por ejemplo, buscar la posición de un número en una lista recorriendo la lista lugar a lugar (búsqueda secuencial) demanda una cantidad de operaciones proporcional a la longitud de la lista (por cada elemento de la lista hacemos algunas operaciones fijas: comparar el elemento contra la clave, incrementar un contador, etc). Solemos decir que el algoritmo de búsqueda secuencial tiene un complejidad lineal en la longitud de la lista (ya que toma un tiempo `f(n)`, donde `f` es una función lineal en n, la cantidad de elementos de la lista). No vamos a preocuparnos aquí si `f (n) = 3 · n + 5` ó `f (n) = 2 · n + 18`. No nos importan las constantes: simplemente diremos que f (n) es lineal en n. En la literatura esto se escribe `f(n) = O(n)` y se lee *'la función f tiene orden n'*, o *'f es un O de n'*.
 
 ![Imagen Lineal vs Cuad](./lin_cuad.png)
 
@@ -45,7 +45,7 @@ Comparando la funcion `f(n) = n` con `g(n) = log2(n)` para valores grandes de n 
 
 ### Un algoritmo cuadrático
 
-Para dar un último ejemplo, supongamos que dada una lista de numeros (de longitud n) y un valor m queremos ver si m = p · q con p y q en la lista dada. Consideremos el siguiente algoritmo:
+Para dar un último ejemplo, supongamos que dada una lista de números (de longitud n) y un valor m queremos ver si m = p · q con p y q en la lista dada. Consideremos el siguiente algoritmo:
 ```python
 for p in lista :
     for q in lista :
@@ -63,7 +63,7 @@ en una lista ordenada). En general, y sin mencionarlo, hablamos de la complejida
 
 El diseño de un algoritmo eficiente para resolver un problema requiere comprender profundamente los datos que este algoritmo manipulará para poder diseñar adecuadamente las estructuras de datos que los contendrán. El diseño de algoritmos eficientes requiere del diseño simultáneo de algoritmos y estructuras de datos adecuadas. Diferentes estructuras de datos son adecuadas para diferentes tipos de aplicaciones y algunas estructuras están diseñadas especialmente para un problema concreto. Una estructura de datos eficiente puede ser la clave para el diseño de un algoritmo eficiente.
 
-La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de Datos (TAD). Estos TAD son el modelo matemático de las estructuras de datos. Un TAD es una abstracción del tipo de datos: define su comportamiento desde el punto de vista de le usuarie pero no dice cómo lo hace, no se mete en la implementación. Una estructura de datos concreta surge idealemente de la  implementación de un TAD.
+La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de Datos (TAD). Estos TAD son el modelo matemático de las estructuras de datos. Un TAD es una abstracción del tipo de datos: define su comportamiento desde el punto de vista de le usuarie pero no dice cómo lo hace, no se mete en la implementación. Una estructura de datos concreta surge idealmente de la  implementación de un TAD.
 
 ## Ejercicios:
 
