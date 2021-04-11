@@ -321,7 +321,7 @@ Modifiquemos la función `parse_csv` de modo que permita al usuario elegir (opci
 >>>
 ```
 
-Vimos un ejemplo de un selector de columnas en el [Ejercicio 4.11](../04_Listas_y_Listas/03_Comprension_Listas.md#ejercicio-411-extraer-datos-de-un-archivo-csv).
+Vimos un ejemplo de un selector de columnas en el [Ejercicio 4.14](../04_Listas_y_Listas/03_Comprension_Listas.md#ejercicio-414-extraer-datos-de-un-archivo-csv).
 De todos modos, ésta es otra forma de resolverlo:
 
 ```python
@@ -413,7 +413,7 @@ Modificá la función `parse_csv()` de modo que permita, opcionalmente,  convert
 >>>
 ```
 
-Ya vimos esto en el [Ejercicio 4.12](../04_Listas_y_Listas/04_Objetos.md#ejercicio-412-datos-de-primera-clase). Vas a necesitar insertar la siguiente porción de código en tu implementación:
+Ya vimos esto en el [Ejercicio 4.15](../04_Listas_y_Listas/04_Objetos.md#ejercicio-415-datos-de-primera-clase). Vas a necesitar insertar la siguiente porción de código en tu implementación:
 
 ```python
 ...
