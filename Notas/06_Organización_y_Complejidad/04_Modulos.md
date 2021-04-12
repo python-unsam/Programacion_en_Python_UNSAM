@@ -172,6 +172,7 @@ Repetimos: al importar un módulo ejecutás su código.
 #... mirá la salida ...
 >>> import informe
 #... mirá la salida ...
+>>>
 ```
 
 Si nada de esto funciona, es probable que estés ejecutando Python desde la carpeta equivocada.
