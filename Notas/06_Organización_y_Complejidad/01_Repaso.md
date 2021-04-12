@@ -130,8 +130,8 @@ print("Estado propagado: ",lp)
 **Preguntas:**
 1. ¿Porqué se acorta la lista? 
 2. ¿Podés corregir el error agregando un solo caracter al código?
-3. ¿Te parece que este algoritmo es cuadrático como el [Ejercicio 6.1](../06_Organización_y_Complejidad/01_RepasoResumen (copy).md#ejercicio-61-propagar-por-vecinos)
-o lineal como el [Ejercicio 6.2](../06_Organización_y_Complejidad/01_RepasoResumen (copy).md#ejercicio-62-propagar-por-como-el-auto-fantástico)?
+3. ¿Te parece que este algoritmo es cuadrático como el [Ejercicio 6.1](../06_Organización_y_Complejidad/01_Repaso.md#ejercicio-61-propagar-por-vecinos)
+o lineal como el [Ejercicio 6.2](../06_Organización_y_Complejidad/01_Repaso.md#ejercicio-62-propagar-por-como-el-auto-fantástico)?
 
 
 

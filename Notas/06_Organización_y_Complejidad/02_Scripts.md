@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_RepasoResumen (copy).md) \| [Próximo (3 Funciones)](03_Funciones.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
 
 # 6.2 Scripting
 
@@ -278,5 +278,5 @@ En Python es muy fácil escribir código en forma de un script relativamente poc
 En algún momento, si ese script crece, vas a desear haber sido un poco más organizado desde el comienzo. Tratá de organizar tu código en funciones simples. Es un buen principio es que cada función haga una sola cosa sencilla y concreta, que tenga una sola responsabilidad.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_RepasoResumen (copy).md) \| [Próximo (3 Funciones)](03_Funciones.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
 
