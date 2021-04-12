@@ -150,7 +150,7 @@ Es buena costumbre incluir documentación en forma de doc-strings. Un doc-string
 def leer_precios(nombre_archivo):
     '''
     Lee precios de un archivo de datos CSV con dos columnas.
-    La primer columna debe contener un nombre y la segunda un precio.
+    La primera columna debe contener un nombre y la segunda un precio.
     '''
     precios = {}
     with open(nombre_archivo) as f:
@@ -172,7 +172,7 @@ También podés agregar, en la definición de funciones, notas sobre el tipo de 
 def leer_precios(nombre_archivo: str) -> dict:
     '''
     Lee precios de un archivo de datos CSV con dos columnas.
-    La primer columna debe contener un nombre y la segunda un precio.
+    La primera columna debe contener un nombre y la segunda un precio.
     Devuelve un diccionario {nombre:precio, ...}
     '''
     precios = {}
