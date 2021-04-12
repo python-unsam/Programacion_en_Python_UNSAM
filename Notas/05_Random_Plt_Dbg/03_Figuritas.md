@@ -62,9 +62,9 @@ Implementá la función `crear_album(figus_total)` que devuelve un álbum (vecto
 ### Ejercicio 5.10: Incompleto
 ¿Cuál sería el comando de Python que nos dice si hay al menos un cero en el vector que representa el álbum? ¿Qué significa que haya al menos un cero en nuestro vector?
 
-Implemente la función `album_incompleto(A)` que recibe un vector y devuelve `True` si el vector contiene el elemento `0`. En el caso en que no haya ceros debe devolver `False`. 
+Implementá la función `album_incompleto(A)` que recibe un vector y devuelve `True` si el álbum `A` no está completo y `False` si está completo. 
 
-Estas funciones son tan sencillas --cada una puede escribirse en una sola línea-- que podría ponerse directamente esa línea cada vez que queremos llamar a la función. Sin embargo, en esta etapa nos parece conveniente que organices el código en funciones, por más que sean sencillas.
+Esta función y la anterior son realmente sencillas --cada una puede escribirse en una sola línea. En otro contexto quizas podrías usar directamente _esa línea_ y evitarte definir la función. Sin embargo, en esta etapa nos parece interesante que organices tu código definiendo estas funciones.
 
 
 ### Ejercicio 5.11: Comprar 
