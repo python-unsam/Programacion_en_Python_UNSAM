@@ -64,7 +64,7 @@ Implementá la función `crear_album(figus_total)` que devuelve un álbum (vecto
 
 Implementá la función `album_incompleto(A)` que recibe un vector y devuelve `True` si el álbum `A` no está completo y `False` si está completo. 
 
-Esta función y la anterior son realmente sencillas --cada una puede escribirse en una sola línea. En otro contexto quizas podrías usar directamente _esa línea_ y evitarte definir la función. Sin embargo, en esta etapa nos parece interesante que organices tu código definiendo estas funciones.
+Esta función y la anterior son realmente sencillas --cada una puede escribirse en una sola línea. En otro contexto quizas podrías usar directamente _esa línea_ y evitarte definir la función. Sin embargo, en esta etapa nos parece interesante que organices tu código definiendo estas funciones, por más que tengan línea de código cada una.
 
 
 ### Ejercicio 5.11: Comprar 
