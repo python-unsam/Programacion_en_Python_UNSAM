@@ -21,7 +21,7 @@ precios = leer_precios('precios.csv', True)
 O podés llamarla usando palabras clave (*keywords*):
 
 ```python
-precios = leer_precios(nombre_archivo='precios.csv', debug=True)
+precios = leer_precios(nombre_archivo = 'precios.csv', debug = True)
 ```
 
 ### Argumentos por omisión
@@ -29,7 +29,7 @@ precios = leer_precios(nombre_archivo='precios.csv', debug=True)
 Si preferís que un argumento sea opcional (que tenga un valor _por omisión_ o  *by default*), en ese caso asignale un valor en la definición de la función. Ése será el valor del argumento si llamás a la función sin especificar un valor para ese argumento.
 
 ```python
-def leer_precios(nombre_archivo, debug=False):
+def leer_precios(nombre_archivo, debug = False):
     ...
 ```
 
@@ -49,9 +49,9 @@ Comparemos estos dos estilos de invocar funciones:
 ```python
 cortar_datos(data, False, True) # ?????
 
-cortar_datos(data, ignore_errores=True)
-cortar_datos(data, debug=True)
-cortar_datos(data, debug=True, ignore_errores=True)
+cortar_datos(data, ignore_errores = True)
+cortar_datos(data, debug = True)
+cortar_datos(data, debug = True, ignore_errores = True)
 ```
 
 En la mayoría de los casos los argumentos con nombre hacen al código más claro, más fácil de entender, especialmente si estos argumentos son booleanos, que determinan opciones si-no.
@@ -61,17 +61,17 @@ En la mayoría de los casos los argumentos con nombre hacen al código más clar
 Compará estas dos formas de declarar una misma función. Para comprender cómo usar la primera, tendríamos que explorar dentro de la función y saber que significan sus parámetros. Usá siempre nombres cortos para los argumentos, pero con significado.
 
 ```python
-def leer_precios(f, d=False):
+def leer_precios(f, d = False):
     ...
 
-def leer_precios(nombre_archivo, debug=False):
+def leer_precios(nombre_archivo, debug = False):
     ...
 ```
 
 Quien use la función podría elegir llamarla con argumentos nombrados.
 
 ```python
-d = leer_precios('precios.csv', debug=True)
+d = leer_precios('precios.csv', debug = True)
 ```
 
 Hay herramientas que crean automáticamente documentación sobre el uso de las funciones y sus argumentos. Si los nombres tienen significado, la documentación resulta más clara.
@@ -258,7 +258,7 @@ La parte central del programa `informe_funciones.py` resuelve la lectura de arch
 
 Si tu tarea fuera de verdad leer datos de archivos, entonces querrías limpiar este código un poco, hacerlo más prolijo, y aplicable a un uso más general. Ésa es nuestra intención ahora:
 
-Comenzá este ejercicio creando un nuevo archivo llamado `ejercicios_python/fileparse.py`. Ahí vamos a trabajar.
+Comenzá este ejercicio creando un nuevo archivo `fileparse.py` en la carpeta `ejercicios_python/Clase06`. Ahí vamos a trabajar.
 
 _Nota:_ En inglés *to parse* significa analizar gramaticalmente (por ejemplo una frase), separándola en sus partes constitutivas. Es un término muy usado en ciencias de la computación que no tiene una traducción compacta al castellano. Mucha gente usa el anglicismo *parsear* para referirse a esta actividad.
 

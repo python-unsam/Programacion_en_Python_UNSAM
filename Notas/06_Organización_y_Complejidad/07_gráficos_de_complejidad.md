@@ -23,8 +23,9 @@ Esta modificación de la función cuenta (y devuelve) además cuántas comparaci
 
 ```python
 def busqueda_secuencial_(lista, x):
-    '''Si x está en la lista devuelve el índice de su primer aparición, 
-    de lo contrario devuelve -1.
+    '''Si x está en la lista devuelve el índice de su primera aparición, 
+    de lo contrario devuelve -1. Además devuelve la cantidad de comparaciones
+    que hace la función.
     '''
     comps = 0 # inicializo en cero la cantidad de comparaciones
     pos = -1
@@ -92,7 +93,7 @@ Como las listas tienen `n = 100` elementos y estoy buscando un número cualquier
 
 Si decíamos que buscar un elemento era un *experimento elemental* digamos que repetir *k* experimentos elementales y calcular el promedio de comparaciones es un *experimeto de promedios*.
 
-Grafiquemos los resultados de estos *experimetos de promedios* para diferentes listas de largos `n` entre 1 y 256. Es decir, estaremos graficando la cantidad de comparaciones que hace en promedio el algoritmo de bśuqeda secuencial sobre una lista de largo `n`, para diferentes valores de `n`.
+Grafiquemos los resultados de estos *experimetos de promedios* para diferentes listas de largos `n` entre 1 y 256. Es decir, estaremos graficando la cantidad de comparaciones que hace en promedio el algoritmo de búsqueda secuencial sobre una lista de largo `n`, para diferentes valores de `n`.
 
 ```python
 import matplotlib.pyplot as plt
@@ -111,7 +112,7 @@ for i, n in enumerate(largos):
 # ahora grafico largos de listas contra operaciones promedio de búsqueda.
 plt.plot(largos,comps_promedio,label = 'Búsqueda Secuencial')
 plt.xlabel("Largo de la lista")
-plt.ylabel("Cantidad de comparaiciones")
+plt.ylabel("Cantidad de comparaciones")
 plt.title("Complejidad de la Búsqueda")
 plt.legend()
 ```

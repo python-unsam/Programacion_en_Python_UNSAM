@@ -2,7 +2,7 @@
 
 # 6.2 Scripting
 
-En esta sección profundizaremos en el proceso de crear scripts en Python. Esta y las próximasa secciones tiene un [video](https://youtu.be/spjiuud3dQ4) asociado que podés ver antes de leer este texto.
+En esta sección profundizaremos en el proceso de crear scripts en Python. Esta y las próximas secciones tienen un [video](https://youtu.be/spjiuud3dQ4) asociado que podés ver antes de leer este texto.
 
 ### ¿Qué es un script?
 
@@ -194,7 +194,7 @@ En el [Ejercicio 3.16](../03_Datos/05_Formato.md#ejercicio-316-un-desafío-de-fo
 El programa tiene algunas funciones, como:
 
 ```python
-# informe.py
+# tabla_informe.py
 import csv
 
 def leer_camion(nombre_archivo):
