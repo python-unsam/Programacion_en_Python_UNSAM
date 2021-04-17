@@ -1,8 +1,9 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo principal)](02_Modulo_principal.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 El módulo principal)](03_Modulo_principal.md)
 
-# 7.1 Control de errores
+# 7.2 Control de errores
 
 Aunque ya hablamos de *excepciones*, en esta sección hablaremos de administración de excepciones y control de errores con mayor detalle.
+Dejamos [este video](https://youtu.be/1yX-uFioZ8w) con una introducción breve a esta sección.
 
 ### Formas en que los programas fallan
 
@@ -358,5 +359,5 @@ Guardá estos cambios que los vamos a usar más adelante.
 Lograr un buen manejo o administración de errores es una de las partes más difíciles en la mayoría de los programas. Estás intentando prever imprevistos. Como regla general, no silencies los errores. Es mejor informar los problemas y darle al usuarie la opción de silenciarlos explícitamente. Un buen diálogo entre el código y el usuarie facilita el debugging y el buen uso del programa. 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 El módulo principal)](02_Modulo_principal.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 El módulo principal)](03_Modulo_principal.md)
 

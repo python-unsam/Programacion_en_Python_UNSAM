@@ -157,7 +157,7 @@ otra cosa como en el ejemplo anterior.
 
 ## Ejercicios
 
-Vamos a comenzar esta serie de ejercicios modificando código que escribiste antes del parcial. En particular retomaremos el código del [Ejercicio 7.5](../07_Plt_Especificacion_y_Documentacion/03_Flexibilidad.md#ejercicio-75-arreglemos-las-funciones-existentes). Te dejamos [acá](./ejs.zip) una versión funcionando que podés mirar y/o usar. Tiene cosas interesantes, aunque tengas la tuya funcionando si querés pegale una mirada. 
+Vamos a comenzar esta serie de ejercicios modificando código que escribiste antes del parcial. En particular retomaremos el código del [Ejercicio 7.5](../07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md#ejercicio-75-arreglemos-las-funciones-existentes). Te dejamos [acá](./ejs.zip) una versión funcionando que podés mirar y/o usar. Tiene cosas interesantes, aunque tengas la tuya funcionando si querés pegale una mirada. 
 
 
 ### Ejercicio 9.1: Objetos como estructura de datos.

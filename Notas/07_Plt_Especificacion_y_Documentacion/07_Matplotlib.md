@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilos de codeo)](05_Estilo.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Estilos de codeo)](06_Estilo.md) \| [Próximo (8 Cierre de la clase)](08_Cierre.md)
 
-# 7.6 La biblioteca matplotlib
+# 7.7 La biblioteca matplotlib
 
-Matplotlib es probablemente la biblioteca de Python más usada para crear gráficos en 2D, también llamados plots. Provee una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos y/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib.
+Matplotlib es probablemente la biblioteca de Python más usada para crear gráficos en 2D, también llamados plots. Provee una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos y/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib. En [este video](https://youtu.be/c7fR1KkvKFQ) encontrarán una introducción breve a esta sección.
 
 ##  pyplot
 *pyplot* proporciona una interfase a la biblioteca de matplotlib. Pyplot está diseñada siguiendo el estilo de Matlab y la mayoría de los comandos para graficar en pyplot tienen análogos en Matlab con argumentos similares. Explicaremos las instrucciones más importantes con ejemplos interactivos. 
@@ -350,7 +350,7 @@ En este ejercicio te pedimos:
 
 1. Modificá el código anterior para ponerles nombres a los ejes ("tiempo" y distancia al origen") y al gráfico. 
 2. Graficá 12 trayectorias en la misma figura, con diferentes colores.
-3. Usá la estructura de subplots sugerida en el [Ejercicio 7.9](../07_Plt_Especificacion_y_Documentacion/06_Matplotlib.md#ejercicio-79-subplots-fuera-de-una-grilla) para graficar tres pubplots en una figura:
+3. Usá la estructura de subplots sugerida en el [Ejercicio 7.9](../07_Plt_Especificacion_y_Documentacion/07_Matplotlib.md#ejercicio-79-subplots-fuera-de-una-grilla) para graficar tres pubplots en una figura:
     * Arriba, grande, 12 trayectorias aleatorias como en el inciso anterior
     * Abajo a la izquierda la trayectoria que más se aleja del origen.
     * Abajo a la derecha la trayectoria que menos se aleja del origen.
@@ -419,5 +419,5 @@ plt.scatter(X,Y)
 _Pista_: El color depende del ángulo que forma el vector (X,Y) con los ejes. Hay diversas formas de calcularlo.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Estilos de codeo)](05_Estilo.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Estilos de codeo)](06_Estilo.md) \| [Próximo (8 Cierre de la clase)](08_Cierre.md)
 

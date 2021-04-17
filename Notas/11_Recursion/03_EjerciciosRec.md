@@ -9,7 +9,7 @@
 Escribí una función que calcule recursivamente el n-ésimo número
 triangular (es decir, el número *1 + 2 + 3 + ... + n*).
 
-Fijate que este ejercicio es un caso particular de la función `sumar_enteros(desde, hasta)` que implementaste en el [Ejercicio 7.6](../07_Plt_Especificacion_y_Documentacion/04_Especificacion_y_Documentacion.md#ejercicio-76-sumas). La implementación que hiciste en el primer inciso de ese ejercicio es una forma de reemplazar la recursión por un ciclo. La implementación que hiciste en el segundo inciso es mucho más eficiente.
+Fijate que este ejercicio es un caso particular de la función `sumar_enteros(desde, hasta)` que implementaste en el [Ejercicio 7.6](../07_Plt_Especificacion_y_Documentacion/05_Especificacion_y_Documentacion.md#ejercicio-76-sumas). La implementación que hiciste en el primer inciso de ese ejercicio es una forma de reemplazar la recursión por un ciclo. La implementación que hiciste en el segundo inciso es mucho más eficiente.
 
 
 ### Ejercicio 11.3: Dígitos

@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Cuestiones de diseño)](03_Flexibilidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Control de errores)](02_Excepciones.md) \| [Próximo (4 Cuestiones de diseño)](04_Flexibilidad.md)
 
-# 7.2 El módulo principal
+# 7.3 El módulo principal
  
-En esta sección introducimos el concepto de **módulo principal**. 
+En esta sección introducimos el concepto de **módulo principal**. Dejamos [este video](https://youtu.be/TsWym9qYs4M) con una introducción breve a esta sección y la siguiente.
 
 ### Función principal
 
@@ -298,5 +298,5 @@ Costo total: 47671.15
 
 _Aclaración:_  En el ejercicio anterior ya agregaste una función `main()` a tu código. En este simplemente deberías verificar si `__name__ == '__main__'` y llamar a esa función para que se ejecute automáticamente cuando llames a tu programa desde la línea de comandos. 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Control de errores)](01_Excepciones.md) \| [Próximo (3 Cuestiones de diseño)](03_Flexibilidad.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Control de errores)](02_Excepciones.md) \| [Próximo (4 Cuestiones de diseño)](04_Flexibilidad.md)
 

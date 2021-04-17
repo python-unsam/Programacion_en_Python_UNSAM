@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificacion_y_Documentacion.md) \| [Próximo (6 La biblioteca matplotlib)](06_Matplotlib.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Contratos: Especificación y Documentación)](05_Especificacion_y_Documentacion.md) \| [Próximo (7 La biblioteca matplotlib)](07_Matplotlib.md)
 
-# 7.5 Estilos de codeo
+# 7.6 Estilos de codeo
 
 ## PEP 8 - La guía de estilo para Python
 
@@ -212,5 +212,5 @@ El Zen de Python es una colección de 20 principios de software que influyen en 
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contratos: Especificación y Documentación)](04_Especificacion_y_Documentacion.md) \| [Próximo (6 La biblioteca matplotlib)](06_Matplotlib.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Contratos: Especificación y Documentación)](05_Especificacion_y_Documentacion.md) \| [Próximo (7 La biblioteca matplotlib)](07_Matplotlib.md)
 

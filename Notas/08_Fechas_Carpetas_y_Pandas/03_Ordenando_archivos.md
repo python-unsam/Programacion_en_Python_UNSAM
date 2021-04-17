@@ -9,7 +9,7 @@ Esta sección tiene un ejercicio para entregar y luego otro más complejo que es
 ### Ejercicio 8.5: Recorrer el árbol de archivos
 Escribí un programa que dado un directorio, imprima en pantalla los nombres de todos los archivos `.png` que se encuentren en *algún* subdirectorio del él.
 
-_Observación:_ Al final, tu script debería poder ejecutarse desde la línea de comandos recibiendo como parámetro el directorio a leer original. En la [Sección 7.2](../07_Plt_Especificacion_y_Documentacion/02_Modulo_principal.md#modelo-de-script-con-parámetros) dimos un modelo de script que te puede servir.
+_Observación:_ Al final, tu script debería poder ejecutarse desde la línea de comandos recibiendo como parámetro el directorio a leer original. En la [Sección 7.3](../07_Plt_Especificacion_y_Documentacion/03_Modulo_principal.md#modelo-de-script-con-parámetros) dimos un modelo de script que te puede servir.
 
 Guardá el script resultante en un archivo `listar_imgs.py`. 
 

@@ -15,13 +15,14 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 
 
 
-* [7.1 Control de errores](01_Excepciones.md)
-* [7.2 El módulo principal](02_Modulo_principal.md)
-* [7.3 Cuestiones de diseño](03_Flexibilidad.md)
-* [7.4 Contratos: Especificación y Documentación](04_Especificacion_y_Documentacion.md)
-* [7.5 Estilos de codeo](05_Estilo.md)
-* [7.6 La biblioteca matplotlib](06_Matplotlib.md)
-* [7.7 Cierre de la clase](07_Cierre.md)
+* [7.1 Repaso de temas pasados](01_Repaso.md)
+* [7.2 Control de errores](02_Excepciones.md)
+* [7.3 El módulo principal](03_Modulo_principal.md)
+* [7.4 Cuestiones de diseño](04_Flexibilidad.md)
+* [7.5 Contratos: Especificación y Documentación](05_Especificacion_y_Documentacion.md)
+* [7.6 Estilos de codeo](06_Estilo.md)
+* [7.7 La biblioteca matplotlib](07_Matplotlib.md)
+* [7.8 Cierre de la clase](08_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad y Organización de programas)](../06_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (8 Fechas, Carpetas y Pandas)](../08_Fechas_Carpetas_y_Pandas/00_Resumen.md)

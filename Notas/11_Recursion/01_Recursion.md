@@ -132,7 +132,7 @@ memoria) pero suelen ser más elegantes.
 Consideremos ahora otro problema que puede ser resuelto de forma elegante
 mediante un algoritmo recursivo.
 
-La función `potencia(b, n)` que vimos cuando hablamos de invariantes en la [Sección 7.4](../07_Plt_Especificacion_y_Documentacion/04_Especificacion_y_Documentacion.md#invariantes-de-ciclo),
+La función `potencia(b, n)` que vimos cuando hablamos de invariantes en la [Sección 7.5](../07_Plt_Especificacion_y_Documentacion/05_Especificacion_y_Documentacion.md#invariantes-de-ciclo),
 realiza `n` iteraciones para poder obtener el valor de `b^n`.
 
 Sin embargo, es posible optimizarla teniendo en cuenta los siguientes hechos:
