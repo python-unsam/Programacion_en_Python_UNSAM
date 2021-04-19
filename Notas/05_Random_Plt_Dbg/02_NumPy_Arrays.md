@@ -137,7 +137,7 @@ array([2, 4, 6, 8])
 ```
 El límite derecho nunca está en la lista. 
 
-También podés usar `np.linspace()` para crear un vector especificando el **primer número**, el **último número**, y la **cantidad** de elementos:
+También podés usar `np.linspace()` para crear un vector de valores equiespaciados especificando el **primer número**, el **último número**, y la **cantidad** de elementos:
 
 ```python
 >>> np.linspace(0, 10, num=5)

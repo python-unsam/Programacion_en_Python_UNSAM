@@ -91,7 +91,7 @@ def experimento_secuencial_promedio(lista, m, k):
 
 Como las listas tienen `n = 100` elementos y estoy buscando un número cualquiera entre `m` números diferentes, es casi seguro que no lo voy a encontrar y que voy a tener que recorrer toda la lista para concluir esto (aunque en algún caso puede ser que esté y lo encuentre antes de recorrerla toda!). Entonces el promedio de comparaciones va a dar cercano al largo `n` de la lista, quizás un poco menor. Tiene una componente  aleatoria, es un *experimento* numérico.
 
-Si decíamos que buscar un elemento era un *experimento elemental* digamos que repetir *k* experimentos elementales y calcular el promedio de comparaciones es un *experimeto de promedios*.
+Si decíamos que buscar un elemento era un *experimento elemental* digamos que repetir *k* experimentos elementales y calcular el promedio de comparaciones es un *experimento de promedios*.
 
 Grafiquemos los resultados de estos *experimetos de promedios* para diferentes listas de largos `n` entre 1 y 256. Es decir, estaremos graficando la cantidad de comparaciones que hace en promedio el algoritmo de búsqueda secuencial sobre una lista de largo `n`, para diferentes valores de `n`.
 

@@ -153,7 +153,7 @@ _Sugerencia:_ No leas esto antes de hacer el ejercicio. Hacelo primero y luego m
 ```
 
 ### Ejercicio 5.20: Plotear el histograma
-Usá un código similar al del [Ejercicio 5.8](../05_Random_Plt_Dbg/02_NumPy_Arrays.md#ejercicio-58-empezando-a-plotear) para hacer un histograma de la cantidad de paquetes que se compraron en cada experimeto, ajustando la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
+Usá un código similar al del [Ejercicio 5.8](../05_Random_Plt_Dbg/02_NumPy_Arrays.md#ejercicio-58-empezando-a-plotear) para hacer un histograma de la cantidad de paquetes que se compraron en cada experimento, ajustando la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
 
 
 ### Ejercicio 5.21:  
