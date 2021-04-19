@@ -843,6 +843,7 @@ Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temp
 ```python
 import matplotlib.pyplot as plt
 plt.hist(temperaturas,bins=25)
+plt.show() #el show no hace falta en algunos entornos. A veces lo omitiremos.
 ```
 
 Ajustá la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
