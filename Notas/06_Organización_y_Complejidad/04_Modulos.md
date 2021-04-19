@@ -159,7 +159,7 @@ Para estos ejercicios que involucran módulos, es de suma importancia que te ase
 ### Ejercicio 6.10: Importar módulos
 En el [Ejercicio 6.6](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-66-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver cómo usar esa función en otros programas. 
 
-Empezá por copiarte los archivos `rebotes.py`, `hipoteca.py`, `informe.py` y `fileparse.py` a la carpeta de ejercicios de esta clase. Los vamos a importar.
+Empezá por copiarte los archivos `rebotes.py`, `hipoteca.py` y `fileparse.py` a la carpeta de ejercicios de esta clase. Los vamos a importar.
 
 Con el directorio de trabajo adecuado (puede que tengas que reiniciar tu intérprete para que tome efecto un cambio), intentá importar los programas que escribiste antes. Con sólo importarlos deberías ver su salida exactamente como cuando los terminaste de escribir.
 
@@ -170,7 +170,7 @@ Repetimos: al importar un módulo ejecutás su código.
 #... mirá la salida ...
 >>> import hipoteca
 #... mirá la salida ...
->>> import informe
+>>> import informe_funciones
 #... mirá la salida ...
 >>>
 ```
@@ -246,7 +246,7 @@ En [Ejercicio 2.6](../02_Estructuras_y_Funciones/02_Funciones.md#ejercicio-26-tr
 >>>
 ```
 
-Modificá el archivo `costo_camion.py` para que use la función `informe.leer_camion()` del programa `informe_funciones.py`.
+Modificá el archivo `costo_camion.py` para que use la función `informe_funciones.leer_camion()` del programa `informe_funciones.py`.
 
 ### Comentario
 
