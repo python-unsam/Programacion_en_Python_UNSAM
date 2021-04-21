@@ -164,6 +164,10 @@ Se recomienda no usar acentos ni caracteres especiales de ningún tipo para evit
 
 Esto es solo un breve resumen, mirá el [PEP 8](https://www.python.org/dev/peps/pep-0008/) para tener toda la información sobre estilo recomendado en Python.
 
+Más allá de los gustos por los diferentes estilos posibles, es importante recordar que hay una métrica que no falla nunca para evaluar la calidad de un código: _la cantidad de puteadas por mintuto de un lector externo_. 
+
+![WTF](./wtf.jpg)
+
 ## Zen de Pyhton
 
 Ya que estamos hablando de los PEPs, queremos mencionar el PEP 20 (PEP viene de Python Enhancement Proposals), también conocido como el [Zen de Python](https://es.wikipedia.org/wiki/Zen_de_Python)

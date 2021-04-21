@@ -93,7 +93,7 @@ Como las listas tienen `n = 100` elementos y estoy buscando un número cualquier
 
 Si decíamos que buscar un elemento era un *experimento elemental* digamos que repetir *k* experimentos elementales y calcular el promedio de comparaciones es un *experimento de promedios*.
 
-Grafiquemos los resultados de estos *experimetos de promedios* para diferentes listas de largos `n` entre 1 y 256. Es decir, estaremos graficando la cantidad de comparaciones que hace en promedio el algoritmo de búsqueda secuencial sobre una lista de largo `n`, para diferentes valores de `n`.
+Grafiquemos los resultados de estos *experimentos de promedios* para diferentes listas de largos `n` entre 1 y 256. Es decir, estaremos graficando la cantidad de comparaciones que hace en promedio el algoritmo de búsqueda secuencial sobre una lista de largo `n`, para diferentes valores de `n`.
 
 ```python
 import matplotlib.pyplot as plt
@@ -115,6 +115,7 @@ plt.xlabel("Largo de la lista")
 plt.ylabel("Cantidad de comparaciones")
 plt.title("Complejidad de la Búsqueda")
 plt.legend()
+plt.show()
 ```
 
 ![Imagen Complejidad Secuencial](./compl_sec.png)
