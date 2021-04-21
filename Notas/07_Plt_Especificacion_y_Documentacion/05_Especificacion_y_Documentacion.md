@@ -313,7 +313,7 @@ def potencia(base, exp):
     return resultado
 ```
 
-En este caso, el invariante del ciclo es que la variable `resultado` contiene el valor de la potencia correspondiente al índice `i` de la iteración. Teniendo en cuenta esta condición, es fácil ver que `resultado` debe comenzar el ciclo con un valor de 1, ya que ese es el valor correspondiente a $p^0$.
+En este caso, el invariante del ciclo es que la variable `resultado` contiene el valor de la potencia correspondiente al índice `i` de la iteración. Teniendo en cuenta esta condición, es fácil ver que `resultado` debe comenzar el ciclo con un valor de 1, ya que ese es el valor correspondiente a  `base ** 0`.
 
 De la misma manera, si la operación que se quiere realizar es sumar todos los
 elementos de una lista, el invariante será que una variable `suma` contenga la suma de todos los elementos ya recorridos. Antes de empezar a recorrer la lista, según lo expresado en este invariante, esta `suma` debe ser 0 ya que no recorrió ningún elemento.

@@ -277,12 +277,12 @@ Una estructura como ésa resulta en un manejo seguro de los recursos disponibles
 
 ### Lancemos excepciones
 
-La función `parse_csv()` que escribiste en el [Ejercicio 6.9](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-69-trabajando-sin-encabezados) admite seleccionar algunas columnas por el usuario, pero eso sólo funciona si el archivo de entrada tiene encabezados.
+La función `parse_csv()` que escribiste en el [Ejercicio 6.9](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-69-trabajando-sin-encabezados) admite seleccionar algunas columnas por le usuarie, pero eso sólo funciona si el archivo de entrada tiene encabezados.
 
 Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers = False` sean pasados juntos. Y que resulte: 
 
 ```python
->>> parse_csv('../Data/precios.csv', select = ['name','precio'], has_headers = False)
+>>> parse_csv('../Data/precios.csv', select = ['nombre','precio'], has_headers = False)
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
   File "fileparse.py", line 9, in parse_csv
@@ -315,14 +315,14 @@ El error es: el texto '' es inválido para la función int()
 
 Modificá la función `parse_csv()` de modo que atrape todas las excepciones de tipo `ValueError` generadas durante el armado de los registros a devolver e imprima un mensaje de advertencia para las filas que no pudieron ser convertidas. Estas filas no deben ser procesadas (ya que no se puede hacer adecuadamente), y deben ser omitidas en el output de la función.
 
-Este mensaje deberá incluír el número de fila que causó el problema y el motivo por el cual falló la conversión. Para probar tu nueva función, intentá procesar `Data/missing.csv`. Debería darte algo así:  
+Este mensaje deberá incluir el número de fila que causó el problema y el motivo por el cual falló la conversión. Para probar tu nueva función, intentá procesar `Data/missing.csv`. Debería darte algo así:  
 
 ```python
 >>> camion = parse_csv('../Data/missing.csv', types = [str, int, float])
-Row 4: No pude convertir ['Mandarina', '', '51.23']
-Row 4: Motivo: invalid literal for int() with base 10: ''
-Row 7: No pude convertir ['Naranja', '', '70.44']
-Row 7: Motivo: invalid literal for int() with base 10: ''
+Fila 4: No pude convertir ['Mandarina', '', '51.23']
+Fila 4: Motivo: invalid literal for int() with base 10: ''
+Fila 7: No pude convertir ['Naranja', '', '70.44']
+Fila 7: Motivo: invalid literal for int() with base 10: ''
 >>>
 >>> camion
 [{'cajones': 100, 'nombre': 'Lima', 'precio': 32.2},
@@ -335,7 +335,7 @@ Row 7: Motivo: invalid literal for int() with base 10: ''
 
 ## Ejercicios:
 
-Trabajá siempre con las últimas versiones de tus archivos. En esta clase vamos a trabajar sonre el archivo `fileparse.py` y también con una nueva versión de `informe.py`. Por favor, copiá `informe_funciones.py` a `informe.py`, que trabajaremos sobre este último archivo.
+Trabajá siempre con las últimas versiones de tus archivos. En esta clase vamos a trabajar con el archivo `fileparse.py` y también con una nueva versión de `informe.py`. Por favor, copiá `informe_funciones.py` a `informe.py`, que trabajaremos sobre este último archivo.
 
 
 ### Ejercicio 7.1: Errores silenciados
