@@ -275,6 +275,8 @@ Una estructura como ésa resulta en un manejo seguro de los recursos disponibles
 
 ## Ejercicios
 
+Trabajá siempre con las últimas versiones de tus archivos. En esta clase vamos a trabajar con el archivo `fileparse.py` y también con una nueva versión de `informe.py`. Por favor, copiá `informe_funciones.py` a `informe.py`, que trabajaremos sobre este último archivo.
+
 ### Lancemos excepciones
 
 La función `parse_csv()` que escribiste en el [Ejercicio 6.9](../06_Organización_y_Complejidad/03_Funciones.md#ejercicio-69-trabajando-sin-encabezados) admite seleccionar algunas columnas por le usuarie, pero eso sólo funciona si el archivo de entrada tiene encabezados.
@@ -332,10 +334,6 @@ Fila 7: Motivo: invalid literal for int() with base 10: ''
  {'cajones': 50, 'nombre': 'Mandarina', 'precio': 65.1}]
 >>>
 ```
-
-## Ejercicios:
-
-Trabajá siempre con las últimas versiones de tus archivos. En esta clase vamos a trabajar con el archivo `fileparse.py` y también con una nueva versión de `informe.py`. Por favor, copiá `informe_funciones.py` a `informe.py`, que trabajaremos sobre este último archivo.
 
 
 ### Ejercicio 7.1: Errores silenciados

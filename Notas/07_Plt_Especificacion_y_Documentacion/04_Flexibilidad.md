@@ -87,8 +87,7 @@ lines = ['Quinoto,50,91.1','Naranja,75,123.45', ... ]
 
 son iterables de texto, por lo tanto los usaremos como "patos" en la función `read_data()`.
 
-La flexibilidad que este diseño permite es considerable.
-*Pregunta: ¿Debemos favorecer u oponernos a esta flexibilidad?* 
+Si el concepto te resulta oscuro, tal vez [esta explicación](https://youtu.be/pxzLSMqU_7U) te ayude. La flexibilidad que este diseño permite es considerable. *Pregunta: ¿Debemos favorecer u oponernos a esta flexibilidad?* 
 
 
 ### Buenas prácticas en el diseño de bibliotecas
