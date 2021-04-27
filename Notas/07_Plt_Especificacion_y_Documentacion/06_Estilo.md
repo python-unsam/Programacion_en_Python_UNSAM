@@ -168,6 +168,18 @@ Más allá de los gustos por los diferentes estilos posibles, es importante reco
 
 ![WTF](./wtf.jpg)
 
+Creeamos con algunas citas en inglés, extraídas de [este excelente artículo] (https://optimal-codestyle.github.io/) de Aleksandr Skobelev:
+
+> Usually, when evaluating the text of a program in terms of its _ease of perception_, the term _readability_ is used. Strictly speaking, they are not exactly the same thing, because, as will be shown later, the process of *perceiving a program* is more than just reading. 
+> -- <cite> Aleksandr Skobelev, Fundamentals of Optimal Code Style. </cite>
+
+> First, we want to establish the idea that a computer language is not just a way of getting a computer to perform operations but rather that it is a novel formal medium for expressing ideas about methodology. Thus, programs must be written for people to read, and only incidentally for machines to execute.
+> -- <cite>Harold Abelson and Gerald Jay Sussman, Structure and Interpretation of Computer Programs. </cite>
+
+> Indeed, the ratio of time spent reading vs. writing is well over 10:1… Because this ratio is so high, we want the reading of code to be easy, even if it makes the writing harder.
+> -- <cite>Robert C. Martin, Clean Code: A Handbook of Agile Software Craftsmanship. </cite>
+
+
 ## Zen de Pyhton
 
 Ya que estamos hablando de los PEPs, queremos mencionar el PEP 20 (PEP viene de Python Enhancement Proposals), también conocido como el [Zen de Python](https://es.wikipedia.org/wiki/Zen_de_Python)

@@ -143,6 +143,9 @@ precios = sys.argv[2]
 ...
 ```
 
+Para ir un poco más allá, podés mirar el módulo [argparse](https://docs.python.org/3/library/argparse.html#module-argparse) de Python permite escribir interfaces para programas que corren por linea de comandos de una manera amigables y profesional.
+
+
 ### Standard I/O
 
 Los archivos de entrada y salida estándard (Standard Input / Output (stdio)) son archivos que se portan como archivos normales, pero están definidos por el sistema operativo.
