@@ -113,8 +113,8 @@ Actualmente la función solicita el nombre de un archivo, pero podés hacer el c
 >>> with gzip.open('../Data/camion.csv.gz', 'rt') as file:
 ...      camion = fileparse.parse_csv(file, types=[str,int,float])
 ...
->>> lines = ['name,cajones,precio', 'Lima,100,34.23', 'Naranja,50,91.1', 'Mburucuya,75,45.1']
->>> camion = fileparse.parse_csv(lines, types=[str,int,float], has_headers = False)
+>>> lines = ['nombre,cajones,precio', 'Lima,100,34.23', 'Naranja,50,91.1', 'Mburucuya,75,45.1']
+>>> camion = fileparse.parse_csv(lines, types=[str,int,float])
 >>>
 ```
 
