@@ -166,7 +166,7 @@ Esto es solo un breve resumen, mirá el [PEP 8](https://www.python.org/dev/peps/
 
 ## El código no es solo leído: el código de percibe
 
-Más allá de los gustos por los diferentes estilos posibles, es importante recordar que hay una métrica que no falla nunca para evaluar la calidad de un código: _la cantidad de puteadas por mintuto de un lector externo_. 
+Más allá de los gustos por los diferentes estilos posibles, es importante recordar que hay una métrica que no falla nunca para evaluar la calidad de un código: _la cantidad de puteadas por minuto de un lector externo_. 
 
 ![WTF](./wtf.jpg)
 
