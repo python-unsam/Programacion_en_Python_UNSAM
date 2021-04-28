@@ -118,7 +118,9 @@ Actualmente la función solicita el nombre de un archivo, pero podés hacer el c
 >>>
 ```
 
-Y ahora que pasa si le pasás un nombre de archivo como antes ?
+Atención: Si lo hacés con delicadeza, los cambios a hacer en tu código son realmente mínimos. Fijate en la documentación de la función `csv.reader` (por ejemplo con `help(csv.reader)`) que lo que le pasás debe ser un objeto iterable, pero no necesariamente un archivo.
+
+Una vez que hayas incorporado esta modificación, ¿qué pasa si le pasás un nombre de archivo como antes?
 
 ```python
 >>> camion = fileparse.parse_csv('../Data/camion.csv', types=[str,int,float])

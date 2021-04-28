@@ -14,9 +14,7 @@ Comenzamos formalizando un poco más algunos conceptos relacionados con la docum
 
 En Python tenemos dos convenciones diferentes para documentar nuestro código:
 la *documentación* propiamente dicha (lo que ponemos entre `'` o
-`'''` al principio de cada función o módulo), y los *comentarios*
-(`#`). En la mayoría de los lenguajes de programación hay convenciones
-similares. ¿Por qué tenemos dos formas diferentes de documentar?
+`'''` al principio de cada función o módulo se llama _docstring_), y los *comentarios* (`#`). En la mayoría de los lenguajes de programación hay convenciones similares. ¿Por qué tenemos dos formas diferentes de documentar?
 
 La *documentación* tiene como objetivo explicar *qué* hace el código.
 La documentación está dirigida a cualquier persona que desee utilizar la
@@ -173,6 +171,9 @@ En el ejemplo anterior, la función división nos garantiza que si se satisface 
 ### El qué, no el cómo
 
 Notar que al especificar un problema con pre y poscondición estamos definiendo qué es lo que debe suceder. En ningún momento decimos cómo es que esto sucede. Para una misma especificación podemos definir varias funciones que cumplan el contrato, y cada una puede resolverlo a su manera.
+
+Por ejemplo, volviendo a los ejemplos que trabajamos antes, mirá la documentación del `csv.reader`. Deberías nota que la precondición dice que el primer parámetro debe ser un interable y no un archivo específicamente.
+
 
 ### Aseveraciones
 
