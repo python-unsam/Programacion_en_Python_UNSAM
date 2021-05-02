@@ -372,7 +372,7 @@ A continuación un ejemplo en el cual se modifica la variable recibida. En este 
 
 ## Repaso
 
-Dejamos un par de videos. En [el primero](https://youtu.be/k-QC8WAmWr0) discutimos brevemente la importancia de establecer contratos y explicamos cómo estos y los invariantes pueden ayudarnos a _demostrar matemáticamente_ que una función hace lo que creemos que hace. En [el segundo video](https://youtu.be/uRgd9y0QNpM) damos algunos ejemplos de invariantes de ciclos discutidos paso a paso.
+Dejamos un par de videos. En el [primer video](https://youtu.be/k-QC8WAmWr0) discutimos brevemente la importancia de establecer contratos y explicamos cómo estos y los invariantes pueden ayudarnos a _demostrar matemáticamente_ que una función hace lo que creemos que hace. En el [segundo video](https://youtu.be/uRgd9y0QNpM) damos algunos ejemplos de invariantes de ciclos discutidos paso a paso y hablamos de pre- y post-condiciones.
 
 
 ## Resumen 

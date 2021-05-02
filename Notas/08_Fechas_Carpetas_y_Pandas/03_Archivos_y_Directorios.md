@@ -2,7 +2,7 @@
 
 # 8.3 Manejo de archivos y carpetas
 
-Esta sección tiene un breve video [introductorio](https://youtu.be/SeaML1O8PaI) sobre el manejo de archivos y directorios desde Python.
+Esta sección tiene un breve [video introductorio](https://youtu.be/SeaML1O8PaI) sobre el manejo de archivos y directorios desde Python.
 
 ## Manejo de archivos y directorios
 
