@@ -8,7 +8,7 @@ En la segunda mitad introducimos el módulo Pandas y el tipo `DataFrame` así co
 En la última parte te proponemos análizar ondas de mareas en el Río de la Plata como excusa para introducir el procesamiento de series temporales. Nos metemos un poco en temas específicos con una última parte optativa que incluye un breve análsis de la transformada de Fourier para medir el tiempo que tarda esta onda de marea en trasladarse de un puerto a otro.
 
 
-* [8.1 ## Trabajando con datos](01_Intro.md)
+* [8.1 Introducción](01_Intro.md)
 * [8.2 Manejo de fechas y horas](02_Fechas.md)
 * [8.3 Manejo de archivos y carpetas](03_Archivos_y_Directorios.md)
 * [8.4 Ordenar archivos en Python](04_Ordenando_archivos.md)
