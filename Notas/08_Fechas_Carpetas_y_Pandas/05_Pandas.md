@@ -1,12 +1,14 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivos en Python)](03_Ordenando_archivos.md) \| [Próximo (5 Series temporales)](05_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Series temporales)](06_Series_Temporales.md)
 
-# 8.4 Introducción a Pandas
+# 8.5 Introducción a Pandas
 
 La  biblioteca Pandas es una extensión de NumPy para manipulación y análisis de datos. En particular, ofrece estructuras de datos y operaciones para manipular tablas de datos (numéricos y de otros tipos) y series temporales. Se distribuye como software libre.
 
 Ésta es una breve introducción a [Pandas](https://pandas.pydata.org/docs/getting_started/index.html). Para información más completa, te recomendamos consultar [la documentación oficial](https://pandas.pydata.org/docs/user_guide/10min.html).
 
 Esta biblioteca tiene dos tipos de datos fundamentales: los `DataFrames` que almacenan tablas de datos y las `series` que contienen secuencias de datos.
+
+[Esta sección tiene un breve video introductorio.](https://youtu.be/aQhssTeFnYY)
 
 ## Lectura de datos
 
@@ -449,5 +451,5 @@ En este ejercicio te proponemos los siguientes pasos para comparar los diámetro
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Ordenar archivos en Python)](03_Ordenando_archivos.md) \| [Próximo (5 Series temporales)](05_Series_Temporales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Series temporales)](06_Series_Temporales.md)
 

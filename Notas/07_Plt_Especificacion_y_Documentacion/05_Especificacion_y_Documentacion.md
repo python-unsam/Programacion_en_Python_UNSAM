@@ -370,7 +370,12 @@ A continuación un ejemplo en el cual se modifica la variable recibida. En este 
 
 **Atención:** Salvo que sea explícitamente aclarado, una función no debe modificar los valores de sus parámetros. En el caso en que por una decisión de diseño o especificación se modifiquen los parámetros mutables recibidos, esto debe estar claramente documentado como parte de las poscondiciones.
 
-## Resumen
+## Repaso
+
+Dejamos un par de videos. En [el primero](https://youtu.be/k-QC8WAmWr0) discutimos brevemente la importancia de establecer contratos y explicamos cómo estos y los invariantes pueden ayudarnos a _demostrar matemáticamente_ que una función hace lo que creemos que hace. En [el segundo video](https://youtu.be/uRgd9y0QNpM) damos algunos ejemplos de invariantes de ciclos discutidos paso a paso.
+
+
+## Resumen 
 
 - El **contrato** de una función especifica qué condiciones se deben cumplir para que la función pueda ser invocada (**precondición**), y qué condiciones se garantiza que serán válidas cuando la función termine su ejecución (**poscondición**).
 - La **documentación** tiene como objetivo explicar *qué* hace el código, y está dirigida a quien desee utilizar la función o módulo.

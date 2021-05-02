@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de fechas y horas)](01_Fechas.md) \| [Próximo (3 Ordenar archivos en Python)](03_Ordenando_archivos.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de fechas y horas)](02_Fechas.md) \| [Próximo (4 Ordenar archivos en Python)](04_Ordenando_archivos.md)
 
-# 8.2 Manejo de archivos y carpetas
+# 8.3 Manejo de archivos y carpetas
+
+[Esta sección tiene un breve video introductorio.](https://youtu.be/SeaML1O8PaI)
 
 ## Manejo de archivos y directorios
 
@@ -66,7 +68,7 @@ La función `listdir()` toma un directorio (_path_ o camino) y devuelve una list
 ```python
 >>> os.getcwd()
 '/home/usuario/ejercicios_python'
->>> os.listdir('Data')
+>>> os.listdir('../Data')
 
 ['camion2.csv',
  'missing.csv',
@@ -234,5 +236,5 @@ print(time.ctime(stats_archivo.st_atime))
 Si mirás la información del archivo `./rebotes.py` desde tu gestor de archivos deberías ver las modificaciones.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de fechas y horas)](01_Fechas.md) \| [Próximo (3 Ordenar archivos en Python)](03_Ordenando_archivos.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de fechas y horas)](02_Fechas.md) \| [Próximo (4 Ordenar archivos en Python)](04_Ordenando_archivos.md)
 

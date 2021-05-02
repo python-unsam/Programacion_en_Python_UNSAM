@@ -1,8 +1,10 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Introducción a Pandas)](05_Pandas.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 
-# 8.5 Series temporales
+# 8.6 Series temporales
 
 Para esta Sección contamos con el valioso aporte de [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio). Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente nos compartió algunas ideas para este trabajo práctico.
+
+[Esta sección tiene un breve video introductorio.](https://youtu.be/fLdVsU12sR8)
 
 ## Análisis y visualización de series temporales.
 
@@ -463,7 +465,7 @@ En la Pregunta 1 estimaste el desfasaje vertical entre los ceros de escala de lo
 Ahora tenés que estimar el desfasaje temporal de las ondas de marea entre ambos puertos.
 ¿A cuántos minutos corresponde aproximadamente el tiempo que tarda la onda de mareas en llegar del puerto de Buenos Aires al de San Fernando?
 
-Usá estos datos para volver a hacer el gráfico del [Ejercicio 8.10](../08_Fechas_Carpetas_y_Pandas/05_Series_Temporales.md#ejercicio-810) (vas a tener que redondear a horas enteras el delay temporal).
+Usá estos datos para volver a hacer el gráfico del [Ejercicio 8.10](../08_Fechas_Carpetas_y_Pandas/06_Series_Temporales.md#ejercicio-810) (vas a tener que redondear a horas enteras el delay temporal).
 
 ## Un poco más avanzados:
 
@@ -492,5 +494,5 @@ def reparar(df):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Introducción a Pandas)](04_Pandas.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Introducción a Pandas)](05_Pandas.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 

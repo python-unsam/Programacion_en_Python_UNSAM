@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Manejo de archivos y carpetas)](02_Archivos_y_Directorios.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 ## Trabajando con datos)](01_Intro.md) \| [Próximo (3 Manejo de archivos y carpetas)](03_Archivos_y_Directorios.md)
 
-# 8.1 Manejo de fechas y horas
+# 8.2 Manejo de fechas y horas
+
+[Esta sección tiene un breve video introductorio.]()
 
 
 ## El módulo datetime
@@ -384,5 +386,5 @@ Probala entre hoy y fin de año considerando los siguientes feriados de Argentin
 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Manejo de archivos y carpetas)](02_Archivos_y_Directorios.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 ## Trabajando con datos)](01_Intro.md) \| [Próximo (3 Manejo de archivos y carpetas)](03_Archivos_y_Directorios.md)
 
