@@ -4,7 +4,7 @@
 
 Para esta Sección contamos con el valioso aporte de [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio). Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente nos compartió algunas ideas para este trabajo práctico.
 
-[Esta sección tiene un breve video introductorio.](https://youtu.be/fLdVsU12sR8)
+Esta sección tiene un breve [video introductorio](https://youtu.be/fLdVsU12sR8) sobre los datos y lo que hay que hacer en este TP.
 
 ## Análisis y visualización de series temporales.
 

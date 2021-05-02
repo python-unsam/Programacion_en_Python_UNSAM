@@ -2,7 +2,7 @@
 
 # 8.2 Manejo de fechas y horas
 
-[Esta sección tiene un breve video introductorio.](https://youtu.be/exTngw8oOp0)
+Esta sección tiene un breve [video introductorio](https://youtu.be/exTngw8oOp0) sobre el módulo `datetime`.
 
 
 ## El módulo datetime
