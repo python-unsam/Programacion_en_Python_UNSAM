@@ -379,8 +379,8 @@ Escribí una función `dias_habiles(inicio, fin, feriados)` que calcule los día
 
 Consideramos día hábil a un día que no es feriado ni sábado ni domingo.
 
-Probala entre hoy y el 10 de octubre, sabiendo que no hay feriados en el medio.
-Probala entre hoy y fin de año considerando los siguientes feriados de Argentina:
+Probala entre el 20 de septiembre de 2020  y el 10 de octubre del mismo año, sabiendo que no hubo feriados en el medio.
+Probala entre ese día y fin del 2020 considerando los siguientes feriados de Argentina:
 
 `feriados = ['12/10/2020', '23/11/2020', '7/12/2020', '8/12/2020', '25/12/2020']`
 
