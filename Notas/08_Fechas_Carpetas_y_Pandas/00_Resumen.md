@@ -13,9 +13,8 @@ En la última parte te proponemos análizar ondas de mareas en el Río de la Pla
 * [8.3 Manejo de archivos y carpetas](03_Archivos_y_Directorios.md)
 * [8.4 Ordenar archivos en Python](04_Ordenando_archivos.md)
 * [8.5 Introducción a Pandas](05_Pandas.md)
-* [8.6 Cierre de la clase](06_Cierre.md)
-* [8.7 Series temporales](06_Series_Temporales.md)
-* [8.8 Cierre de la clase](07_Cierre.md)
+* [8.6 Series temporales](06_Series_Temporales.md)
+* [8.7 Cierre de la clase](07_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (7 Diseño, especificación, documentación y estilo.)](../07_Plt_Especificacion_y_Documentacion/00_Resumen.md) \| [Próximo (9 Clases y objetos)](../09_Clases_y_Objetos/00_Resumen.md)

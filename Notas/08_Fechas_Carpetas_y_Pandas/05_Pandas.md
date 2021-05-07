@@ -1,4 +1,4 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Series temporales)](06_Series_Temporales.md)
 
 # 8.5 Introducción a Pandas
 
@@ -451,5 +451,5 @@ En este ejercicio te proponemos los siguientes pasos para comparar los diámetro
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Series temporales)](06_Series_Temporales.md)
 
