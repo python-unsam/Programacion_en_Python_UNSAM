@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Introducción a Pandas)](05_Pandas.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Cierre de la clase)](06_Cierre.md) \| [Próximo (8 Cierre de la clase)](07_Cierre.md)
 
-# 8.6 Series temporales
+# 8.7 Series temporales
 
 Para esta Sección contamos con el valioso aporte de [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio). Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente nos compartió algunas ideas para este trabajo práctico.
 
@@ -494,5 +494,5 @@ def reparar(df):
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Introducción a Pandas)](05_Pandas.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Cierre de la clase)](06_Cierre.md) \| [Próximo (8 Cierre de la clase)](07_Cierre.md)
 
