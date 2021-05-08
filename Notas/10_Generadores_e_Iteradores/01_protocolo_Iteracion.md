@@ -161,7 +161,7 @@ class Camion:
         return cantidad_total
 ```
 
-La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como la propiedad de calcular el costo total del camión. Vamos a usar lo que hiciste en el [Ejercicio 9.1](../09_Clases_y_Objetos/01_Clases.md#ejercicio-91-objetos-como-estructura-de-datos). Modificá la función `leer_camion()` en `informe.py` de modo que cree una instancia de `Camion`, como se muestra:
+La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como la propiedad de calcular el costo total del camión. Vamos a usar lo que hiciste en el [Ejercicio 9.1](../09_Clases_y_Objetos/02_Clases.md#ejercicio-91-objetos-como-estructura-de-datos). Modificá la función `leer_camion()` en `informe.py` de modo que cree una instancia de `Camion`, como se muestra:
 
 
 ```python
@@ -245,7 +245,7 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 ```
 
 ### Ejercicio 10.3: Un iterador adecuado
-Cuando hagas clases que sean recipientes o contenedores de estructuras de datos vas a necesitar que hagan algo más que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en la [Sección 9.3](../09_Clases_y_Objetos/03_Métodos_Especiales.md#métodos-especiales-para-convertir-a-strings). Aquí hay algunos:
+Cuando hagas clases que sean recipientes o contenedores de estructuras de datos vas a necesitar que hagan algo más que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en la [Sección 9.3](../09_Clases_y_Objetos/04_Métodos_Especiales.md#métodos-especiales-para-convertir-a-strings). Aquí hay algunos:
 
 ```python
 class Camion:

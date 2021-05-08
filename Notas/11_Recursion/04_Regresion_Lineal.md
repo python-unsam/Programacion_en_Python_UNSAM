@@ -220,7 +220,7 @@ Al usar `x^2` en lugar de `x` mejora sustancialmente la bondad de ajuste del mod
 
 La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramientas muy útiles para el análisis de datos y el desarrollo de modelos de aprendizaje automático, aunque se mantiene relativamente alejada de la inferencia estadística. En particular, para regresión lineal tiene el módulo `linear_model`, y en el siguiente ejemplo mostramos cómo puede usarse. Para les que estén habituades al lenguaje R, quizás les conviene usar la biblioteca [stastmodels](https://www.statsmodels.org/stable/regression.html) que tiene un funcionamiento más cercano.
 
-Al igual que el modelo de clustering que usamos en el [Ejercicio 9.19](../09_Clases_y_Objetos/05_Teledeteccion.md#ejercicio-919-clasificación-automática) de teledetección, el objeto de tipo `LinearRegression` de `sklearn.liearmodel` también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
+Al igual que el modelo de clustering que usamos en el [Ejercicio 9.19](../09_Clases_y_Objetos/06_Teledeteccion.md#ejercicio-919-clasificación-automática) de teledetección, el objeto de tipo `LinearRegression` de `sklearn.liearmodel` también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
 
 Acá rehacemos el primer ejemplo que dimos ([Sección 11.4](../11_Recursion/04_Regresion_Lineal.md#ejemplo-el-modelo-de-cuadrados-mínimos)), usando pandas y el módulo `linear_model`.
 

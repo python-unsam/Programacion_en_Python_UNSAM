@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Herencia)](02_Herencia.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Herencia)](03_Herencia.md)
 
 # 9.1 Clases
+
+Esta sección tiene un [video](https://youtu.be/h7X8rrW8JLo) donde introducimos las clases, damos algunos ejemplos y también introducimos el tema de la [Sección 9.3](../09_Clases_y_Objetos/04_Métodos_Especiales.md#93-métodos-especiales). En este video, y en el que veremos más adelante sobre herencia, usamos el código de [este archivo](./clase9_clases_metesp.py).
 
 La programación orientada a objetos requiere un pequeño pero importante cambio en la forma de pensar la programación tradicional. Dejá decantar los conceptos nuevos mientras leés esta sección.
 
@@ -261,7 +263,7 @@ Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista d
 ```
 
 ### Ejercicio 9.4: Usá tu clase
-Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Lote` como mostramos recién en el [Ejercicio 9.3](../09_Clases_y_Objetos/01_Clases.md#ejercicio-93-lista-de-instancias).
+Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Lote` como mostramos recién en el [Ejercicio 9.3](../09_Clases_y_Objetos/02_Clases.md#ejercicio-93-lista-de-instancias).
 
 Cuando hayas hecho esto, cambiá un poco el código en `informe.py` y en  `costo_camion.py` de modo que funcionen con objetos `Lote` (instancias de la clase `Lote`) en lugar de diccionarios.
 
@@ -287,5 +289,5 @@ Hecho esto, deberías poder ejecutar tus funciones como antes:
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Herencia)](02_Herencia.md)
+[Contenidos](../Contenidos.md) \| [Próximo (2 Herencia)](03_Herencia.md)
 

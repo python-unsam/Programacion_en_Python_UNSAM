@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](05_Pilas_Colas.md) \| [Próximo (6 Cierre de la clase)](07_Cierre.md)
 
 # 9.5 Teledetección
+
+En este [video] (https://youtu.be/oQ0ce5qhJp0) introducimos el tema de esta sección.
 
 En este ejercicio vamos a trabajar con una imagen satelital obtenida por sensores a bordo del satélite Landsat8. Es un ejercicio optativo para entregar. Si querés, hacelo y guardalo en el archivo `NDVI.py`.
 
@@ -151,5 +153,5 @@ plt.show()
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](04_Pilas_Colas.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos, pilas y colas)](05_Pilas_Colas.md) \| [Próximo (6 Cierre de la clase)](07_Cierre.md)
 

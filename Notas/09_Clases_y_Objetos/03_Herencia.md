@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Clases)](01_Clases.md) \| [Próximo (3 Métodos especiales)](03_Métodos_Especiales.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Clases)](02_Clases.md) \| [Próximo (3 Métodos especiales)](04_Métodos_Especiales.md)
 
 # 9.2 Herencia
+
+Esta seccción tiene un [este video](https://youtu.be/n7CxhdOmHb8) donde introducimos el tema de herencia.
 
 La herencia entre clases es una herramienta muy usada para escribir programas extensibles. Exploraremos esta idea a continuación.
 
@@ -573,5 +575,6 @@ Siempre que tu programa adhiera a la interfaz de objetos definida por tu clase, 
 
 Dicho esto, es cierto que diseñar un programa en el paradigma orientado a objetos puede resultar algo muy difícil. Si vas a encarar proyectos grandes con esta herramienta, consultá libros sobre patrones de diseño en POO. De todos modos, haber entendido lo que acabamos de hacer te permite llegar bastante lejos.
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Clases)](01_Clases.md) \| [Próximo (3 Métodos especiales)](03_Métodos_Especiales.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (1 Clases)](02_Clases.md) \| [Próximo (3 Métodos especiales)](04_Métodos_Especiales.md)
 

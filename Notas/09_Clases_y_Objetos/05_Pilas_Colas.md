@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Métodos especiales)](03_Métodos_Especiales.md) \| [Próximo (5 Teledetección)](05_Teledeteccion.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Métodos especiales)](04_Métodos_Especiales.md) \| [Próximo (5 Teledetección)](06_Teledeteccion.md)
 
 # 9.4 Objetos, pilas y colas
+
+Esta sección tiene un [video] (https://youtu.be/-SYcwU1XOn4) donde trabajamos con colas. En este video trabajamos con los archivos que figuran en [esta carpeta comprimida] (./clase9_colas.zip).
 
 En esta sección tendrás que resolver algunos ejercicios definiendo clases y objetos.
 
@@ -249,5 +251,6 @@ Ejecutando f(), x vale 50
 Ejecutando g(), x vale 10
 ```
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Métodos especiales)](03_Métodos_Especiales.md) \| [Próximo (5 Teledetección)](05_Teledeteccion.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (3 Métodos especiales)](04_Métodos_Especiales.md) \| [Próximo (5 Teledetección)](06_Teledeteccion.md)
 

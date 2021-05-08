@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](02_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](04_Pilas_Colas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](03_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](05_Pilas_Colas.md)
 
 # 9.3 Métodos especiales
+
+El tema de esta sección lo tratamos junto con la introducción a clases, en el video de la [Sección 9.1](../09_Clases_y_Objetos/02_Clases.md#91-clases).
 
 Podemos modificar muchos comportamientos de Python definiendo lo que se conoce como "métodos especiales". Acá vamos a ver cómo usar estos métodos y a discutir brevemente otras herramientas relacionadas.
 
@@ -237,7 +239,7 @@ x = getattr(obj, 'x', None)
 ## Ejercicios
 
 ### Ejercicio 9.9: Mejor salida para objetos
-Modificá el objeto `Lote` que definiste en `lote.py` (del [Ejercicio 9.1](../09_Clases_y_Objetos/01_Clases.md#ejercicio-91-objetos-como-estructura-de-datos)) de modo que el método `__repr__()` genere una salida más agradable. Por ejemplo queremos un comportamiento como éste: 
+Modificá el objeto `Lote` que definiste en `lote.py` (del [Ejercicio 9.1](../09_Clases_y_Objetos/02_Clases.md#ejercicio-91-objetos-como-estructura-de-datos)) de modo que el método `__repr__()` genere una salida más agradable. Por ejemplo queremos un comportamiento como éste: 
 
 ```python
 >>> peras = Lote('Pera', 100, 490.1)
@@ -309,5 +311,5 @@ Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 6.4](
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](02_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](04_Pilas_Colas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](03_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](05_Pilas_Colas.md)
 
