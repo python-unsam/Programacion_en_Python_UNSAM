@@ -245,7 +245,7 @@ Testealo, testealo, y testealo para asegurarte que funciona:
 ```
 
 ### Ejercicio 10.3: Un iterador adecuado
-Cuando hagas clases que sean recipientes o contenedores de estructuras de datos vas a necesitar que hagan algo más que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en la [Sección 9.3](../09_Clases_y_Objetos/04_Métodos_Especiales.md#métodos-especiales-para-convertir-a-strings). Aquí hay algunos:
+Cuando hagas clases que sean recipientes o contenedores de estructuras de datos vas a necesitar que hagan algo más que simplemente iterar. Probá modificar la clase `Camion` de modo que tenga algunos de los "métodos mágicos" que mencionamos en la [Sección 9.4](../09_Clases_y_Objetos/04_Métodos_Especiales.md#métodos-especiales-para-convertir-a-strings). Aquí hay algunos:
 
 ```python
 class Camion:

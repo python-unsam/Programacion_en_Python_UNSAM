@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](03_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](05_Pilas_Colas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Herencia)](03_Herencia.md) \| [Próximo (5 Objetos, pilas y colas)](05_Pilas_Colas.md)
 
-# 9.3 Métodos especiales
+# 9.4 Métodos especiales
 
-El tema de esta sección lo tratamos junto con la introducción a clases, en el video de la [Sección 9.1](../09_Clases_y_Objetos/02_Clases.md#91-clases).
+El tema de esta sección lo tratamos junto con la introducción a clases, en el video de la [Sección 9.2](../09_Clases_y_Objetos/02_Clases.md#92-clases).
 
 Podemos modificar muchos comportamientos de Python definiendo lo que se conoce como "métodos especiales". Acá vamos a ver cómo usar estos métodos y a discutir brevemente otras herramientas relacionadas.
 
@@ -311,5 +311,5 @@ Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 6.4](
 ```
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Herencia)](03_Herencia.md) \| [Próximo (4 Objetos, pilas y colas)](05_Pilas_Colas.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Herencia)](03_Herencia.md) \| [Próximo (5 Objetos, pilas y colas)](05_Pilas_Colas.md)
 

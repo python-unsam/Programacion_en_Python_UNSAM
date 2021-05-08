@@ -12,12 +12,13 @@ El ejercicio para la revisión de pares de esta semana es de programación orien
 
 
 
-* [9.1 Clases](02_Clases.md)
-* [9.2 Herencia](03_Herencia.md)
-* [9.3 Métodos especiales](04_Métodos_Especiales.md)
-* [9.4 Objetos, pilas y colas](05_Pilas_Colas.md)
-* [9.5 Teledetección](06_Teledeteccion.md)
-* [9.6 Cierre de la clase](07_Cierre.md)
+* [9.1 Introducción](01_Intro.md)
+* [9.2 Clases](02_Clases.md)
+* [9.3 Herencia](03_Herencia.md)
+* [9.4 Métodos especiales](04_Métodos_Especiales.md)
+* [9.5 Objetos, pilas y colas](05_Pilas_Colas.md)
+* [9.6 Teledetección](06_Teledeteccion.md)
+* [9.7 Cierre de la clase](07_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (8 Fechas, Carpetas y Pandas)](../08_Fechas_Carpetas_y_Pandas/00_Resumen.md) \| [Próximo (10 Generadores e iteradores)](../10_Generadores_e_Iteradores/00_Resumen.md)
