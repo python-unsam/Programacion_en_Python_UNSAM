@@ -210,7 +210,7 @@ for root, dirs, files in os.walk("."):
 
 Dependiendo del sistema operativo, un archivo puede tener asociadas diferentes fechas (de creación original, de modificación del contenido, de cambio en sus metadatos, de acceso para lectura).
 
-Vamos a cambiar la fecha de modificación de un archivo. Para ello necesitás importar `os` y `datetime`. Después, converís la fecha elegida a `timestamp` y se la asocías al archivo con `utime`, como se muestra acá abajo:
+Vamos a cambiar la fecha de modificación de un archivo. Para ello necesitás importar `os` y `datetime`. Después, convertís la fecha elegida a `timestamp` y se la asocías al archivo con `utime`, como se muestra acá abajo:
 
 ```python
 import os

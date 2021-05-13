@@ -140,7 +140,7 @@ La función nativa de Python `next()` es un "atajo" al método `__next__()` de u
 Llamá a `next(f)` hasta que llegues al final del archivo, y fijate qué sucede.
 
 ### Ejercicio 10.2: Iteración sobre objetos
-Como decíamos en la sección [Sección 10.1](../10_Generadores_e_Iteradores/01_protocolo_Iteracion.md#iterable), cuando definas tus propios objetos, es posible que quieras que se pueda iterar sobre ellos (especialmente si estos objetos son "envoltorios" (wrappers) para listas u otros iterables). Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
+Como decíamos, cuando definas tus propios objetos, es posible que quieras que se pueda iterar sobre ellos (especialmente si estos objetos son "envoltorios" (wrappers) para listas u otros iterables). Hagamos esto: en un nuevo archivo llamado `camion.py`, definí la siguiente clase:
 
 ```python
 # camion.py
@@ -148,15 +148,15 @@ Como decíamos en la sección [Sección 10.1](../10_Generadores_e_Iteradores/01_
 class Camion:
 
     def __init__(self, lotes):
-        self._lotes = lotes
+        self.lotes = lotes
 
     def precio_total(self):
-        return sum([l.costo() for l in self._lotes])
+        return sum([l.costo() for l in self.lotes])
 
     def contar_cajones(self):
         from collections import Counter
         cantidad_total = Counter()
-        for l in self._lotes:
+        for l in self.lotes:
             cantidad_total[l.nombre] += l.cajones
         return cantidad_total
 ```
@@ -201,18 +201,18 @@ La forma de arreglar este programa roto es modificar la clase `Camion` y hacerla
 class Camion:
 
     def __init__(self, lotes):
-        self._lotes = lotes
+        self.lotes = lotes
 
     def __iter__(self):
-        return self._lotes.__iter__()
+        return self.lotes.__iter__()
 
     def precio_total(self):
-        return sum([l.costo() for l in self._lotes])
+        return sum([l.costo() for l in self.lotes])
 
     def contar_cajones(self):
         from collections import Counter
         cantidad_total = Counter()
-        for lote in self._lotes:
+        for lote in self.lotes:
             cantidad_total[lote.nombre] += lote.cajones
         return cantidad_total
 ```
@@ -250,27 +250,27 @@ Cuando hagas clases que sean recipientes o contenedores de estructuras de datos 
 ```python
 class Camion:
     def __init__(self, lotes):
-        self._lotes = lotes
+        self.lotes = lotes
 
     def __iter__(self):
-        return self._lotes.__iter__()
+        return self.lotes.__iter__()
 
     def __len__(self):
-        return len(self._lotes)
+        return len(self.lotes)
 
     def __getitem__(self, index):
-        return self._lotes[index]
+        return self.lotes[index]
 
     def __contains__(self, nombre):
-        return any([lote.nombre == nombre for lote in self._lotes])
+        return any([lote.nombre == nombre for lote in self.lotes])
 
     def precio_total(self):
-        return sum([l.costo() for l in self._lotes])
+        return sum([l.costo() for l in self.lotes])
 
     def contar_cajones(self):
         from collections import Counter
         cantidad_total = Counter()
-        for l in self._lotes:
+        for l in self.lotes:
             cantidad_total[l.nombre] += l.cajones
         return cantidad_total
 ```
