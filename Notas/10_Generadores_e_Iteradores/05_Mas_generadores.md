@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 Predador Presa)](05_PredadorPresa.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Productores, consumidores y cañerías.)](04_Producers_consumers.md) \| [Próximo (6 Predador Presa)](06_PredadorPresa.md)
 
-# 10.4 Más sobre generadores
+# 10.5 Más sobre generadores
 
 Esta sección introduce algunos temas adicionales relacionados con generadores, entre ellas: expresiones generadoras y el módulo `itertools`
 
@@ -22,7 +22,7 @@ Una expresión generadora es una lista por comprensión en su "versión generado
 ¿Cuales son las diferencias entre expresiones generadoras y comprensión de listas? Bueno, las expresiones generadoras ... 
 
 * No construyen una lista
-* Son construídas para ser iteradas
+* Son construidas para ser iteradas
 * Una vez consumidas, no pueden ser reutilizadas.
 
 La sintaxis general es:
@@ -71,16 +71,16 @@ Al usar generadores, tu código ejecuta más rápido y usa menos memoria. Se por
 
 * Son más eficientes en el uso de memoria.
   * Sólo producís valores cuando los necesitás.
-  * Varias ventajas sobre construír una larga lista.
+  * Varias ventajas sobre construir una larga lista.
   * Pueden operar sobre datos en pipelines.  
 
 * Un generador facilita la reutilización de código.
   * Separa la propia *iteración* del código que utiliza sus resultados.
-  * Podés construír tu propio conjunto de herramientas de iteración y ensamblarlas como necesites en cada caso. 
+  * Podés construir tu propio conjunto de herramientas de iteración y ensamblarlas como necesites en cada caso. 
 
 ### El módulo `itertools` 
 
-El módulo `itertools` es una biblioteca con varias funciones útiles para construír generadores e iteradores. 
+El módulo `itertools` es una biblioteca con varias funciones útiles para construir generadores e iteradores. 
 
 ```python
 itertools.chain(s1,s2)
@@ -159,15 +159,16 @@ def filtrar_datos(filas, nombres):
 La podrías reemplazar con una expresión así:
 
 ```python
-rows = (row for row in rows if row['name'] in names)
+filas = (fila for fila in filas if fila['nombre'] in nombres)
 ```
 
-Modificá este último para que use expresiones generadoras en lugar de funciones generadoras. Al final de la clase podés entregar el `ticker.py` anterior o este nuevo (¡mejor el nuevo!).
+Modificá tu programa `ticker.py` para que use expresiones generadoras en lugar de funciones generadoras. Al final de la clase podés entregar el `ticker.py` anterior o este nuevo (¡mejor el nuevo!).
 
 ### Ejercicio 10.16: Volviendo a ordenar imágenes
 Te proponemos aquí que retomes el [Ejercicio 8.5](../08_Fechas_Carpetas_y_Pandas/04_Ordenando_archivos.md#ejercicio-85-recorrer-el-árbol-de-archivos) que tenés guardado en el archivo `listar_imgs.py`. Usá los datos que te proporciona `os.walk` y una expresión generadora para filtrar las imágenes png (con sus directorios correspondientes). Este filtro debería generar pares `(directorio, archivo.png)`
 
 Más aún, opcionalmente diseñá un generador que, dada la secuencia filtrada (directorios y archivos png), genere ternas consistentes de: `('viejo_dir/viejo_nombre', 'nuevo_dir/nuevo_nombre', fecha_a_setear)` de manera que pueda ser fácilmente usada por una función para completar las tareas del [Ejercicio 8.6](../08_Fechas_Carpetas_y_Pandas/04_Ordenando_archivos.md#ejercicio-86-ordenar-el-árbol-de-archivos-optativo).
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Productores, consumidores y cañerías.)](03_Producers_consumers.md) \| [Próximo (5 Predador Presa)](05_PredadorPresa.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (4 Productores, consumidores y cañerías.)](04_Producers_consumers.md) \| [Próximo (6 Predador Presa)](06_PredadorPresa.md)
 

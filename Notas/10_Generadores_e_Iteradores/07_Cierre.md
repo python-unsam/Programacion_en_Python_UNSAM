@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Predador Presa)](05_PredadorPresa.md)
+[Contenidos](../Contenidos.md) \| [Anterior (6 Predador Presa)](06_PredadorPresa.md)
 
-# 10.6 Cierre de la clase
+# 10.7 Cierre de la clase
 
 En esta clase aprendiste sobre generadores e iteradores, dos conceptos muy interesantes de Python. Viste que el mecanismo de iteración es una forma de dialogar con un objeto. Además, aprendiste los métodos que necesitás implementar para que un objeto que creaste sea iterable. 
 
@@ -12,15 +12,16 @@ Aunque no la uses de inmediato, cuando te la apropies, esta arquitectura puede c
 
 Para cerrar esta clase, prepará:
  
-* El archivo `informe.py` del [Ejercicio 10.2](../10_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-102-iteración-sobre-objetos).
-* El archivo `camion.py` del [Ejercicio 10.3](../10_Generadores_e_Iteradores/01_protocolo_Iteracion.md#ejercicio-103-un-iterador-adecuado) (o [Ejercicio 10.14](../10_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-1014-expresiones-generadoras-como-argumentos-en-funciones)) que va a jugar en la revisión de pares.
-* El archivo `vigilante.py` del [Ejercicio 10.7](../10_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-107-cambios-de-precio-de-un-camión).
-* El archivo `ticker.py` del [Ejercicio 10.12](../10_Generadores_e_Iteradores/03_Producers_consumers.md#ejercicio-1012-el-pipeline-ensamblado) (o del [Ejercicio 10.15](../10_Generadores_e_Iteradores/04_Mas_generadores.md#ejercicio-1015-código-simple)).
-* Y, opcionalmente, el archivo `simulacion.py` del [Ejercicio 10.19](../10_Generadores_e_Iteradores/05_PredadorPresa.md#ejercicio-1019-alcanzando-la-madurez).
+* El archivo `informe.py` del [Ejercicio 10.2](../10_Generadores_e_Iteradores/02_protocolo_Iteracion.md#ejercicio-102-iteración-sobre-objetos).
+* El archivo `camion.py` del [Ejercicio 10.3](../10_Generadores_e_Iteradores/02_protocolo_Iteracion.md#ejercicio-103-un-iterador-adecuado) (o [Ejercicio 10.14](../10_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-1014-expresiones-generadoras-como-argumentos-en-funciones)) que va a jugar en la revisión de pares.
+* El archivo `vigilante.py` del [Ejercicio 10.7](../10_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-107-cambios-de-precio-de-un-camión).
+* El archivo `ticker.py` del [Ejercicio 10.12](../10_Generadores_e_Iteradores/04_Producers_consumers.md#ejercicio-1012-el-pipeline-ensamblado) (o del [Ejercicio 10.15](../10_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-1015-código-simple)).
+* Y, opcionalmente, el archivo `simulacion.py` del [Ejercicio 10.19](../10_Generadores_e_Iteradores/06_PredadorPresa.md#ejercicio-1019-alcanzando-la-madurez).
 
 Además te pedimos  que completes [este formulario](https://docs.google.com/forms/d/176NfxPBJ7yqvl2MV79QQAezE8bvGbo4WxD5kVIR0OeY) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
 ¡Nos vemos!
 
-[Contenidos](../Contenidos.md) \| [Anterior (5 Predador Presa)](05_PredadorPresa.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (6 Predador Presa)](06_PredadorPresa.md)
 

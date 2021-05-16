@@ -500,7 +500,7 @@ def informe_camion(archivo_camion, archivo_precios, fmt = 'txt'):
         formateador = formato_tabla.FormatoTablaHTML()
     else:
         raise RuntimeError(f'Unknown format {fmt}')
-    imprimir_informe(informe, formateador)
+    imprimir_informe(data_informe, formateador)
 ```
 
 En este código, el usuarie especifica un nombre simplificado como `txt` o
@@ -550,7 +550,7 @@ Modificá tu programa `informe.py` de modo que la función `informe_camion()` ac
 Modificá el programa principal y usá `sys.argv()` para poder definir un formato particular directamente desde la línea de comandos. En el siguiente ejemplo se ve un caso de uso. Idealmente, ese parámetro debería ser opcional y, si no se lo pasás, debería andar como antes.
 
 ```bash
-bash $ python3 informe.py Data/camion.csv Data/precios.csv csv
+bash $ python3 informe.py ../Data/camion.csv ../Data/precios.csv csv
 Nombre,Cajones,Precio,Cambio
 Lima,100,32.20,8.02
 Naranja,50,91.10,15.18

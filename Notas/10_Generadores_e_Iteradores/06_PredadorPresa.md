@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Más sobre generadores)](04_Mas_generadores.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Más sobre generadores)](05_Mas_generadores.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 
-# 10.5 Predador Presa
+# 10.6 Predador Presa
+
+En este [video](https://youtu.be/mGBxvPtMkW4) introducimos el tema de esta sección.
 
 Los [modelos de depredación y competencia](https://es.wikipedia.org/wiki/Ecuaciones_Lotka%E2%80%93Volterra) forman parte de la batería de herramientas clásicas del ecólogo. Vito Volterra en Italia y Alfred Lotka en Estados Unidos fueron los precursores en este tema y crearon modelos que, con diversas modificaciones y mejoras, seguimos usando hoy en día.
 El modelo de Volterra para depredación comienza suponiendo la existencia de dos poblaciones de animales, una de las cuales (el depredador) se alimenta de la otra (la presa). Se supone que las dos poblaciones están formadas por individuos idénticos, mezclados en el espacio.
@@ -520,5 +522,5 @@ p_{comer} = p_{leon}(edadLeon) \times (1 - p_{antilope}(edadAntilope))
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (4 Más sobre generadores)](04_Mas_generadores.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (5 Más sobre generadores)](05_Mas_generadores.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 

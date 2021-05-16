@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 Más sobre generadores)](04_Mas_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (5 Más sobre generadores)](05_Mas_generadores.md)
 
-# 10.3 Productores, consumidores y cañerías.
+# 10.4 Productores, consumidores y cañerías.
 
 Los generadores son una herramienta muy útil para configurar pipelines (cañerías). Este concepto requiere una breve *aclaración*: Un pipeline tradicional en computación consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa se ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un log de una página web). Construiste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
 
@@ -100,7 +100,7 @@ Como te darás cuenta, los datos van pasando de una función a la siguiente.
 
 ## Ejercicios
 
-Para este ejercicio, necesitás que el programa `sim_mercado.py` aún esté corriendo. Vas a usar la función `vigilar()` que escribiste en el [Ejercicio 10.7](../10_Generadores_e_Iteradores/02_iteracion_a_medida.md#ejercicio-107-cambios-de-precio-de-un-camión)
+Para este ejercicio, necesitás que el programa `sim_mercado.py` aún esté corriendo. Vas a usar la función `vigilar()` que escribiste en el [Ejercicio 10.7](../10_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-107-cambios-de-precio-de-un-camión)
 
 ### Ejercicio 10.8: Configuremos un pipeline simple
 Escribí la siguiente función y veamos como funciona un pipeline.
@@ -214,7 +214,7 @@ def hace_dicts(rows, headers):
 def parsear_datos(lines):
     rows = csv.reader(lines)
     rows = elegir_columnas(rows, [0, 1, 2])
-    rows = cambiar_tipo(rows, [str, float, float])
+    rows = cambiar_tipo(rows, [str, float, int])
     rows = hace_dicts(rows, ['nombre', 'precio', 'volumen'])
     return rows
 ...
@@ -243,14 +243,14 @@ def filtrar_datos(filas, nombres):
             yield fila
 ```
 
-Esto se usa para dejar pasar únicamente aquéllos lotes incluídos en el camión. Probalo.
+Esto se usa para dejar pasar únicamente aquellos lotes incluidos en el camión. Probalo.
 
 ```python
 
 import informe
 camion = informe.leer_camion('../Data/camion.csv')
 filas = parsear_datos(vigilar('../Data/mercadolog.csv'))
-filas = filtrar_datos (filas, camion)
+filas = filtrar_datos(filas, camion)
 for fila in filas:
     print(fila)
 
@@ -287,5 +287,5 @@ Lima,2624.94,232
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Iteración a medida)](02_iteracion_a_medida.md) \| [Próximo (4 Más sobre generadores)](04_Mas_generadores.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Iteración a medida)](03_iteracion_a_medida.md) \| [Próximo (5 Más sobre generadores)](05_Mas_generadores.md)
 

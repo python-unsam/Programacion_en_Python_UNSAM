@@ -23,7 +23,7 @@ Las longitudes de onda y la resoluciones de cada banda de la imágen se describe
 | Banda 3 - Verde              | 530 - 590                       | 30                           |
 | Banda 4 - Rojo               | 640 - 670                       | 30                           |
 | Banda 5 - Infrarrojo cercano | 850 - 880                       | 30                           |
-| Banda 5 - Infrarrojo medio 1 | 1570 - 1650                   | 30                           |
+| Banda 6 - Infrarrojo medio 1 | 1570 - 1650                   | 30                           |
 | Banda 7 - Infrarrojo medio 2 | 2110 - 2290                   | 30                           |
 
 Si desean abrir los datos de la imagen original en Python deberán bajar algunas librerías específicas para la manipulación de datos satelitales, por ejemplo: **gdal**. [Acá](https://www.github.com/marielaraj/pycon_tallerimgssat) hay un tutorial de los primeros pasos.

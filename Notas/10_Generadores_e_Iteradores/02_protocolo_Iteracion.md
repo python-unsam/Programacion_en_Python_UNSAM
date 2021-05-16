@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](02_iteracion_a_medida.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Intro.md) \| [Próximo (3 Iteración a medida)](03_iteracion_a_medida.md)
 
-# 10.1 El protocolo de iteración
+# 10.2 El protocolo de iteración
 
-En esta sección vemos lo que realmente sucede en Python durante una proceso de iteración.
+En esta sección vemos lo que realmente sucede en Python durante una proceso de iteración. Esta sección tiene un [video](https://youtu.be/WyNiWuCnrhc) introductorio.
 
 ### Iteraciones por doquier
 
@@ -303,5 +303,5 @@ Guardá tu versión de `camion.py` con estos cambios para entregar y para la rev
 Se considera *de buen estilo Python* al código que comparte ciertas normas de interacción con el resto del mundo Python. Este concepto aplicado a objetos contenedores significa que éstos cumplen con las buenas costumbres de ser iterables, indexables y que admiten otras operaciones que naturalmente se espera *a priori* que vayan a cumplir, justamente por el simple hecho de ser objetos contenedores.
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Iteración a medida)](02_iteracion_a_medida.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Intro.md) \| [Próximo (3 Iteración a medida)](03_iteracion_a_medida.md)
 
