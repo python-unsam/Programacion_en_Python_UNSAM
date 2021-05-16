@@ -2,6 +2,8 @@
 
 # 10.4 Productores, consumidores y cañerías.
 
+Para esta sección hay un [video introductorio](https://youtu.be/CSFc1Z__1hA).
+
 Los generadores son una herramienta muy útil para configurar pipelines (cañerías). Este concepto requiere una breve *aclaración*: Un pipeline tradicional en computación consta de una serie de programas y archivos asociados que constituyen una estructura de procesamiento de datos, donde cada programa se ejecuta independientemente de los demás, pero juntos resultan en un flujo conveniente de datos a través de los archivos asociados desde un "productor" (una cámara, un sensor, un lector de código de barras) hasta un "consumidor" (un graficador, un interruptor eléctrico, un log de una página web). Construiste un pequeño pipeline en la sección anterior, usando `vigilante.py`.  
 
 En esta sección hablaremos de cómo implementar estas estructuras de productores y consumidores de datos con generadores en Python.
@@ -186,7 +188,7 @@ def parsear_datos(lines):
     return rows
 ```
 
-Ejecútalo de nuevo, Sam. 
+Probalo de nuevo.
 La salida ahora debería estar restringida a esto: 
 
 ```
