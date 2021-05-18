@@ -50,13 +50,13 @@ Probá tu código:
 ### Ejercicio 9.11: Canguros buenos y canguros malos
 Este ejercicio está relacionado con un error muy común en Python. Escribí una definición de una clase `Canguro` que tenga:
 
-*  Un método `__init__` que inicializa un atributo llamado `contenido_marsupio` como una lista vacía.
+*  Un método `__init__` que recibe un nombre para el canguro y una lista (parámetro opcional) e inicializa un atributo llamado `contenido_marsupio` con la lista que le pases como parámetro o como lista vacía si no le pasás nada.
 * Un método llamado `meter_en_marsupio` que, dado un objeto cualquiera, lo agregue a la lista `contenido_marsupio`.
-* Un método `__str__` que devuelve una representación como cadena del objeto `Canguro` y de los contenidos de su marsupio.
+* Un método `__str__` que devuelve una representación como cadena del objeto `Canguro` indicando su nombre y los contenidos de su marsupio.
 
-Probá tu código creando dos objetos, `madre_canguro` y `cangurito` y guardá en el marsupio de la madre algunos objetos y al cangurito. 
+Probá tu código creando dos objetos, `madre_canguro` y `cangurito` y guardá en el marsupio de la madre algunos objetos y al propio cangurito. 
 
-Luego, mirá el ejemplo `canguro_malo.py` copiado a continuación. Este ejemplo tiene un bug. Analizalo, corregilo. Entregá como respuesta un archivo `canguros_buenos.py` conteniendo, perimero la clase definida por vos y luego una corrección de la clase definida en el ejemplo, junto con un comentario indicando dónde estaba el error y en qué constía.
+Luego, mirá el ejemplo `canguro_malo.py` copiado a continuación. Este ejemplo intenta resolver el problema anterior, pero tiene un bug. Analizalo y corregilo. Entregá como respuesta un archivo `canguros_buenos.py` conteniendo, perimero la clase definida por vos y luego una corrección de la clase definida en el ejemplo, junto con un comentario indicando dónde estaba el error y en qué constía.
 
  
 ```python
@@ -105,6 +105,8 @@ print(madre_canguro)
 # Al ejecutar este código todo parece funcionar correctamente.
 # Para ver el problema, imprimí el contenido de cangurito.
 ```
+
+Ojo: al corregir el bug no modifiques la firma del constructor `__init__` del objeto: asegurate que siga aceptando los mismos parámetros (obligatorios y opcionales) que antes.
 
 ### Colas
 
