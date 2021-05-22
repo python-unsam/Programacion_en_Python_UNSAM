@@ -1,8 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Práctica de Recursión)](03_EjerciciosRec.md) \| [Próximo (5 Cierre de la clase de Recursión y Regresión)](05_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Práctica de Recursión)](05_EjerciciosRec.md) \| [Próximo (6 Cierre de la clase de Recursión y Regresión)](06_Cierre.md)
 
-# 11.4 Regresión lineal
+# 11.5 Regresión lineal
 
-En esta sección vamos a trabajar con **regresión lineal**. No es una clase con todos los fundamentos del tema, sino un acercamiento práctico a las técnicas y sus formas de uso en Python. Para un desarrollo más profundo te recomendamos por ejemplo las notas de [Andrew Ng](http://cs229.stanford.edu/notes2020spring/cs229-notes1.pdf).
+En esta sección vamos a trabajar con **regresión lineal**, tema que introducimos en [este video](https://youtu.be/8tKruBXMDZY). No es una clase con todos los fundamentos del tema, sino un acercamiento práctico a las técnicas y sus formas de uso en Python. Para un desarrollo más profundo te recomendamos por ejemplo las notas de [Andrew Ng](http://cs229.stanford.edu/notes2020spring/cs229-notes1.pdf).
 
 ![Gauss](./gauss.jpg)
 
@@ -222,7 +222,7 @@ La biblioteca [scikit-learn](https://scikit-learn.org/stable/) tiene herramienta
 
 Al igual que el modelo de clustering que usamos en el [Ejercicio 9.19](../09_Clases_y_Objetos/06_Teledeteccion.md#ejercicio-919-clasificación-automática) de teledetección, el objeto de tipo `LinearRegression` de `sklearn.liearmodel` también tiene un método `fit()` que permite ajustar el modelo a los datos y otro `predict()` que permite usar el modelo ajustado con nuevos datos.
 
-Acá rehacemos el primer ejemplo que dimos ([Sección 11.4](../11_Recursion/04_Regresion_Lineal.md#ejemplo-el-modelo-de-cuadrados-mínimos)), usando pandas y el módulo `linear_model`.
+Acá rehacemos el primer ejemplo que dimos ([Sección 11.5](../11_Recursion/05_Regresion_Lineal.md#ejemplo-el-modelo-de-cuadrados-mínimos)), usando pandas y el módulo `linear_model`.
 
 ```python
 import pandas as pd
@@ -341,7 +341,7 @@ El principio metodológico conocido como la [navaja de Ockham](https://es.wikipe
 Esto ayuda a evitar fenómenos como el **sobreajuste** que causa [problemas muy serios y a veces graciosos](https://twitter.com/electricfuture5/status/1309688641157906433).
 
 ### Ejercicio 11.17: Modelos polinomiales para una relación cuadrática
-Vimos en el [Ejercicio 11.16](../11_Recursion/04_Regresion_Lineal.md#ejercicio-1116-modelo-cuadrático) que los datos de ese ejercicio se ajustan mejor con una regresión múltiple (usando `x` y `x^2`) que una regresión simple (basada un una sola variable). Te proponemos ahora que te fijes qué ocurre si seguimos aumentando el grado de las potencias de `x` que admitimos en la regresión múltiple (es decir, usar `x`, `x^2`,..., etc. hasta `x^n`). ¿Sigue bajando el error cuadrático medio? ¿Pueden considerarse _mejores_ los modelos obtenidos?
+Vimos en el [Ejercicio 11.16](../11_Recursion/05_Regresion_Lineal.md#ejercicio-1116-modelo-cuadrático) que los datos de ese ejercicio se ajustan mejor con una regresión múltiple (usando `x` y `x^2`) que una regresión simple (basada un una sola variable). Te proponemos ahora que te fijes qué ocurre si seguimos aumentando el grado de las potencias de `x` que admitimos en la regresión múltiple (es decir, usar `x`, `x^2`,..., etc. hasta `x^n`). ¿Sigue bajando el error cuadrático medio? ¿Pueden considerarse _mejores_ los modelos obtenidos?
 
 Para `n` entre 1 y 8 realizá un ajuste con un polinomio de grado `n` (que tiene `n+1` parámetros, por la ordenada al orígen) e imprimí una salida como esta:
 
@@ -463,5 +463,5 @@ En este caso contamos con una gran cantidad de datos y podemos aplicar de todas 
 *Observación*: Nos quedaron afuera de esta clase temas importantes como sobreajuste (_Overfitting_), partición de los datos en conjuntos de entrenamiento y evaluación, validación cruzada, presencia de datos atípicos (outliers), tests de hipótesis, selección de modelos... No era nuestra idea dar estos contenidos sino mostrar un acercamiento práctico desde Python al problema de la regresión lineal.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (3 Práctica de Recursión)](03_EjerciciosRec.md) \| [Próximo (5 Cierre de la clase de Recursión y Regresión)](05_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (4 Práctica de Recursión)](05_EjerciciosRec.md) \| [Próximo (6 Cierre de la clase de Recursión y Regresión)](06_Cierre.md)
 

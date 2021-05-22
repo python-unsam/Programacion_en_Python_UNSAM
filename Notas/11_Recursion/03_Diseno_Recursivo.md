@@ -1,6 +1,6 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Práctica de Recursión)](03_EjerciciosRec.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Intro a la Recursión)](02_Recursion.md) \| [Próximo (4 Práctica de Recursión)](05_EjerciciosRec.md)
 
-# 11.2 Diseño de algoritmos recursivos
+# 11.3 Diseño de algoritmos recursivos
 
 Hasta el momento vimos que hay muchas funciones matemáticas que se definen
 o que pueden desarrollarse de forma recursiva, pero puede aplicarse recursividad a muchos problemas que no sean explicitamente recursivos. Diseñar un algoritmo recursivo es un proceso sistematizable.
@@ -11,7 +11,7 @@ resolver estos tres problemas:
 1. **Caso base:** Necesitamos definir uno o más casos base de acuerdo a
 nuestro problema. Como regla general tratamos de pensar como caso base a
 las condiciones sobre las cuales es más fácil resolver nuestro problema.
-Por ejemplo, si estruviéramos trabajando sobre listas o cadenas probablemente
+Por ejemplo, si estuviéramos trabajando sobre listas o cadenas probablemente
 sepamos la respuesta a nuestro problema en el caso de una secuencia vacía;
 si estuviéramos trabajando sobre conjuntos de elementos probablemente la
 respuesta sea evidente para los conjuntos de un solo elemento.
@@ -168,7 +168,7 @@ supongamos que queremos diseñar una función recursiva que calcule el promedio
 de una secuencia de números.
 
 Como ya sabemos diseñar funciones recursivas, intuimos que el caso base será
-cuando la lista esté vacía y que la reduciremos sacando de a un elemento por
+cuando la lista tenga un solo elemento y que la reduciremos sacando de a un elemento por
 vez. El cuerpo de nuestra función será algo así:
 
 ```python
@@ -228,7 +228,7 @@ def promediar(lista):
 
 Notar que si bien la función visible `promediar` no es recursiva, sí lo
 es la función `promediar_aux` que es la que realiza el trabajo, por
-lo que el conjunto se considera recursivo. Observá que estamos definiendo la función `promediar_aux` **dentro** de la función `promediar` de manera que no resulte visible desde afuera (no la podés llamar desde afuera, así como hay *variables locales* ésta es una *función local*).
+lo que el conjunto se considera recursivo. Observá que estamos definiendo la función `promediar_aux` **dentro** de la función `promediar` de manera que no resulte visible desde afuera (no la podés llamar desde afuera: así como hay *variables locales*, ésta es una *función local*).
 
 Además de para adaptar la firma de la función recursiva, las funciones wrapper
 se suelen utilizar para simplificar el código de las funciones recursivas. Por
@@ -325,5 +325,5 @@ implementar una función *wrapper*, por ejemplo para adaptar
 la firma de la función, validar parámetros, inicializar datos o manejar excepciones.
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Intro a la Recursión)](01_Recursion.md) \| [Próximo (3 Práctica de Recursión)](03_EjerciciosRec.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Intro a la Recursión)](02_Recursion.md) \| [Próximo (4 Práctica de Recursión)](05_EjerciciosRec.md)
 

@@ -104,7 +104,7 @@ class Lote:
     ...
 
 class MiLote(Lote):
-    def precio(self):
+    def costo(self):
         # Fijate cómo usamos `super`
         costo_orig = super().costo()
         return 1.25 * costo_orig

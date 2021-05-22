@@ -1,7 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Diseño de algoritmos recursivos)](02_Diseno_Recursivo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Diseño de algoritmos recursivos)](03_Diseno_Recursivo.md)
 
-# 11.1 Intro a la Recursión
+# 11.2 Intro a la Recursión
 
+Para esta sección y las dos siguientes hay un [video](https://youtu.be/C0o-KuY-BNs) donde introducimos el tema de recursión y vemos algunos ejemplos.
 
 ## La recursión y cómo puede ser que funcione
 
@@ -317,5 +318,5 @@ _En resumen_: vimos que un algoritmo recursivo **no** es necesariamente mejor qu
 
 
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Diseño de algoritmos recursivos)](02_Diseno_Recursivo.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Diseño de algoritmos recursivos)](03_Diseno_Recursivo.md)
 

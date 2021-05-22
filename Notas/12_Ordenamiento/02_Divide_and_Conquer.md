@@ -124,7 +124,7 @@ El método **divide y reinarás** es fecundo y ha dado lugar a algoritmos muy ef
 ### Ejemplo: Árbol de recursión
 
 Para representar gráficamente las llamadas recursivas de la función `merge_sort()` podemos hacer un árbol similar al que mostramos en la
-[Sección 11.1](../11_Recursion/01_Recursion.md#un-ejemplo-de-recursión-poco-eficiente) para la sucesión de Fibonacci. Esta vez, como queremos mostrar no sólo las llamadas sino también lo que devuelve cada llamada, espejaremos el árbol obteniendo un grafo.
+[Sección 11.2](../11_Recursion/02_Recursion.md#un-ejemplo-de-recursión-poco-eficiente) para la sucesión de Fibonacci. Esta vez, como queremos mostrar no sólo las llamadas sino también lo que devuelve cada llamada, espejaremos el árbol obteniendo un grafo.
 
 Acá mostramos el árbol de recursión de `merge_sort([3, 1, 0, 4, 2])`.
 
