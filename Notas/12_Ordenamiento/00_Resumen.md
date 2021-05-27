@@ -8,10 +8,11 @@ Ordenar una lista de números es una de las tareas fundamentales que realiza un 
 
 
 
-* [12.1 Ordenamientos sencillos de listas](01_Ordenamiento_sencillo.md)
-* [12.2 Divide y reinarás](02_Divide_and_Conquer.md)
-* [12.3 Algoritmos de clasificación supervisada](03_introduccion_al_AA.md)
-* [12.4 Cierre de la clase de Ordenamiento](04_Cierre.md)
+* [12.1 Introducción](01_Introduccion.md)
+* [12.2 Ordenamientos sencillos de listas](02_Ordenamiento_sencillo.md)
+* [12.3 Divide y reinarás](03_Divide_and_Conquer.md)
+* [12.4 Algoritmos de clasificación supervisada](04_introduccion_al_AA.md)
+* [12.5 Cierre de la clase de Ordenamiento](05_Cierre.md)
 
 
 [Contenidos](../Contenidos.md) \| [Anterior (11 Recursión y regresión)](../11_Recursion/00_Resumen.md)

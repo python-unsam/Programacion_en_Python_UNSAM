@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Ordenamientos sencillos de listas)](02_Ordenamiento_sencillo.md) \| [Próximo (4 Algoritmos de clasificación supervisada)](04_introduccion_al_AA.md)
 
-# 12.2 Divide y reinarás
+# 12.3 Divide y reinarás
+
+Para esta sección tenemos este [video introductorio](https://youtu.be/ZSRn0ob4ukM).
 
 El problema del ordenamiento es un problema fundamental y hay [muchísimos algoritmos que lo resuelven](https://www.youtube.com/watch?v=kPRA0W1kECg). Los métodos de ordenamiento vistos en la sección anterior eran métodos
 iterativos cuyo tiempo de ejecución era cuadrático.
@@ -194,7 +196,7 @@ De esta manera se logra un tiempo proporcional a `N * log2(N)`.
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan, como mostramos más arriba para la lista `[3, 1, 0, 4, 2]`.
 
 ### Ejercicio 12.7: 
-Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 12.5](../12_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-125-comparar-métodos-gráficamente)) incorporando el merge sort a la comparación y al gráfico. Describí con tus palabras qué observas.
+Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 12.5](../12_Ordenamiento/02_Ordenamiento_sencillo.md#ejercicio-125-comparar-métodos-gráficamente)) incorporando el merge sort a la comparación y al gráfico. Describí con tus palabras qué observas.
 
 Guardá el archivo `comparaciones_ordenamiento.py` con estas modificaciones, para entregarlo.
 
@@ -302,11 +304,11 @@ plt.plot(tiempos_seleccion)
 ### Ejercicio 12.8: 
 La idea de este ejercicio es, nuevamente, comparar los algoritmos de ordenamiento que vimos hasta ahora pero usando `timeit()` en lugar de contando a mano la cantidad de operaciones.
 
-+ Juntá en el archivo `time_ordenamiento.py` los métodos de búsqueda del [Ejercicio 12.7](../12_Ordenamiento/02_Divide_and_Conquer.md#ejercicio-127).
++ Juntá en el archivo `time_ordenamiento.py` los métodos de búsqueda del [Ejercicio 12.7](../12_Ordenamiento/03_Divide_and_Conquer.md#ejercicio-127).
 
 + Antes de empezar el experimento, eliminá de las funciones a medir todo código no esencial, en particular los prints para debug. Consumen tiempo y no son parte del algoritmo. También eliminá las cuentas de comparaciones, que ahora no son necesarias.
 
-+ Escribí un experimento que, tal como hiciste en el [Ejercicio 12.5](../12_Ordenamiento/01_Ordenamiento_sencillo.md#ejercicio-125-comparar-métodos-gráficamente),
++ Escribí un experimento que, tal como hiciste en el [Ejercicio 12.5](../12_Ordenamiento/02_Ordenamiento_sencillo.md#ejercicio-125-comparar-métodos-gráficamente),
 para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 al 1000, calcule el tiempo que tarda cada método en ordenar la lista y guarde estos resultados en vectores de largo 256.
 
 + En este caso, vas a tener que generar y guardar todas las listas a ser utilizadas antes de correr el experimento, para poder usar las mismas para evaluar cada método. Definí para eso una función `generar_listas(Nmax)` que genere una lista de listas, una de cada longitud entre 1 y `Nmax`, con valores aleatorios entre 1 y 1000.
@@ -332,5 +334,5 @@ otralista = [7, 6, 5, 4, 3, 2, 1, 0]
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (1 Ordenamientos sencillos de listas)](01_Ordenamiento_sencillo.md) \| [Próximo (3 Algoritmos de clasificación supervisada)](03_introduccion_al_AA.md)
+[Contenidos](../Contenidos.md) \| [Anterior (2 Ordenamientos sencillos de listas)](02_Ordenamiento_sencillo.md) \| [Próximo (4 Algoritmos de clasificación supervisada)](04_introduccion_al_AA.md)
 

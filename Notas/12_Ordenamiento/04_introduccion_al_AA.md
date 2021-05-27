@@ -1,6 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Divide y reinarás)](02_Divide_and_Conquer.md) \| [Próximo (4 Cierre de la clase de Ordenamiento)](04_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Divide y reinarás)](03_Divide_and_Conquer.md) \| [Próximo (5 Cierre de la clase de Ordenamiento)](05_Cierre.md)
 
-# 12.3 Algoritmos de clasificación supervisada
+# 12.4 Algoritmos de clasificación supervisada
+
+Para esta sección tenemos este [video introductorio](https://youtu.be/ygxoVQNRqs8).
 
 En esta sección veremos un algoritmo de clasificación. Un problema de clasificación es un problema en el que tenemos algunas clases fijas (en nuestro ejemplo serán tres tipos de flores) y algunos atributos (medidas de los pétalos y sépalos, en nuestro ejemplo) a partir de los cuales queremos _inferir_ la clase. Típicamente el algoritmo de clasificación se _entrena_ con alguna parte de los datos para que _aprenda_ y luego se _evalúa_ cuán bien aprendió con el resto de los datos. Para esto hace falta tener un conjunto de datos _etiquetados_ (es decir, con la clase bien definida). Luego, si funciona bien, el algoritmo podrá usarse para etiquetar nuevos datos de los que no se conoce la clase.
 
@@ -275,5 +277,5 @@ Imprimí el promedio de los scores obtenidos y guardá el código en el archivo 
 
 
 
-[Contenidos](../Contenidos.md) \| [Anterior (2 Divide y reinarás)](02_Divide_and_Conquer.md) \| [Próximo (4 Cierre de la clase de Ordenamiento)](04_Cierre.md)
+[Contenidos](../Contenidos.md) \| [Anterior (3 Divide y reinarás)](03_Divide_and_Conquer.md) \| [Próximo (5 Cierre de la clase de Ordenamiento)](05_Cierre.md)
 

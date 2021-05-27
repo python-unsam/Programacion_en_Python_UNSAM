@@ -1,7 +1,8 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Divide y reinarás)](02_Divide_and_Conquer.md)
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Divide y reinarás)](03_Divide_and_Conquer.md)
 
-# 12.1 Ordenamientos sencillos de listas
+# 12.2 Ordenamientos sencillos de listas
 
+Para esta sección tenemos un [video introductorio](https://youtu.be/ElHpgeTvZLY).
 
 El problema del ordenamiento es tan fundamental que, a pesar de que Python ya lo hace con su método `sort()` por ejemplo, nos interesa discutirlo. Hay una diversidad de soluciones para ordenar listas. Vamos a empezar viendo las más sencillas de escribir (que en general suelen ser las más caras).
 
@@ -318,5 +319,6 @@ Guardá `comparaciones_ordenamiento.py` para seguir trabajando sobre él y para 
 
 _Extra:_ ¿Las curvas de complejidad quedaron suaves? ¿Se te ocurre cómo hacer para suavizarlas?
 
-[Contenidos](../Contenidos.md) \| [Próximo (2 Divide y reinarás)](02_Divide_and_Conquer.md)
+
+[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Divide y reinarás)](03_Divide_and_Conquer.md)
 
