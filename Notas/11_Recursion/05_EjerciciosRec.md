@@ -98,7 +98,7 @@ aa ab ac ba bb bc ca cb cc
 
 
 ### Ejercicio 11.11: Búsqueda binaria
-Escribí una función recursiva que implemente la búsqueda binaria de un elemento `e` en una lista ordenada `lista`. La función debe devolver simplemente `True` o `False` indicando si el elemento está o no en a lista. Para esto completá el siguiente código:
+Escribí una función recursiva que implemente la búsqueda binaria de un elemento `e` en una lista ordenada `lista`. La función debe devolver simplemente `True` o `False` indicando si el elemento está o no en la lista. Para esto completá el siguiente código:
 
 ```python
 def bbinaria_rec(lista, e):
@@ -152,8 +152,8 @@ def fibonacci(n):
 Guardala en el archivo `fibonacci_envuelto.py`.
 
 ### Ejercicio 11.13: Hojas ISO y recursión
-La norma ISO 216 especifica tamaños de papel. Es el estándar que define el popular tamaño de papel A4 (210mm de ancho y 297mm de largo). Las hojas A0 miden 841mm de ancho y 1189mm de largo. A partir de la A0 las siguientes medidas, digamos la A(N+1), se definen doblando al medio la hoja A(N). Siempre se miden en milímetros con números enteros: entonces la hoja A1 mide 594mm
-de ancho (y no 594.5) por 841mm de largo. 
+La norma ISO 216 especifica tamaños de papel. Es el estándar que define el popular tamaño de papel A4 (210 mm de ancho y 297 mm de largo). Las hojas A0 miden 841 mm de ancho y 1189 mm de largo. A partir de la A0 las siguientes medidas, digamos la A(N+1), se definen doblando al medio la hoja A(N). Siempre se miden en milímetros con números enteros: entonces la hoja A1 mide 594 mm
+de ancho (y no 594.5) por 841 mm de largo. 
 
 ![Hojas](./AN.png)
 

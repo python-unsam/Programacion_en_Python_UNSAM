@@ -67,7 +67,7 @@ son:
 
 
 No es increíble que esto pueda funcionar adecuadamente en un lenguaje
-de programación.
+de programación?
 
 
 ### Ejercicio 11.1: 
@@ -258,7 +258,7 @@ Los primeros números de esta sucesión son: `0`, `1`, `1`, `2`, `3`, `5`, `8`,
 `13`, `21`, `34`, `55`. La sucesión tiene numerosas aplicaciones en computación y matemática y también aparece en configuraciones biológicas, como en las flores de girasoles, en la configuración de los ananás o las piñas de las coníferas, en la reproducción de conejos, etc. La siguiente imagen muestra su uso para aproximar una espiral áurea:
 
 
-![Espiral a partir de la sucesión de Fibonacci](./280px-Fibonacci_spiral_34.svg.png)
+![Espiral a partir de la sucesión de Fibonacci](./280px-Fibonacci_spiral_34.bmp)
 
 
 Dada la definición recursiva de la sucesión, puede resultar muy tentador

@@ -40,12 +40,14 @@ Vamos a elegir como mejor recta a la que minimice los residuos. Más precisament
 ![ej0_posiblesrectas](./ej0_posiblesrectas.png)
 
 Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadrados:
+<!--- ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
+--->
 
-![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
+<img src="./eq_suma_de_cuadrados.png" width="30%"/>
 
 Usar cuadrados mínimos tiene múltiples motivaciones que no podemos detallar adecuadamente acá. Solo mencionaremos dos hechos importantes relacionados con su frecuente elección:
 
-- Por un lado, minimizar el error cuadrático medio puede resolverse derivando la fórumla del error. Los que sepan algo de análisis matemático, recordarán que la derivada nos permite encontrar mínimos y que la derivada de una función cuadrática es una función lineal. Por lo tanto, encontrar la recta que mejor ajusta los datos se reduce a buscar el cero de una derivada que en el fondo se reduce a resolver un sistema lineal, algo que sabemos hacer muy bien y muy rápido. Si en lugar de minimizar la suma de los cuadrados de los residuos planteáramos, por ejemplo, minimizar la suma de los valores absolutos de los residuos no podríamos encontrar la recta que mejor ajusta tan fácilmente.
+- Por un lado, minimizar el error cuadrático medio puede resolverse derivando la fórmula del error. Los que sepan algo de análisis matemático, recordarán que la derivada nos permite encontrar mínimos y que la derivada de una función cuadrática es una función lineal. Por lo tanto, encontrar la recta que mejor ajusta los datos se reduce a buscar el cero de una derivada que en el fondo se reduce a resolver un sistema lineal, algo que sabemos hacer muy bien y muy rápido. Si en lugar de minimizar la suma de los cuadrados de los residuos planteáramos, por ejemplo, minimizar la suma de los valores absolutos de los residuos no podríamos encontrar la recta que mejor ajusta tan fácilmente.
 - Otro argumento muy fuerte, de naturaleza estadística en este caso, es que si uno considera que los residuos son por ejemplo errores de medición y que tienen una distribución normal (una gaussiana), entonces puede mostrarse que la recta que da el método de los cuadrados mínimos es _la recta de máxima verosimilitud_.
 
 Estas cosas se explican muy bien en [el apunte de Andrew Ng](http://cs229.stanford.edu/notes2020spring/cs229-notes1.pdf) que citamos antes.
@@ -62,7 +64,10 @@ Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que
 
 ### Ajuste del modelo de cuadrados mínimos
 
-Como buscamos el mínimo de la expresión ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
+Como buscamos el mínimo de la expresión 
+<!--- ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
+--->
+<img src="./eq_suma_de_cuadrados.png" width="20%"/>
  podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. No es una cuenta díficil. El único cero que va a tener la derivada se corresponde con un mínimo (porque la recta se puede ajustar *tan mal como uno quiera*). De esta manera se obtienen las siguientes fórmulas para el ajuste:
 
 ```python
@@ -158,7 +163,7 @@ plt.show()
 ```
 ![ejcuad_scatter](./ejcuad_scatter.png)
 
-Y ajutemos un modelo lineal (notado: *y ~ x*) a estos datos.
+Y ajustemos un modelo lineal (notado: *y ~ x*) a estos datos.
 
 ```python
 a, b = ajuste_lineal_simple(x, y)
@@ -252,8 +257,10 @@ Usamos el método `fit()` para ajustar el modelo y el método `predict()` para o
 ## Regresión Lineal Múltiple
 
 La regresión lineal múltiple tiene un planteo similar, pero con más variables explicativas. El modelo es el siguiente.
-
+<!---
 ![y = \b_0 + \sum_{j=1}^k \b_j x_j](https://render.githubusercontent.com/render/math?math=y%20=%20\b_0%20%2B%20\sum_{j=1}^k%20\b_j%20x_j)
+--->
+<img src="./eq_reg_lin_multiple.png" width="30%"/>
 
 ### Ejemplo: superficie y antigüedad
 
@@ -286,7 +293,7 @@ Queremos estimar el peso específico de un metal (es decir, peso divido volumen,
 
 Sabemos que el volumen de una barra de largo `m` es `m`cm³, por lo que su peso debería ser `R*m`. Queremos estimar `R`. Utilizando la balanza, tendremos los pesos aproximados de distintas barras, con ciertos errores de medición. Si ajustamos un modelo lineal a los datos de volumen y peso aproximado vamos a tener una buena aproximación para `R` (la pendiente de la recta).
 
-Los datos de longitudes y pesos se encuentran en el archivo [disponible acá]('https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv').
+Los datos de longitudes y pesos se encuentran en el archivo [disponible acá]('https://raw.githubusercontent.com/python-unsam/Programacion_en_Python_UNSAM/master/Notas/11_Recursion/longitudes_y_pesos.csv').
 
 * Cargá los datos directamente con el enlace usando el siguiente código.
 
@@ -294,7 +301,7 @@ Los datos de longitudes y pesos se encuentran en el archivo [disponible acá]('h
 import requests
 import io
 
-enlace = 'https://raw.githubusercontent.com/python-unsam/UNSAM_2020c2_Python/master/Notas/10_Recursion/longitudes_y_pesos.csv'
+enlace = 'https://raw.githubusercontent.com/python-unsam/Programacion_en_Python_UNSAM/master/Notas/11_Recursion/longitudes_y_pesos.csv'
 r = requests.get(enlace).content
 data_lyp = pd.read_csv(io.StringIO(r.decode('utf-8')))
 ```
@@ -442,7 +449,7 @@ Vamos a trabajar nuevamente con el archivo de arbolado porteño en parques que t
 
 Para explicarlo con un ejemplo: imaginá que tenemos tres pares de datos (_DAP_ y _altura_ para un árbol angosto, para un árbol mediano y para un árbol muy ancho) y supongamos que hay una relación lineal _real_ que es la que estamos buscando estimar a partir de los datos. La altura del arbol angosto va a variar unos pocos centímetros respecto a este modelo ideal mientras que la altura del árbol ancho puede variar muchos metros. Esto hace que el _residuo_ del árbol grueso respecto al modelo ideal sea mucho mayor que el residuo del árbol angosto y, por lo tanto, que su infuencia en los coeficientes estimados sea mayor también (recordemos que estamos minimizando la suma de estos residuos al cuadrado). Esto viola una de las hipótesis de la regresión lineal (la *homocedasticidad*) que dice que todos los residuos tienen la *misma* distribución.
 
-En este caso contamos con una gran cantidad de datos y podemos aplicar de todas formas la regresión en el marco de un análsis exploratorio de los datos.
+En este caso contamos con una gran cantidad de datos y podemos aplicar de todas formas la regresión en el marco de un análisis exploratorio de los datos.
 
 ### Ejercicio 11.21: Gráficos de ajuste lineal con Seaborn
  + Seleccioná los datos correspondientes a las especies: Jacarandá, Palo borracho rosado, Eucalipto y Ceibo, todas en un mismo DataFrame, usando el siguiente filtro.
