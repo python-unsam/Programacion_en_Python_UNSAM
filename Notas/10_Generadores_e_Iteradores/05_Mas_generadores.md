@@ -28,9 +28,9 @@ Una expresión generadora es una lista por comprensión en su "versión generado
 La sintaxis general es:
 
 ```python
-(<expression> for i in s if <conditional>)
+(<expresión> for i in s if <condición>)
 ```
-Que puede leerse como .... el valor es <expression> para cada elemento `i` perteneciente a `s` siempre y cuando <conditional> se cumpla.
+Que puede leerse como .... el valor es `<expresión>`  para cada elemento `i` perteneciente a `s` siempre y cuando `<condición>` se cumpla.
 
 Las podés usar como argumento de una función.
 

@@ -246,9 +246,9 @@ In [8]: tt.timeit('"-".join(map(str, range(100)))', number = 10000)
 Out[8]: 0.23702679807320237
 ```
 
-### Ejemplo: evaluar el método de selección con `timeit`.
+### Ejemplo: evaluar el método de ordenamiento por selección con `timeit`.
 
-Queremos evaluar cuánto tarda del método de selección dependiendo de la longitud de la lista de entrada.
+Queremos evaluar cuánto tarda del método de ordenamiento por selección para diferentes longitudes de la lista a ordenar.
 
 Para eso, primero generamos listas de longitudes entre 1 y 256.
 
@@ -258,7 +258,7 @@ for N in range(1, 256):
     listas.append(generar_lista(N))
 ```
 
-Luego, definimos una función `experimento_timeit_seleccion(listas, num)` que realiza un experimento usando timeit para evaluar el método de selección (repitiendo `num` veces) con las listas pasadas como entrada, y devuelve los tiempos de ejecución para cada lista en un vector.
+Luego, definimos una función "wrapper""(envoltorio) llamada `experimento_timeit_seleccion(listas, num)` que realiza un experimento usando timeit para evaluar el método de selección (repitiendo `num` veces) con las listas que le pasamos como parámetro, y devuelve en un vector los tiempos de ejecución para cada lista.
 
 ```python
 def experimento_timeit_seleccion(listas, num):
@@ -269,7 +269,7 @@ def experimento_timeit_seleccion(listas, num):
     y devuelve los tiempos de ejecución para cada lista
     en un vector.
     El parámetro 'listas' debe ser una lista de listas.
-    El parámetro 'num' indica la cantidad de repeticiones a ejecutar el método para cada lista.
+    El parámetro 'num' indica el número de veces que repite el ordenamiento para cada lista.
     """
     tiempos_seleccion = []
     
@@ -311,17 +311,17 @@ La idea de este ejercicio es, nuevamente, comparar los algoritmos de ordenamient
 + Escribí un experimento que, tal como hiciste en el [Ejercicio 12.5](../12_Ordenamiento/02_Ordenamiento_sencillo.md#ejercicio-125-comparar-métodos-gráficamente),
 para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 al 1000, calcule el tiempo que tarda cada método en ordenar la lista y guarde estos resultados en vectores de largo 256.
 
-+ En este caso, vas a tener que generar y guardar todas las listas a ser utilizadas antes de correr el experimento, para poder usar las mismas para evaluar cada método. Definí para eso una función `generar_listas(Nmax)` que genere una lista de listas, una de cada longitud entre 1 y `Nmax`, con valores aleatorios entre 1 y 1000.
++ En este caso, vas a tener que generar y guardar todas las listas a ser utilizadas antes de correr el experimento, para poder usar las mismas repetidas veces al evaluar cada método. Definí para eso una función `generar_listas(Nmax)` que genere una lista de listas, una de cada longitud entre 1 y `Nmax`, con valores aleatorios entre 1 y 1000.
 
-+ Asegurate de evaluar todos los métodos de ordenamiento con las mismas listas (siempre usá copias para no reordenar listas ya ordenadas) y guardar esta información para poder mostrarla o usarla.
++ Asegurate de evaluar todos los métodos de ordenamiento con las mismas listas (siempre usá copias para no ordenar listas que ya están ordenadas) y guardar esta información para poder mostrarla o usarla.
 
-+ Graficá los datos de tiempos de ejecución en función de longitudes de la lista. ¿Coinciden las curvas con lo que habías predicho estimando el número de operaciones?
++ Graficá los datos de tiempos de ejecución en función de las longitudes de las listas. ¿Coinciden las curvas con lo que habías predicho estimando el número de operaciones?
 
 + Guardá el archivo `time_ordenamiento.py` para entregarlo.
 
 
 ### Ejercicio 12.9: 
-Opcional: Escribí una función `merge3sort` que funcione igual que el merge sort pero en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3sort(lista1, lista2, lista3)`.
+Opcional: Escribí una función `merge3sort` que funcione igual que el merge sort pero en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3(lista1, lista2, lista3)`.
 
 Probá tu función en las siguientes listas:
 
