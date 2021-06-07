@@ -305,7 +305,7 @@ Realizá un experimento que genere una lista de largo `N` y la ordene con los tr
 
 Para N = 10, realizá k = 100 repeticiones del siguiente experimento. Generar una lista de largo `N`, ordenarlas con los tres métodos y guardar la cantidad de operaciones. Al final, debe imprimir el promedio de comparaciones realizado por cada método.
 
-_Cuidado_: usá las mismas listas para los tres métodos así la compración es justa.
+_Cuidado_: usá las mismas listas para los tres métodos así la comparación es justa.
 
 
 ### Ejercicio 12.5: comparar métodos gráficamente

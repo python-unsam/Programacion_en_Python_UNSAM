@@ -230,7 +230,7 @@ O, directamente, usando el método `score` que ya viene en el clasificador:
 Lo que hicimos hasta ahora fue:
 
     1) Separar los datos en dos conjuntos: train y test.
-    2) Sefinir un clasificador knn y entrenarlo con los datos de training.
+    2) Definir un clasificador knn y entrenarlo con los datos de training.
     3) Evaluar el clasificador con los datos de testing.
 
 
