@@ -92,7 +92,7 @@ Haciendo miles de experimentos numéricos, estimá la probabilidad de que en un 
 Modificando un poco tu programa anterior, ¿podés calcular cuántas personas tiene que haber en un grupo para que sea más probable que dos cumplan años el mismo día que que todas cumplan en días diferentes?
 
 
-_Observación_: Les dejamos una nota sobre las _[Simulaciones de Monte Carlo por Adrián Paenza](https://www.pagina12.com.ar/347117-la-simulacion-de-monte-carlo) que está relacionada con estos temas.
+_Observación_: Les dejamos una nota sobre las [Simulaciones de Monte Carlo](https://www.pagina12.com.ar/347117-la-simulacion-de-monte-carlo),  por Adrián Paenza, que está relacionada con estos temas.
 
 ### Elecciones sin reposición
 
