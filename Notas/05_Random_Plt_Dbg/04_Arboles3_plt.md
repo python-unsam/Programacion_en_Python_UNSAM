@@ -8,7 +8,7 @@ En esta sección retomamos el dataset del arbolado porteño (arbolado-en-espacio
 
 Seguiremos trabajando en el archivo `arboles.py`. Nos basaremos en el trabajo hecho con comprensión de listas la clase pasada. Los siguientes tres ejercicios hacelos dentro de tres funciones diferentes, guardalas y entregá el archivo `arboles.py` con estos agregados.
 
-### Ejercicio 5.24: Histograma de altos de Jacarandás
+### Ejercicio 5.25: Histograma de altos de Jacarandás
 Usando tu trabajo en el [Ejercicio 4.16](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-416-lista-de-altos-de-jacarandá), generá un histograma con las alturas de los Jacarandás en el dataset.
 
 Tu código debería verse similar a este:
@@ -24,7 +24,7 @@ plt.hist(altos,bins=...)
 
 _Observación:_ Spyder tiene opciones para mostrar las figuras dentro de la misma ventana o en una ventana nueva (Tools -> Preferences -> IPython console -> Graphics -> Backend). Te recomendamos generarlas en una ventana nueva. Luego, con `plt.clf()` podés borrar la figura actual y con `plt.figure()` generás una nueva figura por si querés dejar varias abiertas a la vez.
 
-### Ejercicio 5.25: Scatterplot (diámetro vs alto) de Jacarandás
+### Ejercicio 5.26: Scatterplot (diámetro vs alto) de Jacarandás
 En este ejercicio introducimos un nuevo tipo de gráfico: _el gráfico de dispersión_  o _scatterplot_. El mismo usa coordenadas cartesianas para mostrar los valores de dos variables para un conjunto de datos. 
 
 En este caso vamos a graficar un punto en el plano (x,y) por cada árbol en el dataset (o para cada arbol de cierta especie). El punto correspondiente a un árbol con diámetro *d* y altura *h* será ubicado en la posición *x=d* y *y=h*. Este tipo de gráfico permite visualizar relaciones o tendencias entre las variables y es muy útil en el análisis exploratorio de datos.
@@ -52,7 +52,7 @@ plt.ylabel("alto (m)")
 plt.title("Relación diámetro-alto para Jacarandás")
 ```
 
-### Ejercicio 5.26: Scatterplot para diferentes especies
+### Ejercicio 5.27: Scatterplot para diferentes especies
 Ahora vamos a usar la función `medidas_de_especies()` definida en el [Ejercicio 4.18](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-418-diccionario-con-medidas).
 
 Comenzando con éste código, hacé tres gráficos como en el ejercicio anterior, uno por cada especie.

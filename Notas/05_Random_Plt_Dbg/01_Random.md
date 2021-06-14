@@ -86,6 +86,13 @@ print(random.choices(caras,k=5))
 
 Estos son experimentos *con reposición* en el sentido de que si en el primer dado sacamos un dos, al tirar el segundo dado podemos sacar otro dos, repitiendo el valor. El término *reposición* viene de pensar en una urna con bolitas. Si un dado lo pensamos como una urna con seis bolitas (etiquetadas del uno al seis), luego de sacar una bolita (tirar el dado una vez) *reponemos* la bolita que sacamos, de forma que en el siguiente experimento (tirar nuevamente el dado) podamos obtener el mismo valor.
 
+### Ejercicio 5.3: Cocumpleaños
+Haciendo miles de experimentos numéricos, estimá la probabilidad de que en un grupo de 30 personas elegidas al azar, dos cumplan años el mismo día. Escribí un programita que permita calcular esa probabilidad asumiendo que el año tiene 365 días.
+
+Modificando un poco tu programa anterior, ¿podés calcular cuántas personas tiene que haber en un grupo para que sea más probable que dos cumplan años el mismo día que que todas cumplan en días diferentes?
+
+
+_Observación_: Les dejamos una nota sobre las _[Simulaciones de Monte Carlo por Adrián Paenza](https://www.pagina12.com.ar/347117-la-simulacion-de-monte-carlo) que está relacionada con estos temas.
 
 ### Elecciones sin reposición
 
@@ -103,7 +110,7 @@ Ahora podemos usar `random.choice(naipes)` para seleccionar un naipe. Sin embarg
 
 A diferencia de `choices` donde el parámetro `k` podía tomar cualquier valor, al dar la instrucción `random.sample(naipes,k=?)` la variable `k` no puede ser mayor que la cantidad de naipes (es decir 40) ya que no se puede sacar *sin reposición* más elementos que la cantidad total.
 
-### Ejercicio 5.3: Envido
+### Ejercicio 5.4: Envido
 Teniendo en cuenta las reglas del [Truco](https://es.wikipedia.org/wiki/Truco_argentino), estimá la probabilidad de obtener 31, 32 o 33 puntos de envido en una mano. ¿Son iguales estas tres probabilidades? ¿Por qué?
 
 _Observación: como corresponde, en esta materia jugamos al truco **sin** flor. Si no conocés las reglas del Truco y no te dan ganas de aprenderlo ahora, simplemente salteá este ejercicio._
@@ -135,11 +142,12 @@ n3 = naipes.pop()
 print(f'Repartí el {n1[0]} de {n1[1]}, el {n2[0]} de {n2[1]} y el {n3[0]} de {n3[1]}. Quedan {len(naipes)} naipes en el mazo.')
 ```
 
+
 ## Valores continuos
 
 Además de generar valores (pseudo)aleatorios discretos, también es posible generar valores continuos. La funcion `random.random()` genera un número de punto flotante entre 0 y 1.
 
-### Ejercicio 5.4: Calcular pi
+### Ejercicio 5.5: Calcular pi
 Es interesante ver cómo los algoritmos estocásticos (basados en elecciones aleatorias) también sirven para resolver problemas que no tienen nada de estocásticos. En este ejercicio vas a usar el generador `random()` para aproximar `pi`.
 
 Por definición `pi` es el área del círculo de radio uno. Si generamos puntos (x,y) con:
@@ -162,7 +170,7 @@ Despejando pi de esta estimación, obtenemos que pi ~ 4*M/N. Esto nos permite es
 Escribí un programa `estimar_pi.py` que genere cien mil puntos aleatorios con la función `generar_punto()`, calcule la proporción de estos puntos que caen en el círculo unitario (usando ¿x^2 + y^2 < 1?) y use este resultado para dar una aproximación de pi.
 
 
-### Ejercicio 5.5: Gaussiana
+### Ejercicio 5.6: Gaussiana
 Con `random.random()` generamos valores aleatorios entre 0 y 1 con una distribución _uniforme_. En esa distribución, todos los valores posibles tienen la misma probabilidad de ser seleccionados. También es posible generar valores aleatorios con otras distribuciones. Una de las distribuciones más importantes es la **distribución normal** o [Gaussiana](https://es.wikipedia.org/wiki/Distribuci%C3%B3n_normal).
 
 La distribución normal tiene dos parámetros, denominados media y desvío estándar y denotados usualmente con las letras griegas _mu_ y _sigma_, respectivamente.
