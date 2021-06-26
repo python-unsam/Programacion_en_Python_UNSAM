@@ -16,10 +16,10 @@ para poder **programar algoritmos** y comprender los métodos
 desarrollados por otres. Está orientado a preparar a le estudiante para
 profundizar en temas de **análisis y visualización de datos, aprendizaje automático, modelado matemático y desarrollo de scripts**.
 
-El curso comienza el 10 de marzo y se dicta semanalmente los días miércoles de 14hs de 16hs hasta fin de junio 2021. 
-El material escrito lo iremos subiendo semanalmente a este repositorio y las clases sincrónicas de los miércoles quedarán grabadas de manera que el curso completo (salvo los parciales) se puede hacer de manera asincrónica.
+El curso comienza el 4 de agosto y se dicta semanalmente. Los días miércoles de 14hs de 16hs hay clases de consultas. 
+El material de las clases teóricas, tanto escrito como videos, estará disponible en este repositorio de manera que el curso (salvo los parciales) se puede hacer casi completamente de manera asincrónica.
 
-Es un curso gratuito y la preinscripción está abierta hasta el miércoles 24 de febrero de 2021.
+Es un curso gratuito y anunciaremos oportunamente la inscripción.
 
 
 ## Audiencia. ¿Para quién está pensado?
@@ -54,7 +54,7 @@ horas semanales de dedicación, durante cuatro meses.
 El curso lo dictan dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
 Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
-Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, probablemente contemos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado.
+Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, contamos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado.
 
 ## Preinscripción
-La preinscripción al curso que comienza el miércoles 10 de marzo a las 14hs ya cerró. Para que te informemos de futuras adiciones completá [este formulario](https://forms.gle/qfdKoUyyKYqEL6Zp6).
+La preinscripción al curso aún no abrió. Si querés que te informemos cuando la abramos completá [este formulario](https://forms.gle/qfdKoUyyKYqEL6Zp6).
