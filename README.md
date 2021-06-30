@@ -54,7 +54,7 @@ horas semanales de dedicación, durante cuatro meses.
 El curso lo dictan dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
 Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
-Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, contamos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado.
+Dr. en Computación y trabaja en temas ambientales, una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, contamos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado, y con José Crespo y José Clemente, también de docentes invitados.
 
 ## Preinscripción
 La preinscripción al curso aún no abrió. Si querés que te informemos cuando la abramos completá [este formulario](https://forms.gle/qfdKoUyyKYqEL6Zp6).
