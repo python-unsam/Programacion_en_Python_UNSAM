@@ -10,7 +10,13 @@ Para hacer este curso solo hace falta tener instalado el Python 3.6 o uno más n
 
 
 ## Dedicación y duración
-Este es un curso cuatrimestral de grado y posgrado. Tiene diferentes modalidades, algunas sincrónicas y otras asincrónicas. Las clases las tendrán que leer de los apuntes que se van a encontrar aquí mismo, en el repositorio de la materia. Estos apuntes contienen ejercicios que tendrán que entregar semnalmente. Tendremos encuentros semanales on-line para explicaciones y consultas. Hay también un [grupo de consultas](./Slack.md#grupo-de-slack---información-y-consultas) y debates entre estudiantes en tiempo real. Por nuestra experiencia previa, el curso demanda unas 15 horas (+/- 5hs) semanales de dedicación durante los cuatro meses. Algunes los completan usando menos de 6hs semanales, otres llegan a necesitar 25.
+Este es un curso cuatrimestral de grado y posgrado que se cursa principalmente de manera asincrónica. Las clases las tendrán que leer de los apuntes que se van a encontrar aquí mismo, en el repositorio de la materia. También encontrarán aquí punteros a videos que continen explicaciones que profundizan o complementan los temas. Los apuntes contienen también ejercicios que tendrán que entregar semanalmente. 
+
+Hay también un [grupo de consultas](./Slack.md#grupo-de-slack---información-y-consultas)  y debates entre estudiantes en tiempo real que es una parte fundamental del curso. Tendremos también encuentros semanales on-line para consultas y profundización de los temas.
+
+Por nuestra experiencia previa, el curso demanda unas 15 horas (+/- 5hs) semanales de dedicación durante los cuatro meses. Algunes los completan usando menos de 6hs semanales, otres llegan a necesitar 25.
+
+Por favor, considerá antes de empezar el curso si disponés del tiempo necesario para dedicarle a la materia. Es realmente un curso muy exigente, que demanda muchas horas y requiere dedicación semanal casi sin pausa durante cuatro meses. Para mantener la dinámica del grupo, queremos evitar las deserciones. Por eso te pedimos que no te anotes si no tenés la disponibilidad que estamos planteando.
 
 
 ## Contexto
@@ -20,7 +26,8 @@ Este curso lo dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.a
 El curso está a cargo de dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
 Dr. en Computación y trabaja en temas ambientales; [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
-Dr. en Química y trabaja en neurofisiología. También contamos con una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, probablemente contemos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado y con José Crespo como colaborador externo.
+Dr. en Química y trabaja en neurofisiología. También contamos con una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, contamos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado, y con José Crespo y José Clemente, como docentes invitados. 
+
 
 ## Contenidos, enfoque y organización de los temas
 El curso involucra contenidos prácticos específicos del lenguaje Python así como también un poco más teóricos sobre algoritmos, organización de programas y estructuras de datos. Además de los contenidos mínimos del curso, las clases de la segunda mitad tendrán ejercicios optativos para profundizar en algunos temas más avanzados.
@@ -53,9 +60,11 @@ Es una pregunta frecuente si la materia da créditos en tal o cuál universidad.
 
 La materia es oficialmente de grado y posgrado y, en caso de aprobación, les entregaremos un certificado de aprobación oficial confeccionado por la secretaría de alumnos de la ECyT-UNSAM. La decisión sobre los créditos no es nuestra sino de las diferentes universidades o comisiones doctorales. En el grupo de Slack pueden encontrar el programa de la materia que especifica su carga horaria, contenidos así como las condiciones de aprobación e información sobre los docentes. Con esta información deberían poder averiguar ustedes mismes sobre la aceptación del curso y el otorgamiento de créditos en sus respectivas unidades académicas.
 
+Les estudiantes de la ECyT (grado y posgrado) deben inscribirse también en el SIU guaraní y la nota se les pasará por ese sistema. Para estudiantes externos a la ECyT (grado y posgrado), el certificado de aprobación de la materia lo entrega el Depto. de Servicios Académicos de la ECyT, en formato PDF. Se trata de un PDF con los datos de le estudiante y de la materia (nombre, nota, docentes, carga horaria y si es de posgrado lo aclara) firmado por la coordinadora del Depto antes mencionado. Este certificado lo aceptan casi todas las universidades. Sin embargo, hay casos especiales. Algunas instituciones solicitan que el certificado tenga una firma digital (PFDR). Es posible tramitar este tipo de firma solicitándolo luego de aprobado el curso, respondiendo al mencionado Depto. el mail en el que les envian el certificado adjuntando una carta indicando que se requiere la firma digital para avalar el curso firmada digitalmente por la institución que lo solicita. Otras instituciones solicitan que el certificado tenga la firma del decano, del rector o del presidente de la nación, o que la nota esté en una escala especial diferente a la que usamos (del 1 al 10), o que el fondo tenga filigranas. Se trata de un curso masivo y gratuito y no contamos con los recursos para tratar estos casos especiales de ninguna manera.
+
 
 ## Cronograma
-El curso con exámenes parciales incluidos se va a desarrollar entre el miércoles 10 de marzo y el miércoles 23 de junio del 2021. 
+El curso con exámenes parciales incluidos se va a desarrollar entre el 04 de agosto y el 24 de noviembre del 2021. 
 
 Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso).
 
@@ -116,4 +125,4 @@ Otros links importantes antes de comenzar a leer las notas:
 * [Instalación de Python](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso)
 * [Documentación, foros, grupo de consultas](./Slack.md#grupo-de-slack---información-y-consultas)
 
-[Contenidos](Contenidos.md#curso-de-programación-en-python)
+[Contenidos del curso](Contenidos.md#curso-de-programación-en-python)

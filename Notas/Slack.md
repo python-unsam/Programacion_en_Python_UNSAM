@@ -1,6 +1,6 @@
 # Grupo de Slack - Información y Consultas
 
-La forma de recibir información y hacer consultas en este curso es por medio del [grupo de mensajería Slack](https://join.slack.com/t/python-unsam-2021c1/shared_invite/zt-mgpaq6fb-7UxVugBXjNc8YfWA_xJi1g).
+La forma de recibir información y hacer consultas en este curso es por medio del grupo de mensajería Slack.
 
 Por favor, no nos manden correos a <python@unsam.edu.ar>. Esa casilla la usamos solamente para enviar información pero no la leemos.
 
@@ -10,9 +10,9 @@ Las consultas más importantes serán respondidas en la clase del miércoles sig
 
 ## Uso responsable del slack
 
-El slack en su versión gratuita tiene un límite de 10k mensajes y luego comienza a borrar los más viejos. Es por eso que les pedimos que sean particularmente responsables con lo que envían. Un mensaje con un solo emoji puede borrar un mensaje anterior con una resolución de un ejercicio. Usemos el slack libremente para preguntar y responder sobre el curso pero evitemos los mensajes superfluos o de otros temas. Traten de no escribir muchos mensajes cortos para hacer o responder una consulta, sino un mensaje con todo lo que tengan para decir sobre ese tema.
+El slack en su versión gratuita tiene un límite de 10k mensajes y luego comienza a borrar los más viejos. Es por eso que les pedimos que sean particularmente responsables con lo que envían. Un mensaje con un solo emoji puede borrar un mensaje anterior con una resolución de un ejercicio. Usemos el slack libremente para preguntar y responder sobre el curso pero evitemos los mensajes superfluos o de otros temas. Traten de no escribir muchos mensajes cortos para hacer o responder una consulta, sino un mensaje con todo lo que tengan para decir sobre ese tema. Tengan en cuenta que los mensajes se pueden editar y corregir en slack (así que pueden agregar mas info a un mensaje ya enviado).
 
-Fomentamos también la creación de grupos de consultas entre estudiantes para despejar las dudas más comunes (WhatsApp, Discord, Telegram, etc).
+Fomentamos también la creación de grupos _reducidos_ de consultas entre estudiantes para despejar las dudas más comunes (WhatsApp, Discord, Telegram, etc).
 
 Ante una duda, el orden que sugerimos es el siguiente:
 1. tratar de despejarla usando las notas del curso,
@@ -25,9 +25,9 @@ En particular, aprender a preguntar en los foros es una parte fundamental de apr
 
 ## Clases de consulta de los miércoles
 
-Todos los miércoles por la tarde daremos clase. Cuando una pregunta quede sin respuesta en el slack o nos parezca interesante profundizar en el tema lo tomaremos para desarrolar al comienzo de la clase siguiente. 
+El material del curso está principalmente escrito en el repositorio, con algunos punteros a videos en youtube que complementan los textos. 
 
-Las clases comenzarán con un cierre del tema anterior y la realización de algún ejercicio que merezca una aclaración. Luego daremos una introducción a los temas de la semana siguiente.
+Además, todos los miércoles por la tarde daremos una clase de consultas. Cuando una pregunta quede sin respuesta en el slack o nos parezca interesante profundizar en el tema lo tomaremos para desarrolar durante la clase siguiente. 
 
 # Documentación y foros
 
