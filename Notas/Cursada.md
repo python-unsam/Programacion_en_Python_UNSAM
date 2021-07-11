@@ -12,7 +12,7 @@ Para hacer este curso solo hace falta tener instalado el Python 3.6 o uno más n
 ## Dedicación y duración
 Este es un curso cuatrimestral de grado y posgrado que se cursa principalmente de manera asincrónica. Las clases las tendrán que leer de los apuntes que se van a encontrar aquí mismo, en el repositorio de la materia. También encontrarán aquí punteros a videos que continen explicaciones que profundizan o complementan los temas. Los apuntes contienen también ejercicios que tendrán que entregar semanalmente. 
 
-Hay también un [grupo de consultas](./Slack.md#grupo-de-slack---información-y-consultas)  y debates entre estudiantes en tiempo real que es una parte fundamental del curso. Tendremos también encuentros semanales on-line para consultas y profundización de los temas.
+Hay también un grupo de consultas y debates entre estudiantes en tiempo real que es una parte fundamental del curso. Tendremos también encuentros semanales on-line para consultas y profundización de los temas.
 
 Por nuestra experiencia previa, el curso demanda unas 15 horas (+/- 5hs) semanales de dedicación durante los cuatro meses. Algunes los completan usando menos de 6hs semanales, otres llegan a necesitar 25.
 
@@ -36,7 +36,7 @@ Los clases deben ser hechas en forma secuencial, comenzando con la primera. Los 
 
 ## Clases
 
-Las clases tendrán una componente asincrónica y otra sincrónica.
+Las clases tendrán una componente asincrónica y otra sincrónica. El curso con exámenes parciales incluidos se va a desarrollar entre el 4 de agosto y el 24 de noviembre del 2021. 
 
 El contenido será dictado principalmente de forma asincrónica, por medio de apuntes, guías de ejercicios de entrega semanal y a través de una plataforma de consultas.
 
@@ -44,7 +44,7 @@ La parte sincrónica durará unas dos horas semanales y tendrá lugar los miérc
 
 Habrá también un grupo de discusión y consultas en [Slack](./Slack.md#grupo-de-slack---información-y-consultas) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios. Será nuestro canal de comunicación. Por favor, súmense.
 
-Cada miércoles antes de las 14hs les enviaremos por el grupo de Slack el link para sumarse a la videoconferencia o streaming de la clase e indicaciones sobre el material. Las clases quedan grabadas de forma que si no pueden participar en el momento tienen la opción de verlas luego. 
+Cada miércoles antes de las 14hs les enviaremos por el grupo de Slack el link para sumarse a la videoconferencia o streaming de la clase e indicaciones sobre el material. Las clases quedan grabadas de forma que si no pueden participar en el momento tienen la opción de verlas luego.
 
 
 ## Ejercicios, exámenes y aprobación
@@ -62,67 +62,9 @@ La materia es oficialmente de grado y posgrado y, en caso de aprobación, les en
 
 Les estudiantes de la ECyT (grado y posgrado) deben inscribirse también en el SIU guaraní y la nota se les pasará por ese sistema. Para estudiantes externos a la ECyT (grado y posgrado), el certificado de aprobación de la materia lo entrega el Depto. de Servicios Académicos de la ECyT, en formato PDF. Se trata de un PDF con los datos de le estudiante y de la materia (nombre, nota, docentes, carga horaria y si es de posgrado lo aclara) firmado por la coordinadora del Depto antes mencionado. Este certificado lo aceptan casi todas las universidades. Sin embargo, hay casos especiales. Algunas instituciones solicitan que el certificado tenga una firma digital (PFDR). Es posible tramitar este tipo de firma solicitándolo luego de aprobado el curso, respondiendo al mencionado Depto. el mail en el que les envian el certificado adjuntando una carta indicando que se requiere la firma digital para avalar el curso firmada digitalmente por la institución que lo solicita. Otras instituciones solicitan que el certificado tenga la firma del decano, del rector o del presidente de la nación, o que la nota esté en una escala especial diferente a la que usamos (del 1 al 10), o que el fondo tenga filigranas. Se trata de un curso masivo y gratuito y no contamos con los recursos para tratar estos casos especiales de ninguna manera.
 
-
-## Cronograma
-El curso con exámenes parciales incluidos se va a desarrollar entre el 04 de agosto y el 24 de noviembre del 2021. 
-
-Antes de comenzar el curso, asegurate de tener todo lo necesario en tu computadora como se describe [acá](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso).
-
 ## Identificación
 La dirección de email de inscripción al curso es la que te va a identificar a lo largo del mismo. Si usás más de una dirección tené cuidado de no confundirlas ya que no registraremos adecuadamente tus entregas. ¡Esto es muy importante!
 
 ## Plagio
 Por favor, leé el [código de honor](./Codigo.md#código) del curso en el que hablamos de las reglas que rigen en este curso para evitar el plagio así como otros aspectos importantes sobre qué se puede compartir y qué no.
 
-
-## PEP 20 - Simple es mejor que complejo
-
-El siguiente texto de Tim Peters se conoce como **El zen de Python** y explica algo de su filosofía.
-
-> Bello es mejor que feo.
->
-> Explícito es mejor que implícito.
->
-> Simple es mejor que complejo.
->
-> Complejo es mejor que complicado.
->
-> Plano es mejor que anidado.
->
-> Espaciado es mejor que denso.
->
-> La legibilidad es importante.
->
-> Los casos especiales no son lo suficientemente especiales como para romper
-> las reglas.
->
-> Sin embargo la practicidad le gana a la pureza.
->
-> Los errores nunca deberían pasar silenciosamente.
->
-> A menos que se silencien explícitamente.
->
-> Frente a la ambigüedad, evitar la tentación de adivinar.
->
-> Debería haber una, y preferiblemente solo una, manera obvia de hacerlo.
->
-> A pesar de que esa manera no sea obvia a menos que seas Holandés.
->
-> Ahora es mejor que nunca.
->
-> A pesar de que nunca es muchas veces mejor que *ahora mismo*.
->
-> Si la implementación es difícil de explicar, es una mala idea.
->
-> Si la implementación es fácil de explicar, puede que sea una buena idea.
->
-> Los espacios de nombres son una gran idea, ¡tengamos más de esos!
-
-
-# Más info
-
-Otros links importantes antes de comenzar a leer las notas:
-* [Instalación de Python](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso)
-* [Documentación, foros, grupo de consultas](./Slack.md#grupo-de-slack---información-y-consultas)
-
-[Contenidos del curso](Contenidos.md#curso-de-programación-en-python)

@@ -23,7 +23,3 @@ El intérprete de Python puede descargarse de [Python.org](https://www.python.or
 Luego les propondremos usar el [Spyder](https://www.spyder-ide.org/) como entorno de desarrollo.  Spyder es un entorno de desarrollo de Python diseñado para científiques, ingenieres y analistas de datos (para les que usen R, el Spyder es al Python como el R-Studio al R).
 
 Una posiblidad es descargarse el [Anaconda](https://www.anaconda.com/products/individual) que es un distribución libre y abierta​ de los lenguajes Python y R, utilizada en ciencia de datos, y aprendizaje automático. La ventaja de esta descarga es que ya trae el Python, el Spyder y una serie de módulos preinstalados para trabajar con datos y aprendizaje automático.
-
-## Más info
-
-* [Documentación, foros, grupo de consultas](./Slack.md)

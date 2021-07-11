@@ -39,9 +39,11 @@ Finalmente, queremos agradecer muy especialmente el apoyo de Manuela Cerdeiro y 
 ## Escritura en desarrollo. ¡Bienvenidas las correcciones!
 Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que las escribamos, primero en versiones preliminares, luego en versiones más pulidas. Si se adelantan al ritmo *oficial*, es probable que encuentren versiones con más errores. En cualquier caso, les agradeceremos que nos señalen errores, omisiones o mejoras posibles por el grupo de Slack en el Canal de `errores_y_sugerencias`.
 
+## Más info antes de comenzar:
+Por favor, leé las condiciones de cursada, la info sobre el uso del Slack e instalate el python como se indica a continuación.
+* [Condiciones de cursada](./Cursada.md#condiciones-de-cursada)
+* [Uso de la plataforma Slack](https://github.com/python-unsam/Programacion_en_Python_UNSAM/blob/master/Notas/Slack.md#grupo-de-slack---informaci%C3%B3n-y-consultas)
+* [Instalación de Python](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso)
+
 ## El curso
 En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md#curso-de-programación-en-python)!
-
-Otros links importantes antes de comenzar a leer las notas:
-* [Condiciones de cursada](./Cursada.md#condiciones-de-cursada)
-* [Instalación de Python](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso)
