@@ -21,8 +21,3 @@ Este es un curso que se estará dictando en la [UNSAM](https://www.unsam.edu.ar/
 Ver las [condiciones de cursada](Cursada.md) 
 
 [Inicio](README.md) 
-
-
-
-
-https://forms.gle/fcvwo5yPDsbbDeVA9
