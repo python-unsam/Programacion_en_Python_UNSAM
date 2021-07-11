@@ -22,3 +22,7 @@ Ver las [condiciones de cursada](Cursada.md)
 
 [Inicio](README.md) 
 
+
+
+
+https://forms.gle/fcvwo5yPDsbbDeVA9
