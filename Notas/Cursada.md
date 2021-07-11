@@ -26,7 +26,7 @@ Este curso lo dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.a
 El curso está a cargo de dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
 Dr. en Computación y trabaja en temas ambientales; [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
-Dr. en Química y trabaja en neurofisiología. También contamos con una JTP (Manuela Cerdiero) y dos ayudantes (Iván Pedrón y Daniela Alban). Además, contamos con [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) como profesor invitado, y con José Crespo y José Clemente, como docentes invitados. 
+Dr. en Química y trabaja en neurofisiología. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado, y José Crespo y José Clemente, docentes invitados. 
 
 
 ## Contenidos, enfoque y organización de los temas
@@ -42,7 +42,7 @@ El contenido será dictado principalmente de forma asincrónica, por medio de ap
 
 La parte sincrónica durará unas dos horas semanales y tendrá lugar los miércoles a las 14hs por videoconferencia / streaming. En estas clases presenciales discutiremos los ejercicios de la semana anterior y presentaremos brevemente los temas de la semana siguiente.
 
-Habrá también un grupo de discusión y consultas en [Slack](./Slack.md#grupo-de-slack---información-y-consultas) para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios. Será nuestro canal de comunicación. Por favor, súmense.
+Habrá también un grupo de discusión y consultas en Slack para que puedan hacer preguntas y discutir ideas o soluciones a los ejercicios. Será nuestro canal de comunicación. Por favor, súmense.
 
 Cada miércoles antes de las 14hs les enviaremos por el grupo de Slack el link para sumarse a la videoconferencia o streaming de la clase e indicaciones sobre el material. Las clases quedan grabadas de forma que si no pueden participar en el momento tienen la opción de verlas luego.
 
