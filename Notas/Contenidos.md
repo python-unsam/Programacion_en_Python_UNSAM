@@ -16,9 +16,5 @@
 * [12. Ordenamiento](12_Ordenamiento/00_Resumen.md)
 
 
-Este es un curso que se estará dictando en la [UNSAM](https://www.unsam.edu.ar/) en el marco del proyecto [IAI](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/).
-
-Ver las [condiciones de cursada](Cursada.md) 
-
 [Inicio](README.md) 
 
