@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Trabajando con datos)](../03_Datos/00_Resumen.md) \| [Próximo (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md)
-
 # 4. Algoritmos sobre listas y comprensión de listas
 En esta clase introducimos el debugger y les proponemos una serie de ejercicios donde tienen que escribir algoritmos que operen sobre listas. Luego introducimos la _comprensión de listas_, un concepto muy hermoso y pythonesco. Cerramos la clase con una discusión sobre el concepto de objeto que subyace al lenguaje y algunos ejercicios para repasar estos conceptos usando el dataset de la clase pasada.
 
@@ -11,6 +9,3 @@ En esta clase introducimos el debugger y les proponemos una serie de ejercicios 
 * [4.4 Objetos](04_Objetos.md)
 * [4.5 Arbolado porteño y comprensión de listas](05_Arboles2_LC.md)
 * [4.6 Cierre de la clase](06_Cierre.md)
-
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Trabajando con datos)](../03_Datos/00_Resumen.md) \| [Próximo (5 Aleatoridad)](../05_Random_Plt_Dbg/00_Resumen.md)

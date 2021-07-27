@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Series temporales)](06_Series_Temporales.md)
-
 # 8.5 Introducción a Pandas
 
 La  biblioteca Pandas es una extensión de NumPy para manipulación y análisis de datos. En particular, ofrece estructuras de datos y operaciones para manipular tablas de datos (numéricos y de otros tipos) y series temporales. Se distribuye como software libre.
@@ -450,6 +448,4 @@ En este ejercicio te proponemos los siguientes pasos para comparar los diámetro
 7. ¿Qué tendrías que cambiar para repetir el análisis para otras especies? ¿Convendría definir una función?
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Ordenar archivos en Python)](04_Ordenando_archivos.md) \| [Próximo (6 Series temporales)](06_Series_Temporales.md)
 

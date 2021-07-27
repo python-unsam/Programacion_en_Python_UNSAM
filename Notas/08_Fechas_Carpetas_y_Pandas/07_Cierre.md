@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Series temporales)](06_Series_Temporales.md)
-
 # 8.7 Cierre de la clase
 
 Para cerrar esta clase te pedimos dos cosas:
@@ -24,6 +22,4 @@ La corrección de pares de esta semana será con el archivo `arbolado_parques_ve
 
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (6 Series temporales)](06_Series_Temporales.md)
 

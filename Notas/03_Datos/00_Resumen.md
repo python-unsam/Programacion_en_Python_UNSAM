@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Estructuras y funciones)](../02_Estructuras_y_Funciones/00_Resumen.md) \| [Próximo (4 Algoritmos sobre listas y comprensión de listas)](../04_Listas_y_Listas/00_Resumen.md)
-
 # 3. Trabajando con datos
 En esta clase discutimos los tipos de errores que pueden aparecer en un programa (bugs) e introducimos algunas técnicas primitivas para buscarlos.
 
@@ -16,6 +14,3 @@ Recordá que, aunque no termines todos, completar el formulario del final de cad
 * [3.5 Impresión con formato](05_Formato.md)
 * [3.6 Arbolado porteño](06_Arboles1.md)
 * [3.7 Cierre de la clase](07_CierreClase.md)
-
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 Estructuras y funciones)](../02_Estructuras_y_Funciones/00_Resumen.md) \| [Próximo (4 Algoritmos sobre listas y comprensión de listas)](../04_Listas_y_Listas/00_Resumen.md)

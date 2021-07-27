@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
-
 # 4.1 Debuggear programas
 
 Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
@@ -200,6 +198,4 @@ pprint(camion)
 Observá en particular lo que ocurre al leer la segunda fila de datos del archivo y guardarlos en la variable `registro` con los datos ya guardados en la lista `camion`.
 
 ### Más ejercitacion con el debugger?
-
-[Contenidos](../Contenidos.md) \| [Próximo (2 Listas y búsqueda lineal)](02_IteradoresLista.md)
 

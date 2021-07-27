@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Diseño de algoritmos recursivos)](03_Diseno_Recursivo.md)
-
 # 11.2 Intro a la Recursión
 
 Para esta sección y las dos siguientes hay un [video](https://youtu.be/C0o-KuY-BNs) donde introducimos el tema de recursión y vemos algunos ejemplos.
@@ -317,6 +315,4 @@ iteraciones.
 _En resumen_: vimos que un algoritmo recursivo **no** es necesariamente mejor que uno iterativo, ni viceversa. En cada situación es conveniente analizar cuál algoritmo provee una solución más clara y eficiente. 
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Diseño de algoritmos recursivos)](03_Diseno_Recursivo.md)
 

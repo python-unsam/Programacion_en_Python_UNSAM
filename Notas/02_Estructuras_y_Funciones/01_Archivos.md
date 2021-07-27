@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_Funciones.md)
-
 # 2.1 Manejo de archivos
 
 La mayoría de los programas usa alguna fuente de datos. En esta sección discutimos el acceso a archivos.
@@ -237,6 +235,4 @@ Es frecuente que les estudiantes que conocen un poco más de Python rápidamente
 
 
 
-
-[Contenidos](../Contenidos.md) \| [Próximo (2 Funciones)](02_Funciones.md)
 

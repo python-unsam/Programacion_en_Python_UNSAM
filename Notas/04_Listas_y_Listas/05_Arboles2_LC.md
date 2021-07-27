@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](04_Objetos.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
-
 # 4.5 Arbolado porteño y comprensión de listas
 
 Seguimos aquí con el arbolado porteño. Vamos a plantear algunos ejercicios para hacer con la técnica de comprensión de listas introducida recientemente.
@@ -56,6 +54,4 @@ Vamos a usar esta función la semana próxima. A modo de control, si llamás a l
 Acordate de guardar los ejercicios de esta sección en el archivo `arboles.py`.
 
 _Extra: casi todes usan un `for` para crear este diccionario. ¿Lo podés hacer usando una **comprensión de diccionarios**? Te recordamos la sintaxis: `diccionario = { clave: valor for clave in claves }`_
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Objetos)](04_Objetos.md) \| [Próximo (6 Cierre de la clase)](06_Cierre.md)
 

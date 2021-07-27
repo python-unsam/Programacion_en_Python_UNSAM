@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Números)](03_Numeros.md) \| [Próximo (5 Listas)](05_Listas.md)
-
 # 1.4 Cadenas
 
 En esta sección veremos cómo trabajar con textos.
@@ -413,6 +411,4 @@ upper(...)
 >>>
 ```
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Números)](03_Numeros.md) \| [Próximo (5 Listas)](05_Listas.md)
 

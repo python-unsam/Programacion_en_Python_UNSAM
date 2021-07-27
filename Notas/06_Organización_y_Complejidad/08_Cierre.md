@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 Gráficos de complejidad)](07_gráficos_de_complejidad.md)
-
 # 6.8 Cierre de la clase
 
 En esta clase trabajamos con funciones y creamos módulos. También aprendimos algunas nociones de complejidad de algoritmos, estudiamos la búsqueda binaria y  comparamos su performance con la de la búsqueda secuencial..
@@ -18,6 +16,4 @@ Para cerrar esta clase te pedimos dos cosas:
 ¡Gracias! 
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (7 Gráficos de complejidad)](07_gráficos_de_complejidad.md)
 

@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Algoritmos sobre listas y comprensión de listas)](../04_Listas_y_Listas/00_Resumen.md) \| [Próximo (6 Complejidad y Organización de programas)](../06_Organización_y_Complejidad/00_Resumen.md)
-
 # 5. Aleatoridad
 En esta clase introducimos conceptos y técnicas relacionadas al azar. La aleatoriedad puede ser un gran aliado para realizar cálculos de fenómenos estocásticos pero también de fenómenos deterministas.
 Introducimos los números pseudoaleatorios, así como el módulo `numpy` y sus métodos más sencillos.
@@ -18,6 +16,3 @@ A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Ce
 * [5.3 El album de Figuritas](03_Figuritas.md)
 * [5.4 Gráficos del Arbolado porteño](04_Arboles3_plt.md)
 * [5.5 Cierre de la clase](05_Cierre.md)
-
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Algoritmos sobre listas y comprensión de listas)](../04_Listas_y_Listas/00_Resumen.md) \| [Próximo (6 Complejidad y Organización de programas)](../06_Organización_y_Complejidad/00_Resumen.md)

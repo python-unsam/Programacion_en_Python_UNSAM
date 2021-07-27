@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Random)](01_Random.md) \| [Próximo (3 El album de Figuritas)](03_Figuritas.md)
-
 # 5.2 NumPy
 
 Esta es una introducción a la biblioteca NumPy (**Numerical Python**) de Python. Se trata de una colección de módulos de código abierto que tiene aplicaciones en casi todos los campos de las ciencias y de la ingeniería. Es el estándar para trabajar con datos numéricos en Python. Muchas otras bibliotecas y módulos de Python como Pandas, SciPy, Matplotlib, scikit-learn, scikit-image usan numpy.
@@ -848,6 +846,4 @@ plt.show() #el show no hace falta en algunos entornos. A veces lo omitiremos.
 
 Ajustá la cantidad de _bins_ para que el gráfico se vea lo mejor posible.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Random)](01_Random.md) \| [Próximo (3 El album de Figuritas)](03_Figuritas.md)
 

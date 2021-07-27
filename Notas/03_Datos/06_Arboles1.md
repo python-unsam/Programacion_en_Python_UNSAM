@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la clase)](07_CierreClase.md)
-
 # 3.6 Arbolado porteño
 
 En esta sección haremos algunos ejercicios que integran los conceptos aprendidos en las clases anteriores. Vamos a manejar archivos, diccionarios, listas, contadores y el comando `zip`, entre otras cosas. Entregá lo que puedas hacer. 
@@ -103,6 +101,4 @@ Volvé a combinar las funciones anteriores para escribir la función `especie_pr
 **Preguntas extras:** ¿Qué habría que cambiar para obtener la especie con un ejemplar más inclinado de toda la ciudad y no solo de un parque? ¿Podrías dar la latitud y longitud de ese ejemplar? ¿Y dónde se encuentra (lat,lon) el ejemplar más alto? ¿De qué especie es?
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (5 Impresión con formato)](05_Formato.md) \| [Próximo (7 Cierre de la clase)](07_CierreClase.md)
 

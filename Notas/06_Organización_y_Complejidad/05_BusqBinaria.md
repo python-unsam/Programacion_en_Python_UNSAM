@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Módulos)](04_Modulos.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
-
 # 6.5 Búsqueda binaria
 
 Hace un par de clases vimos la búsqueda secuencial de un elemento en una lista.
@@ -194,6 +192,4 @@ Por ejemplo: el elemento `3` podría insertarse en la posición 2 en la lista `[
 Guarda tu modificación en un archivo `bbin.py`.
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Módulos)](04_Modulos.md) \| [Próximo (6 Complejidad de algoritmos)](06_Complejidad.md)
 

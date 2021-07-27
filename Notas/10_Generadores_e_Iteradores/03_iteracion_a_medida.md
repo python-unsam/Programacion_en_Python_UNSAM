@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 El protocolo de iteración)](02_protocolo_Iteracion.md) \| [Próximo (4 Productores, consumidores y cañerías.)](04_Producers_consumers.md)
-
 # 10.3 Iteración a medida
 
 En esta sección introducimos el concepto de función generadora. Estas funciones te permiten obtener el iterador que necesites.
@@ -248,6 +246,4 @@ if __name__ == '__main__':
 
 Lo que acaba de suceder es algo con mucho potencial: moviste tu patrón de iteración (el que toma las últimas líneas de un archivo) y lo pusiste en su propia función. La función `vigilar()` ahora es una función de uso amplio, que podés usar en cualquier programa. Por ejemplo, la podrías usar para mirar el log (historial) de un servidor ó de un debugger, o de otras fuentes continuas de datos. ¿No está bueno?
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 El protocolo de iteración)](02_protocolo_Iteracion.md) \| [Próximo (4 Productores, consumidores y cañerías.)](04_Producers_consumers.md)
 

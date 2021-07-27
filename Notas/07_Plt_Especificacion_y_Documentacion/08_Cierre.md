@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (7 La biblioteca matplotlib)](07_Matplotlib.md)
-
 # 7.8 Cierre de la clase
 
 En esta clase vimos cómo se hace una administración eficiente de errores, cómo atrapar excepciones, cómo lanzarlas, y cuándo conviene hacer o no hacer estas cosas.
@@ -23,6 +21,4 @@ Para cerrar esta clase te pedimos dos cosas:
 ¡Gracias! 
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (7 La biblioteca matplotlib)](07_Matplotlib.md)
 

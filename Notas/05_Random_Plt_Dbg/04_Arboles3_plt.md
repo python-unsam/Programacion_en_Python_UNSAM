@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas)](03_Figuritas.md) \| [Próximo (5 Cierre de la clase)](05_Cierre.md)
-
 # 5.4 Gráficos del Arbolado porteño
 
 ## Ploteando datos reales
@@ -79,6 +77,4 @@ Acordate siempre de ponerle título a las figuras y nombres y unidades a los eje
 
 _Extra:_ ¿podés hacer un solo gráfico que muestre dos de estas tres especies en diferentes colores y resulte claro? ¿Y las tres especies?
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 El album de Figuritas)](03_Figuritas.md) \| [Próximo (5 Cierre de la clase)](05_Cierre.md)
 

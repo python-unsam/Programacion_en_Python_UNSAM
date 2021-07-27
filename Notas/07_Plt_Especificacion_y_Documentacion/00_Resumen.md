@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad y Organización de programas)](../06_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (8 Fechas, Carpetas y Pandas)](../08_Fechas_Carpetas_y_Pandas/00_Resumen.md)
-
 # 7. Diseño, especificación, documentación y estilo.
 En este curso queremos que aprendas a escribir un script que te resuelva un problema computacional. Pero también queremos que puedas escribir adecuadamente programas más grandes, que los puedas compartir y volver a usar vos misme unos años más tarde.
 
@@ -23,6 +21,3 @@ Finalmente, daremos un poco más sistemáticamente algunos conceptos de la bibli
 * [7.6 Estilos de codeo](06_Estilo.md)
 * [7.7 La biblioteca matplotlib](07_Matplotlib.md)
 * [7.8 Cierre de la clase](08_Cierre.md)
-
-
-[Contenidos](../Contenidos.md) \| [Anterior (6 Complejidad y Organización de programas)](../06_Organización_y_Complejidad/00_Resumen.md) \| [Próximo (8 Fechas, Carpetas y Pandas)](../08_Fechas_Carpetas_y_Pandas/00_Resumen.md)

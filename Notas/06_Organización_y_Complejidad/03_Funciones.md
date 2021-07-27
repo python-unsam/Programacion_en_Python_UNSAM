@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Scripting)](02_Scripts.md) \| [Próximo (4 Módulos)](04_Modulos.md)
-
 # 6.3 Funciones
 
 Aunque ya hablamos sobre funciones, dimos pocos detalles sobre su funcionamiento a un nivel algo más profundo. En esta sección esperamos completar algunos conceptos como convenciones de uso, alcance (*scope*) y otros temas.  
@@ -452,6 +450,4 @@ Incorporá todos estos cambios en el archivo `fileparse.py`.
 Llegaste lejos. Hasta este punto creaste una biblioteca de funciones que es genuinamente útil. La podés usar para parsear archivos CSV de formato arbitrario, eligiendo las columnas relevantes y cambiando el tipo de datos devuelto, todo esto sin tener que preocuparte mucho por el manejo de archivos o entender cómo funciona el módulo `csv`.  
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 Scripting)](02_Scripts.md) \| [Próximo (4 Módulos)](04_Modulos.md)
 

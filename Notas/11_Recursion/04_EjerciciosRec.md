@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Diseño de algoritmos recursivos)](03_Diseno_Recursivo.md) \| [Próximo (5 Regresión lineal)](05_Regresion_Lineal.md)
-
 # 11.4 Práctica de Recursión
 
 ## Ejercicios
@@ -164,6 +162,4 @@ hoja A0 como caso base.
 
 Guardala en el archivo `hojas_ISO.py`.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Diseño de algoritmos recursivos)](03_Diseno_Recursivo.md) \| [Próximo (5 Regresión lineal)](05_Regresion_Lineal.md)
 

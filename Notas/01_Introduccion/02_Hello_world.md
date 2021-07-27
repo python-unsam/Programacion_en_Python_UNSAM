@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Python)](01_Python.md) \| [Próximo (3 Números)](03_Numeros.md)
-
 # 1.2 Un primer programa
 
 En esta sección vas a crear tu primer programa en Python, ejecutarlo y debuguearlo.
@@ -445,6 +443,4 @@ Tu programa debería generar una tabla que se parezca a esta:
 Escribí un programa llamado `saludo.py` que pregunte el nombre de le usuarie, imprima un saludo (por ejemplo, "Hola, Juana") y termine.
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Python)](01_Python.md) \| [Próximo (3 Números)](03_Numeros.md)
 

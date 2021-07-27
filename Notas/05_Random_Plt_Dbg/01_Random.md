@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 NumPy)](02_NumPy_Arrays.md)
-
 # 5.1 Random
 
 En esta sección veremos algunas de las funciones del módulo `random`. Este módulo se usa para generar valores pseudo-aleatorios. Desde el punto de vista práctico, usaremos estos valores como perfectamente aleatorios --al ser la computadora una máquina determinística sabemos que esto no es completamente cierto. De hecho, en lo que sigue, por simplicidad, omitiremos el prefijo pseudo y hablaremos de números aleatorios aunque no lo sean exactamente.
@@ -194,6 +192,4 @@ Imprimí los valores obtenidos en las mediciones de temperatura simuladas y lueg
 _Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de Python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles](https://es.wikipedia.org/wiki/Cuartil)?_
 
 
-
-[Contenidos](../Contenidos.md) \| [Próximo (2 NumPy)](02_NumPy_Arrays.md)
 

@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 El módulo principal)](03_Modulo_principal.md) \| [Próximo (5 Contratos: Especificación y Documentación)](05_Especificacion_y_Documentacion.md)
-
 # 7.4 Cuestiones de diseño
 
 En esta breve sección, volvemos a discutir algunas decisiones de diseño que tomamos antes.
@@ -136,6 +134,4 @@ Arreglá las funciones `leer_camion()` y `leer_precios()` en el archivo `informe
 
 Por ahora dejamos estos archivos y pasamos a otras discusiones. Dejá estos archivos listos para entregar al final de la clase. 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 El módulo principal)](03_Modulo_principal.md) \| [Próximo (5 Contratos: Especificación y Documentación)](05_Especificacion_y_Documentacion.md)
 

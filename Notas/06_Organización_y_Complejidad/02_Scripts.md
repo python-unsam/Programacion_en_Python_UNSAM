@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
-
 # 6.2 Scripting
 
 En esta sección profundizaremos en el proceso de crear scripts en Python. Esta y las próximas secciones tienen un [video](https://youtu.be/spjiuud3dQ4) asociado que podés ver antes de leer este texto.
@@ -277,6 +275,4 @@ En Python es muy fácil escribir código en forma de un script relativamente poc
 
 En algún momento, si ese script crece, vas a desear haber sido un poco más organizado desde el comienzo. Tratá de organizar tu código en funciones simples. Es un buen principio es que cada función haga una sola cosa sencilla y concreta, que tenga una sola responsabilidad.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Repaso de temas pasados)](01_Repaso.md) \| [Próximo (3 Funciones)](03_Funciones.md)
 

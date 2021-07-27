@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Búsqueda binaria)](05_BusqBinaria.md) \| [Próximo (7 Gráficos de complejidad)](07_gráficos_de_complejidad.md)
-
 # 6.6 Complejidad de algoritmos
 
 ### Resumen de algoritmos de Búsqueda
@@ -113,6 +111,4 @@ Por último, escribí una funcion `listar_secuencias(n)` que devuelva una lista 
 
 ¿Te parece que `listar_secuencias(n)` es una función lineal, cuadrática, logarítmica o exponencial en `n`? ¿Por qué?
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (5 Búsqueda binaria)](05_BusqBinaria.md) \| [Próximo (7 Gráficos de complejidad)](07_gráficos_de_complejidad.md)
 

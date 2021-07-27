@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Contratos: Especificación y Documentación)](05_Especificacion_y_Documentacion.md) \| [Próximo (7 La biblioteca matplotlib)](07_Matplotlib.md)
-
 # 7.6 Estilos de codeo
 
 ## PEP 8 - La guía de estilo para Python
@@ -231,6 +229,4 @@ El Zen de Python es una colección de principios de software que influyen en el 
 >Los espacios de nombres son una gran idea, ¡hagamos más de ellos!
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (5 Contratos: Especificación y Documentación)](05_Especificacion_y_Documentacion.md) \| [Próximo (7 La biblioteca matplotlib)](07_Matplotlib.md)
 

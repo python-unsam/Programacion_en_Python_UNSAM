@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Práctica de Recursión)](04_EjerciciosRec.md) \| [Próximo (6 Cierre de la clase de Recursión y Regresión)](06_Cierre.md)
-
 # 11.5 Regresión lineal
 
 En esta sección vamos a trabajar con **regresión lineal**, tema que introducimos en [este video](https://youtu.be/8tKruBXMDZY). No es una clase con todos los fundamentos del tema, sino un acercamiento práctico a las técnicas y sus formas de uso en Python. Para un desarrollo más profundo te recomendamos por ejemplo las notas de [Andrew Ng](http://cs229.stanford.edu/notes2020spring/cs229-notes1.pdf).
@@ -469,6 +467,4 @@ En este caso contamos con una gran cantidad de datos y podemos aplicar de todas 
 
 *Observación*: Nos quedaron afuera de esta clase temas importantes como sobreajuste (_Overfitting_), partición de los datos en conjuntos de entrenamiento y evaluación, validación cruzada, presencia de datos atípicos (outliers), tests de hipótesis, selección de modelos... No era nuestra idea dar estos contenidos sino mostrar un acercamiento práctico desde Python al problema de la regresión lineal.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Práctica de Recursión)](04_EjerciciosRec.md) \| [Próximo (6 Cierre de la clase de Recursión y Regresión)](06_Cierre.md)
 

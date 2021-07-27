@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](01_Bugs.md) \| [Próximo (3 Contadores del módulo _collections_)](03_Contadores.md)
-
 # 3.2 Secuencias
 
 ### Tipo de secuencias
@@ -507,6 +505,4 @@ También, tené en cuenta que `zip()` se detiene cuando la más corta de las ent
 >>>
 ```
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Errores)](01_Bugs.md) \| [Próximo (3 Contadores del módulo _collections_)](03_Contadores.md)
 

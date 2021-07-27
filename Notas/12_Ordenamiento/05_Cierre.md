@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Algoritmos de clasificación supervisada)](04_introduccion_al_AA.md)
-
 # 12.5 Cierre de la clase de Ordenamiento
 
 En la clase de hoy te pedimos que entregues los siguientes archivos:
@@ -14,6 +12,4 @@ Como de costumbre, completá por favor [el formulario](https://docs.google.com/f
 
 Gracias!
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Algoritmos de clasificación supervisada)](04_introduccion_al_AA.md)
 

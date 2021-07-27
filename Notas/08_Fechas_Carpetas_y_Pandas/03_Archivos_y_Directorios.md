@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de fechas y horas)](02_Fechas.md) \| [Próximo (4 Ordenar archivos en Python)](04_Ordenando_archivos.md)
-
 # 8.3 Manejo de archivos y carpetas
 
 Esta sección tiene un breve [video introductorio](https://youtu.be/SeaML1O8PaI) sobre el manejo de archivos y directorios desde Python.
@@ -235,6 +233,4 @@ print(time.ctime(stats_archivo.st_atime))
 
 Si mirás la información del archivo `./rebotes.py` desde tu gestor de archivos deberías ver las modificaciones.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 Manejo de fechas y horas)](02_Fechas.md) \| [Próximo (4 Ordenar archivos en Python)](04_Ordenando_archivos.md)
 

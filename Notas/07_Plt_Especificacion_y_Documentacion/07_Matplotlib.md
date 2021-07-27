@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Estilos de codeo)](06_Estilo.md) \| [Próximo (8 Cierre de la clase)](08_Cierre.md)
-
 # 7.7 La biblioteca matplotlib
 
 Matplotlib es probablemente la biblioteca de Python más usada para crear gráficos en 2D, también llamados plots. Provee una forma rápida de graficar datos en varios formatos de alta calidad que pueden ser compartidos y/o publicados. En esta sección vamos a ver los usos  más comunes de matplotlib. En [este video](https://youtu.be/c7fR1KkvKFQ) encontrarán una introducción breve a esta sección.
@@ -418,6 +416,4 @@ plt.scatter(X,Y)
 
 _Pista_: El color depende del ángulo que forma el vector (X,Y) con los ejes. Hay diversas formas de calcularlo.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (6 Estilos de codeo)](06_Estilo.md) \| [Próximo (8 Cierre de la clase)](08_Cierre.md)
 

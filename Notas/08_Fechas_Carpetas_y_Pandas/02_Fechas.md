@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Intro.md) \| [Próximo (3 Manejo de archivos y carpetas)](03_Archivos_y_Directorios.md)
-
 # 8.2 Manejo de fechas y horas
 
 Esta sección tiene un breve [video introductorio](https://youtu.be/exTngw8oOp0) sobre el módulo `datetime`.
@@ -385,6 +383,4 @@ Probala entre ese día y fin del 2020 considerando los siguientes feriados de Ar
 `feriados = ['12/10/2020', '23/11/2020', '7/12/2020', '8/12/2020', '25/12/2020']`
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Intro.md) \| [Próximo (3 Manejo de archivos y carpetas)](03_Archivos_y_Directorios.md)
 

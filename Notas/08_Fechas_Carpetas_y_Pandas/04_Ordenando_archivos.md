@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Manejo de archivos y carpetas)](03_Archivos_y_Directorios.md) \| [Próximo (5 Introducción a Pandas)](05_Pandas.md)
-
 # 8.4 Ordenar archivos en Python
 
 En esta sección vamos a integrar las últimas dos secciones con lo que veníamos viendo antes del parcial. La idea es que descomprimas [este archivo](./ordenar.zip) en tu carpeta `../Data/` y escribas un script que trabaje con estos archivos.
@@ -36,6 +34,4 @@ _Observación:_ Este tipo de tareas se repite con mucha frecuencia. Tener la cap
   * Te recomendamos que modularices el procesamiento de los archivos `png`. Podés, por ejemplo, escribir una función que manipule strings (que tome el nombre de un archivo y devuelva la fecha y el nombre corregido) y otra función que precese cada archivo (que use la función anterior para renombrar, mover y modificar la fecha de cada archivo). La modularización del código es clave para que otras personas lo puedan entender y que sea sencillo de mantener.
   * Usá docstrings y comentarios en tu código de manera que sea legible.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Manejo de archivos y carpetas)](03_Archivos_y_Directorios.md) \| [Próximo (5 Introducción a Pandas)](05_Pandas.md)
 

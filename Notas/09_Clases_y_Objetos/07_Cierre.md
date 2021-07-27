@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Teledetección)](06_Teledeteccion.md)
-
 # 9.7 Cierre de la clase
 
 En esta clase vimos las ventajas de estructurar un programa con las ideas Programación Orientada a Objetos. Vimos cómo podés definir tus propias clases y te mostramos cómo este paradigma puede aportar tanto a la organización de un programa "estático" como también para preparar programas para que sean fácilmente extensibles. 
@@ -22,6 +20,4 @@ Además te pedimos que completes [este formulario](https://docs.google.com/forms
 
 ¡Nos vemos!
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (6 Teledetección)](06_Teledeteccion.md)
 

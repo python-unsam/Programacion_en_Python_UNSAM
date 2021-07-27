@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Intro.md) \| [Próximo (3 Herencia)](03_Herencia.md)
-
 # 9.2 Clases
 
 Esta sección tiene un [video](https://youtu.be/h7X8rrW8JLo) donde introducimos las clases, damos algunos ejemplos y también introducimos el tema de la [Sección 9.4](../09_Clases_y_Objetos/04_Métodos_Especiales.md#94-métodos-especiales). En este video, y en el que veremos más adelante sobre herencia, usamos el código de [este archivo](./clase9_clases_metesp.py).
@@ -288,6 +286,4 @@ Hecho esto, deberías poder ejecutar tus funciones como antes:
    Naranja        100     $70.44      35.84
 ```
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Intro.md) \| [Próximo (3 Herencia)](03_Herencia.md)
 

@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Productores, consumidores y cañerías.)](04_Producers_consumers.md) \| [Próximo (6 Predador Presa)](06_PredadorPresa.md)
-
 # 10.5 Más sobre generadores
 
 Esta sección introduce algunos temas adicionales relacionados con generadores, entre ellas: expresiones generadoras y el módulo `itertools`
@@ -169,6 +167,4 @@ Te proponemos aquí que retomes el [Ejercicio 8.5](../08_Fechas_Carpetas_y_Panda
 
 Más aún, opcionalmente diseñá un generador que, dada la secuencia filtrada (directorios y archivos png), genere ternas consistentes de: `('viejo_dir/viejo_nombre', 'nuevo_dir/nuevo_nombre', fecha_a_setear)` de manera que pueda ser fácilmente usada por una función para completar las tareas del [Ejercicio 8.6](../08_Fechas_Carpetas_y_Pandas/04_Ordenando_archivos.md#ejercicio-86-ordenar-el-árbol-de-archivos-optativo).
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Productores, consumidores y cañerías.)](04_Producers_consumers.md) \| [Próximo (6 Predador Presa)](06_PredadorPresa.md)
 

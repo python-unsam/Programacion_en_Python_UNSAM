@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Predador Presa)](06_PredadorPresa.md)
-
 # 10.7 Cierre de la clase
 
 En esta clase aprendiste sobre generadores e iteradores, dos conceptos muy interesantes de Python. Viste que el mecanismo de iteración es una forma de dialogar con un objeto. Además, aprendiste los métodos que necesitás implementar para que un objeto que creaste sea iterable. 
@@ -22,6 +20,4 @@ Además te pedimos  que completes [este formulario](https://docs.google.com/form
 
 ¡Nos vemos!
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (6 Predador Presa)](06_PredadorPresa.md)
 

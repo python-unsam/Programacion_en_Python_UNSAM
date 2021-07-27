@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Un primer programa)](02_Hello_world.md)
-
 # 1.1 Python
 
 ### ¿Qué es Python?
@@ -96,6 +94,4 @@ Usá copy-paste para ejecutar los siguientes comandos:
 Advertencia: Cuando tenés algo como el código de arriba, no es posible copiar y pegar en el entorno básico de Python más de un comando por vez. El símbolo `>>>` lo impide.
 
 
-
-[Contenidos](../Contenidos.md) \| [Próximo (2 Un primer programa)](02_Hello_world.md)
 

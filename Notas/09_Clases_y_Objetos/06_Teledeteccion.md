@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Objetos, pilas y colas)](05_Pilas_Colas.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
-
 # 9.6 Teledetección
 
 En este [video](https://youtu.be/oQ0ce5qhJp0) introducimos el tema de esta sección.
@@ -152,6 +150,4 @@ plt.imshow(clases_ndvi, cmap=cmap, norm=norm)
 plt.show()
 ```
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (5 Objetos, pilas y colas)](05_Pilas_Colas.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 

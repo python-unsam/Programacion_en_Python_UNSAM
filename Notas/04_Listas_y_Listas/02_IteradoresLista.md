@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas)](01_Debugger.md) \| [Próximo (3 Comprensión de listas)](03_Comprension_Listas.md)
-
 # 4.2 Listas y búsqueda lineal
 
 En esta sección seguiremos usando Python, pero nos concentraremos en la parte algorítmica. Vas a escribir funciones sencillas (y no tanto) que realicen operaciones de bajo nivel sobre listas.
@@ -257,6 +255,4 @@ Por ejemplo:
 
 ![Propagación](./fosforos.jpg) Propagación análoga a la del [Ejercicio 4.6](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-46-propagación)
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Debuggear programas)](01_Debugger.md) \| [Próximo (3 Comprensión de listas)](03_Comprension_Listas.md)
 

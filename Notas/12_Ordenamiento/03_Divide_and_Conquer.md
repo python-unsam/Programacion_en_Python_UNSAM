@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Ordenamientos sencillos de listas)](02_Ordenamiento_sencillo.md) \| [Próximo (4 Algoritmos de clasificación supervisada)](04_introduccion_al_AA.md)
-
 # 12.3 Divide y reinarás
 
 Para esta sección tenemos este [video introductorio](https://youtu.be/ZSRn0ob4ukM).
@@ -333,6 +331,4 @@ otralista = [7, 6, 5, 4, 3, 2, 1, 0]
 ¿Cómo te parece que se va a comportar este método con respecto al merge sort original? Agregá este nuevo método a la comparación del ejercicio anterior.
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 Ordenamientos sencillos de listas)](02_Ordenamiento_sencillo.md) \| [Próximo (4 Algoritmos de clasificación supervisada)](04_introduccion_al_AA.md)
 

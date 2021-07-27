@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_Contenedores.md)
-
 # 2.5 Cierre de la clase
 
 En esta clase comenzamos a trabajar con funciones y estructuras de datos.
@@ -28,6 +26,4 @@ Observación: Si el enunciado de un ejercicio te pide que lo corras con un input
 Por último te recordamos que si te quedaron dudas, querés discutir algún tema de interés o pedirnos a los docentes que resolvamos un ejercicio particular para la próxima clase, podés hacelo en el [grupo de Slack](../Slack.md).
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Contenedores)](04_Contenedores.md)
 

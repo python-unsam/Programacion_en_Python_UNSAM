@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Control de errores)](02_Excepciones.md)
-
 # 7.1 Repaso de temas pasados
 
 A continuación dejamos unos links a unos videos retomando temas de la clase anterior e introduciendo los nuevos mediante ejemplos.
@@ -12,6 +10,4 @@ A continuación dejamos unos links a unos videos retomando temas de la clase ant
 
 4. Finalmente, en [este video](https://youtu.be/6cCJ0RmDXSY) hablamos sobre la importancia de documentar para poder compartir y reutilizar el código].
 
-
-[Contenidos](../Contenidos.md) \| [Próximo (2 Control de errores)](02_Excepciones.md)
 

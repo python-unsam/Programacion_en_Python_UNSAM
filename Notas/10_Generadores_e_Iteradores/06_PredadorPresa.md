@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Más sobre generadores)](05_Mas_generadores.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
-
 # 10.6 Predador Presa
 
 En este [video](https://youtu.be/mGBxvPtMkW4) introducimos el tema de esta sección.
@@ -521,6 +519,4 @@ p_{comer} = p_{leon}(edadLeon) \times (1 - p_{antilope}(edadAntilope))
   - ¿Se detectan ciclos de mayoría de una especie y después de la otra?¿Hay dominación?
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (5 Más sobre generadores)](05_Mas_generadores.md) \| [Próximo (7 Cierre de la clase)](07_Cierre.md)
 

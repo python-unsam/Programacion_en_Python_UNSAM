@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (9 Clases y objetos)](../09_Clases_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión y regresión)](../11_Recursion/00_Resumen.md)
-
 # 10. Generadores e iteradores
 Programar es básicamente escribir condicionales, ciclos y asignaciones de variables. Aunque no de cualquier forma.
 
@@ -17,6 +15,3 @@ Terminamos la clase con un ejercicio optativo que combina dos temas importantes:
 * [10.5 Más sobre generadores](05_Mas_generadores.md)
 * [10.6 Predador Presa](06_PredadorPresa.md)
 * [10.7 Cierre de la clase](07_Cierre.md)
-
-
-[Contenidos](../Contenidos.md) \| [Anterior (9 Clases y objetos)](../09_Clases_y_Objetos/00_Resumen.md) \| [Próximo (11 Recursión y regresión)](../11_Recursion/00_Resumen.md)

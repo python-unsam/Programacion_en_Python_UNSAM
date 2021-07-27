@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la clase)](05_CierreClase.md)
-
 # 2.4 Contenedores
 
 En esta sección trataremos listas, diccionarios y conjuntos.
@@ -380,6 +378,4 @@ Supongamos que los precios en `camion.csv` son los precios pagados al productor 
 
 Ahora vamos calcular el balance del negocio: juntá todo el trabajo que hiciste recién en tu programa `informe.py` (usando las funciones `leer_camion()` y `leer_precios()`) y completá el programa para que con los precios del camión ([Ejercicio 2.16](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-216-lista-de-diccionarios)) y los de venta en el negocio ([Ejercicio 2.17](../02_Estructuras_y_Funciones/04_Contenedores.md#ejercicio-217-diccionarios-como-contenedores)) calcule lo que costó el camión, lo que se recaudó con la venta, y la diferencia. ¿Hubo ganancia o pérdida? El programa debe imprimir por pantalla un balance con estos datos.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Tipos y estructuras de datos)](03_TiposDatos.md) \| [Próximo (5 Cierre de la clase)](05_CierreClase.md)
 

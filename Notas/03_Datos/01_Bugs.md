@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Secuencias)](02_Secuencias.md)
-
 # 3.1 Errores
 
 ## Tres tipos de errores:
@@ -221,6 +219,4 @@ pprint(camion)
 
 _Ayuda: Primero tratá de pensarlo, pero si este último se te hace muy difícil, podés mirar un poco de la teoría relacionada con esto un par de secciones más adelante ([Sección 4.4](../04_Listas_y_Listas/04_Objetos.md#ejemplo-de-asignación))._
 
-
-[Contenidos](../Contenidos.md) \| [Próximo (2 Secuencias)](02_Secuencias.md)
 

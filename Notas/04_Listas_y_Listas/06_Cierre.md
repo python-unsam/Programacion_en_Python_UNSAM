@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (5 Arbolado porteño y comprensión de listas)](05_Arboles2_LC.md)
-
 # 4.6 Cierre de la clase
 
 En esta clase vimos algo más sobre el debugger, el manejo de listas y la creación de listas por comprensión. Para cerrar esta clase te pedimos dos cosas:
@@ -12,6 +10,4 @@ En esta clase vimos algo más sobre el debugger, el manejo de listas y la creaci
 * Que completes [este formulario](https://docs.google.com/forms/d/1I3B43uVprrHh7ZOFk3d5tO29GOW_lsRM1AMXS2CbNSY) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! Nos vemos en la próxima clase.
-
-[Contenidos](../Contenidos.md) \| [Anterior (5 Arbolado porteño y comprensión de listas)](05_Arboles2_LC.md)
 

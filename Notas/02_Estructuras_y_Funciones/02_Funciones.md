@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_Archivos.md) \| [Próximo (3 Tipos y estructuras de datos)](03_TiposDatos.md)
-
 # 2.2 Funciones
 
 A medida que tus programas se vuelven más largos y complejos, vas a necesitar organizarte. En esta sección vamos a introducir brevemente funciones y módulos de la biblioteca así como también la administración de errores y excepciones.
@@ -311,6 +309,4 @@ Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` po
 
 Guardá tu programa en el archivo `camion_commandline.py` para entregar al final de la clase.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Manejo de archivos)](01_Archivos.md) \| [Próximo (3 Tipos y estructuras de datos)](03_TiposDatos.md)
 

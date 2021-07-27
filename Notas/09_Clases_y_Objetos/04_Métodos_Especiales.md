@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Herencia)](03_Herencia.md) \| [Próximo (5 Objetos, pilas y colas)](05_Pilas_Colas.md)
-
 # 9.4 Métodos especiales
 
 El tema de esta sección lo tratamos junto con la introducción a clases, en el video de la [Sección 9.2](../09_Clases_y_Objetos/02_Clases.md#92-clases).
@@ -310,6 +308,4 @@ Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 6.4](
 >>>
 ```
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Herencia)](03_Herencia.md) \| [Próximo (5 Objetos, pilas y colas)](05_Pilas_Colas.md)
 

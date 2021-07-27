@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Próximo (2 Scripting)](02_Scripts.md)
-
 # 6.1 Repaso de temas pasados
 
 A continuación dejamos unos links a unos videos sobre un par de ejercicios de la clase 5:
@@ -135,6 +133,4 @@ o lineal como el [Ejercicio 6.2](../06_Organización_y_Complejidad/01_Repaso.md#
 
 
 
-
-[Contenidos](../Contenidos.md) \| [Próximo (2 Scripting)](02_Scripts.md)
 

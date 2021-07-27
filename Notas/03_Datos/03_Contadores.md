@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Secuencias)](02_Secuencias.md) \| [Próximo (4 Entorno de desarrollo integrado)](04_IDE.md)
-
 # 3.3 Contadores del módulo _collections_
 
 El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección introducimos brevemente los contadores, que son solo una de las clases incluidas en este módulo.
@@ -113,6 +111,4 @@ Esto es solo una pequeña muestra de lo que se puede hacer con contadores. El m�
 
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 Secuencias)](02_Secuencias.md) \| [Próximo (4 Entorno de desarrollo integrado)](04_IDE.md)
 

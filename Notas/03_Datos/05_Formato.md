@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (4 Entorno de desarrollo integrado)](04_IDE.md) \| [Próximo (6 Arbolado porteño)](06_Arboles1.md)
-
 # 3.5 Impresión con formato
 
 En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. 
@@ -295,6 +293,4 @@ multiplicar del 1 al 9 usando f-strings. Si podés, evitá usar la multiplicaci�
  9:    0   9  18  27  36  45  54  63  72  81
 ```
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (4 Entorno de desarrollo integrado)](04_IDE.md) \| [Próximo (6 Arbolado porteño)](06_Arboles1.md)
 

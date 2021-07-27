@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Funciones)](03_Funciones.md) \| [Próximo (5 Búsqueda binaria)](05_BusqBinaria.md)
-
 # 6.4 Módulos
 
 En esta sección vamos a introducir conceptos que nos permiten crear módulos y trabajar con programas cuyas partes están repartidas en múltiples archivos. 
@@ -253,6 +251,4 @@ Modificá el archivo `costo_camion.py` para que use la función `informe_funcion
 Al terminar este ejercicio tenés tres programas.
 `fileparse.py` contiene una función para parsear datos de archivos CSV en general, `parse_csv()`. Por otra parte, `informe_funciones.py` que produce un bello informe, y que contiene las funciones `leer_camion()` y `leer_precios()`. Finalmente, `costo_camion.py` calcula el costo de un camión, pero usando la función `leer_camion()` que fue escrita para el programa que genera el informe.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Funciones)](03_Funciones.md) \| [Próximo (5 Búsqueda binaria)](05_BusqBinaria.md)
 

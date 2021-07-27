@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](03_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](05_Arboles2_LC.md)
-
 # 4.4 Objetos
 
 
@@ -418,6 +416,4 @@ Convirtamos estos datos usando un truco similar:
 Bonus: ¿Cómo modificarías este ejemplo para transformar la fecha (`date`) en una tupla como `(6, 11, 2007)`?
 
 Es importante que entiendas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
-
-[Contenidos](../Contenidos.md) \| [Anterior (3 Comprensión de listas)](03_Comprension_Listas.md) \| [Próximo (5 Arbolado porteño y comprensión de listas)](05_Arboles2_LC.md)
 

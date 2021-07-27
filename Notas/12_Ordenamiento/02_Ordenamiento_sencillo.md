@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Divide y reinarás)](03_Divide_and_Conquer.md)
-
 # 12.2 Ordenamientos sencillos de listas
 
 Para esta sección tenemos un [video introductorio](https://youtu.be/ElHpgeTvZLY).
@@ -319,6 +317,4 @@ Guardá `comparaciones_ordenamiento.py` para seguir trabajando sobre él y para 
 
 _Extra:_ ¿Las curvas de complejidad quedaron suaves? ¿Se te ocurre cómo hacer para suavizarlas?
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (1 Introducción)](01_Introduccion.md) \| [Próximo (3 Divide y reinarás)](03_Divide_and_Conquer.md)
 

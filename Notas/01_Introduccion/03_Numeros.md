@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Un primer programa)](02_Hello_world.md) \| [Próximo (4 Cadenas)](04_Strings.md)
-
 # 1.3 Números
 
 Esta sección introduce las operaciones matemáticas elementales.
@@ -306,6 +304,4 @@ En tu directorio de trabajo de esta clase, escribí un programa llamado `esfera.
 
 Finalmente, ejecutá el programa desde la línea de comandos para responder ¿cuál es el volumen de una esfera de radio 6? Debería darte `904.7786842338603`.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 Un primer programa)](02_Hello_world.md) \| [Próximo (4 Cadenas)](04_Strings.md)
 

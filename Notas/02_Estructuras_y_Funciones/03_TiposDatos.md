@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Contenedores)](04_Contenedores.md)
-
 # 2.3 Tipos y estructuras de datos
 
 Esta sección introduce dos estructuras de datos elementales: las tuplas y los diccionarios.
@@ -377,6 +375,4 @@ Construí una función que, a partir de una lista de palabras, devuelva un dicci
 Probá tu función para la lista `['banana', 'manzana', 'mandarina']`.
 Guardá este ejercicio en un archivo `diccionario_geringoso.py` para entregar al final de la clase.
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 Funciones)](02_Funciones.md) \| [Próximo (4 Contenedores)](04_Contenedores.md)
 

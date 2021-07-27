@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño)](06_Arboles1.md)
-
 # 3.7 Cierre de la clase
 
 En esta clase aprendimos a trabajar con datos. Manejamos archivos CSV y estructuras un poco más complejas como tuplas, conjuntos y diccionarios y profundizamos un poco más en las listas.
@@ -27,6 +25,4 @@ Observación: Si el enunciado de un ejercicio te pide que lo corras con un input
 Por último te recordamos que si te quedaron dudas, querés discutir algún tema de interés o pedirnos a los docentes que resolvamos un ejercicio particular para la próxima clase, podés hacelo en el [grupo de Slack](../Slack.md).
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (6 Arbolado porteño)](06_Arboles1.md)
 

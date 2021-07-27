@@ -1,5 +1,3 @@
-[Contenidos](../Contenidos.md) \| [Anterior (2 NumPy)](02_NumPy_Arrays.md) \| [Próximo (4 Gráficos del Arbolado porteño)](04_Arboles3_plt.md)
-
 # 5.3 El album de Figuritas
 
 ## Las figuritas del mundial
@@ -168,6 +166,4 @@ Por último, suponé que cinco amigues se juntan y deciden compartir la compra d
 Acordate de guardar todo lo que hiciste sobre figuritas en un archivo `figuritas.py`.
 
 
-
-[Contenidos](../Contenidos.md) \| [Anterior (2 NumPy)](02_NumPy_Arrays.md) \| [Próximo (4 Gráficos del Arbolado porteño)](04_Arboles3_plt.md)
 
