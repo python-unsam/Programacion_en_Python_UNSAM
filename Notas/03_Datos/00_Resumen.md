@@ -7,8 +7,8 @@ Esta clase comenzamos a utilizar un entorno de desarrollo integrado (IDE). Vamos
 
 Recordá que, aunque no termines todos, completar el formulario del final de cada clase y entregar los ejercicios es parte de las condiciones de aprobación de la materia (todes nos podemos atrasar alguna vez, pero en general esperamos que entregues). Esto debe hacerse ANTES de la clase siguiente. 
 
-* [3.1 En esta sección hablamos sobre errores. Acá hay un (video)[https://youtu.be/1nTWUPopXrI] sobre este tema.](01_Bugs.md)
-* [3.2 En esta sección hablamos de secuencias. Te dejamos un (video introductorio)[https://youtu.be/e_E-2tFcRwQ] para este tema.](02_Secuencias.md)
+* [3.1 Errores](01_Bugs.md)
+* [3.2 Secuencias](02_Secuencias.md)
 * [3.3 Contadores del módulo _collections_](03_Contadores.md)
 * [3.4 Entorno de desarrollo integrado](04_IDE.md)
 * [3.5 Impresión con formato](05_Formato.md)

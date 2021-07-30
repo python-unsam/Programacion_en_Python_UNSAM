@@ -1,4 +1,6 @@
-# 3.1 En esta sección hablamos sobre errores. Acá hay un (video)[https://youtu.be/1nTWUPopXrI] sobre este tema.
+# 3.1 Errores
+
+En esta sección hablamos sobre errores. Acá hay un [video](https://youtu.be/1nTWUPopXrI) sobre este tema.
 
 ## Tres tipos de errores:
 
@@ -197,7 +199,7 @@ print(f"La suma da {a} + {b} = {c}")
 ### Ejercicio 3.5: Pisando memoria
 El siguiente ejemplo usa el dataset de la clase anterior, pero no lo imprime como corresponde, ¿podés determinar por qué y explicarlo brevemente en la versión corregida?
 
-Te dejamos un (video)[https://youtu.be/xb3IG44SP08] sobre este ejemplo.
+Te dejamos un [video](https://youtu.be/xb3IG44SP08) sobre este ejemplo.
 
 ```python
 import csv

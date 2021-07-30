@@ -1,6 +1,6 @@
 # 3.3 Contadores del módulo _collections_
 
-El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección (y en este (video)[https://youtu.be/DoRHWjU3Ews]) introducimos brevemente los contadores, que son solo una de las clases incluidas en este módulo.
+El módulo `collections` ofrece objetos útiles para manejar datos. En esta sección (y en este [video](https://youtu.be/DoRHWjU3Ews)) introducimos brevemente los contadores, que son solo una de las clases incluidas en este módulo.
 
 ### Ejemplo: Contar cosas
 

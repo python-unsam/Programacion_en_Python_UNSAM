@@ -1,7 +1,7 @@
 # 2.3 Funciones
 
 A medida que tus programas se vuelven más largos y complejos, vas a necesitar organizarte. En esta sección vamos a introducir brevemente funciones y módulos de la biblioteca así como también la administración de errores y excepciones. 
-Acá hay un video introductorio al tema de (funciones)[https://youtu.be/5OOqvYhf65A], y acá hay uno sobre el manejo de (errores y excepciones)[https://youtu.be/dWoxiyfZGCo].
+Acá hay un video introductorio al tema de [funciones](https://youtu.be/5OOqvYhf65A), y acá hay uno sobre el manejo de [errores y excepciones](https://youtu.be/dWoxiyfZGCo).
 
 ### Funciones a medida
 
@@ -115,7 +115,7 @@ Traceback (most recent call last):
 RuntimeError: ¡Qué moco!
 ```
 
-Alternativamente, esa excepción puede ser atrapada por un bloque `try-except`, pudiendo de esta forma evitar que el programa termine. Te dejamos un (video)[https://youtu.be/9kUzd2Sk8WE] que repasa estos ejemplos.
+Alternativamente, esa excepción puede ser atrapada por un bloque `try-except`, pudiendo de esta forma evitar que el programa termine. Te dejamos un [video](https://youtu.be/9kUzd2Sk8WE) que repasa estos ejemplos.
 
 ## Ejercicios
 
@@ -312,6 +312,6 @@ Guardá tu programa en el archivo `camion_commandline.py` para entregar al final
 
 
 
-Ahora que viste funciones, te dejamos un video sobre el [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-rustico-al-lenguaje-inclusivo) de (lenguaje inclusivo)[https://youtu.be/3QNtSWBqQwk] donde usamos una función.
+Ahora que viste funciones, te dejamos un video sobre el [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-rustico-al-lenguaje-inclusivo) de [lenguaje inclusivo](https://youtu.be/3QNtSWBqQwk) donde usamos una función.
 
 

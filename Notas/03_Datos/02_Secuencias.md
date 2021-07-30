@@ -1,4 +1,6 @@
-# 3.2 En esta sección hablamos de secuencias. Te dejamos un (video introductorio)[https://youtu.be/e_E-2tFcRwQ] para este tema.
+# 3.2 Secuencias
+
+En esta sección hablamos de secuencias. Te dejamos un [video introductorio](https://youtu.be/e_E-2tFcRwQ) para este tema.
 
 ### Tipo de secuencias
 

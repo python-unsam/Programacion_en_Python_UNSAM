@@ -1,6 +1,6 @@
 # 3.6 Arbolado porteño
 
-El tema de esta sección está brevemente presentado en este (video)[https://youtu.be/jIMVkyBxuv0].
+El tema de esta sección está brevemente presentado en este [video](https://youtu.be/jIMVkyBxuv0).
 
 En esta sección haremos algunos ejercicios que integran los conceptos aprendidos en las clases anteriores. Vamos a manejar archivos, diccionarios, listas, contadores y el comando `zip`, entre otras cosas. Entregá lo que puedas hacer. 
 

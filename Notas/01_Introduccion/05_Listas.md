@@ -1,6 +1,6 @@
 # 1.5 Listas
 
-En esta sección estudiaremos listas que es el tipo de datos primitivo de Python para guardar colecciones ordenadas de valores. En (este video)[https://youtu.be/h3GN0-rAsss] introducimos el tema.
+En esta sección estudiaremos listas que es el tipo de datos primitivo de Python para guardar colecciones ordenadas de valores. En [este video](https://youtu.be/h3GN0-rAsss) introducimos el tema.
 
 ### Creación de Listas
 

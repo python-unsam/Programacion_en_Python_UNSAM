@@ -1,6 +1,6 @@
 # 3.5 Impresión con formato
 
-En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. Podés complementar la lectura con un (video)[https://youtu.be/_Mlj6FcJZ9Y].
+En esta sección se ven detalles técnicos sobre cómo hacer que la salida por pantalla sea más amena para el usuario. Podés complementar la lectura con un[video](https://youtu.be/_Mlj6FcJZ9Y).
 
 Cuando trabajás con datos es usual que quieras imprimir salidas estructuradas (tablas, etc.). Por ejemplo:
 
