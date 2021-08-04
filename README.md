@@ -57,4 +57,6 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado, y José Crespo y José Clemente, docentes invitados. 
 
 ## Preinscripción
-La preinscripción al curso está abierta hasta el miércoles 21 de julio de 2021. Podés preinscribirte usando [este formulario](https://docs.google.com/forms/d/e/1FAIpQLSfCot8ug78WTJUAKiZwwki1p8ZTrEixMJ15hOJs-2r39pMDuQ/viewform?usp=sf_link).
+La preinscripción al curso ya cerró.- 
+
+Completá [este formulario](https://forms.gle/XDLmWKLNxkTLRnJV7) si querés que te avisemos de próximas ediciones del curso.
