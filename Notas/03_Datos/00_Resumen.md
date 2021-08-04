@@ -7,10 +7,11 @@ Esta clase comenzamos a utilizar un entorno de desarrollo integrado (IDE). Vamos
 
 Recordá que, aunque no termines todos, completar el formulario del final de cada clase y entregar los ejercicios es parte de las condiciones de aprobación de la materia (todes nos podemos atrasar alguna vez, pero en general esperamos que entregues). Esto debe hacerse ANTES de la clase siguiente. 
 
-* [3.1 Errores](01_Bugs.md)
-* [3.2 Secuencias](02_Secuencias.md)
-* [3.3 Contadores del módulo _collections_](03_Contadores.md)
-* [3.4 Entorno de desarrollo integrado](04_IDE.md)
-* [3.5 Impresión con formato](05_Formato.md)
-* [3.6 Arbolado porteño](06_Arboles1.md)
-* [3.7 Cierre de la clase](07_CierreClase.md)
+* [3.1 Introducción.](01_Introduccion.md)
+* [3.2 Errores](02_Bugs.md)
+* [3.3 Secuencias](03_Secuencias.md)
+* [3.4 Contadores del módulo _collections_](04_Contadores.md)
+* [3.5 Entorno de desarrollo integrado](05_IDE.md)
+* [3.6 Impresión con formato](06_Formato.md)
+* [3.7 Arbolado porteño](07_Arboles1.md)
+* [3.8 Cierre de la clase](08_CierreClase.md)

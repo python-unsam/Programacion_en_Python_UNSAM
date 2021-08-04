@@ -1,4 +1,4 @@
-# 3.1 Errores
+# 3.2 Errores
 
 En esta sección hablamos sobre errores. Acá hay un [video](https://youtu.be/1nTWUPopXrI) sobre este tema.
 

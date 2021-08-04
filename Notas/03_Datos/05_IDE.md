@@ -1,10 +1,10 @@
-# 3.4 Entorno de desarrollo integrado
+# 3.5 Entorno de desarrollo integrado
 
 A partir de aquí te vamos a proponer trabajar principalmente dentro de un entorno de desarrollo integrado (IDE, por sus siglas en inglés). 
 
 En particular, sugerimos trabajar con el [Spyder](https://www.spyder-ide.org/) que es un entorno de desarrollo de Python diseñado para científicos, ingenieros y analistas de datos. El Spyder puede descargarse solo o como parte de la distribución de [Anaconda](https://www.anaconda.com/products/individual) que trae, además de Python y del Spyder, una serie de bibliotecas con módulos muy útiles para desarrollos relacionados a la ciencia de datos.
 
-En este [breve video](https://youtu.be/hRaJ1JLG95I) mostramos el spyder.
+En este [breve video](https://youtu.be/fHMnZ1gYOew) mostramos el spyder.
 
 Esta es una imagen de una captura de pantalla del Spyder:
 ![Ventana de Spyder](Spyder.png)

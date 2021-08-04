@@ -1,6 +1,6 @@
 # 1.3 Números
 
-Esta sección introduce las operaciones matemáticas elementales, y tiene un [video introductorio](https://youtu.be/2hDSi95K2pk).
+Esta sección introduce las operaciones matemáticas elementales. Acá te dejamos un breve [video](https://youtu.be/NTWF9KKaCm0) sobre el uso de la variables booleanas.
 
 ### Tipos de números
 

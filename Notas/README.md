@@ -16,7 +16,7 @@ El objetivo de este curso es enseñar los fundamentos del lenguaje Python orient
 
 ## Requerimientos
 
-Para hacer este curso hace falta tener una computadora con conexión a internet donde instalar el Python 3.6 o uno más nuevo y tiempo para leer las clases y hacer los ejercicios (son de entrega obligatoria semanal). Estimamos que entre clases, consultas y ejercitación van a dedicar unas quince horas semanales durante los cuatro meses de cursada. 
+Para hacer este curso hace falta tener una computadora con conexión a internet donde instalar el Python 3.6 o uno más nuevo y tiempo para leer las clases y hacer los ejercicios (son de entrega obligatoria semanal). Estimamos que entre clases, consultas y ejercitación van a dedicar unas quince horas semanales durante los cuatro meses de cursada.
 
 ## Lo que este curso no es
 
@@ -30,7 +30,7 @@ Se inscribió mucha gente en este curso, por lo que no siempre podremos responde
 
 Este curso se basa sobre experiencias previas nuestras y de otros docentes. En particular tomamos ideas del curso de algoritmos y programación de [Rosita Wachenchauzer y Diego Essaya](https://algoritmos1rw.ddns.net/) en la Facultad de Ingeniería de la UBA así como el enfoque muy práctico de Python que propone David Beazley en su curso en inglés de [Python práctico](https://github.com/dabeaz-course/practical-python). De ambos cursos tomamos fragmentos para construir el nuestro bajo el mismo tipo de [licencia](./LICENSE.md). Ellos generosamente han creado y difundido sus cursos bajo licencias [creative commons](http://www.creativecommons.org.ar/) que permiten gestionar el conocimiento fuera de la lógica del mercado, en sistemas sociales autoorganizados.
 
-También tomamos ideas y ejemplos del proyecto [Exactas Programa](http://exactasprograma.exactas.uba.ar/) que desarrollaron docentes de diversas carreras de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires que sus autores han compartido generosamente. 
+También tomamos ideas y ejemplos del proyecto [Exactas Programa](http://exactasprograma.exactas.uba.ar/) que desarrollaron docentes de diversas carreras de la Facultad de Ciencias Exactas y Naturales de la Universidad de Buenos Aires que sus autores han compartido generosamente.
 
 Para el análisis de datos con los módulos [NumPy](https://numpy.org/doc/), [Matplotlib](https://matplotlib.org/contents.html), [Pandas](https://pandas.pydata.org/pandas-docs/stable/), [Seaborn](http://seaborn.pydata.org/), [Statsmodels](https://www.statsmodels.org/stable/user-guide.html), etc. nos hemos basado en la documentación oficial de estos paquetes así como en las [clases y tutoriales](https://scipy-lectures.org/index.html) provistos por [SciPy](https://www.scipy.org/). Nuevamente, esta documentación es compartida con licencias [Creative Commons](https://es.wikipedia.org/wiki/Licencias_Creative_Commons) o [BSD](https://es.wikipedia.org/wiki/Licencia_BSD).
 
@@ -43,7 +43,7 @@ Este curso se encuentra en desarrollo. Iremos subiendo las clases a medida que l
 Por favor, leé las condiciones de cursada, la info sobre el uso del Slack e instalate el python como se indica a continuación.
 * [Condiciones de cursada](./Cursada.md#condiciones-de-cursada)
 * [Uso de la plataforma Slack](https://github.com/python-unsam/Programacion_en_Python_UNSAM/blob/master/Notas/Slack.md#grupo-de-slack---informaci%C3%B3n-y-consultas)
-* [Instalación de Python](./Instalacion.md#instalación-del-software-y-organización-interna-del-curso)
+* [Instalación de Python](./Instalacion.md#instalacion-del-software-y-organización-interna-del-curso)
 
 ## El curso
 En fin, para ver el índice del curso [cliqueá acá](./Contenidos.md#curso-de-programación-en-python)!

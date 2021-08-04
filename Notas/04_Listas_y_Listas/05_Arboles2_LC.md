@@ -9,7 +9,7 @@ Seguimos trabajando con el archivo CSV de "[Arbolado en espacios verdes](https:/
 
 
 ### Ejercicio 4.15: Lectura de todos los árboles
-Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 3.18](../03_Datos/06_Arboles1.md#ejercicio-318-lectura-de-los-arboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles en el archivo. La función debe devolver una lista conteniendo un diccionario por cada árbol con todos los datos.
+Basándote en la función `leer_parque(nombre_archivo, parque)` del [Ejercicio 3.18](../03_Datos/07_Arboles1.md#ejercicio-318-lectura-de-los-arboles-de-un-parque), escribí otra `leer_arboles(nombre_archivo)` que lea el archivo indicado y devuelva una **lista de diccionarios** con la información de todos los árboles en el archivo. La función debe devolver una lista conteniendo un diccionario por cada árbol con todos los datos.
 
 Vamos a llamar `arboleda` a esta lista.
 

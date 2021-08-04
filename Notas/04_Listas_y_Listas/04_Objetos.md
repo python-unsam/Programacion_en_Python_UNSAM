@@ -46,7 +46,7 @@ Esto significa que al modificar un valor modificamos *todas* las referencias.
 
 Observá cómo un cambio en la lista original desencadena cambios en todas las demás variables (ouch!). Esto es porque no se hizo ninguna copia. Todos son punteros a la misma cosa.
 
-Esto es lo mismo que pasaba en el [Ejercicio 3.5](../03_Datos/01_Bugs.md#ejercicio-35-pisando-memoria).
+Esto es lo mismo que pasaba en el [Ejercicio 3.5](../03_Datos/02_Bugs.md#ejercicio-35-pisando-memoria).
 
 
 ### Reasignar valores

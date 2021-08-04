@@ -187,7 +187,7 @@ Aunque `-> dict` indica al programador que la función devuelve un diccionario, 
 
 ## Ejercicios
 
-En el [Ejercicio 3.16](../03_Datos/05_Formato.md#ejercicio-316-un-desafio-de-formato) (o el [Ejercicio 3.15](../03_Datos/05_Formato.md#ejercicio-315-agregar-encabezados)) escribiste un programa llamado `tabla_informe.py` que imprime un informe con el balance de compra y venta de frutas en un camión.
+En el [Ejercicio 3.16](../03_Datos/06_Formato.md#ejercicio-316-un-desafio-de-formato) (o el [Ejercicio 3.15](../03_Datos/06_Formato.md#ejercicio-315-agregar-encabezados)) escribiste un programa llamado `tabla_informe.py` que imprime un informe con el balance de compra y venta de frutas en un camión.
 
 El programa tiene algunas funciones, como:
 

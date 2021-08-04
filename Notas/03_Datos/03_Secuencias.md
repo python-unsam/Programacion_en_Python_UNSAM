@@ -1,4 +1,4 @@
-# 3.2 Secuencias
+# 3.3 Secuencias
 
 En esta sección hablamos de secuencias. Te dejamos un [video introductorio](https://youtu.be/e_E-2tFcRwQ) para este tema.
 

@@ -1,4 +1,4 @@
-# 3.6 Arbolado porteño
+# 3.7 Arbolado porteño
 
 El tema de esta sección está brevemente presentado en este [video](https://youtu.be/jIMVkyBxuv0).
 
@@ -38,7 +38,7 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 ### Ejercicio 3.18: Lectura de los árboles de un parque
 Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información del parque especificado. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
 
-_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 3.9](../03_Datos/02_Secuencias.md#ejercicio-39-la-funcion-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modificá esta función para que ese dato sea del tipo adecuado para operar._
+_Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modificá esta función para que ese dato sea del tipo adecuado para operar._
 
 _Observación: La columna que indica el nombre del parque en el que se encuentra el árbol se llama `'espacio_ve'` en el archivo CSV._
 
@@ -50,7 +50,7 @@ Escribí una función `especies(lista_arboles)` que tome una lista de árboles c
 _Sugerencia: Usá el comando `set` como en la [Sección 2.5](../02_Estructuras_y_Funciones/05_Contenedores.md#conjuntos)._
 
 ### Ejercicio 3.20: Contar ejemplares por especie
-Usando contadores como en el [Ejercicio 3.11](../03_Datos/03_Contadores.md#ejercicio-311-contadores), escribí una función `contar_ejemplares(lista_arboles)` que, dada una lista como la que generada con `leer_parque()`, devuelva un diccionario en el que las especies (recordá, es la columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
+Usando contadores como en el [Ejercicio 3.11](../03_Datos/04_Contadores.md#ejercicio-311-contadores), escribí una función `contar_ejemplares(lista_arboles)` que, dada una lista como la que generada con `leer_parque()`, devuelva un diccionario en el que las especies (recordá, es la columna `'nombre_com'` del archivo) sean las claves y tengan como valores asociados la cantidad de ejemplares en esa especie en la lista dada.
 
 Luego, combiná esta función con `leer_parque()` y con el método `most_common()` para informar las cinco especies más frecuentes en cada uno de los siguientes parques:
 
