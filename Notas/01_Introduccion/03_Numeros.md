@@ -137,7 +137,7 @@ Operaciones usuales:
 x + y      Suma
 x - y      Resta
 x * y      Multiplicación
-x / y      Divición (da un float, no un int)
+x / y      División (da un float, no un int)
 x // y     División entera (da un float, pero con ceros luego del punto)
 x % y      Módulo (resto)
 x ** y     Potencia
