@@ -238,7 +238,7 @@ A pesar de ser sólo de lectura, siempre podés reasignar una variable a una cad
 >>>
 ```
 
-Ups! No es exactamento lo que queríamos. Reparalo para que quede `'Manzana,Naranja,Mandarina,Banana,Kiwi,Pera'`.
+Ups! No es exactamente lo que queríamos. Reparalo para que quede `'Manzana,Naranja,Mandarina,Banana,Kiwi,Pera'`.
 
 ```python
 >>> frutas = ?
