@@ -133,7 +133,7 @@ s.join(slist)          # Une una lista de cadenas usando s como delimitador
 s.lower()              # Convertir a minúsculas
 s.replace(old,new)     # Reemplaza texto
 s.split([delim])       # Parte la cadena en subcadenas
-s.startswith(prefix)   # Verifica si comienza con un sufijo
+s.startswith(prefix)   # Verifica si comienza con un prefijo
 s.strip()              # Elimina espacios en blanco al inicio o al final
 s.upper()              # Convierte a mayúsculas
 ```
