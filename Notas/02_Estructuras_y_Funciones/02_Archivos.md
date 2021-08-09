@@ -1,6 +1,6 @@
 # 2.2 Manejo de archivos
 
-La mayoría de los programas usa alguna fuente de datos. En esta sección discutimos el acceso a archivos, tema que introducimos en este [video](https://youtu.be/0vaKZf6O_Fk).
+La mayoría de los programas usa alguna fuente de datos. En esta sección discutimos el acceso a archivos, tema que introducimos en este [video](https://youtu.be/KTCS13-Z8bI). Te dejamos también el [código](./arboles.py) y el [archivo](./arboles.csv) que usamos en el video.
 
 ### Archivos de entrada y salida
 
