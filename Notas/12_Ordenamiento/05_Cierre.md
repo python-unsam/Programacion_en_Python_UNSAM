@@ -8,7 +8,7 @@ En la clase de hoy te pedimos que entregues los siguientes archivos:
 * El archivo `iris_seaborn.py` del [Ejercicio 12.10](../12_Ordenamiento/04_introduccion_al_AA.md#ejercicio-1210-seaborn).
 * Opcionalmente, el archivo `clasificadores.py` del [Ejercicio 12.12](../12_Ordenamiento/04_introduccion_al_AA.md#ejercicio-1212).
 
-Como de costumbre, completá por favor [el formulario](https://docs.google.com/forms/d/1s6zFYwZxgGih7auaLAtdanbzlNIxu14S0G5sGx2jVfg) asociado a la clase y adjuntá los archivos correspondientes.
+Como de costumbre, completá por favor [el formulario](https://docs.google.com/forms/d/1jAN__wRdzUsSBzoW8ngaM_Nh7yBSK1DMTYxbo1P-ZDM) asociado a la clase y adjuntá los archivos correspondientes.
 
 Gracias!
 

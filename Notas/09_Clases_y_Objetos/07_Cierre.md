@@ -16,7 +16,7 @@ En fin, para cerrar esta clase, entregá:
 * El archivo `canguros_buenos.py` del [Ejercicio 9.11](../09_Clases_y_Objetos/05_Pilas_Colas.md#ejercicio-911-canguros-buenos-y-canguros-malos).
 * El archivo `NDVI.py` del [Ejercicio 9.14](../09_Clases_y_Objetos/06_Teledeteccion.md#ejercicio-914-optativo-de-teledeteccion) (optativo).
 
-Además te pedimos que completes [este formulario](https://docs.google.com/forms/d/13FKe29wNTl7yfVQk4wW6k90vrrEwDlH79b3WUB95DiU) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
+Además te pedimos que completes [este formulario](https://docs.google.com/forms/d/1wD2hpfGzvUD7QcBHdZgwMe3EzIHd8APokzH-F27-_5U) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
 ¡Nos vemos!
 

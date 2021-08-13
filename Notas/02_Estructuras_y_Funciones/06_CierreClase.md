@@ -15,7 +15,7 @@ Para cerrar esta clase te pedimos dos cosas:
     5. El archivo `informe.py` del [Ejercicio 2.18](../02_Estructuras_y_Funciones/05_Contenedores.md#ejercicio-218-balances).
 
 
-* Que completes [este formulario](https://docs.google.com/forms/d/1t_rhPa-VFILPWzXLBttyfN-a4fZSiAwa_k8pU0FVEF4) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/1OoK1ovx0ziUBgGF5hqfbhfEW1UuE2t40uIhM2pSC2pY) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
  
 Esperamos que entregues como mínimo tres archivos de los que te pedimos. 
 

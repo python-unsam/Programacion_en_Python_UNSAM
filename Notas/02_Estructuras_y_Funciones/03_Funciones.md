@@ -1,4 +1,4 @@
-# 2.3 Funciones
+# 2.3 Funciones  
 
 A medida que tus programas se vuelven más largos y complejos, vas a necesitar organizarte. En esta sección vamos a introducir brevemente funciones y módulos de la biblioteca así como también la administración de errores y excepciones. 
 Acá hay un [video introductorio](https://youtu.be/5OOqvYhf65A) al tema de funciones, y acá [hay otro](https://youtu.be/THUdN87afwg) sobre el manejo de errores y excepciones.
@@ -179,7 +179,7 @@ El precio de un cajón de Frambuesa es: 34.35
 Kale no figura en el listado de precios.
 ```
 
-Guardá este código en un archivo `buscar_precio.py` para entregar al final de la clase.
+Guardá este código en un archivo `buscar_precios.py` para entregar al final de la clase.
 
 
 ### Ejercicio 2.8: Administración de errores

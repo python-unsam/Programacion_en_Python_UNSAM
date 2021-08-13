@@ -11,7 +11,7 @@ Para cerrar esta clase te pedimos dos cosas:
  4. El archivo `bbin.py` del [Ejercicio 6.15](../06_Organizacion_y_Complejidad/06_Complejidad.md#ejercicio-615-insertar-un-elemento-en-una-lista).
  5. El archivo `plot_bbin_vs_bsec.py` del [Ejercicio 6.20](../06_Organizacion_y_Complejidad/07_graficos_de_complejidad.md#ejercicio-620-busqueda-binaria-vs-busqueda-secuencial).
 
-* Que completes [este formulario](https://docs.google.com/forms/d/1De-riQmiD2H9PZAVUkR5hf4lqU_9tp8IACqZYTvePkA) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/10JnOLA09JU8PesE9zNZ2gbjCpwn0xsKkpu5yyhJQkng) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 
 ¡Gracias! 
 

@@ -12,7 +12,7 @@ Para cerrar esta clase te pedimos dos cosas:
   1. El archivo  `ordenar_imgs.py` del [Ejercicio 8.6](../08_Fechas_Carpetas_y_Pandas/04_Ordenando_archivos.md#ejercicio-86-ordenar-el-arbol-de-archivos-optativo).
   2. El archivo  `mareas_fft.py` del [Ejercicio 8.13](../08_Fechas_Carpetas_y_Pandas/06_Series_Temporales.md#ejercicio-813-otros-puertos).
  
-* Que completes [este formulario](https://docs.google.com/forms/d/e/1FAIpQLScrVpEMe6Vmhwz5tVOBOxQ3ML5EkF851RFL7Zeyejs0cK_9gg/viewform) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
+* Que completes [este formulario](https://docs.google.com/forms/d/1haqMkdYb-jYXS-lwjUdkLP2P_HoIM0ev0LypW_0Z4Dc) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
 La corrección de pares de esta semana será con el archivo `arbolado_parques_veredas.py` del [Ejercicio 8.9](../08_Fechas_Carpetas_y_Pandas/05_Pandas.md#ejercicio-89-comparando-especies-en-parques-y-en-veredas).
 

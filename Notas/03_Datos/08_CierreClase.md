@@ -14,7 +14,7 @@ Para cerrar esta clase te pedimos dos cosas:
     3. El archivo `arboles.py` sobre arbolado porteño incluyendo todos los ejercicios que hayas hecho (esperamos al menos el [Ejercicio 3.18](../03_Datos/07_Arboles1.md#ejercicio-318-lectura-de-los-arboles-de-un-parque) y uno más).
     
 
-* Que completes [este formulario](https://docs.google.com/forms/d/19zpbCFLl2jigepmsaSUoitWge8qpRL1Xg8tqynj1pnI) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
+* Que completes [este formulario](https://docs.google.com/forms/d/15ce4Sw7qFqtaXkbq9IIwt4G6P57Be_20a6iHeXik42U) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y tendrás la opción de participar en la revisión de pares.
  
 Esperamos en esta clase que entregues los cinco ejercicios que te pedimos. 
 

@@ -16,7 +16,7 @@ Para cerrar esta clase, prepará:
 * El archivo `ticker.py` del [Ejercicio 10.12](../10_Generadores_e_Iteradores/04_Producers_consumers.md#ejercicio-1012-el-pipeline-ensamblado) (o del [Ejercicio 10.15](../10_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-1015-codigo-simple)).
 * Y, opcionalmente, el archivo `simulacion.py` del [Ejercicio 10.19](../10_Generadores_e_Iteradores/06_PredadorPresa.md#ejercicio-1019-alcanzando-la-madurez).
 
-Además te pedimos  que completes [este formulario](https://docs.google.com/forms/d/176NfxPBJ7yqvl2MV79QQAezE8bvGbo4WxD5kVIR0OeY) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
+Además te pedimos  que completes [este formulario](https://docs.google.com/forms/d/1PO6LXOUZrqzsOyHmNtf8qrXRqSFaJiEHYcdRjv4I024) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 
 ¡Nos vemos!
 
