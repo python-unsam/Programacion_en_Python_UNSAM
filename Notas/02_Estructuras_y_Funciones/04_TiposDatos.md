@@ -58,7 +58,7 @@ Los contenidos de una tupla están ordenados (como en una lista).
 s = ('Manzana', 100, 490.1)
 nombre = s[0]                   # 'Manzana'
 cantidad = s[1]                 # 100
-precio = s[2]                    # 490.1
+precio = s[2]                   # 490.1
 ```
 
 El contenido de las tuplas no puede ser modificado.
