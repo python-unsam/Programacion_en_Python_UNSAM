@@ -8,13 +8,14 @@ Aprendimos a documentar y comentar de manera útil, y mostramos el paradigma de 
 
 También estudiamos diversos estilos de gráficos, como obtener un vistazo rápido de los datos y como ajustar cada elemento para obtener un gráfico que pueda ser publicado.
 
-Para cerrar esta clase te pedimos dos cosas:
-* Que recopiles las soluciones de los siguientes ejercicios:
 
+Para cerrar esta clase te pedimos dos cosas:
+
+* Que recopiles las soluciones de los siguientes ejercicios:
 1. El archivo `fileparse.py` del [Ejercicio 7.4](../07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md#ejercicio-74-de-archivos-a-objetos-cual-archivos).
-1. El archivo `informe.py` del [Ejercicio 7.5](../07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md#ejercicio-75-arreglemos-las-funciones-existentes).
-1. El archivo `documentacion.py` del [Ejercicio 7.8](../07_Plt_Especificacion_y_Documentacion/05_Especificacion_y_Documentacion.md#ejercicio-78-funciones-y-documentacion).
-1. El archivo `random_walk.py` del [Ejercicio 7.10](../07_Plt_Especificacion_y_Documentacion/07_Matplotlib.md#ejercicio-710-caminatas-al-azar).
+2. El archivo `informe.py` del [Ejercicio 7.5](../07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md#ejercicio-75-arreglemos-las-funciones-existentes).
+3. El archivo `documentacion.py` del [Ejercicio 7.8](../07_Plt_Especificacion_y_Documentacion/05_Especificacion_y_Documentacion.md#ejercicio-78-funciones-y-documentacion).
+4. El archivo `random_walk.py` del [Ejercicio 7.10](../07_Plt_Especificacion_y_Documentacion/07_Matplotlib.md#ejercicio-710-caminatas-al-azar).
  
 * Que completes [este formulario](https://docs.google.com/forms/d/1Z41ZOgWnvRq-WQwqXs55wyJVkLJ13oyciPe7rPnCNyA) usando como identificación tu dirección de mail.  Al terminar vas a obtener un link para enviarnos tus ejercicios y podrás participar de la revisión de pares.
 

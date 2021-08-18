@@ -35,7 +35,7 @@ Los programas reales tienen datos más complejos que los que podemos almacenar e
 
 Podemos ver esto como un "objeto" con tres partes:
 
-* Nombre del símbolo ("Manzanas", una cadena)
+* Nombre de la mercancía ("Manzanas", una cadena)
 * Número o cantidad (100, un entero)
 * Precio (490.10, un flotante)
 

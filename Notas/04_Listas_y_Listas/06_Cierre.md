@@ -1,6 +1,10 @@
 # 4.6 Cierre de la clase
 
-En esta clase vimos algo más sobre el debugger, el manejo de listas y la creación de listas por comprensión. Para cerrar esta clase te pedimos dos cosas:
+En esta clase vimos algo más sobre el debugger, el manejo de listas y la creación de listas por comprensión. 
+
+
+Para cerrar esta clase te pedimos dos cosas:
+
 * Que recopiles las soluciones de los siguientes ejercicios:
  1. El archivo `busqueda_en_listas.py` del [Ejercicio 4.3](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-43-busquedas-de-un-elemento) y el [Ejercicio 4.4](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-44-busqueda-de-maximo-y-minimo).
  2. El archivo `invlista.py` del [Ejercicio 4.5](../04_Listas_y_Listas/02_IteradoresLista.md#ejercicio-45-invertir-una-lista).

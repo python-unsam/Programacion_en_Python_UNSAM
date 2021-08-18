@@ -191,7 +191,7 @@ Costo total 47671.15
 Acordate de guardar tu archivo en el directorio `Clase02`; vamos a volver a trabajar sobre él.
 
 ### Ejercicio 2.3: Precio de la naranja
-El archivo `Data/precios.csv` contiene una serie de líneas con precios de venta de cajones en el mercado al que va el camión. El archivo se ve así:
+El archivo `../Data/precios.csv` contiene una serie de líneas con precios de venta de cajones en el mercado al que va el camión. El archivo se ve así:
 
 ```csv
 "Lima",40.22
