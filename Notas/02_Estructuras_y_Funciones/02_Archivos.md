@@ -87,7 +87,7 @@ with open('outfile', 'wt') as out:
 
 ## Ejercicios
 
-Estos ejercicios usan el archivo `Data/camion.csv`.  El archivo contiene una lista de líneas con información sobre los cajones de fruta cargados en un camión. Suponemos que estás trabajando en el directorio `ejercicios_python/` del curso. Si no estás segure, podés pedirle al Python que te diga dónde está trabajando con este comando:
+Estos ejercicios usan el archivo `../Data/camion.csv`.  El archivo contiene una lista de líneas con información sobre los cajones de fruta cargados en un camión. Suponemos que estás trabajando en el directorio `ejercicios_python/` del curso. Si no estás segure, podés pedirle al Python que te diga dónde está trabajando con este comando:
 
 ```python
 >>> import os
@@ -202,7 +202,7 @@ El archivo `../Data/precios.csv` contiene una serie de líneas con precios de ve
 ...
 ```
 
-Escribí un código que abra el archivo `Data/precios.csv`, busque el precio de la naranja y lo imprima en pantalla.
+Escribí un código que abra el archivo `../Data/precios.csv`, busque el precio de la naranja y lo imprima en pantalla.
 
 ```python
 >>> f = open('../Data/precios.csv', 'rt')
