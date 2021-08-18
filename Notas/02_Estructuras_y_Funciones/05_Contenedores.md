@@ -104,7 +104,7 @@ with open('../Data/precios.csv', 'rt') as f:
         precios[row[0]] = float(row[1])
 ```
 
-Nota: Si probás estos comandos en el archivo `Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Usando lo que ya vimos, en el [Ejercicio 2.17](../02_Estructuras_y_Funciones/05_Contenedores.md#ejercicio-217-diccionarios-como-contenedores) vas a tener que modificar el código para resolver el problema.
+Nota: Si probás estos comandos en el archivo `../Data/precios.csv`, vas a ver que casi anda. Pero hay una línea en blanco al final que genera un error. Usando lo que ya vimos, más adelante (en el [Ejercicio 2.17](../02_Estructuras_y_Funciones/05_Contenedores.md#ejercicio-217-diccionarios-como-contenedores)) vas a tener que modificar el código para resolver el problema.
 
 ### Búsquedas en un diccionario
 
