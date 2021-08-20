@@ -87,7 +87,7 @@ with open('outfile', 'wt') as out:
 
 ## Ejercicios
 
-Estos ejercicios usan el archivo `../Data/camion.csv`.  El archivo contiene una lista de líneas con información sobre los cajones de fruta cargados en un camión. Suponemos que estás trabajando en el directorio `ejercicios_python/` del curso. Si no estás segure, podés pedirle al Python que te diga dónde está trabajando con este comando:
+Estos ejercicios usan el archivo `../Data/camion.csv`.  El archivo contiene una lista de líneas con información sobre los cajones de fruta cargados en un camión. Suponemos que estás trabajando en el directorio `ejercicios_python/Clase02` del curso. Si no estás segure, podés pedirle al Python que te diga dónde está trabajando con este comando:
 
 ```python
 >>> import os
@@ -174,6 +174,8 @@ Una vez que estés leyendo un archivo línea a línea, podés hacer otras operac
 ```
 
 *Observación: En estos ejemplos tuvimos que llamar  a `f.close()` explícitamente porque no estamos trabajando con el comando `with`.*
+
+*Otra observación: usamos `../Data` para acceder a la carpeta "Data" porque ésta se encuentra dentro de la carpeta "ejercicios_python", al igual que la carpeta actual de trabajo, que es "Clase02". Con los dos puntos del inicio del path nos referimos a la carpeta "madre", es decir, a la carpeta que contiene a la actual.*
 
 ### Ejercicio 2.2: Lectura de un archivo de datos
 Ahora que sabés leer un archivo, escribamos un programa que haga un cálculo simple con los datos leídos.

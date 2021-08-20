@@ -188,7 +188,7 @@ s1 - s2                 # Diferencia de conjuntos
 En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `ejercicios_python/Clase02/informe.py`.
 
 ### Ejercicio 2.15: Lista de tuplas
-El archivo `Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.6](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-26-transformar-un-script-en-una-funcion) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
+El archivo `../Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.6](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-26-transformar-un-script-en-una-funcion) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
 La función debería verse parecida a ésta:
 
