@@ -1,6 +1,6 @@
 # 4.1 Debuggear programas
 
-Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder. 
+Python tiene un debugger poderoso que te permite probar porciones de código. Esto es sencillo y está integrado en IDEs como Spyder.
 
 Vimos en la  [Sección 3.2](../03_Datos/02_Bugs.md#tres-tipos-de-errores) diferentes ejemplos de problemas que pueden aparecer y tuviste que arremangarte e ingeniártelas para resolverlos a mano. En esta sección vamos a introducir la herramienta *pdb* (Python debugger) que ofrece el lenguaje para resolver este tipo de problemas.
 
@@ -148,6 +148,8 @@ Si, en cambio, al llegar a la línea del `print()` en lugar de `Step` (Ctrl + F1
 En todo caso, lo que observamos en esta ejecución de `tiene_a()` es que salimos de la función después de haber analizado sólo la primera letra de la palabra. ¿Es correcto esto? ¿Donde está el error? ¿Cómo lo podemos resolver?
 
 **Comentario.** Recorrer la ejecución de un programa como un simple espectador no nos muestra claramente un error en el código. Es la incongruencia entre lo esperado y lo que realmente sucede lo que lo marca. Esto exige mucha atención para, antes de ejecutar cada paso, preguntarse: ¿qué espero que ocurra? Luego, al avanzar un paso en la ejecución, puede ocurrir que lo que esperamos que pase no sea lo que realmente pasa. Entonces estamos en un **paso clave** de la  ejecución, que nos marca que estamos frente a una de dos: ó frente a un error en el código ó frente a la oportunidad de mejorar nuestra comprensión del mismo.
+
+Te dejamos un [video](https://youtu.be/ak5wqGwCb5M) (un poco largo) donde usamos el debugger y repasamos el [Ejercicio 3.17](../03_Datos/06_Formato.md#ejercicio-317-tablas-de-multiplicar) de tablas de multipicar.
 
 ## Ejercicios
 

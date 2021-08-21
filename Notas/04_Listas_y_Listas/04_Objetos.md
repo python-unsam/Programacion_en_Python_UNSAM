@@ -1,7 +1,7 @@
 # 4.4 Objetos
 
 
-En esta sección introducimos algunos conceptos sobre el modelo interno de objeto en Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y verificación de tipos.
+En esta sección introducimos algunos conceptos sobre el modelo interno de objeto en Python y discutimos algunos temas relacionados con el manejo de memoria, copias de variable y verificación de tipos. En este [video](https://youtu.be/OFLZaqDjoxU) introducimos el tema.
 
 ### Asignaciones
 
@@ -416,4 +416,5 @@ Convirtamos estos datos usando un truco similar:
 Bonus: ¿Cómo modificarías este ejemplo para transformar la fecha (`date`) en una tupla como `(6, 11, 2007)`?
 
 Es importante que entiendas lo que hicimos en este ejercicio. Volveremos sobre esto más adelante.
+
 

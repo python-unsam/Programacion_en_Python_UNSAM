@@ -77,7 +77,7 @@ while not numero_valido:
 print(f'Ingresaste {n}.')
 ```
 
-Si en este ejemplo el usuario ingresa por ejemplo una letra, el comando `n = int(a)` genera una excepción de tipo `ValueError`: el comando `numero_valido = True` no se ejecuta, la excepción es atrapada por el `except ValueError` y el ciclo se repite. Probalo ingresando letras, números con decimales y números enteros. Probá también qué ocurre si querés salir sin ingresar nada generando una excepción presionando las teclas `Ctrl+C`. Leé el mensaje que describe lo ocurrido:  `Ctrl+C` genera una excepción de tipo `KeyboardInterrupt` que no es atrapada.
+Si en este ejemplo le usuarie ingresa por ejemplo una letra, el comando `n = int(a)` genera una excepción de tipo `ValueError`: el comando `numero_valido = True` no se ejecuta, la excepción es atrapada por el `except ValueError` y el ciclo se repite. Probalo ingresando letras, números con decimales y números enteros. Probá también qué ocurre si querés salir sin ingresar nada generando una excepción presionando las teclas `Ctrl+C`. Leé el mensaje que describe lo ocurrido:  `Ctrl+C` genera una excepción de tipo `KeyboardInterrupt` que no es atrapada.
 
 Si no especificamos el tipo de excepción que queremos atrapar, vamos a terminar atrapando todas la excepciones. Probá lo mismo que antes pero con este código.
 
@@ -160,7 +160,7 @@ bash $ python3 -i costo_camion.py
 Esto va a ejecutar el código en el programa y dejar abierto el intérprete interactivo.
 
 ```python
->>> costo_camion('Data/camion.csv')
+>>> costo_camion('../Data/camion.csv')
 47671.15
 >>>
 ```
@@ -207,7 +207,7 @@ for nombre in ['Pedro','Juan','Caballero']:
 Vamos a usar estas ideas aplicadas al procesamiento de un archivo CSV. ¿Qué pasa si intentás usar la función `costo_camion()` con un archivo que tiene datos faltantes?
 
 ```python
->>> costo_camion('Data/missing.csv')
+>>> costo_camion('../Data/missing.csv')
 Traceback (most recent call last):
     File "<stdin>", line 1, in <módulo>
     File "costo_camion.py", line 11, in costo_camion
@@ -227,7 +227,7 @@ Python viene con una gran biblioteca estándar de funciones útiles. En este cas
 
 ```python
 >>> import csv
->>> f = open('Data/camion.csv')
+>>> f = open('../Data/camion.csv')
 >>> rows = csv.reader(f)
 >>> headers = next(rows)
 >>> headers

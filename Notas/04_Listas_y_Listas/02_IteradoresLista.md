@@ -1,6 +1,6 @@
 # 4.2 Listas y búsqueda lineal
 
-En esta sección seguiremos usando Python, pero nos concentraremos en la parte algorítmica. Vas a escribir funciones sencillas (y no tanto) que realicen operaciones de bajo nivel sobre listas.
+En esta sección seguiremos usando Python, pero nos concentraremos en la parte algorítmica. Vas a escribir funciones sencillas (y no tanto) que realicen operaciones de bajo nivel sobre listas. 
 
 Éste es un curso de Python y de algoritmos. Python es un lenguaje de alto nivel. Esto significa que con pocas instrucciones permite realizar operaciones muy complejas. Los lenguajes de bajo nivel están más cerca del lenguaje del procesador y programar en ellos por ejemplo, un análisis de datos, es mucho más tedioso.
 
@@ -9,6 +9,8 @@ Sin embargo, entre las cosas que trae resueltas Python hay algunos algoritmos qu
 Queremos mostrarte en ejemplos concretos cómo distintas maneras de resolver  un mismo problema pueden dar lugar a algoritmos con eficiencias muy diferentes. A veces una es mejor para un uso y la otra para otro uso. En concreto, vamos a profundizar en el problema de la búsqueda y en el problema del ordenamiento, que son dos problemas elementales que ilustran conceptos centrales del desarrollo de algoritmos. 
 
 El uso adecuado de estos conceptos puede hacer la diferencia entre un algoritmo que termina el procesamiento en unos pocos minutos o uno que hay que dejar corriendo dos días (y rezar para que no se corte la electricidad mientras corre).
+
+Si querés podés complementar la lectura de esta sección con un [video introductorio](https://youtu.be/pd_fc1SB2UA) al tema.
 
 
 ## Búsqueda lineal
@@ -188,6 +190,8 @@ Probá tu función con algunos ejemplos:
 ```
 
 Agregale a tu programa `busqueda_en_listas.py` una función `buscar_n_elemento()` que reciba una lista y un elemento y devuelva la cantidad de veces que aparece el elemento en la lista. Probá también esta función con algunos ejemplos.
+
+Ayuda: si querés podés ver este [video](https://youtu.be/idzQ5ts77zE) donde hablamos de este ejercicio. Te dejamos también el [código](./buscar_elem.py) que usamos en el video.
 
 ### Ejercicio 4.4: Búsqueda de máximo y mínimo
 Agregale a tu archivo `busqueda_en_listas.py` una función `maximo()` que busque el valor máximo de una lista de números positivos. Python tiene el comando `max` que ya hace esto, pero como práctica te proponemos que completes el siguiente código:

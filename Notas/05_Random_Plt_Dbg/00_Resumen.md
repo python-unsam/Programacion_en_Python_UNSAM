@@ -1,5 +1,5 @@
-# 5. Aleatoridad
-En esta clase introducimos conceptos y técnicas relacionadas al azar. La aleatoriedad puede ser un gran aliado para realizar cálculos de fenómenos estocásticos pero también de fenómenos deterministas.
+# 5. Aleatoriedad
+En esta clase introducimos conceptos y técnicas relacionadas con el azar. La aleatoriedad puede ser una gran aliada a la hora de realizar cálculos de fenómenos estocásticos pero también de fenómenos deterministas.
 Introducimos los números pseudoaleatorios, así como el módulo `numpy` y sus métodos más sencillos.
 
 Presentamos una versión libre de un ejercicio lindísimo del curso `Exactas Programa` que te guía para que resuelvas la pregunta ¿cuántos paquetes de figuritas tengo que comprar para llenar un álbum? con un enfoque estadístico usando el [método de Montecarlo](https://es.wikipedia.org/wiki/M%C3%A9todo_de_Montecarlo).

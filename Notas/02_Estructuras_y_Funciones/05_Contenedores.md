@@ -188,7 +188,7 @@ s1 - s2                 # Diferencia de conjuntos
 En estos ejercicios, vas a empezar a construir un programa más largo. Trabajá en el archivo `ejercicios_python/Clase02/informe.py`.
 
 ### Ejercicio 2.15: Lista de tuplas
-El archivo `Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.6](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-26-transformar-un-script-en-una-funcion) de la sección anterior escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
+El archivo `../Data/camion.csv` contiene la lista de cajones cargados en un camión.  En el [Ejercicio 2.9](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-29-funciones-de-la-biblioteca) escribiste una función `costo_camion(nombre_archivo)` que leía el archivo y realizaba un cálculo.
 
 La función debería verse parecida a ésta:
 
@@ -204,14 +204,18 @@ def costo_camion(nombre_archivo):
     with open(nombre_archivo, 'rt') as f:
         rows = csv.reader(f)
         headers = next(rows)
-        for row in rows:
-            ncajones = int(row[1])
-            precio = float(row[2])
-            total += ncajones * precio
+        for i, row in enumerate(rows):
+            try:
+                ncajones = int(row[1])
+                precio = float(row[2])
+                total += ncajones * precio
+            except ValueError:
+                print('Faltan datos en la línea', i, 'del archivo.')
     return total
 
 ...
 ```
+
 
 Usando este código como guía, creá un nuevo archivo `informe.py`. En este archivo, definí una función `leer_camion(nombre_archivo)` que abre un archivo con el contenido de un camión, lo lee y devuelve la información como una lista de tuplas. Para hacerlo vas a tener que hacer algunas modificaciones menores al código de arriba.
 
