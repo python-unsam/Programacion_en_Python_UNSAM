@@ -311,7 +311,6 @@ Si no le pasamos ningún archivo, va a mostrar el resultado para `camion.csv` po
 Guardá tu programa en el archivo `camion_commandline.py` para entregar al final de la clase.
 
 
-
-Ahora que viste funciones, te dejamos un [video](https://youtu.be/3QNtSWBqQwk) en el que repasamos el [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-rustico-al-lenguaje-inclusivo) de lenguaje inclusivo usando una función.
+Te dejamos un [video](https://youtu.be/D4WI4qsuwrQ) explicando cómo funciona el pasaje de parámetros por linea de comandos en python. Además, ahora que viste funciones, te dejamos un [video](https://youtu.be/3QNtSWBqQwk) en el que repasamos el [Ejercicio 1.29](../01_Introduccion/05_Listas.md#ejercicio-129-traductor-rustico-al-lenguaje-inclusivo) de lenguaje inclusivo usando una función.
 
 

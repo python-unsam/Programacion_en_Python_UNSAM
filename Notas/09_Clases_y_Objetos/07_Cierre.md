@@ -11,6 +11,7 @@ La experiencia te va a permitir decidir (quizás tardíamente) cuándo es mas co
 Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
+
   1. El archivo `informe.py` del [Ejercicio 9.8](../09_Clases_y_Objetos/03_Herencia.md#ejercicio-98-volvamos-a-armar-todo).
   2. El archivo `lote.py` del [Ejercicio 9.9](../09_Clases_y_Objetos/04_Métodos_Especiales.md#ejercicio-99-mejor-salida-para-objetos).
   3. El archivo `torre_control.py` del [Ejercicio 9.12](../09_Clases_y_Objetos/05_Pilas_Colas.md#ejercicio-912-torre-de-control).

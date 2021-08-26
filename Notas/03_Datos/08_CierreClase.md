@@ -10,6 +10,7 @@ Tené en cuenta que algunos ejercicios serán corrgidos automáticamente, por es
 Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
+
     1. El archivo `solucion_de_errores.py` del [Ejercicio 3.1](../03_Datos/02_Bugs.md#ejercicio-31-semantica) y siguientes.
     2. El archivo `informe.py` del [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip).
     4. El archivo `tabla_informe.py` del [Ejercicio 3.16](../03_Datos/06_Formato.md#ejercicio-316-un-desafio-de-formato) (o del [Ejercicio 3.15](../03_Datos/06_Formato.md#ejercicio-315-agregar-encabezados) si no salió lo del signo $).

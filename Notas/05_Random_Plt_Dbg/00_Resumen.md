@@ -8,6 +8,8 @@ Introducimos los `arrays` de la biblioteca `numpy` en una sección un poco técn
 
 A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Cerramos introduciendo los scatterplots que permiten visualizar dos variables en simultáneo y facilitan el análisis exploratorio de datos.
 
+Te dejamos acá un [video](https://youtu.be/YvbWmM5auFk) donde repasamos el ejercicio \ref_ej{Ej_InvLista} de invertir una lista y un [video](https://youtu.be/MuBQB4_Tcyg) donde repasamos el ejercicio \ref_ej{Ej_Propagacion} de propagar.
+
 
 
 

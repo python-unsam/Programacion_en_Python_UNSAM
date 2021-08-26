@@ -8,6 +8,7 @@ Te recordamos que leas el [código de honor](../Codigo.md) del curso en el que h
 Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
+
     1. El archivo `buscar_precios.py` del [Ejercicio 2.7](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-27-buscar-precios).
     2. El archivo `costo_camion.py` del [Ejercicio 2.9](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-29-funciones-de-la-biblioteca).
     3. El archivo `camion_commandline.py` del [Ejercicio 2.10](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-210-ejecucion-desde-la-linea-de-comandos-con-parametros).

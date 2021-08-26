@@ -6,6 +6,7 @@ En esta clase trabajamos con funciones y creamos módulos. También aprendimos a
 Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
+
  1. El archivo `fileparse.py` del [Ejercicio 6.8](../06_Organizacion_y_Complejidad/03_Funciones.md#ejercicio-68-conversion-de-tipo) o del siguiente.
  2. El archivo `informe_funciones.py` de [Ejercicio 6.11](../06_Organizacion_y_Complejidad/04_Modulos.md#ejercicio-611-usemos-tu-modulo).
  3. El archivo `costo_camion.py` del [Ejercicio 6.12](../06_Organizacion_y_Complejidad/04_Modulos.md#ejercicio-612-un-poco-mas-alla).

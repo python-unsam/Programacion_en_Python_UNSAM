@@ -6,6 +6,8 @@ Esta es una adaptación de una actividad que diseñaron nuestres colegas de Exac
 
 El objetivo de esta actividad es hacer un programa en Python que responda la pregunta: **¿Cuántas figuritas hay que comprar para completar el álbum del Mundial?** Guardá todo lo que hagas en un archivo `figuritas.py`, te lo vamos a pedir al finalizar la clase.
 
+Si querés podés ver este [video](https://youtu.be/2aGgudx3nvE) donde presentamos estos ejercicios.
+
 ![Album de Figuritas](./completo.jpg)
 
 

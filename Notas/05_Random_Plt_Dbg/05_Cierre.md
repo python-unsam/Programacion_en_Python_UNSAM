@@ -6,6 +6,7 @@ En esta clase trabajamos con la generación de números (pseudo)aleatorios, el u
 Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
+
  1. El archivo `generala.py` del [Ejercicio 5.2](../05_Random_Plt_Dbg/01_Random.md#ejercicio-52-generala-no-necesariamente-servida).
  2. El archivo `termometro.py` del [Ejercicio 5.6](../05_Random_Plt_Dbg/01_Random.md#ejercicio-56-gaussiana) y el [Ejercicio 5.8](../05_Random_Plt_Dbg/02_NumPy_Arrays.md#ejercicio-58-guardar-temperaturas).
  3. El archivo `plotear_temperaturas.py` del [Ejercicio 5.9](../05_Random_Plt_Dbg/02_NumPy_Arrays.md#ejercicio-59-empezando-a-plotear).

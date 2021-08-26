@@ -36,7 +36,7 @@ Vamos a repasar las herramientas que vimos en esta clase aplicándolas a una bas
 
 
 ### Ejercicio 3.18: Lectura de los árboles de un parque
-Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información del parque especificado. La función debe devolver, en una lista un diccionario con todos los datos por cada árbol del parque elegido (recordá que cada fila del csv es un árbol).
+Definí una función `leer_parque(nombre_archivo, parque)` que abra el archivo indicado y devuelva una **lista de diccionarios** con la información del parque especificado. La lista debe tener un diccionario por cada árbol del parque elegido. Dicho diccionario debe tener los datos correspondientes a un árbol (recordá que cada fila del csv corresponde a un árbol).
 
 _Sugerencia: basate en la función `leer_camion()` y usá también el comando `zip` como hiciste en el_ [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip) _para combinar el encabezado del archivo con los datos de cada fila. Inicialmente no te preocupes por los tipos de datos de cada columna, pero cuando empieces a operar con una columna modificá esta función para que ese dato sea del tipo adecuado para operar._
 

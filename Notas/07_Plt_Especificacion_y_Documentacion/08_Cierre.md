@@ -12,6 +12,7 @@ También estudiamos diversos estilos de gráficos, como obtener un vistazo rápi
 Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
+
 1. El archivo `fileparse.py` del [Ejercicio 7.4](../07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md#ejercicio-74-de-archivos-a-objetos-cual-archivos).
 2. El archivo `informe.py` del [Ejercicio 7.5](../07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md#ejercicio-75-arreglemos-las-funciones-existentes).
 3. El archivo `documentacion.py` del [Ejercicio 7.8](../07_Plt_Especificacion_y_Documentacion/05_Especificacion_y_Documentacion.md#ejercicio-78-funciones-y-documentacion).
