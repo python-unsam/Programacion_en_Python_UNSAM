@@ -11,12 +11,11 @@ La experiencia te va a permitir decidir (quizás tardíamente) cuándo es mas co
 Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
-
-  1. El archivo `informe.py` del [Ejercicio 9.8](../09_Clases_y_Objetos/03_Herencia.md#ejercicio-98-volvamos-a-armar-todo).
-  2. El archivo `lote.py` del [Ejercicio 9.9](../09_Clases_y_Objetos/04_Métodos_Especiales.md#ejercicio-99-mejor-salida-para-objetos).
-  3. El archivo `torre_control.py` del [Ejercicio 9.12](../09_Clases_y_Objetos/05_Pilas_Colas.md#ejercicio-912-torre-de-control).
-  4. El archivo `canguros_buenos.py` del [Ejercicio 9.11](../09_Clases_y_Objetos/05_Pilas_Colas.md#ejercicio-911-canguros-buenos-y-canguros-malos).
-  5. El archivo `NDVI.py` del [Ejercicio 9.14](../09_Clases_y_Objetos/06_Teledeteccion.md#ejercicio-914-optativo-de-teledeteccion) (optativo).
+    1. El archivo `informe.py` del [Ejercicio 9.8](../09_Clases_y_Objetos/03_Herencia.md#ejercicio-98-volvamos-a-armar-todo).
+    2. El archivo `lote.py` del [Ejercicio 9.9](../09_Clases_y_Objetos/04_Métodos_Especiales.md#ejercicio-99-mejor-salida-para-objetos).
+    3. El archivo `torre_control.py` del [Ejercicio 9.12](../09_Clases_y_Objetos/05_Pilas_Colas.md#ejercicio-912-torre-de-control).
+    4. El archivo `canguros_buenos.py` del [Ejercicio 9.11](../09_Clases_y_Objetos/05_Pilas_Colas.md#ejercicio-911-canguros-buenos-y-canguros-malos).
+    5. El archivo `NDVI.py` del [Ejercicio 9.14](../09_Clases_y_Objetos/06_Teledeteccion.md#ejercicio-914-optativo-de-teledeteccion) (optativo).
 
 * Que completes [este formulario](https://docs.google.com/forms/d/1wD2hpfGzvUD7QcBHdZgwMe3EzIHd8APokzH-F27-_5U) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
 

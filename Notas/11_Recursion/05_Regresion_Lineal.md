@@ -50,7 +50,7 @@ Usar cuadrados mínimos tiene múltiples motivaciones que no podemos detallar ad
 
 Estas cosas se explican muy bien en [el apunte de Andrew Ng](http://cs229.stanford.edu/notes2020spring/cs229-notes1.pdf) que citamos antes.
 
-Recordá que en la [Sección 5.2](../05_Random_Plt_Dbg/02_NumPy_Arrays.md#fórmulas-matemáticas) vimos que calcular el promedio de estos errores cuadráticos es muy sencillo en numpy. También podés usar la función `mean_squared_error` del módulo `sklearn.metrics` que trae muchas métricas muy útiles.
+Recordá que en la [Sección 5.3](../05_Random_Plt_Dbg/03_NumPy_Arrays.md#fórmulas-matemáticas) vimos que calcular el promedio de estos errores cuadráticos es muy sencillo en numpy. También podés usar la función `mean_squared_error` del módulo `sklearn.metrics` que trae muchas métricas muy útiles.
 
 ### Ejemplo: el modelo de cuadrados mínimos
 

@@ -8,13 +8,10 @@ Introducimos los `arrays` de la biblioteca `numpy` en una sección un poco técn
 
 A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Cerramos introduciendo los scatterplots que permiten visualizar dos variables en simultáneo y facilitan el análisis exploratorio de datos.
 
-Te dejamos acá un [video](https://youtu.be/YvbWmM5auFk) donde repasamos el ejercicio \ref_ej{Ej_InvLista} de invertir una lista y un [video](https://youtu.be/MuBQB4_Tcyg) donde repasamos el ejercicio \ref_ej{Ej_Propagacion} de propagar.
 
-
-
-
-* [5.1 Random](01_Random.md)
-* [5.2 NumPy](02_NumPy_Arrays.md)
-* [5.3 El album de Figuritas](03_Figuritas.md)
-* [5.4 Gráficos del Arbolado porteño](04_Arboles3_plt.md)
-* [5.5 Cierre de la clase](05_Cierre.md)
+* [5.1 Introducción.](01_Introduccion.md)
+* [5.2 Random](02_Random.md)
+* [5.3 NumPy](03_NumPy_Arrays.md)
+* [5.4 El album de Figuritas](04_Figuritas.md)
+* [5.5 Gráficos del Arbolado porteño](05_Arboles3_plt.md)
+* [5.6 Cierre de la clase](06_Cierre.md)

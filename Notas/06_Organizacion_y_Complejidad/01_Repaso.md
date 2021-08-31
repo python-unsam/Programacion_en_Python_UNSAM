@@ -2,8 +2,8 @@
 
 A continuación dejamos unos links a unos videos sobre un par de ejercicios de la clase 5:
 
-1. Ejercicio [Ejercicio 5.2](../05_Random_Plt_Dbg/01_Random.md#ejercicio-52-generala-no-necesariamente-servida) sobre la probabilidad de obtener una generala no servida resuelto por [Matias](https://youtu.be/D_mipwwZjhM) y por [Rafael](https://youtu.be/c2SO3-iSd04).
-2. Ejercicio [Ejercicio 5.15](../05_Random_Plt_Dbg/03_Figuritas.md#ejercicio-515) del [álbum de Figuritas](https://youtu.be/lSVNxPoRLJA)
+1. Ejercicio [Ejercicio 5.2](../05_Random_Plt_Dbg/02_Random.md#ejercicio-52-generala-no-necesariamente-servida) sobre la probabilidad de obtener una generala no servida resuelto por [Matias](https://youtu.be/D_mipwwZjhM) y por [Rafael](https://youtu.be/c2SO3-iSd04).
+2. Ejercicio [Ejercicio 5.15](../05_Random_Plt_Dbg/04_Figuritas.md#ejercicio-515) del [álbum de Figuritas](https://youtu.be/lSVNxPoRLJA)
 
 ## Análisis de alternativas para *propagar*
 
