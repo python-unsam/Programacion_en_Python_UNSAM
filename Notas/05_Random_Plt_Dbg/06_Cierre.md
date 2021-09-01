@@ -7,7 +7,7 @@ Para cerrar esta clase te pedimos dos cosas:
 
 * Que recopiles las soluciones de los siguientes ejercicios:
     1. El archivo `generala.py` del [Ejercicio 5.2](../05_Random_Plt_Dbg/02_Random.md#ejercicio-52-generala-no-necesariamente-servida).
-    2. El archivo `termometro.py` del [Ejercicio 5.6](../05_Random_Plt_Dbg/02_Random.md#ejercicio-56-gaussiana) y el [Ejercicio 5.8](../05_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-58-guardar-temperaturas).
+    2. El archivo `termometro.py` del [Ejercicio 5.8](../05_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-58-guardar-temperaturas).
     3. El archivo `plotear_temperaturas.py` del [Ejercicio 5.9](../05_Random_Plt_Dbg/03_NumPy_Arrays.md#ejercicio-59-empezando-a-plotear).
     4. El archivo `figuritas.py` abarcando lo hecho con figuritas (al menos) hasta el [Ejercicio 5.15](../05_Random_Plt_Dbg/04_Figuritas.md#ejercicio-515).
     5. El archivo `arboles.py` incluyendo al menos el [Ejercicio 5.26](../05_Random_Plt_Dbg/05_Arboles3_plt.md#ejercicio-526-scatterplot-diametro-vs-alto-de-jacarandas).

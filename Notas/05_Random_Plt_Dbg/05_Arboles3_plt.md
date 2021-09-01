@@ -25,11 +25,11 @@ _Observación:_ Spyder tiene opciones para mostrar las figuras dentro de la mism
 ### Ejercicio 5.26: Scatterplot (diámetro vs alto) de Jacarandás
 En este ejercicio introducimos un nuevo tipo de gráfico: _el gráfico de dispersión_  o _scatterplot_. El mismo usa coordenadas cartesianas para mostrar los valores de dos variables para un conjunto de datos. 
 
-En este caso vamos a graficar un punto en el plano (x,y) por cada árbol en el dataset (o para cada arbol de cierta especie). El punto correspondiente a un árbol con diámetro *d* y altura *h* será ubicado en la posición *x=d* y *y=h*. Este tipo de gráfico permite visualizar relaciones o tendencias entre las variables y es muy útil en el análisis exploratorio de datos.
+En este caso vamos a graficar un punto en el plano (x,y) por cada árbol en el dataset (o para cada árbol de cierta especie). El punto correspondiente a un árbol con diámetro *d* y altura *h* será ubicado en la posición *x=d* e *y=h*. Este tipo de gráfico permite visualizar relaciones o tendencias entre las variables y es muy útil en el análisis exploratorio de datos.
 
-Usando como base tu trabajo del [Ejercicio 4.17](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-417-lista-de-altos-y-diametros-de-jacaranda), vas a generar un scatterplot para visualizar la relación entre diámetro y alto de los Jacarandás del dataset.
+Escribí una función `scatter_hd(lista_de_pares)` que a partir de una lista de pares como la que generaste en el [Ejercicio 4.17](../04_Listas_y_Listas/05_Arboles2_LC.md#ejercicio-417-lista-de-altos-y-diametros-de-jacaranda) genere un scatterplot para visualizar la relación entre altura y diámetro de los Jacarandás del dataset.
 
-Si ya tenés una lista o un vector *d* con diámetros y otra *h* con altos, es sencillo hacer un primer scatterplot:
+Ayuda: si ya tenés una lista o un vector *d* con diámetros y otra *h* con altos, es sencillo hacer un primer scatterplot:
 
 ```python
 import matplotlib.pyplot as plt
@@ -37,8 +37,9 @@ plt.scatter(d,h)
 ```
 
 Algunas recomendaciones:
+
 1. Convertí la lista generada en un `ndarray` de `numpy`, de esa forma podés usar rebanadas para obtener un vector *d* con diámteros y otro *h* con alturas inmediatamente.
-2. Mirá algún ejemplo como [este](https://matplotlib.org/3.3.1/gallery/shapes_and_collections/scatter.html#sphx-glr-gallery-shapes-and-collections-scatter-py) y tratá de entender cómo se usan los parámetros opcionales *s* (de size, tamaño) y *c* (de color) y *alpha* (de transparencia) de la función [matplotlib.pyplot.scatter](https://matplotlib.org/3.3.1/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter). 
+2. Mirá algún ejemplo como [éste](https://matplotlib.org/3.3.1/gallery/shapes_and_collections/scatter.html#sphx-glr-gallery-shapes-and-collections-scatter-py) y tratá de entender cómo se usan los parámetros opcionales *s* (de size, tamaño) y *c* (de color) y *alpha* (de transparencia) de la función [matplotlib.pyplot.scatter](https://matplotlib.org/3.3.1/api/_as_gen/matplotlib.pyplot.scatter.html#matplotlib.pyplot.scatter). 
 3. Usando el parámetro *alpha* hacé que el gráfico permita visualizar dónde hay mayor densidad de datos.
 
 ¿Ves alguna relación entre el diámetro y el alto de los Jacarndás? ¿Te parece que es una relación lineal o de otro tipo?

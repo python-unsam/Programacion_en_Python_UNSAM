@@ -9,7 +9,7 @@ Introducimos los `arrays` de la biblioteca `numpy` en una sección un poco técn
 A lo largo de la clase iremos haciendo nuestros primeros gráficos en Python. Cerramos introduciendo los scatterplots que permiten visualizar dos variables en simultáneo y facilitan el análisis exploratorio de datos.
 
 
-* [5.1 Introducción.](01_Introduccion.md)
+* [5.1 Repaso](01_Repaso.md)
 * [5.2 Random](02_Random.md)
 * [5.3 NumPy](03_NumPy_Arrays.md)
 * [5.4 El album de Figuritas](04_Figuritas.md)

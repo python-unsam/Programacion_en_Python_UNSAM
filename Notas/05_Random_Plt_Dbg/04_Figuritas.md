@@ -83,9 +83,13 @@ Ejecutá `n_repeticiones = 1000` veces la función anterior utilizando `figus_to
 
 
 ### Ejercicio 5.15: 
-Escribí una función llamada `exp_figus()`que llame `n_repeticiones` veces a la función `cuantas_figus(figus_total=670)` y guarde en una lista cada uno de los resultados obtenidos. Usando esa lista que calcule y devuelva el número estimado de figuritas que hay que comprar, en promedio, para completar el álbum (de 670 figuritas).
+Escribí una función llamada `experimento_figus(n_repeticiones, figus_total)` que simule el llenado de `n_repeticiones` álbums de `figus_total` figuritas y devuelva el número estimado de figuritas que hay que comprar, en promedio, para completar el álbum.
+
+Para esto, una posibilidad es que la función `experimento_figus()` llame a la función `cuantas_figus()` tantas veces como lo indica el parámetro `n_repeticiones` y guarde los resultados parciales en una lista, a partir de la cual luego realice el promedio.
 
 Guardá todo lo que hiciste hasta aquí sobre figuritas en un archivo `figuritas.py` para el cierre de la clase. Lo que sigue profundiza un poco más en el asunto.
+
+¿Cuánto te da para 100 repeticiones en un álbum de 670 figuritas?
 
 
 ### Ahora con paquetes
@@ -164,7 +168,7 @@ Repetí suponiendo que no hay figuritas repetidas en un paquete. ¿Cuánto cambi
 ### Ejercicio 5.24: Cooperar vs competir
 Por último, suponé que cinco amigues se juntan y deciden compartir la compra de figuritas y el llenado de sus cinco álbumes solidariamente. Calculá cuántos paquetes deberían comprar si deben completar todos. Hacé 100 repeticiones y compará el resultado con la compra individual que calculaste antes.
 
-Acordate de guardar todo lo que hiciste sobre figuritas en un archivo `figuritas.py`.
+Acordate de guardar todo lo que hiciste sobre figuritas en un archivo `figuritas.py`. Tené en cuenta que el archivo que entregues debe poder ser importado para testear la función `experimento_figus()` sin que se ejecuten comandos no deseados.
 
 
 

@@ -832,13 +832,15 @@ array([1., 2., 3., 4., 5., 6., 7., 8.])
 Las funciones `savetxt()` y `loadtxt()` aceptan parámetros adicionales para especificar el encabezado y los delimitadores. Si bien los archivos de texto son sencillos para compartir, los archivos .npy (y .npz) son más pequeños y se leen más rápidamente. 
 
 ### Ejercicio 5.8: Guardar temperaturas
-Ampliá el código de la función `prom_temp(n)` en tu archivo `termometro.py` que escribiste en el [Ejercicio 5.6](../05_Random_Plt_Dbg/02_Random.md#ejercicio-56-gaussiana) para que guarde el vector con las temperaturas simuladas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `Temperaturas.npy`. Hacé que corra 999 veces en lugar de solo 99. Lo vas a necesitar en el cierre de clase.
+Ampliá el código de la función `medir_temp(n)` en tu archivo `termometro.py` que escribiste en el [Ejercicio 5.6](../05_Random_Plt_Dbg/02_Random.md#ejercicio-56-gaussiana) para que además de devolver las temperaturas simuladas, guarde el vector con estas temperaturas en el directorio `Data` de tu carpeta de ejercicios, en un archivo llamado `temperaturas.npy`. Hacé que corra `n = 999` veces. 
+
+Este ejercicio te lo vamos a pedir en el cierre de clase.
 
 
 ### Ejercicio 5.9: Empezando a plotear
 En un rato vamos a empezar a hacer gráficos con Python. Aquí solo un botón de muestra.
 
-Escribí un archivo `plotear_temperaturas.py` que lea el archivo de datos  `Temperaturas.npy` con 999 mediciones simuladas que creaste recién y, usando el siguiente ejemplo, hacé un histograma de las temperaturas simuladas:
+Escribí una función `plotear_temperaturas()` en un archivo `plotear_temperaturas.py` que lea el archivo de datos `temperaturas.npy` (debería tener las 999 mediciones simuladas que creaste recién) y haga un histograma de las temperaturas simuladas. Te podés basar en el siguiente ejemplo:
 
 ```python
 import matplotlib.pyplot as plt

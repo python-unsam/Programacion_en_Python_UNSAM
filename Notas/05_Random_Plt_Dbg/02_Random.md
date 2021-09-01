@@ -47,7 +47,7 @@ print(f'Podemos estimar la probabilidad de sacar generala servida mediante {prob
 ### Ejercicio 5.2: Generala no necesariamente servida
 Si uno juega con las reglas originales (se puede volver a tirar algunos de los cinco dados hasta dos veces, llegando hasta a tres tiradas en total) siguiendo una estrategia que intente obtener generala (siempre guardar los dados que más se repiten y tirar nuevamente los demás) es más probable obtener una generala que si sólo consideramos la generala servida. 
 
-Escribí una función llamada `prob_generala()` que use las funciones del [Ejercicio 5.1](../05_Random_Plt_Dbg/02_Random.md#ejercicio-51-generala-servida) y estime y devuelva la probabilidad de obtener una generala al finalizar las tres tiradas de una mano. Guardala en un archivo `generala.py` para el cierre de la clase.
+Escribí una función llamada `prob_generala(N)` que, a partir de un parámetro `N` y usando las funciones del [Ejercicio 5.1](../05_Random_Plt_Dbg/02_Random.md#ejercicio-51-generala-servida) realice una simulación con `N` repeticiones, para estimar la probabilidad de obtener una generala al finalizar una mano de tres tiradas. La función debe devolver un número entre 0 y 1. Guardala en un archivo `generala.py` para el cierre de la clase.
 
 _Extra:_ Hay gente que, si en la primera tirada le salen todos dados diferentes, los mete al cubilete y tira los cinco nuevamente. Otras personas, eligen uno de esos dados diferentes, lo guardan, y tiran sólo los cuatro restantes. ¿Podés determinar, por medio de simulaciones, si hay una de estas estrategias que sea mejor que la otra?
 
@@ -187,11 +187,11 @@ La función `random.normalvariate(mu,sigma)` genera números aleatorios según e
 
 La distribución normal tiene muchos usos. Uno de ellos es modelar errores experimentales, es decir la diferencia entre el valor medido de una magnitud física y el valor real de dicha magnitud. 
 
-Hagamos algún ejercicio sencillo antes de terminar. Supongamos que una persona se compra un termómetro que mide la temperatura con un error aleatorio de distribución normal con media 0 y desvío estándar de 0.2 grados (error gaussiano). Si la temperatura real de la persona es de 37.5 grados, simulá usando `normalvariate()` (con `mu` y `sigma` adecuados) `n = 99` valores medidos por el termómetro. Escribí una función llamada `medir_temp(n)` que simule `n` mediciones y las devuelva en una lista.
+Hagamos algún ejercicio sencillo antes de terminar. Supongamos que una persona se compra un termómetro que mide la temperatura con un error aleatorio de distribución normal con media 0 y desvío estándar de 0.2 grados (error gaussiano). Si la temperatura real de la persona es de 37.5 grados, simulá usando `normalvariate()` (con `mu` y `sigma` adecuados) `n` valores medidos por el termómetro. Escribí una función llamada `medir_temp(n)` que simule `n` mediciones y las devuelva en una lista.
 
-Escribí una función llamada `prom_temp(n)` que a partir de los `n` valores generados por `medir_temp(n)` devuelva una tupla con el valor máximo, el mínimo, el promedio y la mediana (en ese orden) de estas `n` mediciones. Guardá tu script en el archivo `termometro.py`.
+Escribí una función llamada `resumen_temp(n)` que realice una simulación de `n` temperaturas (usando la función `medir_temp(n)`) y devuelva una tupla con el valor máximo, el mínimo, el promedio y la mediana (en ese orden) de estas `n` mediciones. Guardá tu script en el archivo `termometro.py`.
 
-_Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de Python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles](https://es.wikipedia.org/wiki/Cuartil)?_
+_Para encontrar el máximo y mínimo podés usar y agrandar tu código de `busqueda_en_listas.py` o usar las primitivas `max()` y `min()` de Python. El **promedio** es la suma de los valores dividido su cantidad; podés programarla desde cero o usar la primitiva `sum()` y un cociente por n. Finalmente, la **mediana** de una cantidad impar de valores es el valor en la posición central cuando los datos están ordenados. Acá podés usar el método `sort()` de listas. En el caso de tratarse de una cantidad par de valores, la **mediana** se obtiene promediando los dos valores centrales. Y ya que estamos, ¿se te ocurre cómo encontrar los [cuartiles](https://es.wikipedia.org/wiki/Cuartil)?_
 
 
 
