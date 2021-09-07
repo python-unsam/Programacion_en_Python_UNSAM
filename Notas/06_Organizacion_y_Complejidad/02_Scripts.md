@@ -237,7 +237,7 @@ for row in informe:
 En el siguiente ejercicio vamos a volver a ese programa y organizarlo mejor usando funciones.
 
 ### Ejercicio 6.4: Estructurar un programa como una colección de funciones
-Copiá el contenido de tu programa `tabla_informe.py` en un nuevo archivo llamado `informe_funciones.py` y guardá este nuevo archivo en el directorio de ejercicios de la clase actual. Por si no tenés una versión andando el archivo `tabla_informe.py`, te dejamos [acá](./tabla_informe.py) una para que puedas usar.
+Copiá el contenido de tu programa `tabla_informe.py` en un nuevo archivo llamado `informe_funciones.py` y guardá este nuevo archivo en el directorio de ejercicios de la clase actual. Por si no tenés una versión andando del archivo `tabla_informe.py`, te dejamos [acá](./tabla_informe.py) una para que puedas usar.
 Ahora, dejá el programa `tabla_informe.py`. Vas a modificar el archivo `informe_funciones.py` de modo que todas las operaciones principales, incluyendo cálculos e impresión, sean llevados a cabo por una colección de funciones. Guarda la nueva versión en un archivo `informe_funciones.py`. Más específicamente:
 
 * Creá una función `imprimir_informe(informe)` que imprima el informe.
@@ -252,7 +252,7 @@ Juntá la última parte de tu programa en una única función `informe_camion(no
 informe_camion('../Data/camion.csv', '../Data/precios.csv')
 ```
 
-En su versión final tu programa será una serie de definiciones de funciones seguidos por un único llamado a la funcion `informe_camion()` (la cual ejecuta todos los pasos que constituyen tu programa).
+En su versión final tu programa será una serie de definiciones de funciones seguidos por un único llamado a la funcion `informe_camion()` (la cual ejecuta todos los pasos que constituyen tu programa). Acordate de guardar esta versión en el archivo `informe_funciones.py` que más adelante lo vas a volver a usar.
 
 Cuando tu programa es una única función, es muy simple ejecutarlo con diferentes entradas. Por ejemplo, después de ejecutar tu programa probá estos comandos en modo interactivo:
 

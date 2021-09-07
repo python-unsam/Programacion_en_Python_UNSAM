@@ -214,8 +214,7 @@ Importá sólo la función para evitar escribir el nombre del módulo:
 ```
 
 ### Ejercicio 6.11: Usemos tu módulo
-En el [Ejercicio 6.4](../06_Organizacion_y_Complejidad/02_Scripts.md#ejercicio-64-estructurar-un-programa-como-una-coleccion-de-funciones)
-escribiste un programa `informe_funciones.py` que produce un informe como éste:
+Retomemos la versión de `informe_funciones.py` del [Ejercicio 6.5](../06_Organizacion_y_Complejidad/02_Scripts.md#ejercicio-65-crear-una-funcion-de-alto-nivel-para-la-ejecucion-del-programa) que produce un informe como éste:
 
 ```
     Nombre    Cajones     Precio     Cambio
@@ -229,10 +228,11 @@ escribiste un programa `informe_funciones.py` que produce un informe como éste:
    Naranja        100     $70.44      35.84
 ```
 
-Retomá ese programa y modificalo de modo que todo el procesamiento de archivos de entrada de datos se haga usando funciones del módulo `fileparse`. Para lograr eso, importá `fileparse` como un módulo y cambiá las funciones `leer_camion()` y `leer_precios()` para que usen la función `parse_csv()` .
+Modificá este programa de modo que todo el procesamiento de archivos de entrada de datos se haga usando funciones del módulo `fileparse`. Para lograr eso, importá `fileparse` como un módulo y cambiá las funciones `leer_camion()` y `leer_precios()` para que usen la función `parse_csv()` .
 
 Guiate por el ejemplo interactivo que dimos un poco más arriba.
 Al final, deberías obtener exactamente el mismo resultado que al principio.
+Este archivo lo vas a tener que entregar al final de la clase. Por favor comentá la línea que llama a la función `informe_camion()` de manera que tu archivo contenga solamente definiciones de funciones y lo podamos evaluar automáticamente.
 
 ### Ejercicio 6.12: Un poco más allá
 El programa `costo_camion.py` lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo. La última versión que deberías tener de este archivo es la del [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip). Copiá el archivo `costo_camion.py` al directorio de ejercicios de la clase actual.
