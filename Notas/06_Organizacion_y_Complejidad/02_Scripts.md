@@ -28,13 +28,13 @@ Cuando hayas escrito un script útil, éste va a comenzar a crecer en funciones 
 Los nombres deben estar definidos antes de usarse.
 
 ```python
-def cuadrado (x):
+def cuadrado(x):
     return x*x
 
 a = 42
 b = a + 2     # Requiere que 'a' haya sido definido antes.
 
-z = cuadrado (b) # Requiere que 'cuadrado' y 'b' estén definidos.
+z = cuadrado(b) # Requiere que 'cuadrado' y 'b' estén definidos.
 ```
 
 **El orden importa.**
@@ -112,7 +112,7 @@ El estilo que preferimos es definir funciones desde abajo hacia arriba ("*bottom
 
 ### El estilo *Bottom-Up*
 
-Este estilo trata a las funciones como ladrillos. Los ladrillos simples ó más pequeños se definen primero, y luego se usan para armar funciones más complejas.
+Este estilo trata a las funciones como ladrillos. Los ladrillos simples o más pequeños se definen primero, y luego se usan para armar funciones más complejas.
 
 ```python
 # miprograma.py
@@ -237,7 +237,8 @@ for row in informe:
 En el siguiente ejercicio vamos a volver a ese programa y organizarlo mejor usando funciones.
 
 ### Ejercicio 6.4: Estructurar un programa como una colección de funciones
-Volvé a tu programa `tabla_informe.py` y modificalo de modo que todas las operaciones principales, incluyendo cálculos e impresión, sean llevados a cabo por una colección de funciones. Guarda la nueva versión en un archivo `informe_funciones.py`. Más específicamente:
+Copiá el contenido de tu programa `tabla_informe.py` en un nuevo archivo llamado `informe_funciones.py` y guardá este nuevo archivo en el directorio de ejercicios de la clase actual. Por si no tenés una versión andando el archivo `tabla_informe.py`, te dejamos [acá](./tabla_informe.py) una para que puedas usar.
+Ahora, dejá el programa `tabla_informe.py`. Vas a modificar el archivo `informe_funciones.py` de modo que todas las operaciones principales, incluyendo cálculos e impresión, sean llevados a cabo por una colección de funciones. Guarda la nueva versión en un archivo `informe_funciones.py`. Más específicamente:
 
 * Creá una función `imprimir_informe(informe)` que imprima el informe.
 * Cambiá la última parte del programa de modo que consista sólo en una serie de llamados a funciones, sin ningún cómputo.

@@ -181,6 +181,7 @@ Kale no figura en el listado de precios.
 
 Guardá este código en un archivo `buscar_precios.py` para entregar al final de la clase.
 
+Acá te dejamos un [video](https://youtu.be/urLFDsfXsug) en el que resolvemos un ejercicio similar al [Ejercicio 2.7](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-27-buscar-precios) de diferentes formas, usando for y usando while.
 
 ### Ejercicio 2.8: Administración de errores
 Probá correr la siguiente función ingresando tu edad real, una edad escrita con letras (como "ocho") y una edad negativa (-3):

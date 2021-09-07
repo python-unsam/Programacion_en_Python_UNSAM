@@ -157,7 +157,7 @@ Para estos ejercicios que involucran módulos, es de suma importancia que te ase
 ### Ejercicio 6.10: Importar módulos
 En el [Ejercicio 6.6](../06_Organizacion_y_Complejidad/03_Funciones.md#ejercicio-66-parsear-un-archivo-csv) creamos una función llamada `parse_csv()` para parsear el contenido de archivos de datos en formato CSV. Ahora vamos a ver cómo usar esa función en otros programas. 
 
-Empezá por copiarte los archivos `rebotes.py`, `hipoteca.py` y `fileparse.py` a la carpeta de ejercicios de esta clase. Los vamos a importar.
+Empezá por copiarte los archivos `rebotes.py` e `hipoteca.py` a la carpeta de ejercicios de esta clase. Los vamos a importar.
 
 Con el directorio de trabajo adecuado (puede que tengas que reiniciar tu intérprete para que tome efecto un cambio), intentá importar los programas que escribiste antes. Con sólo importarlos deberías ver su salida exactamente como cuando los terminaste de escribir.
 
@@ -229,13 +229,13 @@ escribiste un programa `informe_funciones.py` que produce un informe como éste:
    Naranja        100     $70.44      35.84
 ```
 
-Retomá ese programa (si lo perdiste, te dejamos una versión para que la leas y la puedas usar) y modificalo de modo que todo el procesamiento de archivos de entrada de datos se haga usando funciones del módulo `fileparse`. Para lograr éso, importá `fileparse` como un módulo y cambiá las funciones `leer_camion()` y `leer_precios()` para que usen la función `parse_csv()` .
+Retomá ese programa y modificalo de modo que todo el procesamiento de archivos de entrada de datos se haga usando funciones del módulo `fileparse`. Para lograr eso, importá `fileparse` como un módulo y cambiá las funciones `leer_camion()` y `leer_precios()` para que usen la función `parse_csv()` .
 
 Guiate por el ejemplo interactivo que dimos un poco más arriba.
 Al final, deberías obtener exactamente el mismo resultado que al principio.
 
 ### Ejercicio 6.12: Un poco más allá
-En [Ejercicio 2.6](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-26-transformar-un-script-en-una-funcion) escribiste el programa `costo_camion.py` que lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo.
+El programa `costo_camion.py` lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo. La última versión que deberías tener de este archivo es la del [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip). Copiá el archivo `costo_camion.py` al directorio de ejercicios de la clase actual.
 
 ```python
 >>> import costo_camion
@@ -243,8 +243,7 @@ En [Ejercicio 2.6](../02_Estructuras_y_Funciones/03_Funciones.md#ejercicio-26-tr
 47671.15
 >>>
 ```
-
-Modificá el archivo `costo_camion.py` para que use la función `informe_funciones.leer_camion()` del programa `informe_funciones.py`.
+Ahora, modifica el archivo `costo_camion.py` para que use la función `informe_funciones.leer_camion()` del programa `informe_funciones.py`.
 
 ### Comentario
 

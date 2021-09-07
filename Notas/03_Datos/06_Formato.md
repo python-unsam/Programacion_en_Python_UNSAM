@@ -148,7 +148,7 @@ A pesar de que suelen usarse dentro de un `print`, el formato de cadenas no est�
 ```
 
 ### Ejercicio 3.13: Recolectar datos
-En el [Ejercicio 2.18](../02_Estructuras_y_Funciones/05_Contenedores.md#ejercicio-218-balances), escribiste un programa llamado `informe.py` que calculaba las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. Copiá su contenido en un archivo `tabla_informe.py`. En este ejercicio, vas a comenzar a modificar `tabla_informe.py` para producir una tabla como ésta:
+En el [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip), modificaste tu programa `informe.py` que calcula las ganancias o pérdidas de un camión que compra a productores y vende en el mercado. Copiá su contenido en un nuevo archivo `tabla_informe.py` y guarda éste también en la carpeta de ejercicios de esta clase. Ahora dejá el archivo `informe.py`, y trabajá sobre `tabla_informe.py`. Lo vas a modificar para producir una tabla como ésta:
 
 ```
  Nombre     Cajones     Precio     Cambio

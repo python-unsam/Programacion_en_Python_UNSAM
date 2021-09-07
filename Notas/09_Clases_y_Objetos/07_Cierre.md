@@ -1,6 +1,6 @@
 # 9.7 Cierre de la clase
 
-En esta clase vimos las ventajas de estructurar un programa con las ideas Programación Orientada a Objetos. Vimos cómo podés definir tus propias clases y te mostramos cómo este paradigma puede aportar tanto a la organización de un programa "estático" como también para preparar programas para que sean fácilmente extensibles. 
+En esta clase vimos las ventajas de estructurar un programa con las ideas de Programación Orientada a Objetos. Vimos cómo podés definir tus propias clases y te mostramos cómo este paradigma puede aportar tanto a la organización de un programa "estático" como también para preparar programas para que sean fácilmente extensibles. 
 
 Una de las formas de extender el comportamiento de un programa es definir una interfase de interacción entre objetos de modo que un comportamiento nuevo pueda programarse sin tocar (casi) el código preexistente. 
 

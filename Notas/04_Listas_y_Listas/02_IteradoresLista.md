@@ -239,8 +239,9 @@ def invertir_lista(lista):
 ```
 
 Guardá la función en el archivo `invlista.py` y probala con las siguientes listas:
-1. `[1, 2, 3, 4, 5]`
-2. `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
+
+    1. `[1, 2, 3, 4, 5]`
+    2. `['Bogotá', 'Rosario', 'Santiago', 'San Fernando', 'San Miguel']`
 
 ### Ejercicio 4.6: Propagación
 Imaginate una fila con varios fósforos uno al lado del otro. Los fósforos pueden estar en tres estados: nuevos, prendidos fuego o ya gastados (carbonizados).
