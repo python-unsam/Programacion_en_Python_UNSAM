@@ -130,7 +130,7 @@ En este Ejercicio vamos a rehacer los gráficos del ejemplo anterior, pero prime
 3. Graficá ambas curvas en una misma figura, nombrando adecuadamente las curvas, los ejes y la figura completa. Jugá con `xlim` e `ylim` para visualizar bien las dos curvas, aunque tengas que restringir el rango.
 4. ¿Qué observas en estos gráficos? ¿Qué podés decir sobre la complejidad de cada algoritmo? ¿Son similares?
 
-Definí una función `graficar_bbin_vs_seq(m, k)` que a partir de los parámetros dados genere un experimento y su gráfico, como en el punto 3, donde se comparan ambos algoritmos de búsqueda.
+Definí una función `graficar_bbin_vs_bseq(m, k)` que a partir de los parámetros dados genere un experimento y su gráfico, como en el punto 3, donde se comparan ambos algoritmos de búsqueda.
 
 Te vamos a pedir este ejercicio al final de la clase. Guardalo en `plot_bbin_vs_bsec.py` y preparalo para que se pueda corregir automáticamente. Para eso, asegurate de eliminar o comentar todo lo que no sean definiciones de funciones.
 

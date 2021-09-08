@@ -1,0 +1,233 @@
+site_name: Programación en Python
+# site_url: https://matiaslopez.github.io/python_unsam_test/
+site_url: https://programacionpython.ecyt.unsam.edu.ar/material/
+site_description: Curso de programación en Python de UNSAM
+site_author: UNSAM
+
+# version: 2
+
+# mkdocs:
+#   configuration: mkdocs.yml
+
+# Optionally set the version of Python and requirements required to build your docs
+# python:
+#    version: 3.7
+#    install:
+#    - requirements: docs/requirements.txt
+
+
+markdown_extensions:
+    - toc:
+        permalink: True
+        separator: "-"
+
+# plugins:
+#     - with-pdf:
+        # author: Les Mosquiteres
+        #copyright: ANY TEXT
+        #
+        #cover: false
+        #back_cover: true
+        #cover_title: TITLE TEXT
+        # cover_subtitle: Les Mosquiteres
+        #custom_template_path: TEMPLATES PATH
+        #
+        #toc_title: TOC TITLE TEXT
+        #heading_shift: false
+        #toc_level: 3
+        #ordered_chapter_level: 2
+        #excludes_children:
+        #    - 'release-notes/:upgrading'
+        #    - 'release-notes/:changelog'
+        #
+        #exclude_pages:
+        #    - 'bugs/'
+        #    - 'appendix/contribute/'
+        #convert_iframe:
+        #    - src: IFRAME SRC
+        #      img: POSTER IMAGE URL
+        #      text: ALTERNATE TEXT
+        #    - src: ...
+        #two_columns_level: 3
+        #
+        #render_js: true
+        #headless_chrome_path: headless-chromium
+        #
+        #output_path: any-place/document.pdf
+        #enabled_if_env: ENABLE_PDF_EXPORT
+        #
+        #debug_html: true
+        #show_anchors: true
+        #verbose: true
+# plugins:
+#   - exclude:
+#         # glob:
+#         #     - exclude/this/path/*
+#         #     - "*.tmp"
+#         #     - "*.pdf"
+#         #     - "*.gz"
+#         # regex:
+#         #     - '.*\.(tmp|bin|tar)$'
+#         glob:
+#             - 02_Estructuras_y_Funciones/*
+#             - 03_Datos/*
+#             - 04_Listas_y_Listas/*
+#             - 05_Random_Plt_Dbg/*
+#             - 06_Organizacion_y_Complejidad/*
+#             - 07_Plt_Especificacion_y_Documentacion/*
+#             - 08_Fechas_Carpetas_y_Pandas/*
+#             - 09_Clases_y_Objetos/*
+#             - 10_Generadores_e_Iteradores/*
+#             - 11_Recursion/*
+#             - 12_Ordenamiento/*
+      # regex:
+        # - '.*\.(tmp|bin|tar)$'
+
+nav:
+  - Inicio: index.md
+  - "Sobre el curso":
+        - Cursada.md
+        - "Contenidos": Contenidos.md
+        - "Instalación de Python": Instalacion.md
+        - "Código de conducta": Codigo.md
+        - "Slack": Slack.md
+  - Unidades:
+    - "01 - Introducción":
+        - 01_Introduccion/00_Resumen.md
+        - 01_Introduccion/01_Python.md
+        - 01_Introduccion/02_Hello_world.md
+        - 01_Introduccion/03_Numeros.md
+        - 01_Introduccion/04_Strings.md
+        - 01_Introduccion/05_Listas.md
+        - 01_Introduccion/06_CierreClase.md
+    - "02 - Estructuras y funciones":
+        - 02_Estructuras_y_Funciones/00_Resumen.md
+        - 02_Estructuras_y_Funciones/01_Introduccion_y_repaso.md
+        - 02_Estructuras_y_Funciones/02_Archivos.md
+        - 02_Estructuras_y_Funciones/03_Funciones.md
+        - 02_Estructuras_y_Funciones/04_TiposDatos.md
+        - 02_Estructuras_y_Funciones/05_Contenedores.md
+        - 02_Estructuras_y_Funciones/06_CierreClase.md
+    - "03 - Trabajando con datos":
+        - 03_Datos/00_Resumen.md
+        - 03_Datos/01_Introduccion.md
+        - 03_Datos/02_Bugs.md
+        - 03_Datos/03_Secuencias.md
+        - 03_Datos/04_Contadores.md
+        - 03_Datos/05_IDE.md
+        - 03_Datos/06_Formato.md
+        - 03_Datos/07_Arboles1.md
+        - 03_Datos/08_CierreClase.md
+    - "04 - Algoritmos sobre listas y comprensión de listas":
+        - 04_Listas_y_Listas/00_Resumen.md
+        - 04_Listas_y_Listas/01_Debugger.md
+        - 04_Listas_y_Listas/02_IteradoresLista.md
+        - 04_Listas_y_Listas/03_Comprension_Listas.md
+        - 04_Listas_y_Listas/04_Objetos.md
+        - 04_Listas_y_Listas/05_Arboles2_LC.md
+        - 04_Listas_y_Listas/06_Cierre.md
+    - "05 - Aleatoriedad":
+        - 05_Random_Plt_Dbg/00_Resumen.md
+        - 05_Random_Plt_Dbg/01_Repaso.md
+        - 05_Random_Plt_Dbg/02_Random.md
+        - 05_Random_Plt_Dbg/03_NumPy_Arrays.md
+        - 05_Random_Plt_Dbg/04_Figuritas.md
+        - 05_Random_Plt_Dbg/05_Arboles3_plt.md
+        - 05_Random_Plt_Dbg/06_Cierre.md
+    - "06 - Complejidad y Organización de programas":
+        - 06_Organizacion_y_Complejidad/00_Resumen.md
+        - 06_Organizacion_y_Complejidad/01_Repaso.md
+        - 06_Organizacion_y_Complejidad/02_Scripts.md
+        - 06_Organizacion_y_Complejidad/03_Funciones.md
+        - 06_Organizacion_y_Complejidad/04_Modulos.md
+        - 06_Organizacion_y_Complejidad/05_BusqBinaria.md
+        - 06_Organizacion_y_Complejidad/06_Complejidad.md
+        - 06_Organizacion_y_Complejidad/07_graficos_de_complejidad.md
+        - 06_Organizacion_y_Complejidad/08_Cierre.md
+    - "07 - Diseño, especificación, documentación y estilo":
+        - 07_Plt_Especificacion_y_Documentacion/00_Resumen.md
+        - 07_Plt_Especificacion_y_Documentacion/01_Repaso.md
+        - 07_Plt_Especificacion_y_Documentacion/02_Excepciones.md
+        - 07_Plt_Especificacion_y_Documentacion/03_Modulo_principal.md
+        - 07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md
+        - 07_Plt_Especificacion_y_Documentacion/05_Especificacion_y_Documentacion.md
+        - 07_Plt_Especificacion_y_Documentacion/06_Estilo.md
+        - 07_Plt_Especificacion_y_Documentacion/07_Matplotlib.md
+        - 07_Plt_Especificacion_y_Documentacion/08_Cierre.md
+    - "08 - Fechas, Carpetas y Pandas":
+        - 08_Fechas_Carpetas_y_Pandas/00_Resumen.md
+        - 08_Fechas_Carpetas_y_Pandas/01_Intro.md
+        - 08_Fechas_Carpetas_y_Pandas/02_Fechas.md
+        - 08_Fechas_Carpetas_y_Pandas/03_Archivos_y_Directorios.md
+        - 08_Fechas_Carpetas_y_Pandas/04_Ordenando_archivos.md
+        - 08_Fechas_Carpetas_y_Pandas/05_Pandas.md
+        - 08_Fechas_Carpetas_y_Pandas/06_Series_Temporales.md
+        - 08_Fechas_Carpetas_y_Pandas/07_Cierre.md
+    - "09 - Clases y objetos":
+        - 09_Clases_y_Objetos/00_Resumen.md
+        - 09_Clases_y_Objetos/01_Intro.md
+        - 09_Clases_y_Objetos/02_Clases.md
+        - 09_Clases_y_Objetos/03_Herencia.md
+        - 09_Clases_y_Objetos/04_Métodos_Especiales.md
+        - 09_Clases_y_Objetos/05_Pilas_Colas.md
+        - 09_Clases_y_Objetos/06_Teledeteccion.md
+        - 09_Clases_y_Objetos/07_Cierre.md
+    - "10 - Generadores e iteradores":
+        - 10_Generadores_e_Iteradores/00_Resumen.md
+        - 10_Generadores_e_Iteradores/01_Intro.md
+        - 10_Generadores_e_Iteradores/02_protocolo_Iteracion.md
+        - 10_Generadores_e_Iteradores/03_iteracion_a_medida.md
+        - 10_Generadores_e_Iteradores/04_Producers_consumers.md
+        - 10_Generadores_e_Iteradores/05_Mas_generadores.md
+        - 10_Generadores_e_Iteradores/06_PredadorPresa.md
+        - 10_Generadores_e_Iteradores/07_Cierre.md
+    - "11 - Recursión y regresión":
+        - 11_Recursion/00_Resumen.md
+        - 11_Recursion/01_Introduccion.md
+        - 11_Recursion/02_Recursion.md
+        - 11_Recursion/03_Diseno_Recursivo.md
+        - 11_Recursion/04_EjerciciosRec.md
+        - 11_Recursion/05_Regresion_Lineal.md
+        - 11_Recursion/06_Cierre.md
+    - "12 - Ordenamiento":
+        - 12_Ordenamiento/00_Resumen.md
+        - 12_Ordenamiento/01_Introduccion.md
+        - 12_Ordenamiento/02_Ordenamiento_sencillo.md
+        - 12_Ordenamiento/03_Divide_and_Conquer.md
+        - 12_Ordenamiento/04_introduccion_al_AA.md
+        - 12_Ordenamiento/05_Cierre.md
+
+
+# formats:
+#   - epub
+#   - pdf
+
+# theme:
+#   name: gitbook
+
+
+theme:
+  name: mkdocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+  analytics:
+    gtag: G-1MPV3EL62Y
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+  nav_style: light # dark # light
+  navigation_depth: 3
+  locale: es
+  features:
+    - navigation.sections
+    - navigation.top
+
+# theme:
+#     name: readthedocs
+#     highlightjs: true
+#     hljs_languages:
+#         - yaml
+#         - rust
