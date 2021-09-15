@@ -94,11 +94,12 @@ Las bibliotecas de código suelen ser más útiles si son flexibles. No restrinj
 
 ## Ejercicio
 
-### Ejercicio 7.4: De archivos a "objetos cual archivos"
+### Ejercicio 7.6: De archivos a "objetos cual archivos"
+En el archivo `fileparse.py` tenés la función `parse_csv()`. Ésta funciona del siguiente modo:
 
 ```python
 >>> import fileparse
->>> camion = fileparse.parse_csv('../Data/camion.csv', types=[str,int,float])
+>>> camion = fileparse.parse_csv('../Data/camion.csv', types = [str, int, float])
 >>>
 ```
 
@@ -129,8 +130,8 @@ Una vez que hayas incorporado esta modificación, ¿qué pasa si le pasás un no
 
 Sí, hay que tener cuidado.
 
-### Ejercicio 7.5: Arreglemos las funciones existentes
-Arreglá las funciones `leer_camion()` y `leer_precios()` en el archivo `informe.py` de modo que funcionen con la nueva versión de `parse_csv()`. Con una pequeña modificación es suficiente. Después de esto tus programas `informe.py` y `costo_camion.py` deberían funcionar tan bien como antes. 
+### Ejercicio 7.7: Arreglemos las funciones existentes
+Arreglá las funciones `leer_camion()` y `leer_precios()` en el archivo `informe_final.py` de modo que funcionen con la nueva versión de `parse_csv()`. Con una pequeña modificación es suficiente. Después de esto tus programas `informe_final.py` y `costo_camion.py` deberían funcionar tan bien como antes. 
 
 Por ahora dejamos estos archivos y pasamos a otras discusiones. Dejá estos archivos listos para entregar al final de la clase. 
 

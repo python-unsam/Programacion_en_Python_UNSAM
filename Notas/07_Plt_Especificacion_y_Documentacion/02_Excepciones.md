@@ -273,11 +273,11 @@ Una estructura como ésa resulta en un manejo seguro de los recursos disponibles
 
 ## Ejercicios
 
-Trabajá siempre con las últimas versiones de tus archivos. En esta clase vamos a trabajar con el archivo `fileparse.py` y también con una nueva versión de `informe.py`. Por favor, copiá `informe_funciones.py` a `informe.py`, que trabajaremos sobre este último archivo.
+Trabajá siempre con las últimas versiones de tus archivos. Por favor, copiá los archivos `fileparse.py` e `informe_funciones.py` a la carpeta de ejercicios de la clase actual, y cambiá el nombre de `informe_funciones.py` para llamarlo `informe_final.py` (¿no te da esperanzas que se llame así?). Vamos a trabajar con estos dos archivos.
 
-### Lancemos excepciones
-
-La función `parse_csv()` que escribiste en el [Ejercicio 6.9](../06_Organizacion_y_Complejidad/03_Funciones.md#ejercicio-69-trabajando-sin-encabezados) admite seleccionar algunas columnas por le usuarie, pero eso sólo funciona si el archivo de entrada tiene encabezados.
+### Ejercicio 7.1: Lancemos excepciones
+Copiá el archivo `fileparse.py` al directorio de ejercicios de la clase actual. La última versión que deberías tener, es la correspondiente al [Ejercicio 6.9](../06_Organizacion_y_Complejidad/03_Funciones.md#ejercicio-69-trabajando-sin-encabezados).
+La función `parse_csv()` admite seleccionar algunas columnas por le usuarie, pero eso sólo funciona si el archivo de entrada tiene encabezados.
 
 Modifcá tu código para que lance una excepción en caso que ambos parámetros `select` y `has_headers = False` sean pasados juntos. Y que resulte: 
 
@@ -298,8 +298,7 @@ Como regla general, es mejor no controlar esas cosas, y dejar que el programa d�
 El motivo principal para agregar controles de calidad sobre los parámetros de entrada es evitar que tu programa sea ejecutado en condiciones que no tienen sentido. Si le pedís que haga algo que requiere encabezados y simultáneamente le decís que no existen encabezados implica estás usando la función incorrectamente. La idea general es estar protegido contra situaciones que "no deberían suceder" pero podrían. 
 
 
-### Atrapemos excepciones
-
+### Ejercicio 7.2: Atrapemos excepciones
 La función `parse_csv()` que escribiste está destinada a procesar un archivo completo. Pero en una situacion real, es posible que los archivos CSV de entrada estén "rotos", ausentes, o que su contenido no se adecúe al formato esperado. Probá esto:  
 
 ```python
@@ -334,8 +333,8 @@ Fila 7: Motivo: invalid literal for int() with base 10: ''
 ```
 
 
-### Ejercicio 7.1: Errores silenciados
-Modificá `parse_csv()` de modo que le usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes.Por ejemplo:
+### Ejercicio 7.3: Errores silenciados
+Modificá `parse_csv()` de modo que le usuarie pueda silenciar los informes de errores en el parseo de los datos que agregaste antes, con un parámetro `silence_errors`. Por ejemplo:
 
 ```python
 >>> camion = parse_csv('../Data/missing.csv', types = [str,int,float], silence_errors = True)
@@ -348,6 +347,7 @@ Modificá `parse_csv()` de modo que le usuarie pueda silenciar los informes de e
 >>>
 ```
 
+Este nuevo parámetro debe ser opcional, y su valor por omisión debe ser `False`.
 Guardá estos cambios que los vamos a usar más adelante.
 
 ### Comentarios

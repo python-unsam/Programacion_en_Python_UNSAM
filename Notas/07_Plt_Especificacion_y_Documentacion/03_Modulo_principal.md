@@ -65,7 +65,7 @@ import prog   # Corriendo como módulo importado
 
 La variable `__name__` es el nombre del módulo. Sin embargo, esta variable  `__name__` valdrá `__main__` si ese módulo está siendo ejecutado como el script principal. 
 
-Normalmente deseamos que los comandos que son parte del comportamiento del script en modo *principal* sólo se ejecuten si efectivamente el script es el módulo principal. No queremos que esos comandos se ejecuten si el módulo fue importado.
+Normalmente deseamos que los comandos que son parte del comportamiento del script en modo *principal* sólo se ejecuten si efectivamente el script es el módulo principal. No queremos que esos comandos se ejecuten si el módulo fue importado. Por ejemplo, cuando en la materia queremos aplicar una corrección automática, y para eso queremos importar tu código para testear funciones, pero no queremos que se ejecuten los llamados a esas funciones que hiciste vos para testearlas.
 
 Por lo tanto es común escribir una condición `if` que decida cómo se va a portar el código cuando éste puede ser usado de ambas maneras.  
 
@@ -91,7 +91,7 @@ def blah():
     ...
 
 # Función principal
-def main():
+def f_principal():
     ...
 
 if __name__ == '__main__':
@@ -103,7 +103,7 @@ if __name__ == '__main__':
 Python se usa muy frecuentemente para correr herramientas desde la línea de comandos. En clase vimos algún ejemplo:
 
 ```bash
-bash % python3 informe.py camion.csv precios.csv
+bash % python3 informe_final.py ../Data/camion.csv ../Data/precios.csv
 ```
 
 Esto permite que los scripts sean ejecutados desde la terminal para correr ciertos procesos automáticos, ejecutar tareas en segundo plano, etc.
@@ -113,20 +113,20 @@ Esto permite que los scripts sean ejecutados desde la terminal para correr ciert
 Python interpreta una línea de comandos como una lista de cadenas de texto.
 
 ```bash
-bash % python3 informe.py camion.csv precios.csv
+bash % python3 informe_final.py ../Data/camion.csv ../Data/precios.csv
 ```
 
-Como el script `informe.py` no está preparado para leer parámetros, no los va a usar. Igual, podés acceder a esta lista de cadenas usando `sys.argv`. Por ejemplo, si usas el parámetro `-i` para invocar a python de modo que el intérprete interactivo no termine luego de llamar a `informe.py` con los parámetros anteriores
+Como el script `informe_final.py` no está preparado para leer parámetros, no los va a usar. Igual, podés acceder a esta lista de cadenas usando `sys.argv`. Por ejemplo, si usas el parámetro `-i` para invocar a python de modo que el intérprete interactivo no termine luego de llamar a `informe_final.py` con los parámetros anteriores
 
 ```bash
-bash % python3 -i informe.py camion.csv precios.csv
+bash % python3 -i informe_final.py ../Data/camion.csv ../Data/precios.csv
 ```
 luego podrás ver el contenido de esta lista:
 
 ```python
 # Llamado como recién, sys.argv contiene
 import sys
-sys.argv # ['informe.py, 'camion.csv', 'precios.csv']
+sys.argv # ['informe_final.py, 'camion.csv', 'precios.csv']
 ```
 
 Ahora vamos a hacer que los tenga en cuenta. El siguiente es un ejemplo de script simple para procesar los argumentos recibidos al invocarlo desde la terminal. Te permite usar tu script para generar el informe con archivos de diferentes camiones o precios, pasados como parámetros por la línea de comandos:
@@ -226,7 +226,7 @@ def blah():
     ...
 
 # Funcion principal
-def main(parametros):
+def f_principal(parametros):
     # Analizar la línea de comandos, 
     # usando la variable parámetros en lugar 
     # de sys.argv, donde corresponda
@@ -234,7 +234,7 @@ def main(parametros):
 
 if __name__ == '__main__':
     import sys
-    main(sys.argv)
+    f_principal(sys.argv)
 ```
 
 _Observación: Este modelo es flexible en el sentido que te permite escribir programas que podés llamar desde la terminal pasándole parámetros o ejecutar directamente dentro de un intérprete usando `import` y llamando a su función `main` como veremos en los siguientes ejercicios._
@@ -243,18 +243,18 @@ _Observación: Este modelo es flexible en el sentido que te permite escribir pro
 
 Recordá trabajar siempre con las últimas versiones de tus archivos.
 
-### Ejercicio 7.2: Función `main()`
-Usando estas ideas, agregá a tu programa `informe.py` una función `main()` que tome una lista de parámetros en la línea de comandos y produzca la misma salida que antes.
+### Ejercicio 7.4: Función principal
+Usando estas ideas, agregá a tu programa `informe_final.py` una función `f_principal()` que tome una lista de parámetros en la línea de comandos y produzca la misma salida que antes.
 
 ```bash
-bash % python3 informe.py ../Data/camion.csv ../Data/precios.csv
+bash % python3 informe_final.py ../Data/camion.csv ../Data/precios.csv
 ```
 
 También deberías poder ejecutarlo del siguiente modo dentro del intérprete interactivo de Python:
 
 ```python
->>> import informe
->>> informe.main(['informe.py', '../Data/camion.csv', '../Data/precios.csv'])
+>>> import informe_final 
+>>> informe_final.f_principal(['informe_final.py', '../Data/camion.csv', '../Data/precios.csv'])
 
     Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
@@ -269,20 +269,20 @@ También deberías poder ejecutarlo del siguiente modo dentro del intérprete in
 >>>
 ```
 
-Análogamente, modificá el archivo `costo_camion.py` para que incluya una función similar `main()` que te permita hacer esto:
+Copiá el archivo `costo_camion.py` al directorio de la clase actual y actualizalo para que ahora importe `informe_final` en vez de `informe_funciones`. Luego, modificalo para que incluya una función similar `f_principal()` que te permita hacer esto:
 
 ```python
 >>> import costo_camion
->>> costo_camion.main(['costo_camion.py', '../Data/camion.csv'])
-Total cost: 47671.15
+>>> costo_camion.f_principal(['costo_camion.py', '../Data/camion.csv'])
+Costo total: 47671.15
 >>>
 ```
 
-### Ejercicio 7.3: Hacer un script
-Finalmente, modificá tus programas `informe.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
+### Ejercicio 7.5: Hacer un script
+Finalmente, modificá tus programas `informe_final.py` y `costo_camion.py` para que puedan ser ejecutados como scripts desde la línea de comandos:
 
 ```bash
-bash $ python3 informe.py ../Data/camion.csv ../Data/precios.csv
+bash $ python3 informe_final.py ../Data/camion.csv ../Data/precios.csv
     Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
       Lima        100      $32.2       8.02
@@ -293,10 +293,10 @@ bash $ python3 informe.py ../Data/camion.csv ../Data/precios.csv
  Mandarina         50      $65.1      15.79
    Naranja        100     $70.44      35.84
 
-bash $ python3 costo_camion.py Data/camion.csv
+bash $ python3 costo_camion.py ../Data/camion.csv
 Costo total: 47671.15
 ```
 
-_Aclaración:_  En el ejercicio anterior ya agregaste una función `main()` a tu código. En este simplemente deberías verificar si `__name__ == '__main__'` y llamar a esa función para que se ejecute automáticamente cuando llames a tu programa desde la línea de comandos. 
+_Aclaración:_  En el ejercicio anterior ya agregaste una función `f_principal()` a tu código. En este simplemente deberías verificar si `__name__ == '__main__'` y llamar a esa función para que se ejecute automáticamente cuando llames a tu programa desde la línea de comandos. 
 
 

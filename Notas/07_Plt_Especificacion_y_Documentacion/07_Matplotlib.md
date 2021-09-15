@@ -300,7 +300,7 @@ Ejemplo:
 ## Ejercicios:
 Solo te pedimos que entregues el segundo ejercicio, los otros son optativos.
 
-### Ejercicio 7.9: Subplots fuera de una grilla
+### Ejercicio 7.11: Subplots fuera de una grilla
 Modificá el siguiente código para reproducir el gráfico que se muestra. Prestá atención a cómo se numeran los subplots. 
 
 ```python
@@ -324,7 +324,7 @@ plt.show()
 
 ![COPETE](./ex_subplots.png)
 
-### Ejercicio 7.10: Caminatas al azar
+### Ejercicio 7.12: Caminatas al azar
 
 Una [caminata al azar](https://es.wikipedia.org/wiki/Camino_aleatorio) o *random walk* es una formalización matemática de la trayectoria que resulta de hacer sucesivos pasos aleatorios. Por ejemplo, la ruta trazada por una molécula mientras viaja por un líquido o un gas, el camino que sigue un animal en su búsqueda de comida, el precio de una acción fluctuante y la situación financiera de un jugador pueden tratarse, bajo ciertas hipótesis, como una caminata aleatoria.
 
@@ -348,7 +348,7 @@ En este ejercicio te pedimos:
 
 1. Modificá el código anterior para ponerles nombres a los ejes ("tiempo" y distancia al origen") y al gráfico. 
 2. Graficá 12 trayectorias en la misma figura, con diferentes colores.
-3. Usá la estructura de subplots sugerida en el [Ejercicio 7.9](../07_Plt_Especificacion_y_Documentacion/07_Matplotlib.md#ejercicio-79-subplots-fuera-de-una-grilla) para graficar tres pubplots en una figura:
+3. Usá la estructura de subplots sugerida en el [Ejercicio 7.11](../07_Plt_Especificacion_y_Documentacion/07_Matplotlib.md#ejercicio-711-subplots-fuera-de-una-grilla) para graficar tres pubplots en una figura:
     * Arriba, grande, 12 trayectorias aleatorias como en el inciso anterior
     * Abajo a la izquierda la trayectoria que más se aleja del origen.
     * Abajo a la derecha la trayectoria que menos se aleja del origen.
@@ -363,7 +363,7 @@ Guardá tu solución del inciso 3 en el archivo `random_walk.py`. Debería verse
 
 Los siguientes ejercicios profundizan en algunos estilos particulares y son optativos. Si querés ver las soluciones exactas a algunos de estos ejercicios y otros problemas más, podés consultar [acá](https://scipy-lectures.org/intro/matplotlib/index.html#other-types-of-plots-examples-and-exercises).
 
-### Ejercicio 7.11: Gráficos de barras
+### Ejercicio 7.13: Gráficos de barras
 Modificá el siguiente código para generar un gráfico similar al que se muestra: tenés que agregar etiquetas para las barras rojas cuidando la alineación del texto.
 
 ```python
@@ -381,7 +381,7 @@ plt.ylim(-1.25, +1.25)
 ![COPETE](./sphx_glr_plot_bar_001.png)
 
 
-### Ejercicio 7.12: Coordenadas polares
+### Ejercicio 7.14: Coordenadas polares
 A partir de este código, generá un gráfico como el siguiente.
 
 ```python
@@ -402,7 +402,7 @@ for r, bar in zip(radii, bars):
 
 _Pista_: sólo necesitás modifcar los ejes en la primera línea. Fijate que hay un parámetro `polar` que tiene por omisión valor `False`.
 
-### Ejercicio 7.13: Setear el color de un scatter plot
+### Ejercicio 7.15: Setear el color de un scatter plot
 Modificá el código que sigue para generar un gráfico similar al que se muestra, prestando atención a los límites, el tamaño de las marcas, el color, y la transparencia de los trazos.
 
 ```python
