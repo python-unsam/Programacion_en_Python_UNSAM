@@ -95,7 +95,7 @@ def f_principal():
     ...
 
 if __name__ == '__main__':
-    main()
+    f_principal()
 ```
 
 ### Herramientas para la consola 
