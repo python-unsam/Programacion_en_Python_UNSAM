@@ -1,6 +1,6 @@
 # 8.6 Series temporales
 
-Para esta Sección contamos con el valioso aporte de [Octavio Bruzzone](https://inta.gob.ar/personas/bruzzone.octavio). Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente nos compartió algunas ideas para este trabajo práctico.
+Para esta Sección contamos con el valioso aporte de [Octavio Bruzzone](https://www.conicet.gov.ar/new_scp/detalle.php?id=20675). Octavio da dos cursos de posgrado excelentes sobre Series Temporales en Python. Uno se enfoca en los análisis en el dominio del tiempo y el otro en el dominio de las frecuencias. Generosamente nos compartió algunas ideas para este trabajo práctico.
 
 Esta sección tiene un breve [video introductorio](https://youtu.be/fLdVsU12sR8) sobre los datos y lo que hay que hacer en este TP.
 
@@ -97,9 +97,7 @@ Grafiquemos estos últimos datos:
 df['12-25-2014':].plot()
 ```
 
-<p align="center">
-<img src="./Figure175144.png">
-</p>
+![ondas](./Figure175144.png)
 
 Acá se ven tres fenómenos interesantes:
 * Hay 14 picos en 7 días, esto corresponde a la frecuencia _semidiurna_ de las mareas. Cada poco más de 12hs tenemos un ciclo con pleamar y bajamar. Dos ciclos por día.
@@ -120,23 +118,19 @@ El siguiente comando genera un gráfico entre el 15 de octubre de 2014 y el 15 d
 df['10-15-2014':'12-15-2014'].plot()
 ```
 
-<p align="center">
-<img src="./Figure175349.png">
-</p>
+![sudestada](./Figure175349.png)
 
+En ese gráfico se puede observar como una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días. Las dos fotos que siguen son justamente de esa sudestada. Fueron tomadas el primero de noviembre por Gustavo Castaing.
 
-En ese gráfico se puede observar cómo una sudestada a principios de noviembre elevó el nivel del estuario más de un metro durante casi tres días. Las dos fotos que siguen son justamente de esa sudestada. Fueron tomadas el primero de noviembre por Gustavo Castaing.
+![sudestada](./sudestada1.jpg)
 
-<p align="center">
-<img src="https://64.media.tumblr.com/22e647b1e723d132c7c00668bae1ecd0/tumblr_ned8qqsPig1rf9hn3o1_1280.jpg" width="500"> <img src="https://images.clarin.com/2014/11/01/r1MQfoi37g_1256x620.jpg" width="500">
-</p>
-
+![sudestada](./sudestada2.jpg)
 
 Así como el viento del sudeste empuja el agua del mar hacia adentro del estuario y genera crecidas, los vientos del norte o el oeste también impulsan desplazamientos del agua del estuario, en este caso generando bajantes. En las siguientes dos fotos puede verse una bajante capturada por Juan Pablo Martínez Bigozzi el 19 de junio del 2019.
 
-<p align="center">
-<img src="./bajante19062019.jpg" width="500"> <img src="./bajante219062019.jpg" width="500">
-</p>
+![bajante](./bajante1_19062019.jpg)
+
+![bajante](./bajante2_19062019.jpg)
 
 La transformada de Fourier no resultará muy útil para ver estas *ondas de tormenta*. Como carecen de regularidad, no aparecerán claramente en el espectro de frecuencias.
 
@@ -157,10 +151,7 @@ delta_h = 0 # diferencia de los ceros de escala entre ambos puertos
 pd.DataFrame([dh['H_SF'].shift(delta_t) - delta_h, dh['H_BA']]).T.plot()
 ```
 
-<p align="center">
-<img src="./Figure175447.png">
-</p>
-
+![mareas](./Figure175447.png)
 
 Buscá los valores de `delta_t` (es un número entero, son pasos) y `delta_h` (puede tener decimales, es un float) que hacen que los dos gráficos se vean lo más similares posible.
 
@@ -218,7 +209,7 @@ for i, sh in enumerate(ishifts):
 plt.plot(shifts, corrs)
 ```
 
-El comando `np.argmax(corrs)` se puede usar para devolver la coordenada de la máxima correlación. Esa posición del vector `shifts` indicará a cuántas horas corresponde ese desplazamiento. Si lo corremos con esta interpolación cada 15 minutos propuesta en el código, obtendremos que la onda tarda una hora en llegar a San Fernando. Usando una interpolación más fina, ¿podés estimar el desfazaje en minutos? A nosotros nos dio 57 minutos.
+El comando `np.argmax(corrs)` se puede usar para devolver la coordenada de la máxima correlación. Esa posición del vector `shifts` indicará a cuántas horas corresponde ese desplazamiento. Si lo corremos con esta interpolación cada 15 minutos propuesta en el código, obtendremos que la onda tarda una hora en llegar a San Fernando. Usando una interpolación más fina, ¿podés estimar el desfasaje en minutos? A nosotros nos dio 57 minutos.
 
 
 ## Parte optativa
@@ -235,21 +226,15 @@ La transformada de Fourier descompone una señal en una suma de senos y cosenos 
 
 Esta animación ilustra gráficamente el proceso de la transformada de Fourier.
 
-<p align="center">
-<img src="./cuadrada.gif">
-</p>
+![cuadrada](./cuadrada.gif)
 
 La transformada da, para cada frecuencia, un número complejo `a + bi` que puede pensarse como un vector `(a,b)` en el plano. La parte real va a multiplicar un coseno con la frecuencia indicada y la parte imaginaria un seno con la misma frecuencia. La magnitud (o amplitud, o potencia) de la señal en esa frecuencia se corresponde con el largo del vector `(a, b)`.
 
-<p align="center">
-<img src="./vectorial.jpg">
-</p>
+![vectorial](./vectorial.jpg)
 
 La fase (o desplazamiento del máximo respecto del origen de las coordenadas), se corresponde con ángulo que forma este vector `(a, b)` con el semieje de los reales positivos.
 
-<p align="center">
-<img src="./phase_shift.png" width="300">
-</p>
+![fases](./phase_shift.png)
 
 Aquí, la variable theta (θ) representa el desplazamiento de fase de la curva azul (respecto a la roja que tiene desplazamiento nulo). Esta *fase* suele medirse en radianes, correspondiendo 2*π a un ciclo completo de desfasaje.
 
@@ -294,9 +279,7 @@ def calcular_fft(y, freq_sampleo = 24.0):
 
 Para poder analizar una onda por medio de su transformada de Fourier, es necesario que la onda sea periódica. Puede pasar que no sea el caso y que una onda tenga tendencia lineal, en ese caso podríamos usar la función `scipy.signal.detrend()`.
 
-<p align="center">
-<img src="./detrend.png" width="300">
-</p>
+![detrend](./detrend.png)
 
 En nuestro caso supondremos que la marea media se mantuvo estable a lo largo del período de estudio, así que no tenemos que hacerle este procesamiento intermedio.
 
@@ -320,11 +303,7 @@ plt.ylabel("Potencia (energía)")
 plt.show()
 ```
 
-<p align="center">
-<img src="./Figure175811_.png">
-</p>
-
-
+![](./Figure175811_.png)
 
 A simple vista se observan dos picos, uno en frecuencia 0 (constante relacionada con el cero de escala) y otro pico cercano a la frecuencia 2 (frecuencia semidiurna) que está relacionado con la onda de mareas.
 
@@ -369,9 +348,7 @@ plt.scatter(freq_sf[pico_sf], np.abs(fft_sf)[pico_sf], facecolor = 'r')
 plt.show()
 ```
 
-<p align="center">
-<img src="./Figure175902_.png">
-</p>
+![componentes](./Figure175902_.png)
 
 Estos gráficos permiten interpretar que si descomponemos la curva de alturas en San Fernando como suma de sinusoidales, el sinusoide con frecuencia 1.93 tiene una magnitud considerablemente llamativa. No es casualidad que este sea un punto distinguido: se trata de la frecuencia de las mareas lunares.
 
@@ -379,9 +356,7 @@ Ahora viene la parte un poco más sutíl: **el análisis de las fases**. Si cono
 
 Para calcular la fase (entre -π y π) de dicha componente (la que ubicamos en la posición 350) en el puerto de San Fernando, podemos simplemente usar `np.angle()` y pasarle el número complejo en cuestión:
 
-<p align="center">
-<img src="./vectorial.jpg">
-</p>
+![vectorial](./vectorial.jpg)
 
 ```python
 >>> ang_sf = np.angle(fft_sf)[pico_sf]

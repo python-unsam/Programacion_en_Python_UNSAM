@@ -90,7 +90,7 @@ plt.show()
 
 ![COPETE](./sphx_glr_plot_exercise_2_001.png)
 
-Los gráficos que genera matplotlib son muy flexibles, te dejamos [un machete](https://github.com/matplotlib/cheatsheets/blob/master/cheatsheets.pdf) resumiendo las variaciones más usuales.
+Los gráficos que genera matplotlib son muy flexibles, te dejamos [un machete](https://github.com/matplotlib/cheatsheets) resumiendo las variaciones más usuales.
 
 A continuación presentamos detalles técnicos de esta biblioteca tan útil. No hace falta que te los aprendas (igual te los vas a olvidar), ni que pruebes todas las combinaciones. Podés volver a esta página o a la [documentación](https://matplotlib.org/) cuando lo necesites. Iguál mirá los ejercicios al final de esta sección, te pediremos que entregues el segundo.
 
