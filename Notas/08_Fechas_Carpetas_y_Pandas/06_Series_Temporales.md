@@ -452,7 +452,7 @@ Guardá lo que hayas hecho hasta acá en el archivo `mareas_fft.py` para entrega
 ### Ejercicio 8.14: Otros períodos
 El primer análisis se realizó con el primer semestre del 2014 ya que no tiene ni datos faltantes ni outliers. Este ejercicio es una invitación a explorar estos problemas tan frecuentes.
 
-* ¿Se puede comparar Zárate con San Fernando usando todos los datso de Zárate? ¿Cómo se comporta San Fernando en esas fechas?
+* ¿Se puede comparar Zárate con San Fernando usando todos los datos de Zárate? ¿Cómo se comporta San Fernando en esas fechas?
 * ¿Se pueden usar las series completas de BA y SF para calcular el desfasaje de la onda de mareas? ¿Qué son las alturas negativas? ¿Tienen sentido?
 
 La siguiente función completa datos faltantes y corrige pequeños problemas en los índices. Es un poco brutal tratar así un DataFrame: es conveniente mirar los datos antes de completar faltantes. Lo dejamos como puntero a diferentes  métodos muy útiles para la limpieza de series.

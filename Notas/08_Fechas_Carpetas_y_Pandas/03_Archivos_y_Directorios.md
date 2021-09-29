@@ -215,7 +215,7 @@ import os
 import datetime
 import time
 
-camino = './rebotes.py'
+camino = '../Clase06/rebotes.py'
 
 stats_archivo = os.stat(camino)
 print(time.ctime(stats_archivo.st_atime))
@@ -231,6 +231,6 @@ stats_archivo = os.stat(camino)
 print(time.ctime(stats_archivo.st_atime))
 ```
 
-Si mirás la información del archivo `./rebotes.py` desde tu gestor de archivos deberías ver las modificaciones.
+Si mirás la información del archivo '../Clase06/rebotes.py' desde tu gestor de archivos deberías ver las modificaciones.
 
 

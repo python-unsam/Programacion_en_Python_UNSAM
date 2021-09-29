@@ -357,7 +357,7 @@ Visitá [la documentación](https://docs.python.org/3/library/datetime.html#strf
 ## Ejercicios:
 
 ### Ejercicio 8.1: Segundos vividos
-Escribí una función a la que le pasás tu fecha de nacimiento como cadena en formato 'dd/mm/AAAA' (día, mes, año con 2, 2 y 4 dígitos, separados con barras normales) y te devuelve la cantidad de segundos que viviste (asumiendo que naciste a las 00:00hs de tu fecha de nacimiento).
+Escribí una función llamada `vida_en_segundos(fecha_nac)` a la que le pasás tu fecha de nacimiento y te devuelve la cantidad de segundos que viviste (asumiendo que naciste a las 00:00hs de tu fecha de nacimiento). La función debe tomar como entrada una cadena en formato 'dd/mm/AAAA' (día, mes, año con 2, 2 y 4 dígitos, separados con barras normales) y devolver un `float`.
 
 Guardá este código en el archivo `vida.py`.
 

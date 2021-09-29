@@ -273,33 +273,43 @@ _Ayuda: Estas sumas se pueden escribir como diferencia de dos [números triangul
 
 ##  Invariantes de ciclo
 
-Los invariantes se refieren a estados o condiciones que no cambian dentro de un contexto o porción de código. Hay invariantes de ciclo, que son los que veremos a continuación, e invariantes de estado, que se verán más adelante.
+Los invariantes se refieren a estados o situaciones que no cambian dentro de un contexto dado. Hay diferentes tipos de invariantes. A continuación veremos los invariantes de ciclo que nos ayudan a llegar desde las precondiciones hasta las postcondiciones.
 
-Un invariante de ciclo es una aseveración que debe ser verdadera al comienzo de cada iteración del ciclo y al salir del mismo.
+Un _invariante_ de ciclo es esencialmente una aseveración que debe ser verdadera al final de cada iteración. Pensar en términos de invariantes de ciclo nos ayuda a reflexionar y comprender mejor qué es lo que debe realizar nuestro código y nos ayuda a desarrollarlo.
 
-Por ejemplo, si el problema es ir desde el punto A al punto B, la precondición dice que tenemos que estar parados en A y la poscondición que al terminar estaremos parados en B. En este caso las siguientes aseveraciones son invariantes: "estamos en algún punto entre A y B", "estamos en el punto más cercano a B que estuvimos hasta ahora". Son aseveraciones que podría tener nuestro código (y dependen exclusivamente de cómo lo programamos).
-
-Pensar en términos de invariantes de ciclo nos ayuda a reflexionar y comprender mejor qué es lo que debe realizar nuestro código y nos ayuda a desarrollarlo.
-
-Por ejemplo, para la función `maximo`, que busca el valor más grande de una lista desordenada, podemos enunciar:
-- precondición: la lista contiene elementos que tienen una relación de orden (son comparables con <)
-- poscondición: se devolverá el elemento máximo de la lista, si es que tiene elementos, y si no se devolverá None.
+Veamos un ejemplo: supongamos que analizamos un ciclo que buscar el máximo en una lista no necesariamente ordenada. La precondición es que la lista es no vacía y contiene elementos que son comparables y la postcondición es que se devuelve el elemento máximo de la lista. Por convención, diremos que el máximo de una lista vacía es menos infinito.
 
 ```python
+import math
+
 def maximo(lista):
-    'Devuelve el elemento máximo de la lista o None si está vacía.'
-    if not lista:
-        return None
-    max_elem = lista[0]
+    '''
+    Pre: La lista contiene elementos comparable entre sí y con math.inf
+    Pos: La función devuelve el elemento máximo de la lista.
+    '''
+
+    max_elem = -math.inf
     for elemento in lista:
         if elemento > max_elem:
             max_elem = elemento
     return max_elem
 ```
 
-En este caso, el invariante del ciclo es que `max_elem` contiene el valor máximo de la porción de lista que ya fue analizada.
 
-Los invariantes son de gran importancia al momento de demostrar formalmente que un algoritmo funciona, pero aún cuando no hagamos una demostración formal resulta útil tener los invariantes a la vista, ya que de esta forma es más fácil entender cómo funciona un algoritmo y encontrar posibles errores.
+En este caso, el invariante del ciclo es la siguiente afirmación: "max_elem contiene el valor máximo de la porción de lista analizada".
+
+**DEMOSTRACIÓN (aburrida) DE QUE SE MANTIENE VERDADERO ESTE INVARIANTE:** Veamos que este invariante se mantiene verdadero a lo largo de las iteraciones. Es evidente que es verdadera antes de entrar al ciclo ya que no se ha analizado ningún elemento por lo que se considera que la lista analizada es vacía y, como se dijo antes, por convención, el máximo es menos infinito.
+
+Ahora procedemos por inducción en la cantidad de iteraciones: supongamos que para i iteraciones (`i>=0`) el invariante se ha mantenido verdadero y que entramos en la iteración `i+1`.  Entonces, la variable `max_elem` vale el máximo de la lista entre la posición `0` y la posición `i` (considerando el valor menos infinito si `i==0`). Luego analizamos si el (`i+1`)-ésimo elemento es mayor que `max_elem` y si así fuera redefinimos esta variable, haciendo que se mantenga verdadero el invariante pues, evidentemente, `max_elem` será el máximo entre los primeros `i+1` elementos de la lista analizada.
+
+Concluímos, por inducción, que el invariante se mantiene verdadero a lo largo de todas las iteraciones
+**FIN DE LA DEMO**
+
+Este caso es relativamente sencillo, pero nos permite concluir que, al terminar las iteraciones la variable `max_elem` toma como valor el máximo de toda la lista (volver a leer el invariante, considerando el caso cuando se hace la última iteración), que es lo que afirma la postcondición. Es decir, nos permite demostrar matemáticamente que el algoritmo hace lo que decimos que hace.
+
+Además, nos permite ver cómo lo hace: lo hace asegurándose que al ir recorriendo la lista se guarda el máximo hasta ese momento.
+
+En conclusión: los invariantes de ciclo son fundamentales para poder demostrar formalmente que un algoritmo hace lo que decimos que hace. Pero incluso si no estamos buscando una demostración formal de la correctitud de nuestro algoritmo, el concepto de invariante es útil para entender cómo funciona un algoritmo y encontrar posibles errores.
 
 Los invariantes, además, son útiles a la hora de determinar las condiciones iniciales de un algoritmo, ya que también deben cumplirse para ese caso. Por ejemplo, consideremos el algoritmo para obtener la potencia `n` de un número.
 
