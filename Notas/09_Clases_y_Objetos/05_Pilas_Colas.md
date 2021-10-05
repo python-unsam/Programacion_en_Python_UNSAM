@@ -54,7 +54,7 @@ Este ejercicio está relacionado con un error muy común en Python. Escribí una
 
 Probá tu código creando dos objetos, `madre_canguro` y `cangurito` y guardá en el marsupio de la madre algunos objetos y al propio cangurito. 
 
-Luego, mirá el ejemplo `canguro_malo.py` copiado a continuación. Este ejemplo intenta resolver el problema anterior, pero tiene un bug. Analizalo y corregilo. Entregá como respuesta un archivo `canguros_buenos.py` conteniendo, perimero la clase definida por vos y luego una corrección de la clase definida en el ejemplo, junto con un comentario indicando dónde estaba el error y en qué constía.
+Luego, mirá el ejemplo `canguro_malo.py` copiado a continuación. Este ejemplo intenta resolver el problema anterior, pero tiene un bug. Analizalo y corregilo. Entregá como respuesta un archivo `canguros_buenos.py` conteniendo, perimero la clase definida por vos y luego una corrección de la clase definida en el ejemplo, junto con un comentario indicando dónde estaba el error y en qué constía. 
 
  
 ```python
@@ -106,6 +106,8 @@ print(madre_canguro)
 
 Ojo: al corregir el bug no modifiques la firma del constructor `__init__` del objeto: asegurate que siga aceptando los mismos parámetros (obligatorios y opcionales) que antes.
 
+Antes de entregar, comentá en el archivo la sección que contiene a la clase corregida. Al importar tu archivo, debería funcionar la clase creada por vos originalmente.
+
 ### Colas
 
 Una **cola** es una estructura de datos. Se caracteriza por contener una secuencia de elementos y dos operaciones: encolar y desencolar. La primera, encolar, agrega un elemento al final de la secuencia que contiene la cola. Desencolar, por su parte, devuelve el primer elemento de la secuencia y lo elimina de la misma. 
@@ -150,7 +152,8 @@ class Cola:
 Usando un par de objetos de la clase Cola, escribí una nueva clase llamada `TorreDeControl` que modele el trabajo de una torre de control de un aeropuerto con una pista de aterrizaje. Los aviones que están esperando para aterrizar tienen prioridad sobre los que están esperando para despegar. La clase debe funcionar conforme al siguiente ejemplo:
 
 ```python
->>> torre = TorreDeControl()
+>>> import torre_control
+>>> torre = torre_control.TorreDeControl()
 >>> torre.nuevo_arribo('AR156')
 >>> torre.nueva_partida('KLM1267')
 >>> torre.nuevo_arribo('AR32')
@@ -167,7 +170,7 @@ El vuelo KLM1267 despegó con éxito.
 No hay vuelos en espera.
 ```
 
-Guardá tu solución (conteniendo también la definición de la clase `Cola`) en `torre_control.py` para entregar al final de la clase.
+Guardá tu solución conteniendo la definición de la clase `Cola` en `torre_control.py` para entregar al final de la clase. 
 
 ### Pilas
 

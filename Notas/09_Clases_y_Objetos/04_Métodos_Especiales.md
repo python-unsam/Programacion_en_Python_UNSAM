@@ -237,7 +237,7 @@ x = getattr(obj, 'x', None)
 ## Ejercicios
 
 ### Ejercicio 9.9: Mejor salida para objetos
-Modificá el objeto `Lote` que definiste en `lote.py` (del [Ejercicio 9.1](../09_Clases_y_Objetos/02_Clases.md#ejercicio-91-objetos-como-estructura-de-datos)) de modo que el método `__repr__()` genere una salida más agradable. Por ejemplo queremos un comportamiento como éste: 
+Modificá el objeto `Lote` que definiste en `lote.py` (del [Ejercicio 9.2](../09_Clases_y_Objetos/02_Clases.md#ejercicio-92-agrega-algunos-metodos)) de modo que el método `__repr__()` genere una salida más agradable. Por ejemplo queremos un comportamiento como éste: 
 
 ```python
 >>> peras = Lote('Pera', 100, 490.1)
@@ -249,8 +249,8 @@ Lote('Pera', 100, 490.1)
 Fijate lo que ocurre cuando leés un camión de frutas y mirás la salida resultante después de hacer estos cambios. Un ejemplo:
 
 ```python
->>> import informe
->>> camion = informe.leer_camion('../Data/camion.csv')
+>>> import informe_final
+>>> camion = informe_final.leer_camion('../Data/camion.csv')
 >>> camion
 ... fijate cuál es la salida ...
 >>>
@@ -277,11 +277,11 @@ Queremos que observes algo interesante: los datos de salida están completamente
 
 Si te dan ganas, en el archivo `formato_tabla.py` usá esta idea pero extendela, y creá una función `imprimir_tabla()` que imprima una tabla mostrando, de una lista de objetos de tipo arbitrario, una lista de atributos especificados por le usuarie.
 
-Tal como antes hicimos con la función `imprimir_informe()` del [Ejercicio 6.4](../06_Organizacion_y_Complejidad/02_Scripts.md#ejercicio-64-estructurar-un-programa-como-una-coleccion-de-funciones) `imprimir_tabla()` también debería aceptar cualquier instancia de la clase `FormatoTabla` para definir el formato de la salida. La idea es que funcione más o menos así:
+Tal como antes hicimos con la función `imprimir_informe()`, `imprimir_tabla()` también debería aceptar cualquier instancia de la clase `FormatoTabla` para definir el formato de la salida. La idea es que funcione más o menos así:
 
 ```python
->>> import informe
->>> camion = informe.leer_camion('../Data/camion.csv')
+>>> import informe_final
+>>> camion = informe_final.leer_camion('../Data/camion.csv')
 >>> from formato_tabla import crear_formateador, imprimir_tabla
 >>> formateador = crear_formateador('txt')
 >>> imprimir_tabla(camion, ['nombre','cajones'], formateador)

@@ -220,7 +220,7 @@ La clase `Hijo` hereda características de ambos padres. Algunos detalles son un
 
 El concepto de herencia es especialmente útil cuando estás escribiendo código que va a ser extendido o adaptado, ya sea en bibliotecas o grandes sistemas configurables, pero también en pequeños paquetes de procesamiento de datos que pueden adquirir datos de diversas fuentes. Como ya dijimos antes, uno puede escribir las relaciones y comportamientos fundamentales y dejar los detalles de implementación de cada interfaz para cuando sean necesarios.
 
-Para verlo mejor volvamos a la función `imprimir_informe()` del [Ejercicio 6.4](../06_Organizacion_y_Complejidad/02_Scripts.md#ejercicio-64-estructurar-un-programa-como-una-coleccion-de-funciones), que figura en el programa `informe.py`. Tenía más o menos este aspecto:
+Para verlo mejor volvamos a la función `imprimir_informe()` que figura en el programa `informe_final.py`. Tenía más o menos este aspecto:
 
 ```python
 def imprimir_informe(data_informe):
@@ -234,11 +234,11 @@ def imprimir_informe(data_informe):
         print('%10s %10d %10.2f %10.2f' % row)
 ```
 
-Al ejecutar tu programa `informe` la salida es algo parecido a esto: 
+Al ejecutar tu programa `informe_final.py` la salida es algo parecido a esto: 
 
 ```python
->>> import informe
->>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
+>>> import informe_final
+>>> informe_final.informe_camion('../Data/camion.csv', '../Data/precios.csv')
     Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
       Lima        100      $32.2       8.02
@@ -253,11 +253,11 @@ Al ejecutar tu programa `informe` la salida es algo parecido a esto:
 A continuación vamos a trabajar con herencias relacionadas con este código.
 
 ### Ejercicio 9.5: Un problema de extensibilidad
-Imaginá que necesitás que la función `imprimir_informe()` pueda exportar el informe en una variedad de formatos: texto plano, HTML, CSV ó XML. Podrías escribir una función enorme que resuelva todos los casos, pero resultaría en código repetido, y difícil de mantener. Esta es una oportunidad perfecta para usar herencia de objetos.
+Imaginá que necesitás que la función `imprimir_informe()` pueda exportar el informe en una variedad de formatos: texto plano, HTML, CSV ó XML. Podrías escribir una función enorme que resuelva todos los casos, pero resultaría en código repetido, y difícil de mantener. Ésta es una oportunidad perfecta para usar herencia de objetos.
 
 Vamos a enfocarnos en los pasos necesarios para crear una tabla. 
 
-Al principio de la tabla tenemos los encabezados de las columnas. Después de eso, los datos de la tabla ordenados en una fila por ítem. Pongamos cada uno de esos pasos en una clase distinta. Creá un archivo llamado `formato_tabla.py` y definí la siguiente clase:
+Al principio de la tabla tenemos los encabezados de las columnas. Después de eso, los datos de la tabla ordenados en una fila por ítem. Pongamos cada uno de esos pasos en una clase distinta. Creá un archivo nuevo llamado `formato_tabla.py` y definí la siguiente clase:
 
 ```python
 # formato_tabla.py
@@ -281,7 +281,7 @@ Por ahora la clase no hace nada, pero sirve como una especie de especificación 
 Ahora es necesario modificar la función `imprimir_informe()` para que acepte como fuente de datos un objeto `FormatoTabla` e invoque los métodos de este objeto para producir la tabla de salida. Algo así:
 
 ```python
-# informe.py
+# informe_final.py
 import formato_tabla
 
 ...
@@ -293,14 +293,14 @@ def imprimir_informe(data_informe, formateador):
     '''
     formateador.encabezado(['Nombre', 'Cantidad', 'Precio', 'Cambio'])
     for nombre, cajones, precio, cambio in data_informe:
-        rowdata = [ nombre, str(cajones), f'{precio:0.2f}', f'{cambio:0.2f}' ]
+        rowdata = [nombre, str(cajones), f'{precio:0.2f}', f'{cambio:0.2f}']
         formateador.fila(rowdata)
 ```
 
 Como agregaste un argumento a `imprimir_informe()`, hay que modificar también `informe_camion()`. Cambialo para que cree un objeto `formateador` de este modo:
 
 ```python
-# informe.py
+# informe_final.py
 
 import formato_tabla
 
@@ -313,7 +313,7 @@ def informe_camion(archivo_camion, archivo_precios):
     '''
     # Leer archivos con datos
     camion = leer_camion(archivo_camion)
-    precios = leer_precios(archivo_precios)
+    precios = dict(leer_precios(archivo_precios))
 
     # Crear los datos para el informe
     data_informe = hacer_informe(camion, precios)
@@ -327,8 +327,8 @@ Ejecutá este código:
 
 ```python
 >>> ================================ RESTART ================================
->>> import informe
->>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
+>>> import informe_final
+>>> informe_final.informe_camion('../Data/camion.csv', '../Data/precios.csv')
 ... crashes ...
 ```
 
@@ -362,7 +362,7 @@ class FormatoTablaTXT(FormatoTabla):
 Modificá la función `informe_camion()` y probala: 
 
 ```python
-# informe.py
+# informe_final.py
 
 ...
 
@@ -386,8 +386,8 @@ Este código debería dar la misma salida que antes:
 
 ```python
 >>> ========================REINICIAR INTERPRETE========================
->>> import informe
->>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
+>>> import informe_final
+>>> informe_final.informe_camion('../Data/camion.csv', '../Data/precios.csv')
     Nombre   Cantidad     Precio     Cambio 
 ---------- ---------- ---------- ---------- 
       Lima        100      32.20       8.02 
@@ -416,7 +416,7 @@ class FormatoTablaCSV(FormatoTabla):
         print(','.join(data_fila))
 ```
 
-Modificá tu programa `informe.py` de este modo:
+Modificá tu programa `informe_final.py` de este modo:
 
 ```python
 def informe_camion(archivo_camion, archivo_precios):
@@ -439,8 +439,8 @@ Ahora la salida debería tener este aspecto:
 
 ```python
 >>> ========================REINICIAR INTERPRETE========================
->>> import informe
->>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
+>>> import informe_final
+>>> informe_final.informe_camion('../Data/camion.csv', '../Data/precios.csv')
 Nombre,Cantidad,Precio,Cambio
 Lima,100,32.20,8.02
 Naranja,50,91.10,15.18
@@ -529,10 +529,10 @@ def informe_camion(archivo_camion, archivo_precios, fmt = 'txt'):
 Acordate de testear todas las ramas posibles del código para asegurarte de que está funcionando. Llamalo y pedile crear salidas en todos los formatos (podés ver el HTML con tu browser).
 
 ### Ejercicio 9.8: Volvamos a armar todo
-Modificá tu programa `informe.py` de modo que la función `informe_camion()` acepte un parámetro opcional que especifique el formato de salida deseado. Por ejemplo:
+Modificá tu programa `informe_final.py` de modo que la función `informe_camion()` acepte un parámetro opcional que especifique el formato de salida deseado. Por ejemplo:
 
 ```python
->>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv', fmt = 'txt')
+>>> informe_final.informe_camion('../Data/camion.csv', '../Data/precios.csv', fmt = 'txt')
     Nombre    Cajones     Precio     Cambio 
 ---------- ---------- ---------- ---------- 
       Lima        100      32.20       8.02 
@@ -548,7 +548,7 @@ Modificá tu programa `informe.py` de modo que la función `informe_camion()` ac
 Modificá el programa principal y usá `sys.argv()` para poder definir un formato particular directamente desde la línea de comandos. En el siguiente ejemplo se ve un caso de uso. Idealmente, ese parámetro debería ser opcional y, si no se lo pasás, debería andar como antes.
 
 ```bash
-bash $ python3 informe.py ../Data/camion.csv ../Data/precios.csv csv
+bash $ python3 informe_final.py ../Data/camion.csv ../Data/precios.csv csv
 Nombre,Cajones,Precio,Cambio
 Lima,100,32.20,8.02
 Naranja,50,91.10,15.18
@@ -560,7 +560,7 @@ Naranja,100,70.44,35.84
 
 ```
 
-Esta versión de `informe.py` preparala para entregarla.
+Esta versión de `informe_final.py` preparala para entregarla.
 
 ### Discusión
 

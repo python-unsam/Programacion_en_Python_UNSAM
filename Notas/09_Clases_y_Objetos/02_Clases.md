@@ -243,14 +243,14 @@ Agregá los métodos `costo()` y `vender()` a tu objeto `Lote`. Deberían dar es
 ```
 
 ### Ejercicio 9.3: Lista de instancias
-Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista de objetos `Lote`) a partir de una lista de diccionarios. Luego calculá el precio total de todas esas instancias.
+Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista de objetos `Lote`) a partir de una lista de diccionarios. Luego calculá el precio total de todas esas instancias. Para poder importar `fileparse`, primero copialo a la carpeta de ejercicios de la clase actual. La última versión que deberías tener es la correspondiente al [Ejercicio 7.6](../07_Plt_Especificacion_y_Documentacion/04_Flexibilidad.md#ejercicio-76-de-archivos-a-objetos-cual-archivos).
 
 ```python
 >>> import fileparse
 >>> with open('../Data/camion.csv') as lineas:
 ...     camion_dicts = fileparse.parse_csv(lineas, select = ['nombre', 'cajones', 'precio'], types = [str, int, float])
 ...
->>> camion = [ lote.Lote(d['nombre'], d['cajones'], d['precio']) for d in camion_dicts]
+>>> camion = [lote.Lote(d['nombre'], d['cajones'], d['precio']) for d in camion_dicts]
 >>> camion
 [<lote.Lote object at 0x10c9e2128>, <lote.Lote object at 0x10c9e2048>, <lote.Lote object at 0x10c9e2080>,
  <lote.Lote object at 0x10c9e25f8>, <lote.Lote object at 0x10c9e2630>, <lote.Lote object at 0x10ca6f748>,
@@ -261,9 +261,10 @@ Seguí estos pasos para crear una lista de las instancias de `Lote` (una lista d
 ```
 
 ### Ejercicio 9.4: Usá tu clase
-Modificá la función `leer_camion()` en el programa `informe.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Lote` como mostramos recién en el [Ejercicio 9.3](../09_Clases_y_Objetos/02_Clases.md#ejercicio-93-lista-de-instancias).
+Copiá los archivos `informe_final.py` y `costo_camion.py` a la carpeta de ejercicios de la clase actual.
+Modificá la función `leer_camion()` en el programa `informe_final.py` de modo que lea un archivo con el contenido de un camion y devuelva una lista de instancias de `Lote` como mostramos recién en el [Ejercicio 9.3](../09_Clases_y_Objetos/02_Clases.md#ejercicio-93-lista-de-instancias).
 
-Cuando hayas hecho esto, cambiá un poco el código en `informe.py` y en  `costo_camion.py` de modo que funcionen con objetos `Lote` (instancias de la clase `Lote`) en lugar de diccionarios.
+Cuando hayas hecho esto, cambiá un poco el código en `informe_final.py` y en  `costo_camion.py` de modo que funcionen con objetos `Lote` (instancias de la clase `Lote`) en lugar de diccionarios.
 
 Ayuda: No deberían ser cambios importantes. Las referencias a diccionarios ahora tienen que hacer referencia a objetos (`c['cajones']` cambia a `c.cajones`).
 
@@ -273,8 +274,8 @@ Hecho esto, deberías poder ejecutar tus funciones como antes:
 >>> import costo_camion
 >>> costo_camion.costo_camion('../Data/camion.csv')
 47671.15
->>> import informe
->>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
+>>> import informe_final
+>>> informe_final.informe_camion('../Data/camion.csv', '../Data/precios.csv')
    Nombre    Cajones     Precio     Cambio
  ---------- ---------- ---------- ----------
       Lima        100      $32.2       8.02
