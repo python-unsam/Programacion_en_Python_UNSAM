@@ -159,16 +159,15 @@ class Camion:
         return cantidad_total
 ```
 
-La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como la propiedad de calcular el costo total del camión. Vamos a usar lo que hiciste en el [Ejercicio 9.1](../09_Clases_y_Objetos/02_Clases.md#ejercicio-91-objetos-como-estructura-de-datos). Modificá la función `leer_camion()` en `informe.py` de modo que cree una instancia de `Camion`, como se muestra:
+La intención es crear un envoltorio para una lista, y de paso agregarle algunos métodos, como la propiedad de calcular el costo total del camión. Copiá los archivos `fileparse.py`, `formato_tabla.py`, `informe_final.py` y `lote.py` a la carpeta de ejercicios de la clase actual. Ahora, modificá la función `leer_camion()` en `informe_final.py` de modo que cree una instancia de `Camion`, como se muestra:
 
 
 ```python
-# informe.py
+# informe_final.py
 ...
 
-import fileparse
-from lote import Lote
 from camion import Camion
+...
 
 def leer_camion(filename):
     '''
@@ -177,19 +176,19 @@ def leer_camion(filename):
     '''
     with open(filename) as file:
         camiondicts = fileparse.parse_csv(file,
-                                        select=['nombre','cajones','precio'],
-                                        types=[str,int,float])
+                                        select = ['nombre', 'cajones', 'precio'],
+                                        types = [str, int, float])
 
     camion = [Lote(d['nombre'], d['cajones'], d['precio']) for d in camiondicts]
     return Camion(camion)
 ...
 ```
 
-Ahora intentá correr el programa `informe.py`. No hay forma. `informe.py` intenta iterar sobre las instancias de `Camion` pero éstas no son iterables y el programa no funciona.
+Ahora intentá correr el programa `informe_final.py`. No hay forma. `informe_final.py` intenta iterar sobre las instancias de `Camion` pero éstas no son iterables y el programa no funciona.
 
 ```python
->>> import informe
->>> informe.informe_camion('../Data/camion.csv', '../Data/precios.csv')
+>>> import informe_final
+>>> informe_final.informe_camion('../Data/camion.csv', '../Data/precios.csv')
 ... muere ...
 ```
 
@@ -215,20 +214,20 @@ class Camion:
         return cantidad_total
 ```
 
-Después de haber hecho este cambio, tu `informe.py` debería estar funcionando de nuevo. Guardá esta versión de `informe.py` para entregar al final de la clase (en el próximo ejercicio te pediremos también `camion.py`).
+Después de haber hecho este cambio, tu `informe_final.py` debería estar funcionando de nuevo. Guardá esta versión de `informe_final.py` para entregar al final de la clase (en el próximo ejercicio te pediremos también `camion.py`).
 
-Y ya que estás, cambiá el programa `costo_camion.py` para que use objetos que sean instancias de la clase  `Camion`, por ejemplo así:
+Y ya que estás, copiá el programa `costo_camion.py` a la carpeta de ejercicios de la clase actual y cambialo para que use objetos que sean instancias de la clase `Camion`, por ejemplo así:
 
 ```python
 # costo_camion.py
 
-import informe
+import informe_final
 
 def costo_camion(filename):
     '''
     Computa el precio total (cantidad * precio) de un archivo camion
     '''
-    camion = informe.leer_camion(filename)
+    camion = informe_final.leer_camion(filename)
     return camion.precio_total()
 ...
 ```
@@ -253,12 +252,6 @@ class Camion:
     def __iter__(self):
         return self.lotes.__iter__()
 
-    def __len__(self):
-        return len(self.lotes)
-
-    def __getitem__(self, index):
-        return self.lotes[index]
-
     def __contains__(self, nombre):
         return any([lote.nombre == nombre for lote in self.lotes])
 
@@ -273,11 +266,24 @@ class Camion:
         return cantidad_total
 ```
 
-Por último, probemos esta nueva estructura:
+Ahora probá esta nueva estructura:
 
 ```python
->>> import informe
->>> camion = informe.leer_camion('../Data/camion.csv')
+>>> import informe_final
+>>> camion = informe_final.leer_camion('../Data/camion.csv')
+>>> 'Naranja' in camion
+True
+>>> 'Manzana' in camion
+False
+>>>
+```
+
+Agregá más métodos especiales (`__len__` y `__getitem__`) para que tu clase se comporte de la siguiente manera:
+
+
+```python
+>>> import informe_final
+>>> camion = informe_final.leer_camion('../Data/camion.csv')
 >>> len(camion)
 7
 >>> camion[0]
@@ -288,11 +294,25 @@ Lote('Naranja', 50, 91.1)
 [Lote('Lima', 100, 32.2),
  Lote('Naranja', 50, 91.1),
  Lote('Caqui', 150, 103.44)]
->>> 'Naranja' in camion
-True
->>> 'Manzana' in camion
-False
->>>
+```
+
+Por último, agregale a la clase camión métodos `__repr__` y `__str__` para que muestre los camiones de esta manera. Es probable que debas modificar también la clase Lote de `lote.py` para lograrlo.
+
+
+```python
+>>> import informe_final
+>>> camion = informe_final.leer_camion('../Data/camion.csv')
+>>> camion
+Camion([Lote('Lima', 100, 32.2), Lote('Naranja', 50, 91.1), Lote('Caqui', 150, 103.44), Lote('Mandarina', 200, 51.23), Lote('Durazno', 95, 40.37), Lote('Mandarina', 50, 65.1), Lote('Naranja', 100, 70.44)])
+>>> print(camion)
+Camion con 7 lotes:
+Lote de 100 cajones de 'Lima', pagados a $32.2 cada uno.
+Lote de 50 cajones de 'Naranja', pagados a $91.1 cada uno.
+Lote de 150 cajones de 'Caqui', pagados a $103.44 cada uno.
+Lote de 200 cajones de 'Mandarina', pagados a $51.23 cada uno.
+Lote de 95 cajones de 'Durazno', pagados a $40.37 cada uno.
+Lote de 50 cajones de 'Mandarina', pagados a $65.1 cada uno.
+Lote de 100 cajones de 'Naranja', pagados a $70.44 cada uno.
 ```
 
 Guardá tu versión de `camion.py` con estos cambios para entregar y para la revisión de pares.

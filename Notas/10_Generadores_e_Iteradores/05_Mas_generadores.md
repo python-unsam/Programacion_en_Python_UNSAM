@@ -142,7 +142,7 @@ A veces es útil (y muy claro al leerlo) si pasás una expresión generadora com
 
 En ese ejemplo, la segunda versión (que usa un generador) requeriría mucha menos memoria que si construyera toda la lista simultáneamente (si la lista fuera grande).
 
-En tu archivo `camion.py` hiciste algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras (podés entregar esta nueva versión del archivo o la anterior al final de la clase).
+En tu archivo `camion.py` hiciste algunos cálculos usando comprensión de listas. Reemplazá esas expresiones por expresiones generadoras.
 
 ### Ejercicio 10.15: Código simple
 Las expresiones generadoras son a menudo un buen reemplazo para pequeñas funciones generadoras. Por ejemplo, en lugar de escribir una función como esta:
@@ -160,7 +160,7 @@ La podrías reemplazar con una expresión así:
 filas = (fila for fila in filas if fila['nombre'] in nombres)
 ```
 
-Modificá tu programa `ticker.py` para que use expresiones generadoras en lugar de funciones generadoras. Al final de la clase podés entregar el `ticker.py` anterior o este nuevo (¡mejor el nuevo!).
+Modificá tu programa `ticker.py` para que use expresiones generadoras en lugar de funciones generadoras.
 
 ### Ejercicio 10.16: Volviendo a ordenar imágenes
 Te proponemos aquí que retomes el [Ejercicio 8.5](../08_Fechas_Carpetas_y_Pandas/04_Ordenando_archivos.md#ejercicio-85-recorrer-el-arbol-de-archivos) que tenés guardado en el archivo `listar_imgs.py`. Usá los datos que te proporciona `os.walk` y una expresión generadora para filtrar las imágenes png (con sus directorios correspondientes). Este filtro debería generar pares `(directorio, archivo.png)`

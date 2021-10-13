@@ -16,11 +16,11 @@ def vigilar(f):
     ...
     while True:
         ...
-        yield linea        # Produce/obtiene valores para "linea"
+        yield line        # Produce/obtiene valores para "line"
         ...
 
 # Consumidor
-for linea in vigilar(f):    # Consume líneas del `yield`
+for line in vigilar(f):    # Consume líneas del `yield`
     ...
 ```
 
@@ -133,10 +133,10 @@ Llevemos esta idea un poco más lejos. Probemos esto:
 ```python
 >>> from vigilante import vigilar
 >>> import csv
->>> lineas = vigilar('../Data/mercadolog.csv')
->>> filas = csv.reader(lineas)
->>> for fila in filas:
-        print(fila)
+>>> lines = vigilar('../Data/mercadolog.csv')
+>>> rows = csv.reader(lines)
+>>> for row in rows:
+        print(row)
 
 ...   
 ['Rabanito', ' 249.37', ' 357']
@@ -146,7 +146,7 @@ Llevemos esta idea un poco más lejos. Probemos esto:
 ...
 ```
 
-¡Interesante!  La salida de la función `vigilar()` fué usada como entrada a la función `csv.reader()` (que habíamos usado para leer un archivo del disco) y el resultado es una secuencia de filas "parseadas", separadas por las comas. 
+¡Interesante!  La salida de la función `vigilar()` fue usada como entrada a la función `csv.reader()` (que habíamos usado para leer un archivo del disco) y el resultado es una secuencia de lineas "parseadas", separadas por las comas. 
 
 ### Ejercicio 10.10: Un pipeline más largo
 Veamos si podemos construír un pipeline más largo basado en la misma idea.
@@ -237,27 +237,27 @@ Para seguir agregando procesamiento a nuestro pipeline, escribí un filtro de da
 # ticker.py
 ...
 
-def filtrar_datos(filas, nombres):
-    for fila in filas:
-        if fila['nombre'] in nombres:
-            yield fila
+def filtrar_datos(rows, nombres):
+    for row in rows:
+        if row['nombre'] in nombres:
+            yield row
 ```
 
 Esto se usa para dejar pasar únicamente aquellos lotes incluidos en el camión. Probalo.
 
 ```python
 
-import informe
-camion = informe.leer_camion('../Data/camion.csv')
-filas = parsear_datos(vigilar('../Data/mercadolog.csv'))
-filas = filtrar_datos(filas, camion)
-for fila in filas:
-    print(fila)
+import informe_final
+camion = informe_final.leer_camion('../Data/camion.csv')
+rows = parsear_datos(vigilar('../Data/mercadolog.csv'))
+rows = filtrar_datos(rows, camion)
+for row in rows:
+    print(row)
 
 ```
 
 ### Ejercicio 10.12: El pipeline ensamblado
-En el programa `ticker.py` (esta versión te vamos a pedir que la entregues) escribí una función `ticker(camion_file, log_file, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate:
+En el programa `ticker.py` escribí una función `ticker(camion_file, log_file, fmt)` que cree un indicador en tiempo real para un camión, archivo log, y formato de tabla de salida particulares. Fijate que funcione de la siguiente manera:
 
 ```python
 >>> from ticker import ticker
@@ -280,6 +280,8 @@ Lima,2624.94,232
 
 ...
 ```
+
+Para hacer esto, podés usar los formateadores que creaste la clase pasada, con `from formato_tabla import crear_formateador`.
 
 ### Discusión
 

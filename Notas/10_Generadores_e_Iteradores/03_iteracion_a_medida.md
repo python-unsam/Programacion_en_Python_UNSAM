@@ -226,9 +226,9 @@ Modificá el programa `vigilante.py` para que sólo informe las líneas que tien
 
 ```python
 if __name__ == '__main__':
-    import informe
+    import informe_final
 
-    camion = informe.leer_camion ('../Data/camion.csv')
+    camion = informe_final.leer_camion ('../Data/camion.csv')
 
     for line in vigilar('../Data/mercadolog.csv'):  
         fields = line.split(',')
