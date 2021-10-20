@@ -4,20 +4,20 @@
 
 
 ### Ejercicio 11.2: Números triangulares
-Escribí una función que calcule recursivamente el n-ésimo número
+Escribí una función `triangular(n)` que calcule recursivamente el n-ésimo número
 triangular (es decir, el número *1 + 2 + 3 + ... + n*).
 
 Fijate que este ejercicio es un caso particular de la función `sumar_enteros(desde, hasta)` que implementaste en el [Ejercicio 7.8](../07_Plt_Especificacion_y_Documentacion/05_Especificacion_y_Documentacion.md#ejercicio-78-sumas). La implementación que hiciste en el primer inciso de ese ejercicio es una forma de reemplazar la recursión por un ciclo. La implementación que hiciste en el segundo inciso es mucho más eficiente.
 
 
 ### Ejercicio 11.3: Dígitos
-Escribí una función recursiva que reciba un número positivo, n, y devuelva
+Escribí una función recursiva `cant_digitos(n)` que reciba un número positivo, n, y devuelva
 la cantidad de dígitos que tiene.
 
 
 ### Ejercicio 11.4: Potencias
-Escribí una función recursiva que reciba 2 enteros, *n* y *b*, y devuelva
-`True` si *n* es potencia de *b*.
+Escribí una función recursiva `es_potencia(n, b)` que reciba 2 enteros, *n* y *b*, y devuelva
+`True` si *n* es potencia de *b* y `False` en caso contrario.
 
 Ejemplos:
 
@@ -30,7 +30,7 @@ es_potencia(1, 2) -> True
 
 
 ### Ejercicio 11.5: Subcadenas
-Escribí una funcion recursiva que reciba como parámetros dos cadenas *a* y
+Escribí una funcion recursiva `posiciones(a, b)` que reciba como parámetros dos cadenas *a* y
 *b*, y devuelva una lista con las posiciones en donde se encuentra *b*
 dentro de *a*.
 
@@ -49,11 +49,11 @@ determinen la paridad del numero natural dado, usando solo que:
 
 
 ### Ejercicio 11.7: Máximo
-Escribí una funcion recursiva que encuentre el mayor elemento de una lista (sin usar `max()`).
+Escribí una funcion recursiva `maximo(lista)` que encuentre y devuelva el mayor elemento de una lista (sin usar `max()`).
 
 
 ### Ejercicio 11.8: Replicar
-Escribí una función recursiva para replicar los elementos de una lista
+Escribí una función recursiva `replicar(lista, n)` para replicar los elementos de una lista
 una cantidad n de veces. Por ejemplo:
 
 ```python
@@ -83,7 +83,7 @@ Ejemplo:
 
 ### Ejercicio 11.10: Combinatorios
 
-Escribí una función recursiva que reciba una lista de caracteres únicos,
+Escribí una función recursiva `combinaciones(lista, k)` que reciba una lista de caracteres únicos,
 y un número *k*, e imprima todas las posibles cadenas de longitud *k* formadas
 con los caracteres dados (permitiendo caracteres repetidos).
 
@@ -96,7 +96,7 @@ aa ab ac ba bb bc ca cb cc
 
 
 ### Ejercicio 11.11: Búsqueda binaria
-Escribí una función recursiva que implemente la búsqueda binaria de un elemento `e` en una lista ordenada `lista`. La función debe devolver simplemente `True` o `False` indicando si el elemento está o no en la lista. Para esto completá el siguiente código:
+Escribí una función recursiva `bbinaria_rec(lista, e)` que implemente la búsqueda binaria de un elemento `e` en una lista ordenada `lista`. La función debe devolver simplemente `True` o `False` indicando si el elemento está o no en la lista. Para esto completá el siguiente código:
 
 ```python
 def bbinaria_rec(lista, e):
@@ -155,10 +155,11 @@ de ancho (y no 594.5) por 841 mm de largo.
 
 ![Hojas](./AN.png)
 
-Escribí una función recursiva que para una entrada N mayor
+Escribí una función recursiva `medidas_hoja_A(N)` que para una entrada N mayor
 que cero, devuelva el ancho y el largo de la hoja A(N) calculada
 recursivamente a partir de las medidas de la hoja A(N−1), usando la
-hoja A0 como caso base.
+hoja A0 como caso base. 
+La función debe devolver el ancho y el largo -en ese orden- en una tupla.
 
 Guardala en el archivo `hojas_ISO.py`.
 
