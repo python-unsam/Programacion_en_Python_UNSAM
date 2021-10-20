@@ -41,7 +41,11 @@ Analíticamente, buscamos `a, b` tales que minimicen la siguiente suma de cuadra
 <!--- ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
 --->
 
+<!--
 <img src="./eq_suma_de_cuadrados.png" width="30%"/>
+-->
+
+![eq_suma_de_cuadrados](./eq_suma_de_cuadrados.png)
 
 Usar cuadrados mínimos tiene múltiples motivaciones que no podemos detallar adecuadamente acá. Solo mencionaremos dos hechos importantes relacionados con su frecuente elección:
 
@@ -65,7 +69,12 @@ Para los datos que graficamos antes, ésta es _la mejor recta_, es decir, la que
 Como buscamos el mínimo de la expresión 
 <!--- ![\Sigma_{i=1}^n (a*x_i + b - y_i)^2](https://render.githubusercontent.com/render/math?math=\Sigma_{i=1}^n%20(a%20\cdot%20x_i%20%2B%20b%20-%20y_i)^2)
 --->
+
+<!--
 <img src="./eq_suma_de_cuadrados.png" width="20%"/>
+-->
+
+![eq_suma_de_cuadrados](./eq_suma_de_cuadrados.png)
  podemos derivar respecto de los parámetros `a, b` e igualar a cero para despejarlos. No es una cuenta díficil. El único cero que va a tener la derivada se corresponde con un mínimo (porque la recta se puede ajustar *tan mal como uno quiera*). De esta manera se obtienen las siguientes fórmulas para el ajuste:
 
 ```python
@@ -258,7 +267,10 @@ La regresión lineal múltiple tiene un planteo similar, pero con más variables
 <!---
 ![y = \b_0 + \sum_{j=1}^k \b_j x_j](https://render.githubusercontent.com/render/math?math=y%20=%20\b_0%20%2B%20\sum_{j=1}^k%20\b_j%20x_j)
 --->
+<!--
 <img src="./eq_reg_lin_multiple.png" width="30%"/>
+-->
+![eq_reg_lin_multiple](./eq_reg_lin_multiple.png)
 
 ### Ejemplo: superficie y antigüedad
 
@@ -452,18 +464,18 @@ En este caso contamos con una gran cantidad de datos y podemos aplicar de todas 
 ### Ejercicio 11.21: Gráficos de ajuste lineal con Seaborn
  + Seleccioná los datos correspondientes a las especies: Jacarandá, Palo borracho rosado, Eucalipto y Ceibo, todas en un mismo DataFrame, usando el siguiente filtro.
 
- ```Python
- filtro = data_arbolado_parques['nombre_com'].isin(esp_selec)
- ```
+```Python
+filtro = data_arbolado_parques['nombre_com'].isin(esp_selec)
+```
 
  + Explorá el comando de seaborn `sns.regplot()`, que ajusta el modelo lineal y lo grafica sin pasar por scikit learn. El parámetro `order` te permite hacer ajustes polinomiales. El `ci` se refiere al intervalo de confianza a sombrear.
 
  + Para facilitar la comparación que hiciste en el ejercicio anterior, graficá todos los ajustes juntos usando:
 
- ```python
- g = sns.FacetGrid(datos_selec_p, col = 'nombre_com')
- g.map(sns.regplot, 'diametro', 'altura_tot')
- ```
+```python
+g = sns.FacetGrid(datos_selec_p, col = 'nombre_com')
+g.map(sns.regplot, 'diametro', 'altura_tot')
+```
 
 *Observación*: Nos quedaron afuera de esta clase temas importantes como sobreajuste (_Overfitting_), partición de los datos en conjuntos de entrenamiento y evaluación, validación cruzada, presencia de datos atípicos (outliers), tests de hipótesis, selección de modelos... No era nuestra idea dar estos contenidos sino mostrar un acercamiento práctico desde Python al problema de la regresión lineal.
 
