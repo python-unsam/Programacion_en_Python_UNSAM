@@ -194,9 +194,11 @@ De esta manera se logra un tiempo proporcional a `N * log2(N)`.
 Ordená la lista `[6, 0, 3, 2, 5, 7, 4, 1]` usando el método merge sort. Dibujá el árbol de recursión explicando las llamadas que se hacen en cada paso, y el orden en el que se realizan, como mostramos más arriba para la lista `[3, 1, 0, 4, 2]`.
 
 ### Ejercicio 12.7: 
-Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 12.5](../12_Ordenamiento/02_Ordenamiento_sencillo.md#ejercicio-125-comparar-metodos-graficamente)) incorporando el merge sort a la comparación y al gráfico. Describí con tus palabras qué observas.
+Modificá la función `merge_sort` para que también devuelva la cantidad de comparaciones hechas. Rehacé el último ejercicio de la sección anterior ([Ejercicio 12.5](../12_Ordenamiento/02_Ordenamiento_sencillo.md#ejercicio-125-comparar-metodos-graficamente)) incorporando el merge sort a la función `experimento_vectores(Nmax)` al gráfico. Describí con tus palabras qué observas.
 
 Guardá el archivo `comparaciones_ordenamiento.py` con estas modificaciones, para entregarlo.
+
+_Comentario: Como la función `merge_sort` está implementada de manera recursiva, vas a necesitar que devuelva la cantidad de comparaciones pero que no deje de devolver la lista ordenada. Sin embargo, para el experimento solamente necesitás extraer la información de las comparaciones._
 
 ## El módulo `timeit`
 
@@ -304,10 +306,9 @@ La idea de este ejercicio es, nuevamente, comparar los algoritmos de ordenamient
 
 + Juntá en el archivo `time_ordenamiento.py` los métodos de búsqueda del [Ejercicio 12.7](../12_Ordenamiento/03_Divide_and_Conquer.md#ejercicio-127).
 
-+ Antes de empezar el experimento, eliminá de las funciones a medir todo código no esencial, en particular los prints para debug. Consumen tiempo y no son parte del algoritmo. También eliminá las cuentas de comparaciones, que ahora no son necesarias.
++ Antes de empezar el experimento, eliminá de las funciones a medir todo código no esencial, por ejemplo si te quedó algún print. Consumen tiempo y no son parte del algoritmo. También eliminá todas las cuentas de comparaciones, que ahora no son necesarias.
 
-+ Escribí un experimento que, tal como hiciste en el [Ejercicio 12.5](../12_Ordenamiento/02_Ordenamiento_sencillo.md#ejercicio-125-comparar-metodos-graficamente),
-para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 al 1000, calcule el tiempo que tarda cada método en ordenar la lista y guarde estos resultados en vectores de largo 256.
++ Definí una función `experimento_timeit(Nmax)`, similar a `experimento_vectores(Nmax)` del [Ejercicio 12.5](../12_Ordenamiento/02_Ordenamiento_sencillo.md#ejercicio-125-comparar-metodos-graficamente), que para `N` entre 1 y `Nmax` genere una lista de largo `N` con números enteros del 1 al 1000 en orden aleatorio, calcule el tiempo que tarda cada método en ordenar la lista y guarde estos resultados en tres vectores de largo `Nmax`.
 
 + En este caso, vas a tener que generar y guardar todas las listas a ser utilizadas antes de correr el experimento, para poder usar las mismas repetidas veces al evaluar cada método. Definí para eso una función `generar_listas(Nmax)` que genere una lista de listas, una de cada longitud entre 1 y `Nmax`, con valores aleatorios entre 1 y 1000.
 
@@ -319,7 +320,7 @@ para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 
 
 
 ### Ejercicio 12.9: 
-Opcional: Escribí una función `merge3sort` que funcione igual que el merge sort pero en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3(lista1, lista2, lista3)`.
+Opcional: Escribí una función `merge3sort` que funcione igual que el merge sort pero en lugar de dividir la lista de entrada en dos partes, la divida en tres partes. Deberás escribir la función `merge3sort(lista1, lista2, lista3)`.
 
 Probá tu función en las siguientes listas:
 
@@ -328,7 +329,7 @@ unalista = [1, 4, 3, 1, 7, 5]
 otralista = [7, 6, 5, 4, 3, 2, 1, 0]
 ```
 
-¿Cómo te parece que se va a comportar este método con respecto al merge sort original? Agregá este nuevo método a la comparación del ejercicio anterior.
+¿Cómo te parece que se va a comportar este método con respecto al merge sort original? Agregá este nuevo método a la comparación del ejercicio anterior. Ojo: no modifiques el archivo `time_ordenamiento.py` que tenés que entregar en el ejercicio anterior, de manera que lo podamos evaluar adecuadamente.
 
 
 

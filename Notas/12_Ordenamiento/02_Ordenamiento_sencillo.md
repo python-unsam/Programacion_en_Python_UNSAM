@@ -36,6 +36,8 @@ def ord_seleccion(lista):
 
         # reducir el segmento en 1
         n = n - 1
+    
+    return lista
 
 def buscar_max(lista, a, b):
     """Devuelve la posición del máximo elemento en un segmento de
@@ -67,20 +69,25 @@ DEBUG:  0 4 [0, 2, -1, 2, 3, 5]
 DEBUG:  1 3 [0, 2, -1, 2, 3, 5]
 DEBUG:  1 2 [0, -1, 2, 2, 3, 5]
 DEBUG:  0 1 [-1, 0, 2, 2, 3, 5]
->>> lista
+
 [-1, 0, 2, 2, 3, 5]
+
 >>> lista = []
 >>> ord_seleccion(lista)
+[]
+
 >>> l = [1]
 >>> ord_seleccion(lista)
->>> lista
 [1]
+
 >>> lista = [1, 2, 3, 4, 5]
 >>> ord_seleccion(lista)
 DEBUG:  4 4 [1, 2, 3, 4, 5]
 DEBUG:  3 3 [1, 2, 3, 4, 5]
 DEBUG:  2 2 [1, 2, 3, 4, 5]
 DEBUG:  1 1 [1, 2, 3, 4, 5]
+
+[1, 2, 3, 4, 5]
 ```
 
 
@@ -139,6 +146,8 @@ def ord_insercion(lista):
             reubicar(lista, i + 1)
         print("DEBUG: ", lista)
 
+    return lista
+
 def reubicar(lista, p):
     """Reubica al elemento que está en la posición p de la lista
        dentro del segmento [0:p-1].
@@ -179,14 +188,17 @@ DEBUG:  [-1, 2, 3, 5, 0, 2]
 DEBUG:  [-1, 2, 3, 5, 0, 2]
 DEBUG:  [-1, 0, 2, 3, 5, 2]
 DEBUG:  [-1, 0, 2, 2, 3, 5]
->>> lista
+
 [-1, 0, 2, 2, 3, 5]
+
 >>> lista = []
 >>> ord_insercion(lista)
+[]
+
 >>> lista = [1]
 >>> ord_insercion(lista)
->>> lista
 [1]
+
 >>> lista = [1, 2, 3, 4, 5, 6]
 >>> ord_insercion(lista)
 DEBUG:  [1, 2, 3, 4, 5, 6]
@@ -194,7 +206,7 @@ DEBUG:  [1, 2, 3, 4, 5, 6]
 DEBUG:  [1, 2, 3, 4, 5, 6]
 DEBUG:  [1, 2, 3, 4, 5, 6]
 DEBUG:  [1, 2, 3, 4, 5, 6]
->>> lista
+
 [1, 2, 3, 4, 5, 6]
 ```
 
@@ -275,16 +287,30 @@ El ordenamiento por burbujeo se basa en una idea bastante sencilla. El algoritmo
 
 Como en el primer paso tenemos la garantía de que el mayor elemento quedó al final de la lista, la segunda recorrida puede evitar llegar hasta esa última posición. Así, cada recorrida es más corta que la anterior. En cada recorrida se comparan todos los pares de elementos sucesivos (en el rango correspondiente) y se intercambian si no están ordenados.
 
-Programá una función `ord_burbujeo(lista)` que implemente este método de ordenamiento. ¿Cuántas comparaciones realiza esta función en una lista de largo n?
+Programá una función `ord_burbujeo(lista)` que implemente este método de ordenamiento. Debe tomar una lista y devolver la lista ordenada. ¿Cuántas comparaciones realiza esta función en una lista de largo n?
 
 Probá tu código con las siguientes listas.
 
 ```python
-lista_1 = [1, 2, -3, 8, 1, 5]
-lista_2 = [1, 2, 3, 4, 5]
-lista_3 = [0, 9, 3, 8, 5, 3, 2, 4]
-lista_4 = [10, 8, 6, 2, -2, -5]
-lista_5 = [2, 5, 1, 0]
+>>> lista_1 = [1, 2, -3, 8, 1, 5]
+>>> ord_burbujeo(lista_1)
+[-3, 1, 1, 2, 5, 8]
+
+>>> lista_2 = [1, 2, 3, 4, 5]
+>>> ord_burbujeo(lista_2)
+[1, 2, 3, 4, 5]
+
+>>> lista_3 = [0, 9, 3, 8, 5, 3, 2, 4]
+>>> ord_burbujeo(lista_3)
+[0, 2, 3, 3, 4, 5, 8, 9]
+
+>>> lista_4 = [10, 8, 6, 2, -2, -5]
+>>> ord_burbujeo(lista_4)
+[-5, -2, 2, 6, 8, 10]
+
+>>> lista_5 = [2, 5, 1, 0]
+>>> ord_burbujeo(lista_5)
+[0, 1, 2, 5]
 ```
 
 Guardá tu solución en el archivo `burbujeo.py` comentando la complejidad del algoritmo y cómo la calculaste.
@@ -295,19 +321,40 @@ _Extra:_ ¿Podés escribir una versión recursiva de este algoritmo?
 Elegí dos listas de las 5 del ejercicio anterior y ordenalas a mano (con papel y lápiz) con los 3 métodos: selección, inserción y burbujeo.
 
 ### Ejercicio 12.4: experimento con 3 métodos
-Hacé una función `generar_lista(N)` que genere una lista aleatoria de largo N con números enteros del 1 al 1000 (puede haber repeticiones).
+Creá un programa `comparaciones_ordenamiento.py` para trabajar comparando las distintas formas de ordenar listas.
 
-Modificá el código de las tres funciones para que cuenten cuántas comparaciones entre elementos de la lista realiza cada una. Por ejemplo, `ord_seleccion` realiza comparaciones (entre elementos de la lista) sólo cuando llama a `buscar_max(lista, a, b)` y en ese caso realiza `b-a` comparaciones. 
+Definí una función `generar_lista(N)` que genere una lista aleatoria de largo N con números enteros del 1 al 1000 (puede haber repeticiones).
 
-Realizá un experimento que genere una lista de largo `N` y la ordene con los tres métodos (burbujeo, inserción y selección).
+Copiá en tu programa el código de las tres funciones de ordenamiento y modificalas para que cuenten cuántas comparaciones entre elementos de la lista realiza cada una. Por ejemplo, `ord_seleccion` realiza comparaciones (entre elementos de la lista) sólo cuando llama a `buscar_max(lista, a, b)` y en ese caso realiza `b-a` comparaciones. Las funciones deben devolver la cantidad de comparaciones realizadas en vez de la lista ordenada y ya no deben imprimir nada.
 
-Para N = 10, realizá k = 100 repeticiones del siguiente experimento. Generar una lista de largo `N`, ordenarlas con los tres métodos y guardar la cantidad de operaciones. Al final, debe imprimir el promedio de comparaciones realizado por cada método.
+```python
+>>> lista = [3, 2, -1, 5, 0, 2]
+>>> ord_seleccion(lista)
+15
+>>> lista = [5, 4, 3, 2, 1]
+>>> ord_burbujeo(lista)
+10
+```
 
-_Cuidado_: usá las mismas listas para los tres métodos así la comparación es justa.
+Realizá un experimento que genere una lista de largo `N` y la ordene con los tres métodos (burbujeo, inserción y selección). Para esto, definí una función `experimento(N, k)` que repita `k` veces lo siguiente: generar una lista de largo `N`, ordenar la lista con los tres métodos y guardar la cantidad de operaciones. Al final, la función debe devolver el promedio de comparaciones realizadas con cada método.
+
+La función debería comportarse de esta manera (los valores pueden variar, claro).
+
+```python
+>>> experimento(10, 2)
+(45.0, 32.0, 25.0)
+
+>>> experimento(5, 1000)
+(10.0, 7.705, 4.988)
+```
+
+Para N = 10, realizá k = 100 repeticiones del siguiente experimento.
+
+_Cuidado_: usá las mismas listas para los tres métodos así la comparación es justa. Recordá usar copias de la lista para que cada método deba ordenar la lista original.
 
 
 ### Ejercicio 12.5: comparar métodos gráficamente
-Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. Hacé un programa `comparaciones_ordenamiento.py` que para `N` entre 1 y 256 genere una lista de largo `N` con números enteros del 1 al 1000 en orden aleatorio, calcule la cantidad de comparaciones realizadas por cada método de ordenamiento y guarde estos resultados en tres vectores de largo 256: `comparaciones_seleccion`, `comparaciones_insercion` y `comparaciones_burbujeo`. 
+Vamos a tratar de comparar visualmente la cantidad de comparaciones que hacen estos algoritmos para diferentes largos de listas. En el programa `comparaciones_ordenamiento.py` definí una función `experimento_vectores(Nmax)` que para `N` entre 1 y `Nmax` genere una lista de largo `N` con números enteros del 1 al 1000 en orden aleatorio, calcule la cantidad de comparaciones realizadas por cada método de ordenamiento y guarde estos resultados en tres vectores de largo `Nmax`: `comparaciones_seleccion`, `comparaciones_insercion` y `comparaciones_burbujeo`. 
 
 Graficá estos tres vectores. Si las curvas se superponen, graficá una de ellas con línea punteada para poder verlas bien. ¿Cómo dirías que crece la complejidad de estos métodos? ¿Para cuáles depende de la lista a ordenar y para cuáles solamente depende del largo de la lista?
 
