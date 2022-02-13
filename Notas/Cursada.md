@@ -26,7 +26,7 @@ Este curso lo dicta la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.a
 El curso está a cargo de dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
 Dr. en Computación y trabaja en temas ambientales; [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
-Dr. en Química y trabaja en neurofisiología. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado, y José Crespo y José Clemente, docentes invitados. 
+Dr. en Química y trabaja en neurofisiología. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado.
 
 
 ## Contenidos, enfoque y organización de los temas
@@ -36,7 +36,7 @@ Los clases deben ser hechas en forma secuencial, comenzando con la primera. Los 
 
 ## Clases
 
-Las clases tendrán una componente asincrónica y otra sincrónica. El curso con exámenes parciales incluidos se va a desarrollar entre el 4 de agosto y el 24 de noviembre del 2021. 
+Las clases tendrán una componente asincrónica y otra sincrónica. El curso con exámenes parciales incluidos se va a lo largo del cuatrimestre. 
 
 El contenido será dictado principalmente de forma asincrónica, por medio de apuntes, guías de ejercicios de entrega semanal y a través de una plataforma de consultas.
 
