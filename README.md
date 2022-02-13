@@ -2,7 +2,7 @@
 
 En el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/), 
 la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) vuelve a dictar 
-en 2021 el curso de programación en Python.
+en 2022 el curso de programación en Python.
 
 ![image info](./Python_cloud.jpg)
 
@@ -16,14 +16,14 @@ para poder **programar algoritmos** y comprender los métodos
 desarrollados por otres. Está orientado a preparar a le estudiante para
 profundizar en temas de **análisis y visualización de datos, aprendizaje automático, modelado matemático y desarrollo de scripts**.
 
-El curso comienza el 4 de agosto y se dicta semanalmente. Los días miércoles de 14hs a 16hs hay clases de consultas. 
+El curso comienza el 9 de marzo y se dicta semanalmente. Los días miércoles de 14hs a 16hs hay clases de consultas. 
 El material de las clases teóricas, tanto escrito como videos, estará disponible en este repositorio de manera que el curso (salvo los parciales) se puede hacer casi completamente de manera asincrónica.
 
 Es un curso gratuito y anunciaremos oportunamente la inscripción.
 
 
 ## Audiencia. ¿Para quién está pensado?
-El curso está orientado a estudiantes de grado y posgrado e investigadores con algunos
+El curso está orientado a estudiantes de la Licenciatura en Ciencas de Datos dela ECyT, UNSAM. Se suponen algunos
 conocimientos previos de programación, aunque no asumimos ningún conocimiento del lenguaje Python. 
 Es un curso intenso y desafiante, que invita a pensar y a desarrollar algoritmos.
 
@@ -54,9 +54,7 @@ horas semanales de dedicación, durante cuatro meses.
 El curso está a cargo de dos profesores de la ECyT-UNSAM que son también 
 investigadores del CONICET: [Oscar Filevich](http://labning.com.ar/#nosotros) es Lic. en Biología, 
 Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investigadores.unsam.edu.ar/es/investigador/407/Grimson-Rafael) es Lic. en Matemática, 
-Dr. en Computación y trabaja en temas ambientales. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado, y José Crespo y José Clemente, docentes invitados. 
+Dr. en Computación y trabaja en temas ambientales. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado.
 
-## Preinscripción
-La preinscripción al curso ya cerró.- 
-
-Completá [este formulario](https://forms.gle/XDLmWKLNxkTLRnJV7) si querés que te avisemos de próximas ediciones del curso.
+## Inscripción
+La materia está abierta para la comunidad UNSAM, con algunos lugares para estudiantes doctorales e investigadorxs externxs. Lxs interesadxs en cursarla, pueden inscribirse hasta el 18 de febrero usando este formulario [este formulario](https://forms.gle/o9okNWAjRJbbVBk37). A lxs externxs les informaremos durante la semana siguiente si les podemos dar un cupo o no.
