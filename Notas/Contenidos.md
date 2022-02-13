@@ -12,8 +12,8 @@
 * [8. Fechas, Carpetas y Pandas](08_Fechas_Carpetas_y_Pandas/00_Resumen.md)
 * [9. Clases y objetos](09_Clases_y_Objetos/00_Resumen.md)
 * [10. Extra: Generadores e iteradores](10_Generadores_e_Iteradores/00_Resumen.md)
-* [11. Recursión y regresión](11_Recursion/00_Resumen.md)
-* [12. Ordenamiento](12_Ordenamiento/00_Resumen.md)
+* [11. Extra: Recursión y regresión](11_Recursion/00_Resumen.md)
+* [12. Extra: Ordenamiento](12_Ordenamiento/00_Resumen.md)
 
 
 [Inicio](index.md) 
