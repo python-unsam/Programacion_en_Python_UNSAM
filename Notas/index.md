@@ -65,5 +65,5 @@ Por favor, leé las condiciones de cursada, la info sobre el uso del Slack e ins
 * [Uso de la plataforma Slack](./Slack.md#grupo-de-slack---informaci%C3%B3n-y-consultas)
 * [Instalación de Python](./Instalacion.md#instalacion-del-software-y-organización-interna-del-curso)
 
-## Preinscripción
-La preinscripción al curso está abierta hasta el 18 de febrero de 2022. Si querés inscribirte le atentamente la info y completa tus datos en [este formulario](https://forms.gle/7Ju2ZCr5deZkwvE5A).
+## Inscripción
+La inscripción al curso está abierta hasta el 18 de febrero de 2022 (cupo a confirmar). Si querés inscribirte le atentamente la info y completa tus datos en [este formulario](https://forms.gle/7Ju2ZCr5deZkwvE5A).
