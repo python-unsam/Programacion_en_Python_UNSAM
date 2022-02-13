@@ -1,4 +1,4 @@
-# 10. Generadores e iteradores
+# 10. Extra: Generadores e iteradores
 Programar es básicamente escribir condicionales, ciclos y asignaciones de variables. Aunque no de cualquier forma.
 
 Los ciclos, ya sean ciclos `while` o iteraciones `for` son una de las estructuras más ubicuas en cualquier lenguaje. Los programas hacen muchas iteraciones para procesar listas, leer archivos, buscar en bases de datos y demás.

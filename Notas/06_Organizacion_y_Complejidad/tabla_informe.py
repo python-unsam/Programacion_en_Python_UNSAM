@@ -47,7 +47,7 @@ def hacer_informe(camion, precios):
     for lote in camion:
         precio_venta = precios[lote['nombre']]
         cambio = precio_venta - lote['precio']
-        t = (lote['nombre'], lote['cajones'], precio_venta, cambio)
+        t = (lote['nombre'], lote['cajones'], lote['precio'], cambio)
         lista.append(t)
     return lista
 #%%

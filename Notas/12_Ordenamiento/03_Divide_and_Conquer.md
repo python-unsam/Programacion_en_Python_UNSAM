@@ -128,7 +128,9 @@ Para representar gráficamente las llamadas recursivas de la función `merge_sor
 
 Acá mostramos el árbol de recursión de `merge_sort([3, 1, 0, 4, 2])`.
 
-![mergesort](./arbol_recursion.jpg)
+<p align="center">
+<img src="./arbol_recursion.jpg" width="300">
+</p>
 
 
 ### ¿Cuánto cuesta el *Merge sort*?
