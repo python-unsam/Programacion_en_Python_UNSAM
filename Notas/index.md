@@ -17,7 +17,7 @@ para poder **programar algoritmos** y comprender los métodos
 desarrollados por otres. Está orientado a preparar a le estudiante para
 profundizar en temas de **análisis y visualización de datos, aprendizaje automático, modelado matemático y desarrollo de scripts**.
 
-El curso comienza el 4 de agosto y se dicta semanalmente. Los días miércoles de 14hs de 16hs hay clases de consultas.
+El curso comienza el 9 de marzo y se dicta semanalmente. Los días miércoles de 14hs de 16hs hay clases de consultas.
 El material de las clases teóricas, tanto escrito como videos, estará disponible en este repositorio de manera que el curso (salvo los parciales) se puede hacer casi completamente de manera asincrónica.
 
 Es un curso gratuito y anunciaremos oportunamente la inscripción.
