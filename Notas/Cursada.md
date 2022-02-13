@@ -36,7 +36,7 @@ Los clases deben ser hechas en forma secuencial, comenzando con la primera. Los 
 
 ## Clases
 
-Las clases tendrán una componente asincrónica y otra sincrónica. El curso con exámenes parciales incluidos se va a desarrollar entre el 4 de agosto y el 24 de noviembre del 2021. 
+Las clases tendrán una componente asincrónica y otra sincrónica. El curso con exámenes parciales incluidos se va a desarrollar dentro del cuatrimestre. 
 
 El contenido será dictado principalmente de forma asincrónica, por medio de apuntes, guías de ejercicios de entrega semanal y a través de una plataforma de consultas.
 
