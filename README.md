@@ -57,4 +57,4 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado.
 
 ## Inscripción
-La materia está abierta para la comunidad UNSAM, con algunos lugares para estudiantes doctorales e investigadorxs externxs. Lxs interesadxs en cursarla, pueden inscribirse hasta el 18 de febrero usando este formulario [este formulario](https://forms.gle/o9okNWAjRJbbVBk37). A lxs externxs les informaremos durante la semana siguiente si les podemos dar un cupo o no.
+La inscripción ya cerró para este cuatrimestre. Si querés que te informemos cuando abramos la próxima edición, anotate en [este formulario](https://forms.gle/LfA2b9qB3YztaHZW7).
