@@ -3,7 +3,7 @@
 
 En el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/),
 la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) vuelve a dictar
-en 2022 el curso de programación en Python.
+en 2021 el curso de programación en Python.
 
 ![image info](./Python_cloud.jpg)
 
@@ -17,7 +17,7 @@ para poder **programar algoritmos** y comprender los métodos
 desarrollados por otres. Está orientado a preparar a le estudiante para
 profundizar en temas de **análisis y visualización de datos, aprendizaje automático, modelado matemático y desarrollo de scripts**.
 
-El curso comienza el 9 de marzo y se dicta semanalmente. Los días miércoles de 14hs de 16hs hay clases de consultas.
+El curso comienza el 4 de agosto y se dicta semanalmente. Los días miércoles de 14hs de 16hs hay clases de consultas.
 El material de las clases teóricas, tanto escrito como videos, estará disponible en este repositorio de manera que el curso (salvo los parciales) se puede hacer casi completamente de manera asincrónica.
 
 Es un curso gratuito y anunciaremos oportunamente la inscripción.
@@ -65,5 +65,5 @@ Por favor, leé las condiciones de cursada, la info sobre el uso del Slack e ins
 * [Uso de la plataforma Slack](./Slack.md#grupo-de-slack---informaci%C3%B3n-y-consultas)
 * [Instalación de Python](./Instalacion.md#instalacion-del-software-y-organización-interna-del-curso)
 
-## Inscripción
-La inscripción al curso está abierta hasta el 18 de febrero de 2022 (cupo a confirmar). Si querés inscribirte le atentamente la info y completa tus datos en [este formulario](https://forms.gle/7Ju2ZCr5deZkwvE5A).
+## Preinscripción
+La preinscripción al curso aún no abrió. Si querés que te informemos cuando la abramos completá [este formulario](https://forms.gle/XDLmWKLNxkTLRnJV7).
