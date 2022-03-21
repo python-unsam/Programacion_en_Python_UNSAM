@@ -10,9 +10,6 @@
 # hay metodos como find() o index() para las strings que corren compilados 
 # en el lenguaje base de python (creo que C) y por ende son mas rapidos.
 
-from calendar import c
-
-
 def tiene_a(expresion):
     n = len(expresion)
     i = 0
