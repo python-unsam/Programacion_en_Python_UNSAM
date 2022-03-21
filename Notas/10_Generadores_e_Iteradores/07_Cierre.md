@@ -6,19 +6,16 @@ Discutimos también las ventajas de construír un programa con estos conceptos. 
 
 Por último, viste la ventaja de crear pipelines: estructuras de procesamiento de datos configurables en vuelo, altamente modulares.  
 
-Aunque no la uses de inmediato, cuando te la apropies, esta arquitectura puede cambiarte (un poquito) la vida.
+Aunque no la uses de inmediato, cuando te la apropies, esta arquitectura puede cambiarte la vida (un poquito).
 
-Para cerrar esta clase te pedimos dos cosas:
-
-* Que recopiles las soluciones de los siguientes ejercicios:
+* Para cerrar esta clase te pedimos que recopiles las soluciones de los siguientes ejercicios:
     1. El archivo `informe_final.py` del [Ejercicio 10.2](../10_Generadores_e_Iteradores/02_protocolo_Iteracion.md#ejercicio-102-iteracion-sobre-objetos).
     2. El archivo `camion.py` del [Ejercicio 10.14](../10_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-1014-expresiones-generadoras-como-argumentos-en-funciones) que va a jugar en la revisión de pares.
     3. El archivo `vigilante.py` del [Ejercicio 10.7](../10_Generadores_e_Iteradores/03_iteracion_a_medida.md#ejercicio-107-cambios-de-precio-de-un-camion).
     4. El archivo `ticker.py` del [Ejercicio 10.15](../10_Generadores_e_Iteradores/05_Mas_generadores.md#ejercicio-1015-codigo-simple).
+    5. El archivo `simulacion.py` del [Ejercicio 10.19](../10_Generadores_e_Iteradores/06_PredadorPresa.md#ejercicio-1019-alcanzando-la-madurez) (optativo).
 
-* Y, opcionalmente, el archivo `simulacion.py` del [Ejercicio 10.19](../10_Generadores_e_Iteradores/06_PredadorPresa.md#ejercicio-1019-alcanzando-la-madurez).
-
-Además te pedimos  que completes [este formulario](https://docs.google.com/forms/d/1PO6LXOUZrqzsOyHmNtf8qrXRqSFaJiEHYcdRjv4I024) usando tu dirección de mail como identificación.  Al terminar vas a obtener un link para enviarnos tus ejercicios. 
+[Entregar Ejercicios](http://programacionpython.ecyt.unsam.edu.ar/unit/submission/10)
 
 ¡Nos vemos!
 

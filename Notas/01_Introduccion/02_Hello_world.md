@@ -366,7 +366,7 @@ Este comando no hace nada. Sirve para guardar el lugar para un comando que querr
 
 ## Ejercicios
 
-Recordá descargar y descomprimir la carpeta [Ejercicios](../../Ejercicios.zip).
+Recordá descargar y descomprimir la carpeta [Ejercicios](../Ejercicios.zip).
 
 ### Ejercicio 1.4: Debuguear
 El siguiente fragmento de código está relacionado con el problema del obelisco. Tiene un bug, es decir, un error.
