@@ -8,11 +8,11 @@ Tené en cuenta que algunos ejercicios serán corrgidos automáticamente, por es
 
 
 * Para cerrar esta clase te pedimos que recopiles las soluciones de los siguientes ejercicios:
-    1. El archivo `solucion_de_errores.py` del [Ejercicio 3.5](../03_Datos/02_Bugs.md#ejercicio-35-pisando-memoria).
+    1. El archivo `solucion_de_errores.py` con los ejercicios [Ejercicio 3.1](../03_Datos/02_Bugs.md#ejercicio-31-semantica) al [Ejercicio 3.5](../03_Datos/02_Bugs.md#ejercicio-35-pisando-memoria).
     2. El archivo `costo_camion.py` del [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip).
     4. El archivo `tabla_informe.py` del [Ejercicio 3.16](../03_Datos/06_Formato.md#ejercicio-316-un-desafio-de-formato).
     5. El archivo `tablamult.py` del [Ejercicio 3.17](../03_Datos/06_Formato.md#ejercicio-317-tablas-de-multiplicar).
-    3. El archivo `arboles.py` del [Ejercicio 3.24](../03_Datos/07_Arboles1.md#ejercicio-324-especie-mas-inclinada-en-promedio).
+    3. El archivo `arboles.py` con los ejercicios [Ejercicio 3.18](../03_Datos/07_Arboles1.md#ejercicio-318-lectura-de-los-arboles-de-un-parque) al [Ejercicio 3.24](../03_Datos/07_Arboles1.md#ejercicio-324-especie-mas-inclinada-en-promedio).
 
 
 Esperamos en esta clase que entregues los cinco ejercicios que te pedimos. 
