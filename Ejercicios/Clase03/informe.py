@@ -21,19 +21,10 @@ def leer_camion(nombre_archivo:str)->dict:
 	with open(nombre_archivo,'rt') as archivo:
 		archivo_csv = csv.reader(archivo)
 		headers = next(archivo_csv)
-		for nro_fila, renglon in enumerate(archivo_csv, start=1):
+		for renglon in archivo_csv:
 			# Es necesario que el renglon tenga contenido.
 			if len(renglon) > 0:
-				entrada_fruta = dict(zip(headers,renglon))
-				# Se validan los datos en tipado
-				try:
-					entrada_fruta['cajones'] = int(entrada_fruta['cajones'])
-					entrada_fruta['precio'] = float(entrada_fruta['precio'])
-				except ValueError:
-					print(f'Fila {nro_fila}: No es interpretable: {renglon}')
-				
-				camion.append(entrada_fruta)
-			
+				camion.append(dict(zip(headers,renglon)))
 
 	return camion	 
 
@@ -58,8 +49,8 @@ costo_camion_total= 0
 venta = 0
 
 for fruta in camion:
-	cajones = fruta.get('cajones')
-	precio_cajon = fruta.get('precio')
+	cajones = int(fruta.get('cajones'))
+	precio_cajon = float(fruta.get('precio'))
 	venta_cajon = precios.get(fruta.get('nombre')) 
 	costo_camion_total += cajones * precio_cajon
 	venta += cajones * venta_cajon
