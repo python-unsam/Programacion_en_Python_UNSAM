@@ -1,7 +1,7 @@
 #%%
 import csv
 
-path_datos_arboles = '/mnt/chromeos/removable/Disco/Programacion_en_Python_UNSAM/Ejercicios/Data/arbolado-en-espacios-verdes.csv'
+path_datos_arboles = '/home/sebastian/coding/Programacion_en_Python_UNSAM/Ejercicios/Data/arbolado-en-espacios-verdes.csv'
 #%% 4.15 lectura de arboles
 def leer_arboles(nombre_archivo:str)->list:
     with open(nombre_archivo,'rt') as archivo:
@@ -30,3 +30,26 @@ assert len(medidas['Eucalipto']) == 4112
 assert len(medidas['Palo borracho rosado']) == 3150
 assert len(medidas['Jacarandá']) == 3255
 
+#%% Ejercicio 5.25: Histograma de altos de Jacarandás
+
+import os
+import matplotlib.pyplot as plt
+plt.hist(altura_jacaranda,bins=25)
+# %% Ejercicio 5.26: Scatterplot (diámetro vs alto) de Jacarandás
+import numpy as np
+def scatter_hd(lista_de_pares):
+    altura_diametro = np.array(lista_de_pares)
+    plt.figure()
+    plt.scatter(altura_diametro[:,0],altura_diametro[:,1],alpha=0.2)
+    plt.xlabel("diametro (cm)")
+    plt.ylabel("alto (m)")
+    plt.xlim(0,30) 
+    plt.ylim(0,100) 
+
+scatter_hd(altura_diametro_jacaranda)
+# %% Ejercicio 5.27: Scatterplot para diferentes especies
+for nrofig, arbol in enumerate(medidas.keys()):
+    scatter_hd(medidas.get(arbol))
+    plt.title(f"Relación diámetro-alto para {arbol}")
+
+# %%
