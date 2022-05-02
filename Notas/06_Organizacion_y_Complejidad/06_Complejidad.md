@@ -68,7 +68,19 @@ La estructura lógica de las estructuras de datos se llaman Tipos Abstractos de 
 ### Ejercicio 6.15: Insertar un elemento en una lista
 Uno de los problemas de la búsqueda binaria es que requiere que la lista esté ordenada. Si la lista se encuentra ordenada podemos mantener el orden evitando adjuntar nuevos elementos de forma desordenada.
 
-Usando lo que hiciste en el [Ejercicio 6.14](../06_Organizacion_y_Complejidad/05_BusqBinaria.md#ejercicio-614-busqueda-binaria), agregale al archivo `bbin.py` una función `insertar(lista, x)` que reciba una lista ordenada y un elemento. Si el elemento se encuentra en la lista solamente devuelve su posición; si no se encuentra en la lista, lo inserta en la posición correcta para mantener el orden. En este segundo caso, también debe devolver su posición.
+Usando lo que hiciste en el [Ejercicio 6.14](../06_Organizacion_y_Complejidad/05_BusqBinaria.md#ejercicio-614-busqueda-binaria), agregale al archivo `bbin.py` una función `insertar(lista, x)` que reciba una lista ordenada y un elemento. Si el elemento se encuentra en la lista solamente debe devolver su posición; si no se encuentra en la lista, lo debe insertar en la posición correcta para mantener el orden y devolver su posición (no debe devolver la lista). Su funcionamiento debería ser así:
+
+```python
+>>> lista = [1, 2, 3]
+>>> insertar(lista, 2)
+1
+>>> print(lista)
+[1, 2, 3]
+>>> insertar(lista, 4)
+3
+>>> print(lista)
+[1, 2, 3, 4]
+```
 
 ### Ejercicio 6.16: Cálcular la complejidad de dos resoluciones de `propagar`
 Ahora que tenés algunas herramientas teóricas más, volvé a leer las dos versiones de `propagar` del [Ejercicio 6.1](../06_Organizacion_y_Complejidad/01_Repaso.md#ejercicio-61-propagar-por-vecinos) y el [Ejercicio 6.2](../06_Organizacion_y_Complejidad/01_Repaso.md#ejercicio-62-propagar-por-como-el-auto-fantastico) y compará sus complejidades.

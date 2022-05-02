@@ -7,7 +7,7 @@
 * [3. Trabajando con datos](03_Datos/00_Resumen.md)
 * [4. Algoritmos sobre listas y comprensión de listas](04_Listas_y_Listas/00_Resumen.md)
 * [5. Aleatoriedad](05_Random_Plt_Dbg/00_Resumen.md)
-* [6. Complejidad y Organización de programas](06_Organizacion_y_Complejidad/00_Resumen.md)
+* [6. Complejidad y Organización de programas.](06_Organizacion_y_Complejidad/00_Resumen.md)
 * [7. Diseño, especificación, documentación y estilo.](07_Plt_Especificacion_y_Documentacion/00_Resumen.md)
 * [8. Fechas, Carpetas y Pandas](08_Fechas_Carpetas_y_Pandas/00_Resumen.md)
 * [9. Clases y objetos](09_Clases_y_Objetos/00_Resumen.md)

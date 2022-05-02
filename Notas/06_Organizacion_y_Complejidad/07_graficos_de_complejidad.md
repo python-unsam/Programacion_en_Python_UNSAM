@@ -20,7 +20,7 @@ def busqueda_secuencial(lista, x):
 Esta modificación de la función cuenta (y devuelve) además cuántas comparaciones (`z == x`) hace la función. Observá que devuelve un par de datos. 
 
 ```python
-def busqueda_secuencial_(lista, x):
+def busqueda_secuencial_comps(lista, x):
     '''Si x está en la lista devuelve el índice de su primera aparición, 
     de lo contrario devuelve -1. Además devuelve la cantidad de comparaciones
     que hace la función.
@@ -36,10 +36,18 @@ def busqueda_secuencial_(lista, x):
 
 ```
 
-Si querés acceder a la posición podés usar `busqueda_secuencial_(lista, x)[0]` y para acceder a la cantidad de comparaciones que hizo `busqueda_secuencial_(lista, x)[1]`.
+Si querés acceder a la posición podés usar `busqueda_secuencial_comps(lista, x)[0]` y para acceder a la cantidad de comparaciones que hizo `busqueda_secuencial_comps(lista, x)[1]`.
 
 ### Ejercicio 6.19: Contar comparaciones en la búsqueda binaria
-Modificá el código de búsqueda binaria (`busqueda_binaria(lista, x)`) introducido en la [Sección 6.5](../06_Organizacion_y_Complejidad/05_BusqBinaria.md#búsqueda-binaria), de forma que devuelva (además de la posición del elemento en la lista) la cantidad de comparaciones que realizó el algoritmo para encontrarlo o decidir que no está.
+A partir del código de búsqueda binaria (`busqueda_binaria(lista, x)`) introducido en la [Sección 6.5](../06_Organizacion_y_Complejidad/05_BusqBinaria.md#búsqueda-binaria), definí una función `busqueda_binaria_comps(lista, x)` que devuelva la posición del elemento en la lista y la cantidad de comparaciones que realizó el algoritmo para encontrarlo o decidir que no está.
+
+```python
+>>> lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> busqueda_binaria_comps(lista, 5)
+(4, 3)
+>>> busqueda_binaria_comps(lista, 6)
+(5, 4)
+```
 
 ## Gráficar la cantidad de comparaciones promedio
 
@@ -66,7 +74,7 @@ lista = generar_lista(n, m)
 
 # acá comienza el experimento
 x = generar_elemento(m)
-comps = busqueda_secuencial_(lista, x)[1]
+comps = busqueda_secuencial_comps(lista, x)[1]
 ```
 
 Entonces, el siguiente código da la cantidad de comparaciones *promedio* en `k` experimentos elementales. Observá que hay muchas variables diferentes dando vueltas: `n`, `m` y `k`.
@@ -81,7 +89,7 @@ def experimento_secuencial_promedio(lista, m, k):
     comps_tot = 0
     for i in range(k):
         x = generar_elemento(m)
-        comps_tot += busqueda_secuencial_(lista,x)[1]
+        comps_tot += busqueda_secuencial_comps(lista,x)[1]
 
     comps_prom = comps_tot / k
     return comps_prom

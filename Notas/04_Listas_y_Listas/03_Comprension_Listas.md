@@ -274,7 +274,7 @@ Y finalmente leamos los datos y armemos un diccionario usando comprensión de di
 >>>
 ```
 
-No es trivial este comando. El comando es sintácticamente muy compacto, pero es conceptualmente (un poco) complejo. Cuando te sientas cómode con esta lectura de una línea del archivo (si no pasa, tranca, podemos seguir sin esto), leé el resto:
+Este comando no es trivial. Es sintácticamente muy compacto, pero es conceptualmente algo complejo. Cuando te sientas cómode con esta lectura de una línea del archivo, leé el resto. (si no pasa, tranca, podemos seguir sin esto).
 
 ```python
 >>> camion = [{ ncolumna: row[index] for ncolumna, index in zip(select, indices)} for row in rows]

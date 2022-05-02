@@ -235,7 +235,7 @@ Al final, deberías obtener exactamente el mismo resultado que al principio.
 Este archivo lo vas a tener que entregar al final de la clase. Por favor comentá la línea que llama a la función `informe_camion()` de manera que tu archivo contenga solamente definiciones de funciones y lo podamos evaluar automáticamente.
 
 ### Ejercicio 6.12: Un poco más allá
-El programa `costo_camion.py` lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo. La última versión que deberías tener de este archivo es la del [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip). Copiá el archivo `costo_camion.py` al directorio de ejercicios de la clase actual.
+El programa `costo_camion.py` lee, mediante una función llamada `costo_camion()` los datos de un camión y calcula su costo. La última versión que deberías tener de este archivo es la del [Ejercicio 3.9](../03_Datos/03_Secuencias.md#ejercicio-39-la-funcion-zip). Copiá el archivo `costo_camion.py` al directorio de ejercicios de la clase actual. Deberías poder importarlo y usarlo así:
 
 ```python
 >>> import costo_camion
@@ -243,7 +243,7 @@ El programa `costo_camion.py` lee, mediante una función llamada `costo_camion()
 47671.15
 >>>
 ```
-Ahora, modifica el archivo `costo_camion.py` para que use la función `informe_funciones.leer_camion()` del programa `informe_funciones.py`.
+Ahora, modificá el archivo `costo_camion.py` para que la función `costo_camion()` utilice la función `leer_camion()` del programa `informe_funciones.py`. Para esto, el archivo `costo_camion.py` debe importar el módulo `informe_funciones`, y dentro de la función `costo_camion()` debe haber una llamada a `informe_funciones.leer_camion()`.
 
 ### Comentario
 
