@@ -1,12 +1,11 @@
 # Programación en Python
 
 En el marco del proyecto de [Inteligencia Artificial Interdisciplinaria](http://noticias.unsam.edu.ar/2019/09/16/la-unsam-piensa-la-inteligencia-artificial-interdisciplinaria/), 
-la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) vuelve a dictar 
-en 2022 el curso de programación en Python.
+la [Escuela de Ciencia y Tecnología](http://www.unsam.edu.ar/escuelas/ciencia/) de la [UNSAM](https://www.unsam.edu.ar/) dictó hasta el primer cuatrimestre de 2022 este curso de programación en Python.
 
 ![image info](./Python_cloud.jpg)
 
-## ¿De qué es el curso?
+## ¿De qué era el curso?
 Este es un curso cuatrimestral de algoritmos y programación en Python.
 Se realiza en forma virtual y tendrá una combinación de clases sincrónicas
 y asincrónicas, con ejercicios para entregar semanalmente.
@@ -57,4 +56,4 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado.
 
 ## Inscripción
-La inscripción ya cerró para este cuatrimestre. Si querés que te informemos cuando abramos la próxima edición, anotate en [este formulario](https://forms.gle/LfA2b9qB3YztaHZW7).
+La materia no se está dictando por el momento. En su lugar se está dictando Programación 1, como parte de la Licenciatura en Ciaencias de Datos de la UNSAM.
