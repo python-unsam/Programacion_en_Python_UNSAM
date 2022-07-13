@@ -58,4 +58,4 @@ Dr. en Computación y trabaja en temas ambientales. También contamos con Manuel
 ## Inscripción
 La materia no se está dictando por el momento. En su lugar se está dictando [Programación 1](https://github.com/python-unsam/programacion1/) de forma presencial y en el marco de la licenciatura en ciencia de Datos de la UNSAM, que tiene contenidos similares. Para cursarla hay que estar inscriptx en la carrera y tener las correlativas aprobadas.
 
-Al mismo tiempo tratamos de seguir dictando sin cupo y de manera gratuita y virtual, la materia de grado y posgrado que armamos originalmente porque hay muchísimxs interesadxs (el último cuatrimestre que la dictamos así se anotaron 3500 personas de todo el pais) pero por ahora nos dicen que no alcanza el presupuesto para cubrir este curso.
+Al mismo tiempo estamos intentando volver a dictar, sin cupo y de manera gratuita y virtual, la materia de grado y posgrado que armamos originalmente porque hay muchísimxs interesadxs (el último cuatrimestre que la dictamos así se anotaron 3500 personas de todo el pais) pero por ahora no conseguimos el presupuesto para cubrir este curso.
