@@ -56,4 +56,6 @@ Dr. en Química y trabaja en neurofisiología; [Rafael Grimson](http://investiga
 Dr. en Computación y trabaja en temas ambientales. También contamos con Manuela Cerdiero como JTP e Iván Pedrón y Daniela Alban como ayudantes. Además,  [Matias López-Rosenfeld](https://futuros-estudiantes.dc.uba.ar/un-profesor-del-departamento-de-computacion-distinguido-por-facebook/) es profesor invitado.
 
 ## Inscripción
-La materia no se está dictando por el momento. En su lugar se está dictando Programación 1, como parte de la Licenciatura en Ciaencias de Datos de la UNSAM.
+La materia no se está dictando por el momento. En su lugar se está dictando [Programación 1](https://github.com/python-unsam/programacion1/) de forma presencial y en el marco de la licenciatura en ciencia de Datos de la UNSAM, que tiene contenidos similares. Para cursarla hay que estar inscriptx en la carrera y tener las correlativas aprobadas.
+
+Al mismo tiempo tratamos de seguir dictando sin cupo y de manera gratuita y virtual, la materia de grado y posgrado que armamos originalmente porque hay muchísimxs interesadxs (el último cuatrimestre que la dictamos así se anotaron 3500 personas de todo el pais) pero por ahora nos dicen que no alcanza el presupuesto para cubrir este curso.
